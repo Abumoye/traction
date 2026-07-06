@@ -1,694 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Traction Outsourcing Limited | Management Consulting Firm Nigeria</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <meta name="description" content="Traction Outsourcing Limited is a premium management consulting firm in Nigeria specializing in startup structuring, corporate restructuring, business advisory, executive recruitment, staff training, and corporate retreats. Building Africa, for Africans.">
-    <meta name="keywords" content="consulting firms in nigeria, business advisory abuja, startup structuring nigeria, staff trainer in nigeria, corporate retreat in nigeria, recruitment in abuja">
-    
-    <!-- Clean, modern styling -->
+    <meta name="description" content="Traction Outsourcing Limited is a premium management consulting firm in Nigeria specializing in startup structuring, corporate restructuring, business advisory, executive recruitment and leadership training to help organisations scale across Africa.">
+    <meta name="keywords" content="consulting firms in nigeria, business advisory abuja, startup structuring nigeria, staff training nigeria, corporate retreat nigeria, recruitment abuja">
+
     <style>
-        :root {
-            --primary-color: #0d2c54; /* Deep corporate navy */
-            --accent-color: #c9a66b;  /* Premium gold/bronze accent */
-            --text-color: #333333;
-            --light-bg: #f9f9f9;
+        :root{
+            --primary-color:#0d2c54;
+            --accent-color:#c9a66b;
+            --text-color:#333;
+            --light-bg:#f9f9f9;
         }
-        body {
+        html,body{height:100%}
+        body{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        header {
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .logo {
-            font-weight: bold;
-            font-size: 24px;
-            color: var(--primary-color);
-        }
-        
-        /* Navigation Styles */
-        nav {
-            display: flex;
-            align-items: center;
-        }
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 600;
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-        nav a:hover {
-            color: var(--accent-color);
-        }
-        
-        /* Hamburger Menu Icon (Hidden on Desktop) */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 24px;
-            height: 18px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            z-index: 110;
-        }
-        .hamburger span {
-            width: 100%;
-            height: 2.5px;
-            background-color: var(--primary-color);
-            transition: all 0.3s ease;
+            margin:0;
+            color:var(--text-color);
+            line-height:1.6;
+            background:#fff;
         }
 
-        /* Dropdown Navigation Menu (Desktop) */
-        .dropdown {
-            position: relative;
-            display: inline-block;
+        header{
+            background:#fff;
+            box-shadow:0 2px 5px rgba(0,0,0,0.1);
+            padding:15px 5%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:sticky;
+            top:0;
+            z-index:100;
         }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 260px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
-            border-radius: 6px;
-            padding: 10px 0;
-            z-index: 105;
-            left: 20px;
-            top: 100%;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .dropdown-item {
-            display: flex;
-            align-items: center;
-            padding: 12px 20px;
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 600;
-            transition: background 0.2s ease;
-            margin-left: 0;
-        }
-        .dropdown-item:hover {
-            background-color: var(--light-bg);
-            color: var(--primary-color);
-        }
-        .dropdown-item img {
-            height: 24px;
-            width: auto;
-            margin-right: 12px;
-            object-fit: contain;
-        }
+        .logo{font-weight:700;color:var(--primary-color);font-size:1.15rem}
 
-        /* Hero Section with Faded Africa Globe Graphic */
-        .hero {
-            background: linear-gradient(rgba(13, 44, 84, 0.9), rgba(13, 44, 84, 0.9)), 
-                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="rgba(255,255,255,0.06)"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm-11.23 415.3c-23.95-3.37-47.52-16.32-61.9-38.38-7.7-11.82-15.01-28.53-15.01-44.52 0-33.56 16.03-51.48 43.14-51.48 11.25 0 24.36 4.95 24.36 17.51 0 5.48-2.61 8.89-7.9 14.19-7.1 7.1-9.35 11.75-9.35 19.33 0 14.82 14.28 27.27 28.51 24.77 11.19-1.97 19.78-14.88 19.78-29.35 0-31.54-15.42-49.33-43.08-49.33-40.06 0-77.34 32.88-77.34 81.33 0 45.42 28.61 77.29 73.18 84.58 8.44 1.38 17.06 1.83 25.64 1.35zm35.23-14.4c-6.84-21.22-4.14-46.7 10.32-63.53 18.06-21.03 47.96-26.11 74.52-12.78 12.06 6.05 18.15 16.92 18.15 31.96 0 17.16-10.02 26.54-29.74 27.87-17.65 1.19-27.13 10.37-27.13 22.84 0 5.56 1.63 10.45 4.36 15.39-16.57 2.15-33.58-1.57-50.48-21.75zM384 256c0 14.54-3.1 28.56-8.65 41.27-11.45-12.44-28.32-19.64-46.12-19.64-21.2 0-39.75 10.15-51.24 25.63-12.08-11.43-28.54-18.41-46.66-18.41-21.05 0-39.52 9.87-51.05 25.04-3.52-3.14-7.44-5.83-11.66-8.01 10.74-21.32 12.94-47.53 4.14-71.12-12.33-33.05-44.52-52.61-78.71-50.77 12.35-37.1 43.15-64.88 81.43-73.49 14.88 15.35 34.33 22.25 56.47 22.25 34.12 0 66.25-18.42 81.42-50.24 37.14 8.24 67.24 34.87 80.24 70.43-16.14.77-31.54 7.64-42.33 19.33-14.84 16.12-18.14 41.22-9.65 61.24 10.22 24.11 31.54 39.49 56.34 41.45z"/></svg>'),
-                        url('images/traction-hero-bg.jpg') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 120px 20px;
-        }
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        .hero p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-        .section {
-            padding: 60px 10%;
-        }
-        .section-title {
-            text-align: center;
-            color: var(--primary-color);
-            font-size: 32px;
-            margin-bottom: 40px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        
-        /* Clickable Impact Cards */
-        .card {
-            background: var(--light-bg);
-            padding: 25px;
-            border-radius: 8px;
-            border-top: 4px solid var(--accent-color);
-            position: relative;
-            cursor: pointer;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-        .card h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-        }
-        .card-overlay {
-            position: absolute;
-            bottom: -100%;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(transparent, rgba(13, 44, 84, 0.95) 40%);
-            color: var(--accent-color);
-            text-align: center;
-            padding: 40px 0 15px 0;
-            font-weight: bold;
-            font-size: 14px;
-            transition: bottom 0.3s ease;
-        }
-        .card:hover .card-overlay {
-            bottom: 0;
-        }
+        nav{display:flex;align-items:center}
+        nav a{margin-left:20px;text-decoration:none;color:var(--text-color);font-weight:600;transition:color .2s}
+        nav a:hover{color:var(--accent-color)}
 
-        /* Modal / Popup Windows Layout */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            z-index: 200;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: white;
-            padding: 35px;
-            border-radius: 12px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            position: relative;
-            animation: modalFade 0.3s ease;
-        }
-        @keyframes modalFade {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 28px;
-            cursor: pointer;
-            color: #aaa;
-        }
-        .close-modal:hover {
-            color: var(--text-color);
-        }
-        .modal-title {
-            color: var(--primary-color);
-            font-size: 24px;
-            margin-top: 0;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 8px;
-        }
-        .modal-img {
-            width: 100%;
-            height: 180px;
-            background-color: #ddd;
-            border-radius: 6px;
-            margin: 15px 0;
-            object-fit: cover;
-        }
-        .modal-stats {
-            background-color: var(--light-bg);
-            padding: 12px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            border-left: 4px solid var(--accent-color);
-        }
-        .modal-btn {
-            display: block;
-            text-align: center;
-            background-color: #25D366;
-            color: white;
-            padding: 12px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.2s;
-        }
-        .modal-btn:hover {
-            background-color: #1ebd58;
-        }
+        .hamburger{display:none;flex-direction:column;justify-content:space-between;width:24px;height:18px;background:transparent;border:none;cursor:pointer;padding:0;z-index:110}
+        .hamburger span{display:block;height:2.5px;background:var(--primary-color);transition:all .3s}
 
-        /* Google Reviews Layout Structure */
-        .reviews-section {
-            background-color: var(--light-bg);
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-        .reviews-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .google-stars {
-            color: #fbbc05;
-            font-size: 22px;
-            margin-top: 5px;
-        }
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 900px;
-            margin: 0 auto 40px;
-        }
-        .review-card {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            border: 1px solid #eee;
-        }
-        .reviewer-meta {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .reviewer-avatar {
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-right: 12px;
-        }
-        .reviewer-name {
-            font-weight: bold;
-            color: var(--text-color);
-        }
-        .review-text {
-            font-size: 14px;
-            color: #555;
-            font-style: italic;
-        }
-        .google-maps-btn {
-            display: block;
-            width: fit-content;
-            margin: 0 auto;
-            background-color: white;
-            color: #4285f4;
-            border: 1px solid #4285f4;
-            padding: 10px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.2s;
-        }
-        .google-maps-btn:hover {
-            background-color: #4285f4;
-            color: white;
-        }
+        .dropdown{position:relative;display:inline-block}
+        .dropdown-content{display:none;position:absolute;background:#fff;min-width:260px;box-shadow:0 8px 16px rgba(0,0,0,0.15);border-radius:6px;padding:10px 0;z-index:105;left:20px;top:100%}
+        .dropdown:hover .dropdown-content{display:block}
+        .dropdown-item{display:flex;align-items:center;padding:12px 20px;text-decoration:none;color:var(--text-color);font-weight:600}
+        .dropdown-item img{height:24px;margin-right:12px;object-fit:contain}
 
-        /* Brand Carousel Styling */
-        .carousel-container {
-            overflow: hidden;
-            white-space: nowrap;
-            padding: 30px 0;
-            background: #ffffff;
-            position: relative;
+        /* HERO with SVG overlay */
+        .hero{
+            position:relative; /* needed for ::before overlay */
+            overflow:hidden;
+            color:#fff;
+            text-align:center;
+            padding:120px 20px;
+            background:
+                linear-gradient(rgba(13,44,84,0.85), rgba(13,44,84,0.85)),
+                url('images/traction-hero-bg.jpg') no-repeat center center / cover;
         }
-        .carousel-container::before, .carousel-container::after {
-            position: absolute;
-            top: 0;
-            width: 100px;
-            height: 100%;
-            content: "";
-            z-index: 2;
+        /* SVG overlay placed via pseudo element so we can control opacity */
+        .hero::before{
+            content:"";
+            position:absolute;
+            inset:0;
+            background-image:
+                url('images/africa.svg'),
+                url('africa.svg');
+            /* try images/africa.svg first, fallback to africa.svg */
+            background-repeat:no-repeat;
+            background-position:center center;
+            background-size:60% auto; /* adjust size of the globe */
+            opacity:0.06; /* faded look */
+            pointer-events:none;
+            z-index:0;
         }
-        .carousel-container::before {
-            left: 0;
-            background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-        }
-        .carousel-container::after {
-            right: 0;
-            background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-        }
-        .carousel-track {
-            display: inline-block;
-            animation: scrollBrands 25s linear infinite;
-        }
-        .carousel-track img {
-            height: 50px;
-            margin: 0 40px;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-            vertical-align: middle;
-        }
-        .carousel-track img:hover {
-            opacity: 1;
-        }
-        @keyframes scrollBrands {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        footer {
-            background: #111;
-            color: #aaa;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
+        .hero > *{position:relative; z-index:1} /* keep text above overlay */
 
-        /* ==========================================================================
-           RESPONSIVE MOBILE BREAKPOINTS & TEXT ADJUSTMENTS
-           ========================================================================== */
-        @media (max-width: 900px) {
-            header {
-                padding: 15px 6%;
-            }
-            .hamburger {
-                display: flex; /* Shows toggle lines */
-            }
-            
-            /* Converts the desktop row links layout into a hidden side drawer */
-            nav {
-                position: fixed;
-                top: 0;
-                right: -100%; /* Hides menu completely offscreen right */
-                width: 280px;
-                height: 100vh;
-                background-color: white;
-                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 80px 40px 40px 40px;
-                box-sizing: border-box;
-                transition: right 0.4s cubic-bezier(0.1, 0.9, 0.2, 1);
-                z-index: 105;
-            }
-            nav.active {
-                right: 0; /* Slides menu cleanly inside screen layout */
-            }
-            nav a {
-                margin: 0 0 25px 0;
-                font-size: 18px;
-                width: 100%;
-            }
-            
-            /* Responsive adjustments for mobile dropdown nested layouts */
-            .dropdown {
-                width: 100%;
-            }
-            .dropdown-content {
-                position: static;
-                display: block; /* Native stacked visualization on mobile screens */
-                box-shadow: none;
-                padding: 5px 0 0 15px;
-                min-width: unset;
-                background-color: transparent;
-            }
-            .dropdown-item {
-                padding: 10px 0;
-                font-size: 16px;
-            }
+        .hero h1{font-size:48px;margin:0 0 15px;font-weight:700}
+        .hero p{font-size:20px;max-width:800px;margin:0 auto 30px}
 
-            /* Animations for Hamburger transform states */
-            .hamburger.toggle span:nth-child(1) {
-                transform: rotate(-45deg) translate(-5px, 4px);
-            }
-            .hamburger.toggle span:nth-child(2) {
-                opacity: 0;
-            }
-            .hamburger.toggle span:nth-transform, .hamburger.toggle span:nth-child(3) {
-                transform: rotate(45deg) translate(-5px, -4px);
-            }
+        .section{padding:60px 10%}
+        .section-title{text-align:center;color:var(--primary-color);font-size:32px;margin-bottom:40px}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
 
-            /* fluid mobile typography improvements */
-            .hero h1 {
-                font-size: 32px;
-            }
-            .hero p {
-                font-size: 16px;
-            }
-            .section {
-                padding: 50px 6%;
-            }
-            .section-title {
-                font-size: 26px;
-                margin-bottom: 30px;
-            }
-            .modal-content {
-                padding: 25px;
-            }
-            .modal-title {
-                font-size: 20px;
-            }
+        .card{background:var(--light-bg);padding:25px;border-radius:8px;border-top:4px solid var(--accent-color);position:relative;cursor:pointer;overflow:hidden;transition:all .3s}
+        .card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,0.05)}
+        .card h3{color:var(--primary-color);margin-top:0}
+        .card-overlay{position:absolute;bottom:-100%;left:0;width:100%;background:linear-gradient(transparent,rgba(13,44,84,0.95)40%);color:var(--accent-color);text-align:center;padding:40px 0 15px;font-weight:bold;font-size:14px;transition:bottom .3s}
+        .card:hover .card-overlay{bottom:0}
+
+        .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;display:flex;align-items:center;justify-content:center}
+        .modal-content{background:#fff;padding:35px;border-radius:12px;max-width:600px;width:92%;box-shadow:0 10px 30px rgba(0,0,0,.3);position:relative;animation:modalFade .3s}
+        @keyframes modalFade{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:none}}
+        .close-modal{position:absolute;top:15px;right:20px;font-size:28px;cursor:pointer;color:#aaa;border:none;background:none}
+        .modal-title{color:var(--primary-color);font-size:24px;margin-top:0;border-bottom:2px solid var(--accent-color);padding-bottom:8px}
+        .modal-img{width:100%;height:220px;background:#ddd;border-radius:6px;margin:15px 0;object-fit:cover}
+        .modal-stats{background:var(--light-bg);padding:12px;border-radius:6px;font-size:14px;font-weight:600;color:var(--primary-color);margin-bottom:20px;border-left:4px solid var(--accent-color)}
+        .modal-btn{display:block;text-align:center;background:#25D366;color:#fff;padding:12px;border-radius:6px;text-decoration:none;font-weight:700}
+        .modal-btn:hover{background:#1ebd58}
+
+        .reviews-section{background:var(--light-bg);border-top:1px solid #eee;border-bottom:1px solid #eee}
+        .google-stars{color:#fbbc05;font-size:22px;margin-top:5px}
+        .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;max-width:900px;margin:0 auto 40px}
+        .review-card{background:#fff;padding:25px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.03);border:1px solid #eee}
+        .reviewer-meta{display:flex;align-items:center;margin-bottom:15px}
+        .reviewer-avatar{width:40px;height:40px;background:var(--primary-color);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;margin-right:12px}
+
+        .carousel-container{overflow:hidden;white-space:nowrap;padding:30px 0;background:#fff;position:relative}
+        .carousel-container::before,.carousel-container::after{position:absolute;top:0;width:100px;height:100%;content:"";z-index:2}
+        .carousel-container::before{left:0;background:linear-gradient(to right, #fff 0%, rgba(255,255,255,0) 100%)}
+        .carousel-container::after{right:0;background:linear-gradient(to left, #fff 0%, rgba(255,255,255,0) 100%)}
+        .carousel-track{display:inline-block;animation:scrollBrands 25s linear infinite}
+        .carousel-track img{height:50px;margin:0 40px;opacity:.7;vertical-align:middle;transition:opacity .3s}
+        .carousel-track img:hover{opacity:1}
+        @keyframes scrollBrands{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+        footer{background:#111;color:#aaa;text-align:center;padding:20px;font-size:14px}
+
+        @media(max-width:900px){
+            header{padding:15px 6%}
+            .hamburger{display:flex}
+            nav{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:#fff;box-shadow:-5px 0 15px rgba(0,0,0,.1);flex-direction:column;align-items:flex-start;padding:80px 40px 40px 40px;transition:right .4s cubic-bezier(.1,.9,.2,1);z-index:105}
+            nav.active{right:0}
+            nav a{margin:0 0 25px 0;font-size:18px;width:100%}
+            .dropdown-content{position:static;display:block;box-shadow:none;padding:5px 0 0 15px;background:transparent}
+            .hamburger.toggle span:nth-child(1){transform:rotate(-45deg) translate(-5px,4px)}
+            .hamburger.toggle span:nth-child(2){opacity:0}
+            .hamburger.toggle span:nth-child(3){transform:rotate(45deg) translate(-5px,-4px)}
+            .hero h1{font-size:32px}
+            .hero p{font-size:16px}
+            .section{padding:50px 6%}
+            .section-title{font-size:26px;margin-bottom:30px}
+            .modal-content{padding:25px}
+            .modal-title{font-size:20px}
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <header>
-        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="/traction/images/traction-outsourcing-logo.png" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
-        </a>
-        
-        <!-- Hamburger Menu Toggle Trigger lines -->
-        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu Navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+<header>
+    <a href="index.html" style="display:flex;align-items:center;text-decoration:none">
+        <img src="images/traction-outsourcing-logo.png" alt="Traction Outsourcing Limited Logo" style="height:50px;width:auto">
+    </a>
 
-        <nav id="navMenu">
-            <a href="index.html">Home</a>
-            <a href="events.html">Events</a>
-            <a href="articles.html">Articles</a>
-            
-            <!-- Interactive Menu Dropdown Wrapper -->
-            <div class="dropdown">
-                <a href="#">Our Brands</a>
-                <div class="dropdown-content">
-                    <a href="brands/properties.html" class="dropdown-item">
-                        <img src="/traction/images/traction-properties-logo.png" alt="Traction Properties Logo">
-                        Traction Properties
-                    </a>
-                    <a href="brands/recruiters.html" class="dropdown-item">
-                        <img src="/traction/images/ath-recruiters-logo.png" alt="ATH Recruiters Logo">
-                        ATH Recruiters
-                    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav id="navMenu" aria-hidden="true">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="articles.html">Articles</a>
+
+        <div class="dropdown">
+            <a href="#" aria-haspopup="true">Our Brands</a>
+            <div class="dropdown-content" role="menu" aria-label="Our Brands Menu">
+                <a href="brands/properties.html" class="dropdown-item" role="menuitem">
+                    <img src="images/traction-properties-logo.png" alt="Traction Properties Logo">Traction Properties
+                </a>
+                <a href="brands/recruiters.html" class="dropdown-item" role="menuitem">
+                    <img src="images/ath-recruiters-logo.png" alt="ATH Recruiters Logo">ATH Recruiters
+                </a>
+            </div>
+        </div>
+
+        <a href="founder.html">Our Founder</a>
+    </nav>
+</header>
+
+<section class="hero" role="region" aria-label="Hero">
+    <h1>Building Africa, for Africans</h1>
+    <p>A premium management consulting firm driving institutional growth, robust business structures, and market leadership across the continent.</p>
+</section>
+
+<section class="section" aria-label="Our Areas of Impact">
+    <h2 class="section-title">Our Areas of Impact</h2>
+    <div class="grid">
+        <div class="card" data-title="Startup Structuring" data-img="images/site-work.jpg" data-writeup="Over 34 corporate entities and emerging ventures successfully structured for venture scaling inside core markets.">
+            <h3>Startup Structuring</h3>
+            <p>Lay corporate foundations that attract investment, optimize workflow collaboration, and ensure early-stage compliance.</p>
+            <div class="card-overlay">See more..</div>
+        </div>
+
+        <div class="card" data-title="Corporate Restructuring" data-img="images/site-work.jpg" data-writeup="18 legacy frameworks systematically re-engineered to clear operational blockages and improve performance metrics.">
+            <h3>Corporate Restructuring</h3>
+            <p>Revamp operations, improve institutional frameworks, and scale capacity for legacy systems to modern environments.</p>
+            <div class="card-overlay">See more..</div>
+        </div>
+
+        <div class="card" data-title="Business Advisory" data-img="images/site-work.jpg" data-writeup="Guided 47 enterprise leadership desks across regional market expansions within the last 12 months.">
+            <h3>Business Advisory</h3>
+            <p>Data-driven strategy execution, governance mapping, and scaling tools built specifically for the African terrain.</p>
+            <div class="card-overlay">See more..</div>
+        </div>
+
+        <div class="card" data-title="Executive-Level Recruitment" data-img="images/site-work.jpg" data-writeup="Successfully placed 23 elite C-suite leaders and country management heads across multiple sectors.">
+            <h3>Executive-Level Recruitment</h3>
+            <p>Securing high-performing leadership, country heads, and C-suite talent capable of driving organizational key objectives.</p>
+            <div class="card-overlay">See more..</div>
+        </div>
+
+        <div class="card" data-title="Employee Training" data-img="images/site-work.jpg" data-writeup="Delivered custom capability masterclasses to over 1,200 corporate officers across finance, HR and operations.">
+            <h3>Employee Training</h3>
+            <p>Custom training programs designed to align workforce execution with overarching corporate vision.</p>
+            <div class="card-overlay">See more..</div>
+        </div>
+
+        <div class="card" data-title="Corporate Retreats & Events" data-img="images/kigali-retreat-2026.jpg" data-writeup="Designed strategic execution events empowering management cohorts with leadership workshops and international networking opportunities.">
+            <h3>Corporate Retreats & Events</h3>
+            <p>High-end international networking frameworks designed to combine business strategy sessions with premier travel experiences.</p>
+            <div class="card-overlay">See more..</div>
+        </div>
+    </div>
+</section>
+
+<section class="section reviews-section" aria-label="Client Reviews">
+    <div class="reviews-header">
+        <h2 class="section-title" style="margin-bottom:5px">What Our Clients Say</h2>
+        <div style="font-weight:700;font-size:18px">Traction Outsourcing Google Maps Verification</div>
+        <div class="google-stars" aria-hidden="true">★★★★★ <span style="color:#555;font-size:14px;font-weight:600">(4.9 / 5.0 Rating)</span></div>
+    </div>
+
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="reviewer-meta">
+                <div class="reviewer-avatar">CO</div>
+                <div>
+                    <div class="reviewer-name">Chinedu Okafor</div>
+                    <div style="color:#fbbc05;font-size:12px">★★★★★</div>
                 </div>
             </div>
-            
-            <a href="founder.html">Our Founder</a>
-        </nav>
-    </header>
-
-    <!-- Hero Section / Tagline Focus -->
-    <section class="hero">
-        <h1>Building Africa, for Africans</h1>
-        <p>A premium management consulting firm driving institutional growth, robust business structures, and market leadership across the continent.</p>
-    </section>
-
-    <!-- Core Impact Areas Section -->
-    <section class="section">
-        <h2 class="section-title">Our Areas of Impact</h2>
-        <div class="grid">
-            <!-- Card 1 -->
-            <div class="card" onclick="openImpactModal('Startup Structuring', 'images/site-work.jpg', 'Over 34 corporate entities and emerging ventures successfully structured for venture scaling inside the last 6 months.')">
-                <h3>Startup Structuring</h3>
-                <p>Lay corporate foundations that attract investment, optimize workflow collaboration, and ensure early-stage compliance.</p>
-                <div class="card-overlay">See more..</div>
-            </div>
-            <!-- Card 2 -->
-            <div class="card" onclick="openImpactModal('Corporate Restructuring', 'images/site-work.jpg', '18 legacy frameworks systematically re-engineered to clear operational blockages within the last 6 months.')">
-                <h3>Corporate Restructuring</h3>
-                <p>Revamp operations, improve institutional frameworks, and scale capacity for legacy systems to modern environments.</p>
-                <div class="card-overlay">See more..</div>
-            </div>
-            <!-- Card 3 -->
-            <div class="card" onclick="openImpactModal('Business Advisory', 'images/site-work.jpg', 'Guided 47 enterprise leadership desks across regional market expansions inside the last 6 months.')">
-                <h3>Business Advisory</h3>
-                <p>Data-driven strategy execution, governance mapping, and scaling tools built specifically for the African terrain.</p>
-                <div class="card-overlay">See more..</div>
-            </div>
-            <!-- Card 4 -->
-            <div class="card" onclick="openImpactModal('Executive-Level Recruitment', 'images/site-work.jpg', 'Successfully placed 23 elite C-suite leaders and country management heads inside the last 6 months.')">
-                <h3>Executive-Level Recruitment</h3>
-                <p>Securing high-performing leadership, country heads, and C-suite talent capable of driving organizational key objectives.</p>
-                <div class="card-overlay">See more..</div>
-            </div>
-            <!-- Card 5 -->
-            <div class="card" onclick="openImpactModal('Employee Training', 'images/site-work.jpg', 'Delivered custom capability masterclasses to over 1,200 active corporate officers within the last 6 months.')">
-                <h3>Employee Training</h3>
-                <p>Custom training programs designed to align workforce execution with overarching corporate vision.</p>
-                <div class="card-overlay">See more..</div>
-            </div>
-            <!-- Card 6 -->
-            <div class="card" onclick="openImpactModal('Corporate Retreats & Events', 'images/kigali-retreat-2026.jpg', 'Designed strategic execution events empowering 12 distinct management cohorts over the last 6 months.')">
-                <h3>Corporate Retreats & Events</h3>
-                <p>High-end international networking frameworks designed to combine business strategy sessions with premier travel experiences.</p>
-                <div class="card-overlay">See more..</div>
-            </div>
+            <p class="review-text">"Traction Outsourcing completely restructured our operational workflow models. Their startup structuring expertise removed structural overlap and gave us clarity of roles and responsibilities across teams."</p>
         </div>
-    </section>
 
-    <!-- Embedded Google Reviews Layout Structure Section -->
-    <section class="section reviews-section">
-        <div class="reviews-header">
-            <h2 class="section-title" style="margin-bottom: 5px;">What Our Clients Say</h2>
-            <div style="font-weight: bold; font-size: 18px;">Traction Outsourcing Google Maps Verification</div>
-            <div class="google-stars">★★★★★ <span style="color: #555; font-size: 14px; font-weight: 600;">(4.9 / 5.0 Rating)</span></div>
-        </div>
-        
-        <div class="reviews-grid">
-            <!-- Review 1 -->
-            <div class="review-card">
-                <div class="reviewer-meta">
-                    <div class="reviewer-avatar">CO</div>
-                    <div>
-                        <div class="reviewer-name">Chinedu Okafor</div>
-                        <div style="color: #fbbc05; font-size: 12px;">★★★★★</div>
-                    </div>
+        <div class="review-card">
+            <div class="reviewer-meta">
+                <div class="reviewer-avatar">AI</div>
+                <div>
+                    <div class="reviewer-name">Amina Ibrahim</div>
+                    <div style="color:#fbbc05;font-size:12px">★★★★★</div>
                 </div>
-                <p class="review-text">"Traction Outsourcing completely restructured our operational workflow models. Their startup structuring expertise removed structural overlap and gave us the clarity required to scale securely. Exceptional delivery!"</p>
             </div>
-            
-            <!-- Review 2 -->
-            <div class="review-card">
-                <div class="reviewer-meta">
-                    <div class="reviewer-avatar">AI</div>
-                    <div>
-                        <div class="reviewer-name">Amina Ibrahim</div>
-                        <div style="color: #fbbc05; font-size: 12px;">★★★★★</div>
-                    </div>
-                </div>
-                <p class="review-text">"The corporate advisory sessions provided by their senior management transformed our recruitment funnels. If you are serious about company structure in Nigeria, Prince Elijah and his elite panel are unmatched."</p>
-            </div>
-        </div>
-        
-        <!-- Redirect to maps engine profile -->
-        <a href="https://maps.google.com" target="_blank" class="google-maps-btn">Read More Customer Reviews on Google</a>
-    </section>
-
-    <!-- Trusted By / Brands Carousel Section -->
-    <section class="section" style="background-color: #ffffff; padding-bottom: 80px;">
-        <h2 class="section-title">Brands We Work With</h2>
-        
-        <div class="carousel-container">
-            <div class="carousel-track">
-                <!-- First Sequence of Logos -->
-                <img src="images/Gifts-n-boxes.png" alt="Corporate Partner Logo">
-                <img src="images/afroreach-research.png" alt="Corporate Partner Logo">
-                <img src="images/beacon-trust.jpg" alt="Corporate Partner Logo">
-                <img src="images/bravies.png" alt="Corporate Partner Logo">
-                <img src="images/chairo-properties.png" alt="Corporate Partner Logo">
-                <img src="images/demipos-hotel.png" alt="Corporate Partner Logo">
-                <img src="images/fourtwoseven-engineering.jpg" alt="Corporate Partner Logo">
-                <img src="images/grown-and-glow.png" alt="Corporate Partner Logo">
-                <img src="images/la-luna-restaurant.png" alt="Corporate Partner Logo">
-                <img src="images/tifes-hub.png" alt="Corporate Partner Logo">
-
-                <!-- Duplicated Sequence for Infinite Seamless Looping -->
-                <img src="images/Gifts-n-boxes.png" alt="Corporate Partner Logo">
-                <img src="images/afroreach-research.png" alt="Corporate Partner Logo">
-                <img src="images/beacon-trust.jpg" alt="Corporate Partner Logo">
-                <img src="images/bravies.png" alt="Corporate Partner Logo">
-                <img src="images/chairo-properties.png" alt="Corporate Partner Logo">
-                <img src="images/demipos-hotel.png" alt="Corporate Partner Logo">
-                <img src="images/fourtwoseven-engineering.jpg" alt="Corporate Partner Logo">
-                <img src="images/grown-and-glow.png" alt="Corporate Partner Logo">
-                <img src="images/la-luna-restaurant.png" alt="Corporate Partner Logo">
-                <img src="images/tifes-hub.png" alt="Corporate Partner Logo">
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact Pop Box Popup Window -->
-    <div id="impactModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeImpactModal()">&times;</span>
-            <h3 id="modalTitle" class="modal-title">Area of Impact</h3>
-            <img id="modalImg" class="modal-img" src="" alt="Impact Metric Portfolio Illustration">
-            <div id="modalStats" class="modal-stats">Active performance metrics details tracking...</div>
-            <a id="modalCta" href="https://wa.me/2348125078087?text=I%20want%20to%20book%20a%20free%2030-minute%20consultation" class="modal-btn" target="_blank">Get 30-Mins Free WhatsApp Consultation</a>
+            <p class="review-text">"The corporate advisory sessions provided by their senior management transformed our recruitment funnels and improved retention—highly recommended."</p>
         </div>
     </div>
 
-    <!-- Interactive Execution Logic Scripts -->
-    <script>
-        // Toggle mobile hamburger navigation panel drawer open/close
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const navMenu = document.getElementById('navMenu');
+    <a href="https://maps.google.com" target="_blank" rel="noopener" class="google-maps-btn">Read More Customer Reviews on Google</a>
+</section>
 
-        hamburgerBtn.addEventListener('click', () => {
-            hamburgerBtn.classList.toggle('toggle');
-            navMenu.classList.toggle('active');
+<section class="section" style="background:#fff;padding-bottom:80px" aria-label="Brands">
+    <h2 class="section-title">Brands We Work With</h2>
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <img src="images/Gifts-n-boxes.png" alt="Gifts n Boxes">
+            <img src="images/afroreach-research.png" alt="Afroreach Research">
+            <img src="images/beacon-trust.jpg" alt="Beacon Trust">
+            <img src="images/bravies.png" alt="Bravies">
+            <img src="images/chairo-properties.png" alt="Chairo Properties">
+            <img src="images/demipos-hotel.png" alt="Demipos Hotel">
+            <img src="images/fourtwoseven-engineering.jpg" alt="FourTwoSeven Engineering">
+            <img src="images/grown-and-glow.png" alt="Grown and Glow">
+            <img src="images/la-luna-restaurant.png" alt="La Luna">
+            <img src="images/tifes-hub.png" alt="Tifes Hub">
+
+            <!-- duplicate sequence for seamless loop -->
+            <img src="images/Gifts-n-boxes.png" alt="">
+            <img src="images/afroreach-research.png" alt="">
+            <img src="images/beacon-trust.jpg" alt="">
+            <img src="images/bravies.png" alt="">
+            <img src="images/chairo-properties.png" alt="">
+            <img src="images/demipos-hotel.png" alt="">
+            <img src="images/fourtwoseven-engineering.jpg" alt="">
+            <img src="images/grown-and-glow.png" alt="">
+            <img src="images/la-luna-restaurant.png" alt="">
+            <img src="images/tifes-hub.png" alt="">
+        </div>
+    </div>
+</section>
+
+<div id="impactModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+        <button class="close-modal" id="closeModalBtn" aria-label="Close">&times;</button>
+        <h3 id="modalTitle" class="modal-title">Area of Impact</h3>
+        <img id="modalImg" class="modal-img" src="" alt="Impact image">
+        <div id="modalStats" class="modal-stats">Active performance metrics details tracking...</div>
+        <a id="modalCta" class="modal-btn" href="https://wa.me/2348125078087" target="_blank" rel="noopener">Get 30-Min Free WhatsApp Consultation</a>
+    </div>
+</div>
+
+<script>
+    // Mobile nav toggle with ARIA
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    hamburgerBtn.addEventListener('click', ()=>{
+        const open = hamburgerBtn.classList.toggle('toggle');
+        navMenu.classList.toggle('active');
+        hamburgerBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        navMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    });
+    // auto-close nav on link click
+    document.querySelectorAll('nav a:not([href="#"])').forEach(a=>{
+        a.addEventListener('click', ()=>{
+            hamburgerBtn.classList.remove('toggle');
+            navMenu.classList.remove('active');
+            hamburgerBtn.setAttribute('aria-expanded','false');
+            navMenu.setAttribute('aria-hidden','true');
         });
+    });
 
-        // Auto-closes mobile tray drawer upon clicking individual action endpoints
-        document.querySelectorAll('nav a:not([href="#"])').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburgerBtn.classList.remove('toggle');
-                navMenu.classList.remove('active');
-            });
+    // Modal logic
+    const impactModal = document.getElementById('impactModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalImg = document.getElementById('modalImg');
+    const modalStats = document.getElementById('modalStats');
+    const modalCta = document.getElementById('modalCta');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    function openImpactModal(title,img,writeup){
+        modalTitle.innerText = title;
+        modalImg.src = img;
+        modalImg.alt = title + " image";
+        modalStats.innerText = writeup;
+        modalCta.href = "https://wa.me/2348125078087?text="+encodeURIComponent("I want to book a free 30-minute consultation regarding "+title);
+        impactModal.style.display = "flex";
+        impactModal.setAttribute('aria-hidden','false');
+    }
+    function closeImpactModal(){
+        impactModal.style.display = "none";
+        impactModal.setAttribute('aria-hidden','true');
+    }
+    closeModalBtn.addEventListener('click', closeImpactModal);
+    window.addEventListener('click', e => { if (e.target===impactModal) closeImpactModal(); });
+    window.addEventListener('keydown', e => { if (e.key==='Escape' && impactModal.style.display==='flex') closeImpactModal(); });
+
+    // attach card clicks
+    document.querySelectorAll('.card').forEach(card=>{
+        card.addEventListener('click', ()=>{
+            const title = card.dataset.title || 'Area of Impact';
+            const img = card.dataset.img || 'images/site-work.jpg';
+            const writeup = card.dataset.writeup || 'Contact us for more details.';
+            openImpactModal(title,img,writeup);
         });
+    });
+</script>
 
-        function openImpactModal(title, imgUrl, writeup) {
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalImg').src = imgUrl;
-            document.getElementById('modalStats').innerText = writeup;
-            
-            document.getElementById('modalCta').href = "https://wa.me/2348125078087?text=I%20want%20to%20book%20a%20free%2030-minute%20consultation%20regarding%20" + encodeURIComponent(title);
-            
-            document.getElementById('impactModal').style.display = 'flex';
-        }
-        function closeImpactModal() {
-            document.getElementById('impactModal').style.display = 'none';
-        }
-        window.onclick = function(event) {
-            var modal = document.getElementById('impactModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
-    </script>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Traction Outsourcing Limited. All Rights Reserved. | Designed for High-Performance SEO</p>
-    </footer>
-
+<footer>
+    <p>&copy; 2026 Traction Outsourcing Limited. All Rights Reserved. | Designed for High-Performance SEO</p>
+</footer>
 </body>
 </html>
