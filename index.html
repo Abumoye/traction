@@ -8,6 +8,7 @@
     <meta name="description" content="Traction Outsourcing Limited is a premium management consulting firm in Nigeria specializing in startup structuring, corporate restructuring, business advisory, executive recruitment, staff training, and corporate retreats. Building Africa, for Africans.">
     <meta name="keywords" content="consulting firms in nigeria, business advisory abuja, startup structuring nigeria, staff trainer in nigeria, corporate retreat in nigeria, recruitment in abuja">
     
+    <!-- Open Graph Protocol Social Media Meta Cards -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Traction Outsourcing Limited | Management Consulting Firm Nigeria">
     <meta property="og:description" content="Premium management consulting firm in Nigeria specializing in startup structuring, corporate restructuring, business advisory, and executive recruitment. Building Africa, for Africans.">
@@ -18,6 +19,7 @@
     <meta property="og:image:type" content="image/png">
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- JSON-LD LocalBusiness Schema Markup for Google SEO Ranking -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -60,6 +62,7 @@
     }
     </script>
 
+    <!-- Clean, modern styling -->
     <style>
         :root {
             --primary-color: #e35f26; /* Official Orange */
@@ -165,10 +168,10 @@
             object-fit: contain;
         }
 
-        /* Hero Section with Faded Africa Globe Graphic */
+        /* Hero Section with Africa Map SVG overlay background */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
-                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="rgba(227,95,38,0.08)"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm-11.23 415.3c-23.95-3.37-47.52-16.32-61.9-38.38-7.7-11.82-15.01-28.53-15.01-44.52 0-33.56 16.03-51.48 43.14-51.48 11.25 0 24.36 4.95 24.36 17.51 0 5.48-2.61 8.89-7.9 14.19-7.1 7.1-9.35 11.75-9.35 19.33 0 14.82 14.28 27.27 28.51 24.77 11.19-1.97 19.78-14.88 19.78-29.35 0-31.54-15.42-49.33-43.08-49.33-40.06 0-77.34 32.88-77.34 81.33 0 45.42 28.61 77.29 73.18 84.58 8.44 1.38 17.06 1.83 25.64 1.35zm35.23-14.4c-6.84-21.22-4.14-46.7 10.32-63.53 18.06-21.03 47.96-26.11 74.52-12.78 12.06 6.05 18.15 16.92 18.15 31.96 0 17.16-10.02 26.54-29.74 27.87-17.65 1.19-27.13 10.37-27.13 22.84 0 5.56 1.63 10.45 4.36 15.39-16.57 2.15-33.58-1.57-50.48-21.75zM384 256c0 14.54-3.1 28.56-8.65 41.27-11.45-12.44-28.32-19.64-46.12-19.64-21.2 0-39.75 10.15-51.24 25.63-12.08-11.43-28.54-18.41-46.66-18.41-21.05 0-39.52 9.87-51.05 25.04-3.52-3.14-7.44-5.83-11.66-8.01 10.74-21.32 12.94-47.53 4.14-71.12-12.33-33.05-44.52-52.61-78.71-50.77 12.35-37.1 43.15-64.88 81.43-73.49 14.88 15.35 34.33 22.25 56.47 22.25 34.12 0 66.25-18.42 81.42-50.24 37.14 8.24 67.24 34.87 80.24 70.43-16.14.77-31.54 7.64-42.33 19.33-14.84 16.12-18.14 41.22-9.65 61.24 10.22 24.11 31.54 39.49 56.34 41.45z"/></svg>'),
+                        url('/traction/images/africa.svg') no-repeat center center,
                         url('/traction/images/traction-hero-bg.jpg') no-repeat center center/cover;
             color: var(--white-color);
             text-align: center;
@@ -575,6 +578,7 @@
 </head>
 <body>
 
+    <!-- Header / Navigation -->
     <header>
         <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
             <img src="/traction/images/traction-outsourcing-logo.png" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
@@ -609,39 +613,47 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Building Africa, for Africans</h1>
-        <p>A premium management consulting firm driving institutional growth, robust business structures, and market leadership across the continent.</p>
+        <h1>Built By Africans, for Africa</h1>
+        <p>A premium management consulting firm driving institutional growth, robust business structures, and market leadership from Abuja, Nigeria, across the African continent.</p>
     </section>
 
+    <!-- Core Impact Areas Section -->
     <section class="section">
         <h2 class="section-title">Our Areas of Impact</h2>
         <div class="grid">
+            <!-- Card 1 -->
             <div class="card" onclick="openImpactModal('Startup Structuring', '/traction/images/site-work.jpg', 'Over 34 corporate entities and emerging ventures successfully structured for venture scaling inside the last 6 months.')">
                 <h3>Startup Structuring</h3>
                 <p>Lay corporate foundations that attract investment, optimize workflow collaboration, and ensure early-stage compliance.</p>
                 <div class="card-overlay">See more..</div>
             </div>
+            <!-- Card 2 -->
             <div class="card" onclick="openImpactModal('Corporate Restructuring', '/traction/images/site-work.jpg', '18 legacy frameworks systematically re-engineered to clear operational blockages within the last 6 months.')">
                 <h3>Corporate Restructuring</h3>
                 <p>Revamp operations, improve institutional frameworks, and scale capacity for legacy systems to modern environments.</p>
                 <div class="card-overlay">See more..</div>
             </div>
+            <!-- Card 3 -->
             <div class="card" onclick="openImpactModal('Business Advisory', '/traction/images/site-work.jpg', 'Guided 47 enterprise leadership desks across regional market expansions inside the last 6 months.')">
                 <h3>Business Advisory</h3>
                 <p>Data-driven strategy execution, governance mapping, and scaling tools built specifically for the African terrain.</p>
                 <div class="card-overlay">See more..</div>
             </div>
+            <!-- Card 4 -->
             <div class="card" onclick="openImpactModal('Executive-Level Recruitment', '/traction/images/site-work.jpg', 'Successfully placed 23 elite C-suite leaders and country management heads inside the last 6 months.')">
                 <h3>Executive-Level Recruitment</h3>
                 <p>Securing high-performing leadership, country heads, and C-suite talent capable of driving organizational key objectives.</p>
                 <div class="card-overlay">See more..</div>
             </div>
+            <!-- Card 5 -->
             <div class="card" onclick="openImpactModal('Employee Training', '/traction/images/site-work.jpg', 'Delivered custom capability masterclasses to over 1,200 active corporate officers within the last 6 months.')">
                 <h3>Employee Training</h3>
                 <p>Custom training programs designed to align workforce execution with overarching corporate vision.</p>
                 <div class="card-overlay">See more..</div>
             </div>
+            <!-- Card 6 -->
             <div class="card" onclick="openImpactModal('Corporate Retreats & Events', '/traction/images/kigali-retreat-2026.jpg', 'Designed strategic execution events empowering 12 distinct management cohorts over the last 6 months.')">
                 <h3>Corporate Retreats & Events</h3>
                 <p>High-end international networking frameworks designed to combine business strategy sessions with premier travel experiences.</p>
@@ -650,6 +662,7 @@
         </div>
     </section>
 
+    <!-- Embedded Google Reviews Layout Structure Section -->
     <section class="section reviews-section">
         <div class="reviews-header">
             <h2 class="section-title" style="margin-bottom: 5px;">What Our Clients Say</h2>
@@ -658,6 +671,7 @@
         </div>
         
         <div class="reviews-grid">
+            <!-- Review 1 -->
             <div class="review-card">
                 <div class="reviewer-meta">
                     <div class="reviewer-avatar">CO</div>
@@ -669,6 +683,7 @@
                 <p class="review-text">"Traction Outsourcing completely restructured our operational workflow models. Their startup structuring expertise removed structural overlap and gave us the clarity required to scale securely. Exceptional delivery!"</p>
             </div>
             
+            <!-- Review 2 -->
             <div class="review-card">
                 <div class="reviewer-meta">
                     <div class="reviewer-avatar">AI</div>
@@ -684,11 +699,13 @@
         <a href="https://maps.app.goo.gl/6D8MgF52y8JFUcYR6" target="_blank" class="google-maps-btn">Read More Customer Reviews on Google</a>
     </section>
 
+    <!-- Trusted By / Brands Carousel Section -->
     <section class="section" style="background-color: var(--white-color); padding-bottom: 80px;">
         <h2 class="section-title">Brands We Work With</h2>
         
         <div class="carousel-container">
             <div class="carousel-track">
+                <!-- First Sequence of Logos -->
                 <img src="/traction/images/Gifts-n-boxes.png" alt="Gifts n Boxes Logo">
                 <img src="/traction/images/afroreach-research.png" alt="Afroreach Research Logo">
                 <img src="/traction/images/beacon-trust.jpg" alt="Beacon Trust Logo">
@@ -700,6 +717,7 @@
                 <img src="/traction/images/la-luna-restaurant.png" alt="La Luna Restaurant Logo">
                 <img src="/traction/images/tifes-hub.png" alt="Tifes Hub Logo">
 
+                <!-- Duplicated Sequence for Infinite Seamless Looping -->
                 <img src="/traction/images/Gifts-n-boxes.png" alt="Gifts n Boxes Logo">
                 <img src="/traction/images/afroreach-research.png" alt="Afroreach Research Logo">
                 <img src="/traction/images/beacon-trust.jpg" alt="Beacon Trust Logo">
@@ -714,6 +732,7 @@
         </div>
     </section>
 
+    <!-- Impact Pop Box Popup Window -->
     <div id="impactModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeImpactModal()">×</span>
@@ -724,6 +743,7 @@
         </div>
     </div>
 
+    <!-- Execution Logic Scripts -->
     <script>
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const navMenu = document.getElementById('navMenu');
@@ -760,6 +780,7 @@
         }
     </script>
 
+    <!-- Complete Corporate Footer Section -->
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
@@ -774,7 +795,7 @@
                 <p><strong>Phone:</strong> <a href="tel:+2347078707777">0707 870 7777</a></p>
             </div>
             <div class="footer-col">
-                <h4>Email & Socials</h4>
+                <h4>Email &amp; Socials</h4>
                 <p><strong>Email:</strong> <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a></p>
                 <div class="social-links">
                     <a href="https://instagram.com/tractionoutsourcing" target="_blank" class="social-link-item">Instagram</a>
