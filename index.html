@@ -112,13 +112,50 @@
         .brand-box h3 {
             color: var(--accent-color);
         }
-        .carousel-placeholder {
-            background: #eee;
-            padding: 30px;
-            text-align: center;
-            font-style: italic;
-            margin-top: 20px;
-            border-radius: 6px;
+        /* Brand Carousel Styling */
+.carousel-container {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 30px 0;
+    background: #ffffff;
+    position: relative;
+}
+/* Subtle fade shadows on the left and right edges */
+.carousel-container::before, .carousel-container::after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+.carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+.carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+.carousel-track {
+    display: inline-block;
+    animation: scrollBrands 25s linear infinite;
+}
+.carousel-track img {
+    height: 50px;
+    margin: 0 40px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    vertical-align: middle;
+}
+.carousel-track img:hover {
+    opacity: 1; /* Highlights the logo when a user hovers over it */
+}
+/* The secret sauce: Infinite continuous scroll animation */
+@keyframes scrollBrands {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
         }
         footer {
             background: #111;
@@ -196,13 +233,38 @@
         </div>
     </section>
 
-    <!-- Trusted By / Brands Carousel Placeholder -->
-    <section class="section">
-        <h2 class="section-title">Brands We Work With</h2>
-        <div class="carousel-placeholder">
-            [ Interactive Brand Carousel Placeholder — Your partners and corporate client logos will scroll here ]
+    <!-- Trusted By / Brands Carousel Section -->
+<section class="section" style="background-color: #ffffff; padding-bottom: 80px;">
+    <h2 class="section-title">Brands We Work With</h2>
+    
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <!-- First Sequence of Logos -->
+            <img src="images/Gifts-n-boxes logo.png" alt="Corporate Partner Logo">
+            <img src="images/afroreach-research.png" alt="Corporate Partner Logo">
+            <img src="images/beacon-trust.jpg" alt="Corporate Partner Logo">
+            <img src="images/bravies.png" alt="Corporate Partner Logo">
+            <img src="images/chairo-properties.png" alt="Corporate Partner Logo">
+            <img src="images/demipos-hotel.png" alt="Corporate Partner Logo">
+            <img src="images/fourtwoseven-engineering.jpg" alt="Corporate Partner Logo">
+            <img src="images/grown-and-glow.png" alt="Corporate Partner Logo">
+            <img src="images/la-luna-restaurant.png" alt="Corporate Partner Logo">
+            <img src="images/tifes-hub.png" alt="Corporate Partner Logo">
+
+            <!-- Duplicated Sequence for Infinite Seamless Looping -->
+            <img src="Gifts-n-boxes logo.png" alt="Corporate Partner Logo">
+            <img src="afroreach-research.png" alt="Corporate Partner Logo">
+            <img src="beacon-trust.jpg" alt="Corporate Partner Logo">
+            <img src="images/bravies.png" alt="Corporate Partner Logo">
+            <img src="images/chairo-properties.png" alt="Corporate Partner Logo">
+            <img src="images/demipos-hotel.png" alt="Corporate Partner Logo">
+            <img src="images/fourtwoseven-engineering.jpg" alt="Corporate Partner Logo">
+            <img src="images/grown-and-glow.png" alt="Corporate Partner Logo">
+            <img src="images/la-luna-restaurant.png" alt="Corporate Partner Logo">
+            <img src="images/tifes-hub.png" alt="Corporate Partner Logo">
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
