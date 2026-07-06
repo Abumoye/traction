@@ -6,51 +6,116 @@
     <title>Who is Prince Elijah Abumoye | Founder, Traction Outsourcing Limited</title>
     <meta name="description" content="Official biography of Prince Elijah Abumoye, visionary entrepreneur, author, corporate trainer, and founder of Traction Outsourcing Limited.">
     <meta name="keywords" content="Who is Prince Elijah Abumoye, Prince Elijah Abumoye biography, founder traction outsourcing, corporate trainer nigeria">
-    
+
+    <link rel="icon" type="image/x-icon" href="/traction/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
-        :root { --primary-color: #0d2c54; --accent-color: #c9a66b; --text-color: #333333; --light-bg: #f9f9f9; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; color: var(--text-color); line-height: 1.6; }
-        header { background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-        .logo { font-weight: bold; font-size: 24px; color: var(--primary-color); text-decoration: none; }
-        nav a { margin-left: 20px; text-decoration: none; color: var(--text-color); font-weight: 600; }
+        :root { --primary-color: #000000; --accent-color: #e35f26; --text-color: #333333; --light-bg: #f9f9f9; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; color: var(--text-color); line-height: 1.6; overflow-x: hidden; }
+
+        /* Header / Nav (shared across site) */
+        header { background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; align-items: center; }
+        nav a { margin-left: 20px; text-decoration: none; color: var(--text-color); font-weight: 600; cursor: pointer; transition: color 0.2s; }
         nav a:hover { color: var(--accent-color); }
+        .hamburger { display: none; flex-direction: column; justify-content: space-between; width: 24px; height: 18px; background: transparent; border: none; cursor: pointer; padding: 10px; margin: -10px; z-index: 110; }
+        .hamburger span { width: 100%; height: 2.5px; background-color: var(--primary-color); transition: all 0.3s ease; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 260px; box-shadow: 0px 8px 16px rgba(0,0,0,0.15); border-radius: 6px; padding: 10px 0; z-index: 105; left: 20px; top: 100%; }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-item { display: flex; align-items: center; padding: 12px 20px; text-decoration: none; color: var(--text-color); font-weight: 600; transition: background 0.2s ease; margin-left: 0; }
+        .dropdown-item:hover { background-color: var(--light-bg); color: var(--accent-color); }
+        .dropdown-item img { height: 24px; width: auto; margin-right: 12px; object-fit: contain; }
+
         .section { padding: 60px 10%; }
         .profile-container { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
-        @media(max-width: 768px) {
-            .profile-container { grid-template-columns: 1fr; gap: 30px; }
-        }
         .founder-img-box { text-align: center; }
-        .founder-img-placeholder { width: 100%; max-width: 320px; height: 400px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #666; font-style: italic; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin: 0 auto 20px; }
         .bio-text h1 { color: var(--primary-color); font-size: 36px; margin: 0 0 5px 0; }
         .bio-subtitle { color: var(--accent-color); font-weight: bold; font-size: 18px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
         .bio-text p { font-size: 16px; color: #444; margin-bottom: 20px; text-align: justify; }
         .quote-banner { background-color: var(--primary-color); color: white; padding: 30px; border-radius: 8px; font-style: italic; font-size: 20px; text-align: center; margin-top: 40px; position: relative; }
         .quote-banner::before { content: '"'; font-size: 60px; color: rgba(255,255,255,0.15); position: absolute; top: -10px; left: 20px; }
-        footer { background: #111; color: #aaa; text-align: center; padding: 20px; margin-top: 60px; font-size: 14px; }
+
+        /* Footer (shared across site) */
+        footer { background: #111; color: #ccc; padding: 50px 6% 25px; font-size: 14px; margin-top: 60px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto 30px; }
+        .footer-col h4 { color: white; font-size: 15px; margin-bottom: 15px; letter-spacing: 0.5px; }
+        .footer-col p, .footer-col a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; }
+        .footer-col a:hover { color: var(--accent-color); }
+        .footer-social { display: flex; gap: 14px; margin-top: 10px; }
+        .footer-social a { width: 38px; height: 38px; border-radius: 50%; background: #222; display: flex; align-items: center; justify-content: center; color: white; margin-bottom: 0; transition: background 0.2s; }
+        .footer-social a:hover { background: var(--accent-color); }
+        .footer-bottom { border-top: 1px solid #333; padding-top: 20px; text-align: center; color: #888; }
+
+        @media(max-width: 900px) {
+            header { padding: 15px 6%; }
+            .hamburger { display: flex; }
+            nav { position: fixed; top: 0; right: -100%; width: 280px; max-width: 80vw; height: 100vh; background-color: white; box-shadow: -5px 0 15px rgba(0,0,0,0.1); flex-direction: column; align-items: flex-start; padding: 80px 40px 40px 40px; box-sizing: border-box; transition: right 0.4s cubic-bezier(0.1, 0.9, 0.2, 1); z-index: 105; overflow-y: auto; }
+            nav.active { right: 0; }
+            nav a { margin: 0 0 25px 0; font-size: 18px; width: 100%; padding: 6px 0; }
+            .dropdown { width: 100%; }
+            .dropdown-content { position: static; display: block; box-shadow: none; padding: 5px 0 0 15px; min-width: unset; background-color: transparent; }
+            .dropdown-item { padding: 10px 0; font-size: 16px; }
+            .hamburger.toggle span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 4px); }
+            .hamburger.toggle span:nth-child(2) { opacity: 0; }
+            .hamburger.toggle span:nth-child(3) { transform: rotate(45deg) translate(-5px, -4px); }
+            .section { padding: 40px 6%; }
+        }
+        @media(max-width: 768px) {
+            .profile-container { grid-template-columns: 1fr; gap: 30px; }
+        }
+        @media(max-width: 480px) {
+            .bio-text h1 { font-size: 28px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 25px; }
+        }
     </style>
 </head>
 <body>
 
     <!-- Header / Navigation -->
     <header>
-        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-        <img src="/traction/images/traction-outsourcing-logo.png" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="events.html">Events</a>
-            <a href="articles.html">Articles</a>
-            <a href="brands.html">Our Brands</a>
-            <a href="founder.html">Our Founder</a>
+        <a href="/traction/index.html" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="/traction/images/traction-outsourcing-logo.png" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
+        </a>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="navMenu">
+            <a href="/traction/index.html">Home</a>
+            <a href="/traction/events.html">Events</a>
+            <a href="/traction/articles.html">Articles</a>
+
+            <div class="dropdown">
+                <a href="#">Our Brands</a>
+                <div class="dropdown-content">
+                    <a href="/traction/brands/properties.html" class="dropdown-item">
+                        <img src="/traction/images/traction-properties-and-managers.png" alt="Traction Properties Logo">
+                        Traction Properties
+                    </a>
+                    <a href="/traction/brands/recruiters.html" class="dropdown-item">
+                        <img src="/traction/images/ath-recruiters.png" alt="ATH Recruiters Logo">
+                        ATH Recruiters
+                    </a>
+                </div>
+            </div>
+
+            <a href="/traction/founder.html">Our Founder</a>
         </nav>
     </header>
 
     <!-- Main Bio Section -->
     <section class="section">
         <div class="profile-container">
-            
+
             <!-- Left Side: Visual Elements -->
             <div class="founder-img-box">
-                <img src="images/prince-elijah-abumoye.png" alt="Prince Elijah Abumoye - Founder of Traction Outsourcing Limited" style="width: 100%; max-width: 320px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px;">
+                <img src="/traction/images/prince-elijah-abumoye.png" alt="Prince Elijah Abumoye - Founder of Traction Outsourcing Limited" style="width: 100%; max-width: 320px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px;">
                 <div style="background-color: var(--light-bg); padding: 15px; border-radius: 6px; font-size: 14px; color: #555;">
                     <strong>Core Focus:</strong> Institutional Governance, Strategic HR, & Business Architecture
                 </div>
@@ -60,11 +125,11 @@
             <div class="bio-text">
                 <h1>Prince Elijah Abumoye</h1>
                 <div class="bio-subtitle">Visionary Entrepreneur & Senior Corporate Executive</div>
-                
+
                 <p>Prince Elijah Abumoye, born September 5th, 1994, is the visionary entrepreneur and founder of Traction Outsourcing Limited. He is a seasoned business leader, author, corporate trainer, and senior executive with extensive hands-on leadership experience, including past executive roles as a Chief Operating Officer (COO) and Country Head of HR for a multinational organization working across Nigeria, Rwanda, and Dubai. Through Traction Outsourcing, Traction Properties, and ATH Recruiters, he has worked with several businesses across Nigeria.</p>
-                
+
                 <p>Prince Elijah holds a BSc from the University of Lagos. With a strong foundation in corporate governance, workforce collaboration, and strategic human resource development, Prince Elijah leverages his rich background to help businesses establish structures and high-performing teams across Nigeria.</p>
-                
+
                 <div class="quote-banner">
                     "Deeply committed to an Africa that works for Africans."
                 </div>
@@ -75,8 +140,45 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Traction Outsourcing Limited. All Rights Reserved. | Designed for High-Performance SEO</p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Traction Outsourcing Limited</h4>
+                <p>26, Algiers Street, Wuse Zone 5, FCT, Abuja</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="tel:+2348052033145">0805 203 3145</a>
+                <a href="tel:+2348125078087">0812 507 8087</a>
+                <a href="tel:+2347078707777">0707 870 7777</a>
+                <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/tractionoutsourcing" target="_blank" aria-label="Traction Outsourcing on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@tractionoutsourcing" target="_blank" aria-label="Traction Outsourcing on TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Traction Outsourcing Limited. All Rights Reserved. | Designed for High-Performance SEO</p>
+        </div>
     </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('toggle');
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('nav a:not([href="#"])').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
