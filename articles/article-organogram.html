@@ -28,13 +28,36 @@
 
     <!-- Header / Navigation -->
     <header>
-        <a href="index.html" class="logo">TRACTION OUTSOURCING</a>
-        <nav>
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="/traction/images/traction-outsourcing-logo.png" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
+        </a>
+        
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="navMenu">
             <a href="index.html">Home</a>
             <a href="events.html">Events</a>
             <a href="articles.html">Articles</a>
-            <a href="#">Our Brands</a>
-            <a href="#">Our Founder</a>
+            
+            <div class="dropdown">
+                <a href="#">Our Brands</a>
+                <div class="dropdown-content">
+                    <a href="brands/properties.html" class="dropdown-item">
+                        <img src="/traction/images/traction-properties-and-managers.png" alt="Traction Properties Logo">
+                        Traction Properties
+                    </a>
+                    <a href="brands/recruiters.html" class="dropdown-item">
+                        <img src="/traction/images/ath-recruiters.png" alt="ATH Recruiters Logo">
+                        ATH Recruiters
+                    </a>
+                </div>
+            </div>
+            
+            <a href="founder.html">Our Founder</a>
         </nav>
     </header>
 
@@ -58,17 +81,38 @@
 
         <h2>Optimizing for Long-term Scalability</h2>
         <p>A solid infrastructure expects future growth. Position your structure so that secondary management levels can easily fit into your current setup as business volume expands.</p>
-
-        <!-- Author Footer Section -->
-        <div class="author-footer">
-            <p>This article was authored by the corporate restructuring desk at <strong>Traction Outsourcing Limited</strong>. For tailored corporate governance modeling and business advisory setups within Abuja and across Nigeria, contact our consulting team.</p>
-        </div>
     </article>
 
-    <!-- Footer -->
+    <!-- Complete Corporate Footer Section -->
     <footer>
-        <p>&copy; 2026 Traction Outsourcing Limited. All Rights Reserved. | Designed for High-Performance SEO</p>
+        <div class="footer-col">
+    <h4>Head Office</h4>
+    <a href="https://maps.google.com/?q=Traction+Outsourcing+Limited+26+Algiers+Street+Wuse+Zone+5+Abuja" target="_blank" style="text-decoration: none; color: inherit;">
+        <p>26, Algiers Street,<br>Wuse Zone 5, FCT,<br>Nigeria.</p>
+    </a>
+</div>
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p><strong>Phone:</strong> <a href="tel:+2348052033145">0805 203 3145</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+2348125078087">0812 507 8087</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+2347078707777">0707 870 7777</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Email &amp; Socials</h4>
+                <p><strong>Email:</strong> <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a></p>
+                <div class="social-links">
+                    <a href="https://instagram.com/tractionoutsourcing" target="_blank" class="social-link-item">Instagram</a>
+                    <a href="https://tiktok.com/@tractionoutsourcing" target="_blank" class="social-link-item">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Traction Outsourcing Limited. All Rights Reserved. | Designed for High-Performance SEO</p>
+        </div>
     </footer>
+
+</body>
+</html>
 
 </body>
 </html>
