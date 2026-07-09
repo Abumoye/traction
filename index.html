@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traction Outsourcing Limited | Management Consulting Firm Nigeria</title>
-    <link rel="icon" type="image/x-icon" href="/traction/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="canonical" href="https://www.tolnigeria.com/">
     <meta name="description" content="Traction Outsourcing Limited is a premium management consulting firm in Nigeria specializing in startup structuring, corporate restructuring, business advisory, executive recruitment, staff training, and corporate retreats. Building Africa, for Africans.">
     <meta name="keywords" content="consulting firms in nigeria, business advisory abuja, startup structuring nigeria, staff trainer in nigeria, corporate retreat in nigeria, recruitment in abuja">
-    
+
     <!-- Open Graph Protocol Social Media Meta Cards -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Traction Outsourcing Limited | Management Consulting Firm Nigeria">
     <meta property="og:description" content="Premium management consulting firm in Nigeria specializing in startup structuring, corporate restructuring, business advisory, and executive recruitment. Building Africa, for Africans.">
-    <meta property="og:url" content="https://abumoye.github.io/traction/index.html">
-    <meta property="og:image" content="https://abumoye.github.io/traction/images/traction-opengraph.png">
+    <meta property="og:url" content="https://www.tolnigeria.com/">
+    <meta property="og:image" content="https://www.tolnigeria.com/images/traction-opengraph.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
@@ -25,9 +26,9 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Traction Outsourcing Limited",
-      "image": "https://abumoye.github.io/traction/images/traction-opengraph.png",
-      "@id": "https://abumoye.github.io/traction/#localbusiness",
-      "url": "https://abumoye.github.io/traction/index.html",
+      "image": "https://www.tolnigeria.com/images/traction-opengraph.png",
+      "@id": "https://www.tolnigeria.com/#localbusiness",
+      "url": "https://www.tolnigeria.com/",
       "telephone": "+234-805-203-3145",
       "address": {
         "@type": "PostalAddress",
@@ -44,13 +45,7 @@
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
         ],
         "opens": "00:00",
         "closes": "23:59"
@@ -62,517 +57,71 @@
     }
     </script>
 
-    <!-- Clean, modern styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Page-specific styling -->
     <style>
         :root {
-            --primary-color: #e35f26; /* Official Orange */
-            --dark-color: #000000;    /* Official Black */
-            --white-color: #ffffff;   /* Official White */
-            --text-color: #333333;
-            --light-bg: #f9f9f9;
+            --primary-color: #e35f26;
+            --dark-color: #000000;
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        header {
-            background-color: var(--white-color);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        /* Navigation Styles */
-        nav {
-            display: flex;
-            align-items: center;
-        }
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: var(--dark-color);
-            font-weight: 600;
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-        nav a:hover {
-            color: var(--primary-color);
-        }
-        
-        /* Hamburger Menu Icon (Hidden on Desktop) */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 24px;
-            height: 18px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            z-index: 110;
-        }
-        .hamburger span {
-    width: 100%;
-    height: 2.5px;
-    background-color: #e35f26; /* Force brand orange so it's always visible */
-    transition: all 0.3s ease;
-}
-
-        /* Dropdown Navigation Menu (Desktop) */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: var(--white-color);
-            min-width: 260px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
-            border-radius: 6px;
-            padding: 10px 0;
-            z-index: 105;
-            left: 20px;
-            top: 100%;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .dropdown-item {
-            display: flex;
-            align-items: center;
-            padding: 12px 20px;
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 600;
-            transition: background 0.2s ease;
-            margin-left: 0;
-        }
-        .dropdown-item:hover {
-            background-color: var(--light-bg);
-            color: var(--primary-color);
-        }
-        .dropdown-item img {
-            height: 24px;
-            width: auto;
-            margin-right: 12px;
-            object-fit: contain;
-        }
-
-        /* Hero Section with Africa Map SVG overlay background */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
-                        url('/traction/images/africa.svg') no-repeat center center,
-                        url('/traction/images/traction-hero-bg.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                        url('/images/africa.svg') no-repeat center center,
+                        url('/images/traction-hero-bg.jpg') no-repeat center center/cover;
             color: var(--white-color);
             text-align: center;
             padding: 120px 20px;
         }
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-        .hero p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-        .section {
-            padding: 60px 10%;
-        }
-        .section-title {
-            text-align: center;
-            color: var(--dark-color);
-            font-size: 32px;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        
-        /* Clickable Impact Cards */
-        .card {
-            background: var(--light-bg);
-            padding: 25px;
-            border-radius: 8px;
-            border-top: 4px solid var(--primary-color);
-            position: relative;
-            cursor: pointer;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-        .card h3 {
-            color: var(--dark-color);
-            margin-top: 0;
-        }
-        .card:hover h3 {
-            color: var(--primary-color);
-        }
-        .card-overlay {
-            position: absolute;
-            bottom: -100%;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9) 40%);
-            color: var(--primary-color);
-            text-align: center;
-            padding: 40px 0 15px 0;
-            font-weight: bold;
-            font-size: 14px;
-            transition: bottom 0.3s ease;
-        }
-        .card:hover .card-overlay {
-            bottom: 0;
-        }
+        .hero h1 { font-size: 48px; margin-bottom: 15px; font-weight: 700; color: var(--primary-color); }
+        .hero p { font-size: 20px; max-width: 800px; margin: 0 auto 30px; }
+        .section-title { text-align: center; color: var(--dark-color); font-size: 32px; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 
-        /* Modal / Popup Windows Layout */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 200;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: var(--white-color);
-            padding: 35px;
-            border-radius: 12px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            position: relative;
-            animation: modalFade 0.3s ease;
-        }
-        @keyframes modalFade {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 28px;
-            cursor: pointer;
-            color: #aaa;
-        }
-        .close-modal:hover {
-            color: var(--text-color);
-        }
-        .modal-title {
-            color: var(--dark-color);
-            font-size: 24px;
-            margin-top: 0;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 8px;
-        }
-        .modal-img {
-            width: 100%;
-            height: 180px;
-            background-color: #ddd;
-            border-radius: 6px;
-            margin: 15px 0;
-            object-fit: cover;
-        }
-        .modal-stats {
-            background-color: var(--light-bg);
-            padding: 12px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--dark-color);
-            margin-bottom: 20px;
-            border-left: 4px solid var(--primary-color);
-        }
-        .modal-btn {
-            display: block;
-            text-align: center;
-            background-color: #25D366;
-            color: var(--white-color);
-            padding: 12px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.2s;
-        }
-        .modal-btn:hover {
-            background-color: #1ebd58;
-        }
+        .card { background: var(--light-bg); padding: 25px; border-radius: 8px; border-top: 4px solid var(--primary-color); position: relative; cursor: pointer; overflow: hidden; transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--dark-color); margin-top: 0; }
+        .card:hover h3 { color: var(--primary-color); }
+        .card-overlay { position: absolute; bottom: -100%; left: 0; width: 100%; background: linear-gradient(transparent, rgba(0, 0, 0, 0.9) 40%); color: var(--primary-color); text-align: center; padding: 40px 0 15px 0; font-weight: bold; font-size: 14px; transition: bottom 0.3s ease; }
+        .card:hover .card-overlay { bottom: 0; }
 
-        /* Google Reviews Layout Structure */
-        .reviews-section {
-            background-color: var(--light-bg);
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-        .reviews-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .google-stars {
-            color: #fbbc05;
-            font-size: 22px;
-            margin-top: 5px;
-        }
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 900px;
-            margin: 0 auto 40px;
-        }
-        .review-card {
-            background: var(--white-color);
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            border: 1px solid #eee;
-        }
-        .reviewer-meta {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .reviewer-avatar {
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-right: 12px;
-        }
-        .reviewer-name {
-            font-weight: bold;
-            color: var(--dark-color);
-        }
-        .review-text {
-            font-size: 14px;
-            color: #555;
-            font-style: italic;
-        }
-        .google-maps-btn {
-            display: block;
-            width: fit-content;
-            margin: 0 auto;
-            background-color: var(--white-color);
-            color: var(--primary-color);
-            border: 1px solid var(--primary-color);
-            padding: 10px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.2s;
-        }
-        .google-maps-btn:hover {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-        }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 200; justify-content: center; align-items: center; }
+        .modal-content { background-color: var(--white-color); padding: 35px; border-radius: 12px; max-width: 500px; width: 90%; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; animation: modalFade 0.3s ease; }
+        @keyframes modalFade { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #aaa; }
+        .close-modal:hover { color: var(--text-color); }
+        .modal-title { color: var(--dark-color); font-size: 24px; margin-top: 0; border-bottom: 2px solid var(--primary-color); padding-bottom: 8px; }
+        .modal-img { width: 100%; height: 180px; background-color: #ddd; border-radius: 6px; margin: 15px 0; object-fit: cover; }
+        .modal-stats { background-color: var(--light-bg); padding: 12px; border-radius: 6px; font-size: 14px; font-weight: 600; color: var(--dark-color); margin-bottom: 20px; border-left: 4px solid var(--primary-color); }
+        .modal-btn { display: block; text-align: center; background-color: #25D366; color: var(--white-color); padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.2s; }
+        .modal-btn:hover { background-color: #1ebd58; }
 
-        /* Brand Carousel Styling */
-        .carousel-container {
-            overflow: hidden;
-            white-space: nowrap;
-            padding: 30px 0;
-            background: var(--white-color);
-            position: relative;
-        }
-        .carousel-container::before, .carousel-container::after {
-            position: absolute;
-            top: 0;
-            width: 100px;
-            height: 100%;
-            content: "";
-            z-index: 2;
-        }
-        .carousel-container::before {
-            left: 0;
-            background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-        }
-        .carousel-container::after {
-            right: 0;
-            background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-        }
-        .carousel-track {
-            display: inline-block;
-            animation: scrollBrands 25s linear infinite;
-        }
-        .carousel-track img {
-            height: 50px;
-            margin: 0 40px;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-            vertical-align: middle;
-        }
-        .carousel-track img:hover {
-            opacity: 1;
-        }
-        @keyframes scrollBrands {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+        .reviews-section { background-color: var(--light-bg); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .reviews-header { text-align: center; margin-bottom: 40px; }
+        .google-stars { color: #fbbc05; font-size: 22px; margin-top: 5px; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 900px; margin: 0 auto 40px; }
+        .review-card { background: var(--white-color); padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #eee; }
+        .reviewer-meta { display: flex; align-items: center; margin-bottom: 15px; }
+        .reviewer-avatar { width: 40px; height: 40px; background-color: var(--primary-color); color: var(--white-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 12px; }
+        .reviewer-name { font-weight: bold; color: var(--dark-color); }
+        .review-text { font-size: 14px; color: #555; font-style: italic; }
+        .google-maps-btn { display: block; width: fit-content; margin: 0 auto; background-color: var(--white-color); color: var(--primary-color); border: 1px solid var(--primary-color); padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold; transition: all 0.2s; }
+        .google-maps-btn:hover { background-color: var(--primary-color); color: var(--white-color); }
 
-        /* Expanded Corporate Footer Layout */
-        footer {
-            background: #111111;
-            color: #b0b0b0;
-            padding: 50px 5% 20px;
-            font-size: 14px;
-            border-top: 3px solid var(--primary-color);
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            text-align: left;
-            max-width: 1200px;
-            margin: 0 auto 30px;
-        }
-        .footer-col h4 {
-            color: var(--white-color);
-            font-size: 16px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            border-left: 3px solid var(--primary-color);
-            padding-left: 10px;
-        }
-        .footer-col p {
-            margin: 8px 0;
-            line-height: 1.6;
-        }
-        .footer-col a {
-            color: #b0b0b0;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .footer-col a:hover {
-            color: var(--primary-color);
-        }
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .social-link-item {
-            background: #222;
-            padding: 8px 15px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 13px;
-        }
-        .footer-bottom {
-            text-align: center;
-            border-top: 1px solid #222;
-            padding-top: 20px;
-            font-size: 13px;
-        }
+        .carousel-container { overflow: hidden; white-space: nowrap; padding: 30px 0; background: var(--white-color); position: relative; }
+        .carousel-container::before, .carousel-container::after { position: absolute; top: 0; width: 100px; height: 100%; content: ""; z-index: 2; }
+        .carousel-container::before { left: 0; background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); }
+        .carousel-container::after { right: 0; background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); }
+        .carousel-track { display: inline-block; animation: scrollBrands 25s linear infinite; }
+        .carousel-track img { height: 50px; margin: 0 40px; opacity: 0.7; transition: opacity 0.3s ease; vertical-align: middle; }
+        .carousel-track img:hover { opacity: 1; }
+        @keyframes scrollBrands { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* ==========================================================================
-           RESPONSIVE MOBILE BREAKPOINTS & TEXT ADJUSTMENTS
-           ========================================================================== */
         @media (max-width: 900px) {
-            header {
-                padding: 15px 6%;
-            }
-            .hamburger {
-                display: flex;
-            }
-            
-            nav {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 280px;
-                height: 100vh;
-                background-color: var(--white-color);
-                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 80px 40px 40px 40px;
-                box-sizing: border-box;
-                transition: right 0.4s cubic-bezier(0.1, 0.9, 0.2, 1);
-                z-index: 105;
-            }
-            nav.active {
-                right: 0;
-            }
-            nav a {
-                margin: 0 0 25px 0;
-                font-size: 18px;
-                width: 100%;
-            }
-            
-            .dropdown {
-                width: 100%;
-            }
-            .dropdown-content {
-                position: static;
-                display: block;
-                box-shadow: none;
-                padding: 5px 0 0 15px;
-                min-width: unset;
-                background-color: transparent;
-            }
-            .dropdown-item {
-                padding: 10px 0;
-                font-size: 16px;
-            }
-
-            .hamburger.toggle span:nth-child(1) {
-                transform: rotate(-45deg) translate(-5px, 4px);
-            }
-            .hamburger.toggle span:nth-child(2) {
-                opacity: 0;
-            }
-            .hamburger.toggle span:nth-child(3) {
-                transform: rotate(45deg) translate(-5px, -4px);
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-            .hero p {
-                font-size: 16px;
-            }
-            .section {
-                padding: 50px 6%;
-            }
-            .section-title {
-                font-size: 26px;
-                margin-bottom: 30px;
-            }
-            .modal-content {
-                padding: 25px;
-            }
-            .modal-title {
-                font-size: 20px;
-            }
+            .hero { padding: 90px 20px; }
+            .hero h1 { font-size: 34px; }
+            .hero p { font-size: 17px; }
         }
     </style>
 </head>
@@ -580,10 +129,10 @@
 
     <!-- Header / Navigation -->
     <header>
-        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="/traction/images/traction-outsourcing-logo.png" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
+        <a href="/" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="/images/traction-outsourcing-logo.png" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
         </a>
-        
+
         <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu Navigation">
             <span></span>
             <span></span>
@@ -591,25 +140,25 @@
         </button>
 
         <nav id="navMenu">
-            <a href="index.html">Home</a>
-            <a href="events.html">Events</a>
-            <a href="articles.html">Articles</a>
-            
+            <a href="/">Home</a>
+            <a href="/events/">Events</a>
+            <a href="/articles.html">Articles</a>
+
             <div class="dropdown">
                 <a href="#">Our Brands</a>
                 <div class="dropdown-content">
-                    <a href="brands/properties.html" class="dropdown-item">
-                        <img src="/traction/images/traction-properties-and-managers.png" alt="Traction Properties Logo">
+                    <a href="/brands/properties.html" class="dropdown-item">
+                        <img src="/images/traction-properties-and-managers.png" alt="Traction Properties Logo">
                         Traction Properties
                     </a>
-                    <a href="brands/recruiters.html" class="dropdown-item">
-                        <img src="/traction/images/ath-recruiters.png" alt="ATH Recruiters Logo">
+                    <a href="/brands/recruiters.html" class="dropdown-item">
+                        <img src="/images/ath-recruiters.png" alt="ATH Recruiters Logo">
                         ATH Recruiters
                     </a>
                 </div>
             </div>
-            
-            <a href="founder.html">Our Founder</a>
+
+            <a href="/founder/">Our Founder</a>
         </nav>
     </header>
 
@@ -624,37 +173,37 @@
         <h2 class="section-title">Our Areas of Impact</h2>
         <div class="grid">
             <!-- Card 1 -->
-            <div class="card" onclick="openImpactModal('Startup Structuring', '/traction/images/site-work.jpg', 'Over 10 successful projects in the last 6 months.')">
+            <div class="card" onclick="openImpactModal('Startup Structuring', '/images/site-work.jpg', 'Over 10 successful projects in the last 6 months.')">
                 <h3>Startup Structuring</h3>
-                <p>Lay corporate foundations that attract investment, optimize workflow collaboration, and ensure early-stage compliance.</p>
+                <p>Building the foundational governance and operational architecture new businesses need to scale with confidence.</p>
                 <div class="card-overlay">See more..</div>
             </div>
             <!-- Card 2 -->
-            <div class="card" onclick="openImpactModal('Corporate Restructuring', '/traction/images/site-work-2.jpg', 'Legacy frameworks systematically re-engineered to clear operational blockages for 5 companies in Lagos and Abuja.')">
+            <div class="card" onclick="openImpactModal('Corporate Restructuring', '/images/site-work-2.jpg', 'Legacy frameworks systematically re-engineered to clear operational blockages for 5 companies in Lagos and Abuja.')">
                 <h3>Corporate Restructuring</h3>
-                <p>Revamp operations, improve institutional frameworks, protect your ownership, and scale capacity from legacy systems to modern environments.</p>
+                <p>Re-engineering legacy business frameworks to remove operational blockages and restore performance.</p>
                 <div class="card-overlay">See more..</div>
             </div>
             <!-- Card 3 -->
-            <div class="card" onclick="openImpactModal('Business Advisory', '/traction/images/site-work-3.jpg', 'Guided 5 entrepreneurs across real estate (shorlets), FMCG, and importation.')">
+            <div class="card" onclick="openImpactModal('Business Advisory', '/images/site-work-3.jpg', 'Guided 5 entrepreneurs across real estate (shorlets), FMCG, and importation.')">
                 <h3>Business Advisory</h3>
-                <p>Data-driven strategy execution, governance mapping, and scaling tools built specifically for the African terrain.</p>
+                <p>Strategic guidance for entrepreneurs navigating growth, market entry, and structural decisions.</p>
                 <div class="card-overlay">See more..</div>
             </div>
             <!-- Card 4 -->
-            <div class="card" onclick="openImpactModal('Executive-Level Recruitment', '/traction/images/site-work-4.jpg', 'Pulled and placed 23 C-suite executives in the last 6 months.')">
+            <div class="card" onclick="openImpactModal('Executive-Level Recruitment', '/images/site-work-4.jpg', 'Pulled and placed 23 C-suite executives in the last 6 months.')">
                 <h3>Executive-Level Recruitment</h3>
-                <p>Securing high-performing leadership, country heads, and C-suite talent capable of driving organizational key objectives.</p>
+                <p>Sourcing and placing senior leaders who match both the skill and the culture a business needs.</p>
                 <div class="card-overlay">See more..</div>
             </div>
             <!-- Card 5 -->
-            <div class="card" onclick="openImpactModal('Employee Training', '/traction/images/site-work-5.jpg', 'Delivered custom capability masterclasses to over 1,200 employees across various sectors.')">
+            <div class="card" onclick="openImpactModal('Employee Training', '/images/site-work-5.jpg', 'Delivered custom capability masterclasses to over 1,200 employees across various sectors.')">
                 <h3>Employee Training</h3>
                 <p>Custom training programs designed to align workforce execution with overarching corporate vision.</p>
                 <div class="card-overlay">See more..</div>
             </div>
             <!-- Card 6 -->
-            <div class="card" onclick="openImpactModal('Corporate Retreats & Events', '/traction/images/site-work-6.jpg', 'Designed strategic execution events empowering business leaders and managers.')">
+            <div class="card" onclick="openImpactModal('Corporate Retreats & Events', '/images/site-work-6.jpg', 'Designed strategic execution events empowering business leaders and managers.')">
                 <h3>Corporate Retreats & Events</h3>
                 <p>High-end international networking frameworks designed to combine business strategy sessions with premier travel experiences.</p>
                 <div class="card-overlay">See more..</div>
@@ -663,21 +212,21 @@
     </section>
 
     <div style="text-align: center; padding: 40px 20px; background-color: #f9f9f9;">
-    <a href="https://wa.me/2348052033145?text=Hi,%20kindly%20schedule%20me%20for%20a%2030-minute%20free%20Clarity%20call." 
-       target="_blank" 
-       rel="noopener"
-       style="display: inline-block; background-color: #e35f26; color: white; padding: 15px 30px; font-weight: bold; font-size: 18px; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
-       Click here to get a free 30-minute Clarity Call. We will help you determine what your business needs
-    </a>
-</div>
-    
+        <a href="https://wa.me/2348052033145?text=Hi,%20kindly%20schedule%20me%20for%20a%2030-minute%20free%20Clarity%20call."
+           target="_blank"
+           rel="noopener"
+           style="display: inline-block; background-color: #e35f26; color: white; padding: 15px 30px; font-weight: bold; font-size: 18px; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
+           Click here to get a free 30-minute Clarity Call. We will help you determine what your business needs
+        </a>
+    </div>
+
     <!-- Embedded Google Reviews Layout Structure Section -->
     <section class="section reviews-section">
         <div class="reviews-header">
             <h2 class="section-title" style="margin-bottom: 5px;">What Our Clients Say</h2>
             <div class="google-stars">★★★★★ <span style="color: #555; font-size: 14px; font-weight: 600;">(5.0 / 5.0 Rating)</span></div>
         </div>
-        
+
         <div class="reviews-grid">
             <!-- Review 1 -->
             <div class="review-card">
@@ -690,7 +239,7 @@
                 </div>
                 <p class="review-text">"Traction Outsourcing completely restructured our operational workflow models. Their startup structuring expertise removed structural overlap and gave us the clarity required to scale securely. Exceptional delivery!"</p>
             </div>
-            
+
             <!-- Review 2 -->
             <div class="review-card">
                 <div class="reviewer-meta">
@@ -703,39 +252,39 @@
                 <p class="review-text">"The corporate advisory sessions provided by their senior management transformed our recruitment funnels. If you are serious about company structure in Nigeria, Prince Elijah and his team are unmatched."</p>
             </div>
         </div>
-        
+
         <a href="https://maps.app.goo.gl/6D8MgF52y8JFUcYR6" target="_blank" class="google-maps-btn">Read More Customer Reviews on Google</a>
     </section>
 
     <!-- Trusted By / Brands Carousel Section -->
     <section class="section" style="background-color: var(--white-color); padding-bottom: 80px;">
         <h2 class="section-title">Brands We Work With</h2>
-        
+
         <div class="carousel-container">
             <div class="carousel-track">
                 <!-- First Sequence of Logos -->
-                <img src="/traction/images/Gifts-n-boxes.png" alt="Gifts n Boxes Logo">
-                <img src="/traction/images/afroreach-research.png" alt="Afroreach Research Logo">
-                <img src="/traction/images/beacon-trust.jpg" alt="Beacon Trust Logo">
-                <img src="/traction/images/bravies.png" alt="Bravies Logo">
-                <img src="/traction/images/chairo-properties.png" alt="Chairo Properties Logo">
-                <img src="/traction/images/demipos-hotel.png" alt="Demipos Hotel Logo">
-                <img src="/traction/images/fourtwoseven-engineering.jpg" alt="Fourtwoseven Engineering Logo">
-                <img src="/traction/images/grown-and-glow.png" alt="Grown and Glow Logo">
-                <img src="/traction/images/la-luna-restaurant.png" alt="La Luna Restaurant Logo">
-                <img src="/traction/images/tifes-hub.png" alt="Tifes Hub Logo">
+                <img src="/images/Gifts-n-boxes.png" alt="Gifts n Boxes Logo">
+                <img src="/images/afroreach-research.png" alt="Afroreach Research Logo">
+                <img src="/images/beacon-trust.jpg" alt="Beacon Trust Logo">
+                <img src="/images/bravies.png" alt="Bravies Logo">
+                <img src="/images/chairo-properties.png" alt="Chairo Properties Logo">
+                <img src="/images/demipos-hotel.png" alt="Demipos Hotel Logo">
+                <img src="/images/fourtwoseven-engineering.jpg" alt="Fourtwoseven Engineering Logo">
+                <img src="/images/grown-and-glow.png" alt="Grown and Glow Logo">
+                <img src="/images/la-luna-restaurant.png" alt="La Luna Restaurant Logo">
+                <img src="/images/tifes-hub.png" alt="Tifes Hub Logo">
 
                 <!-- Duplicated Sequence for Infinite Seamless Looping -->
-                <img src="/traction/images/Gifts-n-boxes.png" alt="Gifts n Boxes Logo">
-                <img src="/traction/images/afroreach-research.png" alt="Afroreach Research Logo">
-                <img src="/traction/images/beacon-trust.jpg" alt="Beacon Trust Logo">
-                <img src="/traction/images/bravies.png" alt="Bravies Logo">
-                <img src="/traction/images/chairo-properties.png" alt="Chairo Properties Logo">
-                <img src="/traction/images/demipos-hotel.png" alt="Demipos Hotel Logo">
-                <img src="/traction/images/fourtwoseven-engineering.jpg" alt="Fourtwoseven Engineering Logo">
-                <img src="/traction/images/grown-and-glow.png" alt="Grown and Glow Logo">
-                <img src="/traction/images/la-luna-restaurant.png" alt="La Luna Restaurant Logo">
-                <img src="/traction/images/tifes-hub.png" alt="Tifes Hub Logo">
+                <img src="/images/Gifts-n-boxes.png" alt="Gifts n Boxes Logo">
+                <img src="/images/afroreach-research.png" alt="Afroreach Research Logo">
+                <img src="/images/beacon-trust.jpg" alt="Beacon Trust Logo">
+                <img src="/images/bravies.png" alt="Bravies Logo">
+                <img src="/images/chairo-properties.png" alt="Chairo Properties Logo">
+                <img src="/images/demipos-hotel.png" alt="Demipos Hotel Logo">
+                <img src="/images/fourtwoseven-engineering.jpg" alt="Fourtwoseven Engineering Logo">
+                <img src="/images/grown-and-glow.png" alt="Grown and Glow Logo">
+                <img src="/images/la-luna-restaurant.png" alt="La Luna Restaurant Logo">
+                <img src="/images/tifes-hub.png" alt="Tifes Hub Logo">
             </div>
         </div>
     </section>
@@ -750,6 +299,40 @@
             <a id="modalCta" href="https://wa.me/2348052033145?text=I%20want%20to%20book%20a%20free%2030-minute%20consultation" class="modal-btn" target="_blank">Get 30-Mins Free WhatsApp Consultation</a>
         </div>
     </div>
+
+    <!-- Complete Corporate Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Head Office</h4>
+                    <a href="https://maps.google.com/?q=Traction+Outsourcing+Limited+26+Algiers+Street+Wuse+Zone+5+Abuja" target="_blank">26, Algiers Street,<br>Wuse Zone 5, FCT,<br>Nigeria.</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Details</h4>
+                    <a href="tel:+2348052033145">0805 203 3145</a>
+                    <a href="tel:+2348125078087">0812 507 8087</a>
+                    <a href="tel:+2347078707777">0707 870 7777</a>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Email</h4>
+                    <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/tractionoutsourcing" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@tractionoutsourcing" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Traction Outsourcing Limited. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Execution Logic Scripts -->
     <script>
@@ -772,9 +355,9 @@
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalImg').src = imgUrl;
             document.getElementById('modalStats').innerText = writeup;
-            
+
             document.getElementById('modalCta').href = "https://wa.me/2348052033145?text=I%20want%20to%20book%20a%20free%2030-minute%20consultation%20regarding%20" + encodeURIComponent(title);
-            
+
             document.getElementById('impactModal').style.display = 'flex';
         }
         function closeImpactModal() {
@@ -787,34 +370,6 @@
             }
         }
     </script>
-
-    <!-- Complete Corporate Footer Section -->
-    <footer>
-        <div class="footer-col">
-    <h4>Head Office</h4>
-    <a href="https://maps.google.com/?q=Traction+Outsourcing+Limited+26+Algiers+Street+Wuse+Zone+5+Abuja" target="_blank" style="text-decoration: none; color: inherit;">
-        <p>26, Algiers Street,<br>Wuse Zone 5, FCT,<br>Nigeria.</p>
-    </a>
-</div>
-            <div class="footer-col">
-                <h4>Contact Details</h4>
-                <p><strong>Phone:</strong> <a href="tel:+2348052033145">0805 203 3145</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+2348125078087">0812 507 8087</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+2347078707777">0707 870 7777</a></p>
-            </div>
-            <div class="footer-col">
-                <h4>Email &amp; Socials</h4>
-                <p><strong>Email:</strong> <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a></p>
-                <div class="social-links">
-                    <a href="https://instagram.com/tractionoutsourcing" target="_blank" class="social-link-item">Instagram</a>
-                    <a href="https://tiktok.com/@tractionoutsourcing" target="_blank" class="social-link-item">TikTok</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Traction Outsourcing Limited. All Rights Reserved. | Designed for High-Performance SEO</p>
-        </div>
-    </footer>
 
 </body>
 </html>
