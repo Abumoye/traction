@@ -18,7 +18,8 @@
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
         .blog-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee; transition: transform 0.2s ease; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
         .blog-card:hover { transform: translateY(-5px); }
-        .blog-image-placeholder { height: 200px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #666; font-style: italic; }
+        .blog-image-placeholder { height: 200px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #666; font-style: italic; overflow: hidden; }
+        .blog-image-placeholder img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .blog-content { padding: 20px; flex-grow: 1; }
         .blog-content h3 { margin: 0 0 10px 0; color: var(--primary-color); font-size: 20px; }
         .blog-content p { color: #666; font-size: 14px; margin-bottom: 15px; }
@@ -75,7 +76,9 @@
 
             <!-- Article Card 1 -->
             <a href="/articles/article-organogram.html" class="blog-card">
-                <div class="blog-image-placeholder">Article Image Placeholder</div>
+                <div class="blog-image-placeholder">
+                    <img src="/images/articles/organogram.jpg" alt="How to Create a Functional Organogram for Your Nigerian Business">
+                </div>
                 <div class="blog-content">
                     <span class="blog-meta">Business Structure</span>
                     <h3>How to Create a Functional Organogram for Your Nigerian Business</h3>
@@ -84,22 +87,62 @@
             </a>
 
             <!-- Article Card 2 -->
-            <a href="#" class="blog-card">
-                <div class="blog-image-placeholder">Article Image Placeholder</div>
+            <a href="/articles/article-dangers-of-proximity-to-success.html" class="blog-card">
+                <div class="blog-image-placeholder">
+                    <img src="/images/articles/dangers-of-proximity-to-success.jpg" alt="The Dangers of Proximity to Success">
+                </div>
                 <div class="blog-content">
-                    <span class="blog-meta">Workforce Management</span>
-                    <h3>Navigating Executive Recruitment Challenges in Abuja & Lagos</h3>
-                    <p>Why finding high-performing leadership requires looking beyond generic CV channels, and how to successfully onboard C-suite personnel.</p>
+                    <span class="blog-meta">Business Advisory</span>
+                    <h3>The Dangers of Proximity to Success</h3>
+                    <p>Access without preparation is a trap dressed up as opportunity. A true story about what happens when proximity replaces a real financial foundation.</p>
                 </div>
             </a>
 
             <!-- Article Card 3 -->
-            <a href="#" class="blog-card">
-                <div class="blog-image-placeholder">Article Image Placeholder</div>
+            <a href="/articles/article-tall-poppy-syndrome.html" class="blog-card">
+                <div class="blog-image-placeholder">
+                    <img src="/images/articles/tall-poppy-syndrome.jpg" alt="The Cost of Growth: Understanding Tall Poppy Syndrome">
+                </div>
                 <div class="blog-content">
-                    <span class="blog-meta">Corporate Growth</span>
-                    <h3>The Strategic ROI of Corporate Retreats and Vision-Building Sessions</h3>
-                    <p>How stepping out of your immediate operational office layout allows leadership teams to build concrete plans for the upcoming financial year.</p>
+                    <span class="blog-meta">Workplace Psychology</span>
+                    <h3>The Cost of Growth: Understanding the Tall Poppy Syndrome</h3>
+                    <p>Why the friends who knew you longest are often the last to become your customers, and what that reveals about growth.</p>
+                </div>
+            </a>
+
+            <!-- Article Card 4 -->
+            <a href="/articles/article-employee-handbook-nigerian-sme.html" class="blog-card">
+                <div class="blog-image-placeholder">
+                    <img src="/images/articles/employee-handbook-nigerian-sme.jpg" alt="How to Write an Employee Handbook for a Nigerian SME">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-meta">HR Advisory</span>
+                    <h3>How to Write an Employee Handbook for a Nigerian SME</h3>
+                    <p>Most Nigerian SMEs run on memory instead of policy. Here is why a handbook is one of the highest-leverage documents a growing business can build.</p>
+                </div>
+            </a>
+
+            <!-- Article Card 5 -->
+            <a href="/articles/article-cost-of-bad-hire-nigeria.html" class="blog-card">
+                <div class="blog-image-placeholder">
+                    <img src="/images/articles/cost-of-bad-hire-nigeria.jpg" alt="The Real Cost of a Bad Hire in Nigeria">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-meta">Recruitment & Talent</span>
+                    <h3>The Real Cost of a Bad Hire in Nigeria (And How to Avoid It)</h3>
+                    <p>A bad hire costs far more than a salary. What the data says about the true cost of hiring wrong, and how structured recruitment prevents it.</p>
+                </div>
+            </a>
+
+            <!-- Article Card 6 -->
+            <a href="/articles/article-why-nigerian-startups-fail.html" class="blog-card">
+                <div class="blog-image-placeholder">
+                    <img src="/images/articles/why-nigerian-startups-fail.jpg" alt="Why Nigerian Startups Fail Within Their First Five Years">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-meta">Startup Structuring</span>
+                    <h3>Why Nigerian Startups Fail Within Their First Five Years</h3>
+                    <p>More than nine in ten Nigerian SMEs fail within five years. A structural diagnosis of why, and what separates the ones that survive.</p>
                 </div>
             </a>
 
