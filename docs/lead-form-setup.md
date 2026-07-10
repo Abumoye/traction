@@ -46,6 +46,12 @@ a glance and easier to filter, which is why it is the default here.
 function doPost(e) {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Leads');
 
+  if (!e || !e.postData || !e.postData.contents) {
+    return ContentService.createTextOutput(
+      JSON.stringify({ status: 'error', message: 'No form data received. This function only works when called from the website form, not when run manually in the editor.' })
+    ).setMimeType(ContentService.MimeType.JSON);
+  }
+
   var data = JSON.parse(e.postData.contents);
 
   sheet.appendRow([
@@ -113,3 +119,10 @@ Once wired in, submit the form on any service page. Check the Sheet, a
 new row should appear within a few seconds. If nothing appears, open the
 Apps Script editor, go to **Executions** (left sidebar) to see if the
 request came in and whether it threw an error.
+
+**Do not test by clicking the Run ▶ button in the Apps Script editor.**
+That calls `doPost()` with no request data, which will show an error
+like `Cannot read properties of undefined (reading 'postData')`. This is
+expected and does not mean anything is broken, it just means the
+function was called outside of a real form submission. Always test by
+submitting the actual form on the live website instead.
