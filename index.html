@@ -86,17 +86,6 @@
         .card-overlay { position: absolute; bottom: -100%; left: 0; width: 100%; background: linear-gradient(transparent, rgba(0, 0, 0, 0.9) 40%); color: var(--primary-color); text-align: center; padding: 40px 0 15px 0; font-weight: bold; font-size: 14px; transition: bottom 0.3s ease; }
         .card:hover .card-overlay { bottom: 0; }
 
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 200; justify-content: center; align-items: center; }
-        .modal-content { background-color: var(--white-color); padding: 35px; border-radius: 12px; max-width: 500px; width: 90%; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; animation: modalFade 0.3s ease; }
-        @keyframes modalFade { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #aaa; }
-        .close-modal:hover { color: var(--text-color); }
-        .modal-title { color: var(--dark-color); font-size: 24px; margin-top: 0; border-bottom: 2px solid var(--primary-color); padding-bottom: 8px; }
-        .modal-img { width: 100%; height: 180px; background-color: #ddd; border-radius: 6px; margin: 15px 0; object-fit: cover; }
-        .modal-stats { background-color: var(--light-bg); padding: 12px; border-radius: 6px; font-size: 14px; font-weight: 600; color: var(--dark-color); margin-bottom: 20px; border-left: 4px solid var(--primary-color); }
-        .modal-btn { display: block; text-align: center; background-color: #25D366; color: var(--white-color); padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.2s; }
-        .modal-btn:hover { background-color: #1ebd58; }
-
         .reviews-section { background-color: var(--light-bg); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
         .reviews-header { text-align: center; margin-bottom: 40px; }
         .google-stars { color: #fbbc05; font-size: 22px; margin-top: 5px; }
@@ -174,37 +163,37 @@
         <h2 class="section-title">Our Areas of Impact</h2>
         <div class="grid">
             <!-- Card 1 -->
-            <div class="card" onclick="openImpactModal('Startup Structuring', '/images/site-work.jpg', 'Over 10 successful projects in the last 6 months.')">
+            <div class="card" onclick="window.location.href='/services/startup-structuring/'">
                 <h3>Startup Structuring</h3>
                 <p>Building the foundational governance and operational architecture new businesses need to scale with confidence.</p>
                 <div class="card-overlay">See more..</div>
             </div>
             <!-- Card 2 -->
-            <div class="card" onclick="openImpactModal('Corporate Restructuring', '/images/site-work-2.jpg', 'Legacy frameworks systematically re-engineered to clear operational blockages for 5 companies in Lagos and Abuja.')">
+            <div class="card" onclick="window.location.href='/services/corporate-restructuring/'">
                 <h3>Corporate Restructuring</h3>
                 <p>Re-engineering legacy business frameworks to remove operational blockages and restore performance.</p>
                 <div class="card-overlay">See more..</div>
             </div>
             <!-- Card 3 -->
-            <div class="card" onclick="openImpactModal('Business Advisory', '/images/site-work-3.jpg', 'Guided 5 entrepreneurs across real estate (shorlets), FMCG, and importation.')">
+            <div class="card" onclick="window.location.href='/services/business-advisory/'">
                 <h3>Business Advisory</h3>
                 <p>Strategic guidance for entrepreneurs navigating growth, market entry, and structural decisions.</p>
                 <div class="card-overlay">See more..</div>
             </div>
             <!-- Card 4 -->
-            <div class="card" onclick="openImpactModal('Executive-Level Recruitment', '/images/site-work-4.jpg', 'Pulled and placed 23 C-suite executives in the last 6 months.')">
+            <div class="card" onclick="window.location.href='/services/executive-recruitment/'">
                 <h3>Executive-Level Recruitment</h3>
                 <p>Sourcing and placing senior leaders who match both the skill and the culture a business needs.</p>
                 <div class="card-overlay">See more..</div>
             </div>
             <!-- Card 5 -->
-            <div class="card" onclick="openImpactModal('Employee Training', '/images/site-work-5.jpg', 'Delivered custom capability masterclasses to over 1,200 employees across various sectors.')">
+            <div class="card" onclick="window.location.href='/services/employee-training/'">
                 <h3>Employee Training</h3>
                 <p>Custom training programs designed to align workforce execution with overarching corporate vision.</p>
                 <div class="card-overlay">See more..</div>
             </div>
             <!-- Card 6 -->
-            <div class="card" onclick="openImpactModal('Corporate Retreats & Events', '/images/site-work-6.jpg', 'Designed strategic execution events empowering business leaders and managers.')">
+            <div class="card" onclick="window.location.href='/services/corporate-retreats/'">
                 <h3>Corporate Retreats & Events</h3>
                 <p>High-end international networking frameworks designed to combine business strategy sessions with premier travel experiences.</p>
                 <div class="card-overlay">See more..</div>
@@ -296,17 +285,6 @@
         </div>
     </section>
 
-    <!-- Impact Pop Box Popup Window -->
-    <div id="impactModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeImpactModal()">×</span>
-            <h3 id="modalTitle" class="modal-title">Area of Impact</h3>
-            <img id="modalImg" class="modal-img" src="" alt="Impact Metric Portfolio Illustration">
-            <div id="modalStats" class="modal-stats">Active performance metrics details tracking...</div>
-            <a id="modalCta" href="https://wa.me/2348052033145?text=I%20want%20to%20book%20a%20free%2030-minute%20consultation" class="modal-btn" target="_blank">Get 30-Mins Free WhatsApp Consultation</a>
-        </div>
-    </div>
-
     <!-- Complete Corporate Footer Section -->
     <footer>
         <div class="footer-container">
@@ -357,25 +335,6 @@
                 navMenu.classList.remove('active');
             });
         });
-
-        function openImpactModal(title, imgUrl, writeup) {
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalImg').src = imgUrl;
-            document.getElementById('modalStats').innerText = writeup;
-
-            document.getElementById('modalCta').href = "https://wa.me/2348052033145?text=I%20want%20to%20book%20a%20free%2030-minute%20consultation%20regarding%20" + encodeURIComponent(title);
-
-            document.getElementById('impactModal').style.display = 'flex';
-        }
-        function closeImpactModal() {
-            document.getElementById('impactModal').style.display = 'none';
-        }
-        window.onclick = function(event) {
-            var modal = document.getElementById('impactModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
     </script>
 
 </body>
