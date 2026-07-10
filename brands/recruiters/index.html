@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EmploymentAgency",
+  "name": "ATH Recruiters",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Traction Outsourcing Limited"
+  },
+  "url": "https://tolnigeria.com/brands/recruiters/",
+  "areaServed": "Nigeria",
+  "description": "ATH Recruiters connects small businesses, private individuals, shops, hotels, and restaurants across Nigeria with verified, ready-to-work staff."
+}
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recruitment Agency & Job Board Nigeria | ATH Recruiters</title>
-    <meta name="description" content="ATH Recruiters connects premier employers with top talent in Abuja, Lagos, and across Nigeria. Join our active job seeker learning community today.">
-    <meta name="keywords" content="recruitment in abuja, fast recruitment for nigerians, looking for a job in nigeria, recruitment agency lagos">
+    <title>Hire Staff Fast in Nigeria | ATH Recruiters</title>
+    <meta name="description" content="ATH Recruiters helps small businesses, shops, hotels, restaurants, and private individuals across Nigeria find qualified staff fast, with plans starting from ₦30,000 and turnaround as quick as 48 hours.">
+    <meta name="keywords" content="hire staff nigeria, recruitment agency abuja, staffing agency lagos, hire domestic staff nigeria, hotel staff recruitment nigeria, restaurant staff hiring nigeria">
     <link rel="canonical" href="https://tolnigeria.com/brands/recruiters/">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -14,22 +28,99 @@
 
     <!-- Page-specific styling -->
     <style>
-        .about-box { background: var(--light-bg); padding: 40px; border-radius: 8px; text-align: center; border-bottom: 4px solid var(--accent-color); }
-        .cta-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0; }
-        @media (max-width: 768px) { .cta-container { grid-template-columns: 1fr; } }
-        .cta-card { padding: 35px; border-radius: 8px; color: white; display: flex; flex-direction: column; justify-content: space-between; }
-        .employer-side { background-color: var(--primary-color); }
-        .community-side { background-color: #262626; }
-        .whatsapp-btn { display: block; text-align: center; background-color: #25D366; color: white; padding: 12px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 20px; }
-        .join-btn { display: block; text-align: center; background-color: var(--accent-color); color: white; padding: 12px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 20px; }
-        .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
-        .job-card { background: white; padding: 25px; border-radius: 8px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
-        .job-title { color: var(--primary-color); font-size: 20px; margin: 0 0 5px 0; font-weight: bold; }
-        .job-loc { color: var(--accent-color); font-size: 14px; font-weight: 600; text-transform: uppercase; margin-bottom: 15px; }
-        .apply-box { background-color: #f0f4f8; padding: 12px; border-radius: 5px; font-size: 13px; margin-top: 15px; border-left: 3px solid var(--primary-color); }
+        :root {
+            --ath-purple: #5B2A8C;
+            --ath-purple-dark: #3B1B5C;
+        }
+
+        /* Hero */
+        .ath-hero { background: linear-gradient(120deg, var(--ath-purple-dark) 0%, var(--ath-purple) 55%, #1a1a1a 100%); color: white; padding: 90px 8% 70px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+        .ath-hero .eyebrow { color: var(--accent-color); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 13px; margin-bottom: 14px; }
+        .ath-hero h1 { font-size: 40px; line-height: 1.2; margin: 0 0 18px; }
+        .ath-hero p { color: #e8e0f0; font-size: 16.5px; line-height: 1.7; max-width: 520px; }
+        .ath-hero-actions { margin-top: 26px; display: flex; gap: 14px; flex-wrap: wrap; }
+        .ath-btn-primary { background: var(--accent-color); color: #000; font-weight: 800; padding: 15px 26px; border-radius: 6px; text-decoration: none; display: inline-block; font-size: 15px; }
+        .ath-btn-ghost { border: 2px solid rgba(255,255,255,0.4); color: white; font-weight: 700; padding: 13px 24px; border-radius: 6px; text-decoration: none; display: inline-block; font-size: 14px; }
+        .ath-hero-logo { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 40px; text-align: center; }
+        .ath-hero-logo img { max-width: 100%; height: auto; }
+
+        .section-title { text-align: center; color: var(--primary-color); font-size: 28px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .section-sub { text-align: center; color: #777; max-width: 680px; margin: 0 auto 40px; font-size: 15.5px; }
+
+        /* Who we serve */
+        .serve-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 26px; max-width: 900px; margin: 0 auto; }
+        .serve-card { background: var(--light-bg); border-radius: 10px; padding: 30px; text-align: center; border-top: 4px solid var(--ath-purple); }
+        .serve-card i { font-size: 30px; color: var(--ath-purple); margin-bottom: 14px; display: block; }
+        .serve-card h3 { color: var(--primary-color); margin: 0 0 8px; font-size: 18px; }
+        .serve-card p { color: #666; font-size: 14.5px; margin: 0; }
+
+        /* Industries grid */
+        .industry-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 18px; max-width: 1050px; margin: 0 auto; }
+        .industry-card { background: white; border: 1px solid #eee; border-radius: 10px; padding: 22px 18px; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+        .industry-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.06); }
+        .industry-card i { font-size: 24px; color: var(--accent-color); margin-bottom: 10px; display: block; }
+        .industry-card span { color: var(--primary-color); font-weight: 700; font-size: 14px; }
+
+        /* Stat band */
+        .stat-band { background: linear-gradient(100deg, var(--ath-purple-dark), var(--ath-purple)); color: white; display: flex; flex-wrap: wrap; justify-content: center; gap: 60px; padding: 45px 20px; text-align: center; }
+        .stat-band .stat-num { color: var(--accent-color); font-size: 40px; font-weight: 900; display: block; line-height: 1; }
+        .stat-band .stat-label { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #e8e0f0; margin-top: 6px; }
+        .stat-band .stat-note { font-size: 11px; color: #b8a8ce; margin-top: 4px; }
+
+        /* Plans */
+        .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px; max-width: 1100px; margin: 0 auto; align-items: stretch; }
+        .plan-card { background: white; border: 2px solid #eee; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+        .plan-card.featured { border-color: var(--accent-color); box-shadow: 0 14px 30px rgba(227,95,38,0.12); }
+        .plan-head { padding: 26px 26px 20px; color: white; }
+        .plan-card:nth-child(1) .plan-head { background: var(--primary-color); }
+        .plan-card:nth-child(2) .plan-head { background: var(--ath-purple); }
+        .plan-card:nth-child(3) .plan-head { background: var(--accent-color); color: #000; }
+        .plan-tag { font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.85; }
+        .plan-head h3 { margin: 6px 0 0; font-size: 22px; }
+        .plan-body { padding: 24px 26px; flex-grow: 1; display: flex; flex-direction: column; }
+        .plan-body p { color: #555; font-size: 14px; line-height: 1.7; margin: 0 0 14px; }
+        .plan-ideal { font-size: 13px; color: #777; font-style: italic; margin-bottom: 16px; }
+        .plan-benefits { list-style: none; padding: 0; margin: 0 0 20px; flex-grow: 1; }
+        .plan-benefits li { padding: 8px 0; border-top: 1px solid #f0f0f0; font-size: 13.5px; color: #444; display: flex; gap: 10px; }
+        .plan-benefits li:first-child { border-top: none; }
+        .plan-benefits li::before { content: "✓"; color: var(--accent-color); font-weight: 800; }
+        .plan-cta { display: block; text-align: center; background: var(--primary-color); color: white; padding: 13px; border-radius: 6px; text-decoration: none; font-weight: 800; font-size: 14px; }
+        .plan-cta:hover { opacity: 0.9; }
+
+        /* Split CTA line */
+        .split-cta { display: flex; align-items: stretch; max-width: 1000px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+        .split-cta-text { flex: 3; background: var(--primary-color); color: white; padding: 40px 35px; display: flex; align-items: center; font-size: 24px; font-weight: 800; line-height: 1.3; position: relative; }
+        .split-cta-arrow { flex: 0 0 60px; background: var(--primary-color); display: flex; align-items: center; justify-content: center; }
+        .split-cta-arrow i { font-size: 26px; color: var(--accent-color); animation: athArrowNudge 1.4s ease-in-out infinite; }
+        @keyframes athArrowNudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(8px); } }
+        .split-cta-btn-wrap { flex: 2; background: var(--accent-color); display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .split-cta-btn { color: #000; font-weight: 900; text-decoration: none; font-size: 18px; text-align: center; letter-spacing: 0.5px; text-transform: uppercase; }
+        .split-cta-btn i { display: block; font-size: 22px; margin-bottom: 6px; }
 
         @media (max-width: 900px) {
-            .section { padding: 35px 6%; }
+            .ath-hero { grid-template-columns: 1fr; padding: 60px 6% 50px; text-align: center; }
+            .ath-hero p { max-width: 100%; margin: 0 auto; }
+            .ath-hero-actions { justify-content: center; }
+            .ath-hero-logo { order: -1; max-width: 220px; margin: 0 auto; padding: 25px; }
+            .split-cta { flex-direction: column; }
+            .split-cta-text { font-size: 19px; padding: 30px 22px; }
+            .split-cta-arrow { flex-direction: row; padding: 10px 0; }
+            .split-cta-arrow i { transform: rotate(90deg); }
+            .split-cta-btn-wrap { padding: 26px 20px; }
+        }
+
+        /* Join Our Clients — enlarged logo carousel */
+        .jc-section { background: var(--light-bg); }
+        .jc-carousel { overflow: hidden; white-space: nowrap; padding: 40px 0; position: relative; }
+        .jc-carousel::before, .jc-carousel::after { position: absolute; top: 0; width: 140px; height: 100%; content: ""; z-index: 2; }
+        .jc-carousel::before { left: 0; background: linear-gradient(to right, var(--light-bg) 0%, rgba(249,249,249,0) 100%); }
+        .jc-carousel::after { right: 0; background: linear-gradient(to left, var(--light-bg) 0%, rgba(249,249,249,0) 100%); }
+        .jc-track { display: inline-block; animation: jcScroll 32s linear infinite; }
+        .jc-track img { height: 85px; margin: 0 55px; opacity: 0.75; transition: opacity 0.3s ease; vertical-align: middle; }
+        .jc-track img:hover { opacity: 1; }
+        @keyframes jcScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @media (max-width: 900px) {
+            .jc-track img { height: 55px; margin: 0 30px; }
         }
     </style>
 </head>
@@ -82,75 +173,215 @@
         </nav>
     </header>
 
-    <div class="section">
-        <!-- About Section -->
-        <div class="about-box">
-            <img src="/images/ath-recruiters.png" alt="ATH Recruiters Logo" style="height: 80px; width: auto; margin-bottom: 15px;">
-            <p style="font-size: 17px; max-width: 800px; margin: 0 auto; color: #444; line-height: 1.8;">
-                ATH Recruiters is a full-service recruitment agency connecting top talent with employers across Abuja, Lagos, Kano, Kaduna, Enugu, Anambra, Ogun, and Oyo States. Beyond recruitment, we are building Nigeria's largest free learning community for working-age Nigerians, empowering job seekers with practical skills while they prepare for their next career opportunity. ATH Recruiters is a brand of Traction Outsourcing Limited.
-            </p>
-        </div>
-
-        <!-- Two Funnel Call-To-Actions (Aligned Perfectly) -->
-        <div class="cta-container">
-            <!-- Employers Side -->
-            <div class="cta-card employer-side">
-                <div>
-                    <h2 style="margin-top: 0; color: var(--accent-color);">For Corporate Employers</h2>
-                    <p>Need staff urgently? We run an accelerated vetting process mapping top-tier candidates instantly into your human capital layout. We have various recruitment placement plans starting from just <strong>&#8358;30,000!</strong></p>
-                </div>
-                <a href="https://wa.me/2348125078087?text=I%20need%20to%20hire%20staff%20urgently" class="whatsapp-btn" target="_blank">
-                    Send WhatsApp Message
-                </a>
-            </div>
-
-            <!-- Job Seekers Side -->
-            <div class="cta-card community-side">
-                <div>
-                    <h2 style="margin-top: 0; color: var(--accent-color);">Join Our Active Community</h2>
-                    <p>Gain access to exclusive resources and prepare your career for high-tier advancement. Our community ecosystem provides:</p>
-                    <ul style="padding-left: 20px; font-size: 14px; margin: 5px 0;">
-                        <li>Instant access to vetted job openings</li>
-                        <li>Free skills training programs & masterclasses</li>
-                        <li>Direct internship placement opportunities</li>
-                        <li>Strategic professional networking events</li>
-                        <li>Continuous resume & career improvement mentoring</li>
-                    </ul>
-                </div>
-                <a href="https://bit.ly/athjobs" class="join-btn" target="_blank">
-                    Join the Free Community Link
-                </a>
+    <!-- Hero -->
+    <section class="ath-hero">
+        <div>
+            <div class="eyebrow">A Traction Outsourcing Brand</div>
+            <h1>Reliable Staff, Fast. Anywhere In Nigeria.</h1>
+            <p>ATH Recruiters connects small businesses and private individuals across Nigeria with verified, ready-to-work staff, with plans built for how fast you actually need to hire.</p>
+            <div class="ath-hero-actions">
+                <a href="https://wa.me/2348125078087?text=I%20need%20to%20hire%20staff%20urgently" class="ath-btn-primary" target="_blank" rel="noopener">Request Staff on WhatsApp</a>
+                <a href="#ath-plans" class="ath-btn-ghost">See Our Plans</a>
             </div>
         </div>
+        <div class="ath-hero-logo">
+            <img src="/images/ath-recruiters.png" alt="ATH Recruiters Logo">
+        </div>
+    </section>
 
-        <!-- Job Board Section -->
-        <h2 style="color: var(--primary-color); margin-top: 50px; font-size: 28px; text-align: center;">Latest Open Positions</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 30px;">Vetted corporate opportunities across our operational partner network.</p>
+    <!-- Who We Are -->
+    <section class="section" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2 class="section-title">What Is ATH Recruiters?</h2>
+        <p style="font-size: 16.5px; color: #444; line-height: 1.8;">ATH Recruiters is the staffing brand of Traction Outsourcing Limited, built to solve one specific problem: getting Nigerian businesses and homes the right person, fast. We maintain a verified community of ready-to-work candidates so that when you need staff, you are not starting from zero, you are choosing from people who are already screened and available.</p>
+    </section>
 
-        <div class="job-grid">
-            <!-- Job 1 -->
-            <div class="job-card">
-                <div class="job-title">Sales Operations Officer</div>
-                <div class="job-loc">Abuja, FCT</div>
-                <p style="font-size: 14px; color: #555;">Manage retail pipeline client accounts, optimize tracking sheets, and synchronize data reports with regional lead managers.</p>
-                <div class="apply-box">
-                    <strong>How to Apply:</strong> Send your ATH membership number and job title to <strong>08125078087</strong> on WhatsApp.
-                </div>
+    <!-- Who We Serve -->
+    <section class="section" style="background: var(--light-bg);">
+        <h2 class="section-title">Who We Work With</h2>
+        <p class="section-sub">We are built for the businesses and households that need staff without the overhead of a full HR department.</p>
+        <div class="serve-grid">
+            <div class="serve-card">
+                <i class="fas fa-store"></i>
+                <h3>Small & Growing Businesses</h3>
+                <p>From single-location shops to multi-branch operations that need to hire quickly and repeatedly.</p>
             </div>
-
-            <!-- Job 2 -->
-            <div class="job-card">
-                <div class="job-title">Human Resource Assistant</div>
-                <div class="job-loc">Lagos State</div>
-                <p style="font-size: 14px; color: #555;">Support active screening frameworks, catalog application resumes, and coordinate calendar timelines for executive vetting tracks.</p>
-                <div class="apply-box">
-                    <strong>How to Apply:</strong> Send your ATH membership number and job title to <strong>08125078087</strong> on WhatsApp.
-                </div>
+            <div class="serve-card">
+                <i class="fas fa-house-user"></i>
+                <h3>Private Individuals & Homes</h3>
+                <p>Families and individuals hiring domestic and personal staff they can trust.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="section">
+        <h2 class="section-title">What We Recruit For</h2>
+        <p class="section-sub">If it involves people showing up and doing the job well, we have likely staffed it.</p>
+        <div class="industry-grid">
+            <div class="industry-card"><i class="fas fa-store"></i><span>Shops & Retail Stores</span></div>
+            <div class="industry-card"><i class="fas fa-hotel"></i><span>Hotels & Hospitality</span></div>
+            <div class="industry-card"><i class="fas fa-utensils"></i><span>Restaurants & Fast Food</span></div>
+            <div class="industry-card"><i class="fas fa-house-chimney"></i><span>Private Homes & Domestic Staff</span></div>
+            <div class="industry-card"><i class="fas fa-helmet-safety"></i><span>Construction Sites</span></div>
+            <div class="industry-card"><i class="fas fa-spa"></i><span>Salons & Spas</span></div>
+            <div class="industry-card"><i class="fas fa-briefcase-medical"></i><span>Clinics & Pharmacies</span></div>
+            <div class="industry-card"><i class="fas fa-school"></i><span>Schools</span></div>
+            <div class="industry-card"><i class="fas fa-truck"></i><span>Logistics & Dispatch</span></div>
+            <div class="industry-card"><i class="fas fa-building"></i><span>Offices & Corporate Support</span></div>
+            <div class="industry-card"><i class="fas fa-microchip"></i><span>FinTechs & Startups</span></div>
+            <div class="industry-card"><i class="fas fa-boxes-stacked"></i><span>FMCG & Distribution</span></div>
+        </div>
+    </section>
+
+    <!-- Stat Band -->
+    <div class="stat-band">
+        <div>
+            <span class="stat-num">48 HRS</span>
+            <span class="stat-label">Turnaround Time</span>
+            <div class="stat-note">*for select recruitment plans</div>
+        </div>
+        <div>
+            <span class="stat-num">₦30,000</span>
+            <span class="stat-label">Qualified Staff, Starting From</span>
+            <div class="stat-note">*for select recruitment plans</div>
         </div>
     </div>
 
-    <!-- Complete Corporate Footer Section -->
+    <!-- Plans -->
+    <section class="section" id="ath-plans">
+        <h2 class="section-title">Our Recruitment Plans</h2>
+        <p class="section-sub">Three ways to work with us, depending on how often you hire and what kind of role you are filling.</p>
+
+        <div class="plans-grid">
+            <!-- Plan A -->
+            <div class="plan-card">
+                <div class="plan-head">
+                    <span class="plan-tag">Plan A</span>
+                    <h3>High-Volume Staffing</h3>
+                </div>
+                <div class="plan-body">
+                    <p>Tailored search and selection services designed to fill core operational roles with precision. This tier provides direct access to our verified community professionals, ensuring cultural fit and technical competence.</p>
+                    <p class="plan-ideal">Ideal for roles with high attrition rates or rapid scaling needs in industries like Sales, Hospitality, Construction, FinTechs, Technology, Industries, FMCG, ad-hoc staffing, homes, private staff, and more.</p>
+                    <ul class="plan-benefits">
+                        <li>Unlimited candidate requests</li>
+                        <li>First time waiting period of 1 month</li>
+                        <li>Best for roles with high attrition rates</li>
+                        <li>Just 24-48 hours waiting period during subscription</li>
+                        <li>Available in all states in Nigeria</li>
+                    </ul>
+                    <a href="https://wa.me/2348125078087?text=I%27m%20interested%20in%20Plan%20A%20-%20High-Volume%20Staffing" class="plan-cta" target="_blank" rel="noopener">Ask About Plan A</a>
+                </div>
+            </div>
+
+            <!-- Plan B -->
+            <div class="plan-card">
+                <div class="plan-head">
+                    <span class="plan-tag">Plan B</span>
+                    <h3>Specialized Talent Search</h3>
+                </div>
+                <div class="plan-body">
+                    <p>A highly strategic, comprehensive recruitment service dedicated to sourcing specialized talent and leadership roles across various Nigerian states and international markets.</p>
+                    <p class="plan-ideal">Best for companies that usually need one staff member at a time, with a very low attrition rate.</p>
+                    <ul class="plan-benefits">
+                        <li>Candidate sourcing</li>
+                        <li>Candidate selection</li>
+                        <li>Pre-interview advisory</li>
+                        <li>Save time wasted on vacancy ads</li>
+                        <li>Save time wasted on sourcing through CVs</li>
+                        <li>Save time wasted on pre-interview screening</li>
+                        <li>One-off service</li>
+                        <li>Qualified candidates in 2 weeks or less</li>
+                        <li>Available in all states in Nigeria</li>
+                    </ul>
+                    <a href="https://wa.me/2348125078087?text=I%27m%20interested%20in%20Plan%20B%20-%20Specialized%20Talent%20Search" class="plan-cta" target="_blank" rel="noopener">Ask About Plan B</a>
+                </div>
+            </div>
+
+            <!-- Plan C -->
+            <div class="plan-card featured">
+                <div class="plan-head">
+                    <span class="plan-tag">Plan C</span>
+                    <h3>End-to-End Executive HR Partnership</h3>
+                </div>
+                <div class="plan-body">
+                    <p>A fully managed, consultant-led recruitment process from initial sourcing through to corporate integration.</p>
+                    <p class="plan-ideal">Best for organizations seeking a complete corporate onboarding experience, expert interview panels, and post-hire development.</p>
+                    <ul class="plan-benefits">
+                        <li>First-level interviewing with a Traction Outsourcing HR professional</li>
+                        <li>Second-level joint panel interviews with Traction Outsourcing HR professional and your management</li>
+                        <li>Full HR compliance support, including standardized staff offer letters, tailored job descriptions, and optional staff background check</li>
+                        <li>Includes 2 standardized trainings delivered by our management consultants (1 general staff training and 1 corporate onboarding training)</li>
+                        <li>Minimum of 5 recruited staff for this plan</li>
+                    </ul>
+                    <a href="https://wa.me/2348125078087?text=I%27m%20interested%20in%20Plan%20C%20-%20End-to-End%20Executive%20HR%20Partnership" class="plan-cta" target="_blank" rel="noopener">Ask About Plan C</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Our Clients -->
+    <section class="section jc-section">
+        <h2 class="section-title">Join Our Clients</h2>
+        <p class="section-sub">Businesses across Nigeria trust Traction Outsourcing Limited to get this right.</p>
+        <div class="jc-carousel">
+            <div class="jc-track">
+                <img src="/images/Gifts-n-boxes.png" alt="Client Logo">
+                <img src="/images/afroreach-research.png" alt="Client Logo">
+                <img src="/images/beacon-trust.jpg" alt="Client Logo">
+                <img src="/images/bravies.png" alt="Client Logo">
+                <img src="/images/chairo-properties.png" alt="Client Logo">
+                <img src="/images/demipos-hotel.png" alt="Client Logo">
+                <img src="/images/fourtwoseven-engineering.jpg" alt="Client Logo">
+                <img src="/images/grown-and-glow.png" alt="Client Logo">
+                <img src="/images/la-luna-restaurant.png" alt="Client Logo">
+                <img src="/images/tifes-hub.png" alt="Client Logo">
+                <img src="/images/Gifts-n-boxes.png" alt="Client Logo">
+                <img src="/images/afroreach-research.png" alt="Client Logo">
+                <img src="/images/beacon-trust.jpg" alt="Client Logo">
+                <img src="/images/bravies.png" alt="Client Logo">
+                <img src="/images/chairo-properties.png" alt="Client Logo">
+                <img src="/images/demipos-hotel.png" alt="Client Logo">
+                <img src="/images/fourtwoseven-engineering.jpg" alt="Client Logo">
+                <img src="/images/grown-and-glow.png" alt="Client Logo">
+                <img src="/images/la-luna-restaurant.png" alt="Client Logo">
+                <img src="/images/tifes-hub.png" alt="Client Logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Capture Form -->
+    <section class="section" style="padding-top: 0;">
+        <div class="lead-form-wrap">
+            <h3>Request A Free Consultation</h3>
+            <p class="lead-form-sub">Leave your details and someone from our team will reach out.</p>
+            <form id="leadForm" class="lead-form">
+                <input type="text" name="leadName" placeholder="Full Name" required>
+                <input type="tel" name="leadPhone" placeholder="Phone Number" required>
+                <input type="text" name="leadCompany" placeholder="Company Name" required>
+                <input type="email" name="leadEmail" placeholder="Email Address" required>
+                <button type="submit">Submit</button>
+                <p style="text-align: center; font-size: 12.5px; color: #888; margin: 4px 0 0;">(Get a FREE 30-minute consultation)</p>
+            </form>
+            <div id="leadFormStatus" class="lead-form-status"></div>
+        </div>
+    </section>
+    <script src="/js/lead-form.js"></script>
+
+    <!-- Job Seeker Split CTA (10%) -->
+    <section class="section" style="padding-top: 10px;">
+        <div class="split-cta">
+            <div class="split-cta-text">Need A Job in Nigeria? Join Our Community Now.</div>
+            <div class="split-cta-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="split-cta-btn-wrap">
+                <a href="https://bit.ly/athjobs" class="split-cta-btn" target="_blank" rel="noopener">
+                    <i class="fas fa-people-group"></i>
+                    Join ATH Job Community
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-row">
