@@ -75,6 +75,20 @@
             .timeline-marker { width: 48px; height: 48px; font-size: 18px; }
             .timeline-step { padding-left: 65px; }
         }
+
+        /* Join Our Clients — enlarged logo carousel */
+        .jc-section { background: var(--light-bg); }
+        .jc-carousel { overflow: hidden; white-space: nowrap; padding: 40px 0; position: relative; }
+        .jc-carousel::before, .jc-carousel::after { position: absolute; top: 0; width: 140px; height: 100%; content: ""; z-index: 2; }
+        .jc-carousel::before { left: 0; background: linear-gradient(to right, var(--light-bg) 0%, rgba(249,249,249,0) 100%); }
+        .jc-carousel::after { right: 0; background: linear-gradient(to left, var(--light-bg) 0%, rgba(249,249,249,0) 100%); }
+        .jc-track { display: inline-block; animation: jcScroll 32s linear infinite; }
+        .jc-track img { height: 85px; margin: 0 55px; opacity: 0.75; transition: opacity 0.3s ease; vertical-align: middle; }
+        .jc-track img:hover { opacity: 1; }
+        @keyframes jcScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @media (max-width: 900px) {
+            .jc-track img { height: 55px; margin: 0 30px; }
+        }
     </style>
 </head>
 <body>
@@ -93,7 +107,18 @@
 
         <nav id="navMenu">
             <a href="/">Home</a>
-            <a href="/services/staff-outsourcing/">Our Services</a>
+            <div class="dropdown">
+                <a href="#">Our Services</a>
+                <div class="dropdown-content">
+                    <a href="/services/staff-outsourcing/" class="dropdown-item">Staff Outsourcing & HR Management</a>
+                    <a href="/services/startup-structuring/" class="dropdown-item">Startup Structuring</a>
+                    <a href="/services/corporate-restructuring/" class="dropdown-item">Corporate Restructuring</a>
+                    <a href="/services/business-advisory/" class="dropdown-item">Business Advisory</a>
+                    <a href="/services/executive-recruitment/" class="dropdown-item">Executive-Level Recruitment</a>
+                    <a href="/services/employee-training/" class="dropdown-item">Employee Training</a>
+                    <a href="/services/corporate-retreats/" class="dropdown-item">Events & Retreats</a>
+                </div>
+            </div>
             <a href="/events/">Events</a>
             <a href="/articles/">Articles</a>
 
@@ -172,25 +197,53 @@
         </div>
     </div>
 
-    <!-- Case Snapshots -->
+    <!-- What this looks like in practice -->
     <section class="section">
-        <h2 class="section-title">Built With Us</h2>
+        <h2 class="section-title">What This Looks Like In Practice</h2>
         <p class="section-sub">A look at the kind of structuring work we do, drawn from real engagements.</p>
 
         <div class="case-grid">
             <div class="case-card">
                 <div class="case-card-header">
-                    <img src="/images/grown-and-glow.png" alt="Grown and Glow Luxe Logo">
-                    <h4>Grown and Glow Luxe</h4>
+                    <h4>Retail & Personal Care Business</h4>
                 </div>
-                <p>A growing Lagos spa and gift retail business needed structure across seven roles before it could scale past its founder. We built the job descriptions, the commission framework for its Braider and Barber roles, and the staff attestation documents that gave the business its first real operating system.</p>
+                <p>A growing retail business needed structure across seven roles before it could scale past its founder. We built the job descriptions, a commission framework for its frontline roles, and the staff attestation documents that gave the business its first real operating system.</p>
             </div>
             <div class="case-card">
                 <div class="case-card-header">
-                    <img src="/images/Gifts-n-boxes.png" alt="Gifts n Boxes Logo">
-                    <h4>Gifts n Boxes</h4>
+                    <h4>Gifting & Retail Business</h4>
                 </div>
                 <p>Twelve roles, one organogram, and a training deck built to onboard staff without the founder in the room. What used to be tribal knowledge became a structure new hires could pick up on day one.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Our Clients -->
+    <section class="section jc-section">
+        <h2 class="section-title">Join Our Clients</h2>
+        <p class="section-sub">Businesses across Nigeria trust Traction Outsourcing Limited to get this right.</p>
+        <div class="jc-carousel">
+            <div class="jc-track">
+                <img src="/images/Gifts-n-boxes.png" alt="Client Logo">
+                <img src="/images/afroreach-research.png" alt="Client Logo">
+                <img src="/images/beacon-trust.jpg" alt="Client Logo">
+                <img src="/images/bravies.png" alt="Client Logo">
+                <img src="/images/chairo-properties.png" alt="Client Logo">
+                <img src="/images/demipos-hotel.png" alt="Client Logo">
+                <img src="/images/fourtwoseven-engineering.jpg" alt="Client Logo">
+                <img src="/images/grown-and-glow.png" alt="Client Logo">
+                <img src="/images/la-luna-restaurant.png" alt="Client Logo">
+                <img src="/images/tifes-hub.png" alt="Client Logo">
+                <img src="/images/Gifts-n-boxes.png" alt="Client Logo">
+                <img src="/images/afroreach-research.png" alt="Client Logo">
+                <img src="/images/beacon-trust.jpg" alt="Client Logo">
+                <img src="/images/bravies.png" alt="Client Logo">
+                <img src="/images/chairo-properties.png" alt="Client Logo">
+                <img src="/images/demipos-hotel.png" alt="Client Logo">
+                <img src="/images/fourtwoseven-engineering.jpg" alt="Client Logo">
+                <img src="/images/grown-and-glow.png" alt="Client Logo">
+                <img src="/images/la-luna-restaurant.png" alt="Client Logo">
+                <img src="/images/tifes-hub.png" alt="Client Logo">
             </div>
         </div>
     </section>
@@ -203,6 +256,23 @@
            Get a free 30-minute Clarity Call. We will help you determine what your business needs
         </a>
     </div>
+
+    <!-- Lead Capture Form -->
+    <section class="section" style="padding-top: 0;">
+        <div class="lead-form-wrap">
+            <h3>Not Ready To Call? Leave Your Details</h3>
+            <p class="lead-form-sub">We will reach out to schedule your free consultation.</p>
+            <form id="leadForm" class="lead-form">
+                <input type="text" name="leadName" placeholder="Full Name" required>
+                <input type="tel" name="leadPhone" placeholder="Phone Number" required>
+                <input type="text" name="leadCompany" placeholder="Company Name" required>
+                <input type="email" name="leadEmail" placeholder="Email Address" required>
+                <button type="submit">Get a FREE 30MINs consultation</button>
+            </form>
+            <div id="leadFormStatus" class="lead-form-status"></div>
+        </div>
+    </section>
+    <script src="/js/lead-form.js"></script>
 
     <!-- Footer -->
     <footer>
@@ -233,7 +303,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Traction Outsourcing Limited. All Rights Reserved.</p>
+                <p>© 2026 Traction Outsourcing Limited. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy/" style="color: #888;">Privacy Policy</a></p>
             </div>
         </div>
     </footer>

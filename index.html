@@ -130,7 +130,18 @@
 
         <nav id="navMenu">
             <a href="/">Home</a>
-            <a href="/services/staff-outsourcing/">Our Services</a>
+            <div class="dropdown">
+                <a href="#">Our Services</a>
+                <div class="dropdown-content">
+                    <a href="/services/staff-outsourcing/" class="dropdown-item">Staff Outsourcing & HR Management</a>
+                    <a href="/services/startup-structuring/" class="dropdown-item">Startup Structuring</a>
+                    <a href="/services/corporate-restructuring/" class="dropdown-item">Corporate Restructuring</a>
+                    <a href="/services/business-advisory/" class="dropdown-item">Business Advisory</a>
+                    <a href="/services/executive-recruitment/" class="dropdown-item">Executive-Level Recruitment</a>
+                    <a href="/services/employee-training/" class="dropdown-item">Employee Training</a>
+                    <a href="/services/corporate-retreats/" class="dropdown-item">Events & Retreats</a>
+                </div>
+            </div>
             <a href="/events/">Events</a>
             <a href="/articles/">Articles</a>
 
@@ -181,24 +192,18 @@
                 <div class="card-overlay">See more..</div>
             </div>
             <!-- Card 4 -->
-            <div class="card" onclick="window.location.href='/services/executive-recruitment/'">
-                <h3>Executive-Level Recruitment</h3>
-                <p>Sourcing and placing senior leaders who match both the skill and the culture a business needs.</p>
-                <div class="card-overlay">See more..</div>
-            </div>
-            <!-- Card 5 -->
             <div class="card" onclick="window.location.href='/services/employee-training/'">
                 <h3>Employee Training</h3>
                 <p>Custom training programs designed to align workforce execution with overarching corporate vision.</p>
                 <div class="card-overlay">See more..</div>
             </div>
-            <!-- Card 6 -->
+            <!-- Card 5 -->
             <div class="card" onclick="window.location.href='/services/corporate-retreats/'">
                 <h3>Corporate Retreats & Events</h3>
                 <p>High-end international networking frameworks designed to combine business strategy sessions with premier travel experiences.</p>
                 <div class="card-overlay">See more..</div>
             </div>
-            <!-- Card 7 -->
+            <!-- Card 6 -->
             <div class="card" onclick="window.location.href='/services/staff-outsourcing/'">
                 <h3>Staff Outsourcing & HR Management</h3>
                 <p>End-to-end management of your workforce, from payroll and compliance to HR administration, so your team can focus on the business, not the paperwork.</p>
@@ -314,7 +319,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Traction Outsourcing Limited. All Rights Reserved.</p>
+                <p>© 2026 Traction Outsourcing Limited. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy/" style="color: #888;">Privacy Policy</a></p>
             </div>
         </div>
     </footer>

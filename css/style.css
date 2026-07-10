@@ -184,4 +184,16 @@ footer {
     .footer-row { gap: 40px; }
 }
 
+/* ---------- Lead Capture Form (used on /services/*/ pages) ---------- */
+.lead-form-wrap { max-width: 550px; margin: 0 auto; background: var(--light-bg); border-radius: 10px; padding: 35px; border-top: 4px solid var(--accent-color); }
+.lead-form-wrap h3 { color: var(--primary-color); margin: 0 0 6px; font-size: 20px; text-align: center; }
+.lead-form-wrap .lead-form-sub { text-align: center; color: #777; font-size: 14px; margin: 0 0 22px; }
+.lead-form { display: grid; gap: 14px; }
+.lead-form input { width: 100%; padding: 12px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 15px; font-family: inherit; box-sizing: border-box; }
+.lead-form input:focus { outline: none; border-color: var(--accent-color); }
+.lead-form button { background-color: var(--accent-color); color: #000; border: none; padding: 14px; font-weight: 800; font-size: 15px; border-radius: 6px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; transition: opacity 0.2s; }
+.lead-form button:hover { opacity: 0.9; }
+.lead-form button:disabled { opacity: 0.6; cursor: not-allowed; }
+.lead-form-status { text-align: center; font-size: 14px; margin-top: 12px; min-height: 18px; }
+
 /* ---------- Shared header/nav/footer JS hook classes end ---------- */

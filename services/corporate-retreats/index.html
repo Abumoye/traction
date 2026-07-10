@@ -21,14 +21,14 @@
   },
   "areaServed": "Africa",
   "url": "https://tolnigeria.com/services/corporate-retreats/",
-  "description": "High-end international corporate retreats and strategic execution events combining business strategy sessions with premier travel experiences."
+  "description": "Corporate retreats and leadership events hosted by Traction Outsourcing Limited, including the Traction Outsourcing International Corporate Retreat."
 }
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporate Retreats & Events | Traction Outsourcing Limited</title>
-    <meta name="description" content="Traction Outsourcing designs high-end international corporate retreats combining business strategy sessions with premier travel experiences for business leaders across Africa.">
-    <meta name="keywords" content="corporate retreat nigeria, corporate retreat kigali, business leadership retreat africa, international corporate retreat, executive retreat abuja">
+    <title>Events & Corporate Retreats | Traction Outsourcing Limited</title>
+    <meta name="description" content="Upcoming leadership events, corporate retreats, and business gatherings hosted by Traction Outsourcing Limited across Nigeria and Africa.">
+    <meta name="keywords" content="corporate events nigeria, business events abuja, corporate retreat kigali, leadership events africa, executive events nigeria">
     <link rel="canonical" href="https://tolnigeria.com/services/corporate-retreats/">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -37,38 +37,55 @@
 
     <!-- Page-specific styling -->
     <style>
-        .service-hero { background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url('/images/kigali-retreat-2026.png') no-repeat center center/cover; color: var(--white-color); text-align: center; padding: 130px 20px; }
+        .service-hero { background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url('/images/africa.svg') no-repeat center center, url('/images/site-work-6.jpg') no-repeat center center/cover; color: var(--white-color); text-align: center; padding: 90px 20px 70px; }
         .service-hero .eyebrow { color: var(--accent-color); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 13px; margin-bottom: 12px; }
-        .service-hero h1 { font-size: 44px; margin-bottom: 15px; font-weight: 700; }
-        .service-hero p { font-size: 19px; max-width: 750px; margin: 0 auto; color: #eee; }
+        .service-hero h1 { font-size: 42px; margin-bottom: 15px; font-weight: 700; }
+        .service-hero p { font-size: 18px; max-width: 700px; margin: 0 auto; color: #ddd; }
 
-        .section-title { text-align: center; color: var(--primary-color); font-size: 30px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .section-sub { text-align: center; color: #777; max-width: 650px; margin: 0 auto 50px; font-size: 16px; }
+        /* Eventbrite-style category strip */
+        .category-strip { background: var(--white-color); border-bottom: 1px solid #eee; padding: 18px 10%; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+        .category-pill { background: var(--light-bg); color: var(--primary-color); font-size: 13px; font-weight: 600; padding: 8px 18px; border-radius: 20px; border: 1px solid #eee; }
+        .category-pill.active { background: var(--primary-color); color: var(--accent-color); border-color: var(--primary-color); }
 
-        /* Destination banner */
-        .destination-banner { background: var(--primary-color); color: white; text-align: center; padding: 25px 20px; }
-        .destination-banner strong { color: var(--accent-color); }
+        .section-title { text-align: center; color: var(--primary-color); font-size: 28px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .section-sub { text-align: center; color: #777; max-width: 650px; margin: 0 auto 40px; font-size: 15.5px; }
 
-        /* Itinerary-style pricing */
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 800px; margin: 0 auto; }
-        .price-card { border: 2px solid var(--light-bg); border-radius: 10px; overflow: hidden; }
-        .price-card.featured { border-color: var(--accent-color); }
-        .price-card-top { background: var(--light-bg); padding: 25px; text-align: center; }
-        .price-card.featured .price-card-top { background: var(--accent-color); }
-        .price-card-top h4 { margin: 0; color: var(--primary-color); font-size: 20px; text-transform: uppercase; letter-spacing: 1px; }
-        .price-card.featured .price-card-top h4 { color: #000; }
-        .price-card-body { padding: 25px; }
-        .price-card-body p { color: #555; font-size: 14.5px; margin: 0; }
+        /* Event grid, Eventbrite-style cards */
+        .event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; max-width: 1100px; margin: 0 auto; }
+        .event-card { background: var(--white-color); border: 1px solid #eee; border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; text-decoration: none; display: block; color: inherit; }
+        .event-card:hover { box-shadow: 0 12px 25px rgba(0,0,0,0.08); transform: translateY(-4px); }
+        .event-card-img { height: 170px; background-size: cover; background-position: center; position: relative; }
+        .event-card-img .flag { position: absolute; top: 12px; left: 12px; background: var(--accent-color); color: #000; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; }
+        .event-card-body { padding: 20px; }
+        .event-card-date { color: var(--accent-color); font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+        .event-card-body h3 { margin: 0 0 8px; color: var(--primary-color); font-size: 18px; }
+        .event-card-body p { margin: 0; color: #666; font-size: 14px; }
+        .event-card-loc { display: flex; align-items: center; gap: 6px; margin-top: 12px; font-size: 13px; color: #888; }
+        .event-card-loc i { color: var(--accent-color); }
 
-        /* Speaker strip */
-        .speaker-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 900px; margin: 0 auto; }
-        .speaker-pill { background: var(--light-bg); border: 1px solid #eee; border-radius: 30px; padding: 12px 24px; font-size: 14px; color: var(--primary-color); font-weight: 600; }
-        .speaker-pill i { color: var(--accent-color); margin-right: 8px; }
+        .event-card.placeholder { opacity: 0.6; cursor: default; }
+        .event-card.placeholder:hover { box-shadow: none; transform: none; }
+        .event-card.placeholder .event-card-img { background-color: var(--light-bg); display: flex; align-items: center; justify-content: center; }
+        .event-card.placeholder .event-card-img i { font-size: 34px; color: #ccc; }
 
         @media (max-width: 900px) {
-            .service-hero { padding: 90px 20px; }
-            .service-hero h1 { font-size: 30px; }
-            .service-hero p { font-size: 16px; }
+            .service-hero { padding: 70px 20px 50px; }
+            .service-hero h1 { font-size: 28px; }
+            .service-hero p { font-size: 15px; }
+        }
+
+        /* Join Our Clients — enlarged logo carousel */
+        .jc-section { background: var(--light-bg); }
+        .jc-carousel { overflow: hidden; white-space: nowrap; padding: 40px 0; position: relative; }
+        .jc-carousel::before, .jc-carousel::after { position: absolute; top: 0; width: 140px; height: 100%; content: ""; z-index: 2; }
+        .jc-carousel::before { left: 0; background: linear-gradient(to right, var(--light-bg) 0%, rgba(249,249,249,0) 100%); }
+        .jc-carousel::after { right: 0; background: linear-gradient(to left, var(--light-bg) 0%, rgba(249,249,249,0) 100%); }
+        .jc-track { display: inline-block; animation: jcScroll 32s linear infinite; }
+        .jc-track img { height: 85px; margin: 0 55px; opacity: 0.75; transition: opacity 0.3s ease; vertical-align: middle; }
+        .jc-track img:hover { opacity: 1; }
+        @keyframes jcScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @media (max-width: 900px) {
+            .jc-track img { height: 55px; margin: 0 30px; }
         }
     </style>
 </head>
@@ -88,7 +105,18 @@
 
         <nav id="navMenu">
             <a href="/">Home</a>
-            <a href="/services/staff-outsourcing/">Our Services</a>
+            <div class="dropdown">
+                <a href="#">Our Services</a>
+                <div class="dropdown-content">
+                    <a href="/services/staff-outsourcing/" class="dropdown-item">Staff Outsourcing & HR Management</a>
+                    <a href="/services/startup-structuring/" class="dropdown-item">Startup Structuring</a>
+                    <a href="/services/corporate-restructuring/" class="dropdown-item">Corporate Restructuring</a>
+                    <a href="/services/business-advisory/" class="dropdown-item">Business Advisory</a>
+                    <a href="/services/executive-recruitment/" class="dropdown-item">Executive-Level Recruitment</a>
+                    <a href="/services/employee-training/" class="dropdown-item">Employee Training</a>
+                    <a href="/services/corporate-retreats/" class="dropdown-item">Events & Retreats</a>
+                </div>
+            </div>
             <a href="/events/">Events</a>
             <a href="/articles/">Articles</a>
 
@@ -113,63 +141,117 @@
     <!-- Hero -->
     <section class="service-hero">
         <div class="eyebrow">Areas Of Impact</div>
-        <h1>Corporate Retreats & Events</h1>
-        <p>Strategy sessions do not need a boardroom to work. We design international retreats that put business leaders in a room together, then take them somewhere worth remembering.</p>
+        <h1>Events & Corporate Retreats</h1>
+        <p>Strategy sessions do not need a boardroom to work. We design gatherings that put business leaders in a room together, then take them somewhere worth remembering.</p>
     </section>
 
-    <div class="destination-banner">
-        Currently open: <strong>T-ICR 2026, Kigali, Rwanda</strong> — November 21 to 28, 2026
+    <div class="category-strip">
+        <span class="category-pill active">All Events</span>
+        <span class="category-pill">International Retreats</span>
+        <span class="category-pill">Leadership Summits</span>
+        <span class="category-pill">Workshops</span>
+        <span class="category-pill">Networking</span>
     </div>
 
-    <section class="section" style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <p style="font-size: 17px; color: #444; line-height: 1.8;">The Traction International Corporate Retreat is not a holiday with a panel discussion attached. It is a strategy environment first, built around Kigali because Rwanda's model of institutional discipline is itself a lesson worth sitting inside for a week. Business leaders come for the sessions and leave with a network they did not have before.</p>
-    </section>
-
-    <!-- Speakers -->
+    <!-- Event Listing -->
     <section class="section">
-        <h2 class="section-title">Who Is In The Room</h2>
-        <p class="section-sub">Five named speakers leading the strategy sessions at T-ICR 2026.</p>
-        <div class="speaker-strip">
-            <div class="speaker-pill"><i class="fas fa-user-tie"></i>Prince Elijah Abumoye</div>
-            <div class="speaker-pill"><i class="fas fa-user-tie"></i>Stephen Akintayo</div>
-            <div class="speaker-pill"><i class="fas fa-user-tie"></i>Eizu Uwaoma</div>
-            <div class="speaker-pill"><i class="fas fa-user-tie"></i>Adeyinka Igbinoba</div>
-            <div class="speaker-pill"><i class="fas fa-user-tie"></i>Adelewa Williams</div>
+        <h2 class="section-title">Upcoming Events</h2>
+        <p class="section-sub">Here is what is on the calendar right now. New events are added as they are confirmed.</p>
+
+        <div class="event-grid">
+            <!-- Featured real event -->
+            <a href="/events/" class="event-card">
+                <div class="event-card-img" style="background-image: url('/images/kigali-retreat-2026.png');">
+                    <span class="flag">Next Event · 2026</span>
+                </div>
+                <div class="event-card-body">
+                    <div class="event-card-date">November 21 – 28, 2026</div>
+                    <h3>T-ICR 2026: Traction Outsourcing International Corporate Retreat</h3>
+                    <p>A week-long strategy retreat for CEOs, senior executives, and entrepreneurs, built around Kigali, Rwanda. Five speakers, two attendance tiers, and a week fully out of the office.</p>
+                    <div class="event-card-loc"><i class="fas fa-location-dot"></i> Kigali, Rwanda</div>
+                </div>
+            </a>
+
+            <!-- Placeholder cards -->
+            <div class="event-card placeholder">
+                <div class="event-card-img"><i class="fas fa-calendar-plus"></i></div>
+                <div class="event-card-body">
+                    <div class="event-card-date">Coming Soon</div>
+                    <h3>Leadership Roundtable</h3>
+                    <p>A recurring gathering for senior HR and operations leaders. Details to be announced.</p>
+                </div>
+            </div>
+            <div class="event-card placeholder">
+                <div class="event-card-img"><i class="fas fa-calendar-plus"></i></div>
+                <div class="event-card-body">
+                    <div class="event-card-date">Coming Soon</div>
+                    <h3>Business Advisory Workshop</h3>
+                    <p>A working session on structuring, negotiation, and growth decisions. Details to be announced.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="section" style="background: var(--light-bg);">
-        <h2 class="section-title">Two Ways To Join</h2>
-        <div class="pricing-grid">
-            <div class="price-card">
-                <div class="price-card-top">
-                    <h4>Executive Tier</h4>
-                </div>
-                <div class="price-card-body">
-                    <p>Full access to every strategy session, group accommodation, and the complete retreat itinerary from arrival to departure.</p>
-                </div>
-            </div>
-            <div class="price-card featured">
-                <div class="price-card-top">
-                    <h4>Premium Tier</h4>
-                </div>
-                <div class="price-card-body">
-                    <p>Everything in the Executive Tier, plus upgraded accommodation and priority access to one-on-one time with the speaker line-up.</p>
-                </div>
+    <!-- Why we host events -->
+    <section class="section" style="max-width: 800px; margin: 0 auto; text-align: center; padding-top: 0;">
+        <p style="font-size: 16px; color: #444; line-height: 1.8;">Our events exist for one reason: business leaders make better decisions when they step out of the office and sit with people solving the same problems. Some of what we host is intimate, some is international, but all of it is built as a strategy environment first, not a networking add-on.</p>
+    </section>
+
+    <!-- Join Our Clients -->
+    <section class="section jc-section">
+        <h2 class="section-title">Join Our Clients</h2>
+        <p class="section-sub">Businesses across Nigeria trust Traction Outsourcing Limited to get this right.</p>
+        <div class="jc-carousel">
+            <div class="jc-track">
+                <img src="/images/Gifts-n-boxes.png" alt="Client Logo">
+                <img src="/images/afroreach-research.png" alt="Client Logo">
+                <img src="/images/beacon-trust.jpg" alt="Client Logo">
+                <img src="/images/bravies.png" alt="Client Logo">
+                <img src="/images/chairo-properties.png" alt="Client Logo">
+                <img src="/images/demipos-hotel.png" alt="Client Logo">
+                <img src="/images/fourtwoseven-engineering.jpg" alt="Client Logo">
+                <img src="/images/grown-and-glow.png" alt="Client Logo">
+                <img src="/images/la-luna-restaurant.png" alt="Client Logo">
+                <img src="/images/tifes-hub.png" alt="Client Logo">
+                <img src="/images/Gifts-n-boxes.png" alt="Client Logo">
+                <img src="/images/afroreach-research.png" alt="Client Logo">
+                <img src="/images/beacon-trust.jpg" alt="Client Logo">
+                <img src="/images/bravies.png" alt="Client Logo">
+                <img src="/images/chairo-properties.png" alt="Client Logo">
+                <img src="/images/demipos-hotel.png" alt="Client Logo">
+                <img src="/images/fourtwoseven-engineering.jpg" alt="Client Logo">
+                <img src="/images/grown-and-glow.png" alt="Client Logo">
+                <img src="/images/la-luna-restaurant.png" alt="Client Logo">
+                <img src="/images/tifes-hub.png" alt="Client Logo">
             </div>
         </div>
-        <p style="text-align: center; margin-top: 25px; font-size: 14px; color: #777;">Full pricing and registration details are shared directly on request.</p>
     </section>
 
     <div style="text-align: center; padding: 50px 20px 60px;">
-        <a href="https://wa.me/2348052033145?text=Hi,%20kindly%20send%20me%20full%20details%20for%20T-ICR%202026%20in%20Kigali,%20Rwanda."
+        <a href="https://wa.me/2348052033145?text=Hi,%20kindly%20send%20me%20details%20on%20upcoming%20Traction%20Outsourcing%20events."
            target="_blank"
            rel="noopener"
            style="display: inline-block; background-color: #e35f26; color: white; padding: 15px 30px; font-weight: bold; font-size: 18px; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-           Get full details on T-ICR 2026, Kigali
+           Get notified about upcoming events
         </a>
     </div>
+
+    <!-- Lead Capture Form -->
+    <section class="section" style="padding-top: 0;">
+        <div class="lead-form-wrap">
+            <h3>Not Ready To Call? Leave Your Details</h3>
+            <p class="lead-form-sub">We will reach out to schedule your free consultation.</p>
+            <form id="leadForm" class="lead-form">
+                <input type="text" name="leadName" placeholder="Full Name" required>
+                <input type="tel" name="leadPhone" placeholder="Phone Number" required>
+                <input type="text" name="leadCompany" placeholder="Company Name" required>
+                <input type="email" name="leadEmail" placeholder="Email Address" required>
+                <button type="submit">Get a FREE 30MINs consultation</button>
+            </form>
+            <div id="leadFormStatus" class="lead-form-status"></div>
+        </div>
+    </section>
+    <script src="/js/lead-form.js"></script>
 
     <!-- Footer -->
     <footer>
@@ -200,7 +282,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Traction Outsourcing Limited. All Rights Reserved.</p>
+                <p>© 2026 Traction Outsourcing Limited. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy/" style="color: #888;">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
