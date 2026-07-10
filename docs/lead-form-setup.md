@@ -1,5 +1,13 @@
 # Lead Form — Google Sheet Setup Guide
 
+> **Update:** Email notifications are now enabled by default and go to
+> **tractionoutsourcing@gmail.com**. If you already deployed the script
+> before this change, open your Apps Script project, replace the
+> `doPost` function with the version below, then create a **new
+> deployment version** (Deploy → Manage deployments → Edit → New
+> version) so the change actually goes live. Editing the code alone
+> does not update an existing deployment.
+
 This connects the small lead form on every `/services/*/` page (Name, Phone
 Number, Company Name, Email) to a Google Sheet, using a free Google Apps
 Script Web App. No paid tools required.
@@ -49,14 +57,14 @@ function doPost(e) {
     data.email || ''
   ]);
 
-  // Optional: uncomment to get an email notification for every new lead
-  // MailApp.sendEmail({
-  //   to: "partner@tolnigeria.com",
-  //   subject: "New Website Lead: " + (data.name || "Unknown"),
-  //   body: "Page: " + data.sourcePage + "\\nName: " + data.name +
-  //         "\\nPhone: " + data.phone + "\\nCompany: " + data.companyName +
-  //         "\\nEmail: " + data.email
-  // });
+  // Email notification for every new lead
+  MailApp.sendEmail({
+    to: "tractionoutsourcing@gmail.com",
+    subject: "New Website Lead: " + (data.name || "Unknown"),
+    body: "Page: " + data.sourcePage + "\\nName: " + data.name +
+          "\\nPhone: " + data.phone + "\\nCompany: " + data.companyName +
+          "\\nEmail: " + data.email
+  });
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success' })
