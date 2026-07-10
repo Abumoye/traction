@@ -8,7 +8,7 @@
    for the full deployment guide and the Apps Script code to paste.
    ========================================================= */
 
-const LEAD_FORM_SCRIPT_URL = "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL";
+const LEAD_FORM_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeu2T0WE1M-4d2erYY9IUazEKTsWPmuG9cnIYK61PQkdfY8OqvvOTubLFcFJRfdL5iVw/exec";
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('leadForm');
