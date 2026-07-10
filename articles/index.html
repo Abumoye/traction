@@ -14,19 +14,49 @@
 
     <!-- Page-specific styling -->
     <style>
-        .section-title { color: var(--primary-color); font-size: 32px; margin-bottom: 10px; }
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .blog-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee; transition: transform 0.2s ease; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
-        .blog-card:hover { transform: translateY(-5px); }
-        .blog-image-placeholder { height: 200px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #666; font-style: italic; overflow: hidden; }
-        .blog-image-placeholder img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .blog-content { padding: 20px; flex-grow: 1; }
-        .blog-content h3 { margin: 0 0 10px 0; color: var(--primary-color); font-size: 20px; }
-        .blog-content p { color: #666; font-size: 14px; margin-bottom: 15px; }
-        .blog-meta { font-size: 12px; color: var(--accent-color); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .articles-hero { max-width: 780px; margin: 0 auto 10px; text-align: center; }
+        .articles-hero h1 { font-family: Georgia, 'Times New Roman', serif; color: var(--primary-color); font-size: 36px; margin: 0 0 12px; }
+        .articles-hero p { color: #666; font-size: 17px; margin: 0 0 24px; }
+        .articles-byline { display: inline-flex; align-items: center; gap: 12px; background: var(--light-bg); padding: 10px 20px 10px 10px; border-radius: 40px; }
+        .articles-byline img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+        .articles-byline .byline-text { text-align: left; }
+        .articles-byline .byline-name { display: block; font-weight: 700; color: var(--primary-color); font-size: 14px; }
+        .articles-byline .byline-role { display: block; color: #777; font-size: 12.5px; }
+
+        /* Featured article */
+        .featured-article { display: block; text-decoration: none; color: inherit; max-width: 950px; margin: 45px auto 10px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 35px 0; }
+        .featured-article-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+        .featured-tag { color: var(--accent-color); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; display: block; }
+        .featured-article h2 { font-family: Georgia, 'Times New Roman', serif; font-size: 30px; line-height: 1.3; margin: 0 0 14px; color: var(--primary-color); }
+        .featured-article p.excerpt { color: #555; font-size: 16px; line-height: 1.7; margin: 0 0 16px; }
+        .featured-meta { color: #888; font-size: 13px; }
+        .featured-meta i { color: var(--accent-color); margin-right: 5px; }
+        .featured-img { width: 100%; height: 280px; border-radius: 10px; overflow: hidden; }
+        .featured-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        /* Article list, LinkedIn-style horizontal rows */
+        .article-list { max-width: 950px; margin: 10px auto 0; }
+        .article-row { display: grid; grid-template-columns: 190px 1fr; gap: 28px; align-items: center; padding: 26px 0; border-bottom: 1px solid #eee; text-decoration: none; color: inherit; }
+        .article-row:hover .article-row-title { color: var(--accent-color); }
+        .article-row-img { width: 190px; height: 130px; border-radius: 8px; overflow: hidden; background: var(--light-bg); }
+        .article-row-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .article-row-tag { color: var(--accent-color); font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; display: block; }
+        .article-row-title { font-family: Georgia, 'Times New Roman', serif; font-size: 20px; color: var(--primary-color); margin: 0 0 8px; line-height: 1.35; transition: color 0.2s; }
+        .article-row-excerpt { color: #666; font-size: 14.5px; line-height: 1.6; margin: 0 0 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .article-row-meta { color: #999; font-size: 12.5px; }
+        .article-row-meta i { color: var(--accent-color); margin-right: 4px; }
 
         @media (max-width: 900px) {
-            .section-title { font-size: 26px; }
+            .articles-hero h1 { font-size: 28px; }
+            .featured-article-grid { grid-template-columns: 1fr; gap: 20px; }
+            .featured-img { height: 220px; order: -1; }
+            .featured-article h2 { font-size: 24px; }
+        }
+
+        @media (max-width: 640px) {
+            .article-row { grid-template-columns: 1fr; gap: 14px; padding: 22px 0; }
+            .article-row-img { width: 100%; height: 190px; }
+            .article-row-title { font-size: 19px; }
         }
     </style>
 </head>
@@ -79,82 +109,99 @@
         </nav>
     </header>
 
-    <!-- Main Articles Grid -->
-    <section class="section">
-        <h1 class="section-title">Corporate Insights & Strategy</h1>
-        <p style="color: #666; font-size: 18px; margin: 0;">Practical management advice engineered for scaling businesses in the African terrain.</p>
-
-        <div class="blog-grid">
-
-            <!-- Article Card 1 -->
-            <a href="/articles/article-organogram.html" class="blog-card">
-                <div class="blog-image-placeholder">
-                    <img src="/images/site-work-2.jpg" alt="How to Create a Functional Organogram for Your Nigerian Business">
+    <!-- Articles Hero -->
+    <section class="section" style="padding-bottom: 0;">
+        <div class="articles-hero">
+            <h1>Corporate Insights & Strategy</h1>
+            <p>Practical management advice engineered for scaling businesses in the African terrain.</p>
+            <div class="articles-byline">
+                <img src="/images/prince-elijah-abumoye.png" alt="Prince Elijah Abumoye">
+                <div class="byline-text">
+                    <span class="byline-name">Prince Elijah Abumoye</span>
+                    <span class="byline-role">Head of Communication and Strategy, Traction Outsourcing Limited</span>
                 </div>
-                <div class="blog-content">
-                    <span class="blog-meta">Business Structure</span>
-                    <h3>How to Create a Functional Organogram for Your Nigerian Business</h3>
-                    <p>Discover the step-by-step framework to map organizational reporting lines that eliminate internal friction and boost overall workforce execution.</p>
-                </div>
-            </a>
+            </div>
+        </div>
+    </section>
 
-            <!-- Article Card 2 -->
-            <a href="/articles/article-dangers-of-proximity-to-success.html" class="blog-card">
-                <div class="blog-image-placeholder">
+    <!-- Featured Article -->
+    <section class="section" style="padding-top: 0; padding-bottom: 0;">
+        <a href="/articles/article-dangers-of-proximity-to-success.html" class="featured-article">
+            <div class="featured-article-grid">
+                <div>
+                    <span class="featured-tag">Featured · Business Advisory</span>
+                    <h2>The Dangers of Proximity to Success</h2>
+                    <p class="excerpt">Access without preparation is a trap dressed up as opportunity. A true story about what happens when proximity replaces a real financial foundation, and what it takes to close the gap for good.</p>
+                    <div class="featured-meta"><i class="fas fa-clock"></i>8 min read</div>
+                </div>
+                <div class="featured-img">
                     <img src="/images/articles/dangers-of-proximity-to-success.jpg" alt="The Dangers of Proximity to Success">
                 </div>
-                <div class="blog-content">
-                    <span class="blog-meta">Business Advisory</span>
-                    <h3>The Dangers of Proximity to Success</h3>
-                    <p>Access without preparation is a trap dressed up as opportunity. A true story about what happens when proximity replaces a real financial foundation.</p>
-                </div>
-            </a>
+            </div>
+        </a>
+    </section>
 
-            <!-- Article Card 3 -->
-            <a href="/articles/article-tall-poppy-syndrome.html" class="blog-card">
-                <div class="blog-image-placeholder">
-                    <img src="/images/articles/tall-poppy-syndrome.jpg" alt="The Cost of Growth: Understanding Tall Poppy Syndrome">
-                </div>
-                <div class="blog-content">
-                    <span class="blog-meta">Workplace Psychology</span>
-                    <h3>The Cost of Growth: Understanding the Tall Poppy Syndrome</h3>
-                    <p>Why the friends who knew you longest are often the last to become your customers, and what that reveals about growth.</p>
-                </div>
-            </a>
+    <!-- Article List -->
+    <section class="section" style="padding-top: 10px;">
+        <div class="article-list">
 
-            <!-- Article Card 4 -->
-            <a href="/articles/article-employee-handbook-nigerian-sme.html" class="blog-card">
-                <div class="blog-image-placeholder">
-                    <img src="/images/articles/employee-handbook-nigerian-sme.jpg" alt="How to Write an Employee Handbook for a Nigerian SME">
-                </div>
-                <div class="blog-content">
-                    <span class="blog-meta">HR Advisory</span>
-                    <h3>How to Write an Employee Handbook for a Nigerian SME</h3>
-                    <p>Most Nigerian SMEs run on memory instead of policy. Here is why a handbook is one of the highest-leverage documents a growing business can build.</p>
-                </div>
-            </a>
-
-            <!-- Article Card 5 -->
-            <a href="/articles/article-cost-of-bad-hire-nigeria.html" class="blog-card">
-                <div class="blog-image-placeholder">
-                    <img src="/images/articles/cost-of-bad-hire-nigeria.jpg" alt="The Real Cost of a Bad Hire in Nigeria">
-                </div>
-                <div class="blog-content">
-                    <span class="blog-meta">Recruitment & Talent</span>
-                    <h3>The Real Cost of a Bad Hire in Nigeria (And How to Avoid It)</h3>
-                    <p>A bad hire costs far more than a salary. What the data says about the true cost of hiring wrong, and how structured recruitment prevents it.</p>
-                </div>
-            </a>
-
-            <!-- Article Card 6 -->
-            <a href="/articles/article-why-nigerian-startups-fail.html" class="blog-card">
-                <div class="blog-image-placeholder">
+            <a href="/articles/article-why-nigerian-startups-fail.html" class="article-row">
+                <div class="article-row-img">
                     <img src="/images/articles/why-nigerian-startups-fail.jpg" alt="Why Nigerian Startups Fail Within Their First Five Years">
                 </div>
-                <div class="blog-content">
-                    <span class="blog-meta">Startup Structuring</span>
-                    <h3>Why Nigerian Startups Fail Within Their First Five Years</h3>
-                    <p>More than nine in ten Nigerian SMEs fail within five years. A structural diagnosis of why, and what separates the ones that survive.</p>
+                <div>
+                    <span class="article-row-tag">Startup Structuring</span>
+                    <h3 class="article-row-title">Why Nigerian Startups Fail Within Their First Five Years</h3>
+                    <p class="article-row-excerpt">More than nine in ten Nigerian SMEs fail within five years. A structural diagnosis of why, and what separates the ones that survive.</p>
+                    <div class="article-row-meta"><i class="fas fa-clock"></i>5 min read</div>
+                </div>
+            </a>
+
+            <a href="/articles/article-tall-poppy-syndrome.html" class="article-row">
+                <div class="article-row-img">
+                    <img src="/images/articles/tall-poppy-syndrome.jpg" alt="The Cost of Growth: Understanding Tall Poppy Syndrome">
+                </div>
+                <div>
+                    <span class="article-row-tag">Workplace Psychology</span>
+                    <h3 class="article-row-title">The Cost of Growth: Understanding the Tall Poppy Syndrome</h3>
+                    <p class="article-row-excerpt">Why the friends who knew you longest are often the last to become your customers, and what that reveals about growth.</p>
+                    <div class="article-row-meta"><i class="fas fa-clock"></i>9 min read</div>
+                </div>
+            </a>
+
+            <a href="/articles/article-cost-of-bad-hire-nigeria.html" class="article-row">
+                <div class="article-row-img">
+                    <img src="/images/articles/cost-of-bad-hire-nigeria.jpg" alt="The Real Cost of a Bad Hire in Nigeria">
+                </div>
+                <div>
+                    <span class="article-row-tag">Recruitment & Talent</span>
+                    <h3 class="article-row-title">The Real Cost of a Bad Hire in Nigeria (And How to Avoid It)</h3>
+                    <p class="article-row-excerpt">A bad hire costs far more than a salary. What the data says about the true cost of hiring wrong, and how structured recruitment prevents it.</p>
+                    <div class="article-row-meta"><i class="fas fa-clock"></i>5 min read</div>
+                </div>
+            </a>
+
+            <a href="/articles/article-employee-handbook-nigerian-sme.html" class="article-row">
+                <div class="article-row-img">
+                    <img src="/images/articles/employee-handbook-nigerian-sme.jpg" alt="How to Write an Employee Handbook for a Nigerian SME">
+                </div>
+                <div>
+                    <span class="article-row-tag">HR Advisory</span>
+                    <h3 class="article-row-title">How to Write an Employee Handbook for a Nigerian SME</h3>
+                    <p class="article-row-excerpt">Most Nigerian SMEs run on memory instead of policy. Here is why a handbook is one of the highest-leverage documents a growing business can build.</p>
+                    <div class="article-row-meta"><i class="fas fa-clock"></i>6 min read</div>
+                </div>
+            </a>
+
+            <a href="/articles/article-organogram.html" class="article-row">
+                <div class="article-row-img">
+                    <img src="/images/site-work-2.jpg" alt="How to Create a Functional Organogram for Your Nigerian Business">
+                </div>
+                <div>
+                    <span class="article-row-tag">Business Structure</span>
+                    <h3 class="article-row-title">How to Create a Functional Organogram for Your Nigerian Business</h3>
+                    <p class="article-row-excerpt">Discover the step-by-step framework to map organizational reporting lines that eliminate internal friction and boost overall workforce execution.</p>
+                    <div class="article-row-meta"><i class="fas fa-clock"></i>2 min read</div>
                 </div>
             </a>
 
