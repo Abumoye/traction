@@ -1,6 +1,6 @@
 /* =========================================================
    Traction Outsourcing Limited — Lead Form Handler
-   Used on every /services/*/ page.
+   Used on every service page under /services/.
    Submits to a Google Apps Script Web App tied to a Google Sheet.
 
    SETUP REQUIRED: Replace SCRIPT_URL below with your deployed
