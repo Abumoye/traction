@@ -59,7 +59,8 @@
     }
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- Page-specific styling -->
@@ -84,7 +85,7 @@
         .card { background: var(--light-bg); padding: 25px; border-radius: 8px; border-top: 4px solid var(--primary-color); position: relative; cursor: pointer; overflow: hidden; transition: all 0.3s ease; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         .card h3 { color: var(--dark-color); margin-top: 0; }
-        .card:hover h3 { color: var(--primary-color); }
+        .card:hover h3 { color: #c04d1a; }
         .card-overlay { position: absolute; bottom: -100%; left: 0; width: 100%; background: linear-gradient(transparent, rgba(0, 0, 0, 0.9) 40%); color: var(--primary-color); text-align: center; padding: 40px 0 15px 0; font-weight: bold; font-size: 14px; transition: bottom 0.3s ease; }
         .card:hover .card-overlay { bottom: 0; }
 
@@ -97,8 +98,8 @@
         .reviewer-avatar { width: 40px; height: 40px; background-color: var(--primary-color); color: var(--white-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 12px; }
         .reviewer-name { font-weight: bold; color: var(--dark-color); }
         .review-text { font-size: 14px; color: #555; font-style: italic; }
-        .google-maps-btn { display: block; width: fit-content; margin: 0 auto; background-color: var(--white-color); color: var(--primary-color); border: 1px solid var(--primary-color); padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold; transition: all 0.2s; }
-        .google-maps-btn:hover { background-color: var(--primary-color); color: var(--white-color); }
+        .google-maps-btn { display: block; width: fit-content; margin: 0 auto; background-color: var(--white-color); color: #c04d1a; border: 1px solid #c04d1a; padding: 10px 24px; border-radius: 4px; text-decoration: none; font-weight: bold; transition: all 0.2s; }
+        .google-maps-btn:hover { background-color: var(--primary-color); color: #000; border-color: var(--primary-color); }
 
         .carousel-container { overflow: hidden; white-space: nowrap; padding: 30px 0; background: var(--white-color); position: relative; }
         .carousel-container::before, .carousel-container::after { position: absolute; top: 0; width: 100px; height: 100%; content: ""; z-index: 2; }
@@ -121,7 +122,7 @@
     <!-- Header / Navigation -->
     <header>
         <a href="/" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="/images/traction-outsourcing-logo.png" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
+            <img src="/images/traction-outsourcing-logo.png" width="1129" height="200" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
         </a>
 
         <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu Navigation">
@@ -151,11 +152,11 @@
                 <a href="#">Our Brands</a>
                 <div class="dropdown-content">
                     <a href="/brands/properties/" class="dropdown-item">
-                        <img src="/images/traction-properties-and-managers.png" alt="Traction Properties Logo">
+                        <img src="/images/traction-properties-and-managers.png" width="743" height="250" alt="Traction Properties Logo">
                         Traction Properties
                     </a>
                     <a href="/brands/recruiters/" class="dropdown-item">
-                        <img src="/images/ath-recruiters.png" alt="ATH Recruiters Logo">
+                        <img src="/images/ath-recruiters.png" width="800" height="450" alt="ATH Recruiters Logo">
                         ATH Recruiters
                     </a>
                 </div>
@@ -164,6 +165,8 @@
             <a href="/founder/">Our Founder</a>
         </nav>
     </header>
+
+    <main>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -266,42 +269,44 @@
         <div class="carousel-container">
             <div class="carousel-track">
                 <!-- First Sequence of Logos -->
-                <img src="/images/Gifts-n-boxes.png" alt="Gifts n Boxes Logo">
-                <img src="/images/afroreach-research.png" alt="Afroreach Research Logo">
-                <img src="/images/beacon-trust.jpg" alt="Beacon Trust Logo">
-                <img src="/images/bravies.png" alt="Bravies Logo">
-                <img src="/images/chairo-properties.png" alt="Chairo Properties Logo">
-                <img src="/images/demipos-hotel.png" alt="Demipos Hotel Logo">
-                <img src="/images/fourtwoseven-engineering.jpg" alt="Fourtwoseven Engineering Logo">
-                <img src="/images/grown-and-glow.png" alt="Grown and Glow Logo">
-                <img src="/images/la-luna-restaurant.png" alt="La Luna Restaurant Logo">
-                <img src="/images/tifes-hub.png" alt="Tifes Hub Logo">
+                <img src="/images/Gifts-n-boxes.png" width="162" height="120" alt="Gifts n Boxes Logo">
+                <img src="/images/afroreach-research.png" width="200" height="200" alt="Afroreach Research Logo">
+                <img src="/images/beacon-trust.jpg" width="200" height="200" alt="Beacon Trust Logo">
+                <img src="/images/bravies.png" width="585" height="200" alt="Bravies Logo">
+                <img src="/images/chairo-properties.png" width="415" height="200" alt="Chairo Properties Logo">
+                <img src="/images/demipos-hotel.png" width="200" height="200" alt="Demipos Hotel Logo">
+                <img src="/images/fourtwoseven-engineering.jpg" width="200" height="200" alt="Fourtwoseven Engineering Logo">
+                <img src="/images/grown-and-glow.png" width="163" height="200" alt="Grown and Glow Logo">
+                <img src="/images/la-luna-restaurant.png" width="207" height="110" alt="La Luna Restaurant Logo">
+                <img src="/images/tifes-hub.png" width="159" height="200" alt="Tifes Hub Logo">
 
                 <!-- Duplicated Sequence for Infinite Seamless Looping -->
-                <img src="/images/Gifts-n-boxes.png" alt="Gifts n Boxes Logo">
-                <img src="/images/afroreach-research.png" alt="Afroreach Research Logo">
-                <img src="/images/beacon-trust.jpg" alt="Beacon Trust Logo">
-                <img src="/images/bravies.png" alt="Bravies Logo">
-                <img src="/images/chairo-properties.png" alt="Chairo Properties Logo">
-                <img src="/images/demipos-hotel.png" alt="Demipos Hotel Logo">
-                <img src="/images/fourtwoseven-engineering.jpg" alt="Fourtwoseven Engineering Logo">
-                <img src="/images/grown-and-glow.png" alt="Grown and Glow Logo">
-                <img src="/images/la-luna-restaurant.png" alt="La Luna Restaurant Logo">
-                <img src="/images/tifes-hub.png" alt="Tifes Hub Logo">
+                <img src="/images/Gifts-n-boxes.png" width="162" height="120" alt="Gifts n Boxes Logo">
+                <img src="/images/afroreach-research.png" width="200" height="200" alt="Afroreach Research Logo">
+                <img src="/images/beacon-trust.jpg" width="200" height="200" alt="Beacon Trust Logo">
+                <img src="/images/bravies.png" width="585" height="200" alt="Bravies Logo">
+                <img src="/images/chairo-properties.png" width="415" height="200" alt="Chairo Properties Logo">
+                <img src="/images/demipos-hotel.png" width="200" height="200" alt="Demipos Hotel Logo">
+                <img src="/images/fourtwoseven-engineering.jpg" width="200" height="200" alt="Fourtwoseven Engineering Logo">
+                <img src="/images/grown-and-glow.png" width="163" height="200" alt="Grown and Glow Logo">
+                <img src="/images/la-luna-restaurant.png" width="207" height="110" alt="La Luna Restaurant Logo">
+                <img src="/images/tifes-hub.png" width="159" height="200" alt="Tifes Hub Logo">
             </div>
         </div>
     </section>
 
     <!-- Complete Corporate Footer Section -->
+    </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-row">
                 <div class="footer-col">
-                    <h4>Head Office</h4>
+                    <h3>Head Office</h3>
                     <a href="https://maps.google.com/?q=Traction+Outsourcing+Limited+26+Algiers+Street+Wuse+Zone+5+Abuja" target="_blank">26, Algiers Street,<br>Wuse Zone 5, FCT,<br>Nigeria.</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact Details</h4>
+                    <h3>Contact Details</h3>
                     <a href="tel:+2348052033145">0805 203 3145</a>
                     <a href="tel:+2348125078087">0812 507 8087</a>
                     <a href="tel:+2347078707777">0707 870 7777</a>
@@ -309,11 +314,11 @@
             </div>
             <div class="footer-row">
                 <div class="footer-col">
-                    <h4>Email</h4>
+                    <h3>Email</h3>
                     <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Follow Us</h4>
+                    <h3>Follow Us</h3>
                     <div class="footer-social">
                         <a href="https://instagram.com/tractionoutsourcing" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://tiktok.com/@tractionoutsourcing" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>

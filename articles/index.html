@@ -9,7 +9,8 @@
     <link rel="canonical" href="https://tolnigeria.com/articles/">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- Page-specific styling -->
@@ -65,7 +66,7 @@
     <!-- Header / Navigation -->
     <header>
         <a href="/" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="/images/traction-outsourcing-logo.png" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
+            <img src="/images/traction-outsourcing-logo.png" width="1129" height="200" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
         </a>
 
         <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu Navigation">
@@ -95,11 +96,11 @@
                 <a href="#">Our Brands</a>
                 <div class="dropdown-content">
                     <a href="/brands/properties/" class="dropdown-item">
-                        <img src="/images/traction-properties-and-managers.png" alt="Traction Properties Logo">
+                        <img src="/images/traction-properties-and-managers.png" width="743" height="250" alt="Traction Properties Logo">
                         Traction Properties
                     </a>
                     <a href="/brands/recruiters/" class="dropdown-item">
-                        <img src="/images/ath-recruiters.png" alt="ATH Recruiters Logo">
+                        <img src="/images/ath-recruiters.png" width="800" height="450" alt="ATH Recruiters Logo">
                         ATH Recruiters
                     </a>
                 </div>
@@ -109,13 +110,15 @@
         </nav>
     </header>
 
+    <main>
+
     <!-- Articles Hero -->
     <section class="section" style="padding-bottom: 0;">
         <div class="articles-hero">
             <h1>Corporate Insights & Strategy</h1>
             <p>Practical management advice engineered for scaling businesses in the African terrain.</p>
             <div class="articles-byline">
-                <img src="/images/prince-elijah-abumoye.png" alt="Prince Elijah Abumoye">
+                <img src="/images/prince-elijah-abumoye.jpg" width="700" height="700" alt="Prince Elijah Abumoye">
                 <div class="byline-text">
                     <span class="byline-name">Prince Elijah Abumoye</span>
                     <span class="byline-role">Head of Communication and Strategy, Traction Outsourcing Limited</span>
@@ -135,7 +138,7 @@
                     <div class="featured-meta"><i class="fas fa-clock"></i>8 min read</div>
                 </div>
                 <div class="featured-img">
-                    <img src="/images/articles/dangers-of-proximity-to-success.jpg" alt="The Dangers of Proximity to Success">
+                    <img src="/images/articles/dangers-of-proximity-to-success.jpg" width="1000" height="562" alt="The Dangers of Proximity to Success">
                 </div>
             </div>
         </a>
@@ -147,7 +150,7 @@
 
             <a href="/articles/article-why-nigerian-startups-fail.html" class="article-row">
                 <div class="article-row-img">
-                    <img src="/images/articles/why-nigerian-startups-fail.jpg" alt="Why Nigerian Startups Fail Within Their First Five Years">
+                    <img src="/images/articles/why-nigerian-startups-fail.jpg" width="400" height="267" alt="Why Nigerian Startups Fail Within Their First Five Years">
                 </div>
                 <div>
                     <span class="article-row-tag">Startup Structuring</span>
@@ -159,7 +162,7 @@
 
             <a href="/articles/article-tall-poppy-syndrome.html" class="article-row">
                 <div class="article-row-img">
-                    <img src="/images/articles/tall-poppy-syndrome.jpg" alt="The Cost of Growth: Understanding Tall Poppy Syndrome">
+                    <img src="/images/articles/tall-poppy-syndrome.jpg" width="1000" height="562" alt="The Cost of Growth: Understanding Tall Poppy Syndrome">
                 </div>
                 <div>
                     <span class="article-row-tag">Workplace Psychology</span>
@@ -171,7 +174,7 @@
 
             <a href="/articles/article-cost-of-bad-hire-nigeria.html" class="article-row">
                 <div class="article-row-img">
-                    <img src="/images/articles/cost-of-bad-hire-nigeria.jpg" alt="The Real Cost of a Bad Hire in Nigeria">
+                    <img src="/images/articles/cost-of-bad-hire-nigeria.jpg" width="236" height="157" alt="The Real Cost of a Bad Hire in Nigeria">
                 </div>
                 <div>
                     <span class="article-row-tag">Recruitment & Talent</span>
@@ -183,7 +186,7 @@
 
             <a href="/articles/article-employee-handbook-nigerian-sme.html" class="article-row">
                 <div class="article-row-img">
-                    <img src="/images/articles/employee-handbook-nigerian-sme.jpg" alt="How to Write an Employee Handbook for a Nigerian SME">
+                    <img src="/images/articles/employee-handbook-nigerian-sme.jpg" width="736" height="519" alt="How to Write an Employee Handbook for a Nigerian SME">
                 </div>
                 <div>
                     <span class="article-row-tag">HR Advisory</span>
@@ -195,7 +198,7 @@
 
             <a href="/articles/article-organogram.html" class="article-row">
                 <div class="article-row-img">
-                    <img src="/images/site-work-2.jpg" alt="How to Create a Functional Organogram for Your Nigerian Business">
+                    <img src="/images/site-work-2.jpg" width="1600" height="900" alt="How to Create a Functional Organogram for Your Nigerian Business">
                 </div>
                 <div>
                     <span class="article-row-tag">Business Structure</span>
@@ -209,15 +212,17 @@
     </section>
 
     <!-- Complete Corporate Footer Section -->
+    </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-row">
                 <div class="footer-col">
-                    <h4>Head Office</h4>
+                    <h3>Head Office</h3>
                     <a href="https://maps.google.com/?q=Traction+Outsourcing+Limited+26+Algiers+Street+Wuse+Zone+5+Abuja" target="_blank">26, Algiers Street,<br>Wuse Zone 5, FCT,<br>Nigeria.</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact Details</h4>
+                    <h3>Contact Details</h3>
                     <a href="tel:+2348052033145">0805 203 3145</a>
                     <a href="tel:+2348125078087">0812 507 8087</a>
                     <a href="tel:+2347078707777">0707 870 7777</a>
@@ -225,11 +230,11 @@
             </div>
             <div class="footer-row">
                 <div class="footer-col">
-                    <h4>Email</h4>
+                    <h3>Email</h3>
                     <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Follow Us</h4>
+                    <h3>Follow Us</h3>
                     <div class="footer-social">
                         <a href="https://instagram.com/tractionoutsourcing" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://tiktok.com/@tractionoutsourcing" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>

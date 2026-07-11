@@ -9,7 +9,8 @@
     <link rel="canonical" href="https://tolnigeria.com/privacy-policy/">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- Page-specific styling -->
@@ -33,7 +34,7 @@
     <!-- Header / Navigation -->
     <header>
         <a href="/" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="/images/traction-outsourcing-logo.png" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
+            <img src="/images/traction-outsourcing-logo.png" width="1129" height="200" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
         </a>
 
         <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu Navigation">
@@ -63,11 +64,11 @@
                 <a href="#">Our Brands</a>
                 <div class="dropdown-content">
                     <a href="/brands/properties/" class="dropdown-item">
-                        <img src="/images/traction-properties-and-managers.png" alt="Traction Properties Logo">
+                        <img src="/images/traction-properties-and-managers.png" width="743" height="250" alt="Traction Properties Logo">
                         Traction Properties
                     </a>
                     <a href="/brands/recruiters/" class="dropdown-item">
-                        <img src="/images/ath-recruiters.png" alt="ATH Recruiters Logo">
+                        <img src="/images/ath-recruiters.png" width="800" height="450" alt="ATH Recruiters Logo">
                         ATH Recruiters
                     </a>
                 </div>
@@ -76,6 +77,8 @@
             <a href="/founder/">Our Founder</a>
         </nav>
     </header>
+
+    <main>
 
     <!-- Hero -->
     <div class="policy-hero">
@@ -167,15 +170,17 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-row">
                 <div class="footer-col">
-                    <h4>Head Office</h4>
+                    <h3>Head Office</h3>
                     <a href="https://maps.google.com/?q=Traction+Outsourcing+Limited+26+Algiers+Street+Wuse+Zone+5+Abuja" target="_blank">26, Algiers Street,<br>Wuse Zone 5, FCT,<br>Nigeria.</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact Details</h4>
+                    <h3>Contact Details</h3>
                     <a href="tel:+2348052033145">0805 203 3145</a>
                     <a href="tel:+2348125078087">0812 507 8087</a>
                     <a href="tel:+2347078707777">0707 870 7777</a>
@@ -183,11 +188,11 @@
             </div>
             <div class="footer-row">
                 <div class="footer-col">
-                    <h4>Email</h4>
+                    <h3>Email</h3>
                     <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Follow Us</h4>
+                    <h3>Follow Us</h3>
                     <div class="footer-social">
                         <a href="https://instagram.com/tractionoutsourcing" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://tiktok.com/@tractionoutsourcing" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
