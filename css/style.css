@@ -152,7 +152,9 @@ footer {
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
     header { padding: 15px 6%; }
-    .hamburger { display: flex; }
+    header > a { flex-shrink: 1; min-width: 0; overflow: hidden; }
+    header > a img { max-width: 60vw !important; width: auto !important; height: auto !important; }
+    .hamburger { display: flex; flex-shrink: 0; }
     nav {
         position: fixed;
         top: 0;
