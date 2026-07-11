@@ -31,6 +31,15 @@
     <meta name="description" content="Traction Outsourcing manages payroll, HR processes, staff compliance, and recruitment for businesses across Nigeria, so you can focus on running the business, not the paperwork.">
     <meta name="keywords" content="staff outsourcing nigeria, HR outsourcing abuja, payroll administration nigeria, HR process outsourcing, workforce management nigeria, staff management company abuja">
     <link rel="canonical" href="https://tolnigeria.com/services/staff-outsourcing/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Staff Outsourcing & HR Management in Nigeria | Traction Outsourcing Limited">
+    <meta property="og:description" content="Traction Outsourcing manages payroll, HR processes, staff compliance, and recruitment for businesses across Nigeria, so you can focus on running the business, not the paperwork.">
+    <meta property="og:url" content="https://www.tolnigeria.com/services/staff-outsourcing/">
+    <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-staff-outsourcing.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -39,7 +48,7 @@
 
     <!-- Page-specific styling -->
     <style>
-        .service-hero { background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/images/africa.svg') no-repeat center center, url('/images/traction-hero-bg.jpg') no-repeat center center/cover; color: var(--white-color); text-align: center; padding: 100px 20px; }
+        .service-hero { background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/images/africa.svg') no-repeat center center, url('/images/traction-hero-bg.png') no-repeat center center/cover; color: var(--white-color); text-align: center; padding: 100px 20px; }
         .service-hero h1 { font-size: 42px; margin-bottom: 15px; font-weight: 700; color: var(--accent-color); }
         .service-hero p { font-size: 19px; max-width: 750px; margin: 0 auto; }
 
@@ -263,6 +272,12 @@
                 hamburgerBtn.classList.remove('toggle');
                 navMenu.classList.remove('active');
             });
+        });
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 

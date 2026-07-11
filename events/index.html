@@ -7,6 +7,15 @@
     <meta name="description" content="Join Traction Outsourcing International Corporate Retreat 2026 in Kigali, Rwanda. An exclusive international retreat for CEOs, executives, and entrepreneurs featuring billionaire mentorship.">
     <meta name="keywords" content="company retreat in nigeria, staff retreat in nigeria, corporate retreat kigali, corporate leadership training africa, executive retreat nigeria">
     <link rel="canonical" href="https://tolnigeria.com/events/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Corporate Retreats & Leadership Events | Traction Outsourcing Limited">
+    <meta property="og:description" content="Join Traction Outsourcing International Corporate Retreat 2026 in Kigali, Rwanda. An exclusive international retreat for CEOs, executives, and entrepreneurs featuring billionaire mentorship.">
+    <meta property="og:url" content="https://www.tolnigeria.com/events/">
+    <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-events.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -16,7 +25,7 @@
     <!-- Page-specific styling -->
     <style>
         .hero-rwanda {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('/images/kigali-retreat-2026.png') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('/images/kigali-retreat-2026.jpg') no-repeat center center/cover;
             height: 350px;
             display: flex;
             align-items: center;
@@ -217,6 +226,12 @@
                 hamburgerBtn.classList.remove('toggle');
                 navMenu.classList.remove('active');
             });
+        });
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 

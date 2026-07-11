@@ -7,6 +7,15 @@
     <meta name="description" content="More than nine in ten Nigerian SMEs fail within five years. A structural diagnosis of why, and what separates the businesses that survive from the ones that do not.">
     <meta name="keywords" content="why nigerian startups fail, startup structuring nigeria, business advisory abuja, SME failure nigeria, business structure nigeria">
     <link rel="canonical" href="https://tolnigeria.com/articles/article-why-nigerian-startups-fail.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Why Nigerian Startups Fail Within Their First Five Years | Traction Outsourcing Limited">
+    <meta property="og:description" content="More than nine in ten Nigerian SMEs fail within five years. A structural diagnosis of why, and what separates the businesses that survive from the ones that do not.">
+    <meta property="og:url" content="https://www.tolnigeria.com/articles/article-why-nigerian-startups-fail.html">
+    <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-article-why-startups-fail.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -161,6 +170,12 @@
                 hamburgerBtn.classList.remove('toggle');
                 navMenu.classList.remove('active');
             });
+        });
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 

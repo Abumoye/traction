@@ -31,6 +31,15 @@
     <meta name="description" content="Traction Outsourcing provides strategic advisory and negotiation support for entrepreneurs navigating growth, joint ventures, market entry, and structural decisions in Nigeria.">
     <meta name="keywords" content="business advisory nigeria, business advisory abuja, joint venture negotiation nigeria, entrepreneur consulting abuja">
     <link rel="canonical" href="https://tolnigeria.com/services/business-advisory/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Business Advisory in Nigeria | Traction Outsourcing Limited">
+    <meta property="og:description" content="Traction Outsourcing provides strategic advisory and negotiation support for entrepreneurs navigating growth, joint ventures, market entry, and structural decisions in Nigeria.">
+    <meta property="og:url" content="https://www.tolnigeria.com/services/business-advisory/">
+    <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-business-advisory.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -284,6 +293,12 @@
                 hamburgerBtn.classList.remove('toggle');
                 navMenu.classList.remove('active');
             });
+        });
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 

@@ -7,6 +7,15 @@
     <meta name="description" content="Traction Properties and Managers is a premium property management, brokerage, and real estate advisory firm based in Abuja, Nigeria. Explore our properties for sale and rent.">
     <meta name="keywords" content="property manager in nigeria, properties for sale abuja, real estate brokerage abuja, luxury apartments abuja">
     <link rel="canonical" href="https://tolnigeria.com/brands/properties/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Property Management & Brokerage Abuja | Traction Properties">
+    <meta property="og:description" content="Traction Properties and Managers is a premium property management, brokerage, and real estate advisory firm based in Abuja, Nigeria. Explore our properties for sale and rent.">
+    <meta property="og:url" content="https://www.tolnigeria.com/brands/properties/">
+    <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-traction-properties.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -208,6 +217,12 @@
                 hamburgerBtn.classList.remove('toggle');
                 navMenu.classList.remove('active');
             });
+        });
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 

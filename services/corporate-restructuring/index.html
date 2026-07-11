@@ -31,6 +31,15 @@
     <meta name="description" content="Traction Outsourcing re-engineers legacy business frameworks, governance structures, and reporting lines to remove operational blockages and restore performance.">
     <meta name="keywords" content="corporate restructuring nigeria, business restructuring abuja, organizational redesign nigeria, governance consulting nigeria">
     <link rel="canonical" href="https://tolnigeria.com/services/corporate-restructuring/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Corporate Restructuring in Nigeria | Traction Outsourcing Limited">
+    <meta property="og:description" content="Traction Outsourcing re-engineers legacy business frameworks, governance structures, and reporting lines to remove operational blockages and restore performance.">
+    <meta property="og:url" content="https://www.tolnigeria.com/services/corporate-restructuring/">
+    <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-corporate-restructuring.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -346,6 +355,12 @@
                 hamburgerBtn.classList.remove('toggle');
                 navMenu.classList.remove('active');
             });
+        });
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 

@@ -31,6 +31,15 @@
     <meta name="description" content="Upcoming leadership events, corporate retreats, and business gatherings hosted by Traction Outsourcing Limited across Nigeria and Africa.">
     <meta name="keywords" content="corporate events nigeria, business events abuja, corporate retreat kigali, leadership events africa, executive events nigeria">
     <link rel="canonical" href="https://tolnigeria.com/services/corporate-retreats/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Events & Corporate Retreats | Traction Outsourcing Limited">
+    <meta property="og:description" content="Upcoming leadership events, corporate retreats, and business gatherings hosted by Traction Outsourcing Limited across Nigeria and Africa.">
+    <meta property="og:url" content="https://www.tolnigeria.com/services/corporate-retreats/">
+    <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-events.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -165,7 +174,7 @@
         <div class="event-grid">
             <!-- Featured real event -->
             <a href="/events/" class="event-card">
-                <div class="event-card-img" style="background-image: url('/images/kigali-retreat-2026.png');">
+                <div class="event-card-img" style="background-image: url('/images/kigali-retreat-2026.jpg');">
                     <span class="flag">Next Event · 2026</span>
                 </div>
                 <div class="event-card-body">
@@ -297,6 +306,12 @@
                 hamburgerBtn.classList.remove('toggle');
                 navMenu.classList.remove('active');
             });
+        });
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 

@@ -72,7 +72,7 @@
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
                         url('/images/africa.svg') no-repeat center center,
-                        url('/images/traction-hero-bg.jpg') no-repeat center center/cover;
+                        url('/images/traction-hero-bg.png') no-repeat center center/cover;
             color: var(--white-color);
             text-align: center;
             padding: 120px 20px;
@@ -346,6 +346,12 @@
                 hamburgerBtn.classList.remove('toggle');
                 navMenu.classList.remove('active');
             });
+        });
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 

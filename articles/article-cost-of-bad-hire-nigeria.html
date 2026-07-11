@@ -7,6 +7,15 @@
     <meta name="description" content="A bad hire costs far more than a salary. Here is what the data says about the true cost of hiring the wrong person in Nigeria, and how structured recruitment prevents it.">
     <meta name="keywords" content="cost of bad hire nigeria, recruitment agency abuja, executive recruitment nigeria, hiring mistakes nigeria, staffing agency abuja">
     <link rel="canonical" href="https://tolnigeria.com/articles/article-cost-of-bad-hire-nigeria.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Real Cost of a Bad Hire in Nigeria (And How to Avoid It) | Traction Outsourcing Limited">
+    <meta property="og:description" content="A bad hire costs far more than a salary. Here is what the data says about the true cost of hiring the wrong person in Nigeria, and how structured recruitment prevents it.">
+    <meta property="og:url" content="https://www.tolnigeria.com/articles/article-cost-of-bad-hire-nigeria.html">
+    <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-article-cost-of-bad-hire.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -158,6 +167,12 @@
                 hamburgerBtn.classList.remove('toggle');
                 navMenu.classList.remove('active');
             });
+        });
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 

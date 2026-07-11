@@ -21,6 +21,15 @@
     <meta name="description" content="ATH Recruiters helps small businesses, shops, hotels, restaurants, and private individuals across Nigeria find qualified staff fast, with plans starting from ₦30,000 and turnaround as quick as 48 hours.">
     <meta name="keywords" content="hire staff nigeria, recruitment agency abuja, staffing agency lagos, hire domestic staff nigeria, hotel staff recruitment nigeria, restaurant staff hiring nigeria">
     <link rel="canonical" href="https://tolnigeria.com/brands/recruiters/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hire Staff Fast in Nigeria | ATH Recruiters">
+    <meta property="og:description" content="ATH Recruiters helps small businesses, shops, hotels, restaurants, and private individuals across Nigeria find qualified staff fast, with plans starting from ₦30,000 and turnaround as quick as 48 hours.">
+    <meta property="og:url" content="https://www.tolnigeria.com/brands/recruiters/">
+    <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-ath-recruiters.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -432,6 +441,12 @@
                 hamburgerBtn.classList.remove('toggle');
                 navMenu.classList.remove('active');
             });
+        });
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 

@@ -7,6 +7,15 @@
     <meta name="description" content="Access without preparation is a trap dressed up as opportunity. A look at what happens when proximity to success replaces a real financial and business foundation.">
     <meta name="keywords" content="business advisory nigeria, career advisory abuja, entrepreneurship lessons nigeria, business structuring nigeria">
     <link rel="canonical" href="https://tolnigeria.com/articles/article-dangers-of-proximity-to-success.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Dangers of Proximity to Success | Traction Outsourcing Limited">
+    <meta property="og:description" content="Access without preparation is a trap dressed up as opportunity. A look at what happens when proximity to success replaces a real financial and business foundation.">
+    <meta property="og:url" content="https://www.tolnigeria.com/articles/article-dangers-of-proximity-to-success.html">
+    <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-article-dangers-of-proximity.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -182,6 +191,12 @@
                 hamburgerBtn.classList.remove('toggle');
                 navMenu.classList.remove('active');
             });
+        });
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            }
         });
     </script>
 
