@@ -82,7 +82,7 @@
         <nav id="navMenu">
             <a href="/">Home</a>
             <div class="dropdown">
-                <a href="#">Our Services</a>
+                <a href="#">Our Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
                 <div class="dropdown-content">
                     <a href="/services/staff-outsourcing/" class="dropdown-item">Staff Outsourcing & HR Management</a>
                     <a href="/services/startup-structuring/" class="dropdown-item">Startup Structuring</a>
@@ -96,7 +96,7 @@
             <a href="/articles/">Articles</a>
 
             <div class="dropdown">
-                <a href="#">Our Brands</a>
+                <a href="#">Our Brands <i class="fas fa-chevron-down dropdown-arrow"></i></a>
                 <div class="dropdown-content">
                     <a href="/brands/properties/" class="dropdown-item">
                         <img src="/images/traction-properties-and-managers.png" width="743" height="250" alt="Traction Properties Logo">
@@ -207,6 +207,12 @@
                 hamburgerBtn.classList.remove('toggle');
                 navMenu.classList.remove('active');
             }
+        });
+        document.querySelectorAll('nav > .dropdown > a[href="#"]').forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                trigger.parentElement.classList.toggle('open');
+            });
         });
     </script>
 

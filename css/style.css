@@ -180,14 +180,21 @@ footer {
     nav > a, nav > .dropdown { border-bottom: 1px solid #eee; padding-bottom: 16px; margin-bottom: 20px; }
     nav > a:last-child, nav > .dropdown:last-child { border-bottom: none; margin-bottom: 0; }
     .dropdown { width: 100%; }
+    nav > .dropdown > a { display: flex; align-items: center; justify-content: space-between; }
+    .dropdown-arrow { font-size: 13px; transition: transform 0.3s ease; color: #999; }
+    .dropdown.open .dropdown-arrow { transform: rotate(180deg); color: var(--accent-color); }
     .dropdown-content {
         position: static;
         display: block;
         box-shadow: none;
-        padding: 5px 0 0 15px;
+        padding: 0 0 0 15px;
         min-width: unset;
         background-color: transparent;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
     }
+    .dropdown.open .dropdown-content { max-height: 600px; padding-top: 5px; }
     .dropdown-item { margin: 0; padding: 12px 0; font-size: 16px; border-bottom: 1px solid #f2f2f2; }
     .dropdown-item:last-child { border-bottom: none; }
     .hamburger.toggle span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
