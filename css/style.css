@@ -52,21 +52,24 @@ nav a:hover { color: var(--accent-color); }
     -moz-appearance: none;
     appearance: none;
     flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
     background: transparent;
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 10px;
-    margin: -10px;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
     z-index: 110;
 }
 .hamburger span {
     display: block;
-    width: 100%;
+    width: 22px;
     height: 2.5px;
     flex-shrink: 0;
     background-color: var(--accent-color);
@@ -187,9 +190,9 @@ footer {
     }
     .dropdown-item { margin: 0; padding: 12px 0; font-size: 16px; border-bottom: 1px solid #f2f2f2; }
     .dropdown-item:last-child { border-bottom: none; }
-    .hamburger.toggle span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 4px); }
+    .hamburger.toggle span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
     .hamburger.toggle span:nth-child(2) { opacity: 0; }
-    .hamburger.toggle span:nth-child(3) { transform: rotate(45deg) translate(-5px, -4px); }
+    .hamburger.toggle span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
     .section { padding: 40px 6%; }
 }
 @media (max-width: 600px) {
