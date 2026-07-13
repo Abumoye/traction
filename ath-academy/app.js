@@ -106,6 +106,7 @@ let state = {
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
+  document.getElementById('app-header').style.display = (id === 'screen-login') ? 'none' : 'block';
 }
 
 /* ---------- Login ---------- */
@@ -123,14 +124,41 @@ async function doLogin() {
   idle.classList.add('hidden');
   rolling.classList.add('active');
 
-  const result = await API.verifyMember(codeInput.value);
+  let result;
+  try {
+    result = await API.verifyMember(codeInput.value);
+  } catch (e) {
+    // A thrown error here usually means the request never got a valid JSON
+    // response back — most often the Apps Script URL is wrong, the
+    // deployment isn't set to "Anyone" access, or the network request
+    // failed outright. Whatever it is, the person needs to see SOMETHING
+    // rather than a spinner that never resolves.
+    console.error('verifyMember failed:', e);
+    await sleep(400);
+    rolling.classList.remove('active');
+    idle.classList.remove('hidden');
+    err.textContent = "Couldn't reach the server. Please try again in a moment, or let the site admin know if this keeps happening.";
+    err.classList.add('show');
+    return;
+  }
+
   // Let the rolling animation play for a beat even on a fast response —
   // an instant flash reads as broken, not fast.
   await sleep(600);
 
+  if (!result || result.error) {
+    console.error('verifyMember returned an error:', result && result.error);
+    rolling.classList.remove('active');
+    idle.classList.remove('hidden');
+    err.textContent = "Something went wrong checking that code. Please try again, or let the site admin know if this keeps happening.";
+    err.classList.add('show');
+    return;
+  }
+
   if (!result.ok) {
     rolling.classList.remove('active');
     idle.classList.remove('hidden');
+    err.textContent = 'No record found. Register to be a member. Send "Register" to 08125078087.';
     err.classList.add('show');
     return;
   }

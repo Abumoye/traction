@@ -101,6 +101,9 @@ function doPost(e) {
 function verifyMember(code) {
   if (!code) return { ok: false };
   const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName('Members');
+  if (!sheet) {
+    throw new Error('Could not find a "Members" tab in this spreadsheet. Check the tab name matches exactly (case-sensitive).');
+  }
   const data = sheet.getDataRange().getValues();
   const normalized = code.trim().toUpperCase();
   for (let i = 1; i < data.length; i++) {

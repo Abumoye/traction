@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<header class="site">
+<header class="site" id="app-header" style="display:none;">
   <div class="wrap">
     <div class="wordmark"><img src="assets/ath-badge.png" alt="ATH Recruiters" style="height:32px; width:auto;"> ACADEMY</div>
     <div id="member-chip" class="member-chip" style="display:none;"></div>
@@ -28,21 +28,22 @@
 
 <!-- ============ LOGIN ============ -->
 <section id="screen-login" class="screen active">
-  <div class="matte-field">
-    <div class="login-content">
-      <img src="assets/ath-badge.png" alt="ATH Recruiters" class="login-badge">
-      <div class="login-idle">
-        <h1>ATH Academy</h1>
-        <p class="sub">Skills training for the ATH Recruiters community.</p>
-        <div class="pill-bar">
-          <input type="text" id="member-code" placeholder="Enter your membership ID" autocomplete="off">
-          <button id="login-btn" aria-label="Enter">&rarr;</button>
+  <div class="login-page">
+    <div class="login-page-logo">
+      <img src="assets/ath-badge.png" alt="ATH Recruiters">
+    </div>
+    <div class="login-page-center">
+      <div class="raised-bar" id="login-panel">
+        <div class="login-idle" id="login-idle">
+          <h1>Enter your membership code</h1>
+          <input type="text" id="member-code" placeholder="e.g. ATH/FCT/120726/0143" autocomplete="off">
+          <button id="login-btn">Submit</button>
+          <div class="error-msg" id="login-error"></div>
         </div>
-        <div class="error-msg" id="login-error">That ID isn't in our member directory. Check it and try again.</div>
-      </div>
-      <div class="login-rolling" id="login-rolling">
-        <div class="roll-mark"></div>
-        <p>Checking your membership…</p>
+        <div class="login-rolling" id="login-rolling">
+          <div class="roll-mark"></div>
+          <p>Checking your membership…</p>
+        </div>
       </div>
     </div>
   </div>
