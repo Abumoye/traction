@@ -4,7 +4,7 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "EmploymentAgency",
+  "@type": ["EmploymentAgency", "LocalBusiness"],
   "name": "Abuja Talent Hub - ATH Recruiters",
   "alternateName": ["Abuja Talent Hub", "ATH Recruiters", "ATH"],
   "sameAs": ["https://maps.app.goo.gl/wRXnUb2ABAwSTNpT8"],
@@ -13,7 +13,8 @@
   "logo": "https://www.tolnigeria.com/images/ath-recruiters.png",
   "image": "https://www.tolnigeria.com/images/og/og-ath-recruiters.jpg",
   "telephone": "+234-812-507-8087",
-  "priceRange": "₦₦",
+  "priceRange": "$$",
+  "currenciesAccepted": "NGN",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "26, Algiers Street, Wuse Zone 5",
@@ -26,6 +27,10 @@
     { "@type": "City", "name": "Abuja" },
     { "@type": "Country", "name": "Nigeria" }
   ],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Small and growing businesses, private individuals and households, and startups in Abuja and across Nigeria seeking affordable, fast staffing without a full in-house HR department"
+  },
   "parentOrganization": {
     "@type": "Organization",
     "name": "Traction Outsourcing Limited",
@@ -387,6 +392,34 @@
             <div class="stat-note">*for select recruitment plans</div>
         </div>
     </div>
+
+    <!-- Why Abuja Businesses Choose Us -->
+    <section class="section" style="background: var(--light-bg);" id="why-affordable-staffing">
+        <h2 class="section-title">Why Abuja Businesses Choose Our Affordable Staffing Services</h2>
+        <p class="section-sub">Speed, professionalism, and pricing built for small businesses and private individuals across Abuja, not just large corporations.</p>
+        <div class="serve-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 1100px;">
+            <div class="serve-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Fast Turnaround</h3>
+                <p>Candidates delivered in as little as 24 to 48 hours on select plans, so an open role does not stay open for long.</p>
+            </div>
+            <div class="serve-card">
+                <i class="fas fa-user-check"></i>
+                <h3>Professional & Vetted</h3>
+                <p>Every candidate is screened before you ever see a CV, backed by our management consulting standards.</p>
+            </div>
+            <div class="serve-card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Customer Support</h3>
+                <p>Our team is reachable around the clock, so a staffing emergency never has to wait until Monday morning.</p>
+            </div>
+            <div class="serve-card">
+                <i class="fas fa-sack-dollar"></i>
+                <h3>Affordable Pricing</h3>
+                <p>Plans starting from ₦30,000, built to keep quality staffing accessible for small businesses and homes across Abuja.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Plans -->
     <section class="section" id="ath-plans">
