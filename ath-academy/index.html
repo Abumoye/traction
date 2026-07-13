@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATH Academy — Learn. Prove it. Get hired.</title>
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- Open Graph: general link preview (not certificate-specific — see
+     verify.html and README for why per-certificate previews need the
+     Apps Script endpoint rather than this static file). -->
+<meta property="og:title" content="ATH Academy">
+<meta property="og:description" content="Skills training and certification for the ATH Recruiters community.">
+<meta property="og:image" content="https://tolnigeria.com/ath-academy/og-card.png">
+<meta property="og:url" content="https://tolnigeria.com/ath-academy">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="wordmark"><img src="assets/ath-badge.png" alt="ATH Recruiters" style="height:32px; width:auto;"> ACADEMY</div>
+    <div id="member-chip" class="member-chip" style="display:none;"></div>
+  </div>
+</header>
+
+<!-- ============ LOGIN ============ -->
+<section id="screen-login" class="screen active">
+  <div class="matte-field">
+    <div class="login-content">
+      <img src="assets/ath-badge.png" alt="ATH Recruiters" class="login-badge">
+      <div class="login-idle">
+        <h1>ATH Academy</h1>
+        <p class="sub">Skills training for the ATH Recruiters community.</p>
+        <div class="pill-bar">
+          <input type="text" id="member-code" placeholder="Enter your membership ID" autocomplete="off">
+          <button id="login-btn" aria-label="Enter">&rarr;</button>
+        </div>
+        <div class="error-msg" id="login-error">That ID isn't in our member directory. Check it and try again.</div>
+      </div>
+      <div class="login-rolling" id="login-rolling">
+        <div class="roll-mark"></div>
+        <p>Checking your membership…</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DASHBOARD (Udemy-style catalog) ============ -->
+<section id="screen-dashboard" class="screen">
+  <main class="wrap">
+    <div class="page-title">Your courses</div>
+    <div class="page-sub">Pick a course to see what's covered, then work through it at your own pace.</div>
+    <div class="catalog-grid" id="course-grid"></div>
+  </main>
+</section>
+
+<!-- ============ COURSE OVERVIEW (Udemy-style detail page) ============ -->
+<section id="screen-overview" class="screen">
+  <main class="wrap">
+    <button class="btn btn--ghost" id="overview-back" style="margin-bottom:24px;">&larr; All courses</button>
+    <div class="overview-layout">
+      <div>
+        <div class="tag" id="ov-tag">—</div>
+        <h1 class="ov-title" id="ov-title">—</h1>
+        <p class="ov-blurb" id="ov-blurb"></p>
+        <h4 class="ov-subhead">What you'll learn</h4>
+        <ul class="ov-learn" id="ov-learn"></ul>
+        <h4 class="ov-subhead">Curriculum</h4>
+        <ol class="ov-curriculum" id="ov-curriculum"></ol>
+      </div>
+      <aside class="ov-side">
+        <div class="ov-progress-box" id="ov-progress-box"></div>
+        <button id="ov-start" style="width:100%;">Start course</button>
+        <p class="assess-note">20 questions, 50-minute limit, one attempt. Pass mark: 90%.</p>
+      </aside>
+    </div>
+  </main>
+</section>
+
+<!-- ============ LESSON / LADDER ============ -->
+<section id="screen-lesson" class="screen">
+  <main class="wrap">
+    <button class="btn btn--ghost" id="back-to-overview" style="margin-bottom:24px;">&larr; Course overview</button>
+    <div class="lesson-layout">
+      <div>
+        <div class="lesson-heading">
+          <h2 id="lesson-title">—</h2>
+          <span class="count" id="lesson-count">—</span>
+        </div>
+        <div class="video-shell">
+          <iframe id="video-frame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <p class="lesson-desc" id="lesson-desc"></p>
+        <div style="display:flex; gap:12px;">
+          <button class="btn btn--ghost" id="prev-lesson">&larr; Previous</button>
+          <button id="next-lesson">Mark complete &amp; continue &rarr;</button>
+        </div>
+      </div>
+      <aside class="ladder">
+        <h4>Course ladder</h4>
+        <div id="rung-list"></div>
+        <div class="assess-cta">
+          <button id="start-assessment" disabled>Take assessment</button>
+          <p class="assess-note">Unlocks once every lesson is marked complete. 20 questions, drawn at random from a 500-question bank. Pass mark: 90%.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+</section>
+
+<!-- ============ ASSESSMENT ============ -->
+<section id="screen-quiz" class="screen">
+  <main class="wrap">
+    <div class="quiz-head">
+      <h2 id="quiz-course-title" style="font-family:var(--display); font-size:20px;">—</h2>
+      <div style="display:flex; align-items:center; gap:20px;">
+        <span class="qcount" id="quiz-progress-label">Question 1 / 20</span>
+        <span class="qcount quiz-timer" id="quiz-timer">50:00</span>
+      </div>
+    </div>
+    <p style="font-size:12px; color:var(--muted); margin-bottom:20px;">One attempt only. Closing this tab or reloading the page forfeits it — the timer keeps running against your one shot, so stay on this screen until you're done.</p>
+    <div class="rung--full quiz-progress" id="quiz-progress-bar" style="--pct:5%;"></div>
+    <div class="question-card">
+      <div class="qtext" id="q-text">—</div>
+      <div class="options" id="q-options"></div>
+      <div class="quiz-actions">
+        <span style="font-family:var(--mono); font-size:12px; color:var(--muted);" id="quiz-weight-label"></span>
+        <button id="submit-answer" disabled>Next question &rarr;</button>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- ============ RESULT ============ -->
+<section id="screen-result" class="screen">
+  <main class="wrap">
+    <div class="result-screen">
+      <span class="result-badge" id="result-badge">—</span>
+      <h2 id="result-heading">—</h2>
+      <div class="score" id="result-score">—</div>
+      <div id="result-actions"></div>
+    </div>
+  </main>
+</section>
+
+<!-- ============ CERTIFICATE ============ -->
+<section id="screen-cert" class="screen">
+  <main class="wrap">
+    <div class="page-title">Your certificate</div>
+    <div class="page-sub" id="cert-sub">Download it, or share it straight to your network.</div>
+    <canvas id="cert-canvas" width="1200" height="848"></canvas>
+    <div>
+      <button id="cert-download">Download PNG</button>
+    </div>
+    <div class="share-row" id="share-row"></div>
+    <button class="btn btn--ghost" id="cert-back-to-dash" style="margin-top:32px;">&larr; Back to courses</button>
+  </main>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
