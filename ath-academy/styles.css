@@ -261,16 +261,6 @@ label { font-size: 13px; color: var(--muted); display: block; margin-bottom: 8px
 .screen { display: none; }
 .screen.active { display: block; }
 
-/* Login */
-#screen-login { display: flex; min-height: 100vh; align-items: center; justify-content: center; }
-.login-card {
-  width: 100%; max-width: 420px;
-  padding: 48px 40px;
-}
-.login-card .eyebrow { font-family: var(--mono); font-size: 12px; color: var(--orange); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
-.login-card h1 { font-family: var(--display); font-size: 32px; line-height: 1.15; margin-bottom: 12px; }
-.login-card p.sub { color: var(--muted); margin-bottom: 32px; font-size: 15px; }
-.field { margin-bottom: 20px; }
 .error-msg { color: var(--danger); font-size: 13px; margin-top: 10px; display: none; }
 .error-msg.show { display: block; }
 
@@ -278,26 +268,6 @@ label { font-size: 13px; color: var(--muted); display: block; margin-bottom: 8px
 main { padding: 48px 0 96px; }
 .page-title { font-family: var(--display); font-size: 28px; margin-bottom: 8px; }
 .page-sub { color: var(--muted); margin-bottom: 40px; }
-
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-}
-.course-card {
-  background: var(--ink);
-  padding: 28px;
-  cursor: pointer;
-  transition: background .15s ease;
-}
-.course-card:hover { background: var(--ink-soft); }
-.course-card .tag { font-family: var(--mono); font-size: 11px; color: var(--orange); text-transform: uppercase; letter-spacing: 0.06em; }
-.course-card h3 { font-family: var(--display); font-size: 19px; margin: 10px 0 12px; line-height: 1.25; }
-.course-card p { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
-.course-card .progress-line { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
-.course-card .rung--full { width: 80px; }
 
 /* Course / lesson view */
 .lesson-layout { display: grid; grid-template-columns: 1fr 300px; gap: 40px; }
