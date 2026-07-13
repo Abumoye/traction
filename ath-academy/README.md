@@ -5,7 +5,7 @@ membership ID, browses a Udemy-style catalog of 5 real courses, watches the
 course video, then sits a timed, one-shot, 20-question assessment. Passing
 at 90% (weighted) auto-generates a certificate, emails it, and logs it
 under a public verification number. Failing emails the score with a
-retake link. Every attempt pings you on WhatsApp.
+retake link.
 
 ## Where this actually lives — two separate places
 
@@ -25,7 +25,7 @@ independently and talk to each other over the internet:
 The website calls the Apps Script URL whenever it needs to check a
 membership ID, pull course questions, or issue a certificate. That's the
 whole architecture: static files for what people see, one Apps Script
-deployment for anything that touches your spreadsheet, email, or WhatsApp.
+deployment for anything that touches your spreadsheet or email.
 
 ## Step-by-step: getting this live
 
@@ -41,12 +41,8 @@ deployment for anything that touches your spreadsheet, email, or WhatsApp.
   script acting on your own spreadsheet). This creates the Courses,
   Lessons, and Questions tabs and fills them with the five real courses.
   Check your spreadsheet afterward — you should see the three new tabs.
-- Set up WhatsApp notifications: message the CallMeBot number on WhatsApp
-  ("I allow callmebot to send me messages" — [instructions
-  here](https://www.callmebot.com/blog/free-api-whatsapp-messages/)), it
-  replies with an API key. Paste your phone number and that key into
-  `NOTIFY_WHATSAPP_PHONE` and `NOTIFY_WHATSAPP_APIKEY` near the top of
-  `Code.gs`.
+  Then do the same with **expandDigitalMarketingQuestions** to load the
+  140-question Digital Marketing bank.
 - Click **Deploy → New deployment**. Type: **Web app**. Execute as:
   **Me**. Who has access: **Anyone**. Click Deploy, and copy the URL it
   gives you — it looks like

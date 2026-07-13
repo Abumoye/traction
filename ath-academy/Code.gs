@@ -53,17 +53,6 @@ const QUESTIONS_PER_ASSESSMENT = 20;
 const ASSESSMENT_SECONDS = 50 * 60;
 const CERT_ID_START = 100000; // first certificate is No. 100001
 
-// WhatsApp notifications to you use CallMeBot (callmebot.com) — a free
-// service built for exactly this: pinging your own WhatsApp when something
-// happens in an app you built. One-time setup: add the CallMeBot number to
-// your contacts, send it "I allow callmebot to send me messages" on
-// WhatsApp, and it replies with your personal API key. Paste both below.
-// For anything beyond personal notifications (e.g. messaging members
-// directly), use the official WhatsApp Business Platform via Meta or Twilio
-// instead — CallMeBot is rate-limited and meant for one recipient.
-const NOTIFY_WHATSAPP_PHONE = 'PASTE_YOUR_PHONE_WITH_COUNTRY_CODE'; // e.g. 2348012345678
-const NOTIFY_WHATSAPP_APIKEY = 'PASTE_YOUR_CALLMEBOT_APIKEY';
-
 // Certificates and fail notices are emailed from whichever Google account
 // owns this Apps Script deployment (GmailApp sends as you, or as the
 // deployment's "execute as" account). Set a display name here.
@@ -198,36 +187,11 @@ function recordAttempt(body) {
   const now = new Date();
   sheet.appendRow([memberCode, courseId, passed, score, now]);
 
-  const dateStr = Utilities.formatDate(now, Session.getScriptTimeZone(), 'd MMM yyyy, h:mm a');
-
-  notifyWhatsApp(
-    `ATH Academy — ${passed ? 'PASSED ✅' : 'Failed ❌'}\n` +
-    `Student: ${memberName}\n` +
-    `Course: ${courseTitle}\n` +
-    `Member ID: ${memberCode}\n` +
-    `Score: ${score}%\n` +
-    `When: ${dateStr}`
-  );
-
   if (!passed && memberEmail) {
     sendFailEmail(memberEmail, memberName, courseTitle, score, courseId);
   }
 
   return { ok: true };
-}
-
-function notifyWhatsApp(message) {
-  if (!NOTIFY_WHATSAPP_PHONE || NOTIFY_WHATSAPP_PHONE.indexOf('PASTE_') === 0) return; // not configured yet
-  try {
-    const url = 'https://api.callmebot.com/whatsapp.php'
-      + '?phone=' + encodeURIComponent(NOTIFY_WHATSAPP_PHONE)
-      + '&text=' + encodeURIComponent(message)
-      + '&apikey=' + encodeURIComponent(NOTIFY_WHATSAPP_APIKEY);
-    UrlFetchApp.fetch(url, { muteHttpExceptions: true });
-  } catch (err) {
-    // Don't let a WhatsApp hiccup break the assessment flow.
-    console.error('WhatsApp notify failed: ' + err.message);
-  }
 }
 
 function sendFailEmail(email, name, courseTitle, score, courseId) {
