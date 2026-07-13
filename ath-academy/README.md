@@ -7,57 +7,53 @@ at 90% (weighted) auto-generates a certificate, emails it, and logs it
 under a public verification number. Failing emails the score with a
 retake link.
 
+**Status: live.** The frontend is deployed to `tolnigeria.com/ath-academy`
+and wired to a deployed Apps Script backend — this isn't a demo anymore.
+
 ## Where this actually lives — two separate places
 
-You're not building this "in" any single tool. Two things run
-independently and talk to each other over the internet:
+Two things run independently and talk to each other over the internet:
 
 1. **The website itself** (`index.html`, `styles.css`, `app.js`,
-   `verify.html`, `assets/`) is a set of static files. They need to sit
-   somewhere the browser can fetch them by URL — that's **your GitHub
-   repo**, the same one already serving `tolnigeria.com`
-   (`github.com/Abumoye/traction`), via **GitHub Pages**.
+   `verify.html`, `assets/`) is a set of static files, served from
+   **your GitHub repo** (`github.com/Abumoye/traction`) via **GitHub
+   Pages**.
 2. **The backend** (`Code.gs`) is a Google Apps Script project, deployed as
-   its own "Web App" with its own URL. It doesn't live in GitHub at all —
-   it lives inside Google's Apps Script editor, bound to your ATH
-   Recruiters Directory spreadsheet.
+   its own "Web App" with its own URL. It doesn't live in GitHub — it
+   lives inside Google's Apps Script editor, and reaches your ATH
+   Recruiters Directory spreadsheet by ID, not by being "bound" to it.
 
-The website calls the Apps Script URL whenever it needs to check a
-membership ID, pull course questions, or issue a certificate. That's the
-whole architecture: static files for what people see, one Apps Script
-deployment for anything that touches your spreadsheet or email.
+`app.js` calls the Apps Script URL (hardcoded near the top of the file, in
+the `API` object) whenever it needs to check a membership ID, pull course
+questions, score an assessment, or issue a certificate.
 
-## Step-by-step: getting this live
+## If you edit `Code.gs` again
 
-**1. Deploy the backend first.**
+Editing the file in the Apps Script editor and saving does **not** update
+the live URL. To push a change live: **Deploy → Manage deployments** →
+click the pencil icon on the existing deployment → **Version: New version**
+→ **Deploy**. The URL stays the same either way, so `app.js` doesn't need
+touching unless you create an entirely new deployment from scratch.
+
+## First-time setup, if you haven't already
+
+**1. Deploy the backend.**
 - Go to [script.google.com](https://script.google.com) → **New project**.
-- Delete the placeholder code, paste in the entire contents of `Code.gs`.
-- At the top of the file, set `SHEET_ID` to your ATH Recruiters Directory
-  spreadsheet's ID — it's the long string in the spreadsheet's URL, between
-  `/d/` and `/edit`.
-- From the function dropdown at the top of the editor, select
-  **seedAcademyData**, then click **Run**. The first time you run anything,
-  Google will ask you to authorize the script — approve it (it's your own
-  script acting on your own spreadsheet). This creates the Courses,
-  Lessons, and Questions tabs and fills them with the five real courses.
-  Check your spreadsheet afterward — you should see the three new tabs.
-  Then do the same with **expandDigitalMarketingQuestions** to load the
-  140-question Digital Marketing bank.
-- Click **Deploy → New deployment**. Type: **Web app**. Execute as:
-  **Me**. Who has access: **Anyone**. Click Deploy, and copy the URL it
-  gives you — it looks like
-  `https://script.google.com/macros/s/AKfycb.../exec`.
+- Paste in the entire contents of `Code.gs`.
+- Set `SHEET_ID` near the top to your ATH Recruiters Directory
+  spreadsheet's ID.
+- Run **seedAcademyData**, authorize when prompted, then run
+  **expandDigitalMarketingQuestions**.
+- **If you seeded before this update**, also run
+  **backfillCourseMetadata** once — it fills in each course's thumbnail,
+  initials, and "what you'll learn" bullets, which didn't exist as columns
+  the first time you seeded. Safe to run more than once.
+- **Deploy → New deployment → Web app**, Execute as **Me**, Who has access
+  **Anyone**, copy the URL.
 
-**2. Point the website at that backend.**
-Open `app.js` and search for `SWAP FOR LIVE` — each spot in the `API`
-object has a comment showing the `fetch()` call to replace the mock logic
-with, using the URL you just copied.
-
-**3. Push the files to GitHub.**
-In your `traction` repo, create a folder named `ath-academy` and put every
-file from this delivery into it (`index.html`, `styles.css`, `app.js`,
-`verify.html`, `favicon.png`, `og-card.png`, and the whole `assets/`
-folder, keeping that folder structure intact). Commit and push, the same
+**2. Push the files to GitHub.**
+Create an `ath-academy` folder in your `traction` repo with every file
+here, keeping the `assets/` structure intact. Commit and push, the same
 way you've deployed the rest of `tolnigeria.com`. Once GitHub Pages
 rebuilds, it's live at `tolnigeria.com/ath-academy`.
 
@@ -128,7 +124,14 @@ to seeding one of the other four courses next.
   cards on the dashboard, each opening a detail page with a "What you'll
   learn" list and curriculum before the member commits to starting.
 - **Scoring happens server-side.** `Code.gs` never sends the correct answer
-  down to the browser until after submission.
+  down to the browser until after submission — worth flagging that this
+  wasn't quite true in an earlier draft: `getAssessment` used to include an
+  `isCorrect` flag on every option in its response, readable by anyone who
+  opened browser dev tools before answering. That's fixed now: the answer
+  key lives only in a `Sessions` row on the server, and a new
+  `submitAssessment` endpoint is the sole place scoring happens, keyed to a
+  one-time `assessmentId` that gets marked "used" on submission so the same
+  attempt can't be scored twice.
 - **Certificates are automatic.** The moment a member passes, the
   certificate is generated, numbered, logged, and (if an email's on file)
   sent — no button to click. The browser draws the certificate with the

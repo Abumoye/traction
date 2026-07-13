@@ -84,7 +84,7 @@ function doPost(e) {
   const body = JSON.parse(e.postData.contents);
   let result;
   try {
-    if (body.action === 'recordAttempt') result = recordAttempt(body);
+    if (body.action === 'submitAssessment') result = submitAssessment(body);
     else if (body.action === 'issueCertificate') result = issueCertificate(body);
     else if (body.action === 'emailCertificate') result = emailCertificate(body);
     else result = { error: 'Unknown action' };
@@ -119,16 +119,18 @@ function getCourses() {
   const lessonData = lessonsSheet.getDataRange().getValues();
 
   return data.slice(1).map(row => {
-    const [id, tag, title, blurb] = row;
+    const [id, tag, title, blurb, initials, thumb] = row;
     const lessonCount = lessonData.slice(1).filter(l => l[0] === id).length;
-    return { id, tag, title, blurb, lessonCount };
+    return { id, tag, title, blurb, initials, thumb, lessonCount };
   });
 }
 
 function getCourse(courseId) {
   const courses = SpreadsheetApp.openById(SHEET_ID).getSheetByName('Courses').getDataRange().getValues();
   const courseRow = courses.slice(1).find(r => r[0] === courseId);
-  const [id, tag, title, blurb] = courseRow;
+  const [id, tag, title, blurb, initials, thumb, learnJSON] = courseRow;
+  let learn = [];
+  try { learn = learnJSON ? JSON.parse(learnJSON) : []; } catch (e) { learn = []; }
 
   const lessonRows = SpreadsheetApp.openById(SHEET_ID).getSheetByName('Lessons').getDataRange().getValues();
   const lessons = lessonRows.slice(1)
@@ -136,7 +138,7 @@ function getCourse(courseId) {
     .sort((a, b) => a[2] - b[2])
     .map(r => ({ id: r[1], title: r[3], desc: r[4], youtubeId: r[5] }));
 
-  return { id, tag, title, blurb, lessons };
+  return { id, tag, title, blurb, initials, thumb, learn, lessons };
 }
 
 /* ---------- Assessment: server picks + shuffles, client never sees answers ---------- */
@@ -145,29 +147,76 @@ function getAssessment(courseId) {
   const bank = rows.slice(1).filter(r => r[0] === courseId);
 
   const picked = shuffleArray(bank).slice(0, Math.min(QUESTIONS_PER_ASSESSMENT, bank.length));
-
-  // Cache the picked question IDs (by row content hash) + correct answers keyed
-  // to a one-time assessment token, so submitAssessment can score without the
-  // client ever holding the answer key. Simple approach: return an opaque
-  // token that encodes the picks, since Apps Script has no session state by
-  // default. For production, write picks to a "Sessions" sheet keyed by a
-  // random token instead of encoding in the payload.
   const assessmentId = Utilities.getUuid();
-  const sessionSheet = getOrCreateSessionSheet();
-  sessionSheet.appendRow([assessmentId, courseId, JSON.stringify(picked), new Date()]);
 
+  // For each question, shuffle the four options and record which shuffled
+  // position (0-3) is correct. That answer key is written ONLY to the
+  // Sessions sheet, never returned to the browser — submitAssessment looks
+  // it up by assessmentId to score the attempt server-side. This is the
+  // fix for a real issue: the previous version of this function sent an
+  // `isCorrect` flag on every option straight to the client, which meant
+  // anyone opening browser dev tools could read the correct answer before
+  // even attempting the question.
+  const answerKey = [];
   const questionsForClient = picked.map(r => {
     const [, question, a, b, c, d, correctIndex, weight] = r;
-    const options = shuffleArray([
-      { text: a, isCorrect: correctIndex === 0 },
-      { text: b, isCorrect: correctIndex === 1 },
-      { text: c, isCorrect: correctIndex === 2 },
-      { text: d, isCorrect: correctIndex === 3 }
-    ]);
-    return { q: question, weight, options };
+    const optionTexts = [a, b, c, d];
+    const shuffledOrder = shuffleArray([0, 1, 2, 3]);
+    const shuffledTexts = shuffledOrder.map(i => optionTexts[i]);
+    const correctShuffledPosition = shuffledOrder.indexOf(Number(correctIndex));
+    answerKey.push({ correctIndex: correctShuffledPosition, weight: Number(weight) });
+    return { q: question, weight: Number(weight), options: shuffledTexts.map(text => ({ text })) };
   });
 
+  const sessionSheet = getOrCreateSessionSheet();
+  sessionSheet.appendRow([assessmentId, courseId, JSON.stringify(answerKey), new Date(), 'open']);
+
   return { assessmentId, questions: questionsForClient };
+}
+
+// Scores an attempt using the answer key stored server-side at getAssessment
+// time, so the browser never has access to which option is correct. Also
+// logs the attempt and, on a fail, emails the retake notice. Each
+// assessmentId can only be submitted once — resubmitting an already-used
+// or unknown assessmentId is rejected, which also closes off the mid-quiz
+// "reload and resubmit" loophole.
+function submitAssessment(body) {
+  const { assessmentId, answers, memberCode, memberName, memberEmail, courseId, courseTitle } = body;
+
+  const sessionSheet = getOrCreateSessionSheet();
+  const data = sessionSheet.getDataRange().getValues();
+  let rowIndex = -1;
+  let answerKey = null;
+  for (let i = 1; i < data.length; i++) {
+    if (data[i][0] === assessmentId) {
+      if (data[i][4] === 'used') return { error: 'This assessment has already been submitted.' };
+      rowIndex = i;
+      answerKey = JSON.parse(data[i][2]);
+      break;
+    }
+  }
+  if (!answerKey) return { error: 'Assessment session not found or expired.' };
+
+  // Mark the session used immediately so a duplicate submission can't score twice.
+  sessionSheet.getRange(rowIndex + 1, 5).setValue('used');
+
+  let totalWeight = 0, earnedWeight = 0;
+  answerKey.forEach((key, i) => {
+    totalWeight += key.weight;
+    const selected = answers[i];
+    if (selected === key.correctIndex) earnedWeight += key.weight;
+  });
+  const score = Math.round((earnedWeight / totalWeight) * 100);
+  const passed = score >= 90;
+
+  const attemptsSheet = getOrCreateSheet('Attempts', ['memberCode', 'courseId', 'passed', 'score', 'dateAttempted']);
+  attemptsSheet.appendRow([memberCode, courseId, passed, score, new Date()]);
+
+  if (!passed && memberEmail) {
+    sendFailEmail(memberEmail, memberName, courseTitle, score, courseId);
+  }
+
+  return { passed, score };
 }
 
 function getOrCreateSessionSheet() {
@@ -175,24 +224,15 @@ function getOrCreateSessionSheet() {
   let sheet = ss.getSheetByName('Sessions');
   if (!sheet) {
     sheet = ss.insertSheet('Sessions');
-    sheet.appendRow(['assessmentId', 'courseId', 'pickedQuestionsJSON', 'createdAt']);
+    sheet.appendRow(['assessmentId', 'courseId', 'answerKeyJSON', 'createdAt', 'status']);
   }
   return sheet;
 }
 
 /* ---------- Attempts (enforces one attempt per completion, server-side) ---------- */
-function recordAttempt(body) {
-  const { memberCode, memberName, memberEmail, courseId, courseTitle, passed, score } = body;
-  const sheet = getOrCreateSheet('Attempts', ['memberCode', 'courseId', 'passed', 'score', 'dateAttempted']);
-  const now = new Date();
-  sheet.appendRow([memberCode, courseId, passed, score, now]);
-
-  if (!passed && memberEmail) {
-    sendFailEmail(memberEmail, memberName, courseTitle, score, courseId);
-  }
-
-  return { ok: true };
-}
+/* recordAttempt was removed — submitAssessment (above, next to
+   getAssessment) now handles scoring, attempt logging, and the fail email
+   together, since it's the only place that can trust the score. */
 
 function sendFailEmail(email, name, courseTitle, score, courseId) {
   const retakeUrl = 'https://tolnigeria.com/ath-academy/?course=' + encodeURIComponent(courseId);
@@ -332,13 +372,50 @@ function shuffleArray(arr) {
  * to the Questions tab over time (same columns: courseId,
  * question, optionA-D, correctIndex, weight).
  * ============================================================ */
+// If you already ran seedAcademyData() before this update, your Courses
+// tab only has the original 4 columns (id, tag, title, blurb) and
+// seedAcademyData() won't touch it again since it skips any tab that
+// already has rows. Run this once instead — it adds initials, thumb, and
+// learnJSON to each existing course row in place, matching what the
+// catalog and course overview page now expect. Safe to run more than
+// once; it just overwrites those three columns with the same values.
+function backfillCourseMetadata() {
+  const courses = [
+    { id: 'digital-marketing', initials: 'DM', thumb: 'assets/thumbs/digital-marketing.png', learn: ['Tell the difference between SEO, SEM, and paid social', 'Read the metrics that actually matter (CTR, CPC, conversion rate)', 'Plan a content calendar around a real audience', 'Build a basic email funnel from signup to sale'] },
+    { id: 'capcut-editing', initials: 'CC', thumb: 'assets/thumbs/capcut.png', learn: ['Trim, split, and arrange clips on the CapCut timeline', "Add text, captions, and transitions that don't feel default", 'Use basic color and audio adjustments', 'Export at the right resolution for each platform'] },
+    { id: 'tiktok-ads', initials: 'TT', thumb: 'assets/thumbs/tiktok-ads.png', learn: ['Set up a TikTok Ads Manager account and campaign structure', 'Choose the right objective and targeting for a goal', 'Understand budget types and bidding basics', 'Read campaign results and know what to adjust'] },
+    { id: 'google-docs-basics', initials: 'GD', thumb: 'assets/thumbs/google-docs.png', learn: ["Format and structure a document so it's easy to read", 'Share and set the right permission level for each collaborator', 'Use comments and suggestions for feedback without messy edits', 'Work with headers, page breaks, and basic layout tools'] },
+    { id: 'social-media-manager', initials: 'SM', thumb: 'assets/thumbs/social-media-manager.png', learn: ['Build a content calendar tied to real goals, not guesswork', 'Know which metrics matter for which platform', 'Handle comments, DMs, and community management professionally', 'Put together a simple monthly performance report'] }
+  ];
+
+  const sheet = getOrCreateSheet('Courses', ['id', 'tag', 'title', 'blurb', 'initials', 'thumb', 'learnJSON']);
+  const data = sheet.getDataRange().getValues();
+
+  // Make sure the header row itself has the newer column names, in case
+  // this tab was created before they existed.
+  if (data[0].length < 7) {
+    sheet.getRange(1, 5, 1, 3).setValues([['initials', 'thumb', 'learnJSON']]);
+  }
+
+  let updated = 0;
+  courses.forEach(c => {
+    const rowIndex = data.findIndex((r, i) => i > 0 && r[0] === c.id);
+    if (rowIndex > -1) {
+      sheet.getRange(rowIndex + 1, 5, 1, 3).setValues([[c.initials, c.thumb, JSON.stringify(c.learn)]]);
+      updated++;
+    }
+  });
+
+  Logger.log('Backfilled metadata for %s of %s courses.', updated, courses.length);
+}
+
 function seedAcademyData() {
   const courses = [
-    { id: 'digital-marketing', tag: 'Digital Marketing', title: 'Digital Marketing Full Course', blurb: 'SEO, paid ads, email, and content — the full toolkit for getting a business found online.' },
-    { id: 'capcut-editing', tag: 'Video Editing', title: 'CapCut for Beginners', blurb: "Mobile video editing from a blank timeline to a polished, ready-to-post clip." },
-    { id: 'tiktok-ads', tag: 'Paid Advertising', title: 'How to Run TikTok Ads', blurb: "Setting up, targeting, and reading results on TikTok's ad platform." },
-    { id: 'google-docs-basics', tag: 'Digital Skills', title: 'How to Use Google Docs', blurb: 'Everyday document skills — formatting, sharing, and collaborating without friction.' },
-    { id: 'social-media-manager', tag: 'Social Media', title: 'Social Media Manager Full Course', blurb: 'Planning, posting, and reporting on social accounts the way a professional manager does.' }
+    { id: 'digital-marketing', tag: 'Digital Marketing', title: 'Digital Marketing Full Course', blurb: 'SEO, paid ads, email, and content — the full toolkit for getting a business found online.', initials: 'DM', thumb: 'assets/thumbs/digital-marketing.png', learn: ['Tell the difference between SEO, SEM, and paid social', 'Read the metrics that actually matter (CTR, CPC, conversion rate)', 'Plan a content calendar around a real audience', 'Build a basic email funnel from signup to sale'] },
+    { id: 'capcut-editing', tag: 'Video Editing', title: 'CapCut for Beginners', blurb: "Mobile video editing from a blank timeline to a polished, ready-to-post clip.", initials: 'CC', thumb: 'assets/thumbs/capcut.png', learn: ['Trim, split, and arrange clips on the CapCut timeline', "Add text, captions, and transitions that don't feel default", 'Use basic color and audio adjustments', 'Export at the right resolution for each platform'] },
+    { id: 'tiktok-ads', tag: 'Paid Advertising', title: 'How to Run TikTok Ads', blurb: "Setting up, targeting, and reading results on TikTok's ad platform.", initials: 'TT', thumb: 'assets/thumbs/tiktok-ads.png', learn: ['Set up a TikTok Ads Manager account and campaign structure', 'Choose the right objective and targeting for a goal', 'Understand budget types and bidding basics', 'Read campaign results and know what to adjust'] },
+    { id: 'google-docs-basics', tag: 'Digital Skills', title: 'How to Use Google Docs', blurb: 'Everyday document skills — formatting, sharing, and collaborating without friction.', initials: 'GD', thumb: 'assets/thumbs/google-docs.png', learn: ["Format and structure a document so it's easy to read", 'Share and set the right permission level for each collaborator', 'Use comments and suggestions for feedback without messy edits', 'Work with headers, page breaks, and basic layout tools'] },
+    { id: 'social-media-manager', tag: 'Social Media', title: 'Social Media Manager Full Course', blurb: 'Planning, posting, and reporting on social accounts the way a professional manager does.', initials: 'SM', thumb: 'assets/thumbs/social-media-manager.png', learn: ['Build a content calendar tied to real goals, not guesswork', 'Know which metrics matter for which platform', 'Handle comments, DMs, and community management professionally', 'Put together a simple monthly performance report'] }
   ];
 
   const lessons = [
@@ -458,9 +535,9 @@ function seedAcademyData() {
     ['social-media-manager', 'What best describes the role of a social media manager overall?', 'Only designing graphics', "Planning, publishing, engaging, and reporting on a brand's social presence toward real goals", 'Managing the company payroll', 'Writing legal contracts', 1, 1]
   ];
 
-  const coursesSheet = getOrCreateSheet('Courses', ['id', 'tag', 'title', 'blurb']);
+  const coursesSheet = getOrCreateSheet('Courses', ['id', 'tag', 'title', 'blurb', 'initials', 'thumb', 'learnJSON']);
   if (coursesSheet.getLastRow() <= 1) {
-    courses.forEach(c => coursesSheet.appendRow([c.id, c.tag, c.title, c.blurb]));
+    courses.forEach(c => coursesSheet.appendRow([c.id, c.tag, c.title, c.blurb, c.initials, c.thumb, JSON.stringify(c.learn)]));
   }
 
   const lessonsSheet = getOrCreateSheet('Lessons', ['courseId', 'lessonId', 'order', 'title', 'desc', 'youtubeId']);

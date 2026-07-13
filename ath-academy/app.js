@@ -1,11 +1,9 @@
 /* ============================================================
    ATH ACADEMY — app.js
-   Everything talks through the API object at the top. Right now
-   API is wired to MOCK_DB so you can see the full flow working
-   with no backend deployed. When Code.gs is live, replace the
-   body of each API method with a fetch() to your Apps Script
-   Web App URL — the function signatures already match what
-   Code.gs returns. Search "SWAP FOR LIVE" below.
+   Talks to the live Apps Script backend (Code.gs) — see the API
+   object below for the deployment URL. The five real courses,
+   their lessons, and question banks live in the ATH Recruiters
+   Directory spreadsheet now, not in this file.
 
    RULES ENCODED HERE (per the July decisions):
    - One assessment attempt per course completion. Fail, and the
@@ -18,299 +16,64 @@
      to resume, by design.
    - Certificates get a numeric certificate ID, logged centrally,
      checkable on the public verify page.
+   - Scoring happens server-side in Code.gs, which is the only
+     place that holds the answer key — the browser never sees
+     which option is correct, before or after answering.
    ============================================================ */
 
 const PASS_MARK = 90;                 // percent, weighted
-const QUESTIONS_PER_ASSESSMENT = 20;
 const ASSESSMENT_SECONDS = 50 * 60;   // 50-minute countdown
 
-/* ---------- The five real courses ----------
-   Each is a single long-form YouTube "full course" video, so each course
-   has one lesson for now. If you'd rather split a video into multiple
-   lessons by timestamp (chapters), send the chapter breakdown and I'll
-   split these into a proper multi-lesson sequence.
+/* ---------- API layer ----------
+   Wired to the live Apps Script deployment. If you ever redeploy Code.gs
+   under a NEW deployment (not "manage deployments > new version" on the
+   same one), update this URL to match. */
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxPt9A2DzRxJtnhye2SZ0gpw6arjAEchV83oCay8CodUhjos9Bd-pBYcUOEd3d2b4a3Qw/exec';
 
-   Question banks: these are starter sets (20 per course, 100 total),
-   written from general subject knowledge of each topic — not transcribed
-   from the videos, since I can't watch multi-hour footage. That's the
-   normal way a skills assessment works (it tests the subject, not verbatim
-   recall of one video), but getting each course to a full, well-calibrated
-   500 is a real content project on its own. Treat this batch as the
-   pattern and the first slice; I can keep generating more in follow-up
-   passes, or you can hand these to a subject-matter reviewer to expand.
-   The same 100 questions are mirrored in Code.gs's seedAcademyData() so
-   they land in your live Questions tab the first time you run it. */
-const MOCK_DB = {
-  member: {
-    "ATH/FCT/120726/0143": { name: "Chidinma Okafor", code: "ATH/FCT/120726/0143", email: "" }
-  },
-  courses: [
-    {
-      id: "digital-marketing",
-      tag: "Digital Marketing",
-      title: "Digital Marketing Full Course",
-      blurb: "SEO, paid ads, email, and content — the full toolkit for getting a business found online.",
-      initials: "DM",
-      thumb: "assets/thumbs/digital-marketing.png",
-      learn: [
-        "Tell the difference between SEO, SEM, and paid social",
-        "Read the metrics that actually matter (CTR, CPC, conversion rate)",
-        "Plan a content calendar around a real audience",
-        "Build a basic email funnel from signup to sale"
-      ],
-      lessons: [
-        { id: "l1", title: "Digital Marketing Full Course", desc: "The complete walkthrough — SEO, social, paid ads, email, and analytics.", youtubeId: "qnBhOVH1QQ8" }
-      ],
-      questionBank: [
-        { q: "What does SEO stand for?", options: ["Search Engine Optimization", "Site Element Order", "Search Email Outreach", "Sales Engagement Objective"], correct: 0, weight: 1 },
-        { q: "What does CTR measure?", options: ["Cost to reach", "Click-through rate", "Content transfer rate", "Customer trust rating"], correct: 1, weight: 2 },
-        { q: "A 'conversion' in digital marketing means:", options: ["A visitor leaves the site", "A visitor completes a desired action, like a purchase or signup", "An ad gets rejected", "A page loads slowly"], correct: 1, weight: 2 },
-        { q: "Which of these is 'owned media'?", options: ["A TV commercial", "A company's own website", "A newspaper article about the brand", "An influencer's unpaid post"], correct: 1, weight: 2 },
-        { q: "CPC stands for:", options: ["Cost per click", "Content per campaign", "Customer purchase cycle", "Click per conversion"], correct: 0, weight: 1 },
-        { q: "What is a 'bounce rate'?", options: ["The percentage of visitors who leave after viewing only one page", "The rate ads are rejected", "How fast a page loads", "The number of repeat customers"], correct: 0, weight: 2 },
-        { q: "Which channel is best suited for long-term, compounding organic traffic?", options: ["Paid search ads", "SEO content", "Flash sales", "Cold email blasts"], correct: 1, weight: 2 },
-        { q: "In email marketing, an 'open rate' measures:", options: ["How many recipients opened the email", "How many clicked a link inside it", "How many unsubscribed", "How many emails bounced"], correct: 0, weight: 1 },
-        { q: "A/B testing in marketing is used to:", options: ["Compare two versions of something to see which performs better", "Send two emails at once", "Split a budget between two platforms", "Test a website's loading speed"], correct: 0, weight: 2 },
-        { q: "What's the primary goal of a marketing funnel?", options: ["To decorate a landing page", "To guide a stranger toward becoming a customer step by step", "To reduce ad spend to zero", "To automate customer support"], correct: 1, weight: 2 },
-        { q: "Which metric best reflects ad efficiency, not just reach?", options: ["Impressions", "Return on ad spend (ROAS)", "Follower count", "Page likes"], correct: 1, weight: 3 },
-        { q: "What is a 'lead magnet'?", options: ["A paid advertisement", "Something of value offered in exchange for contact information", "A type of email spam filter", "A social media algorithm"], correct: 1, weight: 2 },
-        { q: "Retargeting ads are shown to:", options: ["Anyone on the internet", "People who have already interacted with your brand", "Only new customers", "Competitors' customers exclusively"], correct: 1, weight: 2 },
-        { q: "Which is a paid marketing channel?", options: ["Organic search results", "Google Ads", "Word of mouth", "A blog post"], correct: 1, weight: 1 },
-        { q: "What does 'organic reach' refer to?", options: ["Reach gained without paying for promotion", "Reach only from farming-related brands", "Reach from paid ads", "Reach measured in kilometers"], correct: 0, weight: 1 },
-        { q: "A buyer persona is:", options: ["A legal document", "A semi-fictional profile of your ideal customer", "A pricing strategy", "A type of ad format"], correct: 1, weight: 2 },
-        { q: "Which is the best first step before running paid ads?", options: ["Defining a clear target audience and goal", "Spending the entire budget on day one", "Skipping analytics setup", "Copying a competitor's ad exactly"], correct: 0, weight: 2 },
-        { q: "UGC in marketing stands for:", options: ["User-Generated Content", "Universal Growth Campaign", "Unique Global Currency", "Updated Graphic Content"], correct: 0, weight: 1 },
-        { q: "What's the main risk of ignoring analytics?", options: ["Ads load faster", "Decisions get made on guesswork instead of evidence", "SEO improves automatically", "Nothing — analytics is optional"], correct: 1, weight: 2 },
-        { q: "Which best describes 'content marketing'?", options: ["Buying ad space only", "Creating valuable content to attract and retain an audience", "Cold calling leads", "Printing flyers"], correct: 1, weight: 2 }
-      ]
-    },
-    {
-      id: "capcut-editing",
-      tag: "Video Editing",
-      title: "CapCut for Beginners",
-      blurb: "Mobile video editing from a blank timeline to a polished, ready-to-post clip.",
-      initials: "CC",
-      thumb: "assets/thumbs/capcut.png",
-      learn: [
-        "Trim, split, and arrange clips on the CapCut timeline",
-        "Add text, captions, and transitions that don't feel default",
-        "Use basic color and audio adjustments",
-        "Export at the right resolution for each platform"
-      ],
-      lessons: [
-        { id: "l1", title: "CapCut Course for Beginners", desc: "A full walkthrough of the CapCut interface and core editing workflow.", youtubeId: "68KNzsmBarM" }
-      ],
-      questionBank: [
-        { q: "In CapCut, what does 'splitting' a clip do?", options: ["Deletes the clip", "Cuts a clip into two separate pieces at the playhead", "Merges two clips", "Changes the clip's color"], correct: 1, weight: 1 },
-        { q: "Which tool would you use to make a clip play in slow motion?", options: ["Speed", "Crop", "Filter", "Voiceover"], correct: 0, weight: 2 },
-        { q: "What is a 'keyframe' used for?", options: ["Deleting audio", "Animating a property (like zoom or position) to change over time", "Adding subtitles automatically", "Locking the export settings"], correct: 1, weight: 3 },
-        { q: "What's the purpose of a transition between two clips?", options: ["To change the video's title", "To smooth or stylize the switch from one clip to the next", "To add background music", "To increase export resolution"], correct: 1, weight: 1 },
-        { q: "Which export setting most affects file size and clarity?", options: ["Resolution", "Font choice", "Caption position", "Track name"], correct: 0, weight: 2 },
-        { q: "Auto captions in CapCut are generated from:", options: ["The video's spoken audio", "The video's file name", "A random word list", "The thumbnail image"], correct: 0, weight: 1 },
-        { q: "What does the 'crop' tool primarily change?", options: ["The audio pitch", "The visible frame or aspect ratio of a clip", "The clip's speed", "The export format"], correct: 1, weight: 1 },
-        { q: "Which aspect ratio is standard for TikTok/Reels/Shorts?", options: ["16:9", "9:16", "1:1", "4:3"], correct: 1, weight: 2 },
-        { q: "What is a 'green screen' effect used for in CapCut?", options: ["Adding a green filter", "Replacing a solid-colored background with another image or video", "Making text green", "Boosting audio volume"], correct: 1, weight: 2 },
-        { q: "Lowering a clip's opacity in an overlay track does what?", options: ["Makes it louder", "Makes it more transparent", "Deletes the audio", "Speeds it up"], correct: 1, weight: 2 },
-        { q: "What's the benefit of using 'auto reframe' or similar tools?", options: ["It automatically repositions footage to fit a different aspect ratio", "It adds background music", "It corrects spelling in captions", "It compresses the file"], correct: 0, weight: 2 },
-        { q: "Which track type typically holds background music, separate from dialogue?", options: ["Text track", "Audio track", "Sticker track", "Filter track"], correct: 1, weight: 1 },
-        { q: "What does 'freeze frame' do?", options: ["Pauses the whole export", "Holds a single frame still for a chosen duration", "Deletes a clip's audio", "Reverses the clip"], correct: 1, weight: 2 },
-        { q: "Why would you use keyframed zoom on a static photo?", options: ["To fix audio sync", "To add subtle motion to an otherwise still image", "To change its file format", "To delete the background"], correct: 1, weight: 2 },
-        { q: "What's a safe way to keep captions readable on any background?", options: ["Use a text outline or background box behind the text", "Always use the smallest font size", "Only use white text", "Remove captions entirely"], correct: 0, weight: 2 },
-        { q: "Which comes first in a typical basic edit workflow?", options: ["Exporting", "Importing and arranging clips on the timeline", "Adding the final color grade", "Publishing to social media"], correct: 1, weight: 1 },
-        { q: "What does adjusting 'volume' on a specific clip affect?", options: ["Only that clip's audio level", "The entire project's audio", "The video's brightness", "The export resolution"], correct: 0, weight: 1 },
-        { q: "A jump cut is:", options: ["A hard cut between two similar shots that creates a noticeable jump", "A type of transition effect", "An audio distortion", "A caption style"], correct: 0, weight: 2 },
-        { q: "Why trim silence from the start of a clip before editing further?", options: ["It's required by CapCut", "It tightens pacing and avoids dead air", "It automatically improves resolution", "It changes the aspect ratio"], correct: 1, weight: 1 },
-        { q: "What's the purpose of exporting a draft at lower resolution first?", options: ["To check the edit quickly without a long export wait", "It's the only way to export", "To save the project permanently", "To add captions automatically"], correct: 0, weight: 1 }
-      ]
-    },
-    {
-      id: "tiktok-ads",
-      tag: "Paid Advertising",
-      title: "How to Run TikTok Ads",
-      blurb: "Setting up, targeting, and reading results on TikTok's ad platform.",
-      initials: "TT",
-      thumb: "assets/thumbs/tiktok-ads.png",
-      learn: [
-        "Set up a TikTok Ads Manager account and campaign structure",
-        "Choose the right objective and targeting for a goal",
-        "Understand budget types and bidding basics",
-        "Read campaign results and know what to adjust"
-      ],
-      lessons: [
-        { id: "l1", title: "How to Run TikTok Ads — Full Course", desc: "Campaign setup, targeting, creative, and reading your results.", youtubeId: "T1xOxbGUB-A" }
-      ],
-      questionBank: [
-        { q: "In TikTok Ads Manager, campaigns are built in which order?", options: ["Ad Group → Campaign → Ad", "Campaign → Ad Group → Ad", "Ad → Campaign → Ad Group", "There is no set structure"], correct: 1, weight: 2 },
-        { q: "What does the campaign 'objective' determine?", options: ["The font used in ads", "What TikTok optimizes delivery for, like traffic or conversions", "The account's username", "The video's aspect ratio only"], correct: 1, weight: 2 },
-        { q: "What is a 'lifetime budget'?", options: ["A fixed total spend across the whole campaign duration", "A daily spend cap only", "An unlimited budget", "A one-time payment to TikTok"], correct: 0, weight: 2 },
-        { q: "Narrow targeting (very small audience) usually risks:", options: ["Faster ad approval", "Limited delivery and higher costs per result", "Guaranteed higher sales", "Lower creative requirements"], correct: 1, weight: 2 },
-        { q: "What does CPM stand for?", options: ["Cost per thousand impressions", "Cost per minute", "Clicks per minute", "Campaign performance metric"], correct: 0, weight: 1 },
-        { q: "Which is typically true of native, less 'ad-like' TikTok creative?", options: ["It usually performs worse than polished commercials", "It often performs better because it blends with organic content", "It's not allowed on the platform", "It can't include a call to action"], correct: 1, weight: 2 },
-        { q: "What is a 'Spark Ad' on TikTok?", options: ["An ad format that boosts an existing organic post", "A type of banned content", "A discount code", "An automatic bidding strategy"], correct: 0, weight: 2 },
-        { q: "What should you check first if a campaign has high impressions but almost no clicks?", options: ["The account's payment method", "The ad creative and hook, and whether targeting matches the offer", "The company's tax ID", "The app's version number"], correct: 1, weight: 3 },
-        { q: "What does 'frequency' measure in ad reporting?", options: ["How often the ad account logs in", "The average number of times a unique user saw the ad", "How many ads are in a campaign", "How fast a video loads"], correct: 1, weight: 2 },
-        { q: "A pixel (or TikTok's equivalent tracking tag) is used to:", options: ["Track user actions on your website after they click an ad", "Change ad colors automatically", "Increase video resolution", "Block competitor ads"], correct: 0, weight: 2 },
-        { q: "What's a common first sign that an ad's creative is fatiguing (getting stale)?", options: ["Rising costs and falling engagement over time with no other changes", "Sudden drop in account balance", "A change in campaign objective", "The ad account gets suspended"], correct: 0, weight: 2 },
-        { q: "Which metric most directly reflects cost-efficiency toward a sale?", options: ["Cost per result / cost per acquisition", "Total impressions", "Number of ad groups", "Video watch count alone"], correct: 0, weight: 3 },
-        { q: "What is 'lookalike' or 'similar audience' targeting based on?", options: ["Random selection", "Characteristics of an existing audience, like past customers", "Geographic location only", "Ad spend amount"], correct: 1, weight: 2 },
-        { q: "Why run a small test budget before scaling a campaign?", options: ["It's required by law", "To validate performance before committing a larger budget", "It guarantees approval", "It increases the CPM automatically"], correct: 1, weight: 2 },
-        { q: "What typically happens if an ad violates TikTok's advertising policies?", options: ["It gets boosted for visibility", "It gets rejected or taken down during review", "Nothing changes", "The advertiser is refunded automatically"], correct: 1, weight: 1 },
-        { q: "A strong hook in the first few seconds of a TikTok ad mainly helps:", options: ["Increase watch time and reduce early drop-off", "Lower the video's resolution", "Bypass the review process", "Reduce targeting options"], correct: 0, weight: 2 },
-        { q: "What does 'optimization event' refer to in campaign setup?", options: ["The specific action TikTok's algorithm tries to get more of, like purchases", "The time of day ads run", "The ad's file format", "The account's creation date"], correct: 0, weight: 2 },
-        { q: "Broad targeting with strong creative often performs well because:", options: ["It gives the algorithm more room to find responsive users", "It always costs less per impression", "It skips the review process", "It disables tracking"], correct: 0, weight: 2 },
-        { q: "What's a reasonable first move if cost per result is rising sharply?", options: ["Immediately delete the ad account", "Review targeting, creative fatigue, and budget pacing before making changes", "Increase the budget tenfold", "Switch the business category"], correct: 1, weight: 2 },
-        { q: "Which is NOT typically a campaign objective category?", options: ["Traffic", "Conversions", "Weather forecasting", "Awareness/Reach"], correct: 2, weight: 1 }
-      ]
-    },
-    {
-      id: "google-docs-basics",
-      tag: "Digital Skills",
-      title: "How to Use Google Docs",
-      blurb: "Everyday document skills — formatting, sharing, and collaborating without friction.",
-      initials: "GD",
-      thumb: "assets/thumbs/google-docs.png",
-      learn: [
-        "Format and structure a document so it's easy to read",
-        "Share and set the right permission level for each collaborator",
-        "Use comments and suggestions for feedback without messy edits",
-        "Work with headers, page breaks, and basic layout tools"
-      ],
-      lessons: [
-        { id: "l1", title: "Google Docs for Beginners", desc: "A full walkthrough of formatting, sharing, and collaborating in Google Docs.", youtubeId: "RzNVGQYOmFk" }
-      ],
-      questionBank: [
-        { q: "What does 'Suggesting' mode do in Google Docs?", options: ["Deletes text permanently", "Tracks proposed edits without changing the original text until accepted", "Shares the doc publicly", "Locks the document from editing"], correct: 1, weight: 2 },
-        { q: "Which sharing permission lets someone edit but not change sharing settings?", options: ["Viewer", "Commenter", "Editor", "Owner"], correct: 2, weight: 2 },
-        { q: "What is the fastest way to leave feedback on a specific sentence without editing it?", options: ["Delete the sentence", "Add a comment", "Change the font color", "Print the document"], correct: 1, weight: 1 },
-        { q: "What does 'Version history' let you do?", options: ["Change the document's owner", "See and restore earlier versions of the document", "Convert the file to PDF", "Add collaborators"], correct: 1, weight: 2 },
-        { q: "Which feature automatically generates a list of headings for navigation?", options: ["Table of contents", "Footnotes", "Page numbers", "Word count"], correct: 0, weight: 2 },
-        { q: "What's the difference between 'Anyone with the link' and inviting specific people?", options: ["No difference at all", "Link sharing opens access to anyone who has the URL, not just named people", "Named invites are always public", "Link sharing is more secure"], correct: 1, weight: 2 },
-        { q: "Which shortcut typically opens 'Find and replace'?", options: ["Ctrl/Cmd + H", "Ctrl/Cmd + P", "Ctrl/Cmd + B", "Ctrl/Cmd + S"], correct: 0, weight: 1 },
-        { q: "What does applying a 'Heading' style (vs. just bold text) enable?", options: ["Nothing extra beyond appearance", "Structure that powers the table of contents and document outline", "Automatic translation", "Faster printing"], correct: 1, weight: 2 },
-        { q: "How does Google Docs typically save changes?", options: ["Manually only, via Ctrl/Cmd+S", "Automatically, as you type", "Only when you close the tab", "Only when a collaborator approves"], correct: 1, weight: 1 },
-        { q: "What is the purpose of 'page break' in a document?", options: ["To delete the current page", "To force the next content to start on a new page", "To change the font", "To add a comment"], correct: 1, weight: 1 },
-        { q: "Which tool would you use to insert a chart from Google Sheets into a Doc?", options: ["Insert > Chart > From Sheets", "Format > Paragraph styles", "Tools > Spelling", "File > Print"], correct: 0, weight: 2 },
-        { q: "What does 'Explore' (or a similar research tool) help you do?", options: ["Search the web and insert citations without leaving the document", "Automatically fix all typos", "Change the document's owner", "Compress images"], correct: 0, weight: 1 },
-        { q: "Why use 'Viewer' access instead of 'Editor' for some collaborators?", options: ["It's the only free option", "To let people read without risking accidental changes", "Viewer access is required for comments", "There's no functional difference"], correct: 1, weight: 2 },
-        { q: "What happens when you resolve a comment thread?", options: ["The comment is permanently deleted with no record", "It's marked resolved and hidden from the main view, but still recoverable", "The document is locked", "All suggestions are auto-accepted"], correct: 1, weight: 2 },
-        { q: "Which feature helps keep consistent formatting across a long document?", options: ["Paragraph/heading styles", "Random font changes", "Manual spacing on every line", "Copy-pasting from different sources"], correct: 0, weight: 2 },
-        { q: "What's a quick way to convert a Google Doc to a downloadable Word file?", options: ["File > Download > Microsoft Word (.docx)", "It's not possible", "Insert > Word", "Tools > Convert"], correct: 0, weight: 1 },
-        { q: "What does '@mentioning' someone in a comment typically do?", options: ["Nothing, it's just text", "Notifies that person and can grant them access if they don't have it", "Deletes their access", "Changes their permission to Owner"], correct: 1, weight: 2 },
-        { q: "Why might you use 'Bookmark' or internal links in a long document?", options: ["To jump directly to a specific section from elsewhere in the doc", "To share the document externally", "To change page orientation", "To lock specific paragraphs"], correct: 0, weight: 2 },
-        { q: "Which best describes 'Offline mode' in Google Docs?", options: ["Editing is impossible without internet", "You can view and edit certain docs without an active connection, syncing once reconnected", "It permanently disables sharing", "It only works on desktop"], correct: 1, weight: 1 },
-        { q: "What is the benefit of using bullet or numbered lists over plain paragraphs for steps?", options: ["No real benefit", "Improves scannability and clarifies sequence or grouping", "It changes the document language", "It reduces file size significantly"], correct: 1, weight: 1 }
-      ]
-    },
-    {
-      id: "social-media-manager",
-      tag: "Social Media",
-      title: "Social Media Manager Full Course",
-      blurb: "Planning, posting, and reporting on social accounts the way a professional manager does.",
-      initials: "SM",
-      thumb: "assets/thumbs/social-media-manager.png",
-      learn: [
-        "Build a content calendar tied to real goals, not guesswork",
-        "Know which metrics matter for which platform",
-        "Handle comments, DMs, and community management professionally",
-        "Put together a simple monthly performance report"
-      ],
-      lessons: [
-        { id: "l1", title: "Social Media Manager Full Course", desc: "Strategy, content planning, publishing, community management, and reporting.", youtubeId: "bgrA3kuZpWk" }
-      ],
-      questionBank: [
-        { q: "What should a content calendar be built around first?", options: ["Whatever is trending that day", "Clear goals and the audience you're trying to reach", "The manager's personal preferences", "Competitor copy-paste"], correct: 1, weight: 2 },
-        { q: "Engagement rate is generally calculated as:", options: ["Total followers divided by posts", "Interactions (likes, comments, shares) relative to reach or followers", "Number of hashtags used", "Posting frequency per week"], correct: 1, weight: 2 },
-        { q: "Why track reach separately from impressions?", options: ["They're always identical", "Reach counts unique viewers, impressions count total views including repeats", "Reach only applies to paid posts", "Impressions don't exist on social platforms"], correct: 1, weight: 2 },
-        { q: "What's a reasonable first response to a negative public comment from a real customer?", options: ["Delete it immediately without response", "Acknowledge it professionally and move detailed resolution to a private channel", "Argue publicly to defend the brand", "Ignore it completely"], correct: 1, weight: 3 },
-        { q: "A 'content pillar' is:", options: ["A physical prop used in photos", "A core recurring theme that content is organized around", "A paid ad format", "A type of analytics dashboard"], correct: 1, weight: 2 },
-        { q: "Why does posting consistency generally matter?", options: ["It has no effect on performance", "It builds audience expectation and can support algorithmic visibility", "It guarantees virality", "Platforms penalize any regular schedule"], correct: 1, weight: 2 },
-        { q: "What belongs in a basic monthly social media report?", options: ["Only follower count", "Key metrics against goals, top-performing content, and takeaways", "A list of every single post with no analysis", "Competitor login credentials"], correct: 1, weight: 2 },
-        { q: "Which is a community management task?", options: ["Designing the company logo", "Responding to comments and DMs in a timely, on-brand way", "Filing tax returns", "Negotiating office rent"], correct: 1, weight: 1 },
-        { q: "What's the risk of posting the same content identically across every platform?", options: ["No risk, platforms are interchangeable", "Missing each platform's format, tone, and audience expectations", "Guaranteed higher engagement everywhere", "Accounts get automatically merged"], correct: 1, weight: 2 },
-        { q: "A 'call to action' in a social post is meant to:", options: ["Decorate the caption", "Tell the viewer exactly what to do next, like 'comment below' or 'shop now'", "Increase the character count", "Replace the need for a caption"], correct: 1, weight: 1 },
-        { q: "Why review analytics before planning the next month's content?", options: ["It's not necessary if content looks good", "To repeat what worked and adjust or drop what didn't", "Analytics only matter for paid ads", "To copy a competitor's exact calendar"], correct: 1, weight: 2 },
-        { q: "What does 'social listening' involve?", options: ["Only posting content, never reading responses", "Monitoring mentions, comments, and conversations about a brand or topic", "Turning off comments", "Deleting negative reviews"], correct: 1, weight: 2 },
-        { q: "Which is generally true about short-form video across platforms right now?", options: ["It's a minor, declining format", "It tends to drive strong reach relative to other formats", "It performs identically to static images always", "It's banned on most platforms"], correct: 1, weight: 2 },
-        { q: "What's the value of a brand voice/tone guide for a social team?", options: ["It restricts creativity with no benefit", "It keeps posts consistent even when different people are writing them", "It's only needed for legal documents", "It replaces the need for a content calendar"], correct: 1, weight: 2 },
-        { q: "When a post underperforms, what's a useful first diagnostic question?", options: ["Was the timing, format, or hook off compared to what usually works?", "Should the account be deleted?", "Is the platform broken?", "Should posting stop entirely?"], correct: 0, weight: 2 },
-        { q: "What's a practical reason to repurpose one piece of content across formats (e.g. a video into a carousel)?", options: ["It's required by every platform's terms of service", "It extends the value of one idea without starting from scratch each time", "It guarantees identical performance everywhere", "It removes the need for analytics"], correct: 1, weight: 2 },
-        { q: "Handling a crisis or PR issue on social media should generally start with:", options: ["Posting jokes to lighten the mood", "A calm, honest, and timely acknowledgment, escalated internally as needed", "Deleting the account", "Blocking everyone who comments"], correct: 1, weight: 2 },
-        { q: "What's the purpose of A/B testing captions or thumbnails?", options: ["To waste time", "To learn what resonates better with the audience using evidence, not guesses", "It's only possible with a huge budget", "To confuse the algorithm"], correct: 1, weight: 2 },
-        { q: "Why is knowing peak audience activity times useful?", options: ["It has no real impact on reach", "Posting when your audience is active tends to support better initial engagement", "It's only relevant for paid campaigns", "It guarantees a post goes viral"], correct: 1, weight: 1 },
-        { q: "What best describes the role of a social media manager overall?", options: ["Only designing graphics", "Planning, publishing, engaging, and reporting on a brand's social presence toward real goals", "Managing the company payroll", "Writing legal contracts"], correct: 1, weight: 1 }
-      ]
-    }
-  ]
-};
+async function apiGet(params) {
+  const url = APPS_SCRIPT_URL + '?' + new URLSearchParams(params).toString();
+  const res = await fetch(url);
+  return await res.json();
+}
 
-/* ---------- API layer ---------- */
+async function apiPost(body) {
+  // Apps Script's CORS handling doesn't play well with a JSON preflight
+  // request, so this sends as text/plain — Code.gs still parses the body
+  // as JSON on its end (JSON.parse(e.postData.contents)), it just avoids
+  // the browser trying an OPTIONS preflight that Apps Script won't answer.
+  const res = await fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(body)
+  });
+  return await res.json();
+}
+
 const API = {
   async verifyMember(code) {
-    // SWAP FOR LIVE:
-    // const res = await fetch(APPS_SCRIPT_URL + "?action=verifyMember&code=" + encodeURIComponent(code));
-    // return await res.json();
-    await sleep(250);
-    const member = MOCK_DB.member[code.trim().toUpperCase()];
-    return member ? { ok: true, member } : { ok: false };
+    return await apiGet({ action: 'verifyMember', code });
   },
   async getCourses() {
-    await sleep(150);
-    return MOCK_DB.courses.map(c => ({ id: c.id, tag: c.tag, title: c.title, blurb: c.blurb, initials: c.initials, thumb: c.thumb, lessonCount: c.lessons.length }));
+    return await apiGet({ action: 'getCourses' });
   },
   async getCourse(courseId) {
-    await sleep(150);
-    return MOCK_DB.courses.find(c => c.id === courseId);
+    return await apiGet({ action: 'getCourse', courseId });
   },
   async getAssessment(courseId) {
-    // SWAP FOR LIVE: Code.gs does this same selection server-side against the
-    // full 500-row bank and returns an assessmentId. The correct answers are
-    // held server-side in a Sessions row, not sent to the browser — scoring
-    // happens in submitAssessment(), server-side, so the pass/fail can't be
-    // read or edited from the network tab.
-    await sleep(200);
-    const course = MOCK_DB.courses.find(c => c.id === courseId);
-    const shuffled = shuffle([...course.questionBank]);
-    const picked = shuffled.slice(0, Math.min(QUESTIONS_PER_ASSESSMENT, shuffled.length));
-    const questions = picked.map(q => {
-      const optOrder = shuffle(q.options.map((text, i) => ({ text, isCorrect: i === q.correct })));
-      return { q: q.q, weight: q.weight, options: optOrder };
-    });
-    return { assessmentId: 'demo-' + Date.now(), questions };
+    return await apiGet({ action: 'getAssessment', courseId });
   },
-  async recordAttempt(payload) {
-    // SWAP FOR LIVE: POST payload to Code.gs -> recordAttempt. That handler
-    // logs the attempt, WhatsApp-notifies you via CallMeBot either way, and
-    // emails the member a "retake the course" link if they didn't pass.
-    await sleep(80);
-    return { ok: true };
+  async submitAssessment(payload) {
+    return await apiPost({ action: 'submitAssessment', ...payload });
   },
   async issueCertificate(payload) {
-    // SWAP FOR LIVE: POST payload to Code.gs -> issueCertificate, which
-    // generates the numeric certificate ID and logs it to the Certificates
-    // sheet. Doesn't email anything yet — that's a second call, once the
-    // browser has drawn the certificate image with the real number on it.
-    await sleep(150);
-    const certId = MOCK_DB._certSeq = (MOCK_DB._certSeq || 100000) + 1;
-    return { certId: String(certId) };
+    return await apiPost({ action: 'issueCertificate', ...payload });
   },
   async emailCertificate(payload) {
-    // SWAP FOR LIVE: POST payload (including the base64 PNG straight off
-    // the canvas) to Code.gs -> emailCertificate, which attaches it and
-    // sends it to the member's address on file.
-    await sleep(100);
-    return { ok: true };
+    return await apiPost({ action: 'emailCertificate', ...payload });
   }
 };
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
 
 /* ---------- Local progress store ----------
    Course progress (which lessons are done, and whether the course
@@ -601,11 +364,10 @@ function renderQuestion() {
 }
 
 document.getElementById('submit-answer').addEventListener('click', () => {
-  const { questions, index, selectedOption } = state.quiz;
-  const q = questions[index];
-  state.quiz.answers.push({ correct: q.options[selectedOption].isCorrect, weight: q.weight });
+  const { selectedOption } = state.quiz;
+  state.quiz.answers.push(selectedOption);
 
-  if (index < questions.length - 1) {
+  if (state.quiz.index < state.quiz.questions.length - 1) {
     state.quiz.index++;
     renderQuestion();
   } else {
@@ -613,29 +375,44 @@ document.getElementById('submit-answer').addEventListener('click', () => {
   }
 });
 
-function finishAssessment(timedOut) {
+async function finishAssessment(timedOut) {
   clearInterval(state.quiz.timer);
   window.removeEventListener('beforeunload', warnBeforeUnload);
 
-  // Any question left unanswered because of a timeout counts as wrong.
-  const { questions, answers } = state.quiz;
+  // Any question left unanswered because of a timeout is submitted as -1,
+  // which can never match a real option index, so it's scored as wrong.
+  const { questions, answers, assessmentId } = state.quiz;
   while (answers.length < questions.length) {
-    answers.push({ correct: false, weight: questions[answers.length].weight });
+    answers.push(-1);
   }
 
-  const totalWeight = answers.reduce((s, a) => s + a.weight, 0);
-  const earnedWeight = answers.reduce((s, a) => s + (a.correct ? a.weight : 0), 0);
-  const pct = Math.round((earnedWeight / totalWeight) * 100);
-  const passed = pct >= PASS_MARK;
+  document.getElementById('result-heading').textContent = 'Scoring your attempt…';
+  showScreen('screen-result');
+  document.getElementById('result-badge').textContent = '—';
+  document.getElementById('result-badge').className = 'result-badge';
+  document.getElementById('result-score').textContent = '';
+  document.getElementById('result-actions').innerHTML = '';
 
-  API.recordAttempt({
+  // Scoring happens server-side — Code.gs holds the answer key from when
+  // the assessment was generated and this is the only place the pass/fail
+  // is actually decided, so it can't be spoofed from the browser.
+  const result = await API.submitAssessment({
+    assessmentId,
+    answers,
     memberCode: state.member.code,
     memberName: state.member.name,
     memberEmail: state.member.email || '',
     courseId: state.currentCourse.id,
-    courseTitle: state.currentCourse.title,
-    passed, score: pct
+    courseTitle: state.currentCourse.title
   });
+
+  if (result.error) {
+    document.getElementById('result-heading').textContent = "Something went wrong scoring that attempt.";
+    document.getElementById('result-score').textContent = result.error;
+    return;
+  }
+
+  const { passed, score: pct } = result;
 
   document.getElementById('result-badge').textContent = passed ? 'Passed' : 'Not this time';
   document.getElementById('result-badge').className = 'result-badge ' + (passed ? 'pass' : 'fail');
