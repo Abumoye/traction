@@ -113,6 +113,36 @@ If you ever edit the Apps Script code later, you need to create a **new
 deployment** (Deploy → Manage deployments → Edit → New version) for the
 changes to go live. Editing the code alone does not update the live URL.
 
+## Partnerships Form (optional extra columns)
+
+The form on `/partnerships/` sends two extra fields the service page forms
+don't have: `category` (the partnership category the person picked) and
+`message` (what they typed about their organization). The script above
+will keep working exactly as before even without any changes, it just
+won't record those two fields.
+
+To capture them too:
+
+1. In the **Leads** tab, add two more headers to row 1:
+   `... | Company Name | Email | Category | Message`
+2. In the Apps Script editor, update the `sheet.appendRow([...])` call to:
+   ```javascript
+   sheet.appendRow([
+     new Date(),
+     data.sourcePage || '',
+     data.name || '',
+     data.phone || '',
+     data.companyName || '',
+     data.email || '',
+     data.category || '',
+     data.message || ''
+   ]);
+   ```
+3. Create a **new deployment version** (Deploy → Manage deployments →
+   Edit → New version), same as any other script change.
+
+Everything else, the Web App URL, the email notification, stays the same.
+
 ## Testing it
 
 Once wired in, submit the form on any service page. Check the Sheet, a

@@ -35,7 +35,17 @@ document.addEventListener('DOMContentLoaded', function () {
             email: form.leadEmail.value.trim()
         };
 
-        if (!data.name || !data.phone || !data.companyName || !data.email) {
+        // Optional fields — only present on the Partnerships form. Left out
+        // of the payload entirely on pages that don't have them, so the
+        // service page forms above are unaffected.
+        if (form.leadCategory) data.category = form.leadCategory.value.trim();
+        if (form.leadMessage) data.message = form.leadMessage.value.trim();
+
+        const requiredValid = data.name && data.phone && data.companyName && data.email
+            && (!form.leadCategory || data.category)
+            && (!form.leadMessage || data.message);
+
+        if (!requiredValid) {
             statusEl.textContent = "Please fill in every field before submitting.";
             statusEl.style.color = "#c0392b";
             return;

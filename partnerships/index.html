@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Corporate Partnerships",
+  "url": "https://tolnigeria.com/partnerships/",
+  "description": "Traction Outsourcing Limited's corporate partnerships across HMO, logistics, security, real estate, health and wellness, travel, media, oil and gas, training, government, and philanthropic organizations.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Traction Outsourcing Limited",
+    "url": "https://tolnigeria.com/"
+  }
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tolnigeria.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Partnerships", "item": "https://tolnigeria.com/partnerships/" }
+  ]
+}
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Partnerships | HMO, Logistics, Security & More | Traction Outsourcing Limited</title>
+    <meta name="description" content="Traction Outsourcing partners with leading HMO, logistics, security, real estate, health, travel, and media brands across Nigeria. Find HMO companies in Abuja, group HMO for your staff, or family health cover through our partner network.">
+    <meta name="keywords" content="HMO companies in Abuja, HMO for my staff, HMO for my family, group HMO abuja, corporate partnerships nigeria, traction outsourcing partnerships, health insurance for staff nigeria, business partnerships abuja">
+    <link rel="canonical" href="https://tolnigeria.com/partnerships/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Corporate Partnerships | Traction Outsourcing Limited">
+    <meta property="og:description" content="Traction Outsourcing partners with leading brands across HMO, logistics, security, real estate, health, travel, and media to open up more opportunities for our clients, employees, young Nigerians, and SMEs.">
+    <meta property="og:url" content="https://www.tolnigeria.com/partnerships/">
+    <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-partnerships.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Page-specific styling -->
+    <style>
+        .partnerships-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                        url('/images/africa.svg') no-repeat center center,
+                        url('/images/traction-hero-bg.png') no-repeat center center/cover;
+            color: var(--white-color);
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .partnerships-hero h1 { font-size: 42px; margin-bottom: 15px; font-weight: 700; color: var(--accent-color); }
+        .partnerships-hero p { font-size: 18px; max-width: 750px; margin: 0 auto; }
+
+        .section-title { text-align: center; color: var(--primary-color); font-size: 30px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .section-sub { text-align: center; color: #666; max-width: 700px; margin: 0 auto 40px; }
+
+        .filter-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 40px; }
+        .filter-pill {
+            background: var(--light-bg);
+            border: 1px solid #e2e2e2;
+            color: var(--text-color);
+            padding: 9px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .filter-pill:hover { border-color: var(--accent-color); color: var(--accent-color); }
+        .filter-pill.active { background: var(--accent-color); border-color: var(--accent-color); color: white; }
+
+        .partnership-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .partnership-card {
+            background: var(--light-bg);
+            border-radius: 8px;
+            border-top: 4px solid var(--accent-color);
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .partnership-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+        .partnership-card-img { height: 190px; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #666; font-style: italic; }
+        .partnership-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .partnership-card-body { padding: 22px; flex-grow: 1; display: flex; flex-direction: column; }
+        .partnership-tag {
+            display: inline-block;
+            background: white;
+            color: var(--accent-color);
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+        .partnership-card-body h3 { margin: 0 0 10px; color: var(--primary-color); font-size: 19px; line-height: 1.35; }
+        .partnership-card-body p { color: #666; font-size: 14px; margin: 0 0 15px; flex-grow: 1; }
+        .partnership-card-cta { font-size: 13px; font-weight: 700; color: var(--accent-color); margin-top: auto; }
+        .no-results { text-align: center; color: #888; padding: 40px 0; display: none; }
+
+        .partner-form-section { background: var(--light-bg); padding-top: 60px; }
+        .lead-form select, .lead-form textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: inherit;
+            box-sizing: border-box;
+            color: var(--text-color);
+            background: white;
+        }
+        .lead-form select:focus, .lead-form textarea:focus { outline: none; border-color: var(--accent-color); }
+        .lead-form textarea { resize: vertical; min-height: 100px; }
+
+        @media (max-width: 900px) {
+            .partnerships-hero { padding: 80px 20px; }
+            .partnerships-hero h1 { font-size: 30px; }
+            .partnerships-hero p { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <a href="/" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="/images/traction-outsourcing-logo.png" width="1129" height="200" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
+        </a>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="navMenu">
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <a href="#">Our Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                <div class="dropdown-content">
+                    <a href="/services/staff-outsourcing/" class="dropdown-item">Staff Outsourcing & HR Management</a>
+                    <a href="/services/startup-structuring/" class="dropdown-item">Startup Structuring</a>
+                    <a href="/services/corporate-restructuring/" class="dropdown-item">Corporate Restructuring</a>
+                    <a href="/services/business-advisory/" class="dropdown-item">Business Advisory</a>
+                    <a href="/services/employee-training/" class="dropdown-item">Employee Training</a>
+                    <a href="/services/corporate-retreats/" class="dropdown-item">Events & Retreats</a>
+                </div>
+            </div>
+            <a href="/events/">Events</a>
+            <a href="/articles/">Articles</a>
+
+            <div class="dropdown">
+                <a href="#">Our Brands <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                <div class="dropdown-content">
+                    <a href="/brands/properties/" class="dropdown-item">
+                        <img src="/images/traction-properties-and-managers.png" width="743" height="250" alt="Traction Properties Logo">
+                        Traction Properties
+                    </a>
+                    <a href="/brands/recruiters/" class="dropdown-item">
+                        <img src="/images/ath-recruiters.png" width="800" height="450" alt="ATH Recruiters Logo">
+                        ATH Recruiters
+                    </a>
+                </div>
+            </div>
+
+            <a href="/partnerships/">Partnerships</a>
+            <a href="/founder/">Our Founder</a>
+        </nav>
+    </header>
+
+    <main>
+
+    <!-- Hero -->
+    <section class="partnerships-hero">
+        <h1>Corporate Partnerships</h1>
+        <p>We partner with leading brands across sectors, HMO, logistics, security, real estate, health and wellness, travel, media, oil and gas, training, government, and philanthropic organizations, to open up more opportunities for our clients, our employees, young Nigerians, and SMEs.</p>
+    </section>
+
+    <!-- Partnerships List -->
+    <section class="section">
+        <h2 class="section-title">Our Latest Partnerships</h2>
+        <p class="section-sub">Every partnership is announced here first. Filter by category or browse them all, then click through to read the full story.</p>
+
+        <div class="filter-bar" id="filterBar">
+            <button class="filter-pill active" data-filter="all">All Partnerships</button>
+            <button class="filter-pill" data-filter="hmo">HMO</button>
+            <button class="filter-pill" data-filter="logistics">Logistics</button>
+            <button class="filter-pill" data-filter="security">Security</button>
+            <button class="filter-pill" data-filter="real-estate">Real Estate</button>
+            <button class="filter-pill" data-filter="health-wellness">Health & Wellness</button>
+            <button class="filter-pill" data-filter="travel">Travel</button>
+            <button class="filter-pill" data-filter="media-entertainment">Media & Entertainment</button>
+            <button class="filter-pill" data-filter="oil-gas">Oil & Gas</button>
+            <button class="filter-pill" data-filter="training-development">Training & Development</button>
+            <button class="filter-pill" data-filter="mou">MoU</button>
+            <button class="filter-pill" data-filter="government">Government Parastatals</button>
+            <button class="filter-pill" data-filter="philanthropists">Philanthropists</button>
+        </div>
+
+        <div class="partnership-grid" id="partnershipGrid">
+            <a href="/partnerships/hallmark-hmo.html" class="partnership-card" data-category="hmo">
+                <div class="partnership-card-img">Article Image Placeholder</div>
+                <div class="partnership-card-body">
+                    <span class="partnership-tag">HMO</span>
+                    <h3>Hallmark HMO Partners with Traction Outsourcing</h3>
+                    <p>A new partnership expanding HMO and healthcare access for Traction Outsourcing's clients, employees, and the wider community, including options for staff cover and family plans.</p>
+                    <span class="partnership-card-cta">Read the full story &rarr;</span>
+                </div>
+            </a>
+        </div>
+
+        <p class="no-results" id="noResults">No partnerships in this category yet. Check back soon.</p>
+    </section>
+
+    <!-- Partner With Us Form -->
+    <section class="section partner-form-section">
+        <div class="lead-form-wrap">
+            <h3>Do You Want To Partner With Us?</h3>
+            <p class="lead-form-sub">Leave your details and someone from our team will reach out.</p>
+            <form id="leadForm" class="lead-form">
+                <input type="text" name="leadName" placeholder="Full Name" required>
+                <input type="text" name="leadCompany" placeholder="Company / Organization Name" required>
+                <input type="tel" name="leadPhone" placeholder="Phone / WhatsApp Number" required>
+                <input type="email" name="leadEmail" placeholder="Email Address" required>
+                <select name="leadCategory" required>
+                    <option value="" disabled selected>Select a partnership category</option>
+                    <option value="HMO">HMO</option>
+                    <option value="Logistics">Logistics</option>
+                    <option value="Security">Security</option>
+                    <option value="Real Estate">Real Estate</option>
+                    <option value="Health & Wellness">Health & Wellness</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Media & Entertainment">Media & Entertainment</option>
+                    <option value="Oil & Gas">Oil & Gas</option>
+                    <option value="Training & Development">Training & Development</option>
+                    <option value="MoU">MoU</option>
+                    <option value="Government Parastatals">Government Parastatals</option>
+                    <option value="Philanthropists">Philanthropists</option>
+                    <option value="Other">Other</option>
+                </select>
+                <textarea name="leadMessage" placeholder="Tell us briefly about your organization and what you have in mind" required></textarea>
+                <button type="submit">Submit</button>
+                <p style="text-align: center; font-size: 12.5px; color: #888; margin: 4px 0 0;">(We will contact you soon.)</p>
+            </form>
+            <div id="leadFormStatus" class="lead-form-status"></div>
+        </div>
+    </section>
+    <script src="/js/lead-form.js"></script>
+
+    <!-- Complete Corporate Footer Section -->
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h3>Head Office</h3>
+                    <a href="https://maps.google.com/?q=Traction+Outsourcing+Limited+26+Algiers+Street+Wuse+Zone+5+Abuja" target="_blank">26, Algiers Street,<br>Wuse Zone 5, FCT,<br>Nigeria.</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Details</h3>
+                    <a href="tel:+2348052033145">0805 203 3145</a>
+                    <a href="tel:+2348125078087">0812 507 8087</a>
+                    <a href="tel:+2347078707777">0707 870 7777</a>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h3>Email</h3>
+                    <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/tractionoutsourcing" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@tractionoutsourcing" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Traction Outsourcing Limited. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy/" style="color: #888;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('toggle');
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('nav a:not([href="#"])').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            });
+        });
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('toggle');
+                navMenu.classList.remove('active');
+            }
+        });
+        document.querySelectorAll('nav > .dropdown > a[href="#"]').forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                trigger.parentElement.classList.toggle('open');
+            });
+        });
+
+        // Category filtering
+        const filterPills = document.querySelectorAll('.filter-pill');
+        const partnershipCards = document.querySelectorAll('.partnership-card');
+        const noResults = document.getElementById('noResults');
+
+        filterPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                filterPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                const filter = pill.getAttribute('data-filter');
+                let visibleCount = 0;
+
+                partnershipCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+            });
+        });
+    </script>
+
+</body>
+</html>
