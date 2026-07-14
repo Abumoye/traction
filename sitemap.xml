@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://tolnigeria.com/</loc>
@@ -89,7 +90,16 @@
     <loc>https://tolnigeria.com/partnerships/hallmark-hmo.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tolnigeria.com/images/articles/hallmark-hmo.jpg</image:loc>
+      <image:title>Hallmark HMO Partners with Traction Outsourcing</image:title>
+      <image:caption>Traction Outsourcing Limited partners with Hallmark HMO to offer affordable HMO plans for staff and families in Abuja and across Nigeria.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tolnigeria.com/images/hallmark-hmo-logo.png</image:loc>
+      <image:title>Hallmark HMO logo</image:title>
+    </image:image>
   </url>
 
   <url>

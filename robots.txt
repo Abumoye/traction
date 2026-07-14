@@ -1,4 +1,48 @@
+# Traction Outsourcing Limited — robots.txt
+# Everything on this site is public and meant to be found, including by
+# AI assistants answering questions like "HMO companies in Abuja" or
+# "Hallmark HMO Traction Outsourcing". Search and AI-answer crawlers are
+# explicitly allowed below so that intent is on record, not just implied
+# by the wildcard rule.
+
 User-agent: *
+Allow: /
+
+# Standard search engines
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI training opt-in (separate from Googlebot; does not affect
+# regular Google Search ranking either way)
+User-agent: Google-Extended
+Allow: /
+
+# Apple AI training opt-in
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://tolnigeria.com/sitemap.xml
