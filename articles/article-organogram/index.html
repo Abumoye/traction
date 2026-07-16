@@ -168,18 +168,12 @@
         .article-featured-image {
             width: 100%;
             height: 320px;
-            background: linear-gradient(135deg, #1a1a1a, #333333);
+            background-color: #e0e0e0;
             border-radius: 6px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            color: #ccc;
+            display: block;
+            object-fit: cover;
             margin-bottom: 28px;
         }
-        .article-featured-image i { font-size: 56px; color: var(--accent-color); }
-        .article-featured-image span { font-size: 13px; font-style: italic; color: #aaa; }
 
         .article-body { font-family: Georgia, 'Times New Roman', serif; font-size: 18px; color: #333; }
         .article-body .dek { font-size: 21px; font-weight: 700; line-height: 1.5; color: var(--primary-color); margin-bottom: 25px; }
@@ -241,7 +235,6 @@
             .article-body .dek { font-size: 18px; }
             .article-body h2 { font-size: 21px; }
             .article-featured-image { height: 220px; }
-            .article-featured-image i { font-size: 42px; }
             .org-row { flex-direction: column; align-items: center; gap: 16px; }
             .org-row::before { display: none; }
             .org-branch { width: 100%; max-width: 280px; }
@@ -314,10 +307,7 @@
             <span>5 min read</span>
         </div>
 
-        <div class="article-featured-image">
-            <i class="fa-solid fa-sitemap"></i>
-            <span>Featured Image Placeholder &mdash; Organogram Guide</span>
-        </div>
+        <img class="article-featured-image" src="/images/articles/organogram.jpg" width="1200" height="630" alt="Team reviewing an organogram and organizational structure" style="object-fit: cover;">
 
         <div class="article-body">
             <p class="dek">Designing a corporate organogram is not just about drawing lines on a piece of paper. It is about mapping the nervous system of your business.</p>
