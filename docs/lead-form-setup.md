@@ -143,6 +143,167 @@ To capture them too:
 
 Everything else, the Web App URL, the email notification, stays the same.
 
+## Retreat Registration Form (/events/register/)
+
+This form is different from the others: it collects nine fields instead of
+four, has an optional file upload for the payment receipt, and needs to send
+a confirmation email back to the person registering, not just a notification
+to you. It posts to the **same** Apps Script Web App as everything else,
+tagged with `formType: "retreat-registration"`, so you only have one script
+and one URL to manage.
+
+### Step 1: Add a new sheet tab
+
+In the same **Traction Outsourcing Leads** spreadsheet used for everything
+else, add a new tab called **Kigali Retreat 2026**. In row 1, add these
+headers exactly, one per column:
+
+`Timestamp | Full Name | Email | Phone | Company | Job Title | Gender | Nationality | Group Ticket | Group Size | Payment Made | Receipt Link`
+
+### Step 2: Create a Drive folder for receipts
+
+In Google Drive, create a folder called **Kigali Retreat 2026 Receipts**.
+Open it, and copy the folder ID out of the URL, it is the long string of
+letters and numbers after `folders/`:
+
+`https://drive.google.com/drive/folders/`**`1a2B3cD4EfGhIjKlMnOpQrStUvWxYz`**
+
+You will paste that ID into the script below.
+
+### Step 3: Replace the whole Apps Script
+
+Go back into **Extensions → Apps Script** on the same project you already
+have (the one handling the service page forms and the Partnerships form).
+Delete everything in the editor and paste this complete version in, then
+update the `RECEIPT_FOLDER_ID` line near the top with the folder ID from
+Step 2:
+
+```javascript
+var RECEIPT_FOLDER_ID = "PASTE_YOUR_DRIVE_FOLDER_ID_HERE";
+
+function doPost(e) {
+  if (!e || !e.postData || !e.postData.contents) {
+    return ContentService.createTextOutput(
+      JSON.stringify({ status: 'error', message: 'No form data received. This function only works when called from the website form, not when run manually in the editor.' })
+    ).setMimeType(ContentService.MimeType.JSON);
+  }
+
+  var data = JSON.parse(e.postData.contents);
+
+  if (data.formType === 'retreat-registration') {
+    return handleRetreatRegistration(data);
+  }
+
+  return handleLeadForm(data);
+}
+
+function handleLeadForm(data) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Leads');
+
+  sheet.appendRow([
+    new Date(),
+    data.sourcePage || '',
+    data.name || '',
+    data.phone || '',
+    data.companyName || '',
+    data.email || '',
+    data.category || '',
+    data.message || ''
+  ]);
+
+  MailApp.sendEmail({
+    to: "tractionoutsourcing@gmail.com",
+    subject: "New Website Lead: " + (data.name || "Unknown"),
+    body: "Page: " + data.sourcePage + "\\nName: " + data.name +
+          "\\nPhone: " + data.phone + "\\nCompany: " + data.companyName +
+          "\\nEmail: " + data.email +
+          (data.category ? "\\nCategory: " + data.category : "") +
+          (data.message ? "\\nMessage: " + data.message : "")
+  });
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+function handleRetreatRegistration(data) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Kigali Retreat 2026');
+  var receiptLink = '';
+
+  if (data.receiptFileData) {
+    try {
+      var folder = DriveApp.getFolderById(RECEIPT_FOLDER_ID);
+      var bytes = Utilities.base64Decode(data.receiptFileData);
+      var blob = Utilities.newBlob(bytes, data.receiptFileType || 'application/octet-stream', data.receiptFileName || 'receipt');
+      var file = folder.createFile(blob);
+      file.setName((data.name || 'Unknown') + ' - ' + (data.receiptFileName || 'receipt'));
+      receiptLink = file.getUrl();
+    } catch (err) {
+      receiptLink = 'Upload failed: ' + err.message;
+    }
+  }
+
+  sheet.appendRow([
+    new Date(),
+    data.name || '',
+    data.email || '',
+    data.phone || '',
+    data.companyName || '',
+    data.jobTitle || '',
+    data.gender || '',
+    data.nationality || '',
+    data.groupTicket || '',
+    data.groupSize || '',
+    data.paymentMade || '',
+    receiptLink
+  ]);
+
+  // Notify the team
+  MailApp.sendEmail({
+    to: "tractionoutsourcing@gmail.com",
+    subject: "New Kigali Retreat Registration: " + (data.name || "Unknown"),
+    body: "Name: " + data.name + "\\nEmail: " + data.email + "\\nPhone: " + data.phone +
+          "\\nCompany: " + data.companyName + "\\nJob Title: " + data.jobTitle +
+          "\\nGender: " + data.gender + "\\nNationality: " + data.nationality +
+          "\\nGroup Ticket: " + data.groupTicket + "\\nGroup Size: " + data.groupSize +
+          "\\nPayment Made: " + data.paymentMade +
+          "\\nReceipt: " + (receiptLink || "Not uploaded")
+  });
+
+  // Confirmation email to the registrant
+  if (data.email) {
+    MailApp.sendEmail({
+      to: data.email,
+      subject: "Registration Received: Traction Outsourcing International Corporate Retreat 2026",
+      body: "Hi " + (data.name || "there") + ",\\n\\n" +
+            "Thank you for registering for the Traction Outsourcing International Corporate Retreat 2026 in Kigali, Rwanda (November 22-30, 2026).\\n\\n" +
+            "We have received your registration and our team will review it and reach out to you within 24 hours or less.\\n\\n" +
+            "If you have not yet made payment, you can do so by bank transfer to:\\n" +
+            "Bank: Providus Bank PLC\\nAccount Number: 1307188028\\nAccount Name: Traction Outsourcing Limited\\n\\n" +
+            "If you have any questions in the meantime, reach us on WhatsApp at 0805 203 3145 or reply to this email.\\n\\n" +
+            "Best regards,\\nTraction Outsourcing Limited"
+    });
+  }
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+```
+
+Create a **new deployment version** afterward (Deploy → Manage deployments
+→ Edit → New version), same as any other script change. The Web App URL
+stays the same, so nothing needs to change in `js/lead-form.js` or
+`js/retreat-registration.js`.
+
+### A note on the file upload
+
+Receipt files are capped at 5MB on the website side before they are even
+sent. Apps Script can time out on very large requests, so if someone
+reports the form hanging when attaching a receipt, that is the first thing
+to check. Everything else about the form works fine without a receipt
+attached, since it is optional.
+
 ## Testing it
 
 Once wired in, submit the form on any service page. Check the Sheet, a
@@ -156,3 +317,9 @@ like `Cannot read properties of undefined (reading 'postData')`. This is
 expected and does not mean anything is broken, it just means the
 function was called outside of a real form submission. Always test by
 submitting the actual form on the live website instead.
+
+For the retreat registration form specifically, test with and without
+attaching a receipt file, and confirm three things happen: a new row
+appears in the **Kigali Retreat 2026** tab, a notification email arrives
+at tractionoutsourcing@gmail.com, and a confirmation email arrives at the
+email address you registered with.
