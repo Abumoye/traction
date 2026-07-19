@@ -22,19 +22,86 @@
   },
   "areaServed": "Nigeria",
   "url": "https://tolnigeria.com/services/employee-training/",
-  "description": "Custom employee training and capability masterclasses designed to align workforce execution with corporate vision for businesses in Nigeria."
+  "description": "Certificate training courses across leadership, finance, AI and computer literacy, workplace management, and customer service, delivered online and in person in Nigeria, Rwanda, Ghana, and Kenya.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Employee Training Catalogue",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Leadership & Management Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Business Finance & Accounting" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "AI & Computer Literacy" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Workplace Management" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Customer Service & Client Experience" } }
+    ]
+  }
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What training courses does Traction Outsourcing offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The catalogue covers five tracks: Leadership & Management Development, Business Finance & Accounting, AI & Computer Literacy, Workplace Management, and Customer Service & Client Experience, alongside bespoke training built around a specific gap on your team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Traction Outsourcing's training courses certified?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All courses in the catalogue are certificate courses, issued on completion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can employee training be done online in Nigeria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every course in the catalogue is available online with no minimum number of participants, and most are also available as physical classes in select cities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Traction Outsourcing offer training outside Nigeria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Physical classes are available in Kigali, Accra, and Nairobi in addition to eight Nigerian cities, and every course is available online anywhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do Traction Outsourcing's training courses cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fees vary by course, delivery mode, and group size. Reach out with the course you are interested in and we will confirm current pricing for it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum number of participants for a physical training class?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Five participants for physical classes within Nigeria, and fifteen for physical classes outside Nigeria. Online classes have no minimum."
+      }
+    }
+  ]
 }
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Training in Nigeria | Traction Outsourcing Limited</title>
-    <meta name="description" content="Traction Outsourcing delivers custom employee training and capability masterclasses designed to align workforce execution with corporate vision.">
-    <meta name="keywords" content="employee training nigeria, staff training abuja, corporate training nigeria, capability masterclass nigeria, workshop facilitation abuja">
+    <title>Employee Training Courses in Nigeria | Traction Outsourcing Limited</title>
+    <meta name="description" content="Certificate training courses in leadership, finance, AI, workplace management, and customer service. Online and in-person across Nigeria and Africa.">
+    <meta name="keywords" content="employee training nigeria, staff training abuja, corporate training nigeria, leadership training nigeria, employee training courses, customer service training nigeria, AI training for business nigeria, HR training courses nigeria">
     <link rel="canonical" href="https://tolnigeria.com/services/employee-training/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Employee Training in Nigeria | Traction Outsourcing Limited">
-    <meta property="og:description" content="Traction Outsourcing delivers custom employee training and capability masterclasses designed to align workforce execution with corporate vision.">
-    <meta property="og:url" content="https://www.tolnigeria.com/services/employee-training/">
+    <meta property="og:title" content="Employee Training Courses in Nigeria | Traction Outsourcing Limited">
+    <meta property="og:description" content="Certificate training courses in leadership, finance, AI, workplace management, and customer service. Online and in-person across Nigeria and Africa.">
+    <meta property="og:url" content="https://tolnigeria.com/services/employee-training/">
     <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-employee-training.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -77,6 +144,55 @@
             .service-hero p { font-size: 16px; }
             .spotlight { grid-template-columns: 1fr; }
         }
+
+        /* Landing-page CTAs */
+        .hero-cta-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 30px; }
+        .btn-primary-cta, .btn-whatsapp-cta, .btn-outline-cta {
+            display: inline-block; padding: 15px 32px; border-radius: 50px; font-weight: 700; font-size: 15.5px;
+            text-decoration: none; transition: all 0.25s ease; box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .btn-primary-cta { background-color: var(--accent-color); color: white; }
+        .btn-primary-cta:hover { background-color: #c94f1a; transform: translateY(-2px); }
+        .btn-whatsapp-cta { background-color: #25D366; color: white; }
+        .btn-whatsapp-cta:hover { background-color: #1ebd58; transform: translateY(-2px); }
+        .btn-outline-cta { background-color: transparent; color: white; border: 2px solid white; box-shadow: none; }
+        .btn-outline-cta:hover { background-color: white; color: var(--primary-color); }
+
+        .cta-banner { text-align: center; background: var(--light-bg); border-radius: 10px; padding: 40px 25px; max-width: 700px; margin: 0 auto; }
+        .cta-banner p { font-size: 18px; color: var(--primary-color); font-weight: 600; margin: 0 0 20px; }
+        .cta-banner .btn-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+        .cta-banner-dark { background: var(--primary-color); }
+        .cta-banner-dark p { color: white; }
+
+        /* Catalogue */
+        .filter-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 40px; }
+        .filter-pill {
+            background: var(--light-bg); border: 1px solid #e2e2e2; color: var(--text-color, #333);
+            padding: 9px 18px; border-radius: 30px; font-size: 13.5px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;
+        }
+        .filter-pill:hover { border-color: var(--accent-color); color: var(--accent-color); }
+        .filter-pill.active { background: var(--accent-color); border-color: var(--accent-color); color: white; }
+
+        .catalogue-category { max-width: 900px; margin: 0 auto 40px; }
+        .catalogue-category h3 { color: var(--primary-color); font-size: 19px; margin-bottom: 4px; }
+        .catalogue-category .cat-count { font-size: 13px; color: #888; margin-bottom: 16px; display: block; }
+        .course-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; background: white; border: 1px solid #eee; border-radius: 6px; padding: 16px 20px; margin-bottom: 10px; }
+        .course-row h4 { margin: 0; color: var(--primary-color); font-size: 15.5px; font-weight: 600; }
+        .course-meta { display: flex; gap: 10px; flex-wrap: wrap; }
+        .course-badge { font-size: 11.5px; font-weight: 700; padding: 4px 10px; border-radius: 4px; white-space: nowrap; }
+        .course-badge.duration { background: var(--light-bg); color: var(--primary-color); }
+        .course-badge.mode { background: #eef3fb; color: #2a5da8; }
+
+        .delivery-box { max-width: 850px; margin: 0 auto; background: var(--light-bg); border-radius: 10px; padding: 35px 40px; }
+        .delivery-box h3 { color: var(--primary-color); margin: 0 0 10px; font-size: 17px; }
+        .delivery-box p { margin: 0 0 14px; color: #555; font-size: 15px; line-height: 1.7; }
+        .delivery-box p:last-child { margin-bottom: 0; }
+
+        .faq-block { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #eee; padding: 18px 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item h3 { font-size: 17px; color: var(--primary-color); margin: 0 0 8px; }
+        .faq-item p { font-size: 15px; color: #555; margin: 0; }
 
         /* Join Our Clients — enlarged logo carousel */
         .jc-section { background: var(--white-color); }
@@ -149,12 +265,112 @@
         <div class="eyebrow">Areas Of Impact</div>
         <h1>Employee Training</h1>
         <p>A strategy is only as good as the team executing it. We train employees to close the gap between what leadership decided and what actually happens on the floor.</p>
+        <div class="hero-cta-row">
+            <a href="#leadForm" class="btn-primary-cta">Enquire About A Course</a>
+            <a href="https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20training%20courses" target="_blank" rel="noopener" class="btn-outline-cta">Chat on WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Training Catalogue -->
+    <section class="section" style="background-color: white;">
+        <h2 class="section-title">Our Training Catalogue</h2>
+        <p class="section-sub">Certificate courses across five tracks, delivered online or in person.</p>
+
+        <div class="filter-bar" id="filterBar">
+            <button class="filter-pill active" data-filter="all">All Courses</button>
+            <button class="filter-pill" data-filter="lmd">Leadership & Management</button>
+            <button class="filter-pill" data-filter="bfa">Business Finance & Accounting</button>
+            <button class="filter-pill" data-filter="aic">AI & Computer Literacy</button>
+            <button class="filter-pill" data-filter="wmt">Workplace Management</button>
+            <button class="filter-pill" data-filter="css">Customer Service & Client Experience</button>
+        </div>
+
+        <div id="catalogueGrid">
+            <div class="catalogue-category" data-category="lmd">
+                <h3>Leadership & Management Development</h3>
+                <span class="cat-count">4 courses</span>
+                <div class="course-row"><h4>Strategic Management & Business Development</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Change Management & Corporate Restructuring</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>People Management for Nigerian Professionals</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Team Building & Collaboration</h4><div class="course-meta"><span class="course-badge duration">1 Day</span><span class="course-badge mode">Online/Physical</span></div></div>
+            </div>
+
+            <div class="catalogue-category" data-category="bfa">
+                <h3>Business Finance & Accounting</h3>
+                <span class="cat-count">5 courses</span>
+                <div class="course-row"><h4>Financial Management for CEOs</h4><div class="course-meta"><span class="course-badge duration">3 Weekends</span><span class="course-badge mode">Physical</span></div></div>
+                <div class="course-row"><h4>Financial Management for Non-Finance Managers</h4><div class="course-meta"><span class="course-badge duration">2 Weekends</span><span class="course-badge mode">Physical</span></div></div>
+                <div class="course-row"><h4>Management Account Preparation</h4><div class="course-meta"><span class="course-badge duration">4 Weekends</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Excel Essentials for Accountants</h4><div class="course-meta"><span class="course-badge duration">3 Weekends</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Business Analysis (Foundation)</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+            </div>
+
+            <div class="catalogue-category" data-category="aic">
+                <h3>AI & Computer Literacy</h3>
+                <span class="cat-count">6 courses</span>
+                <div class="course-row"><h4>Introduction to AI for Business</h4><div class="course-meta"><span class="course-badge duration">4 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Digital Literacy & Workplace Technology</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Microsoft Tools Essentials Introduction</h4><div class="course-meta"><span class="course-badge duration">4 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Google Workspace Essentials Introduction</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Introduction to Productivity & Project Management Tools</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Workplace Digital Safety & Security</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+            </div>
+
+            <div class="catalogue-category" data-category="wmt">
+                <h3>Workplace Management</h3>
+                <span class="cat-count">9 courses</span>
+                <div class="course-row"><h4>Mental Health Awareness for Managers</h4><div class="course-meta"><span class="course-badge duration">1 Day</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Managing PCOS, Work-Life Balance, and Burnout Prevention</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Employee Engagement and Retention Strategies</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Building Supportive Workplace Cultures</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Critical Thinking & Problem-Solving Skills</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Emotional Intelligence & Interpersonal Skills</h4><div class="course-meta"><span class="course-badge duration">1 Day</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Human Resource Management</h4><div class="course-meta"><span class="course-badge duration">6 Weekends (12 Days)</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Excel for Payroll Managers</h4><div class="course-meta"><span class="course-badge duration">3 Weekends (6 Days)</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Workplace Governance & Policy Development</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+            </div>
+
+            <div class="catalogue-category" data-category="css">
+                <h3>Customer Service & Client Experience</h3>
+                <span class="cat-count">4 courses</span>
+                <div class="course-row"><h4>Customer Service Fundamentals</h4><div class="course-meta"><span class="course-badge duration">3 Weeks (6 Days)</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Client Experience Specialist</h4><div class="course-meta"><span class="course-badge duration">3 Weeks (6 Days)</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Cultural Intelligence in Nigerian Customer Service</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row"><h4>Turning Angry Customers into Advocates</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+            </div>
+        </div>
+
+        <p style="text-align: center; font-size: 13.5px; color: #888; max-width: 700px; margin: 0 auto;">All courses are certificate courses. Fees vary by programme, delivery mode, and group size, reach out to us for the current fee schedule for any course above.</p>
+    </section>
+
+    <!-- Mid-page CTA -->
+    <section class="section" style="padding-top: 0;">
+        <div class="cta-banner">
+            <p>Not sure which course fits your team?</p>
+            <div class="btn-row">
+                <a href="https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20help%20choosing%20a%20training%20course%20for%20my%20team" target="_blank" rel="noopener" class="btn-whatsapp-cta">Ask Us on WhatsApp</a>
+                <a href="#leadForm" class="btn-primary-cta">Enquire About A Course</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery & Locations -->
+    <section class="section" style="background-color: white;">
+        <h2 class="section-title">Where We Deliver</h2>
+        <div class="delivery-box">
+            <h3>In Nigeria</h3>
+            <p>Physical classes run in Abuja, Lagos, Enugu, Anambra, Ibadan, Asaba, Kaduna, and Kano. A minimum of 5 participants is required for a physical class within Nigeria.</p>
+            <h3>Beyond Nigeria</h3>
+            <p>Physical classes are also available in Kigali (Rwanda), Accra (Ghana), and Nairobi (Kenya), with a minimum of 15 participants for physical classes outside Nigeria.</p>
+            <h3>Online</h3>
+            <p>Every course in the catalogue is also available online, with no minimum number of participants, so a single employee or a full team can enrol either way.</p>
+        </div>
     </section>
 
     <!-- Curriculum -->
     <section class="section">
-        <h2 class="section-title">How A Training Engagement Is Built</h2>
-        <p class="section-sub">Custom by design. We do not run the same deck for every client.</p>
+        <h2 class="section-title">Need Something The Catalogue Doesn't Cover?</h2>
+        <p class="section-sub">If the gap on your team is specific, we build a bespoke training engagement around it instead.</p>
 
         <div class="curriculum">
             <div class="module-row">
@@ -255,18 +471,49 @@
         <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #ccc;">Employees Trained Across Sectors</span>
     </div>
 
+    <!-- FAQ -->
+    <section class="section">
+        <h2 class="section-title">Common Questions</h2>
+        <div class="faq-block">
+            <div class="faq-item">
+                <h3>What training courses does Traction Outsourcing offer?</h3>
+                <p>The catalogue covers five tracks: Leadership & Management Development, Business Finance & Accounting, AI & Computer Literacy, Workplace Management, and Customer Service & Client Experience, alongside bespoke training built around a specific gap on your team.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Are the courses certified?</h3>
+                <p>Yes. All courses in the catalogue are certificate courses, issued on completion.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can training be done online, or does it have to be in person?</h3>
+                <p>Both. Every course in the catalogue is available online with no minimum number of participants, and most are also available as physical classes in select cities.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer training outside Nigeria?</h3>
+                <p>Yes. Physical classes are available in Kigali, Accra, and Nairobi in addition to eight Nigerian cities, and every course is available online anywhere.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How much do the courses cost?</h3>
+                <p>Fees vary by course, delivery mode, and group size. Reach out to us with the course you are interested in and we will confirm current pricing for it.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the minimum number of participants for a physical class?</h3>
+                <p>Five participants for physical classes within Nigeria, and fifteen for physical classes outside Nigeria. Online classes have no minimum.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Lead Capture Form -->
     <section class="section" style="padding-top: 0;">
         <div class="lead-form-wrap">
-            <h3>Request A Free Consultation</h3>
-            <p class="lead-form-sub">Leave your details and someone from our team will reach out.</p>
+            <h3>Enquire About A Course</h3>
+            <p class="lead-form-sub">Tell us which course you're interested in, and someone from our team will reach out with the schedule and fee.</p>
             <form id="leadForm" class="lead-form">
                 <input type="text" name="leadName" placeholder="Full Name" required>
                 <input type="tel" name="leadPhone" placeholder="Phone Number" required>
                 <input type="text" name="leadCompany" placeholder="Company Name" required>
                 <input type="email" name="leadEmail" placeholder="Email Address" required>
                 <button type="submit">Submit</button>
-                <p style="text-align: center; font-size: 12.5px; color: #888; margin: 4px 0 0;">(Get a FREE 30-minute consultation)</p>
+                <p style="text-align: center; font-size: 12.5px; color: #888; margin: 4px 0 0;">(We will contact you soon.)</p>
             </form>
             <div id="leadFormStatus" class="lead-form-status"></div>
         </div>
@@ -332,6 +579,23 @@
             trigger.addEventListener('click', (e) => {
                 e.preventDefault();
                 trigger.parentElement.classList.toggle('open');
+            });
+        });
+
+        // Catalogue category filtering
+        const filterPills = document.querySelectorAll('.filter-pill');
+        const catalogueCategories = document.querySelectorAll('.catalogue-category');
+
+        filterPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                filterPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                const filter = pill.getAttribute('data-filter');
+
+                catalogueCategories.forEach(cat => {
+                    const category = cat.getAttribute('data-category');
+                    cat.style.display = (filter === 'all' || category === filter) ? 'block' : 'none';
+                });
             });
         });
     </script>
