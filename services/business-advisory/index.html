@@ -22,19 +22,79 @@
   },
   "areaServed": "Nigeria",
   "url": "https://tolnigeria.com/services/business-advisory/",
-  "description": "Business advisory and negotiation support for entrepreneurs navigating growth, market entry, joint ventures, and structural decisions in Nigeria."
+  "description": "Business advisory services covering strategic planning, organizational and operational advisory, feasibility studies, and negotiation support for businesses in Nigeria.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Business Advisory Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Strategic Planning & Growth Advisory" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Organizational & Operational Advisory" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Process Advisory" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Feasibility & Market Studies" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Risk & Governance Advisory" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Negotiation & Deal Advisory" } }
+    ]
+  }
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is business advisory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Business advisory is independent, outside support for the decisions a business has to make about its strategy, structure, operations, and deals, brought in specifically because those decisions are too consequential to make without a second, experienced perspective."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between business advisory and business consulting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In practice the terms overlap heavily. Traction Outsourcing's business advisory work covers strategic planning, organizational and operational advisory, feasibility studies, and negotiation and deal support, advice grounded in the specific business in front of us, not a generic framework applied the same way to every client."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Traction Outsourcing help with negotiations and deal structuring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This includes preparing negotiation positions, structuring joint ventures and vesting arrangements, and reviewing or reactivating contracts, grounded in the specific deal rather than a generic template."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Traction Outsourcing help with feasibility and market studies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Feasibility and market studies are part of the business advisory service, used to test whether a new venture, product line, or market entry idea holds up before a business commits real money to it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is business advisory only for large companies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Growing SMEs and family-owned businesses in Nigeria are a core part of who this service is built for, not only large corporates. The scale of the engagement adjusts to the scale of the business."
+      }
+    }
+  ]
 }
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Advisory in Nigeria | Traction Outsourcing Limited</title>
-    <meta name="description" content="Traction Outsourcing provides strategic advisory and negotiation support for entrepreneurs navigating growth and market entry in Nigeria.">
-    <meta name="keywords" content="business advisory nigeria, business advisory abuja, joint venture negotiation nigeria, entrepreneur consulting abuja">
+    <title>Business Advisory Services in Nigeria | Traction Outsourcing Limited</title>
+    <meta name="description" content="Business advisory services in Nigeria: strategic planning, organizational and operational advisory, feasibility studies, and negotiation support.">
+    <meta name="keywords" content="business advisory services in nigeria, business advisory nigeria, business advisory abuja, strategic advisory nigeria, feasibility studies nigeria, joint venture negotiation nigeria, SME consultancy nigeria">
     <link rel="canonical" href="https://tolnigeria.com/services/business-advisory/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Business Advisory in Nigeria | Traction Outsourcing Limited">
-    <meta property="og:description" content="Traction Outsourcing provides strategic advisory and negotiation support for entrepreneurs navigating growth, joint ventures, market entry, and structural decisions in Nigeria.">
-    <meta property="og:url" content="https://www.tolnigeria.com/services/business-advisory/">
+    <meta property="og:title" content="Business Advisory Services in Nigeria | Traction Outsourcing Limited">
+    <meta property="og:description" content="Business advisory services in Nigeria: strategic planning, organizational and operational advisory, feasibility studies, and negotiation support.">
+    <meta property="og:url" content="https://tolnigeria.com/services/business-advisory/">
     <meta property="og:image" content="https://www.tolnigeria.com/images/og/og-business-advisory.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -79,6 +139,47 @@
             .service-hero p { font-size: 16px; }
             .dossier-header { flex-direction: column; align-items: flex-start; }
         }
+
+        /* Advisory areas grid */
+        .offer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .offer-card { background: var(--light-bg); padding: 25px; border-radius: 8px; border-top: 4px solid var(--accent-color); }
+        .offer-card i { color: var(--accent-color); font-size: 24px; margin-bottom: 12px; display: block; }
+        .offer-card h3 { color: var(--primary-color); margin-top: 0; }
+        .offer-card p { font-size: 15px; color: #555; margin-bottom: 0; }
+
+        /* Process */
+        .process-track { max-width: 850px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .process-step { text-align: center; }
+        .process-num { width: 46px; height: 46px; border-radius: 50%; background: var(--primary-color); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; margin: 0 auto 14px; }
+        .process-step h3 { color: var(--primary-color); font-size: 18px; margin: 0 0 8px; }
+        .process-step p { font-size: 14.5px; color: #666; margin: 0; }
+        @media (max-width: 768px) { .process-track { grid-template-columns: 1fr; gap: 35px; } }
+
+        /* FAQ */
+        .faq-block { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #eee; padding: 18px 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item h3 { font-size: 17px; color: var(--primary-color); margin: 0 0 8px; }
+        .faq-item p { font-size: 15px; color: #555; margin: 0; }
+
+        /* Landing-page style CTAs */
+        .hero-cta-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 30px; }
+        .btn-primary-cta, .btn-whatsapp-cta, .btn-outline-cta {
+            display: inline-block; padding: 15px 32px; border-radius: 50px; font-weight: 700; font-size: 15.5px;
+            text-decoration: none; transition: all 0.25s ease; box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .btn-primary-cta { background-color: var(--accent-color); color: white; }
+        .btn-primary-cta:hover { background-color: #c94f1a; transform: translateY(-2px); }
+        .btn-whatsapp-cta { background-color: #25D366; color: white; }
+        .btn-whatsapp-cta:hover { background-color: #1ebd58; transform: translateY(-2px); }
+        .btn-outline-cta { background-color: transparent; color: white; border: 2px solid white; box-shadow: none; }
+        .btn-outline-cta:hover { background-color: white; color: var(--primary-color); }
+
+        .cta-banner { text-align: center; background: var(--light-bg); border-radius: 10px; padding: 40px 25px; max-width: 700px; margin: 0 auto; }
+        .cta-banner p { font-size: 18px; color: var(--primary-color); font-weight: 600; margin: 0 0 20px; }
+        .cta-banner .btn-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+        .cta-banner-dark { background: var(--primary-color); }
+        .cta-banner-dark p { color: white; }
 
         /* Join Our Clients — enlarged logo carousel */
         .jc-section { background: var(--light-bg); }
@@ -149,12 +250,65 @@
     <!-- Hero -->
     <section class="service-hero">
         <div class="eyebrow">Areas Of Impact</div>
-        <h1>Business Advisory</h1>
+        <h1>Business Advisory Services</h1>
         <p>The decisions that move a business forward rarely have a clean answer. We sit on your side of the table and help you make the call with the full picture in front of you.</p>
+        <div class="hero-cta-row">
+            <a href="#leadForm" class="btn-primary-cta">Request A Free Consultation</a>
+            <a href="https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20business%20advisory%20services" target="_blank" rel="noopener" class="btn-outline-cta">Chat on WhatsApp</a>
+        </div>
     </section>
 
     <section class="section" style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <p style="font-size: 17px; color: #444; line-height: 1.8;">A joint venture term sheet. A vesting structure that needs to survive twenty years. A dormant contract that needs to either be revived or ended cleanly. These are not situations with a textbook answer, they are situations where the details of your specific business decide the outcome. We advise on the actual deal in front of you, not a generic framework.</p>
+        <p style="font-size: 17px; color: #444; line-height: 1.8;">A joint venture term sheet. A vesting structure that needs to survive twenty years. A dormant contract that needs to either be revived or ended cleanly. A market entry decision that needs testing before real money moves. These are not situations with a textbook answer, they are situations where the details of your specific business decide the outcome. We advise on the actual business in front of us, not a generic framework.</p>
+    </section>
+
+    <!-- What We Advise On -->
+    <section class="section" style="background-color: white;">
+        <h2 class="section-title">What We Advise On</h2>
+        <p class="section-sub">Business advisory covers more ground than deal negotiation alone. Here is the full scope.</p>
+        <div class="offer-grid">
+            <div class="offer-card">
+                <i class="fa-solid fa-chess-knight"></i>
+                <h3>Strategic Planning & Growth Advisory</h3>
+                <p>Direction-setting for where the business is headed next, tested against the reality of the Nigerian market, not a borrowed playbook.</p>
+            </div>
+            <div class="offer-card">
+                <i class="fa-solid fa-sitemap"></i>
+                <h3>Organizational & Operational Advisory</h3>
+                <p>Advice on how the business is run day to day, tying into our <a href="/services/corporate-restructuring/" style="color: var(--accent-color); font-weight: 600;">corporate restructuring</a> service where the structure itself needs to change.</p>
+            </div>
+            <div class="offer-card">
+                <i class="fa-solid fa-diagram-project"></i>
+                <h3>Business Process Advisory</h3>
+                <p>A close look at how work actually moves through the business, and where it is quietly losing time or money.</p>
+            </div>
+            <div class="offer-card">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <h3>Feasibility & Market Studies</h3>
+                <p>Testing whether a new venture, product line, or market entry idea holds up before you commit real money to it.</p>
+            </div>
+            <div class="offer-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Risk & Governance Advisory</h3>
+                <p>Identifying where a business is exposed, and building the governance structure to close the gap.</p>
+            </div>
+            <div class="offer-card">
+                <i class="fa-solid fa-handshake"></i>
+                <h3>Negotiation & Deal Advisory</h3>
+                <p>Full negotiation positions, joint venture and vesting structures, and contract strategy, the kind of work in the case files below.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA -->
+    <section class="section" style="padding-top: 0;">
+        <div class="cta-banner">
+            <p>Not sure which of these applies to your situation?</p>
+            <div class="btn-row">
+                <a href="https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20talk%20through%20a%20business%20decision%20I%27m%20facing" target="_blank" rel="noopener" class="btn-whatsapp-cta">Ask Us on WhatsApp</a>
+                <a href="#leadForm" class="btn-primary-cta">Request A Free Consultation</a>
+            </div>
+        </div>
     </section>
 
     <!-- Case Dossiers -->
@@ -189,6 +343,40 @@
             </div>
             <div class="dossier-body">
                 <p>Not every advisory question is about growth. Sometimes it is about deciding whether a stalled agreement is worth reviving. We reviewed the dormancy, recommended an activation-then-terminate strategy, and drafted the formal activation letter with a fourteen-business-day response deadline tied to the relevant contract clause.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" style="background-color: white;">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-sub">The same disciplined process behind every case file above.</p>
+        <div class="process-track">
+            <div class="process-step">
+                <div class="process-num">1</div>
+                <h3>Diagnose</h3>
+                <p>We get into the actual situation, the numbers, the relationships, the history, before forming a view.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-num">2</div>
+                <h3>Design</h3>
+                <p>We build the position, structure, or plan, weighing what you are willing to trade against what you are not.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-num">3</div>
+                <h3>Deploy</h3>
+                <p>We support you through execution, negotiation, or rollout, not just a report handed over at the end.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA -->
+    <section class="section" style="padding-top: 0;">
+        <div class="cta-banner cta-banner-dark">
+            <p>Bring us the decision you're sitting on.</p>
+            <div class="btn-row">
+                <a href="#leadForm" class="btn-primary-cta">Request A Free Consultation</a>
+                <a href="https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20talk%20through%20a%20business%20decision" target="_blank" rel="noopener" class="btn-whatsapp-cta">Chat on WhatsApp</a>
             </div>
         </div>
     </section>
@@ -230,6 +418,33 @@
     <div class="quote-banner">
         Bar revenue and beverage control was the highest-margin negotiating point on the table, and holding firm there is what protected the deal.
     </div>
+
+    <!-- FAQ -->
+    <section class="section">
+        <h2 class="section-title">Common Questions</h2>
+        <div class="faq-block">
+            <div class="faq-item">
+                <h3>What is business advisory?</h3>
+                <p>Business advisory is independent, outside support for the decisions a business has to make about its strategy, structure, operations, and deals, brought in because those decisions are too consequential to make without a second, experienced perspective.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the difference between business advisory and business consulting?</h3>
+                <p>In practice the terms overlap heavily. Our business advisory work covers strategic planning, organizational and operational advisory, feasibility studies, and negotiation and deal support, advice grounded in the specific business in front of us, not a generic framework applied the same way to every client.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Does Traction Outsourcing help with negotiations and deal structuring?</h3>
+                <p>Yes. This includes preparing negotiation positions, structuring joint ventures and vesting arrangements, and reviewing or reactivating contracts, grounded in the specific deal rather than a generic template.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can Traction Outsourcing help with feasibility and market studies?</h3>
+                <p>Yes. Feasibility and market studies are part of the business advisory service, used to test whether a new venture, product line, or market entry idea holds up before a business commits real money to it.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is business advisory only for large companies?</h3>
+                <p>No. Growing SMEs and family-owned businesses in Nigeria are a core part of who this service is built for, not only large corporates. The scale of the engagement adjusts to the scale of the business.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Lead Capture Form -->
     <section class="section" style="padding-top: 0;">
