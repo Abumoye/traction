@@ -1,0 +1,29 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Submit all sitemap URLs to IndexNow
+        run: |
+          KEY="494ce95622ab0b36a8190799af06c4a2"
+          HOST="tolnigeria.com"
+          KEY_LOCATION="https://tolnigeria.com/${KEY}.txt"
+
+          URLS=$(grep -oP '(?<=<loc>)[^<]+' sitemap.xml)
+          URL_LIST=$(printf '%s\n' "$URLS" | python3 -c "import sys, json; print(json.dumps([line.strip() for line in sys.stdin if line.strip()]))")
+
+          echo "Submitting $(printf '%s\n' "$URLS" | wc -l) URLs to IndexNow..."
+
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"${HOST}\",\"key\":\"${KEY}\",\"keyLocation\":\"${KEY_LOCATION}\",\"urlList\":${URL_LIST}}" \
+            -w "\nIndexNow response code: %{http_code}\n"
