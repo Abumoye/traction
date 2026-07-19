@@ -153,6 +153,25 @@
         .faq-item h3 { font-size: 17px; color: var(--primary-color); margin: 0 0 8px; }
         .faq-item p { font-size: 15px; color: #555; margin: 0; }
 
+        /* Landing-page style CTAs */
+        .hero-cta-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 30px; }
+        .btn-primary-cta, .btn-whatsapp-cta, .btn-outline-cta {
+            display: inline-block; padding: 15px 32px; border-radius: 50px; font-weight: 700; font-size: 15.5px;
+            text-decoration: none; transition: all 0.25s ease; box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .btn-primary-cta { background-color: var(--accent-color); color: white; }
+        .btn-primary-cta:hover { background-color: #c94f1a; transform: translateY(-2px); }
+        .btn-whatsapp-cta { background-color: #25D366; color: white; }
+        .btn-whatsapp-cta:hover { background-color: #1ebd58; transform: translateY(-2px); }
+        .btn-outline-cta { background-color: transparent; color: white; border: 2px solid white; box-shadow: none; }
+        .btn-outline-cta:hover { background-color: white; color: var(--primary-color); }
+
+        .cta-banner { text-align: center; background: var(--light-bg); border-radius: 10px; padding: 40px 25px; max-width: 700px; margin: 0 auto; }
+        .cta-banner p { font-size: 18px; color: var(--primary-color); font-weight: 600; margin: 0 0 20px; }
+        .cta-banner .btn-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+        .cta-banner-dark { background: var(--primary-color); }
+        .cta-banner-dark p { color: white; }
+
         @media (max-width: 900px) {
             .service-hero { padding: 80px 20px; }
             .service-hero h1 { font-size: 30px; }
@@ -229,6 +248,10 @@
     <section class="service-hero">
         <h1>Staff Outsourcing & HR Management</h1>
         <p>We manage the people side of your business, from sourcing and payroll to compliance and HR administration, so you can focus on running the business, not the paperwork.</p>
+        <div class="hero-cta-row">
+            <a href="#leadForm" class="btn-primary-cta">Request A Free Consultation</a>
+            <a href="https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staff%20outsourcing" target="_blank" rel="noopener" class="btn-outline-cta">Chat on WhatsApp</a>
+        </div>
     </section>
 
     <!-- Intro Section -->
@@ -277,6 +300,17 @@
         </div>
     </section>
 
+    <!-- Mid-page CTA -->
+    <section class="section" style="padding-top: 0;">
+        <div class="cta-banner">
+            <p>Not sure which of these your business actually needs?</p>
+            <div class="btn-row">
+                <a href="https://wa.me/2348052033145?text=Hi%2C%20I%27m%20not%20sure%20which%20staff%20outsourcing%20service%20I%20need.%20Can%20you%20help%3F" target="_blank" rel="noopener" class="btn-whatsapp-cta">Ask Us on WhatsApp</a>
+                <a href="#leadForm" class="btn-primary-cta">Request A Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Roles We Support -->
     <section class="section">
         <h2 class="section-title">Roles We Place and Manage</h2>
@@ -312,6 +346,17 @@
                 <div class="process-num">3</div>
                 <h3>Deploy</h3>
                 <p>We place the staff, run payroll and compliance from day one, and stay responsible for management and performance for as long as the arrangement runs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA -->
+    <section class="section" style="background-color: white; padding-top: 0;">
+        <div class="cta-banner">
+            <p>Ready to see what stage 1 looks like for your business?</p>
+            <div class="btn-row">
+                <a href="#leadForm" class="btn-primary-cta">Schedule A Consultation</a>
+                <a href="https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20get%20started%20with%20staff%20outsourcing" target="_blank" rel="noopener" class="btn-whatsapp-cta">Get Started on WhatsApp</a>
             </div>
         </div>
     </section>
@@ -377,6 +422,17 @@
                 <i class="fa-solid fa-people-group"></i>
                 <h4>Hands-On, Not Hands-Off</h4>
                 <p>We start by understanding how your business actually operates, then build the staffing and HR structure around that reality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA -->
+    <section class="section" style="padding-top: 0;">
+        <div class="cta-banner cta-banner-dark">
+            <p>Let's build your outsourced team the right way.</p>
+            <div class="btn-row">
+                <a href="#leadForm" class="btn-primary-cta">Request A Free Consultation</a>
+                <a href="https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20talk%20about%20staff%20outsourcing%20for%20my%20business" target="_blank" rel="noopener" class="btn-whatsapp-cta">Chat on WhatsApp</a>
             </div>
         </div>
     </section>
