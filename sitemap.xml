@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://tolnigeria.com/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -123,9 +123,21 @@
 
   <url>
     <loc>https://tolnigeria.com/articles/</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tolnigeria.com/articles/employee-leave-and-compensation-in-nigeria/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://tolnigeria.com/images/articles/employee-leave-compensation-nigeria.jpg</image:loc>
+      <image:title>Employee Leave and Compensation in Nigeria</image:title>
+      <image:caption>A guide for employers on annual, sick, and maternity leave, and the national minimum wage in Nigeria.</image:caption>
+    </image:image>
   </url>
 
   <url>
