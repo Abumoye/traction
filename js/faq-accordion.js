@@ -1,35 +1,45 @@
 /* FAQ Accordion — tolnigeria.com
-   Works with the .faq-item / h3 / p structure used sitewide.
-   Clicking an item opens it and closes any other open item on the page. */
+   Explicitly hides all answers on init, then toggles via JS.
+   This ensures the accordion works regardless of CSS specificity. */
 
 (function () {
     function initFaq() {
         var items = document.querySelectorAll('.faq-item');
         if (!items.length) return;
 
+        /* On init: hide all answers explicitly */
+        items.forEach(function (item) {
+            var answer = item.querySelector('p, div.faq-answer');
+            if (answer) answer.style.display = 'none';
+        });
+
         items.forEach(function (item) {
             var heading = item.querySelector('h3');
             if (!heading) return;
 
-            /* Make heading keyboard accessible */
             heading.setAttribute('tabindex', '0');
             heading.setAttribute('role', 'button');
             heading.setAttribute('aria-expanded', 'false');
+            heading.style.cursor = 'pointer';
 
             function toggle() {
                 var isOpen = item.classList.contains('open');
 
-                /* Close all items first */
+                /* Close ALL items */
                 items.forEach(function (other) {
                     other.classList.remove('open');
                     var h = other.querySelector('h3');
                     if (h) h.setAttribute('aria-expanded', 'false');
+                    var answers = other.querySelectorAll('p, div.faq-answer');
+                    answers.forEach(function (a) { a.style.display = 'none'; });
                 });
 
-                /* If it was closed, open it */
+                /* Open clicked item if it was closed */
                 if (!isOpen) {
                     item.classList.add('open');
                     heading.setAttribute('aria-expanded', 'true');
+                    var answers = item.querySelectorAll('p, div.faq-answer');
+                    answers.forEach(function (a) { a.style.display = 'block'; });
                 }
             }
 

@@ -123,12 +123,13 @@
 
         .faq-block { max-width: 800px; margin: 0 auto; }        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 
-        .card { background: var(--light-bg); padding: 25px; border-radius: 8px; border-top: 4px solid var(--primary-color); position: relative; cursor: pointer; overflow: hidden; transition: all 0.3s ease; }
+        .card { background: var(--light-bg); padding: 25px; border-radius: 8px; border-top: 4px solid var(--primary-color); position: relative; cursor: pointer; overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         .card h3 { color: var(--dark-color); margin-top: 0; }
         .card:hover h3 { color: #c04d1a; }
-        .card-overlay { position: absolute; bottom: -100%; left: 0; width: 100%; background: linear-gradient(transparent, rgba(0, 0, 0, 0.9) 40%); color: var(--primary-color); text-align: center; padding: 40px 0 15px 0; font-weight: bold; font-size: 14px; transition: bottom 0.3s ease; }
-        .card:hover .card-overlay { bottom: 0; }
+        .card p { flex: 1; margin-bottom: 18px; }
+        .card-btn { display: inline-block; background-color: var(--accent-color); color: white; font-size: 13px; font-weight: 700; padding: 9px 20px; border-radius: 50px; text-decoration: none; align-self: flex-start; transition: background-color 0.2s ease; }
+        .card-btn:hover { background-color: #c04d1a; }
 
         .reviews-section { background-color: var(--light-bg); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
         .reviews-header { text-align: center; margin-bottom: 40px; }
@@ -217,43 +218,43 @@
 
     <!-- Core Impact Areas Section -->
     <section class="section">
-        <h2 class="section-title">Our Areas of Impact</h2>
+        <h2 class="section-title">Our Services</h2>
         <div class="grid">
             <!-- Card 1 -->
             <div class="card" onclick="window.location.href='/services/startup-structuring/'">
                 <h3>Startup Structuring</h3>
                 <p>Building the foundational governance and operational architecture new businesses need to scale with confidence.</p>
-                <div class="card-overlay">See more..</div>
+                <a href="/services/startup-structuring/" class="card-btn">Learn More</a>
             </div>
             <!-- Card 2 -->
             <div class="card" onclick="window.location.href='/services/corporate-restructuring/'">
                 <h3>Corporate Restructuring</h3>
                 <p>Re-engineering legacy business frameworks to remove operational blockages and restore performance.</p>
-                <div class="card-overlay">See more..</div>
+                <a href="/services/corporate-restructuring/" class="card-btn">Learn More</a>
             </div>
             <!-- Card 3 -->
             <div class="card" onclick="window.location.href='/services/business-advisory/'">
                 <h3>Business Advisory</h3>
                 <p>Strategic guidance for entrepreneurs navigating growth, market entry, and structural decisions.</p>
-                <div class="card-overlay">See more..</div>
+                <a href="/services/business-advisory/" class="card-btn">Learn More</a>
             </div>
             <!-- Card 4 -->
             <div class="card" onclick="window.location.href='/services/employee-training/'">
                 <h3>Employee Training</h3>
                 <p>Custom training programs designed to align workforce execution with overarching corporate vision.</p>
-                <div class="card-overlay">See more..</div>
+                <a href="/services/employee-training/" class="card-btn">Learn More</a>
             </div>
             <!-- Card 5 -->
             <div class="card" onclick="window.location.href='/services/corporate-retreats/'">
                 <h3>Corporate Retreats & Events</h3>
                 <p>High-end international networking frameworks designed to combine business strategy sessions with premier travel experiences.</p>
-                <div class="card-overlay">See more..</div>
+                <a href="/services/corporate-retreats/" class="card-btn">Learn More</a>
             </div>
             <!-- Card 6 -->
             <div class="card" onclick="window.location.href='/services/staff-outsourcing/'">
                 <h3>Staff Outsourcing & HR Management</h3>
                 <p>End-to-end management of your workforce, from payroll and compliance to HR administration, so your team can focus on the business, not the paperwork.</p>
-                <div class="card-overlay">See more..</div>
+                <a href="/services/staff-outsourcing/" class="card-btn">Learn More</a>
             </div>
         </div>
     </section>

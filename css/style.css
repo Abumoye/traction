@@ -249,14 +249,14 @@ footer {
 }
 .faq-item > p,
 .faq-item > div.faq-answer {
-    display: none;
+    display: none !important;
     font-size: 15px;
     color: #555;
-    margin: 0;
+    margin: 0 !important;
     padding: 0 44px 18px 0;
     line-height: 1.7;
 }
 .faq-item.open > p,
-.faq-item.open > div.faq-answer { display: block; }
+.faq-item.open > div.faq-answer { display: block !important; }
 /* Article-style faq-item paragraphs (nested in article-body) */
 .article-body .faq-item > p { font-family: 'Segoe UI', sans-serif; text-align: left; }
