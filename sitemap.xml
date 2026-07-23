@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://tolnigeria.com/</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -123,9 +123,21 @@
 
   <url>
     <loc>https://tolnigeria.com/articles/</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tolnigeria.com/articles/kigali-africa-business-hub/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://tolnigeria.com/images/articles/kigali-africa-business-hub.jpg</image:loc>
+      <image:title>Kigali: Africa's Cleanest City and Rising Business Hub</image:title>
+      <image:caption>Kigali Rwanda — Africa's number one ranked cleanest city and a rising Pan-African business destination.</image:caption>
+    </image:image>
   </url>
 
   <url>
