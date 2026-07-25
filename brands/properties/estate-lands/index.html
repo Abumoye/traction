@@ -248,19 +248,47 @@
         .cta-band-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
 
         /* FOOTER */
-        .tp-footer { background: #111; color: rgba(255,255,255,0.65); padding: 54px 5% 28px; }
-        .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 50px; max-width: 1100px; margin: 0 auto 40px; }
-        .footer-brand img { height: 40px; width: auto; margin-bottom: 18px; filter: brightness(0) invert(1); opacity: 0.9; }
-        .footer-brand p { font-size: 13.5px; line-height: 1.7; color: rgba(255,255,255,0.52); max-width: 280px; }
-        .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #ffffff; margin-bottom: 18px; }
-        .footer-col a { display: block; color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13.5px; margin-bottom: 11px; transition: color 0.2s; }
+        .tp-footer { background: #111; color: rgba(255,255,255,0.65); padding: 64px 5% 32px; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto 48px;
+            text-align: center;
+        }
+        .footer-col h4 {
+            font-size: 13px; font-weight: 800; letter-spacing: 2.5px;
+            text-transform: uppercase; color: #ffffff;
+            margin-bottom: 22px;
+        }
+        .footer-col a, .footer-col p {
+            display: block; color: rgba(255,255,255,0.65);
+            text-decoration: none; font-size: 14.5px;
+            margin-bottom: 12px; line-height: 1.5;
+            transition: color 0.2s;
+        }
         .footer-col a:hover { color: #ffffff; }
-        .footer-social { display: flex; gap: 10px; margin-top: 22px; }
-        .footer-social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.55); font-size: 14px; transition: border-color 0.2s, color 0.2s; text-decoration: none; }
-        .footer-social a:hover { border-color: #ffffff; color: #ffffff; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; text-align: center; font-size: 12.5px; color: rgba(255,255,255,0.3); max-width: 1100px; margin: 0 auto; }
-        .footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+        .footer-col p { cursor: default; }
+        .footer-social { display: flex; gap: 16px; justify-content: center; margin-top: 4px; }
+        .footer-social a {
+            width: 52px; height: 52px; border-radius: 50%;
+            background: rgba(255,255,255,0.10);
+            display: flex; align-items: center; justify-content: center;
+            color: #ffffff; font-size: 20px;
+            text-decoration: none; transition: background 0.2s;
+        }
+        .footer-social a:hover { background: #233e90; }
+        .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.10); max-width: 1100px; margin: 0 auto 28px; }
+        .footer-bottom { text-align: center; font-size: 13px; color: rgba(255,255,255,0.35); }
+        .footer-bottom a { color: rgba(255,255,255,0.45); text-decoration: none; }
         .footer-bottom a:hover { color: #ffffff; }
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+        }
+        @media (max-width: 480px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+        }
 
         /* MOBILE */
         @media (max-width: 900px) {
@@ -539,34 +567,31 @@
     <!-- FOOTER -->
     <footer class="tp-footer">
         <div class="footer-grid">
-            <div class="footer-brand">
-                <img src="/images/traction-properties-logo-white.png" alt="Traction Properties and Managers">
-                <p>A premier property management, brokerage, and real estate advisory firm based in Abuja, Nigeria. A brand of Traction Outsourcing Limited.</p>
+            <div class="footer-col">
+                <h4>Head Office</h4>
+                <p>26, Algiers Street,<br>Wuse Zone 5, FCT,<br>Nigeria.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <a href="tel:+2348052033145">0805 203 3145</a>
+                <a href="tel:+2348125078087">0812 507 8087</a>
+                <a href="tel:+2347078707777">0707 870 7777</a>
+            </div>
+            <div class="footer-col">
+                <h4>Email</h4>
+                <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/traction_properties" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/2348052033145" target="_blank" rel="noopener" aria-label="WhatsApp (Traction Properties)"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://www.tiktok.com/@traction_properties" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Properties</h4>
-                <a href="/brands/properties/estate-lands/">Estate Lands in Abuja</a>
-                <a href="/brands/properties/">Properties for Sale</a>
-                <a href="/brands/properties/">Properties for Rent</a>
-                <a href="/brands/properties/#management">Property Management</a>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <a href="tel:+2348052033145">0805 203 3145</a>
-                <a href="tel:+2348125078087">0812 507 8087</a>
-                <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a>
-                <a href="https://maps.app.goo.gl/QL5L5SRUmGRFSi5c7" target="_blank" rel="noopener">26 Algiers Street, Wuse Zone 5, Abuja</a>
-            </div>
         </div>
+        <hr class="footer-divider">
         <div class="footer-bottom">
-            <p>&copy; 2026 Traction Properties and Managers &nbsp;&middot;&nbsp; A brand of Traction Outsourcing Limited
-            &nbsp;|&nbsp; <a href="/privacy-policy/">Privacy Policy</a>
-            &nbsp;|&nbsp; <a href="/brands/properties/">Back to Traction Properties</a></p>
+            <p>&copy; 2026 Traction Outsourcing Limited. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy/">Privacy Policy</a></p>
         </div>
     </footer>
 
