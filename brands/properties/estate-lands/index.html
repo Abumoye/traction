@@ -56,7 +56,7 @@
             --tp-blue-dark:   #1a2f6e;
             --tp-blue-mid:    #2d4fa8;
             --tp-charcoal:    #222222;
-            --tp-gold:        #c9a84c;
+            --tp-gold:        #ffffff;
             --tp-cream:       #f4f6fb;
             --tp-white:       #ffffff;
             --tp-dark:        #1a1a1a;
@@ -74,15 +74,15 @@
             padding: 0 5%; height: 70px;
             background: rgba(35, 62, 144, 0.97);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
         }
         .tp-logo { display: flex; align-items: center; text-decoration: none; }
         .tp-logo img { height: 42px; width: auto; }
         .tp-nav { display: flex; align-items: center; gap: 28px; }
         .tp-nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: color 0.2s; }
-        .tp-nav a:hover { color: var(--tp-gold); }
-        .tp-nav .nav-cta { background: var(--tp-gold); color: var(--tp-dark); padding: 9px 22px; border-radius: 4px; font-weight: 700; font-size: 13px; }
-        .tp-nav .nav-cta:hover { background: #b8973e; color: var(--tp-dark); }
+        .tp-nav a:hover { color: #ffffff; }
+        .tp-nav .nav-cta { background: #ffffff; color: #233e90; padding: 9px 22px; border-radius: 4px; font-weight: 700; font-size: 13px; }
+        .tp-nav .nav-cta:hover { background: #e8ecf7; color: #1a2f6e; }
         .tp-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
         .tp-hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
 
@@ -105,7 +105,7 @@
         .hero-content { position: relative; z-index: 2; max-width: 860px; padding: 130px 6% 90px; }
         .hero-eyebrow {
             display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.45);
+            background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.35);
             color: var(--tp-gold); font-size: 11px; font-weight: 700;
             letter-spacing: 2.5px; text-transform: uppercase;
             padding: 8px 22px; border-radius: 30px; margin-bottom: 28px;
@@ -116,30 +116,30 @@
             font-size: clamp(44px, 7.5vw, 86px); font-weight: 700;
             color: var(--tp-white); line-height: 1.05; letter-spacing: -0.5px; margin-bottom: 22px;
         }
-        .hero h1 em { font-style: normal; color: var(--tp-gold); }
+        .hero h1 em { font-style: normal; color: #ffffff; }
         .hero-sub { font-size: clamp(15px, 2vw, 18px); color: rgba(255,255,255,0.82); font-weight: 300; line-height: 1.7; margin-bottom: 32px; max-width: 580px; margin-left: auto; margin-right: auto; }
         .hero-price {
             display: inline-block; font-family: 'Cormorant Garamond', serif;
             font-size: clamp(20px, 3vw, 30px); font-weight: 600; color: var(--tp-white);
-            background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.5);
+            background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.40);
             padding: 12px 34px; border-radius: 4px; margin-bottom: 40px;
         }
-        .hero-price span { color: var(--tp-gold); }
+        .hero-price span { color: #ffffff; }
         .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
         .btn-primary {
             display: inline-flex; align-items: center; gap: 9px;
-            background: var(--tp-gold); color: var(--tp-dark);
+            background: #ffffff; color: #233e90;
             padding: 15px 32px; border-radius: 4px; font-weight: 700; font-size: 14px;
             text-decoration: none; transition: background 0.2s, transform 0.2s;
         }
-        .btn-primary:hover { background: #b8973e; transform: translateY(-1px); }
+        .btn-primary:hover { background: #e8ecf7; color: #1a2f6e; transform: translateY(-1px); }
         .btn-outline {
             display: inline-flex; align-items: center; gap: 9px;
             border: 1.5px solid rgba(255,255,255,0.6); color: white;
             padding: 15px 32px; border-radius: 4px; font-weight: 500; font-size: 14px;
             text-decoration: none; transition: border-color 0.2s, color 0.2s;
         }
-        .btn-outline:hover { border-color: var(--tp-gold); color: var(--tp-gold); }
+        .btn-outline:hover { border-color: var(--tp-gold); color: #ffffff; }
         .hero-scroll {
             position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
             display: flex; flex-direction: column; align-items: center; gap: 8px;
@@ -177,7 +177,7 @@
             transition: transform 0.25s, box-shadow 0.25s;
         }
         .location-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(35,62,144,0.12); }
-        .location-card.featured { border-color: rgba(201,168,76,0.5); }
+        .location-card.featured { border-color: rgba(255,255,255,0.40); }
 
         .card-header {
             background: var(--tp-blue); padding: 24px 24px 20px;
@@ -189,7 +189,7 @@
         }
         .location-card.featured .card-header { background: var(--tp-blue-dark); }
         .featured-tag {
-            display: inline-block; background: var(--tp-gold); color: var(--tp-dark);
+            display: inline-block; background: #ffffff; color: #233e90;
             font-size: 9.5px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;
             padding: 4px 10px; border-radius: 3px; margin-bottom: 10px;
         }
@@ -209,25 +209,25 @@
             font-weight: 600; font-size: 13.5px; text-decoration: none; transition: background 0.2s;
         }
         .card-cta:hover { background: var(--tp-blue-dark); }
-        .location-card.featured .card-cta { background: var(--tp-gold); color: var(--tp-dark); }
-        .location-card.featured .card-cta:hover { background: #b8973e; }
+        .location-card.featured .card-cta { background: #ffffff; color: #233e90; font-weight: 700; }
+        .location-card.featured .card-cta:hover { background: #1a2f6e; }
 
         /* WHY SECTION */
         .why-section { background: var(--tp-blue-dark); color: white; }
         .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; max-width: 1100px; margin: 0 auto; align-items: center; }
-        .why-left .section-label { color: var(--tp-gold); }
+        .why-left .section-label { color: #ffffff; }
         .why-left .section-heading { color: white; }
         .why-left .section-sub { color: rgba(255,255,255,0.70); }
         .why-points { list-style: none; margin-top: 36px; display: flex; flex-direction: column; gap: 22px; }
         .why-point { display: flex; gap: 16px; align-items: flex-start; }
-        .why-icon { width: 44px; height: 44px; border-radius: 8px; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .why-icon { width: 44px; height: 44px; border-radius: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
         .why-icon i { color: var(--tp-gold); font-size: 16px; }
         .why-point-text h4 { font-size: 15px; font-weight: 600; color: white; margin-bottom: 4px; }
         .why-point-text p { font-size: 13.5px; color: rgba(255,255,255,0.62); line-height: 1.6; }
         .why-right { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .stat-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 28px 20px; text-align: center; }
-        .stat-box.wide { grid-column: span 2; background: rgba(201,168,76,0.1); border-color: rgba(201,168,76,0.28); }
-        .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: var(--tp-gold); line-height: 1; margin-bottom: 6px; }
+        .stat-box.wide { grid-column: span 2; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.20); }
+        .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: #ffffff; line-height: 1; margin-bottom: 6px; }
         .stat-label { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.5; }
 
         /* PROCESS */
@@ -255,13 +255,13 @@
         .footer-brand p { font-size: 13.5px; line-height: 1.7; color: rgba(255,255,255,0.52); max-width: 280px; }
         .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--tp-gold); margin-bottom: 18px; }
         .footer-col a { display: block; color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13.5px; margin-bottom: 11px; transition: color 0.2s; }
-        .footer-col a:hover { color: var(--tp-gold); }
+        .footer-col a:hover { color: #ffffff; }
         .footer-social { display: flex; gap: 10px; margin-top: 22px; }
         .footer-social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.55); font-size: 14px; transition: border-color 0.2s, color 0.2s; text-decoration: none; }
-        .footer-social a:hover { border-color: var(--tp-gold); color: var(--tp-gold); }
+        .footer-social a:hover { border-color: var(--tp-gold); color: #ffffff; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; text-align: center; font-size: 12.5px; color: rgba(255,255,255,0.3); max-width: 1100px; margin: 0 auto; }
         .footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
-        .footer-bottom a:hover { color: var(--tp-gold); }
+        .footer-bottom a:hover { color: #ffffff; }
 
         /* MOBILE */
         @media (max-width: 900px) {
@@ -307,8 +307,8 @@
         .coming-soon-inner { position: relative; text-align: center; }
         .coming-soon-badge {
             display: inline-block;
-            border: 1.5px solid rgba(201,168,76,0.7);
-            color: #c9a84c;
+            border: 1.5px solid rgba(255,255,255,0.55);
+            color: #ffffff;
             font-size: 9px; font-weight: 800; letter-spacing: 3.5px;
             text-transform: uppercase; padding: 5px 16px; margin-bottom: 14px;
         }
