@@ -31,9 +31,10 @@
     <meta property="og:title" content="Affordable Estate Lands in Abuja | Traction Properties">
     <meta property="og:description" content="Prime estate plots in Kuje, Jikwoyi, Asokoro 2, Katampe Extension 2, and Guzape. Starting from N3,000,000.">
     <meta property="og:url" content="https://tolnigeria.com/brands/properties/estate-lands/">
-    <meta property="og:image" content="https://tolnigeria.com/brands/properties/abuja-estate-lands-hero.jpg">
+    <meta property="og:image" content="https://tolnigeria.com/images/og/og-traction-properties.jpg">
 
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/traction-properties-favicon.png">
+    <link rel="apple-touch-icon" href="/images/traction-properties-icon-512.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -288,6 +289,44 @@
             .process-steps { grid-template-columns: 1fr 1fr; }
         }
 
+        /* COMING SOON PLACEHOLDER */
+        .coming-soon {
+            width: 100%; aspect-ratio: 1 / 1;
+            background: #1a1a1a;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+        }
+        .coming-soon::before {
+            content: ''; position: absolute; inset: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(35,62,144,0.08) 0px, rgba(35,62,144,0.08) 1px,
+                transparent 1px, transparent 12px
+            );
+        }
+        .coming-soon-inner { position: relative; text-align: center; }
+        .coming-soon-badge {
+            display: inline-block;
+            border: 1.5px solid rgba(201,168,76,0.7);
+            color: #c9a84c;
+            font-size: 9px; font-weight: 800; letter-spacing: 3.5px;
+            text-transform: uppercase; padding: 5px 16px; margin-bottom: 14px;
+        }
+        .coming-soon-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.9);
+            letter-spacing: 1px;
+        }
+        .coming-soon-sub {
+            font-size: 11px; color: rgba(255,255,255,0.4);
+            margin-top: 8px; letter-spacing: 0.5px;
+        }
+        /* Smaller card feature text */
+        .card-features li { font-size: 12.5px; padding: 5px 0; }
+        .card-features li i { font-size: 11px; }
+        .card-body { padding: 16px 20px 20px; }
+        .card-price { font-size: 19px; margin-bottom: 12px; }
+
         /* REVEAL ANIMATION */
         @media (prefers-reduced-motion: no-preference) {
             .location-card { opacity: 0; transform: translateY(20px); transition: opacity 0.45s ease, transform 0.45s ease, box-shadow 0.25s; }
@@ -304,7 +343,7 @@
     <!-- HEADER -->
     <header class="tp-header">
         <a href="/brands/properties/" class="tp-logo">
-            <img src="/images/traction-properties-and-managers.png" alt="Traction Properties and Managers">
+            <img src="/images/traction-properties-logo-white.png" alt="Traction Properties and Managers">
         </a>
         <button class="tp-hamburger" id="tpHamburger" aria-label="Open menu">
             <span></span><span></span><span></span>
@@ -352,6 +391,13 @@
 
         <div class="locations-grid">
             <div class="location-card featured">
+                <div class="coming-soon">
+                    <div class="coming-soon-inner">
+                        <div class="coming-soon-badge">Property Flyer</div>
+                        <div class="coming-soon-text">Coming Soon</div>
+                        <div class="coming-soon-sub">Flyer will appear here</div>
+                    </div>
+                </div>
                 <div class="card-header">
                     <div class="featured-tag">High Demand</div>
                     <div class="location-name">Guzape</div>
@@ -370,6 +416,13 @@
             </div>
 
             <div class="location-card">
+                <div class="coming-soon">
+                    <div class="coming-soon-inner">
+                        <div class="coming-soon-badge">Property Flyer</div>
+                        <div class="coming-soon-text">Coming Soon</div>
+                        <div class="coming-soon-sub">Flyer will appear here</div>
+                    </div>
+                </div>
                 <div class="card-header">
                     <div class="location-name">Asokoro 2</div>
                     <div class="location-area">Abuja Municipal Area Council &middot; AMAC</div>
@@ -387,6 +440,13 @@
             </div>
 
             <div class="location-card">
+                <div class="coming-soon">
+                    <div class="coming-soon-inner">
+                        <div class="coming-soon-badge">Property Flyer</div>
+                        <div class="coming-soon-text">Coming Soon</div>
+                        <div class="coming-soon-sub">Flyer will appear here</div>
+                    </div>
+                </div>
                 <div class="card-header">
                     <div class="location-name">Katampe Ext. 2</div>
                     <div class="location-area">Katampe Extension &middot; Abuja</div>
@@ -404,6 +464,13 @@
             </div>
 
             <div class="location-card">
+                <div class="coming-soon">
+                    <div class="coming-soon-inner">
+                        <div class="coming-soon-badge">Property Flyer</div>
+                        <div class="coming-soon-text">Coming Soon</div>
+                        <div class="coming-soon-sub">Flyer will appear here</div>
+                    </div>
+                </div>
                 <div class="card-header">
                     <div class="location-name">Jikwoyi</div>
                     <div class="location-area">Abuja Municipal Area Council &middot; AMAC</div>
@@ -421,6 +488,13 @@
             </div>
 
             <div class="location-card">
+                <div class="coming-soon">
+                    <div class="coming-soon-inner">
+                        <div class="coming-soon-badge">Property Flyer</div>
+                        <div class="coming-soon-text">Coming Soon</div>
+                        <div class="coming-soon-sub">Flyer will appear here</div>
+                    </div>
+                </div>
                 <div class="card-header">
                     <div class="location-name">Kuje</div>
                     <div class="location-area">Kuje Area Council &middot; FCT</div>
@@ -435,84 +509,6 @@
                     <div class="card-price">From &#8358;3,000,000 <span>Per plot &middot; Price may vary by size</span></div>
                     <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20estate%20land%20in%20Kuje%2C%20Abuja." target="_blank" rel="noopener" class="card-cta"><i class="fab fa-whatsapp"></i> Enquire About Kuje</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY SECTION -->
-    <section class="section why-section">
-        <div class="why-grid">
-            <div class="why-left">
-                <span class="section-label">Why Traction Properties</span>
-                <h2 class="section-heading">Land you can trust. Backed by professionals.</h2>
-                <p class="section-sub">We handle every step of the acquisition process — from due diligence to documentation — so you can invest with confidence.</p>
-                <ul class="why-points">
-                    <li class="why-point">
-                        <div class="why-icon"><i class="fas fa-file-contract"></i></div>
-                        <div class="why-point-text">
-                            <h4>Clear Title Documentation</h4>
-                            <p>Every plot comes with verified title documents including surveys and gazette records reviewed before any payment.</p>
-                        </div>
-                    </li>
-                    <li class="why-point">
-                        <div class="why-icon"><i class="fas fa-credit-card"></i></div>
-                        <div class="why-point-text">
-                            <h4>Flexible Payment Plans</h4>
-                            <p>We offer installment options designed around your financial schedule. No hidden charges.</p>
-                        </div>
-                    </li>
-                    <li class="why-point">
-                        <div class="why-icon"><i class="fas fa-user-tie"></i></div>
-                        <div class="why-point-text">
-                            <h4>Professional Advisory</h4>
-                            <p>Our team guides you from first enquiry through site visit, documentation, and final allocation.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="why-right">
-                <div class="stat-box wide">
-                    <div class="stat-num">5</div>
-                    <div class="stat-label">Prime locations available<br>across Abuja &amp; the FCT</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">&#8358;3M</div>
-                    <div class="stat-label">Starting price<br>per plot</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">24/7</div>
-                    <div class="stat-label">Client support<br>always available</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section class="section process-section">
-        <div class="process-intro">
-            <span class="section-label">How It Works</span>
-            <h2 class="section-heading">From enquiry to ownership in 4 steps</h2>
-        </div>
-        <div class="process-steps">
-            <div class="step">
-                <div class="step-num">1</div>
-                <h4>Choose a Location</h4>
-                <p>Browse our five locations and select the one that fits your goals and budget.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">2</div>
-                <h4>Contact Our Team</h4>
-                <p>Reach us via WhatsApp or phone. We arrange a site visit and share full details.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">3</div>
-                <h4>Review Documentation</h4>
-                <p>All title documents are shared for your review before any payment is made.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">4</div>
-                <h4>Complete Purchase</h4>
-                <p>Make payment, receive your allocation letter, and take ownership of your land.</p>
             </div>
         </div>
     </section>
@@ -533,12 +529,12 @@
     <footer class="tp-footer">
         <div class="footer-grid">
             <div class="footer-brand">
-                <img src="/images/traction-properties-and-managers.png" alt="Traction Properties and Managers">
+                <img src="/images/traction-properties-logo-white.png" alt="Traction Properties and Managers">
                 <p>A premier property management, brokerage, and real estate advisory firm based in Abuja, Nigeria. A brand of Traction Outsourcing Limited.</p>
                 <div class="footer-social">
-                    <a href="https://instagram.com/tractionoutsourcing" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/2348052033145" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://tiktok.com/@tractionoutsourcing" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/traction_properties" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/2348052033145" target="_blank" rel="noopener" aria-label="WhatsApp (Traction Properties)"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@traction_properties" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
             <div class="footer-col">
