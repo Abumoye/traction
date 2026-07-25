@@ -251,9 +251,10 @@
         .tp-footer { background: #111; color: rgba(255,255,255,0.65); padding: 64px 5% 32px; }
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            max-width: 1100px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 48px 60px;
+            max-width: 900px;
             margin: 0 auto 48px;
             text-align: center;
         }
@@ -284,7 +285,6 @@
         .footer-bottom a { color: rgba(255,255,255,0.45); text-decoration: none; }
         .footer-bottom a:hover { color: #ffffff; }
         @media (max-width: 768px) {
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
         }
         @media (max-width: 480px) {
             .footer-grid { grid-template-columns: 1fr; gap: 32px; }
