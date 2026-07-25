@@ -249,7 +249,15 @@
             .org-branch { width: 100%; max-width: 280px; }
             .org-branch .org-connector { height: 16px; }
         }
-    </style>
+            .faq-block { max-width: 760px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #eee; padding: 0; cursor: pointer; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item h3 { font-size: 17px; color: var(--primary-color); margin: 0; padding: 18px 44px 18px 0; position: relative; user-select: none; }
+        .faq-item h3::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 22px; font-weight: 400; color: var(--accent-color); }
+        .faq-item.open h3::after { content: "\2212"; }
+        .faq-item > p { display: none; font-size: 15px; color: #555; margin: 0; padding: 0 44px 18px 0; line-height: 1.7; font-family: "Segoe UI", sans-serif; }
+        .faq-item.open > p { display: block; }
+</style>
     <!-- Microsoft Clarity -->
     <script>
         (function(c,l,a,r,i,t,y){
@@ -405,6 +413,32 @@
         </div>
     </article>
 
+
+    <section style="max-width: 800px; margin: 0 auto; padding: 0 6% 60px;">
+        <h2 style="font-family: Georgia, serif; color: var(--primary-color); font-size: 24px; border-left: 4px solid var(--accent-color); padding-left: 16px; margin-bottom: 24px;">Common Questions</h2>
+        <div class="faq-block">
+            <div class="faq-item">
+                <h3>What type of organogram should a new business use?</h3>
+                <p>A functional organogram, which is the structure described in this guide. There are three other types, hierarchical, flat, and matrix, but businesses between zero and three years old should focus on the functional structure, since the priority at that stage is employee effectiveness, efficiency, and clarity over who gets things done, not who holds the most authority.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I create an organogram for a real estate company?</h3>
+                <p>Start with the director at the top, then split the business into its core functions. For a young real estate management firm, that usually means an Operations Lead handling property maintenance, listings, and vendor relations; a Sales and Brokerage Lead handling client tours, partnerships, and contract agreements; and a Finance and Admin Lead handling rent collection, disbursement, and legal paperwork. If you are a solo founder, you can occupy all three boxes yourself and hire into each one as the business grows.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I create an organogram in Nigeria?</h3>
+                <p>Audit the tasks your business actually performs today, group them into core departments such as Operations, Finance and Administration, Growth and Sales, and Talent and Culture, give every person one clear supervisor, and design the structure to stay modular as you hire. Traction Outsourcing Limited helps Nigerian businesses build and review this kind of structure directly.</p>
+            </div>
+            <div class="faq-item">
+                <h3>I need help creating an organogram. Where do I start?</h3>
+                <p>Start by listing every task your business completes today rather than the roles you eventually want. The gaps and overlaps in that list point directly to how your organogram should be structured. If you would rather have this done for you, Traction Outsourcing Limited offers business advisory and structuring support for Nigerian SMEs.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How often should an organogram be updated?</h3>
+                <p>An organogram is a living document, not a one-time exercise. Review it every six to twelve months, or sooner if the business is missing its targets, since the friction is often visible in the reporting lines themselves.</p>
+            </div>
+        </div>
+    </section>
     <!-- Complete Corporate Footer Section -->
     </main>
 
@@ -468,5 +502,6 @@
         });
     </script>
 
+    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>
