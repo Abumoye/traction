@@ -223,6 +223,13 @@
     <priority>0.6</priority>
   </url>
 
+
+  <url>
+    <loc>https://tolnigeria.com/brands/properties/estate-lands/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
   <url>
     <loc>https://tolnigeria.com/brands/properties/</loc>
     <lastmod>2026-07-11</lastmod>
