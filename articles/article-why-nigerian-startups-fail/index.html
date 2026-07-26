@@ -156,6 +156,54 @@
             .article-content p { font-size: 16px; }
             .article-content h2 { font-size: 21px; }
         }
+    
+        /* ── Two-column article layout ── */
+        .article-page-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 4% 80px;
+            align-items: start;
+        }
+        .article-main-col { min-width: 0; }
+
+        /* Sidebar */
+        .article-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px; }
+        .sidebar-cta { background: var(--primary-color); border-radius: 10px; padding: 24px 22px; }
+        .sidebar-cta h4 { color: #fff; font-size: 16px; margin: 0 0 10px; }
+        .sidebar-cta p { color: rgba(255,255,255,0.72); font-size: 13.5px; line-height: 1.6; margin-bottom: 18px; font-family: 'Segoe UI', sans-serif; }
+        .sidebar-cta-btn { display: block; background: var(--accent-color); color: #fff; text-align: center; padding: 12px 16px; border-radius: 5px; font-weight: 700; font-size: 13.5px; text-decoration: none; }
+        .sidebar-cta-btn:hover { opacity: 0.88; }
+        .sidebar-services, .sidebar-event, .sidebar-articles { background: var(--light-bg); border-radius: 10px; padding: 20px 22px; }
+        .sidebar-services h4, .sidebar-event h4, .sidebar-articles h4 { color: var(--primary-color); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 14px; font-family: 'Segoe UI', sans-serif; font-weight: 800; }
+        .sidebar-services ul, .sidebar-articles ul { list-style: none; padding: 0; margin: 0; }
+        .sidebar-services li, .sidebar-articles li { border-bottom: 1px solid #e8e8e8; }
+        .sidebar-services li:last-child, .sidebar-articles li:last-child { border-bottom: none; }
+        .sidebar-services a, .sidebar-articles a { display: block; padding: 9px 0; font-size: 13.5px; color: #444; text-decoration: none; font-family: 'Segoe UI', sans-serif; line-height: 1.4; }
+        .sidebar-services a:hover, .sidebar-articles a:hover { color: var(--accent-color); }
+        .sidebar-event p { font-size: 13.5px; color: #555; font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0 0 12px; }
+        .sidebar-event-link { font-size: 13.5px; font-weight: 700; color: var(--accent-color); text-decoration: none; }
+        .sidebar-event-link:hover { text-decoration: underline; }
+
+        /* Remove old article-wrap/article-content max-width & padding (handled by grid now) */
+        .article-wrap, .article-content { max-width: none; margin: 0; padding: 0; }
+        .article-content { padding-top: 0; }
+
+        /* back-to-articles sits above the grid */
+        .back-to-articles { display: inline-block; margin: 28px 4% 0; color: var(--accent-color); font-weight: 600; text-decoration: none; font-size: 14px; }
+
+        @media (max-width: 1024px) {
+            .article-page-layout { grid-template-columns: 1fr; gap: 0; padding: 20px 5% 60px; }
+            .article-sidebar { position: static; flex-direction: row; flex-wrap: wrap; gap: 16px; margin-top: 48px; }
+            .sidebar-cta { flex: 1 1 100%; }
+            .sidebar-services, .sidebar-event, .sidebar-articles { flex: 1 1 calc(50% - 8px); }
+        }
+        @media (max-width: 600px) {
+            .article-page-layout { padding: 16px 5% 48px; }
+            .sidebar-services, .sidebar-event, .sidebar-articles { flex: 1 1 100%; }
+        }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -223,6 +271,8 @@
         <img src="/images/articles/why-nigerian-startups-fail.jpg" width="400" height="267" alt="Why Nigerian Startups Fail Within Their First Five Years">
     </div>
 
+    <div class="article-page-layout">
+        <div class="article-main-col">
     <div class="article-content">
         <div class="article-meta">Startup Structuring</div>
         <h1>Why Nigerian Startups Fail Within Their First Five Years: A Structural Diagnosis</h1>
@@ -285,6 +335,43 @@
         </div>
     </section>
     <!-- Complete Corporate Footer Section -->
+        </div><!-- .article-main-col -->
+        <aside class="article-sidebar">
+            <div class="sidebar-cta">
+                <h4>Ready to Work With Us?</h4>
+                <p>Book a free 30-minute strategy call and let us review your business structure, compliance health, and operational gaps.</p>
+                <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20free%2030-minute%20strategy%20call." target="_blank" rel="noopener" class="sidebar-cta-btn">Book a Free Strategy Call</a>
+            </div>
+            <div class="sidebar-services">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="/services/startup-structuring/">Startup Structuring</a></li>
+                    <li><a href="/services/staff-outsourcing/">Staff Outsourcing &amp; Payroll</a></li>
+                    <li><a href="/services/corporate-restructuring/">Corporate Restructuring</a></li>
+                    <li><a href="/services/business-advisory/">Business Advisory</a></li>
+                    <li><a href="/services/employee-training/">Corporate Trainings</a></li>
+                    <li><a href="/services/corporate-retreats/">Events &amp; Retreats</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-event">
+                <h4>T-ICR 2026</h4>
+                <p>Our flagship executive retreat &mdash; Kigali, Rwanda, November 22&ndash;30.</p>
+                <a href="/events/" class="sidebar-event-link">Learn More &rarr;</a>
+            </div>
+            <div class="sidebar-articles">
+                <h4>More Insights</h4>
+                <ul>
+                    <li><a href="/articles/what-is-traction-in-business/">What Is Traction in Business?</a></li>
+                    <li><a href="/articles/how-to-register-a-company-in-nigeria/">How to Register a Company in Nigeria</a></li>
+                    <li><a href="/articles/company-registration-nigeria-foreigners/">Company Registration for Foreigners</a></li>
+                    <li><a href="/articles/kigali-africa-business-hub/">Kigali: Africa&rsquo;s Rising Business Hub</a></li>
+                    <li><a href="/articles/article-why-nigerian-startups-fail/">Why Nigerian Startups Fail</a></li>
+                    <li><a href="/articles/employee-leave-and-compensation-in-nigeria/">Employee Leave &amp; Compensation</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div><!-- .article-page-layout -->
+
     </main>
 
     <footer>
