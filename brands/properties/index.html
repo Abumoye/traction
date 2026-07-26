@@ -64,6 +64,32 @@
         @media (max-width: 900px) { .why-grid { grid-template-columns: 1fr; gap: 36px; } .why-right { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 480px) { .why-right { grid-template-columns: 1fr; } .why-right .stat-box.wide { grid-column: span 1; } }
 
+    
+        /* TP Brand Header */
+        .tp-header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 5%; height: 70px;
+            background: rgba(35, 62, 144, 0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+        .tp-logo { display: flex; align-items: center; text-decoration: none; }
+        .tp-logo img { height: 42px; width: auto; }
+        .tp-nav { display: flex; align-items: center; gap: 28px; }
+        .tp-nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: color 0.2s; }
+        .tp-nav a:hover { color: #ffffff; }
+        .tp-nav .nav-cta { background: #ffffff; color: #233e90; padding: 9px 22px; border-radius: 4px; font-weight: 700; font-size: 13px; }
+        .tp-nav .nav-cta:hover { background: #e8ecf7; color: #1a2f6e; }
+        .tp-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+        .tp-hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+        @media (max-width: 768px) {
+            .tp-nav { display: none; flex-direction: column; position: fixed; top: 70px; left: 0; right: 0; background: rgba(26,47,110,0.98); padding: 24px 6%; gap: 18px; border-top: 1px solid rgba(255,255,255,0.08); }
+            .tp-nav.open { display: flex; }
+            .tp-hamburger { display: flex; }
+        }
+        /* Push content below fixed header */
+        main { padding-top: 70px; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -111,49 +137,18 @@
 <body>
 
     <!-- Header / Navigation -->
-    <header>
-        <a href="/" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="/images/traction-outsourcing-logo.png" width="1129" height="200" alt="Traction Outsourcing Limited Logo" style="height: 50px; width: auto;">
+    <header class="tp-header">
+        <a href="/brands/properties/" class="tp-logo">
+            <img src="/images/traction-properties-logo-white.png" alt="Traction Properties and Managers">
         </a>
-
-        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu Navigation">
-            <span></span>
-            <span></span>
-            <span></span>
+        <button class="tp-hamburger" id="tpHamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
         </button>
-
-        <nav id="navMenu">
-            <a href="/">Home</a>
-            <div class="dropdown">
-                <a href="#">Our Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
-                <div class="dropdown-content">
-                    <a href="/services/staff-outsourcing/" class="dropdown-item">Staff Outsourcing & HR Management</a>
-                    <a href="/services/startup-structuring/" class="dropdown-item">Startup Structuring</a>
-                    <a href="/services/corporate-restructuring/" class="dropdown-item">Corporate Restructuring</a>
-                    <a href="/services/business-advisory/" class="dropdown-item">Business Advisory</a>
-                    <a href="/services/employee-training/" class="dropdown-item">Employee Training</a>
-                    <a href="/services/corporate-retreats/" class="dropdown-item">Events & Retreats</a>
-                </div>
-            </div>
-            <a href="/events/">Events</a>
-            <a href="/articles/">Articles</a>
-
-            <div class="dropdown">
-                <a href="#">Our Brands <i class="fas fa-chevron-down dropdown-arrow"></i></a>
-                <div class="dropdown-content">
-                    <a href="/brands/properties/" class="dropdown-item">
-                        <img src="/images/traction-properties-logo.png" width="3835" height="881" alt="Traction Properties Logo" style="height:28px;width:auto;">
-                        Traction Properties
-                    </a>
-                    <a href="/brands/recruiters/" class="dropdown-item">
-                        <img src="/images/ath-recruiters.png" width="800" height="450" alt="ATH Recruiters Logo">
-                        ATH Recruiters
-                    </a>
-                </div>
-            </div>
-
-            <a href="/partnerships/">Partnerships</a>
-            <a href="/founder/">Our Founder</a>
+        <nav class="tp-nav" id="tpNav">
+            <a href="/brands/properties/">Properties</a>
+            <a href="/brands/properties/estate-lands/">Estate Lands</a>
+            <a href="/brands/properties/#management">Management</a>
+            <a href="tel:+2348052033145" class="nav-cta"><i class="fas fa-phone"></i>&nbsp; Call Us</a>
         </nav>
     </header>
 
@@ -256,49 +251,22 @@
 
     <!-- WHY SECTION -->
     <section class="section why-section" id="why-traction">
-        <div class="why-grid">
-            <div class="why-left">
-                <span class="section-label">Why Traction Properties</span>
-                <h2 class="section-heading">Land you can trust. Backed by professionals.</h2>
-                <p class="section-sub">We handle every step of the acquisition process — from due diligence to documentation — so you can invest with confidence.</p>
-                <ul class="why-points">
-                    <li class="why-point">
-                        <div class="why-icon"><i class="fas fa-file-contract"></i></div>
-                        <div class="why-point-text">
-                            <h4>Clear Title Documentation</h4>
-                            <p>Every plot comes with verified title documents including surveys and gazette records reviewed before any payment.</p>
-                        </div>
-                    </li>
-                    <li class="why-point">
-                        <div class="why-icon"><i class="fas fa-credit-card"></i></div>
-                        <div class="why-point-text">
-                            <h4>Flexible Payment Plans</h4>
-                            <p>We offer installment options designed around your financial schedule. No hidden charges.</p>
-                        </div>
-                    </li>
-                    <li class="why-point">
-                        <div class="why-icon"><i class="fas fa-user-tie"></i></div>
-                        <div class="why-point-text">
-                            <h4>Professional Advisory</h4>
-                            <p>Our team guides you from first enquiry through site visit, documentation, and final allocation.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="why-right">
-                <div class="why-benefits-row">
-                    <div class="why-benefit">
-                        <div class="why-icon"><i class="fas fa-file-contract"></i></div>
-                        <span>Clear Title Documentation</span>
-                    </div>
-                    <div class="why-benefit">
-                        <div class="why-icon"><i class="fas fa-credit-card"></i></div>
-                        <span>Flexible Payment Plans</span>
-                    </div>
-                    <div class="why-benefit">
-                        <div class="why-icon"><i class="fas fa-user-tie"></i></div>
-                        <span>Professional Advisory</span>
-                    </div>
+        <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
+            <span class="section-label" style="color: rgba(255,255,255,0.7);">Why Traction Properties</span>
+            <h2 class="section-heading" style="color: white; font-size: clamp(24px, 3.5vw, 40px); margin-bottom: 14px;">Land you can trust. Backed by professionals.</h2>
+            <p style="font-size: 15px; color: rgba(255,255,255,0.70); line-height: 1.7; max-width: 560px; margin: 0 auto 44px;">We handle every step of the acquisition process — from due diligence to documentation — so you can invest with confidence.</p>
+            <div class="why-benefits-row">
+                <div class="why-benefit">
+                    <div class="why-icon"><i class="fas fa-file-contract"></i></div>
+                    <span>Clear Title Documentation</span>
+                </div>
+                <div class="why-benefit">
+                    <div class="why-icon"><i class="fas fa-credit-card"></i></div>
+                    <span>Flexible Payment Plans</span>
+                </div>
+                <div class="why-benefit">
+                    <div class="why-icon"><i class="fas fa-user-tie"></i></div>
+                    <span>Professional Advisory</span>
                 </div>
             </div>
         </div>
@@ -358,17 +326,11 @@
     </footer>
 
     <script>
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const navMenu = document.getElementById('navMenu');
-        hamburgerBtn.addEventListener('click', () => {
-            hamburgerBtn.classList.toggle('toggle');
-            navMenu.classList.toggle('active');
-        });
-        document.querySelectorAll('nav a:not([href="#"])').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburgerBtn.classList.remove('toggle');
-                navMenu.classList.remove('active');
-            });
+        const hamburger = document.getElementById('tpHamburger');
+        const nav = document.getElementById('tpNav');
+        hamburger.addEventListener('click', () => { nav.classList.toggle('open'); });
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !hamburger.contains(e.target)) nav.classList.remove('open');
         });
         document.addEventListener('click', (e) => {
             if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
