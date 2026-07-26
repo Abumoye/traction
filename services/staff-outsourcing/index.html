@@ -247,6 +247,48 @@
         @media (max-width: 900px) {
             .jc-track img { height: 55px; margin: 0 30px; }
         }
+    
+        /* Service page two-column layout */
+        .service-page-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 0 48px;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 4%;
+            align-items: start;
+        }
+        .service-main-col { min-width: 0; }
+        .service-main-col .section { padding-left: 0; padding-right: 0; }
+        .service-sidebar {
+            position: sticky; top: 90px; padding-top: 56px;
+            display: flex; flex-direction: column; gap: 20px;
+        }
+        .s-sidebar-cta { background: var(--primary-color); border-radius: 10px; padding: 24px 20px; }
+        .s-sidebar-cta h4 { color: #fff; font-size: 16px; margin: 0 0 8px; }
+        .s-sidebar-cta p { color: rgba(255,255,255,0.70); font-size: 13px; line-height: 1.6; margin-bottom: 16px; font-family: 'Segoe UI', sans-serif; }
+        .s-sidebar-cta-btn { display: block; background: var(--accent-color); color: #fff; text-align: center; padding: 12px 14px; border-radius: 5px; font-weight: 700; font-size: 13px; text-decoration: none; line-height: 1.4; }
+        .s-sidebar-cta-btn:hover { opacity: 0.88; }
+        .s-sidebar-block { background: var(--light-bg); border-radius: 10px; padding: 18px 20px; }
+        .s-sidebar-block h4 { color: var(--primary-color); font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 12px; font-family: 'Segoe UI', sans-serif; font-weight: 800; }
+        .s-sidebar-block ul { list-style: none; padding: 0; margin: 0; }
+        .s-sidebar-block li { border-bottom: 1px solid #e4e4e4; }
+        .s-sidebar-block li:last-child { border-bottom: none; }
+        .s-sidebar-block a { display: block; padding: 9px 0; font-size: 13px; color: #444; text-decoration: none; font-family: 'Segoe UI', sans-serif; line-height: 1.4; }
+        .s-sidebar-block a:hover { color: var(--accent-color); }
+        .s-sidebar-block a.active { color: var(--accent-color); font-weight: 700; }
+        .s-sidebar-contact p { font-family: 'Segoe UI', sans-serif; font-size: 13px; color: #555; margin: 0 0 12px; line-height: 1.5; }
+        .s-sidebar-contact a.call-link { display: block; font-size: 13px; color: var(--accent-color); font-weight: 700; text-decoration: none; margin-bottom: 6px; }
+        @media (max-width: 1024px) {
+            .service-page-layout { grid-template-columns: 1fr; padding: 0 5%; }
+            .service-sidebar { position: static; padding-top: 0; flex-direction: row; flex-wrap: wrap; gap: 14px; margin: 0 0 20px; }
+            .s-sidebar-cta { flex: 1 1 100%; }
+            .s-sidebar-block { flex: 1 1 calc(50% - 7px); }
+        }
+        @media (max-width: 600px) {
+            .service-page-layout { padding: 0 4%; }
+            .s-sidebar-block { flex: 1 1 100%; }
+        }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -317,6 +359,9 @@
             <a href="https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20staff%20outsourcing" target="_blank" rel="noopener" class="btn-outline-cta">Chat on WhatsApp</a>
         </div>
     </section>
+
+    <div class="service-page-layout">
+        <div class="service-main-col">
 
     <!-- Intro Section -->
     <section class="section">
@@ -575,6 +620,44 @@
     </section>
 
     <!-- Lead Capture Form -->
+        </div><!-- .service-main-col -->
+        <aside class="service-sidebar">
+            <div class="s-sidebar-cta">
+                <h4>Get Started</h4>
+                <p>Speak with our consulting team about how Staff Outsourcing can work for your business.</p>
+                <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Staff%20Outsourcing%20at%20Traction%20Outsourcing%20Limited." target="_blank" rel="noopener" class="s-sidebar-cta-btn">Outsource My HR & Payroll</a>
+            </div>
+            <div class="s-sidebar-block">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="/services/startup-structuring/" class="">Startup Structuring</a></li>
+                    <li><a href="/services/staff-outsourcing/" class="active">Staff Outsourcing & Payroll</a></li>
+                    <li><a href="/services/business-advisory/" class="">Business Advisory</a></li>
+                    <li><a href="/services/corporate-restructuring/" class="">Corporate Restructuring</a></li>
+                    <li><a href="/services/employee-training/" class="">Corporate Trainings</a></li>
+                    <li><a href="/services/corporate-retreats/" class="">Events & Retreats</a></li>
+                    <li><a href="/services/bank-outsourcing/" class="">Bank Outsourcing</a></li>
+                </ul>
+            </div>
+            <div class="s-sidebar-block s-sidebar-contact">
+                <h4>Contact Us</h4>
+                <p>Available Monday to Friday, 9am to 5pm WAT.</p>
+                <a href="tel:+2348052033145" class="call-link"><i class="fas fa-phone"></i> 0805 203 3145</a>
+                <a href="tel:+2348125078087" class="call-link"><i class="fas fa-phone"></i> 0812 507 8087</a>
+                <a href="mailto:partner@tolnigeria.com" style="font-size:13px;color:#555;text-decoration:none;">partner@tolnigeria.com</a>
+            </div>
+            <div class="s-sidebar-block">
+                <h4>More Insights</h4>
+                <ul>
+                    <li><a href="/articles/what-is-traction-in-business/">What Is Traction in Business?</a></li>
+                    <li><a href="/articles/how-to-register-a-company-in-nigeria/">How to Register a Company in Nigeria</a></li>
+                    <li><a href="/articles/company-registration-nigeria-foreigners/">Company Registration for Foreigners</a></li>
+                    <li><a href="/articles/article-why-nigerian-startups-fail/">Why Nigerian Startups Fail</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div><!-- .service-page-layout -->
+
     <section class="section" style="padding-top: 0;">
         <div class="lead-form-wrap">
             <h3>Request A Free Consultation</h3>
