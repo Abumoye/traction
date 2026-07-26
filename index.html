@@ -45,7 +45,7 @@
     "TOL Nigeria"
   ],
   "url": "https://tolnigeria.com/",
-  "description": "Traction Outsourcing Limited is a HR and management consulting firm in Abuja, Nigeria. Providing talent acquisition, HR outsourcing, and corporate restructuring services across Africa.",
+  "description": "Traction Outsourcing Limited structures, staffs, and scales high-performance businesses in Nigeria. Services include startup structuring, staff outsourcing, corporate restructuring, business advisory, employee training, and corporate retreats.",
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
@@ -272,7 +272,14 @@
         @keyframes scrollBrands { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
         @media (max-width: 900px) {
-            .hero { padding: 90px 20px; }
+            .hero-eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 18px; display: block; }
+        .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+        .hero-btn-primary { background: var(--primary-color); color: #000; padding: 15px 32px; border-radius: 4px; font-weight: 800; font-size: 15px; text-decoration: none; transition: background 0.2s; }
+        .hero-btn-primary:hover { background: #c04d1a; color: #000; }
+        .hero-btn-secondary { border: 1.5px solid rgba(255,255,255,0.55); color: white; padding: 15px 32px; border-radius: 4px; font-weight: 600; font-size: 15px; text-decoration: none; transition: border-color 0.2s; }
+        .hero-btn-secondary:hover { border-color: white; }
+        @media (max-width: 600px) { .hero-ctas { flex-direction: column; align-items: center; } .hero-btn-primary, .hero-btn-secondary { width: 100%; max-width: 300px; text-align: center; } }
+        .hero { padding: 90px 20px; }
             .hero h1 { font-size: 34px; }
             .hero p { font-size: 17px; }
         }
@@ -338,61 +345,108 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Built By Africans, for Africa</h1>
-        <p>Traction Outsourcing Limited is a HR and management consulting firm in Abuja, Nigeria. Providing Talent acquisition, HR outsourcing, and corporate restructuring services across Africa.</p>
+        <p class="hero-eyebrow">HR &amp; Management Consulting &middot; Abuja, Nigeria</p>
+        <h1>Structuring, Staffing, and Scaling High-Performance Businesses in Nigeria</h1>
+        <p>From setting up investor-ready startups to managing outsourced teams and corporate retreats, Traction Outsourcing Limited builds the operational frameworks your business needs to thrive.</p>
+        <div class="hero-ctas">
+            <a href="https://wa.me/2348052033145?text=Hi,%20I%20would%20like%20to%20book%20an%20operational%20audit%20for%20my%20business." target="_blank" rel="noopener" class="hero-btn-primary">Book an Operational Audit</a>
+            <a href="#services" class="hero-btn-secondary">Explore Our Services</a>
+        </div>
     </section>
 
     <!-- Core Impact Areas Section -->
-    <section class="section">
+    <section class="section" id="services">
         <h2 class="section-title">Our Services</h2>
         <div class="grid">
             <!-- Card 1 -->
             <div class="card" onclick="window.location.href='/services/startup-structuring/'">
-                <h3>Startup Structuring</h3>
-                <p>Building the foundational governance and operational architecture new businesses need to scale with confidence.</p>
-                <a href="/services/startup-structuring/" class="card-btn">Learn More</a>
+                <h3>Startup Structuring &amp; Governance</h3>
+                <p>Build your business on a rock-solid foundation. We guide you through compliant CAC registration, co-founder equity agreements, IP protection, and governance frameworks that appeal directly to investors.</p>
+                <a href="/services/startup-structuring/" class="card-btn">Learn More About Startup Setup &rarr;</a>
             </div>
             <!-- Card 2 -->
             <div class="card" onclick="window.location.href='/services/corporate-restructuring/'">
-                <h3>Corporate Restructuring</h3>
-                <p>Re-engineering legacy business frameworks to remove operational blockages and restore performance.</p>
-                <a href="/services/corporate-restructuring/" class="card-btn">Learn More</a>
+                <h3>Fix Broken Operations &amp; Team Structure</h3>
+                <p>Stop operational chaos. We analyze your workflows, eliminate redundancies, and design clear organograms. Every team member will know exactly who they report to, what they own, and how their performance is measured.</p>
+                <a href="/services/corporate-restructuring/" class="card-btn">Streamline Your Operations &rarr;</a>
             </div>
             <!-- Card 3 -->
-            <div class="card" onclick="window.location.href='/services/business-advisory/'">
-                <h3>Business Advisory</h3>
-                <p>Strategic guidance for entrepreneurs navigating growth, market entry, and structural decisions.</p>
-                <a href="/services/business-advisory/" class="card-btn">Learn More</a>
+            <div class="card" onclick="window.location.href='/services/staff-outsourcing/'">
+                <h3>Vetted Staff Outsourcing &amp; Payroll</h3>
+                <p>Outsource your recruitment, onboarding, and payroll to local experts. We manage statutory compliance including ITF, NSITF, and PenCom setups so you can scale your team without the legal liabilities.</p>
+                <a href="/services/staff-outsourcing/" class="card-btn">Explore Outsourcing Options &rarr;</a>
             </div>
             <!-- Card 4 -->
             <div class="card" onclick="window.location.href='/services/employee-training/'">
-                <h3>Employee Training</h3>
-                <p>Custom training programs designed to align workforce execution with overarching corporate vision.</p>
-                <a href="/services/employee-training/" class="card-btn">Learn More</a>
+                <h3>Corporate Training &amp; Strategic Retreats</h3>
+                <p>Transition your team from passive workers to high-impact leaders. We design custom training tracks and coordinate executive retreats to realign your organizational goals and boost team performance.</p>
+                <a href="/services/employee-training/" class="card-btn">Book a Training or Retreat &rarr;</a>
             </div>
             <!-- Card 5 -->
-            <div class="card" onclick="window.location.href='/services/corporate-retreats/'">
-                <h3>Corporate Retreats & Events</h3>
-                <p>High-end international networking frameworks designed to combine business strategy sessions with premier travel experiences.</p>
-                <a href="/services/corporate-retreats/" class="card-btn">Learn More</a>
+            <div class="card" onclick="window.location.href='/services/business-advisory/'">
+                <h3>Business Advisory</h3>
+                <p>Strategic planning, feasibility studies, and negotiation support for entrepreneurs navigating growth, market entry, and critical structural decisions.</p>
+                <a href="/services/business-advisory/" class="card-btn">Learn More &rarr;</a>
             </div>
             <!-- Card 6 -->
-            <div class="card" onclick="window.location.href='/services/staff-outsourcing/'">
-                <h3>Staff Outsourcing & HR Management</h3>
-                <p>End-to-end management of your workforce, from payroll and compliance to HR administration, so your team can focus on the business, not the paperwork.</p>
-                <a href="/services/staff-outsourcing/" class="card-btn">Learn More</a>
+            <div class="card" onclick="window.location.href='/services/bank-outsourcing/'">
+                <h3>Bank Outsourcing</h3>
+                <p>Compliant contract staff solutions for financial institutions. We manage the sourcing, onboarding, and administration of outsourced bank staff across Nigeria.</p>
+                <a href="/services/bank-outsourcing/" class="card-btn">Learn More &rarr;</a>
             </div>
         </div>
     </section>
 
-    <div style="text-align: center; padding: 40px 20px; background-color: #f9f9f9;">
-        <a href="https://wa.me/2348052033145?text=Hi,%20kindly%20schedule%20me%20for%20a%2030-minute%20free%20Clarity%20call."
-           target="_blank"
-           rel="noopener"
-           style="display: inline-block; background-color: #e35f26; color: white; padding: 15px 30px; font-weight: bold; font-size: 18px; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
-           Click here to get a free 30-minute Clarity Call. We will help you determine what your business needs
-        </a>
-    </div>
+    <!-- Pain Points Section -->
+    <section class="section pain-section">
+        <p class="section-eyebrow">Why Businesses Come to Us</p>
+        <h2 class="section-title" style="margin-bottom: 14px;">We Solve the Problems That Hold Nigerian Businesses Back</h2>
+        <p class="pain-sub">Three triggers bring most of our clients in. If any of these sounds familiar, you are in the right place.</p>
+        <div class="pain-grid">
+            <div class="pain-card">
+                <div class="pain-icon"><i class="fas fa-clock"></i></div>
+                <h3>Stuck in the Day-to-Day?</h3>
+                <p>If your business cannot run smoothly without your constant physical presence, your operational structure is broken. We design custom organograms and workflows that give you your time back.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon"><i class="fas fa-users"></i></div>
+                <h3>Struggling to Find and Keep Top Talent?</h3>
+                <p>Hiring the wrong person costs millions in lost time and revenue. We handle the heavy lifting of recruitment, background checks, and payroll compliance so you only pay for people who deliver.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Unprepared for Scaling or Funding?</h3>
+                <p>Poor corporate governance or messy regulatory setups will stop you from winning major contracts or raising capital. We secure your legal and structural foundations before the opportunity arrives.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 44px;">
+            <a href="https://wa.me/2348052033145?text=Hi,%20kindly%20schedule%20me%20for%20a%2030-minute%20free%20Clarity%20call."
+               target="_blank" rel="noopener" class="hero-btn-primary">
+               Book a Free 30-Minute Clarity Call
+            </a>
+        </div>
+    </section>
+
+    <!-- Traction Difference Section -->
+    <section class="section diff-section">
+        <p class="section-eyebrow">Who We Serve</p>
+        <h2 class="section-title" style="margin-bottom: 48px;">The Traction Difference</h2>
+        <div class="diff-grid">
+            <div class="diff-card">
+                <div class="diff-number">01</div>
+                <h3>For Emerging Founders</h3>
+                <p>You have the vision. We provide the blueprint. We help you move quickly from an informal idea to a fully compliant corporate entity ready for partnerships, contracts, and investor conversations.</p>
+                <a href="/services/startup-structuring/" class="card-btn" style="margin-top: 20px;">Startup Structuring &rarr;</a>
+            </div>
+            <div class="diff-divider"></div>
+            <div class="diff-card">
+                <div class="diff-number">02</div>
+                <h3>For Established SMEs &amp; Corporates</h3>
+                <p>As you grow, complexity multiplies. We step in to audit your processes, retrain or outsource your workforce, and restructure legacy systems to eliminate operational drag and maximize profitability.</p>
+                <a href="/services/corporate-restructuring/" class="card-btn" style="margin-top: 20px;">Corporate Restructuring &rarr;</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Latest Insights -->
     <section class="section" style="background-color: white;">
