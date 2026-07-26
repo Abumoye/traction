@@ -255,6 +255,74 @@
         @media (max-width: 900px) {
             .jc-track img { height: 55px; margin: 0 30px; }
         }
+
+        /* ── Training Cart ── */
+        .cart-bar {
+            position: fixed; top: 70px; left: 0; right: 0; z-index: 90;
+            background: var(--primary-color); color: #000;
+            display: none; align-items: center; justify-content: space-between;
+            padding: 12px 5%; box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            font-weight: 700; font-size: 15px;
+        }
+        .cart-bar.visible { display: flex; }
+        .cart-bar-left { display: flex; align-items: center; gap: 10px; }
+        .cart-count-badge {
+            background: #000; color: #fff;
+            border-radius: 50%; width: 26px; height: 26px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 13px; font-weight: 800;
+        }
+        .cart-bar-btn {
+            background: #000; color: #fff;
+            padding: 8px 20px; border-radius: 4px;
+            font-weight: 700; font-size: 13.5px;
+            border: none; cursor: pointer; text-decoration: none;
+            display: inline-block; transition: background 0.2s;
+        }
+        .cart-bar-btn:hover { background: #222; }
+
+        /* Course row checkbox */
+        .course-row { cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s; }
+        .course-row:hover { border-color: var(--accent-color); }
+        .course-row.selected { border-color: var(--accent-color); box-shadow: 0 0 0 2px rgba(227,95,38,0.18); background: #fff8f5; }
+        .course-check {
+            width: 20px; height: 20px; min-width: 20px;
+            border: 2px solid #ccc; border-radius: 4px;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; margin-right: 4px; flex-shrink: 0;
+        }
+        .course-row.selected .course-check { background: var(--accent-color); border-color: var(--accent-color); }
+        .course-check::after { content: ''; display: none; width: 5px; height: 9px; border: 2px solid #fff; border-top: none; border-left: none; transform: rotate(45deg); margin-top: -2px; }
+        .course-row.selected .course-check::after { display: block; }
+
+        /* Cart section */
+        .cart-section { max-width: 900px; margin: 0 auto; }
+        .cart-empty { text-align: center; color: #aaa; font-size: 15px; padding: 24px 0; }
+        .cart-item {
+            display: flex; align-items: center; justify-content: space-between;
+            background: white; border: 1px solid #eee; border-left: 4px solid var(--accent-color);
+            border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; font-size: 14.5px;
+        }
+        .cart-item-name { color: var(--primary-color); font-weight: 600; }
+        .cart-remove { background: none; border: none; cursor: pointer; color: #bbb; font-size: 18px; line-height: 1; padding: 0 0 0 12px; transition: color 0.2s; }
+        .cart-remove:hover { color: #e35f26; }
+
+        /* Cart form */
+        .cart-form-wrap { background: var(--light-bg); border-radius: 10px; padding: 32px; margin-top: 32px; }
+        .cart-form-wrap h3 { color: var(--primary-color); font-size: 18px; margin: 0 0 20px; }
+        .cart-form { display: grid; gap: 12px; }
+        .cart-form input { width: 100%; padding: 12px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 15px; font-family: inherit; box-sizing: border-box; }
+        .cart-form input:focus { outline: none; border-color: var(--accent-color); }
+        .cart-submit-btn {
+            background: var(--accent-color); color: #fff; border: none;
+            padding: 15px; font-weight: 800; font-size: 15px; border-radius: 6px;
+            cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px;
+            transition: opacity 0.2s; width: 100%;
+        }
+        .cart-submit-btn:hover { opacity: 0.9; }
+        .cart-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .cart-form-status { text-align: center; font-size: 14px; margin-top: 10px; min-height: 18px; }
+        .cart-notice { font-size: 13px; color: #888; margin-top: 10px; text-align: center; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -266,6 +334,16 @@
     </script>
 </head>
 <body>
+
+    <!-- Training Cart Bar -->
+    <div class="cart-bar" id="cartBar">
+        <div class="cart-bar-left">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count-badge" id="cartCountBadge">0</span>
+            <span id="cartBarLabel">course selected</span>
+        </div>
+        <a href="#trainingCart" class="cart-bar-btn">View Cart &amp; Submit &rarr;</a>
+    </div>
 
     <!-- Header / Navigation -->
     <header>
@@ -345,58 +423,82 @@
             <div class="catalogue-category" data-category="lmd">
                 <h3>Leadership & Management Development</h3>
                 <span class="cat-count">4 courses</span>
-                <div class="course-row"><h4>Strategic Management & Business Development</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Change Management & Corporate Restructuring</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>People Management for Nigerian Professionals</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Team Building & Collaboration</h4><div class="course-meta"><span class="course-badge duration">1 Day</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Strategic Management & Business Development" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Strategic Management & Business Development</h4></div><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Change Management & Corporate Restructuring" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Change Management & Corporate Restructuring</h4></div><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="People Management for Nigerian Professionals" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">People Management for Nigerian Professionals</h4></div><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Team Building & Collaboration" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Team Building & Collaboration</h4></div><div class="course-meta"><span class="course-badge duration">1 Day</span><span class="course-badge mode">Online/Physical</span></div></div>
             </div>
 
             <div class="catalogue-category" data-category="bfa">
                 <h3>Business Finance & Accounting</h3>
                 <span class="cat-count">5 courses</span>
-                <div class="course-row"><h4>Financial Management for CEOs</h4><div class="course-meta"><span class="course-badge duration">3 Weekends</span><span class="course-badge mode">Physical</span></div></div>
-                <div class="course-row"><h4>Financial Management for Non-Finance Managers</h4><div class="course-meta"><span class="course-badge duration">2 Weekends</span><span class="course-badge mode">Physical</span></div></div>
-                <div class="course-row"><h4>Management Account Preparation</h4><div class="course-meta"><span class="course-badge duration">4 Weekends</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Excel Essentials for Accountants</h4><div class="course-meta"><span class="course-badge duration">3 Weekends</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Business Analysis (Foundation)</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Financial Management for CEOs" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Financial Management for CEOs</h4></div><div class="course-meta"><span class="course-badge duration">3 Weekends</span><span class="course-badge mode">Physical</span></div></div>
+                <div class="course-row" data-course="Financial Management for Non-Finance Managers" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Financial Management for Non-Finance Managers</h4></div><div class="course-meta"><span class="course-badge duration">2 Weekends</span><span class="course-badge mode">Physical</span></div></div>
+                <div class="course-row" data-course="Management Account Preparation" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Management Account Preparation</h4></div><div class="course-meta"><span class="course-badge duration">4 Weekends</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Excel Essentials for Accountants" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Excel Essentials for Accountants</h4></div><div class="course-meta"><span class="course-badge duration">3 Weekends</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Business Analysis (Foundation)" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Business Analysis (Foundation)</h4></div><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
             </div>
 
             <div class="catalogue-category" data-category="aic">
                 <h3>AI & Computer Literacy</h3>
                 <span class="cat-count">6 courses</span>
-                <div class="course-row"><h4>Introduction to AI for Business</h4><div class="course-meta"><span class="course-badge duration">4 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Digital Literacy & Workplace Technology</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Microsoft Tools Essentials Introduction</h4><div class="course-meta"><span class="course-badge duration">4 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Google Workspace Essentials Introduction</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Introduction to Productivity & Project Management Tools</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Workplace Digital Safety & Security</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Introduction to AI for Business" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Introduction to AI for Business</h4></div><div class="course-meta"><span class="course-badge duration">4 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Digital Literacy & Workplace Technology" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Digital Literacy & Workplace Technology</h4></div><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Microsoft Tools Essentials Introduction" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Microsoft Tools Essentials Introduction</h4></div><div class="course-meta"><span class="course-badge duration">4 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Google Workspace Essentials Introduction" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Google Workspace Essentials Introduction</h4></div><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Introduction to Productivity & Project Management Tools" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Introduction to Productivity & Project Management Tools</h4></div><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Workplace Digital Safety & Security" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Workplace Digital Safety & Security</h4></div><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
             </div>
 
             <div class="catalogue-category" data-category="wmt">
                 <h3>Workplace Management</h3>
                 <span class="cat-count">9 courses</span>
-                <div class="course-row"><h4>Mental Health Awareness for Managers</h4><div class="course-meta"><span class="course-badge duration">1 Day</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Managing PCOS, Work-Life Balance, and Burnout Prevention</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Employee Engagement and Retention Strategies</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Building Supportive Workplace Cultures</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Critical Thinking & Problem-Solving Skills</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Emotional Intelligence & Interpersonal Skills</h4><div class="course-meta"><span class="course-badge duration">1 Day</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Human Resource Management</h4><div class="course-meta"><span class="course-badge duration">6 Weekends (12 Days)</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Excel for Payroll Managers</h4><div class="course-meta"><span class="course-badge duration">3 Weekends (6 Days)</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Workplace Governance & Policy Development</h4><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Mental Health Awareness for Managers" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Mental Health Awareness for Managers</h4></div><div class="course-meta"><span class="course-badge duration">1 Day</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Managing PCOS, Work-Life Balance, and Burnout Prevention" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Managing PCOS, Work-Life Balance, and Burnout Prevention</h4></div><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Employee Engagement and Retention Strategies" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Employee Engagement and Retention Strategies</h4></div><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Building Supportive Workplace Cultures" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Building Supportive Workplace Cultures</h4></div><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Critical Thinking & Problem-Solving Skills" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Critical Thinking & Problem-Solving Skills</h4></div><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Emotional Intelligence & Interpersonal Skills" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Emotional Intelligence & Interpersonal Skills</h4></div><div class="course-meta"><span class="course-badge duration">1 Day</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Human Resource Management" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Human Resource Management</h4></div><div class="course-meta"><span class="course-badge duration">6 Weekends (12 Days)</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Excel for Payroll Managers" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Excel for Payroll Managers</h4></div><div class="course-meta"><span class="course-badge duration">3 Weekends (6 Days)</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Workplace Governance & Policy Development" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Workplace Governance & Policy Development</h4></div><div class="course-meta"><span class="course-badge duration">2 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
             </div>
 
             <div class="catalogue-category" data-category="css">
                 <h3>Customer Service & Client Experience</h3>
                 <span class="cat-count">4 courses</span>
-                <div class="course-row"><h4>Customer Service Fundamentals</h4><div class="course-meta"><span class="course-badge duration">3 Weeks (6 Days)</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Client Experience Specialist</h4><div class="course-meta"><span class="course-badge duration">3 Weeks (6 Days)</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Cultural Intelligence in Nigerian Customer Service</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
-                <div class="course-row"><h4>Turning Angry Customers into Advocates</h4><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Customer Service Fundamentals" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Customer Service Fundamentals</h4></div><div class="course-meta"><span class="course-badge duration">3 Weeks (6 Days)</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Client Experience Specialist" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Client Experience Specialist</h4></div><div class="course-meta"><span class="course-badge duration">3 Weeks (6 Days)</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Cultural Intelligence in Nigerian Customer Service" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Cultural Intelligence in Nigerian Customer Service</h4></div><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
+                <div class="course-row" data-course="Turning Angry Customers into Advocates" onclick="toggleCourse(this)"><div style="display:flex;align-items:center;gap:12px;flex:1;"><span class="course-check"></span><h4 style="margin:0;">Turning Angry Customers into Advocates</h4></div><div class="course-meta"><span class="course-badge duration">3 Days</span><span class="course-badge mode">Online/Physical</span></div></div>
             </div>
         </div>
 
-        <p style="text-align: center; font-size: 13.5px; color: #888; max-width: 700px; margin: 0 auto;">All courses are certificate courses. Fees vary by programme, delivery mode, and group size, reach out to us for the current fee schedule for any course above.</p>
+        <p style="text-align: center; font-size: 13.5px; color: #888; max-width: 700px; margin: 0 auto;">All courses are certificate courses. Fees vary by programme, delivery mode, and group size. Select the courses above and submit below to receive an invoice.</p>
+    </section>
+
+    <!-- Training Cart & Form -->
+    <section class="section" style="background: white;" id="trainingCart">
+        <div class="cart-section">
+            <h2 class="section-title" style="text-align:left; font-size:24px; margin-bottom:6px;">Your Training Selection</h2>
+            <p style="color:#666; font-size:15px; margin-bottom:24px;">Courses you have selected will appear here. Tick any course above to add it.</p>
+            <div id="cartList">
+                <p class="cart-empty" id="cartEmpty">No courses selected yet. Browse the catalogue above and tick the ones you need.</p>
+            </div>
+            <div class="cart-form-wrap">
+                <h3>Request Your Training Invoice</h3>
+                <form class="cart-form" id="trainingInvoiceForm">
+                    <input type="text" name="leadName" placeholder="Full Name *" required>
+                    <input type="text" name="leadCompany" placeholder="Company Name (optional)">
+                    <input type="tel" name="leadPhone" placeholder="Phone Number *" required>
+                    <input type="email" name="leadEmail" placeholder="Email Address *" required>
+                    <input type="hidden" name="leadMessage" id="selectedCoursesField" value="">
+                    <button type="submit" class="cart-submit-btn" id="cartSubmitBtn">Submit for Training Invoice</button>
+                </form>
+                <div class="cart-form-status" id="cartFormStatus"></div>
+                <p class="cart-notice">We will send your personalised invoice within one business day.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Mid-page CTA -->
@@ -665,5 +767,118 @@
     </script>
 
     <script src="/js/faq-accordion.js"></script>
+    <script>
+    /* ── Training Cart ── */
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeu2T0WE1M-4d2erYY9IUazEKTsWPmuG9cnIYK61PQkdfY8OqvvOTubLFcFJRfdL5iVw/exec";
+    let selectedCourses = [];
+
+    function toggleCourse(row) {
+        const name = row.dataset.course;
+        if (!name) return;
+        const idx = selectedCourses.indexOf(name);
+        if (idx === -1) {
+            selectedCourses.push(name);
+            row.classList.add('selected');
+        } else {
+            selectedCourses.splice(idx, 1);
+            row.classList.remove('selected');
+        }
+        updateCart();
+    }
+
+    function removeCourse(name) {
+        selectedCourses = selectedCourses.filter(c => c !== name);
+        // Deselect the row
+        document.querySelectorAll('.course-row').forEach(row => {
+            if (row.dataset.course === name) row.classList.remove('selected');
+        });
+        updateCart();
+    }
+
+    function updateCart() {
+        const bar       = document.getElementById('cartBar');
+        const badge     = document.getElementById('cartCountBadge');
+        const label     = document.getElementById('cartBarLabel');
+        const cartList  = document.getElementById('cartList');
+        const cartEmpty = document.getElementById('cartEmpty');
+        const field     = document.getElementById('selectedCoursesField');
+        const n = selectedCourses.length;
+
+        // Sticky bar
+        badge.textContent = n;
+        label.textContent = n === 1 ? 'course selected' : 'courses selected';
+        bar.classList.toggle('visible', n > 0);
+
+        // Cart list
+        if (n === 0) {
+            cartList.innerHTML = '<p class="cart-empty" id="cartEmpty">No courses selected yet. Browse the catalogue above and tick the ones you need.</p>';
+        } else {
+            cartList.innerHTML = selectedCourses.map(c =>
+                `<div class="cart-item">
+                    <span class="cart-item-name">${c}</span>
+                    <button class="cart-remove" onclick="removeCourse('${c.replace(/'/g,"\\'")}')">&#215;</button>
+                </div>`
+            ).join('');
+        }
+
+        // Hidden field
+        field.value = selectedCourses.join(' | ');
+    }
+
+    // Form submission
+    document.getElementById('trainingInvoiceForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = this;
+        const status = document.getElementById('cartFormStatus');
+        const btn = document.getElementById('cartSubmitBtn');
+
+        if (selectedCourses.length === 0) {
+            status.textContent = 'Please select at least one course before submitting.';
+            status.style.color = '#c0392b';
+            return;
+        }
+
+        const data = {
+            sourcePage: window.location.pathname,
+            name: form.leadName.value.trim(),
+            companyName: form.leadCompany.value.trim(),
+            phone: form.leadPhone.value.trim(),
+            email: form.leadEmail.value.trim(),
+            message: 'TRAINING INVOICE REQUEST: ' + selectedCourses.join(' | ')
+        };
+
+        if (!data.name || !data.phone || !data.email) {
+            status.textContent = 'Please fill in your name, phone, and email.';
+            status.style.color = '#c0392b';
+            return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Submitting...';
+        status.textContent = '';
+
+        fetch(SCRIPT_URL, {
+            method: 'POST', mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(data)
+        })
+        .then(function() {
+            status.textContent = 'Request received. We will send your invoice within one business day.';
+            status.style.color = '#1e7e34';
+            form.reset();
+            selectedCourses = [];
+            document.querySelectorAll('.course-row.selected').forEach(r => r.classList.remove('selected'));
+            updateCart();
+            btn.disabled = false;
+            btn.textContent = 'Submit for Training Invoice';
+        })
+        .catch(function() {
+            status.textContent = 'Something went wrong. Please try again or reach us on WhatsApp.';
+            status.style.color = '#c0392b';
+            btn.disabled = false;
+            btn.textContent = 'Submit for Training Invoice';
+        });
+    });
+    </script>
 </body>
 </html>
