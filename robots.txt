@@ -1,20 +1,27 @@
 # Traction Outsourcing Limited — robots.txt
-# Everything on this site is public and meant to be found, including by
-# AI assistants answering questions like "HMO companies in Abuja" or
-# "Hallmark HMO Traction Outsourcing". Search and AI-answer crawlers are
-# explicitly allowed below so that intent is on record, not just implied
-# by the wildcard rule.
+# tolnigeria.com
+# Everything on this site is public content intended to be discovered
+# by search engines, AI assistants, and answer engines. All crawlers
+# are explicitly permitted below so that intent is on record.
 
 User-agent: *
 Allow: /
 
-# Standard search engines
+# Search Engines
 User-agent: Googlebot
 Allow: /
+User-agent: Googlebot-Image
+Allow: /images/
 User-agent: Bingbot
 Allow: /
+User-agent: msnbot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: Slurp
+Allow: /
 
-# OpenAI
+# OpenAI / ChatGPT
 User-agent: GPTBot
 Allow: /
 User-agent: OAI-SearchBot
@@ -22,12 +29,16 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-# Anthropic
+# Anthropic / Claude
 User-agent: ClaudeBot
 Allow: /
 User-agent: Claude-User
 Allow: /
-User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+Allow: /
+
+# Google AI (Gemini, AI Overviews)
+User-agent: Google-Extended
 Allow: /
 
 # Perplexity
@@ -36,13 +47,38 @@ Allow: /
 User-agent: Perplexity-User
 Allow: /
 
-# Google AI training opt-in (separate from Googlebot; does not affect
-# regular Google Search ranking either way)
-User-agent: Google-Extended
+# Meta AI / Llama
+User-agent: FacebookBot
+Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: Meta-ExternalFetcher
 Allow: /
 
-# Apple AI training opt-in
+# Apple (Siri, Spotlight)
+User-agent: Applebot
+Allow: /
 User-agent: Applebot-Extended
+Allow: /
+
+# Amazon Alexa
+User-agent: Amazonbot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl
+User-agent: CCBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Brave Search
+User-agent: BraveBot
 Allow: /
 
 Sitemap: https://tolnigeria.com/sitemap.xml
