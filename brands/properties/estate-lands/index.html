@@ -86,6 +86,9 @@
         .tp-nav .nav-tol:hover { border-color: #ffffff; background: rgba(255,255,255,0.10); }
         .tp-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
         .tp-hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+        .tp-hamburger.toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .tp-hamburger.toggle span:nth-child(2) { opacity: 0; }
+        .tp-hamburger.toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
         /* HERO */
         .hero {
@@ -311,18 +314,18 @@
                 background: #1a2f6e;
                 flex-direction: column;
                 align-items: flex-start;
-                padding: 90px 32px 40px;
+                padding: 80px 40px 40px;
                 box-sizing: border-box;
-                transition: right 0.35s cubic-bezier(0.1, 0.9, 0.2, 1);
+                transition: right 0.4s cubic-bezier(0.1, 0.9, 0.2, 1);
                 z-index: 105;
                 overflow-y: auto;
                 gap: 0;
             }
             .tp-nav.open { right: 0; display: flex; }
-            .tp-nav a { font-size: 16px; color: rgba(255,255,255,0.88); width: 100%; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.10); margin: 0; }
-            .tp-nav a:last-child { border-bottom: none; }
-            .tp-nav .nav-tol { border-bottom: 1px solid rgba(255,255,255,0.10); border-right: none; border-left: none; border-top: none; border-radius: 0; padding: 14px 0; background: none; font-size: 16px; }
-            .tp-nav .nav-cta { background: #ffffff; color: #233e90; border-radius: 4px; padding: 12px 22px; margin-top: 20px; border-bottom: none; width: auto; align-self: flex-start; }
+            .tp-nav a { font-size: 18px; color: rgba(255,255,255,0.88); width: 100%; padding: 6px 0; margin: 0 0 20px 0; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 16px; }
+            .tp-nav a:last-child { border-bottom: none; margin-bottom: 0; }
+            .tp-nav .nav-tol { border-bottom: 1px solid rgba(255,255,255,0.12); border-right: none; border-left: none; border-top: none; border-radius: 0; padding: 0 0 16px 0; background: none; font-size: 18px; margin-bottom: 20px; }
+            .tp-nav .nav-cta { background: #ffffff; color: #233e90; border-radius: 4px; padding: 12px 22px; margin-top: 4px; border-bottom: none; margin-bottom: 0; width: auto; align-self: flex-start; }
             .trust-bar { gap: 12px; flex-wrap: wrap; }
             .section { padding: 52px 5%; }
             .locations-intro { margin-bottom: 36px; }
@@ -631,12 +634,20 @@
         const hamburger = document.getElementById('tpHamburger');
         const nav = document.getElementById('tpNav');
         hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('toggle');
             nav.classList.toggle('open');
         });
         document.addEventListener('click', (e) => {
-            if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+            if (nav.classList.contains('open') && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('toggle');
                 nav.classList.remove('open');
             }
+        });
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('toggle');
+                nav.classList.remove('open');
+            });
         });
 
         // Hero parallax
