@@ -85,10 +85,31 @@
         .tp-nav .nav-tol:hover { border-color: #ffffff; background: rgba(255,255,255,0.10); }
         .tp-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
         .tp-hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+        .tp-hamburger.toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .tp-hamburger.toggle span:nth-child(2) { opacity: 0; }
+        .tp-hamburger.toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
         @media (max-width: 768px) {
-            .tp-nav { display: none; flex-direction: column; position: fixed; top: 70px; left: 0; right: 0; background: rgba(26,47,110,0.98); padding: 24px 6%; gap: 18px; border-top: 1px solid rgba(255,255,255,0.08); }
-            .tp-nav.open { display: flex; }
             .tp-hamburger { display: flex; }
+            .tp-nav {
+                position: fixed;
+                top: 0; right: -100%;
+                width: 280px; max-width: 80vw;
+                height: 100vh;
+                background: #1a2f6e;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 80px 40px 40px;
+                box-sizing: border-box;
+                transition: right 0.4s cubic-bezier(0.1, 0.9, 0.2, 1);
+                z-index: 105;
+                overflow-y: auto;
+                gap: 0;
+            }
+            .tp-nav.open { right: 0; display: flex; }
+            .tp-nav a { font-size: 18px; color: rgba(255,255,255,0.88); width: 100%; padding: 0 0 16px 0; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+            .tp-nav a:last-child { border-bottom: none; margin-bottom: 0; }
+            .tp-nav .nav-tol { border-bottom: 1px solid rgba(255,255,255,0.12); border-right: none; border-left: none; border-top: none; border-radius: 0; padding: 0 0 16px 0; background: none; font-size: 18px; margin-bottom: 20px; }
+            .tp-nav .nav-cta { background: #ffffff; color: #233e90; border-radius: 4px; padding: 12px 22px; margin-top: 4px; border-bottom: none; margin-bottom: 0; width: auto; align-self: flex-start; }
         }
         /* Push content below fixed header */
         main { padding-top: 70px; }
@@ -318,7 +339,22 @@
     <script>
         const hamburger = document.getElementById('tpHamburger');
         const nav = document.getElementById('tpNav');
-        hamburger.addEventListener('click', () => { nav.classList.toggle('open'); });
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('toggle');
+            nav.classList.toggle('open');
+        });
+        document.addEventListener('click', (e) => {
+            if (nav.classList.contains('open') && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('toggle');
+                nav.classList.remove('open');
+            }
+        });
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('toggle');
+                nav.classList.remove('open');
+            });
+        });
         document.addEventListener('click', (e) => {
             if (!nav.contains(e.target) && !hamburger.contains(e.target)) nav.classList.remove('open');
         });
