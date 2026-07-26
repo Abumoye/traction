@@ -85,9 +85,9 @@
         .tp-nav .nav-tol:hover { border-color: #ffffff; background: rgba(255,255,255,0.10); }
         .tp-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
         .tp-hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
-        .tp-hamburger.toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-        .tp-hamburger.toggle span:nth-child(2) { opacity: 0; }
-        .tp-hamburger.toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .tp-hamburger.toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg) !important; }
+        .tp-hamburger.toggle span:nth-child(2) { opacity: 0 !important; }
+        .tp-hamburger.toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg) !important; }
         @media (max-width: 768px) {
             .tp-hamburger { display: flex; }
             .tp-nav {
@@ -353,21 +353,6 @@
             link.addEventListener('click', () => {
                 hamburger.classList.remove('toggle');
                 nav.classList.remove('open');
-            });
-        });
-        document.addEventListener('click', (e) => {
-            if (!nav.contains(e.target) && !hamburger.contains(e.target)) nav.classList.remove('open');
-        });
-        document.addEventListener('click', (e) => {
-            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-                hamburgerBtn.classList.remove('toggle');
-                navMenu.classList.remove('active');
-            }
-        });
-        document.querySelectorAll('nav > .dropdown > a[href="#"]').forEach(trigger => {
-            trigger.addEventListener('click', (e) => {
-                e.preventDefault();
-                trigger.parentElement.classList.toggle('open');
             });
         });
     </script>
