@@ -229,15 +229,13 @@
             --dark-color: #000000;
         }
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-                        url('/images/africa.svg') no-repeat center center,
-                        url('/images/traction-hero-bg.png') no-repeat center center/cover;
+            background: #1a1a1a;
             color: var(--white-color);
             text-align: center;
-            padding: 120px 20px;
+            padding: 60px 20px;
         }
         .hero h1 { font-size: 48px; margin-bottom: 15px; font-weight: 700; color: var(--primary-color); }
-        .hero p { font-size: 20px; max-width: 800px; margin: 0 auto 30px; }
+        .hero p { font-size: 20px; max-width: 800px; margin: 0 auto 0; }
         .section-title { text-align: center; color: var(--dark-color); font-size: 32px; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 0.5px; }
 
         .faq-block { max-width: 800px; margin: 0 auto; }        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
@@ -272,9 +270,9 @@
         @keyframes scrollBrands { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
         @media (max-width: 900px) {
-            .hero { padding: 90px 20px; }
-            .hero h1 { font-size: 34px; }
-            .hero p { font-size: 17px; }
+            .hero { padding: 44px 20px; }
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 16px; }
         }
     </style>
     <!-- Microsoft Clarity -->
