@@ -18,9 +18,49 @@
             if (!heading) return;
 
             heading.setAttribute('tabindex', '0');
-            heading.setAttribute('role', 'button');
+            /* role="button" on h3 is invalid — h3 already has implicit
+               role="heading". Use aria-expanded on the heading directly,
+               which is valid for disclosure patterns on headings. */
             heading.setAttribute('aria-expanded', 'false');
             heading.style.cursor = 'pointer';
+
+            function toggle() {
+                var isOpen = item.classList.contains('open');
+
+                /* Close ALL items */
+                items.forEach(function (other) {
+                    other.classList.remove('open');
+                    var h = other.querySelector('h3');
+                    if (h) h.setAttribute('aria-expanded', 'false');
+                    var answers = other.querySelectorAll('p, div.faq-answer');
+                    answers.forEach(function (a) { a.style.display = 'none'; });
+                });
+
+                /* Open clicked item if it was closed */
+                if (!isOpen) {
+                    item.classList.add('open');
+                    heading.setAttribute('aria-expanded', 'true');
+                    var answers = item.querySelectorAll('p, div.faq-answer');
+                    answers.forEach(function (a) { a.style.display = 'block'; });
+                }
+            }
+
+            heading.addEventListener('click', toggle);
+            heading.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggle();
+                }
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFaq);
+    } else {
+        initFaq();
+    }
+})();
 
             function toggle() {
                 var isOpen = item.classList.contains('open');
