@@ -180,9 +180,10 @@
     <meta property="og:image:type" content="image/jpeg">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preload" href="/images/articles/what-is-traction-in-business.jpg" as="image">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
     <style>
         .back-to-articles { display: inline-block; margin: 30px 10% 0; color: var(--accent-color); font-weight: 600; text-decoration: none; font-size: 14px; }
@@ -351,7 +352,7 @@
             <span>12 min read</span>
         </div>
 
-        <img class="article-featured-image" src="/images/articles/what-is-traction-in-business.jpg" width="1600" height="900" alt="What Is Traction in Business? A rising bar chart representing business momentum">
+        <img class="article-featured-image" fetchpriority="high" loading="eager" decoding="async" src="/images/articles/what-is-traction-in-business.jpg" width="1600" height="900" alt="What Is Traction in Business? A rising bar chart representing business momentum">
 
         <div class="article-body">
             <p class="dek">There is a moment every founder recognises. The business exists on paper, there is a product or a service, maybe a small team, definitely a vision. But something still feels unproven. That feeling has a name, and so does the thing that makes it go away. It is called traction.</p>

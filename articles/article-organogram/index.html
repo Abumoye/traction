@@ -148,9 +148,10 @@
     <meta property="og:image:type" content="image/jpeg">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preload" href="/images/articles/organogram.jpg" as="image">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
     <!-- Page-specific styling: self-contained so this page renders correctly
          regardless of the shared stylesheet, matching the working pattern
@@ -382,7 +383,7 @@
             <span>5 min read</span>
         </div>
 
-        <img class="article-featured-image" src="/images/articles/organogram.jpg" width="1200" height="630" alt="Team reviewing an organogram and organizational structure" style="object-fit: cover;">
+        <img class="article-featured-image" fetchpriority="high" loading="eager" decoding="async" src="/images/articles/organogram.jpg" width="1200" height="630" alt="Team reviewing an organogram and organizational structure" style="object-fit: cover;">
 
         <div class="article-body">
             <p class="dek">Designing a corporate organogram is not just about drawing lines on a piece of paper. It is about mapping the nervous system of your business.</p>

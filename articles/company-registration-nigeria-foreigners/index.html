@@ -105,9 +105,10 @@
     <meta property="og:image:type" content="image/jpeg">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preload" href="/images/articles/cac-registration.jpg" as="image">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
     <style>
         .back-to-articles { display: inline-block; margin: 30px 10% 0; color: var(--accent-color); font-weight: 600; text-decoration: none; font-size: 14px; }
@@ -277,7 +278,7 @@
                 <span><i class="fas fa-tag"></i> Foreign Investment &middot; Nigeria Company Setup</span>
             </div>
 
-            <img src="/images/articles/cac-registration.jpg" width="1600" height="900" alt="Company registration in Nigeria for foreigners — CAC and business permit requirements" class="article-featured-image">
+            <img src="/images/articles/cac-registration.jpg" width="1600" height="900" alt="Company registration in Nigeria for foreigners — CAC and business permit requirements" class="article-featured-image" fetchpriority="high" loading="eager" decoding="async">
 
             <div class="article-body">
 

@@ -126,9 +126,10 @@
     <meta property="og:image:type" content="image/jpeg">
 
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preload" href="/images/articles/employee-leave-compensation-nigeria.jpg" as="image">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
     <!-- Page-specific styling -->
     <style>
@@ -310,7 +311,7 @@
             <span>8 min read</span>
         </div>
 
-        <img class="article-featured-image" src="/images/articles/employee-leave-compensation-nigeria.jpg" width="1600" height="900" alt="Employee Leave and Compensation in Nigeria" style="object-fit: cover;">
+        <img class="article-featured-image" fetchpriority="high" loading="eager" decoding="async" src="/images/articles/employee-leave-compensation-nigeria.jpg" width="1600" height="900" alt="Employee Leave and Compensation in Nigeria" style="object-fit: cover;">
 
         <div class="article-body">
             <p class="dek">A company in Port Harcourt once lost a National Industrial Court claim over 47 days of untaken annual leave that had quietly built up over six years. The employer's argument, that leave not taken was simply forfeited, had no basis in Nigerian law. That case is a useful reminder that leave and compensation are not soft HR topics, they are compliance obligations with real financial consequences.</p>
