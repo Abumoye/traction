@@ -51,6 +51,24 @@
         .article-row-meta { color: #999; font-size: 12.5px; }
         .article-row-meta i { color: var(--accent-color); margin-right: 4px; }
 
+        /* Category filter bar */
+        .filter-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 950px; margin: 30px auto 10px; }
+        .filter-pill {
+            background: var(--light-bg);
+            border: 1px solid #e2e2e2;
+            color: var(--text-color);
+            padding: 9px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .filter-pill:hover { border-color: var(--accent-color); color: var(--accent-color); }
+        .filter-pill.active { background: var(--accent-color); border-color: var(--accent-color); color: white; }
+        .no-articles-msg { display: none; text-align: center; color: #888; font-family: 'Segoe UI', sans-serif; font-size: 15px; padding: 50px 0; }
+
         @media (max-width: 900px) {
             .articles-hero h1 { font-size: 28px; }
             .featured-article-grid { grid-template-columns: 1fr; gap: 20px; }
@@ -174,9 +192,24 @@
         </div>
     </section>
 
+    <!-- Category Filter -->
+    <section class="section" style="padding-top: 20px; padding-bottom: 0;">
+        <div class="filter-bar" id="articleFilterBar">
+            <button class="filter-pill active" data-filter="all">All Articles</button>
+            <button class="filter-pill" data-filter="recruitment-talent">Recruitment &amp; Talent</button>
+            <button class="filter-pill" data-filter="staff-outsourcing">Staff Outsourcing &amp; HR</button>
+            <button class="filter-pill" data-filter="startup-structuring">Startup Structuring</button>
+            <button class="filter-pill" data-filter="corporate-restructuring">Corporate Restructuring</button>
+            <button class="filter-pill" data-filter="business-advisory">Business Advisory</button>
+            <button class="filter-pill" data-filter="training-leadership">Training &amp; Leadership</button>
+            <button class="filter-pill" data-filter="events-travel">Events &amp; Business Travel</button>
+            <button class="filter-pill" data-filter="client-reviews">Client Reviews &amp; News</button>
+        </div>
+    </section>
+
     <!-- Featured Article -->
     <section class="section" style="padding-top: 0; padding-bottom: 0;">
-        <a href="/articles/client-reviews-traction-outsourcing/" class="featured-article">
+        <a href="/articles/client-reviews-traction-outsourcing/" class="featured-article" data-category="client-reviews">
             <div class="featured-article-grid">
                 <div>
                     <span class="featured-tag">Featured · Client Reviews</span>
@@ -195,7 +228,7 @@
     <section class="section" style="padding-top: 10px;">
         <div class="article-list">
 
-            <a href="/articles/client-reviews-traction-outsourcing/" class="article-row">
+            <a href="/articles/client-reviews-traction-outsourcing/" class="article-row" data-category="client-reviews">
                 <div class="article-row-img">
                     <img src="/images/articles/client-reviews-traction-outsourcing.jpg" width="1600" height="900" alt="Client giving Traction Outsourcing Limited a 5 star rating on her laptop">
                 </div>
@@ -206,7 +239,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>3-4 min read</div>
                 </div>
             </a>
-            <a href="/articles/restructuring-without-losing-your-best-people/" class="article-row">
+            <a href="/articles/restructuring-without-losing-your-best-people/" class="article-row" data-category="corporate-restructuring">
                 <div class="article-row-img">
                     <img src="/images/articles/restructuring-without-losing-your-best-people.jpg" width="1600" height="900" alt="Restructuring without losing your best people — Nigerian business guide">
                 </div>
@@ -217,7 +250,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>3 min read</div>
                 </div>
             </a>
-            <a href="/articles/what-is-structure-in-business/" class="article-row">
+            <a href="/articles/what-is-structure-in-business/" class="article-row" data-category="startup-structuring">
                 <div class="article-row-img">
                     <img src="/images/articles/what-is-structure-in-business.jpg" width="1600" height="900" alt="What is structure in business — guide for Nigerian founders">
                 </div>
@@ -228,7 +261,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>3 min read</div>
                 </div>
             </a>
-            <a href="/articles/should-you-employ-family-in-your-business/" class="article-row">
+            <a href="/articles/should-you-employ-family-in-your-business/" class="article-row" data-category="business-advisory">
                 <div class="article-row-img">
                     <img src="/images/articles/should-you-employ-family-in-your-business.jpg" width="1600" height="900" alt="Should you employ your family in your business — Nigerian founders guide">
                 </div>
@@ -239,7 +272,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>3 min read</div>
                 </div>
             </a>
-            <a href="/articles/accountability-in-business-nigeria/" class="article-row">
+            <a href="/articles/accountability-in-business-nigeria/" class="article-row" data-category="business-advisory">
                 <div class="article-row-img">
                     <img src="/images/articles/accountability-in-business-nigeria.jpg" width="1600" height="900" alt="Accountability in business Nigeria — hold staff accountable without losing them">
                 </div>
@@ -250,7 +283,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>4 min read</div>
                 </div>
             </a>
-            <a href="/articles/recruit-staff-nigeria-48-hours/" class="article-row">
+            <a href="/articles/recruit-staff-nigeria-48-hours/" class="article-row" data-category="recruitment-talent">
                 <div class="article-row-img">
                     <img src="/images/articles/recruit-staff-nigeria-48-hours.jpg" width="1600" height="900" alt="Recruit staff Nigeria 48 hours ₦30,000 ATH Recruiters">
                 </div>
@@ -261,7 +294,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>4 min read</div>
                 </div>
             </a>
-            <a href="/articles/how-to-build-resilient-management-team-nigeria/" class="article-row">
+            <a href="/articles/how-to-build-resilient-management-team-nigeria/" class="article-row" data-category="training-leadership">
                 <div class="article-row-img">
                     <img src="/images/articles/how-to-build-resilient-management-team-nigeria.jpg" width="1600" height="900" alt="How to build a resilient management team — guide for Nigerian CEOs">
                 </div>
@@ -272,7 +305,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>4 min read</div>
                 </div>
             </a>
-            <a href="/articles/what-is-hr-outsourcing/" class="article-row">
+            <a href="/articles/what-is-hr-outsourcing/" class="article-row" data-category="staff-outsourcing">
                 <div class="article-row-img">
                     <img src="/images/articles/what-is-hr-outsourcing.jpg" width="1600" height="900" alt="What Is HR Outsourcing? A Guide for Nigerian Business Owners">
                 </div>
@@ -283,7 +316,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>3-4 min read</div>
                 </div>
             </a>
-            <a href="/articles/what-is-business-restructuring-nigeria/" class="article-row">
+            <a href="/articles/what-is-business-restructuring-nigeria/" class="article-row" data-category="corporate-restructuring">
                 <div class="article-row-img">
                     <img src="/images/articles/what-is-business-restructuring-nigeria.jpg" width="1600" height="900" alt="What Is Business Restructuring? Does Your Nigerian Business Need It?">
                 </div>
@@ -294,7 +327,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>3-4 min read</div>
                 </div>
             </a>
-            <a href="/articles/best-recruitment-agency-nigeria/" class="article-row">
+            <a href="/articles/best-recruitment-agency-nigeria/" class="article-row" data-category="recruitment-talent">
                 <div class="article-row-img">
                     <img src="/images/articles/best-recruitment-agency-nigeria.jpg" width="1600" height="900" alt="How to Find the Best Recruitment Agency in Nigeria">
                 </div>
@@ -305,7 +338,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>3-4 min read</div>
                 </div>
             </a>
-            <a href="/articles/why-nigerian-businesses-train-staff/" class="article-row">
+            <a href="/articles/why-nigerian-businesses-train-staff/" class="article-row" data-category="training-leadership">
                 <div class="article-row-img">
                     <img src="/images/articles/why-nigerian-businesses-train-staff.jpg" width="1600" height="900" alt="Why Nigerian Businesses Train Their Staff">
                 </div>
@@ -316,7 +349,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>3-4 min read</div>
                 </div>
             </a>
-            <a href="/articles/why-nigerian-ceos-going-to-kigali/" class="article-row">
+            <a href="/articles/why-nigerian-ceos-going-to-kigali/" class="article-row" data-category="events-travel">
                 <div class="article-row-img">
                     <img src="/images/articles/why-nigerian-ceos-going-to-kigali.jpg" width="1600" height="900" alt="Why Nigerian CEOs Are Going to Kigali in November 2026">
                 </div>
@@ -327,7 +360,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>3-4 min read</div>
                 </div>
             </a>
-            <a href="/articles/what-is-hmo-nigeria/" class="article-row">
+            <a href="/articles/what-is-hmo-nigeria/" class="article-row" data-category="staff-outsourcing">
                 <div class="article-row-img">
                     <img src="/images/articles/what-is-hmo-nigeria.jpg" width="1600" height="900" alt="What Is HMO in Nigeria? Why Nigerian Businesses Use Health Insurance">
                 </div>
@@ -338,7 +371,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>3-4 min read</div>
                 </div>
             </a>
-            <a href="/articles/hire-staff-nigeria-from-abroad/" class="article-row">
+            <a href="/articles/hire-staff-nigeria-from-abroad/" class="article-row" data-category="staff-outsourcing">
                 <div class="article-row-img">
                     <img src="/images/articles/hire-staff-nigeria-from-abroad.jpg" width="1600" height="900" alt="How to hire staff in Nigeria from abroad, diaspora business guide">
                 </div>
@@ -349,7 +382,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>3 min read</div>
                 </div>
             </a>
-            <a href="/articles/kigali-africa-business-hub/" class="article-row">
+            <a href="/articles/kigali-africa-business-hub/" class="article-row" data-category="events-travel">
                 <div class="article-row-img">
                     <img src="/images/articles/kigali-africa-business-hub.jpg" width="1600" height="900" alt="Kigali Rwanda, Africa's cleanest city and rising business hub">
                 </div>
@@ -360,7 +393,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>7 min read</div>
                 </div>
             </a>
-            <a href="/articles/company-registration-nigeria-foreigners/" class="article-row">
+            <a href="/articles/company-registration-nigeria-foreigners/" class="article-row" data-category="startup-structuring">
                 <div class="article-row-img">
                     <img src="/images/articles/company-registration-nigeria-foreigners.jpg" width="1600" height="900" alt="Company registration in Nigeria for foreigners, ₦100 million share capital requirement">
                 </div>
@@ -371,7 +404,7 @@
                     <div class="article-row-meta"><i class="fas fa-clock"></i>8 min read</div>
                 </div>
             </a>
-            <a href="/articles/article-dangers-of-proximity-to-success/" class="article-row">
+            <a href="/articles/article-dangers-of-proximity-to-success/" class="article-row" data-category="business-advisory">
                 <div class="article-row-img">
                     <img src="/images/articles/dangers-of-proximity-to-success.jpg" width="1000" height="562" alt="The Dangers of Proximity to Success">
                 </div>
@@ -383,7 +416,7 @@
                 </div>
             </a>
 
-            <a href="/articles/what-is-traction-in-business/" class="article-row">
+            <a href="/articles/what-is-traction-in-business/" class="article-row" data-category="business-advisory">
                 <div class="article-row-img">
                     <img src="/images/articles/what-is-traction-in-business.jpg" width="1600" height="900" alt="What Is Traction in Business?">
                 </div>
@@ -395,7 +428,7 @@
                 </div>
             </a>
 
-            <a href="/articles/employee-leave-and-compensation-in-nigeria/" class="article-row">
+            <a href="/articles/employee-leave-and-compensation-in-nigeria/" class="article-row" data-category="staff-outsourcing">
                 <div class="article-row-img">
                     <img src="/images/articles/employee-leave-compensation-nigeria.jpg" width="1600" height="900" alt="Employee Leave and Compensation in Nigeria">
                 </div>
@@ -407,7 +440,7 @@
                 </div>
             </a>
 
-            <a href="/articles/article-why-nigerian-startups-fail/" class="article-row">
+            <a href="/articles/article-why-nigerian-startups-fail/" class="article-row" data-category="startup-structuring">
                 <div class="article-row-img">
                     <img src="/images/articles/why-nigerian-startups-fail.jpg" width="400" height="267" alt="Why Nigerian Startups Fail Within Their First Five Years">
                 </div>
@@ -419,7 +452,7 @@
                 </div>
             </a>
 
-            <a href="/articles/article-tall-poppy-syndrome/" class="article-row">
+            <a href="/articles/article-tall-poppy-syndrome/" class="article-row" data-category="business-advisory">
                 <div class="article-row-img">
                     <img src="/images/articles/tall-poppy-syndrome.jpg" width="1000" height="562" alt="The Cost of Growth: Understanding Tall Poppy Syndrome">
                 </div>
@@ -431,7 +464,7 @@
                 </div>
             </a>
 
-            <a href="/articles/article-cost-of-bad-hire-nigeria/" class="article-row">
+            <a href="/articles/article-cost-of-bad-hire-nigeria/" class="article-row" data-category="recruitment-talent">
                 <div class="article-row-img">
                     <img src="/images/articles/cost-of-bad-hire-nigeria.jpg" width="236" height="157" alt="The Real Cost of a Bad Hire in Nigeria">
                 </div>
@@ -443,7 +476,7 @@
                 </div>
             </a>
 
-            <a href="/articles/article-employee-handbook-nigerian-sme/" class="article-row">
+            <a href="/articles/article-employee-handbook-nigerian-sme/" class="article-row" data-category="staff-outsourcing">
                 <div class="article-row-img">
                     <img src="/images/articles/employee-handbook-nigerian-sme.jpg" width="736" height="519" alt="How to Write an Employee Handbook for a Nigerian SME">
                 </div>
@@ -455,7 +488,7 @@
                 </div>
             </a>
 
-            <a href="/articles/article-organogram/" class="article-row">
+            <a href="/articles/article-organogram/" class="article-row" data-category="startup-structuring">
                 <div class="article-row-img">
                     <img src="/images/articles/organogram.jpg" width="1200" height="630" alt="Team reviewing an organogram and organizational structure">
                 </div>
@@ -467,7 +500,7 @@
                 </div>
             </a>
 
-            <a href="/articles/how-to-register-a-company-in-nigeria/" class="article-row">
+            <a href="/articles/how-to-register-a-company-in-nigeria/" class="article-row" data-category="startup-structuring">
                 <div class="article-row-img">
                     <img src="/images/articles/cac-registration.jpg" width="1600" height="900" alt="Corporate Affairs Commission logo, How to Register a Company in Nigeria">
                 </div>
@@ -479,10 +512,10 @@
                 </div>
             </a>
 
+            <p class="no-articles-msg" id="noArticlesMsg">No articles in this category yet. Check back soon, or browse all articles above.</p>
+
         </div>
     </section>
-
-    <!-- Complete Corporate Footer Section -->
     </main>
 
     <footer>
@@ -541,6 +574,29 @@
             trigger.addEventListener('click', (e) => {
                 e.preventDefault();
                 trigger.parentElement.classList.toggle('open');
+            });
+        });
+
+        // Category filtering
+        const filterPills = document.querySelectorAll('.filter-pill');
+        const filterableItems = document.querySelectorAll('.featured-article[data-category], .article-row[data-category]');
+        const noArticlesMsg = document.getElementById('noArticlesMsg');
+
+        filterPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                filterPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                const filter = pill.getAttribute('data-filter');
+                let visibleCount = 0;
+
+                filterableItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    const matches = filter === 'all' || category === filter;
+                    item.style.display = matches ? '' : 'none';
+                    if (matches) visibleCount++;
+                });
+
+                noArticlesMsg.style.display = visibleCount === 0 ? 'block' : 'none';
             });
         });
     </script>
