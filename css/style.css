@@ -261,3 +261,22 @@ footer {
 .faq-item.open > div.faq-answer { display: block !important; }
 /* Article-style faq-item paragraphs (nested in article-body) */
 .article-body .faq-item > p { font-family: 'Segoe UI', sans-serif; text-align: left; }
+
+/* CLS Fix: Reserve space for hero section */
+.hero {
+    min-height: 180px;
+}
+
+/* CLS Fix: Reserve space for Font Awesome icons before they load */
+.fas, .fab, .far, .fa {
+    display: inline-block;
+    min-width: 1em;
+    min-height: 1em;
+}
+
+/* CLS Fix: Dropdown arrow space reservation */
+.dropdown-arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+}
