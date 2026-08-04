@@ -135,7 +135,7 @@
             margin-bottom: 18px;
         }
         .article-content h1 { font-family: Georgia, 'Times New Roman', serif; font-size: 36px; line-height: 1.2; color: var(--primary-color); margin: 0 0 16px; }
-        .article-byline { font-size: 14px; color: #777; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 14px 0; margin-bottom: 28px; }
+        .article-byline { display:flex; flex-wrap:wrap; gap:8px 16px; font-size:14px; color:#777; border-top:1px solid #eee; border-bottom:1px solid #eee; padding:14px 0; margin-bottom:28px; }
         .article-content p { font-family: Georgia, 'Times New Roman', serif; font-size: 18px; color: #333; margin-bottom: 20px; text-align: justify; }
         .article-content h2 { font-family: Georgia, 'Times New Roman', serif; color: var(--primary-color); font-size: 24px; margin-top: 38px; }
 
@@ -280,7 +280,12 @@
     <div class="article-content">
         <div class="article-meta">Startup Structuring</div>
         <h1>Why Nigerian Startups Fail Within Their First Five Years: A Structural Diagnosis</h1>
-        <div class="article-byline">By Traction Outsourcing Limited</div>
+        <div class="article-byline">
+            <span><i class="fas fa-building"></i> Traction Outsourcing Limited</span>
+            <span><i class="fas fa-calendar"></i> July 14, 2026</span>
+            <span><i class="fas fa-clock"></i> 5 min read</span>
+            <span><i class="fas fa-tag"></i> Startup Structuring &middot; Nigerian Business</span>
+        </div>
 
         <p>Every Nigerian founder has sat across from a business that was, on paper, supposed to work. A good product. A real market. A founder willing to work harder than almost anyone around them. And still, within a few years, the business quietly stopped opening its doors. Nobody wrote a press release. There was no dramatic collapse, just a slow decline in orders, a landlord who stopped getting paid on time, and eventually, silence.</p>
 
