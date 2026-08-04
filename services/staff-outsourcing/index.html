@@ -210,6 +210,13 @@
         .diff-card p { font-size: 14.5px; color: #666; margin: 0; }
 
         .faq-block { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
         /* Landing-page style CTAs */
         .hero-cta-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 30px; }
         .btn-primary-cta, .btn-whatsapp-cta, .btn-outline-cta {
@@ -650,38 +657,22 @@
     <section class="section" style="background-color: white;">
         <h2 class="section-title">Common Questions</h2>
         <div class="faq-block">
-            <div class="faq-item">
-                <h3>What is staff outsourcing?</h3>
+            <details class="faq-item">
+                <summary>What is staff outsourcing?</summary>
                 <p>Staff outsourcing is when a business hands over the sourcing, payroll, compliance, and day-to-day management of a set of employees to a specialist firm, while those staff continue working within the client's business. It removes the administrative and legal weight of employment without removing the workforce itself.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How does staff outsourcing work in Nigeria?</h3>
-                <p>An outsourcing partner like Traction Outsourcing sources and places staff, manages payroll and statutory remittances such as PAYE, pension, and NHF, handles onboarding and exit, and takes on the HR administration and compliance work that would otherwise sit with the client's internal team.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What is the difference between staff outsourcing and recruitment?</h3>
-                <p>Recruitment ends once a candidate is placed and the client takes over as employer. Staff outsourcing continues after placement, the outsourcing firm remains responsible for payroll, compliance, HR administration, and ongoing management of that staff member for as long as the arrangement runs.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Does Traction Outsourcing handle payroll and pension remittance?</h3>
+            </details>
+            <details class="faq-item">
+                <summary>What is the difference between staff outsourcing and recruitment?</summary>
+                <p>Recruitment ends once a candidate is placed and the client takes over as employer. Staff outsourcing continues after placement. Traction Outsourcing remains responsible for payroll, compliance, HR administration, and ongoing management of that staff member for as long as the arrangement runs.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Does Traction Outsourcing handle payroll and pension remittance?</summary>
                 <p>Yes. Payroll administration, including PAYE, pension, and NHF remittances, is a core part of the staff outsourcing service, run to Nigerian statutory requirements.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Can Traction Outsourcing manage staff outside Abuja?</h3>
-                <p>Yes. Traction Outsourcing manages outsourced staff for businesses across Nigeria, not only in Abuja, with payroll, compliance, and HR administration handled remotely and consistently regardless of where the staff are based.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What are the leading outsourcing companies in Abuja, Nigeria?</h3>
-                <p>Traction Outsourcing Limited is a staff outsourcing and BPO company based in Abuja, covering sourcing, payroll, compliance, and HR administration for businesses across Nigeria.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Is Traction Outsourcing a BPO company in Abuja?</h3>
-                <p>Yes. Traction Outsourcing operates as a business process outsourcing and HR partner firm based in Abuja, covering staff outsourcing, payroll, recruitment, training, and business advisory.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do I manage my staff in Abuja without hiring an internal HR team?</h3>
-                <p>Outsourcing staff management to a firm like Traction Outsourcing hands over sourcing, payroll, compliance, and day-to-day HR administration, so you get a managed workforce without building an internal HR department from scratch.</p>
-            </div>
+            </details>
+            <details class="faq-item">
+                <summary>Can Traction Outsourcing manage staff outside Abuja?</summary>
+                <p>Yes. Traction Outsourcing manages outsourced staff for businesses across Nigeria, not only in Abuja. Payroll, compliance, and HR administration are handled remotely and consistently regardless of where the staff are based.</p>
+            </details>
         </div>
     </section>
 
@@ -813,6 +804,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>
