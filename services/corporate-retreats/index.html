@@ -146,6 +146,13 @@
 
         .section-title { text-align: center; color: var(--primary-color); font-size: 28px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
 
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
         .faq-block { max-width: 800px; margin: 0 auto; }
         .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 1050px; margin: 0 auto; }
         .service-card { background: var(--light-bg); border-top: 4px solid var(--accent-color); border-radius: 8px; padding: 24px; }
@@ -461,26 +468,22 @@
     <section class="section" style="background-color: white;">
         <h2 class="section-title">Common Questions</h2>
         <div class="faq-block">
-            <div class="faq-item">
-                <h3>Does Traction Outsourcing plan corporate retreats in Nigeria?</h3>
-                <p>Yes. Traction Outsourcing plans and manages corporate retreats for executive teams, SMEs, and corporate organizations across Nigeria and internationally, including the annual Traction Outsourcing International Corporate Retreat hosted in Kigali, Rwanda.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do I plan a company retreat in Nigeria?</h3>
-                <p>Start by defining the retreat's purpose: strategy alignment, team bonding, leadership development, or a combination. Then determine the group size, budget per participant, preferred location, and duration. Traction Outsourcing handles the design, logistics, facilitation, and coordination so the organizing team can participate rather than manage.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What types of corporate retreats does Traction Outsourcing offer?</h3>
-                <p>Traction Outsourcing plans and facilitates leadership strategy retreats, executive team building offsites, board strategy sessions, annual company retreats, and international retreat packages, tailored to the organization's size, industry, and objectives.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Can Traction Outsourcing organize a corporate retreat outside Nigeria?</h3>
-                <p>Yes. Traction Outsourcing has organized international executive retreats, including the T-ICR 2026 held in Kigali, Rwanda. International retreat planning covers logistics, accommodation, facilitation, and in-country coordination.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What is the cost of organizing a corporate retreat in Nigeria?</h3>
-                <p>Corporate retreat costs vary by group size, duration, location, and the level of facilitation required. Traction Outsourcing builds bespoke retreat packages; reach out with your group size and objectives for a tailored quote.</p>
-            </div>
+            <details class="faq-item">
+                <summary>Does Traction Outsourcing plan corporate retreats in Nigeria?</summary>
+                <p>Yes. Traction Outsourcing Limited plans and manages corporate retreats for businesses across Nigeria, including team-building retreats, leadership retreats, and annual strategy offsite events. We handle venue, programming, facilitation, logistics, and accommodation depending on the scope of the engagement.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Can Traction Outsourcing organise a corporate retreat outside Nigeria?</summary>
+                <p>Yes. Our international retreat capability includes the T-ICR, the Traction Outsourcing International Corporate Retreat, which we host annually in an African destination city. We also arrange bespoke international retreats for corporate clients on request. The 2026 edition takes place in Kigali, Rwanda in November.</p>
+            </details>
+            <details class="faq-item">
+                <summary>What is included in a Traction Outsourcing corporate retreat package?</summary>
+                <p>Packages vary by scope, but typically include venue selection and booking, programme design, facilitation and speaker coordination, accommodation arrangements, ground logistics, and post-retreat documentation. We build the package around what the client wants to achieve, not a fixed template.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How far in advance should we book a corporate retreat?</summary>
+                <p>For domestic retreats, a minimum of four to six weeks allows us to source the right venue and build the programme properly. For international retreats, three months is advisable, particularly for group travel and accommodation. The earlier you engage us, the more options we can offer.</p>
+            </details>
         </div>
     </section>
 
@@ -646,6 +649,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>

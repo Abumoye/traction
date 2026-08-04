@@ -140,6 +140,13 @@
         .case-card-header h4 { margin: 0; color: var(--primary-color); font-size: 17px; }
         .case-card p { padding: 15px 20px 20px; margin: 0; color: #555; font-size: 14.5px; }
 
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
         .faq-block { max-width: 800px; margin: 0 auto; }
         @media (max-width: 900px) {
             .service-hero { padding: 80px 20px; }
@@ -426,14 +433,22 @@
     <section class="section">
         <h2 class="section-title">Common Questions</h2>
         <div class="faq-block">
-            <div class="faq-item">
-                <h3>What does my startup need to get started properly?</h3>
-                <p>Beyond CAC registration, a new business needs a clear organogram and reporting lines, job descriptions and KPIs, a staff policy handbook, and onboarding material, the structure that lets the business run without the founder explaining everything from scratch every time someone new joins.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What is startup structuring?</h3>
-                <p>Startup structuring is the process of building the legal, organizational, and operational foundation of a new business, registration and preliminaries, an organogram and governance framework, and the documentation the business needs from day one, rather than adding structure after problems appear.</p>
-            </div>
+            <details class="faq-item">
+                <summary>What is startup structuring?</summary>
+                <p>Startup structuring is the process of building the governance, legal, financial, and operational foundations a new business needs to function properly. It covers company registration, shareholding structure, role definitions, financial systems, and the HR and compliance frameworks that determine whether a business can grow in an organised and legally sound way.</p>
+            </details>
+            <details class="faq-item">
+                <summary>What does my startup need to get started properly?</summary>
+                <p>Most startups need four things in place before they can operate soundly: a registered company with the correct shareholding structure, a clear definition of who does what and who reports to whom, a basic financial management system, and employment contracts or consultant agreements for anyone working in the business. Traction Outsourcing Limited builds these foundations as a structured engagement rather than a checklist.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How is startup structuring different from business registration?</summary>
+                <p>Business registration is one step inside startup structuring. Registration gives your company a legal identity. Structuring builds everything else: governance, organogram, financial framework, HR policies, and operational procedures. Many registered companies operate without structure and face problems with investor readiness, compliance, and internal accountability as a result.</p>
+            </details>
+            <details class="faq-item">
+                <summary>When is the right time to structure a startup?</summary>
+                <p>The right time is before the problems that come from no structure arrive: disputes between founders, confusion about roles, inability to onboard staff properly, or difficulty presenting the business to investors or partners. Traction Outsourcing Limited works with founders at pre-launch and early-growth stage, but also with businesses that have been operating informally for years and need to formalise what already exists.</p>
+            </details>
         </div>
     </section>
 
@@ -565,6 +580,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>

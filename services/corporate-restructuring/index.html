@@ -210,6 +210,13 @@
         .legal-block p { font-size: 16.5px; color: #444; line-height: 1.8; text-align: left; margin-bottom: 18px; }
         .legal-block p:last-child { margin-bottom: 0; }
 
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
         .faq-block { max-width: 800px; margin: 0 auto; }
         /* Join Our Clients, enlarged logo carousel */
         .jc-section { background: var(--white-color); }
@@ -594,26 +601,22 @@
     <section class="section">
         <h2 class="section-title">Common Questions</h2>
         <div class="faq-block">
-            <div class="faq-item">
-                <h3>What is corporate restructuring?</h3>
-                <p>Corporate restructuring is the process of rebuilding how a business is organized, its governance, reporting lines, roles, and policies, so the structure matches where the business actually is and where it is going, instead of where it started.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Does Traction Outsourcing provide legal services?</h3>
+            <details class="faq-item">
+                <summary>What is corporate restructuring?</summary>
+                <p>Corporate restructuring is a deliberate reorganisation of a business's governance, ownership, reporting lines, staffing, and operational framework to address performance problems, prepare for growth, or adapt to a change in the business environment. It goes beyond cosmetic changes to the organogram and addresses the underlying structural causes of the problems the business is experiencing.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Does Traction Outsourcing handle the full restructuring process, including ownership and statutory matters?</summary>
                 <p>Yes. Traction Outsourcing Limited manages every dimension of a restructuring engagement, including governance, organograms, role definitions, shareholder structures, ownership changes, statutory and documentation requirements, and implementation. You have one point of contact from start to finish.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How long does a corporate restructuring take?</h3>
-                <p>It depends on the scope. A single-entity governance and organogram rebuild can take a few weeks. A multi-entity restructuring with shared systems and a phased rollout typically runs closer to eight weeks.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Can Traction Outsourcing restructure a group with multiple entities?</h3>
-                <p>Yes. We have built shared governance registers, dual-entity organograms, and unified policy structures for groups operating multiple entities under one umbrella.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What is the difference between corporate restructuring and startup structuring?</h3>
-                <p><a href="/services/startup-structuring/" style="color: var(--accent-color); font-weight: 600;">Startup structuring</a> builds a business's foundation from scratch. Corporate restructuring rebuilds an existing structure that has grown past what it was originally designed for, or that needs to change because of an investor, a dispute, or a merger of entities.</p>
-            </div>
+            </details>
+            <details class="faq-item">
+                <summary>How long does a corporate restructuring take?</summary>
+                <p>It depends on the complexity of the business and the scope of the changes needed. A focused restructuring of a single-entity business with clear goals typically takes four to eight weeks. Group restructuring involving multiple entities, ownership changes, or financial distress takes longer. Traction Outsourcing builds a project timeline at the diagnostic stage so the client knows what to expect before work begins.</p>
+            </details>
+            <details class="faq-item">
+                <summary>What is the difference between corporate restructuring and startup structuring?</summary>
+                <p>Startup structuring builds foundations for a new or early-stage business that does not yet have a structure in place. Corporate restructuring rebuilds or reorganises the structure of an existing business that has outgrown, broken, or needs to change what it has. The tools overlap but the starting point and the process are different.</p>
+            </details>
         </div>
     </section>
 
@@ -745,6 +748,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>

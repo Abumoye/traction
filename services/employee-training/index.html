@@ -800,6 +800,13 @@
         .delivery-box p { margin: 0 0 14px; color: #555; font-size: 15px; line-height: 1.7; }
         .delivery-box p:last-child { margin-bottom: 0; }
 
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
         .faq-block { max-width: 800px; margin: 0 auto; }
         /* Join Our Clients, enlarged logo carousel */
         .jc-section { background: var(--white-color); }
@@ -1283,22 +1290,22 @@
     <section class="section">
         <h2 class="section-title">Common Questions</h2>
         <div class="faq-block">
-            <div class="faq-item">
-                <h3>Is there a PCOS training course in Abuja or Lagos?</h3>
-                <p>Yes. The "Managing PCOS, Work-Life Balance, and Burnout Prevention" course is a 2-day certificate programme available online and as a physical class in Abuja and Lagos. It is designed for Nigerian professionals and workplace managers looking to support staff wellbeing and reduce burnout.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Is there a financial management course for CEOs in Nigeria?</h3>
-                <p>Yes. "Financial Management for CEOs" runs over 3 weekends as a physical class. It is built for Nigerian business owners and executives who need to understand financial statements, cash flow, and business finance without a formal accounting background.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Do you offer customer service training in Abuja or Lagos?</h3>
-                <p>Yes. The Customer Service & Client Experience track has four courses: Customer Service Fundamentals, Client Experience Specialist, Cultural Intelligence in Nigerian Customer Service, and Turning Angry Customers into Advocates. All are available online and in person in Abuja and Lagos.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Do you offer HR management or payroll training in Nigeria?</h3>
-                <p>Yes. The Workplace Management track includes a 6-weekend Human Resource Management certificate course and a 3-weekend Excel for Payroll Managers course, available online and in person in Abuja and Lagos.</p>
-            </div>
+            <details class="faq-item">
+                <summary>What types of corporate training does Traction Outsourcing offer?</summary>
+                <p>Traction Outsourcing Limited offers professional development and corporate training across people management, HR practice, financial management for non-finance managers, customer service, and leadership development. Training is delivered as scheduled open programmes, in-house sessions for specific teams, and bespoke programmes built around a client's particular needs.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Do you offer in-house corporate training for companies in Nigeria?</summary>
+                <p>Yes. Traction Outsourcing Limited delivers in-house training programmes for organisations that prefer to train their teams together in their own environment. In-house sessions can be adapted to the organisation's specific context, industry, and current capability level.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Where are your training programmes held?</summary>
+                <p>Open programmes are held in Abuja and Lagos. In-house programmes are delivered at the client's premises anywhere in Nigeria. Some programmes are also available in hybrid or online formats depending on the scope and content.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How do I enrol my team in a Traction Outsourcing training programme?</summary>
+                <p>Reach out through any of our contact channels — WhatsApp, email, or the enquiry form on this page. Share the number of participants, the preferred dates, and the area you want to develop, and our team will respond with the available options and how to proceed.</p>
+            </details>
         </div>
     </section>
 
@@ -1447,7 +1454,6 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
     <script>
     /* ── Training Cart ── */
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeu2T0WE1M-4d2erYY9IUazEKTsWPmuG9cnIYK61PQkdfY8OqvvOTubLFcFJRfdL5iVw/exec";
