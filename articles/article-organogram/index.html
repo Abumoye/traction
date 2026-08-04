@@ -109,14 +109,6 @@
         "@type": "Answer",
         "text": "Start by listing every task your business completes today rather than the roles you eventually want. The gaps and overlaps in that list point directly to how your organogram should be structured. If you would rather have this done for you, Traction Outsourcing Limited offers business advisory and structuring support for Nigerian SMEs."
       }
-    },
-    {
-      "@type": "Question",
-      "name": "How often should an organogram be updated?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "An organogram is a living document, not a one-time exercise. Review it every six to twelve months, or sooner if the business is missing its targets, since the friction is often visible in the reporting lines themselves."
-      }
     }
   ]
 }
@@ -307,6 +299,14 @@
             .article-page-layout { padding: 16px 5% 48px; }
             .sidebar-services, .sidebar-event, .sidebar-articles { flex: 1 1 100%; }
         }
+            .faq-wrap { margin-top: 20px; }
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -469,26 +469,23 @@
     <section style="max-width: 800px; margin: 0 auto; padding: 0 6% 60px;">
         <h2 style="font-family: Georgia, serif; color: var(--primary-color); font-size: 24px; border-left: 4px solid var(--accent-color); padding-left: 16px; margin-bottom: 24px;">Common Questions</h2>
         <div class="faq-block">
-            <div class="faq-item">
-                <h3>What type of organogram should a new business use?</h3>
+                        <details class="faq-item">
+                <summary>What type of organogram should a new business use?</summary>
                 <p>A functional organogram, which is the structure described in this guide. There are three other types, hierarchical, flat, and matrix, but businesses between zero and three years old should focus on the functional structure, since the priority at that stage is employee effectiveness, efficiency, and clarity over who gets things done, not who holds the most authority.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do I create an organogram for a real estate company?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>How do I create an organogram for a real estate company?</summary>
                 <p>Start with the director at the top, then split the business into its core functions. For a young real estate management firm, that usually means an Operations Lead handling property maintenance, listings, and vendor relations; a Sales and Brokerage Lead handling client tours, partnerships, and contract agreements; and a Finance and Admin Lead handling rent collection, disbursement, and legal paperwork. If you are a solo founder, you can occupy all three boxes yourself and hire into each one as the business grows.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do I create an organogram in Nigeria?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>How do I create an organogram in Nigeria?</summary>
                 <p>Audit the tasks your business actually performs today, group them into core departments such as Operations, Finance and Administration, Growth and Sales, and Talent and Culture, give every person one clear supervisor, and design the structure to stay modular as you hire. Traction Outsourcing Limited helps Nigerian businesses build and review this kind of structure directly.</p>
-            </div>
-            <div class="faq-item">
-                <h3>I need help creating an organogram. Where do I start?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>I need help creating an organogram. Where do I start?</summary>
                 <p>Start by listing every task your business completes today rather than the roles you eventually want. The gaps and overlaps in that list point directly to how your organogram should be structured. If you would rather have this done for you, Traction Outsourcing Limited offers business advisory and structuring support for Nigerian SMEs.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How often should an organogram be updated?</h3>
-                <p>An organogram is a living document, not a one-time exercise. Review it every six to twelve months, or sooner if the business is missing its targets, since the friction is often visible in the reporting lines themselves.</p>
-            </div>
+            </details>
+                        
         </div>
     </section>
         </div><!-- .article-main-col -->
@@ -590,6 +587,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>

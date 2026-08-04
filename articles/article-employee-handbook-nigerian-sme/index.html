@@ -204,6 +204,14 @@
             .article-page-layout { padding: 16px 5% 48px; }
             .sidebar-services, .sidebar-event, .sidebar-articles { flex: 1 1 100%; }
         }
+            .faq-wrap { margin-top: 20px; }
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -322,18 +330,18 @@
     <section class="faq-section">
         <h2>Common Questions</h2>
         <div class="faq-block">
-            <div class="faq-item">
-                <h3>Why does a Nigerian SME need an employee handbook?</h3>
+                        <details class="faq-item">
+                <summary>Why does a Nigerian SME need an employee handbook?</summary>
                 <p>Without a written handbook, policy exists only in the founder's memory, applied inconsistently and impossible to enforce fairly. A handbook turns informal understanding into a document every employee can be held to equally.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What should be included in a Nigerian employee handbook?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>What should be included in a Nigerian employee handbook?</summary>
                 <p>A working handbook covers company policy, conduct expectations, leave and attendance rules, disciplinary procedure, and the practical day-to-day questions new employees actually ask, not just a legal boilerplate.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What happens if a business skips having an employee handbook?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>What happens if a business skips having an employee handbook?</summary>
                 <p>Disputes get settled inconsistently, expectations vary by manager, and the business has no documented standard to point to when a disagreement over conduct or policy ends up in front of a court or tribunal.</p>
-            </div>
+            </details>
         </div>
     </section>
     <!-- Complete Corporate Footer Section -->
@@ -436,6 +444,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>

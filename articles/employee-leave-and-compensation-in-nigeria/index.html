@@ -79,22 +79,6 @@
         "@type": "Answer",
         "text": "The national minimum wage in Nigeria is 70,000 naira per month, set by the National Minimum Wage (Amendment) Act 2024. It applies to employers across the public and private sector, subject to limited exemptions, and is reviewed periodically."
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Is paternity leave a legal requirement in Nigeria?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. There is no statutory paternity leave requirement in the Labour Act for private sector employees. Male federal civil servants are entitled to 14 days of paternity leave following a 2021 Federal Executive Council approval, but private employers are not legally required to offer it, though many do as a matter of policy."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can an employer refuse to pay out unused annual leave?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generally, employers are not required to pay wages in place of untaken leave while the employee remains in service. The exception is at termination: if leave has already accrued and gone unused, the employer must pay its cash equivalent, and Nigerian courts have taken a firm line against blanket use-it-or-lose-it policies that deny this."
-      }
     }
   ]
 }
@@ -235,6 +219,14 @@
             .article-page-layout { padding: 16px 5% 48px; }
             .sidebar-services, .sidebar-event, .sidebar-articles { flex: 1 1 100%; }
         }
+            .faq-wrap { margin-top: 20px; }
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -383,30 +375,24 @@
 
             <h2>Frequently Asked Questions</h2>
             <div class="faq-block">
-                <div class="faq-item">
-                    <h3>How many days of annual leave are employees entitled to in Nigeria?</h3>
-                    <p>The Labour Act sets a statutory minimum of 6 working days of paid annual leave after 12 months of continuous service, or 12 working days for young workers under 16, including apprentices. In practice, most formal-sector employers in Nigeria offer considerably more, commonly 20 to 30 days a year, through the employment contract or company policy.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Is maternity leave paid in Nigeria?</h3>
-                    <p>Yes, though only partially under the statutory minimum. The Labour Act provides for a maternity leave period of around 12 weeks, split before and after childbirth, during which the employer must pay at least 50% of the employee's salary. Many employers pay full salary through the maternity leave period as an enhanced benefit.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How many sick leave days are employees entitled to in Nigeria?</h3>
-                    <p>Up to 12 working days of paid sick leave in a calendar year, provided the illness is certified by a registered medical practitioner. Sick pay is based on normal wages and does not include overtime or other allowances.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What is the current minimum wage in Nigeria?</h3>
-                    <p>The national minimum wage in Nigeria is 70,000 naira per month, set by the National Minimum Wage (Amendment) Act 2024. It applies to employers across the public and private sector, subject to limited exemptions, and is reviewed periodically.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Is paternity leave a legal requirement in Nigeria?</h3>
-                    <p>No. There is no statutory paternity leave requirement in the Labour Act for private sector employees. Male federal civil servants are entitled to 14 days of paternity leave following a 2021 Federal Executive Council approval, but private employers are not legally required to offer it, though many do as a matter of policy.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can an employer refuse to pay out unused annual leave?</h3>
-                    <p>Generally, employers are not required to pay wages in place of untaken leave while the employee remains in service. The exception is at termination: if leave has already accrued and gone unused, the employer must pay its cash equivalent, and Nigerian courts have taken a firm line against blanket use-it-or-lose-it policies that deny this.</p>
-                </div>
+                            <details class="faq-item">
+                <summary>How many days of annual leave are employees entitled to in Nigeria?</summary>
+                <p>The Labour Act sets a statutory minimum of 6 working days of paid annual leave after 12 months of continuous service, or 12 working days for young workers under 16, including apprentices. In practice, most formal-sector employers in Nigeria offer considerably more, commonly 20 to 30 days a year, through the employment contract or company policy.</p>
+            </details>
+                            <details class="faq-item">
+                <summary>Is maternity leave paid in Nigeria?</summary>
+                <p>Yes, though only partially under the statutory minimum. The Labour Act provides for a maternity leave period of around 12 weeks, split before and after childbirth, during which the employer must pay at least 50% of the employee's salary. Many employers pay full salary through the maternity leave period as an enhanced benefit.</p>
+            </details>
+                            <details class="faq-item">
+                <summary>How many sick leave days are employees entitled to in Nigeria?</summary>
+                <p>Up to 12 working days of paid sick leave in a calendar year, provided the illness is certified by a registered medical practitioner. Sick pay is based on normal wages and does not include overtime or other allowances.</p>
+            </details>
+                            <details class="faq-item">
+                <summary>What is the current minimum wage in Nigeria?</summary>
+                <p>The national minimum wage in Nigeria is 70,000 naira per month, set by the National Minimum Wage (Amendment) Act 2024. It applies to employers across the public and private sector, subject to limited exemptions, and is reviewed periodically.</p>
+            </details>
+                            
+                            
             </div>
         </div>
     </article>
@@ -510,6 +496,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>

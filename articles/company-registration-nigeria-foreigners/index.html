@@ -52,37 +52,34 @@
     {
       "@type": "Question",
       "name": "Can a foreigner own 100 percent of a company in Nigeria?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Nigerian law permits foreigners to own up to 100 percent equity in a Nigerian company, except in prohibited sectors such as arms, narcotics and a small list of restricted activities. A Nigerian partner is not legally required for most business types, though the practical case for local support is different from the legal requirement." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Nigerian law permits foreigners to own up to 100 percent equity in a Nigerian company, except in prohibited sectors such as arms, narcotics, and a small list of restricted activities. A Nigerian partner is not legally required for most business types, though the practical case for local coordination and support is different from the legal requirement."
+      }
     },
     {
       "@type": "Question",
       "name": "What is the minimum share capital for a foreign-owned company in Nigeria?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The Corporate Affairs Commission sets a minimum share capital of ₦10 million for companies with foreign participation. However, the Federal Ministry of Interior requires a minimum paid-up capital of ₦100 million before it will grant a business permit to a wholly foreign-owned or foreign-participating company. In practice, ₦100 million is the number that determines whether the company can legally operate, employ expatriates, open accounts properly, and run commercial activities in Nigeria." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Corporate Affairs Commission sets a minimum share capital of &#8358;10 million for companies with foreign participation. However, the Federal Ministry of Interior requires a minimum paid-up capital of &#8358;100 million before it will grant a business permit to a wholly foreign-owned or foreign-participating company. In practice, &#8358;100 million is the threshold that determines whether the company can lawfully operate, employ expatriates, open accounts properly, and engage with Nigerian banks and regulators."
+      }
     },
     {
       "@type": "Question",
-      "name": "What is a business permit and does my foreign company need one in Nigeria?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A business permit is the approval that authorises a foreign-owned or foreign-participating company to carry on business in Nigeria. It is issued by the Federal Ministry of Interior and is separate from CAC incorporation and NIPC registration. Without it, a foreign-owned company may be incorporated but still unable to lawfully operate, hire expatriates, or satisfy the requirements of Nigerian banks and regulators." }
+      "name": "What is a business permit and does my foreign company need one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A business permit is the government authorisation that allows a foreign-owned or foreign-participating company to carry on business in Nigeria. It is issued by the Federal Ministry of Interior and is entirely separate from CAC incorporation and NIPC registration. Without a business permit, a foreign-owned company may be incorporated but is still unable to lawfully operate, hire expatriates, or satisfy the requirements of most Nigerian banks, regulators, and institutional partners."
+      }
     },
     {
       "@type": "Question",
       "name": "Does CAC registration mean a foreign company is ready to operate in Nigeria?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. CAC registration gives the company legal existence. For a foreign-owned company, that is only the first step. Full operational readiness also requires NIPC registration, tax registration, a business permit, bank account documentation, and in most cases sector-specific approvals and expatriate quota applications before foreign staff can legally work in Nigeria." }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the NIPC and does a foreign company need to register with it?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The Nigerian Investment Promotion Commission is the federal body that formally recognises foreign investment in Nigeria. Under the NIPC Act, enterprises with foreign participation are required to apply to the Commission for business registration. NIPC registration is relevant to investor protections, capital importation, profit repatriation, and regulatory engagement." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can a foreign investor set up a company in Nigeria without visiting the country?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The incorporation process at the CAC can be managed remotely. However, for a foreign-owned company that will operate in Nigeria, employ staff, open bank accounts, obtain permits, and engage regulators, the practical steps require local coordination and representation. Working with a firm based in Nigeria that can manage the process on the ground is the most effective approach." }
-    },
-    {
-      "@type": "Question",
-      "name": "How can Traction Outsourcing help a foreign investor set up in Nigeria?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Traction Outsourcing Limited provides startup structuring and business advisory services for foreign investors entering Nigeria, covering company structure, share capital, regulatory sequencing, and operational readiness. Foreign investors can book a free 30-minute advisory call to discuss their specific situation and what setting up in Nigeria will actually require for their business type." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. CAC registration gives the company legal existence. For a foreign-owned company, that is only the first step. Full operational readiness also requires NIPC registration, tax registration, a business permit, banking documentation, and in most cases sector-specific approvals and expatriate quota applications where foreign personnel will work in Nigeria."
+      }
     }
   ]
 }
@@ -213,6 +210,14 @@
             .article-page-layout { padding: 16px 5% 48px; }
             .sidebar-services, .sidebar-event, .sidebar-articles { flex: 1 1 100%; }
         }
+            .faq-wrap { margin-top: 20px; }
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -423,34 +428,25 @@
                 <div class="faq-section" id="faq">
                     <h2>Frequently Asked Questions</h2>
                     <div class="faq-block" id="faqAccordion">
-                        <div class="faq-item">
-                            <h3>Can a foreigner own 100 percent of a company in Nigeria?</h3>
-                            <p>Yes. Nigerian law permits foreigners to own up to 100 percent equity in a Nigerian company, except in prohibited sectors such as arms, narcotics, and a small list of restricted activities. A Nigerian partner is not legally required for most business types, though the practical case for local coordination and support is different from the legal requirement.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>What is the minimum share capital for a foreign-owned company in Nigeria?</h3>
-                            <p>The Corporate Affairs Commission sets a minimum share capital of &#8358;10 million for companies with foreign participation. However, the Federal Ministry of Interior requires a minimum paid-up capital of &#8358;100 million before it will grant a business permit to a wholly foreign-owned or foreign-participating company. In practice, &#8358;100 million is the threshold that determines whether the company can lawfully operate, employ expatriates, open accounts properly, and engage with Nigerian banks and regulators.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>What is a business permit and does my foreign company need one?</h3>
-                            <p>A business permit is the government authorisation that allows a foreign-owned or foreign-participating company to carry on business in Nigeria. It is issued by the Federal Ministry of Interior and is entirely separate from CAC incorporation and NIPC registration. Without a business permit, a foreign-owned company may be incorporated but is still unable to lawfully operate, hire expatriates, or satisfy the requirements of most Nigerian banks, regulators, and institutional partners.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>Does CAC registration mean a foreign company is ready to operate in Nigeria?</h3>
-                            <p>No. CAC registration gives the company legal existence. For a foreign-owned company, that is only the first step. Full operational readiness also requires NIPC registration, tax registration, a business permit, banking documentation, and in most cases sector-specific approvals and expatriate quota applications where foreign personnel will work in Nigeria.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>What is the NIPC and does a foreign company need to register with it?</h3>
-                            <p>The Nigerian Investment Promotion Commission is the federal body that formally recognises foreign investment in Nigeria. Under the NIPC Act, enterprises with foreign participation are required to register with the Commission. NIPC registration is relevant to investor protections, capital importation, profit repatriation, government incentives, and regulatory engagement.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>Can a foreign investor set up a company in Nigeria without visiting the country?</h3>
-                            <p>The CAC incorporation process can be managed remotely. However, for a foreign-owned company that will operate in Nigeria, employ staff, open bank accounts, obtain permits, and engage with regulators, the practical steps require local coordination, document management, and representation on the ground. Working with a firm in Nigeria that can manage the full process is the most reliable approach.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>How can Traction Outsourcing help a foreign investor set up in Nigeria?</h3>
-                            <p>Traction Outsourcing Limited provides <a href="/services/startup-structuring/">startup structuring</a> and <a href="/services/business-advisory/">business advisory</a> services for foreign investors and companies entering Nigeria. We advise on company structure, share capital, regulatory sequencing, and operational readiness from the planning stage through to full operations. Book a free 30-minute advisory call to discuss your specific goals and what setting up in Nigeria will actually require for your business.</p>
-                        </div>
+                                    <details class="faq-item">
+                <summary>Can a foreigner own 100 percent of a company in Nigeria?</summary>
+                <p>Yes. Nigerian law permits foreigners to own up to 100 percent equity in a Nigerian company, except in prohibited sectors such as arms, narcotics, and a small list of restricted activities. A Nigerian partner is not legally required for most business types, though the practical case for local coordination and support is different from the legal requirement.</p>
+            </details>
+                                    <details class="faq-item">
+                <summary>What is the minimum share capital for a foreign-owned company in Nigeria?</summary>
+                <p>The Corporate Affairs Commission sets a minimum share capital of &#8358;10 million for companies with foreign participation. However, the Federal Ministry of Interior requires a minimum paid-up capital of &#8358;100 million before it will grant a business permit to a wholly foreign-owned or foreign-participating company. In practice, &#8358;100 million is the threshold that determines whether the company can lawfully operate, employ expatriates, open accounts properly, and engage with Nigerian banks and regulators.</p>
+            </details>
+                                    <details class="faq-item">
+                <summary>What is a business permit and does my foreign company need one?</summary>
+                <p>A business permit is the government authorisation that allows a foreign-owned or foreign-participating company to carry on business in Nigeria. It is issued by the Federal Ministry of Interior and is entirely separate from CAC incorporation and NIPC registration. Without a business permit, a foreign-owned company may be incorporated but is still unable to lawfully operate, hire expatriates, or satisfy the requirements of most Nigerian banks, regulators, and institutional partners.</p>
+            </details>
+                                    <details class="faq-item">
+                <summary>Does CAC registration mean a foreign company is ready to operate in Nigeria?</summary>
+                <p>No. CAC registration gives the company legal existence. For a foreign-owned company, that is only the first step. Full operational readiness also requires NIPC registration, tax registration, a business permit, banking documentation, and in most cases sector-specific approvals and expatriate quota applications where foreign personnel will work in Nigeria.</p>
+            </details>
+                                    
+                                    
+                                    
                     </div>
                 </div>
 
@@ -535,7 +531,6 @@
         </div>
     </footer>
 
-    <script src="/js/faq-accordion.js"></script>
     <script>
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const navMenu = document.getElementById('navMenu');

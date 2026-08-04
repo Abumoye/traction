@@ -191,6 +191,14 @@
             .article-page-layout { padding: 16px 5% 48px; }
             .sidebar-services, .sidebar-event, .sidebar-articles { flex: 1 1 100%; }
         }
+            .faq-wrap { margin-top: 20px; }
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -328,14 +336,14 @@
     <section class="faq-section">
         <h2>Common Questions</h2>
         <div class="faq-block">
-            <div class="faq-item">
-                <h3>What are the dangers of proximity to success?</h3>
+                        <details class="faq-item">
+                <summary>What are the dangers of proximity to success?</summary>
                 <p>Being close to successful people or opportunities can create the illusion of readiness without the substance behind it, access is mistaken for preparation, and the gap only becomes visible once real pressure tests it.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Why does access without preparation often fail?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>Why does access without preparation often fail?</summary>
                 <p>Opportunity without a real financial or business foundation underneath it tends to collapse under its own weight, since proximity can open a door but cannot substitute for the capability needed to walk through it.</p>
-            </div>
+            </details>
         </div>
     </section>
     <!-- Complete Corporate Footer Section -->
@@ -438,6 +446,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>

@@ -92,7 +92,7 @@
       "name": "Is outsourced bank staff still the bank's regulatory responsibility?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Regulatory bodies are clear that outsourcing an operational function does not outsource accountability for it. Banks remain responsible for the outcomes of outsourced roles, which is why Traction Outsourcing builds every arrangement with proper documentation, SLAs, and reporting the institution can rely on."
+        "text": "Yes. Regulatory bodies are clear that outsourcing an operational function does not outsource accountability for it. Banks remain responsible for the outcomes of outsourced roles, which is why every arrangement is built with proper documentation, SLAs, and reporting the institution can rely on."
       }
     },
     {
@@ -100,15 +100,7 @@
       "name": "How does Traction Outsourcing support compliance for outsourced bank staff?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nigerian banks are expected to maintain documented risk assessments and governance oversight for any outsourced function, in line with CBN requirements for supervised financial institutions. Traction Outsourcing structures its staffing arrangements with clear documentation, defined SLAs, and reporting built to sit inside that governance requirement rather than outside it."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can Traction Outsourcing supply staff for a single branch or multiple branches?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Staffing arrangements can be scoped to a single branch, a regional cluster, or a nationwide rollout, depending on what the institution needs."
+        "text": "Nigerian banks are expected to maintain documented risk assessments and governance oversight for any outsourced function, in line with CBN requirements for supervised financial institutions. We structure our staffing arrangements with clear documentation, defined SLAs, and reporting built to sit inside that governance requirement rather than outside it."
       }
     }
   ]
@@ -282,6 +274,14 @@
             transition: opacity 0.2s;
         }
         .s-prop-link:hover { opacity: 0.88; }
+            .faq-wrap { margin-top: 20px; }
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -466,26 +466,23 @@
     <section class="section">
         <h2 class="section-title">Common Questions</h2>
         <div class="faq-block">
-            <div class="faq-item">
-                <h3>Does Traction Outsourcing work with banks in Nigeria?</h3>
+                        <details class="faq-item">
+                <summary>Does Traction Outsourcing work with banks in Nigeria?</summary>
                 <p>Yes. Traction Outsourcing supports banks and financial institutions in Nigeria with outsourced staff across teller operations, customer service, direct sales, back-office support, and more, managed with the documentation and governance financial institutions require.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What roles can a bank outsource through Traction Outsourcing?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>What roles can a bank outsource through Traction Outsourcing?</summary>
                 <p>Common roles include tellers and cash officers, customer service and contact center staff, direct sales agents, back-office and operations support, loan and credit support, compliance and KYC support staff, IT support, and facility and security staff.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Is outsourced bank staff still the bank's regulatory responsibility?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>Is outsourced bank staff still the bank's regulatory responsibility?</summary>
                 <p>Yes. Regulatory bodies are clear that outsourcing an operational function does not outsource accountability for it. Banks remain responsible for the outcomes of outsourced roles, which is why every arrangement is built with proper documentation, SLAs, and reporting the institution can rely on.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How does Traction Outsourcing support compliance for outsourced bank staff?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>How does Traction Outsourcing support compliance for outsourced bank staff?</summary>
                 <p>Nigerian banks are expected to maintain documented risk assessments and governance oversight for any outsourced function, in line with CBN requirements for supervised financial institutions. We structure our staffing arrangements with clear documentation, defined SLAs, and reporting built to sit inside that governance requirement rather than outside it.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Can Traction Outsourcing supply staff for a single branch or multiple branches?</h3>
-                <p>Yes. Staffing arrangements can be scoped to a single branch, a regional cluster, or a nationwide rollout, depending on what the institution needs.</p>
-            </div>
+            </details>
+                        
         </div>
     </section>
 
@@ -617,6 +614,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>

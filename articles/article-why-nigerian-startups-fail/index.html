@@ -204,6 +204,14 @@
             .article-page-layout { padding: 16px 5% 48px; }
             .sidebar-services, .sidebar-event, .sidebar-articles { flex: 1 1 100%; }
         }
+            .faq-wrap { margin-top: 20px; }
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -320,18 +328,18 @@
     <section class="faq-section">
         <h2>Common Questions</h2>
         <div class="faq-block">
-            <div class="faq-item">
-                <h3>Why do Nigerian startups fail?</h3>
+                        <details class="faq-item">
+                <summary>Why do Nigerian startups fail?</summary>
                 <p>Most Nigerian startup failures trace back to structural gaps rather than a single dramatic mistake, an absence of clear roles, reporting lines, and documented processes that let a business run without depending entirely on the founder's memory.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What percentage of Nigerian startups fail within five years?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>What percentage of Nigerian startups fail within five years?</summary>
                 <p>More than nine in ten Nigerian SMEs fail within five years, a pattern consistent with the global small business failure rate but compounded locally by structural and operational gaps that show up earlier.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How can I prevent my Nigerian startup from failing?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>How can I prevent my Nigerian startup from failing?</summary>
                 <p>Build the organizational structure, reporting lines, and documentation before the business needs them under pressure, not after. Structure is not bureaucracy, it is what lets a business survive its own growth.</p>
-            </div>
+            </details>
         </div>
     </section>
     <!-- Complete Corporate Footer Section -->
@@ -434,6 +442,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>

@@ -41,27 +41,34 @@
     {
       "@type": "Question",
       "name": "Is Kigali the cleanest city in Africa?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Kigali scored 9.4 out of 10 in The Africa Report's Clean Cities Ranking, driven by Umuganda community cleanups and strict waste policies including a plastic bag ban since 2008." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Kigali scored 9.4 out of 10 in The Africa Report's Clean Cities Ranking, driven by Umuganda community cleanups and strict waste policies including a plastic bag ban since 2008."
+      }
     },
     {
       "@type": "Question",
       "name": "Why is Kigali considered Africa's business hub?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Rwanda's economy grew 9.4% in 2025. Kigali features the Kigali International Financial Centre, fast business registration at the Rwanda Development Board's One Stop Centre, 100% foreign ownership in key sectors, and hosted the Africa CEO Forum in May 2026." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rwanda's economy grew 9.4% in 2025. Kigali features the Kigali International Financial Centre, fast business registration, 100% foreign ownership in key sectors, and hosted the Africa CEO Forum in May 2026 with over 2,500 CEOs and policymakers."
+      }
     },
     {
       "@type": "Question",
       "name": "What are the best tourist attractions in Kigali?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Key spots include the Kigali Genocide Memorial, Inema Arts Center, Kimironko Market, Nyandungu Eco-Park, and surrounding national parks for gorilla trekking and wildlife experiences." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Key spots include the Kigali Genocide Memorial, Inema Arts Center, Kimironko Market, Nyandungu Eco-Park, and surrounding national parks for gorilla trekking at Volcanoes National Park and game drives at Akagera."
+      }
     },
     {
       "@type": "Question",
       "name": "How do Nigerians get to Kigali?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Connecting flights operate from Lagos and Abuja to Kigali International Airport. The Traction Outsourcing International Corporate Retreat 2026 includes return flights from Nigeria as part of the package." }
-    },
-    {
-      "@type": "Question",
-      "name": "Why should Nigerian executives travel to Kigali?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Kigali offers business credibility, safety, reliable infrastructure, and direct access to the East African Community's 300 million-person market, with some of the least bureaucratic market entry conditions in Africa." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Connecting flights operate from Lagos and Abuja to Kigali International Airport. The Traction Outsourcing International Corporate Retreat 2026 includes return flights from Nigeria as part of the package."
+      }
     }
   ]
 }
@@ -220,6 +227,14 @@
             .article-page-layout { padding: 16px 5% 48px; }
             .sidebar-services, .sidebar-event, .sidebar-articles { flex: 1 1 100%; }
         }
+            .faq-wrap { margin-top: 20px; }
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -390,26 +405,23 @@
             <div class="faq-section">
                 <h2>Frequently Asked Questions</h2>
                 <div class="faq-block">
-                    <div class="faq-item">
-                        <h3>Is Kigali the cleanest city in Africa?</h3>
-                        <p>Yes. Kigali scored 9.4 out of 10 in The Africa Report's Clean Cities Ranking, driven by Umuganda community cleanups and strict waste policies including a plastic bag ban since 2008.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Why is Kigali considered Africa's business hub?</h3>
-                        <p>Rwanda's economy grew 9.4% in 2025. Kigali features the Kigali International Financial Centre, fast business registration, 100% foreign ownership in key sectors, and hosted the Africa CEO Forum in May 2026 with over 2,500 CEOs and policymakers.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>What are the best tourist attractions in Kigali?</h3>
-                        <p>Key spots include the Kigali Genocide Memorial, Inema Arts Center, Kimironko Market, Nyandungu Eco-Park, and surrounding national parks for gorilla trekking at Volcanoes National Park and game drives at Akagera.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>How do Nigerians get to Kigali?</h3>
-                        <p>Connecting flights operate from Lagos and Abuja to Kigali International Airport. The Traction Outsourcing International Corporate Retreat 2026 includes return flights from Nigeria as part of the package.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Why should Nigerian executives travel to Kigali?</h3>
-                        <p>Kigali offers business credibility, personal safety, reliable infrastructure, and direct access to the East African Community's 300 million-person market, with some of the least bureaucratic entry conditions in Africa.</p>
-                    </div>
+                                <details class="faq-item">
+                <summary>Is Kigali the cleanest city in Africa?</summary>
+                <p>Yes. Kigali scored 9.4 out of 10 in The Africa Report's Clean Cities Ranking, driven by Umuganda community cleanups and strict waste policies including a plastic bag ban since 2008.</p>
+            </details>
+                                <details class="faq-item">
+                <summary>Why is Kigali considered Africa's business hub?</summary>
+                <p>Rwanda's economy grew 9.4% in 2025. Kigali features the Kigali International Financial Centre, fast business registration, 100% foreign ownership in key sectors, and hosted the Africa CEO Forum in May 2026 with over 2,500 CEOs and policymakers.</p>
+            </details>
+                                <details class="faq-item">
+                <summary>What are the best tourist attractions in Kigali?</summary>
+                <p>Key spots include the Kigali Genocide Memorial, Inema Arts Center, Kimironko Market, Nyandungu Eco-Park, and surrounding national parks for gorilla trekking at Volcanoes National Park and game drives at Akagera.</p>
+            </details>
+                                <details class="faq-item">
+                <summary>How do Nigerians get to Kigali?</summary>
+                <p>Connecting flights operate from Lagos and Abuja to Kigali International Airport. The Traction Outsourcing International Corporate Retreat 2026 includes return flights from Nigeria as part of the package.</p>
+            </details>
+                                
                 </div>
             </div>
 
@@ -539,6 +551,5 @@
         })();
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>

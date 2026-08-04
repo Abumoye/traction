@@ -79,22 +79,6 @@
         "@type": "Answer",
         "text": "Clients can reach the 24-hour support desk through WhatsApp at 0805 203 3145 or by email at partner@tolnigeria.com. WhatsApp is the fastest route for urgent matters."
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Does the 24-hour support programme cover in-person visits to the office?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. The programme covers digital channels only, WhatsApp, email, and other online touchpoints. It does not extend to in-person, walk-in support at the office."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What kind of enquiries does the 24-hour support desk handle?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The support desk covers all core client touchpoints, including HR advisory, recruitment, business solutions, and general enquiries, with every request logged and tracked from first contact to resolution."
-      }
     }
   ]
 }
@@ -179,6 +163,14 @@
             .article-body h2 { font-size: 21px; }
             .article-featured-image { height: 220px; }
         }
+            .faq-wrap { margin-top: 20px; }
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -287,30 +279,24 @@
     <section class="section" style="background-color: white; border-top: 1px solid #eee;">
         <h2 style="font-size: 26px; text-align: center; color: var(--primary-color); margin-bottom: 24px;">Common Questions</h2>
         <div class="faq-block">
-            <div class="faq-item">
-                <h3>Is Traction Outsourcing a BPO company in Nigeria?</h3>
+                        <details class="faq-item">
+                <summary>Is Traction Outsourcing a BPO company in Nigeria?</summary>
                 <p>Yes. Traction Outsourcing operates as a business process outsourcing and HR partner firm in Nigeria, covering staff outsourcing, recruitment, training, business advisory, and corporate restructuring, backed by 24/7 virtual client support.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Does Traction Outsourcing support multinational and international businesses operating in Nigeria?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>Does Traction Outsourcing support multinational and international businesses operating in Nigeria?</summary>
                 <p>Yes. Traction Outsourcing works with multinationals and international businesses operating in or entering Nigeria, including those coordinating across different time zones, through its 24/7 virtual client support desk.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Can I reach an HR, recruitment, or business development partner firm in Nigeria outside standard working hours?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>Can I reach an HR, recruitment, or business development partner firm in Nigeria outside standard working hours?</summary>
                 <p>Yes. The 24/7 virtual client support desk covers HR advisory, recruitment, training, and business development enquiries at any hour, through WhatsApp or email, regardless of standard Nigerian working hours.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How can I reach Traction Outsourcing outside normal business hours?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>How can I reach Traction Outsourcing outside normal business hours?</summary>
                 <p>Clients can reach the 24-hour support desk through WhatsApp at 0805 203 3145 or by email at partner@tolnigeria.com. WhatsApp is the fastest route for urgent matters.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Does the 24-hour support programme cover in-person visits to the office?</h3>
-                <p>No. The programme covers digital channels only, WhatsApp, email, and other online touchpoints. It does not extend to in-person, walk-in support at the office.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What kind of enquiries does the 24-hour support desk handle?</h3>
-                <p>The support desk covers all core client touchpoints, including HR advisory, recruitment, business solutions, and general enquiries, with every request logged and tracked from first contact to resolution.</p>
-            </div>
+            </details>
+                        
+                        
         </div>
     </section>
     <!-- Complete Corporate Footer Section -->
@@ -376,6 +362,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>

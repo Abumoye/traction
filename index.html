@@ -275,6 +275,14 @@
             .hero h1 { font-size: 28px; }
             .hero p { font-size: 16px; }
         }
+            .faq-wrap { margin-top: 20px; }
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -535,22 +543,22 @@
     <section class="section" style="background-color: white;">
         <h2 class="section-title">Common Questions</h2>
         <div class="faq-block">
-            <div class="faq-item">
-                <h3>What does Traction Outsourcing do?</h3>
+                        <details class="faq-item">
+                <summary>What does Traction Outsourcing do?</summary>
                 <p>Traction Outsourcing Limited is a management consulting and HR solutions firm based in Abuja, Nigeria, serving clients across all major industries throughout Africa. Services include talent acquisition, HR process outsourcing, learning and development, startup structuring, corporate restructuring, business strategy consulting, and corporate retreats. ATH Recruiters, the recruitment arm of the firm, connects businesses with vetted, qualified talent across sectors.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Where is Traction Outsourcing located in Abuja?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>Where is Traction Outsourcing located in Abuja?</summary>
                 <p>Traction Outsourcing Limited is based at 26, Algiers Street, Wuse Zone 5, FCT, Abuja.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Is Traction Outsourcing a management consulting firm in Nigeria?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>Is Traction Outsourcing a management consulting firm in Nigeria?</summary>
                 <p>Yes. Traction Outsourcing operates as a management consulting and business advisory firm serving companies across Nigeria, with a particular focus on staffing, HR, structuring, and governance work for growing businesses and SMEs.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do I get started with Traction Outsourcing?</h3>
+            </details>
+                        <details class="faq-item">
+                <summary>How do I get started with Traction Outsourcing?</summary>
                 <p>Book a free 30-minute clarity call through the button on this page, or reach out on WhatsApp or by phone. A member of the team will help determine which service fits your business before any engagement begins.</p>
-            </div>
+            </details>
         </div>
     </section>
 
@@ -646,6 +654,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>

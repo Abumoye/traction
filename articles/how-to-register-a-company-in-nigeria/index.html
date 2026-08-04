@@ -90,7 +90,7 @@
       "name": "How do I start my business in Nigeria?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Start by choosing a business structure, either a business name or a limited liability company, then register it with the Corporate Affairs Commission (CAC). Once registered, you can move on to tax registration, opening a corporate bank account, and building the internal structure, roles, and policies your business needs to actually run."
+        "text": "Start by choosing a business structure, either a business name or a limited liability company, then register it with the Corporate Affairs Commission. Once registered, move on to tax registration, opening a corporate bank account, and building the internal structure your business needs to actually run."
       }
     },
     {
@@ -98,7 +98,7 @@
       "name": "How do I register a company in Nigeria?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You register with the Corporate Affairs Commission (CAC), either yourself through the CAC portal or through an accredited agent. The process involves reserving a business name, preparing your documents, submitting your application, and receiving your registration certificate."
+        "text": "You register with the Corporate Affairs Commission, either yourself through the CAC portal or through an accredited agent. The process involves reserving a name, preparing your documents, submitting your application, then receiving your certificate."
       }
     },
     {
@@ -106,7 +106,7 @@
       "name": "What is the difference between a business name and a limited company in Nigeria?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A business name has no separate legal personality, meaning the owner is personally liable for the business's debts and obligations. A limited company is a separate legal entity from its owners, which limits personal liability, but it comes with more documentation and higher compliance obligations."
+        "text": "A business name has no separate legal personality, so the owner is personally liable for its debts. A limited company is a separate legal entity, which limits personal liability, but comes with more documentation and higher ongoing compliance obligations."
       }
     },
     {
@@ -115,62 +115,6 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes. A Nigerian citizen abroad registering a wholly Nigerian-owned company follows the same CAC process as anyone registering from within Nigeria, since the portal is fully online. Location does not change the requirements, ownership does."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do foreigners need extra approval to register a business in Nigeria?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. A business with any non-Nigerian shareholder must also register with the Nigerian Investment Promotion Commission (NIPC), obtain a Business Permit from the Federal Ministry of Interior, and meet a higher minimum share capital requirement than a wholly Nigerian-owned company."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need a lawyer or consultant to register a business in Nigeria?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, the CAC portal allows individuals to register directly. Many founders still use an accredited agent or consultant because a small error in the name, the objects of association, or the documentation can get an application rejected and cost valuable time to correct."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I register a company in Nigeria in 2026?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To register a company in Nigeria in 2026, visit the CAC (Corporate Affairs Commission) portal at cac.gov.ng, choose between a Business Name or a Limited Liability Company, reserve your proposed name, complete the required forms, submit your documents (identification, address, nature of business, share capital for LLCs), and pay the prescribed fees. Processing typically takes 3 to 10 working days online."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a business name and a limited liability company in Nigeria?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A Business Name (BN) is a sole proprietorship or partnership registered under a trade name. It is cheaper and faster to register but offers no legal separation between you and the business. A Limited Liability Company (LLC) is a separate legal entity, it can own property, enter contracts, and sue or be sued in its own name. For investor-ready businesses or those handling client contracts, an LLC is the appropriate structure."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does it cost to register a company in Nigeria?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "CAC registration fees in Nigeria depend on the share capital for Limited Liability Companies, starting from approximately ₦10,000 for the smallest LLCs, with additional fees for name reservation, filing, and stamp duty. Business Name registration typically costs between ₦5,000 and ₦10,000 in government fees. Professional fees vary by consultant."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I register a company in Nigeria online?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The CAC has an online portal (cac.gov.ng) that allows you to check name availability, reserve a name, file incorporation documents, and pay fees digitally. Full online registration for both Business Names and Limited Liability Companies is available, though some applicants use registered agents or consultants to manage the process."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can a foreigner or Nigerian in the diaspora register a company in Nigeria?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Foreigners can register a company in Nigeria, though businesses with foreign ownership must also register with the Nigerian Investment Promotion Commission (NIPC) and obtain relevant sector permits. Nigerians in the diaspora can register remotely through the CAC online portal or via a registered consultant with a Power of Attorney."
       }
     }
   ]
@@ -305,6 +249,14 @@
             .article-page-layout { padding: 16px 5% 48px; }
             .sidebar-services, .sidebar-event, .sidebar-articles { flex: 1 1 100%; }
         }
+            .faq-wrap { margin-top: 20px; }
+        .faq-item { border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item summary { cursor: pointer; font-weight: 700; font-family: 'Segoe UI', sans-serif; color: var(--primary-color); font-size: 15.5px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 22px; color: var(--accent-color); flex-shrink: 0; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item > p { font-family: 'Segoe UI', sans-serif; font-size: 14.5px; color: #555; line-height: 1.7; padding: 0 0 18px; margin: 0; display: block !important; }
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -460,30 +412,24 @@
 
             <h2>Frequently Asked Questions</h2>
             <div class="faq-block">
-                <div class="faq-item">
-                    <h3>How do I start my business in Nigeria?</h3>
-                    <p>Start by choosing a business structure, either a business name or a limited liability company, then register it with the Corporate Affairs Commission. Once registered, move on to tax registration, opening a corporate bank account, and building the internal structure your business needs to actually run.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How do I register a company in Nigeria?</h3>
-                    <p>You register with the Corporate Affairs Commission, either yourself through the CAC portal or through an accredited agent. The process involves reserving a name, preparing your documents, submitting your application, then receiving your certificate.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What is the difference between a business name and a limited company in Nigeria?</h3>
-                    <p>A business name has no separate legal personality, so the owner is personally liable for its debts. A limited company is a separate legal entity, which limits personal liability, but comes with more documentation and higher ongoing compliance obligations.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can Nigerians living abroad register a company in Nigeria?</h3>
-                    <p>Yes. A Nigerian citizen abroad registering a wholly Nigerian-owned company follows the same CAC process as anyone registering from within Nigeria, since the portal is fully online. Location does not change the requirements, ownership does.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do foreigners need extra approval to register a business in Nigeria?</h3>
-                    <p>Yes. A business with any non-Nigerian shareholder must also register with the Nigerian Investment Promotion Commission (NIPC), obtain a Business Permit from the Federal Ministry of Interior, and meet a higher minimum share capital requirement than a wholly Nigerian-owned company.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do I need a lawyer or consultant to register a business in Nigeria?</h3>
-                    <p>No, the CAC portal allows individuals to register directly. Many founders still use a professional because a small error in the name, the objects of association, or the documentation can get an application rejected, costing valuable time to correct.</p>
-                </div>
+                            <details class="faq-item">
+                <summary>How do I start my business in Nigeria?</summary>
+                <p>Start by choosing a business structure, either a business name or a limited liability company, then register it with the Corporate Affairs Commission. Once registered, move on to tax registration, opening a corporate bank account, and building the internal structure your business needs to actually run.</p>
+            </details>
+                            <details class="faq-item">
+                <summary>How do I register a company in Nigeria?</summary>
+                <p>You register with the Corporate Affairs Commission, either yourself through the CAC portal or through an accredited agent. The process involves reserving a name, preparing your documents, submitting your application, then receiving your certificate.</p>
+            </details>
+                            <details class="faq-item">
+                <summary>What is the difference between a business name and a limited company in Nigeria?</summary>
+                <p>A business name has no separate legal personality, so the owner is personally liable for its debts. A limited company is a separate legal entity, which limits personal liability, but comes with more documentation and higher ongoing compliance obligations.</p>
+            </details>
+                            <details class="faq-item">
+                <summary>Can Nigerians living abroad register a company in Nigeria?</summary>
+                <p>Yes. A Nigerian citizen abroad registering a wholly Nigerian-owned company follows the same CAC process as anyone registering from within Nigeria, since the portal is fully online. Location does not change the requirements, ownership does.</p>
+            </details>
+                            
+                            
             </div>
         </div>
     </article>
@@ -587,6 +533,5 @@
         });
     </script>
 
-    <script src="/js/faq-accordion.js"></script>
 </body>
 </html>
