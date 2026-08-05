@@ -299,16 +299,7 @@
             background: rgba(255,255,255,0.12);
             color: var(--ath-yellow);
         }
-        #ath-header nav a:last-child {
-            background: var(--ath-yellow);
-            color: var(--ath-black);
-            font-weight: 800;
-            padding: 8px 16px;
-        }
-        #ath-header nav a:last-child:hover {
-            background: #e6b800;
-            color: var(--ath-black);
-        }
+
         .ath-hamburger {
             display: none;
             flex-direction: column;
@@ -329,19 +320,42 @@
         .ath-hamburger.toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
         .ath-hamburger.toggle span:nth-child(2) { opacity: 0; }
         .ath-hamburger.toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        #ath-header nav a.ath-nav-traction {
+            background: white;
+            color: var(--ath-orange, #e35f26);
+            font-weight: 800;
+            padding: 8px 16px;
+        }
+        #ath-header nav a.ath-nav-traction:hover {
+            background: #f5f5f5;
+            color: var(--ath-orange, #e35f26);
+        }
+        #ath-header nav a.ath-nav-call {
+            background: rgba(255,255,255,0.15);
+            color: var(--ath-yellow);
+            font-weight: 800;
+            padding: 8px 16px;
+            border: 1px solid rgba(245,197,24,0.4);
+        }
+        #ath-header nav a.ath-nav-call:hover {
+            background: rgba(245,197,24,0.15);
+            color: var(--ath-yellow);
+        }
         @media (max-width: 768px) {
             .ath-hamburger { display: flex; }
             #ath-header nav {
                 display: none;
                 position: absolute;
                 top: 80px;
-                left: 0;
+                left: auto;
                 right: 0;
+                width: 260px;
                 background: var(--ath-purple);
                 flex-direction: column;
-                padding: 16px 5% 24px;
+                padding: 16px 16px 24px;
                 gap: 4px;
-                box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+                box-shadow: -4px 8px 24px rgba(0,0,0,0.3);
+                border-radius: 0 0 0 12px;
             }
             #ath-header nav.active { display: flex; }
             #ath-header nav a {
@@ -349,22 +363,31 @@
                 border-radius: 6px;
                 font-size: 15px;
             }
+            #ath-header nav a.ath-nav-traction {
+                background: white;
+                color: var(--ath-orange, #e35f26);
+            }
+            #ath-header nav a.ath-nav-call {
+                background: rgba(255,255,255,0.15);
+                color: var(--ath-yellow);
+            }
         }
-        /* ── ATH Branded Footer ── */
-        .ath-footer {
-            background: var(--ath-black);
-            padding: 36px 5%;
-            text-align: center;
-        }
-        .ath-footer img { height: 40px; width: auto; margin-bottom: 16px; }
-        .ath-footer p {
-            font-family: 'Segoe UI', sans-serif;
-            font-size: 13.5px;
-            color: rgba(255,255,255,0.45);
-            margin: 0;
-        }
-        .ath-footer a { color: var(--ath-yellow); text-decoration: none; }
-        .ath-footer a:hover { text-decoration: underline; }
+
+        /* ── ATH Footer ── */
+        .ath-footer { background: var(--ath-black); padding: 48px 5% 24px; }
+        .ath-footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 32px; max-width: 1100px; margin: 0 auto 32px; }
+        .ath-footer-col h3 { font-family: 'Segoe UI', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--ath-yellow); margin: 0 0 12px; font-weight: 800; }
+        .ath-footer-col a { display: block; color: rgba(255,255,255,0.65); font-family: 'Segoe UI', sans-serif; font-size: 13.5px; text-decoration: none; line-height: 1.8; }
+        .ath-footer-col a:hover { color: var(--ath-yellow); }
+        .ath-footer-social { display: flex; gap: 14px; margin-top: 4px; }
+        .ath-footer-social a { font-size: 20px; color: rgba(255,255,255,0.65); display: inline-block; }
+        .ath-footer-social a:hover { color: var(--ath-yellow); }
+        .ath-footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
+        .ath-footer-bottom p { font-family: 'Segoe UI', sans-serif; font-size: 13px; color: rgba(255,255,255,0.4); margin: 0; }
+        .ath-footer-bottom a { color: var(--ath-yellow); text-decoration: none; }
+        .ath-footer-bottom a:hover { text-decoration: underline; }
+        @media (max-width: 768px) { .ath-footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; } }
+        @media (max-width: 480px) { .ath-footer-grid { grid-template-columns: 1fr; } }
 
     </style>
     <!-- Microsoft Clarity -->
@@ -381,7 +404,7 @@
     <!-- Header / Navigation -->
     <header id="ath-header">
         <a href="/brands/recruiters/" style="display:flex;align-items:center;text-decoration:none;">
-            <img src="/images/ath-recruiters.png" width="800" height="450" alt="ATH Recruiters — Abuja Talent Hub" style="height:48px;width:auto;aspect-ratio:800/450;">
+            <img src="/images/ath-recruiters-white.png" width="867" height="288" alt="ATH Recruiters — Abuja Talent Hub" style="height:44px;width:auto;aspect-ratio:867/288;">
         </a>
         <button class="ath-hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
             <span></span><span></span><span></span>
@@ -390,7 +413,8 @@
             <a href="#ath-about">Who We Are</a>
             <a href="#ath-plans">Our Plans</a>
             <a href="#ath-community">Get A Job</a>
-            <a href="https://tolnigeria.com/">Traction Outsourcing</a>
+            <a href="tel:+2348125078087" class="ath-nav-call">Call Us</a>
+            <a href="https://tolnigeria.com/" class="ath-nav-traction">Traction Outsourcing</a>
         </nav>
     </header>
 
@@ -399,9 +423,7 @@
     <!-- Hero -->
     <section class="ath-hero">
         <div>
-            <div class="eyebrow">A Traction Outsourcing Brand, Also Known As Abuja Talent Hub</div>
             <h1>Reliable Staff, Fast. Anywhere In Nigeria.</h1>
-            <p>ATH Recruiters, also known as Abuja Talent Hub, connects small businesses and private individuals across Nigeria with verified, ready-to-work staff. From single hires to mass recruitment and graduate placement, our plans are built around how fast, and how affordably, you need to hire.</p>
             <div class="ath-hero-actions">
                 <a href="https://wa.me/2348125078087?text=I%20need%20to%20hire%20staff%20urgently" class="ath-btn-primary" target="_blank" rel="noopener">Request Staff on WhatsApp</a>
                 <a href="#ath-plans" class="ath-btn-ghost">See Our Plans</a>
@@ -686,9 +708,34 @@
     </main>
 
     <footer class="ath-footer">
-        <img src="/images/ath-recruiters.png" alt="ATH Recruiters — Abuja Talent Hub">
-        <p>ATH Recruiters is a brand of <a href="https://tolnigeria.com/">Traction Outsourcing Limited</a>. &copy; 2026 All Rights Reserved.</p>
-        <p style="margin-top:8px;"><a href="https://tolnigeria.com/privacy-policy/">Privacy Policy</a></p>
+        <div class="ath-footer-grid">
+            <div class="ath-footer-col">
+                <h3>Head Office</h3>
+                <a href="https://maps.google.com/?q=Traction+Outsourcing+Limited+26+Algiers+Street+Wuse+Zone+5+Abuja" target="_blank">26, Algiers Street,<br>Wuse Zone 5, FCT,<br>Nigeria.</a>
+            </div>
+            <div class="ath-footer-col">
+                <h3>Contact Details</h3>
+                <a href="tel:+2348052033145">0805 203 3145</a>
+                <a href="tel:+2348125078087">0812 507 8087</a>
+                <a href="tel:+2347078707777">0707 870 7777</a>
+            </div>
+            <div class="ath-footer-col">
+                <h3>Email</h3>
+                <a href="mailto:hr@tolnigeria.com">hr@tolnigeria.com</a>
+            </div>
+            <div class="ath-footer-col">
+                <h3>Follow ATH Recruiters</h3>
+                <div class="ath-footer-social">
+                    <a href="https://www.instagram.com/athrecruiters" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@athrecruiters" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="ath-footer-bottom">
+            <img src="/images/ath-recruiters-white.png" alt="ATH Recruiters — Abuja Talent Hub" style="height:36px;width:auto;margin-bottom:12px;">
+            <p>ATH Recruiters is a brand of <a href="https://tolnigeria.com/">Traction Outsourcing Limited</a>. &copy; 2026 All Rights Reserved.</p>
+            <p style="margin-top:6px;"><a href="https://tolnigeria.com/privacy-policy/">Privacy Policy</a></p>
+        </div>
     </footer>
 
     <script>
