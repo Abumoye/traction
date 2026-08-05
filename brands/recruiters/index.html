@@ -260,6 +260,112 @@
         @media (max-width: 900px) {
             .jc-track img { height: 55px; margin: 0 30px; }
         }
+    
+        /* ── ATH Recruiters Branded Header ── */
+        :root {
+            --ath-purple: #5b2d8e;
+            --ath-yellow: #f5c518;
+            --ath-black: #111111;
+        }
+        #ath-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            background: var(--ath-purple);
+            min-height: 80px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(91,45,142,0.25);
+        }
+        #ath-header nav {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        #ath-header nav a {
+            color: rgba(255,255,255,0.88);
+            text-decoration: none;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14.5px;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+        #ath-header nav a:hover {
+            background: rgba(255,255,255,0.12);
+            color: var(--ath-yellow);
+        }
+        #ath-header nav a:last-child {
+            background: var(--ath-yellow);
+            color: var(--ath-black);
+            font-weight: 800;
+            padding: 8px 16px;
+        }
+        #ath-header nav a:last-child:hover {
+            background: #e6b800;
+            color: var(--ath-black);
+        }
+        .ath-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+        .ath-hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: #ffffff;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .ath-hamburger.toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .ath-hamburger.toggle span:nth-child(2) { opacity: 0; }
+        .ath-hamburger.toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        @media (max-width: 768px) {
+            .ath-hamburger { display: flex; }
+            #ath-header nav {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: var(--ath-purple);
+                flex-direction: column;
+                padding: 16px 5% 24px;
+                gap: 4px;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            }
+            #ath-header nav.active { display: flex; }
+            #ath-header nav a {
+                padding: 12px 16px;
+                border-radius: 6px;
+                font-size: 15px;
+            }
+        }
+        /* ── ATH Branded Footer ── */
+        .ath-footer {
+            background: var(--ath-black);
+            padding: 36px 5%;
+            text-align: center;
+        }
+        .ath-footer img { height: 40px; width: auto; margin-bottom: 16px; }
+        .ath-footer p {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 13.5px;
+            color: rgba(255,255,255,0.45);
+            margin: 0;
+        }
+        .ath-footer a { color: var(--ath-yellow); text-decoration: none; }
+        .ath-footer a:hover { text-decoration: underline; }
+
     </style>
     <!-- Microsoft Clarity -->
     <script>
@@ -273,49 +379,18 @@
 <body>
 
     <!-- Header / Navigation -->
-    <header>
-        <a href="/" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="/images/traction-outsourcing-logo.png" width="1129" height="200" alt="Traction Outsourcing Limited Logo" style="height:50px;width:auto;aspect-ratio:1129/200;">
+    <header id="ath-header">
+        <a href="/brands/recruiters/" style="display:flex;align-items:center;text-decoration:none;">
+            <img src="/images/ath-recruiters.png" width="800" height="450" alt="ATH Recruiters — Abuja Talent Hub" style="height:48px;width:auto;aspect-ratio:800/450;">
         </a>
-
-        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu Navigation">
-            <span></span>
-            <span></span>
-            <span></span>
+        <button class="ath-hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+            <span></span><span></span><span></span>
         </button>
-
         <nav id="navMenu">
-            <a href="/">Home</a>
-            <div class="dropdown">
-                <a href="#">Our Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
-                <div class="dropdown-content">
-                    <a href="/services/staff-outsourcing/" class="dropdown-item">Staff Outsourcing & HR Management</a>
-                    <a href="/services/startup-structuring/" class="dropdown-item">Startup Structuring</a>
-                    <a href="/services/corporate-restructuring/" class="dropdown-item">Corporate Restructuring</a>
-                    <a href="/services/business-advisory/" class="dropdown-item">Business Advisory</a>
-                    <a href="/services/employee-training/" class="dropdown-item">Employee Training</a>
-                    <a href="/services/corporate-retreats/" class="dropdown-item">Events & Retreats</a>
-                </div>
-            </div>
-            <a href="/events/">Events</a>
-            <a href="/articles/">Articles</a>
-
-            <div class="dropdown">
-                <a href="#">Our Brands <i class="fas fa-chevron-down dropdown-arrow"></i></a>
-                <div class="dropdown-content">
-                    <a href="/brands/properties/" class="dropdown-item">
-                        <img src="/images/traction-properties-and-managers.png" width="743" height="250" alt="Traction Properties Logo">
-                        Traction Properties
-                    </a>
-                    <a href="/brands/recruiters/" class="dropdown-item">
-                        <img src="/images/ath-recruiters.png" width="800" height="450" alt="ATH Recruiters Logo">
-                        ATH Recruiters
-                    </a>
-                </div>
-            </div>
-
-            <a href="/partnerships/">Partnerships</a>
-            <a href="/founder/">Our Founder</a>
+            <a href="#ath-about">Who We Are</a>
+            <a href="#ath-plans">Our Plans</a>
+            <a href="#ath-community">Get A Job</a>
+            <a href="https://tolnigeria.com/">Traction Outsourcing</a>
         </nav>
     </header>
 
@@ -338,7 +413,7 @@
     </section>
 
     <!-- Who We Are -->
-    <section class="section">
+    <section class="section" id="ath-about">
         <h2 class="section-title">What Is ATH Recruiters?</h2>
         <p style="font-size: 16.5px; color: #444; line-height: 1.8; text-align: justify; max-width: 900px; margin: 0 auto 18px;">ATH Recruiters, also widely known as <strong>Abuja Talent Hub</strong>, is the official staffing brand of Traction Outsourcing Limited and one of the recruitment agencies in Abuja serving businesses across Nigeria. This is the official website for both ATH Recruiters and Abuja Talent Hub. We were built to solve one specific problem: getting Nigerian businesses and homes the right person, fast, and affordably. We maintain a verified community of ready-to-work candidates, from entry-level graduates to experienced professionals, so that when you need staff, you are not starting from zero, you are choosing from people who are already screened and available.</p>
         <div style="text-align: center;">
@@ -594,7 +669,7 @@
     <script src="/js/lead-form.js"></script>
 
     <!-- Job Seeker Split CTA (10%) -->
-    <section class="section" style="padding-top: 10px;">
+    <section class="section" id="ath-community" style="padding-top: 10px;">
         <div class="split-cta">
             <div class="split-cta-text">Need A Job in Nigeria? Join Our Community Now.</div>
             <div class="split-cta-arrow"><i class="fas fa-arrow-right"></i></div>
@@ -610,37 +685,10 @@
     <!-- Footer -->
     </main>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-row">
-                <div class="footer-col">
-                    <h3>Head Office</h3>
-                    <a href="https://maps.google.com/?q=Traction+Outsourcing+Limited+26+Algiers+Street+Wuse+Zone+5+Abuja" target="_blank">26, Algiers Street,<br>Wuse Zone 5, FCT,<br>Nigeria.</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Details</h3>
-                    <a href="tel:+2348052033145">0805 203 3145</a>
-                    <a href="tel:+2348125078087">0812 507 8087</a>
-                    <a href="tel:+2347078707777">0707 870 7777</a>
-                </div>
-            </div>
-            <div class="footer-row">
-                <div class="footer-col">
-                    <h3>Email</h3>
-                    <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Follow Us</h3>
-                    <div class="footer-social">
-                        <a href="https://instagram.com/tractionoutsourcing" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://tiktok.com/@tractionoutsourcing" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 ATH Recruiters is a brand of Traction Outsourcing Limited. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy/">Privacy Policy</a> &nbsp;|&nbsp; <a href="/">Go to Traction Outsourcing Limited</a></p>
-            </div>
-        </div>
+    <footer class="ath-footer">
+        <img src="/images/ath-recruiters.png" alt="ATH Recruiters — Abuja Talent Hub">
+        <p>ATH Recruiters is a brand of <a href="https://tolnigeria.com/">Traction Outsourcing Limited</a>. &copy; 2026 All Rights Reserved.</p>
+        <p style="margin-top:8px;"><a href="https://tolnigeria.com/privacy-policy/">Privacy Policy</a></p>
     </footer>
 
     <script>
