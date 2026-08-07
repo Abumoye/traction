@@ -201,9 +201,10 @@
         .plan-card { background: white; border: 2px solid #eee; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
         .plan-card.featured { border-color: var(--accent-color); box-shadow: 0 14px 30px rgba(227,95,38,0.12); }
         .plan-head { padding: 26px 26px 20px; color: white; }
-        .plan-card:nth-child(1) .plan-head { background: var(--primary-color); }
-        .plan-card:nth-child(2) .plan-head { background: var(--ath-purple); }
-        .plan-card:nth-child(3) .plan-head { background: var(--accent-color); color: #000; }
+        /* Plan head colours by class */
+        .plan-card:nth-child(2) .plan-head { background: var(--primary-color); }
+        .plan-card:nth-child(3) .plan-head { background: var(--ath-purple); }
+        .plan-card:nth-child(4) .plan-head { background: var(--accent-color); color: #000; }
         .plan-tag { font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.85; }
         .plan-head h3 { margin: 6px 0 0; font-size: 22px; }
         .plan-body { padding: 24px 26px; flex-grow: 1; display: flex; flex-direction: column; }
@@ -546,7 +547,30 @@
         <p class="section-sub">Three ways to work with us, depending on how often you hire and what kind of role you are filling.</p>
 
         <div class="plans-grid">
-            <!-- Plan A -->
+            <!-- Home Plan -->
+            <div class="plan-card">
+                <div class="plan-head plan-head-home">
+                    <span class="plan-tag">Home Plan</span>
+                    <h3>Home Recruitment</h3>
+                </div>
+                <div class="plan-body">
+                    <p>Specially designed for homeowners who need to recruit domestic staff once, without ongoing management. We find the right person, hand them over, and you take full control from there.</p>
+                    <p class="plan-ideal">Best for homeowners recruiting domestic staff: nannies, cooks, cleaners, drivers, gardeners, security, and other home-based roles.</p>
+                    <ul class="plan-benefits">
+                        <li>One-off recruitment service</li>
+                        <li>Candidate sourcing from verified community</li>
+                        <li>Skills and background screening</li>
+                        <li>Hands-off after placement, you manage your own home staff</li>
+                        <li>Free one-time replacement within the first month</li>
+                        <li>Single, one-time fee. No recurring charges</li>
+                        <li>No staff management included</li>
+                        <li>Available across Nigeria</li>
+                    </ul>
+                    <a href="https://wa.me/2348125078087?text=I%27m%20interested%20in%20the%20ATH%20Home%20Plan%20for%20domestic%20staff%20recruitment" class="plan-cta" target="_blank" rel="noopener">Ask About the Home Plan</a>
+                </div>
+            </div>
+
+                        <!-- Plan A -->
             <div class="plan-card">
                 <div class="plan-head">
                     <span class="plan-tag">Plan A</span>
