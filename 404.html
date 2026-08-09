@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>Redirecting...</title>
+<script>
+// Redirect HTTP to HTTPS and handle any 404s
+var url = window.location.href;
+if (url.indexOf('http://') === 0) {
+    window.location.replace(url.replace('http://', 'https://'));
+} else {
+    window.location.replace('https://tolnigeria.com/');
+}
+</script>
+</head>
+<body></body>
+</html>
