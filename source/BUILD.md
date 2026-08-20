@@ -89,11 +89,12 @@ same template, then re-run `python3 build.py`. No code changes needed.
   site has fairly extensive Organization/LocalBusiness/FAQPage/Article schema
   that helps with search rich results — this redesign doesn't carry it over
   yet. Worth adding back into `base.html`/`article.html` before shipping.
-- **Lead forms**: `static/js/lead-form.js` and `retreat-registration.js` are
-  carried over unchanged from the old site (they post to a Google Apps
-  Script). A past audit flagged that `mode: 'no-cors'` in that script means a
-  failed submission still shows a success message — not fixed here, out of
-  scope for a visual redesign, but worth knowing before this goes live.
+- **Lead forms**: `static/js/lead-form.js`, `event-registration.js`, and
+  `event-affiliate.js` all post to the same Google Apps Script Web App
+  (routed by a `formType` field — see `docs/lead-form-setup.md`). A past
+  audit flagged that `mode: 'no-cors'` in these scripts means a failed
+  submission still shows a success message — not fixed here, carried over
+  as an accepted trade-off, but worth knowing.
 - **Some old-site UI widgets have no equivalent yet**: the interactive
   training course-picker, the events page's embedded ticketing iframe, and a
   couple of dropdown/select form fields were represented as static text or
