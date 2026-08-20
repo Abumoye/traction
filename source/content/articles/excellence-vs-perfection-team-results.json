@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Excellence or Perfection: Driving Your Team to Produce Results | Traction Outsourcing",
-    "description": "Perfection does not exist in today's workplace. What does exist is excellence, incremental, consistent, measurable progress. Here is how to manage your team for the results that actually move a business forward."
+    "description": "Perfection does not exist in today's workplace. What does exist is excellence, incremental, consistent, measurable progress. Here is how to manage your team for the results that actually move a business forward.",
+    "image": "/images/og/og-article-excellence-vs-perfection-team-results.jpg"
   },
   "tag": "Workplace Psychology · People Management",
   "title": "Excellence or Perfection: Driving Your Team to Produce Results",
@@ -50,26 +51,54 @@
       "type": "list",
       "heading": "Perfection Standard",
       "list": [
-        { "t": "No clear definition of \"done\"" },
-        { "t": "Feedback is comparative to an imagined ideal" },
-        { "t": "Mistakes are treated as character failures" },
-        { "t": "Progress is invisible, only gaps are noticed" },
-        { "t": "Team learns caution, not capability" },
-        { "t": "Output slows as scrutiny increases" },
-        { "t": "People stop taking initiative" }
+        {
+          "t": "No clear definition of \"done\""
+        },
+        {
+          "t": "Feedback is comparative to an imagined ideal"
+        },
+        {
+          "t": "Mistakes are treated as character failures"
+        },
+        {
+          "t": "Progress is invisible, only gaps are noticed"
+        },
+        {
+          "t": "Team learns caution, not capability"
+        },
+        {
+          "t": "Output slows as scrutiny increases"
+        },
+        {
+          "t": "People stop taking initiative"
+        }
       ]
     },
     {
       "type": "list",
       "heading": "Excellence Standard",
       "list": [
-        { "t": "Clear documented standards per role" },
-        { "t": "Feedback is specific and improvement-oriented" },
-        { "t": "Mistakes are treated as information" },
-        { "t": "Progress is tracked and acknowledged" },
-        { "t": "Team builds confidence through repetition" },
-        { "t": "Output improves steadily over time" },
-        { "t": "People take initiative because the standard is achievable" }
+        {
+          "t": "Clear documented standards per role"
+        },
+        {
+          "t": "Feedback is specific and improvement-oriented"
+        },
+        {
+          "t": "Mistakes are treated as information"
+        },
+        {
+          "t": "Progress is tracked and acknowledged"
+        },
+        {
+          "t": "Team builds confidence through repetition"
+        },
+        {
+          "t": "Output improves steadily over time"
+        },
+        {
+          "t": "People take initiative because the standard is achievable"
+        }
       ]
     },
     {
@@ -85,11 +114,26 @@
       "type": "list",
       "heading": "How to Manage Your Team for Excellence",
       "list": [
-        { "b": "Define what good looks like at each stage.", "t": "Most performance problems in Nigerian businesses are not competence problems. They are clarity problems. When a team member does not know what the expected output of their role looks like, they improvise. Sometimes the improvisation is good. Often it is not. The solution is not to demand more. It is to document better." },
-        { "b": "Build feedback into the process, not just the outcome.", "t": "A manager who only evaluates finished work is intervening too late. By the time a project is complete, the errors are already embedded. Feedback at the halfway point, the draft stage, the first version, this is where standards are actually maintained. It is also where corrections are cheapest to make." },
-        { "b": "Track progress, not just performance.", "t": "A team member who was producing at 60% six months ago and is now consistently at 80% is succeeding, even if 80% is not where you want them to be yet. Managing people requires seeing movement, not just position. A culture where only final outcomes are evaluated and intermediate progress is invisible will eventually produce people who feel that improvement is pointless because nobody notices it." },
-        { "b": "Correct early and specifically.", "t": "The Nigerian management tradition of avoiding direct correction until a problem becomes serious is one of the most expensive habits in the workplace. A small, specific correction given early costs very little and changes behaviour. A big, delayed correction given after repeated failure costs morale, trust, and often the person themselves. Excellence is maintained through the discipline of early feedback, not through the drama of late intervention." },
-        { "b": "Acknowledge what is working.", "t": "Excellence requires people to believe that their best effort is worth giving. A team that receives only correction and never recognition will eventually stop trying to exceed the minimum. This is not about flattery. It is about calibration. When a manager only speaks about what is wrong, they lose the ability to signal what is right. And a team with no reliable signal for what is right cannot reliably produce it." }
+        {
+          "b": "Define what good looks like at each stage.",
+          "t": "Most performance problems in Nigerian businesses are not competence problems. They are clarity problems. When a team member does not know what the expected output of their role looks like, they improvise. Sometimes the improvisation is good. Often it is not. The solution is not to demand more. It is to document better."
+        },
+        {
+          "b": "Build feedback into the process, not just the outcome.",
+          "t": "A manager who only evaluates finished work is intervening too late. By the time a project is complete, the errors are already embedded. Feedback at the halfway point, the draft stage, the first version, this is where standards are actually maintained. It is also where corrections are cheapest to make."
+        },
+        {
+          "b": "Track progress, not just performance.",
+          "t": "A team member who was producing at 60% six months ago and is now consistently at 80% is succeeding, even if 80% is not where you want them to be yet. Managing people requires seeing movement, not just position. A culture where only final outcomes are evaluated and intermediate progress is invisible will eventually produce people who feel that improvement is pointless because nobody notices it."
+        },
+        {
+          "b": "Correct early and specifically.",
+          "t": "The Nigerian management tradition of avoiding direct correction until a problem becomes serious is one of the most expensive habits in the workplace. A small, specific correction given early costs very little and changes behaviour. A big, delayed correction given after repeated failure costs morale, trust, and often the person themselves. Excellence is maintained through the discipline of early feedback, not through the drama of late intervention."
+        },
+        {
+          "b": "Acknowledge what is working.",
+          "t": "Excellence requires people to believe that their best effort is worth giving. A team that receives only correction and never recognition will eventually stop trying to exceed the minimum. This is not about flattery. It is about calibration. When a manager only speaks about what is wrong, they lose the ability to signal what is right. And a team with no reliable signal for what is right cannot reliably produce it."
+        }
       ]
     },
     {
@@ -113,26 +157,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "What is the difference between excellence and perfection in the workplace?", "a": "Perfection is a fixed, unreachable standard that assumes a flawless outcome is possible and that anything short of it is failure. Excellence is a dynamic standard that demands consistent improvement, high-quality output, and measurable progress over time. In a workplace context, perfection paralyses people and damages performance, while excellence motivates people and drives results." },
-      { "q": "How do you manage a team for results without demanding perfection?", "a": "You set clear, measurable standards for what good work looks like at each stage. You build a feedback culture where correction is normal rather than exceptional. You track progress in increments rather than only evaluating final outcomes. And you hold people accountable for effort and improvement, not just for being right the first time." },
-      { "q": "Why does expecting perfection from employees reduce productivity?", "a": "When employees believe that anything less than perfect will be penalised, they stop taking initiative, slow down decision-making to avoid errors, and withhold ideas that might not immediately be fully formed. The result is a team that is cautious rather than capable. Perfection as a standard does not raise performance, it suppresses it." },
-      { "q": "What does an excellence-driven workplace look like in practice?", "a": "It has documented standards for each role, a structured feedback process so people know where they stand, a performance management system that tracks improvement over time, and a leadership culture where managers correct early rather than waiting for outcomes to deteriorate. People know what good looks like, when they are hitting it, and when they are not." }
+      {
+        "q": "What is the difference between excellence and perfection in the workplace?",
+        "a": "Perfection is a fixed, unreachable standard that assumes a flawless outcome is possible and that anything short of it is failure. Excellence is a dynamic standard that demands consistent improvement, high-quality output, and measurable progress over time. In a workplace context, perfection paralyses people and damages performance, while excellence motivates people and drives results."
+      },
+      {
+        "q": "How do you manage a team for results without demanding perfection?",
+        "a": "You set clear, measurable standards for what good work looks like at each stage. You build a feedback culture where correction is normal rather than exceptional. You track progress in increments rather than only evaluating final outcomes. And you hold people accountable for effort and improvement, not just for being right the first time."
+      },
+      {
+        "q": "Why does expecting perfection from employees reduce productivity?",
+        "a": "When employees believe that anything less than perfect will be penalised, they stop taking initiative, slow down decision-making to avoid errors, and withhold ideas that might not immediately be fully formed. The result is a team that is cautious rather than capable. Perfection as a standard does not raise performance, it suppresses it."
+      },
+      {
+        "q": "What does an excellence-driven workplace look like in practice?",
+        "a": "It has documented standards for each role, a structured feedback process so people know where they stand, a performance management system that tracks improvement over time, and a leadership culture where managers correct early rather than waiting for outcomes to deteriorate. People know what good looks like, when they are hitting it, and when they are not."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Employee Training", "href": "/services/employee-training/" },
-      { "title": "Staff Outsourcing & HR Management", "href": "/services/staff-outsourcing/" },
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" }
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Employee Training",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Staff Outsourcing & HR Management",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      }
     ],
     "insights": [
-      { "title": "Accountability in Business Nigeria", "href": "/articles/accountability-in-business-nigeria/" },
-      { "title": "Build a Resilient Management Team", "href": "/articles/how-to-build-resilient-management-team-nigeria/" },
-      { "title": "Should You Employ Family?", "href": "/articles/should-you-employ-family-in-your-business/" },
-      { "title": "The Hidden Cost of Managing Staff", "href": "/articles/hidden-cost-managing-staff-nigeria/" },
-      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" }
+      {
+        "title": "Accountability in Business Nigeria",
+        "href": "/articles/accountability-in-business-nigeria/"
+      },
+      {
+        "title": "Build a Resilient Management Team",
+        "href": "/articles/how-to-build-resilient-management-team-nigeria/"
+      },
+      {
+        "title": "Should You Employ Family?",
+        "href": "/articles/should-you-employ-family-in-your-business/"
+      },
+      {
+        "title": "The Hidden Cost of Managing Staff",
+        "href": "/articles/hidden-cost-managing-staff-nigeria/"
+      },
+      {
+        "title": "Why Nigerian Startups Fail",
+        "href": "/articles/article-why-nigerian-startups-fail/"
+      }
     ]
   }
 }

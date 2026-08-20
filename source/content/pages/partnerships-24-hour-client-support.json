@@ -1,8 +1,13 @@
 {
-  "_route": { "template": "flex.html", "output": "partnerships/24-hour-client-support/index.html", "url": "/partnerships/24-hour-client-support/" },
+  "_route": {
+    "template": "flex.html",
+    "output": "partnerships/24-hour-client-support/index.html",
+    "url": "/partnerships/24-hour-client-support/"
+  },
   "meta": {
     "title": "24/7 Virtual Client Support | Traction Outsourcing",
-    "description": "Traction Outsourcing offers 24/7 virtual client support, connecting multinationals to a BPO, HR, recruitment, and training partner in Nigeria."
+    "description": "Traction Outsourcing offers 24/7 virtual client support, connecting multinationals to a BPO, HR, recruitment, and training partner in Nigeria.",
+    "image": "/images/og/og-24-hour-client-support.jpg"
   },
   "hero": {
     "eyebrow": "Company Updates",

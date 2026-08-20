@@ -1,17 +1,31 @@
 {
-  "_route": { "template": "flex.html", "output": "brands/recruiters/index.html", "url": "/brands/recruiters/" },
+  "_route": {
+    "template": "flex.html",
+    "output": "brands/recruiters/index.html",
+    "url": "/brands/recruiters/"
+  },
   "brand": "recruiters",
   "meta": {
     "title": "ATH Recruiters | Abuja Talent Hub Recruitment Agency",
-    "description": "ATH Recruiters (Abuja Talent Hub) is an affordable recruitment agency in Nigeria for mass recruitment, graduate training, and staff hiring from ₦30,000."
+    "description": "ATH Recruiters (Abuja Talent Hub) is an affordable recruitment agency in Nigeria for mass recruitment, graduate training, and staff hiring from ₦30,000.",
+    "image": "/images/og/og-ath-recruiters.jpg"
   },
   "has_form": true,
   "hero": {
     "eyebrow": "ATH Recruiters — Abuja Talent Hub",
     "headline": "Reliable Staff, Fast. Anywhere In Nigeria.",
     "actions": [
-      { "label": "Request Staff on WhatsApp", "href": "https://wa.me/2348125078087?text=I%20need%20to%20hire%20staff%20urgently", "style": "btn-primary", "blank": true },
-      { "label": "See Our Plans", "href": "#ath-plans", "style": "btn-ghost" }
+      {
+        "label": "Request Staff on WhatsApp",
+        "href": "https://wa.me/2348125078087?text=I%20need%20to%20hire%20staff%20urgently",
+        "style": "btn-primary",
+        "blank": true
+      },
+      {
+        "label": "See Our Plans",
+        "href": "#ath-plans",
+        "style": "btn-ghost"
+      }
     ]
   },
   "sections": [
@@ -31,8 +45,16 @@
       "sub": "We are built for the businesses and households that need staff without the overhead of a full HR department.",
       "columns": 2,
       "entries": [
-        { "icon": "fa-store", "title": "Small & Growing Businesses", "text": "From single-location shops to multi-branch operations that need to hire quickly and repeatedly." },
-        { "icon": "fa-house-user", "title": "Private Individuals & Homes", "text": "As a domestic staff recruitment agency in Abuja and across Nigeria, we place housekeepers, cooks, drivers, and personal staff that families and individuals can trust." }
+        {
+          "icon": "fa-store",
+          "title": "Small & Growing Businesses",
+          "text": "From single-location shops to multi-branch operations that need to hire quickly and repeatedly."
+        },
+        {
+          "icon": "fa-house-user",
+          "title": "Private Individuals & Homes",
+          "text": "As a domestic staff recruitment agency in Abuja and across Nigeria, we place housekeepers, cooks, drivers, and personal staff that families and individuals can trust."
+        }
       ]
     },
     {
@@ -41,8 +63,16 @@
       "sub": "Two of the most common reasons businesses come to ATH Recruiters, also known as Abuja Talent Hub.",
       "columns": 2,
       "entries": [
-        { "icon": "fa-graduation-cap", "title": "Graduate Recruitment", "text": "We source and place graduate talent for entry-level and junior roles across Nigeria, matched to the specific skills your business needs rather than a generic CV pool. A practical option if you are asking where to train graduates in Nigeria or Abuja." },
-        { "icon": "fa-people-group", "title": "Mass Recruitment & Training", "text": "For businesses hiring in bulk, Plan A supports mass recruitment with unlimited candidate requests, while Plan C includes structured onboarding and skills training delivered by our management consultants, built for mass training initiatives in Nigeria." }
+        {
+          "icon": "fa-graduation-cap",
+          "title": "Graduate Recruitment",
+          "text": "We source and place graduate talent for entry-level and junior roles across Nigeria, matched to the specific skills your business needs rather than a generic CV pool. A practical option if you are asking where to train graduates in Nigeria or Abuja."
+        },
+        {
+          "icon": "fa-people-group",
+          "title": "Mass Recruitment & Training",
+          "text": "For businesses hiring in bulk, Plan A supports mass recruitment with unlimited candidate requests, while Plan C includes structured onboarding and skills training delivered by our management consultants, built for mass training initiatives in Nigeria."
+        }
       ]
     },
     {
@@ -53,18 +83,66 @@
       "columns": 4,
       "style": "icon-list",
       "entries": [
-        { "icon": "fa-store", "title": "Shops & Retail Stores", "text": "" },
-        { "icon": "fa-hotel", "title": "Hotels & Hospitality", "text": "" },
-        { "icon": "fa-utensils", "title": "Restaurants & Fast Food", "text": "" },
-        { "icon": "fa-house-chimney", "title": "Private Homes & Domestic Staff", "text": "" },
-        { "icon": "fa-helmet-safety", "title": "Construction Sites", "text": "" },
-        { "icon": "fa-spa", "title": "Salons & Spas", "text": "" },
-        { "icon": "fa-briefcase-medical", "title": "Clinics & Pharmacies", "text": "" },
-        { "icon": "fa-school", "title": "Schools", "text": "" },
-        { "icon": "fa-truck", "title": "Logistics & Dispatch", "text": "" },
-        { "icon": "fa-building", "title": "Offices & Corporate Support", "text": "" },
-        { "icon": "fa-microchip", "title": "FinTechs & Startups", "text": "" },
-        { "icon": "fa-boxes-stacked", "title": "FMCG & Distribution", "text": "" }
+        {
+          "icon": "fa-store",
+          "title": "Shops & Retail Stores",
+          "text": ""
+        },
+        {
+          "icon": "fa-hotel",
+          "title": "Hotels & Hospitality",
+          "text": ""
+        },
+        {
+          "icon": "fa-utensils",
+          "title": "Restaurants & Fast Food",
+          "text": ""
+        },
+        {
+          "icon": "fa-house-chimney",
+          "title": "Private Homes & Domestic Staff",
+          "text": ""
+        },
+        {
+          "icon": "fa-helmet-safety",
+          "title": "Construction Sites",
+          "text": ""
+        },
+        {
+          "icon": "fa-spa",
+          "title": "Salons & Spas",
+          "text": ""
+        },
+        {
+          "icon": "fa-briefcase-medical",
+          "title": "Clinics & Pharmacies",
+          "text": ""
+        },
+        {
+          "icon": "fa-school",
+          "title": "Schools",
+          "text": ""
+        },
+        {
+          "icon": "fa-truck",
+          "title": "Logistics & Dispatch",
+          "text": ""
+        },
+        {
+          "icon": "fa-building",
+          "title": "Offices & Corporate Support",
+          "text": ""
+        },
+        {
+          "icon": "fa-microchip",
+          "title": "FinTechs & Startups",
+          "text": ""
+        },
+        {
+          "icon": "fa-boxes-stacked",
+          "title": "FMCG & Distribution",
+          "text": ""
+        }
       ]
     },
     {
@@ -73,8 +151,14 @@
       "columns": 2,
       "style": "stat",
       "entries": [
-        { "value": "48 HRS", "label": "Turnaround Time (*for select recruitment plans)" },
-        { "value": "₦30,000", "label": "Qualified Staff, Starting From (*for select recruitment plans)" }
+        {
+          "value": "48 HRS",
+          "label": "Turnaround Time (*for select recruitment plans)"
+        },
+        {
+          "value": "₦30,000",
+          "label": "Qualified Staff, Starting From (*for select recruitment plans)"
+        }
       ]
     },
     {
@@ -84,10 +168,26 @@
       "sub": "Speed, professionalism, and pricing built for small businesses and private individuals across Abuja, not just large corporations.",
       "columns": 4,
       "entries": [
-        { "icon": "fa-bolt", "title": "Fast Turnaround", "text": "Candidates delivered in as little as 24 to 48 hours on select plans, so an open role does not stay open for long." },
-        { "icon": "fa-user-check", "title": "Professional & Vetted", "text": "Every candidate is screened before you ever see a CV, backed by our management consulting standards." },
-        { "icon": "fa-headset", "title": "24/7 Customer Support", "text": "Our team is reachable around the clock, so a staffing emergency never has to wait until Monday morning." },
-        { "icon": "fa-sack-dollar", "title": "Affordable Pricing", "text": "Plans starting from ₦30,000, built to keep quality staffing accessible for small businesses and homes across Abuja." }
+        {
+          "icon": "fa-bolt",
+          "title": "Fast Turnaround",
+          "text": "Candidates delivered in as little as 24 to 48 hours on select plans, so an open role does not stay open for long."
+        },
+        {
+          "icon": "fa-user-check",
+          "title": "Professional & Vetted",
+          "text": "Every candidate is screened before you ever see a CV, backed by our management consulting standards."
+        },
+        {
+          "icon": "fa-headset",
+          "title": "24/7 Customer Support",
+          "text": "Our team is reachable around the clock, so a staffing emergency never has to wait until Monday morning."
+        },
+        {
+          "icon": "fa-sack-dollar",
+          "title": "Affordable Pricing",
+          "text": "Plans starting from ₦30,000, built to keep quality staffing accessible for small businesses and homes across Abuja."
+        }
       ]
     },
     {
@@ -129,18 +229,54 @@
       "heading": "Join Our Clients",
       "sub": "Businesses across Nigeria trust Traction Outsourcing Limited to get this right.",
       "logos": [
-        "Gifts n Boxes",
-        "Afroreach Research",
-        "Beacon Trust",
-        "Bravies",
-        "Chairo Properties",
-        "Demipos Hotel",
-        "Fourtwoseven Engineering",
-        "Grown and Glow",
-        "La Luna Restaurant",
-        "Tifes Hub",
-        "Toolbox Ateliers",
-        "Super Rise and Shine"
+        {
+          "name": "Gifts n Boxes",
+          "image": "/images/Gifts-n-boxes.png"
+        },
+        {
+          "name": "Afroreach Research",
+          "image": "/images/afroreach-research.png"
+        },
+        {
+          "name": "Beacon Trust",
+          "image": "/images/beacon-trust.jpg"
+        },
+        {
+          "name": "Bravies",
+          "image": "/images/bravies.png"
+        },
+        {
+          "name": "Chairo Properties",
+          "image": "/images/chairo-properties.png"
+        },
+        {
+          "name": "Demipos Hotel",
+          "image": "/images/demipos-hotel.png"
+        },
+        {
+          "name": "Fourtwoseven Engineering",
+          "image": "/images/fourtwoseven-engineering.jpg"
+        },
+        {
+          "name": "Grown and Glow",
+          "image": "/images/grown-and-glow.png"
+        },
+        {
+          "name": "La Luna Restaurant",
+          "image": "/images/la-luna-restaurant.png"
+        },
+        {
+          "name": "Tifes Hub",
+          "image": "/images/tifes-hub.png"
+        },
+        {
+          "name": "Toolbox Ateliers",
+          "image": "/images/toolbox-ateliers.png"
+        },
+        {
+          "name": "Super Rise and Shine",
+          "image": "/images/super-rise-and-shine.png"
+        }
       ]
     },
     {
@@ -150,10 +286,26 @@
       "form_id": "leadForm",
       "button": "Submit",
       "fields": [
-        { "name": "leadName", "placeholder": "Full Name", "input_type": "text" },
-        { "name": "leadPhone", "placeholder": "Phone Number", "input_type": "tel" },
-        { "name": "leadCompany", "placeholder": "Company Name", "input_type": "text" },
-        { "name": "leadEmail", "placeholder": "Email Address", "input_type": "email" }
+        {
+          "name": "leadName",
+          "placeholder": "Full Name",
+          "input_type": "text"
+        },
+        {
+          "name": "leadPhone",
+          "placeholder": "Phone Number",
+          "input_type": "tel"
+        },
+        {
+          "name": "leadCompany",
+          "placeholder": "Company Name",
+          "input_type": "text"
+        },
+        {
+          "name": "leadEmail",
+          "placeholder": "Email Address",
+          "input_type": "email"
+        }
       ]
     },
     {
@@ -168,10 +320,22 @@
       "type": "faq",
       "heading": "Frequently Asked Questions",
       "entries": [
-        { "q": "Is ATH Recruiters the same as Abuja Talent Hub?", "a": "Yes. ATH Recruiters is the official recruitment brand also known as Abuja Talent Hub, operated by Traction Outsourcing Limited. Both names refer to the same verified community of ready-to-work candidates and the same recruitment service." },
-        { "q": "Is ATH Recruiters an affordable recruitment agency in Nigeria?", "a": "Yes. ATH Recruiters is built to be one of the more affordable recruitment agencies in Nigeria, with plans starting from ₦30,000 for select roles, keeping pricing accessible for small businesses and private individuals, not just large corporations." },
-        { "q": "Is ATH Recruiters a domestic staff recruitment agency in Nigeria?", "a": "Yes. ATH Recruiters works as a domestic staff recruitment agency in Abuja and across Nigeria, placing housekeepers, cooks, drivers, nannies, and other personal staff for private homes and individuals who need people they can trust." },
-        { "q": "How fast can ATH Recruiters fill a role?", "a": "Turnaround depends on the plan. Plan A offers a 24 to 48 hour turnaround for subscribers, Plan B typically delivers qualified candidates within 2 weeks for specialised roles, and Plan C is a fully managed process suited to leadership and bulk hires." }
+        {
+          "q": "Is ATH Recruiters the same as Abuja Talent Hub?",
+          "a": "Yes. ATH Recruiters is the official recruitment brand also known as Abuja Talent Hub, operated by Traction Outsourcing Limited. Both names refer to the same verified community of ready-to-work candidates and the same recruitment service."
+        },
+        {
+          "q": "Is ATH Recruiters an affordable recruitment agency in Nigeria?",
+          "a": "Yes. ATH Recruiters is built to be one of the more affordable recruitment agencies in Nigeria, with plans starting from ₦30,000 for select roles, keeping pricing accessible for small businesses and private individuals, not just large corporations."
+        },
+        {
+          "q": "Is ATH Recruiters a domestic staff recruitment agency in Nigeria?",
+          "a": "Yes. ATH Recruiters works as a domestic staff recruitment agency in Abuja and across Nigeria, placing housekeepers, cooks, drivers, nannies, and other personal staff for private homes and individuals who need people they can trust."
+        },
+        {
+          "q": "How fast can ATH Recruiters fill a role?",
+          "a": "Turnaround depends on the plan. Plan A offers a 24 to 48 hour turnaround for subscribers, Plan B typically delivers qualified candidates within 2 weeks for specialised roles, and Plan C is a fully managed process suited to leadership and bulk hires."
+        }
       ]
     }
   ]

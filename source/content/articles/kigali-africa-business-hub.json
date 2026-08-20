@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Kigali: Africa's Cleanest City & Business Hub | Traction Outsourcing",
-    "description": "Why Kigali is the African city every Nigerian executive should know: #1 cleanest city in Africa, 9.4% GDP growth, world-class tourism, Pan-African business hub."
+    "description": "Why Kigali is the African city every Nigerian executive should know: #1 cleanest city in Africa, 9.4% GDP growth, world-class tourism, Pan-African business hub.",
+    "image": "/images/og/og-article-kigali-africa-business-hub.jpg"
   },
   "tag": "Business Travel",
   "title": "Kigali: Africa's Cleanest City, Rising Business Hub, and the Destination Every Nigerian Executive Should Know",
@@ -29,9 +30,18 @@
     {
       "type": "list",
       "list": [
-        { "b": "9.4/10", "t": "Kigali cleanliness score, The Africa Report 2025" },
-        { "b": "#1", "t": "Cleanest city in Africa, 2024 and 2025" },
-        { "b": "2008", "t": "Year Rwanda banned single-use plastic bags" }
+        {
+          "b": "9.4/10",
+          "t": "Kigali cleanliness score, The Africa Report 2025"
+        },
+        {
+          "b": "#1",
+          "t": "Cleanest city in Africa, 2024 and 2025"
+        },
+        {
+          "b": "2008",
+          "t": "Year Rwanda banned single-use plastic bags"
+        }
       ]
     },
     {
@@ -46,22 +56,52 @@
     {
       "type": "list",
       "list": [
-        { "b": "9.4%", "t": "Rwanda GDP growth, 2025 (World Bank)" },
-        { "b": "100%", "t": "Foreign ownership allowed in most sectors" },
-        { "b": "2,500+", "t": "CEOs at the Africa CEO Forum, Kigali, May 2026" }
+        {
+          "b": "9.4%",
+          "t": "Rwanda GDP growth, 2025 (World Bank)"
+        },
+        {
+          "b": "100%",
+          "t": "Foreign ownership allowed in most sectors"
+        },
+        {
+          "b": "2,500+",
+          "t": "CEOs at the Africa CEO Forum, Kigali, May 2026"
+        }
       ]
     },
     {
       "type": "list",
       "heading": "What to See and Do in Kigali",
       "list": [
-        { "b": "Kigali Genocide Memorial", "t": "Essential history, remarkable in its clarity and emotional weight. The memorial is the burial site of more than 250,000 victims of the 1994 genocide." },
-        { "b": "Inema Arts Center", "t": "Contemporary Rwandan art from a serious, internationally collected gallery." },
-        { "b": "Kimironko Market", "t": "The city's daily rhythm, unfiltered. Go early." },
-        { "b": "Nyandungu Eco-Park", "t": "Urban wetland and nature trail, 20 minutes from the city centre." },
-        { "b": "Volcanoes National Park", "t": "Gorilla and golden monkey trekking, approximately 2.5 hours from Kigali." },
-        { "b": "Akagera National Park", "t": "The Big Five, a proper East African game drive, 2.5 hours east." },
-        { "b": "Kigali Nightlife", "t": "Kimihurura and Nyamirambo for globally-inspired restaurants, bars, and live music." }
+        {
+          "b": "Kigali Genocide Memorial",
+          "t": "Essential history, remarkable in its clarity and emotional weight. The memorial is the burial site of more than 250,000 victims of the 1994 genocide."
+        },
+        {
+          "b": "Inema Arts Center",
+          "t": "Contemporary Rwandan art from a serious, internationally collected gallery."
+        },
+        {
+          "b": "Kimironko Market",
+          "t": "The city's daily rhythm, unfiltered. Go early."
+        },
+        {
+          "b": "Nyandungu Eco-Park",
+          "t": "Urban wetland and nature trail, 20 minutes from the city centre."
+        },
+        {
+          "b": "Volcanoes National Park",
+          "t": "Gorilla and golden monkey trekking, approximately 2.5 hours from Kigali."
+        },
+        {
+          "b": "Akagera National Park",
+          "t": "The Big Five, a proper East African game drive, 2.5 hours east."
+        },
+        {
+          "b": "Kigali Nightlife",
+          "t": "Kimihurura and Nyamirambo for globally-inspired restaurants, bars, and live music."
+        }
       ]
     },
     {
@@ -100,28 +140,76 @@
   },
   "faq": {
     "entries": [
-      { "q": "Is Kigali the cleanest city in Africa?", "a": "Yes. Kigali scored 9.4 out of 10 in The Africa Report's Clean Cities Ranking, driven by Umuganda community cleanups and strict waste policies including a plastic bag ban since 2008." },
-      { "q": "Why is Kigali considered Africa's business hub?", "a": "Rwanda's economy grew 9.4% in 2025. Kigali features the Kigali International Financial Centre, fast business registration, 100% foreign ownership in key sectors, and hosted the Africa CEO Forum in May 2026 with over 2,500 CEOs and policymakers." },
-      { "q": "What are the best tourist attractions in Kigali?", "a": "Key spots include the Kigali Genocide Memorial, Inema Arts Center, Kimironko Market, Nyandungu Eco-Park, and surrounding national parks for gorilla trekking at Volcanoes National Park and game drives at Akagera." },
-      { "q": "How do Nigerians get to Kigali?", "a": "Connecting flights operate from Lagos and Abuja to Kigali International Airport. The Traction Outsourcing International Corporate Retreat 2026 includes return flights from Nigeria as part of the package." }
+      {
+        "q": "Is Kigali the cleanest city in Africa?",
+        "a": "Yes. Kigali scored 9.4 out of 10 in The Africa Report's Clean Cities Ranking, driven by Umuganda community cleanups and strict waste policies including a plastic bag ban since 2008."
+      },
+      {
+        "q": "Why is Kigali considered Africa's business hub?",
+        "a": "Rwanda's economy grew 9.4% in 2025. Kigali features the Kigali International Financial Centre, fast business registration, 100% foreign ownership in key sectors, and hosted the Africa CEO Forum in May 2026 with over 2,500 CEOs and policymakers."
+      },
+      {
+        "q": "What are the best tourist attractions in Kigali?",
+        "a": "Key spots include the Kigali Genocide Memorial, Inema Arts Center, Kimironko Market, Nyandungu Eco-Park, and surrounding national parks for gorilla trekking at Volcanoes National Park and game drives at Akagera."
+      },
+      {
+        "q": "How do Nigerians get to Kigali?",
+        "a": "Connecting flights operate from Lagos and Abuja to Kigali International Airport. The Traction Outsourcing International Corporate Retreat 2026 includes return flights from Nigeria as part of the package."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
-      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
-      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
-      { "title": "Kigali: Africa's Rising Business Hub", "href": "/articles/kigali-africa-business-hub/" },
-      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" },
-      { "title": "Employee Leave & Compensation", "href": "/articles/employee-leave-and-compensation-in-nigeria/" }
+      {
+        "title": "What Is Traction in Business?",
+        "href": "/articles/what-is-traction-in-business/"
+      },
+      {
+        "title": "How to Register a Company in Nigeria",
+        "href": "/articles/how-to-register-a-company-in-nigeria/"
+      },
+      {
+        "title": "Company Registration for Foreigners",
+        "href": "/articles/company-registration-nigeria-foreigners/"
+      },
+      {
+        "title": "Kigali: Africa's Rising Business Hub",
+        "href": "/articles/kigali-africa-business-hub/"
+      },
+      {
+        "title": "Why Nigerian Startups Fail",
+        "href": "/articles/article-why-nigerian-startups-fail/"
+      },
+      {
+        "title": "Employee Leave & Compensation",
+        "href": "/articles/employee-leave-and-compensation-in-nigeria/"
+      }
     ]
   }
 }

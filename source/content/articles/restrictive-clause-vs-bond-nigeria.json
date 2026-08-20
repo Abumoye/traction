@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Restrictive Clause vs Bond: How Nigerian Businesses Protect Their Talent Investments",
-    "description": "Bond or restrictive clause? Here is what Nigerian businesses use to protect their talent investments after training staff, and how to structure both so they hold up."
+    "description": "Bond or restrictive clause? Here is what Nigerian businesses use to protect their talent investments after training staff, and how to structure both so they hold up.",
+    "image": "/images/og/og-article-restrictive-clause-vs-bond-nigeria.jpg"
   },
   "tag": "Business Advisory · Workforce Structuring",
   "title": "Restrictive Clause vs Bond: How Nigerian Businesses Protect Their Talent Investments",
@@ -53,10 +54,22 @@
     {
       "type": "list",
       "list": [
-        { "b": "The bond period must be reasonable.", "t": "It must be proportionate to the nature and cost of the training. A 60-month bond for a one-week training is unlikely to survive scrutiny." },
-        { "b": "The repayment amount must reflect actual costs.", "t": "The bond value must correspond to the real cost of the training to the employer, not a punitive sum designed to trap the employee. In a subsequent case, <em>Overland Airways Ltd v. Captain Joseph Gamara</em>, the court struck down bonds valued at ₦7,500,000 and ₦1,575,969 that tied an employee for 60 months and 12 months respectively, as excessively punitive." },
-        { "b": "The employee must enter the bond freely.", "t": "There must be no duress, fraudulent misrepresentation, or coercion. The employee must understand what they are signing." },
-        { "b": "The bond must not effectively constitute forced labour.", "t": "Section 34(1)(c) of the 1999 Constitution of the Federal Republic of Nigeria prohibits every person from being required to perform forced or compulsory labour. A bond that in practice leaves an employee with no realistic means of exit is constitutionally vulnerable." }
+        {
+          "b": "The bond period must be reasonable.",
+          "t": "It must be proportionate to the nature and cost of the training. A 60-month bond for a one-week training is unlikely to survive scrutiny."
+        },
+        {
+          "b": "The repayment amount must reflect actual costs.",
+          "t": "The bond value must correspond to the real cost of the training to the employer, not a punitive sum designed to trap the employee. In a subsequent case, <em>Overland Airways Ltd v. Captain Joseph Gamara</em>, the court struck down bonds valued at ₦7,500,000 and ₦1,575,969 that tied an employee for 60 months and 12 months respectively, as excessively punitive."
+        },
+        {
+          "b": "The employee must enter the bond freely.",
+          "t": "There must be no duress, fraudulent misrepresentation, or coercion. The employee must understand what they are signing."
+        },
+        {
+          "b": "The bond must not effectively constitute forced labour.",
+          "t": "Section 34(1)(c) of the 1999 Constitution of the Federal Republic of Nigeria prohibits every person from being required to perform forced or compulsory labour. A bond that in practice leaves an employee with no realistic means of exit is constitutionally vulnerable."
+        }
       ]
     },
     {
@@ -84,10 +97,22 @@
       "type": "list",
       "heading": "Types of Restrictive Clauses Used in Nigeria",
       "list": [
-        { "b": "Non-compete clause.", "t": "Restricts the former employee from working for a competitor or setting up a competing business within a defined geographic area and for a defined period after leaving." },
-        { "b": "Non-solicitation clause.", "t": "Prevents the former employee from approaching the company's clients, customers, or suppliers for a defined period. This is often more defensible than a non-compete because it targets specific relationships rather than restricting employment generally." },
-        { "b": "Non-poaching clause.", "t": "Prevents the former employee from recruiting or attempting to recruit other employees of the company after departure." },
-        { "b": "Confidentiality and non-disclosure clause.", "t": "Restricts the use or disclosure of proprietary information, trade secrets, client data, and internal processes. Unlike the others, this type of clause is potentially perpetual and is the most consistently enforceable category of restrictive covenant." }
+        {
+          "b": "Non-compete clause.",
+          "t": "Restricts the former employee from working for a competitor or setting up a competing business within a defined geographic area and for a defined period after leaving."
+        },
+        {
+          "b": "Non-solicitation clause.",
+          "t": "Prevents the former employee from approaching the company's clients, customers, or suppliers for a defined period. This is often more defensible than a non-compete because it targets specific relationships rather than restricting employment generally."
+        },
+        {
+          "b": "Non-poaching clause.",
+          "t": "Prevents the former employee from recruiting or attempting to recruit other employees of the company after departure."
+        },
+        {
+          "b": "Confidentiality and non-disclosure clause.",
+          "t": "Restricts the use or disclosure of proprietary information, trade secrets, client data, and internal processes. Unlike the others, this type of clause is potentially perpetual and is the most consistently enforceable category of restrictive covenant."
+        }
       ]
     },
     {
@@ -102,11 +127,21 @@
     {
       "type": "list",
       "list": [
-        { "t": "The nature of the business and the employee's role within it" },
-        { "t": "The geographic scope of the restriction" },
-        { "t": "The duration of the restriction" },
-        { "t": "Whether the employee received compensation or other consideration for accepting the clause" },
-        { "t": "Whether the restriction is narrowly targeted at a legitimate business interest or is a general attempt to suppress competition" }
+        {
+          "t": "The nature of the business and the employee's role within it"
+        },
+        {
+          "t": "The geographic scope of the restriction"
+        },
+        {
+          "t": "The duration of the restriction"
+        },
+        {
+          "t": "Whether the employee received compensation or other consideration for accepting the clause"
+        },
+        {
+          "t": "Whether the restriction is narrowly targeted at a legitimate business interest or is a general attempt to suppress competition"
+        }
       ]
     },
     {
@@ -117,12 +152,30 @@
       "type": "list",
       "heading": "Bond vs Restrictive Clause: Side by Side",
       "list": [
-        { "b": "When it applies.", "t": "Employment Bond: During employment. Restrictive Clause: After employment ends." },
-        { "b": "Primary purpose.", "t": "Employment Bond: Recover training investment if employee leaves early. Restrictive Clause: Protect proprietary knowledge, clients, and competitive position post-exit." },
-        { "b": "Typical use.", "t": "Employment Bond: After employer-funded training or certification. Restrictive Clause: Senior staff, client-facing roles, technical specialists." },
-        { "b": "Enforceability.", "t": "Employment Bond: Enforceable if fair, reasonable, and proportionate to actual costs. Restrictive Clause: Prima facie unenforceable but enforceable if reasonable and protects a legitimate interest." },
-        { "b": "Maximum duration (safe).", "t": "Employment Bond: Proportionate to nature of investment (typically 12 to 36 months). Restrictive Clause: Up to 2 years under FCCPA 2018 s.68(1)(e)." },
-        { "b": "Key risk if poorly drafted.", "t": "Employment Bond: Struck down as punitive or forced labour. Restrictive Clause: Struck down as unreasonable restraint of trade." }
+        {
+          "b": "When it applies.",
+          "t": "Employment Bond: During employment. Restrictive Clause: After employment ends."
+        },
+        {
+          "b": "Primary purpose.",
+          "t": "Employment Bond: Recover training investment if employee leaves early. Restrictive Clause: Protect proprietary knowledge, clients, and competitive position post-exit."
+        },
+        {
+          "b": "Typical use.",
+          "t": "Employment Bond: After employer-funded training or certification. Restrictive Clause: Senior staff, client-facing roles, technical specialists."
+        },
+        {
+          "b": "Enforceability.",
+          "t": "Employment Bond: Enforceable if fair, reasonable, and proportionate to actual costs. Restrictive Clause: Prima facie unenforceable but enforceable if reasonable and protects a legitimate interest."
+        },
+        {
+          "b": "Maximum duration (safe).",
+          "t": "Employment Bond: Proportionate to nature of investment (typically 12 to 36 months). Restrictive Clause: Up to 2 years under FCCPA 2018 s.68(1)(e)."
+        },
+        {
+          "b": "Key risk if poorly drafted.",
+          "t": "Employment Bond: Struck down as punitive or forced labour. Restrictive Clause: Struck down as unreasonable restraint of trade."
+        }
       ]
     },
     {
@@ -135,9 +188,18 @@
     {
       "type": "list",
       "list": [
-        { "b": "Copying templates without tailoring them.", "t": "A bond or restrictive clause downloaded from the internet and pasted into an offer letter is almost always fatally defective. Nigerian courts look at the specific circumstances of the employment and the specific terms of the clause. A generic document rarely survives that scrutiny." },
-        { "b": "Setting unrealistic timelines and amounts.", "t": "A three-year non-compete for a junior account officer is not reasonable. A ₦10 million bond for a ₦200,000 training is not reasonable. Courts in Nigeria have repeatedly and explicitly said so. The desire to protect as much as possible for as long as possible produces documents that protect nothing at all." },
-        { "b": "Failing to build the employment framework that supports the clause.", "t": "A restrictive clause that appears in a poorly drafted contract, alongside vague job descriptions, no clear confidentiality policy, and no structured onboarding, sends the message that the employer is not serious about the terms. When a clause is challenged, courts look at the entire employment relationship. A business that cannot show it had coherent, documented employment structures is at a disadvantage." }
+        {
+          "b": "Copying templates without tailoring them.",
+          "t": "A bond or restrictive clause downloaded from the internet and pasted into an offer letter is almost always fatally defective. Nigerian courts look at the specific circumstances of the employment and the specific terms of the clause. A generic document rarely survives that scrutiny."
+        },
+        {
+          "b": "Setting unrealistic timelines and amounts.",
+          "t": "A three-year non-compete for a junior account officer is not reasonable. A ₦10 million bond for a ₦200,000 training is not reasonable. Courts in Nigeria have repeatedly and explicitly said so. The desire to protect as much as possible for as long as possible produces documents that protect nothing at all."
+        },
+        {
+          "b": "Failing to build the employment framework that supports the clause.",
+          "t": "A restrictive clause that appears in a poorly drafted contract, alongside vague job descriptions, no clear confidentiality policy, and no structured onboarding, sends the message that the employer is not serious about the terms. When a clause is challenged, courts look at the entire employment relationship. A business that cannot show it had coherent, documented employment structures is at a disadvantage."
+        }
       ]
     },
     {
@@ -158,26 +220,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "What is the difference between an employment bond and a restrictive clause in Nigeria?", "a": "An employment bond obliges an employee to remain with the employer for a specified period after training or investment, or to repay the cost of that training if they leave early. It operates during the employment relationship. A restrictive clause operates after the employment has ended. It restricts what the former employee can do, such as working for a competitor or soliciting the company's clients. Both protect a business's investment in its people but serve different purposes and are governed by different legal principles." },
-      { "q": "Are employment bonds enforceable in Nigeria?", "a": "Yes, provided they meet the conditions established by the National Industrial Court of Nigeria. The landmark case of Overland Airways Limited v. Captain Raymond Jam confirmed that training bonds are enforceable where the terms are fair and reasonable. The courts assess whether the bond period is proportionate, whether the repayment amount reflects actual training costs rather than a punitive penalty, and whether the employee entered the bond freely. A bond that demands an amount far exceeding actual training costs, or that imposes an unreasonably long service period, risks being struck down entirely." },
-      { "q": "Are restrictive clauses enforceable in Nigeria?", "a": "Restrictive covenants are prima facie unenforceable under Nigerian law as they constitute a restraint of trade. However, courts will enforce them where they are reasonable with reference to the interests of both parties and where there is a legitimate proprietary interest being protected. Section 68(1)(e) of the Federal Competition and Consumer Protection Act 2018 permits covenants in restraint of trade of not more than two years. Courts assess reasonableness by looking at the nature of the business, the geographic scope, and the duration of the restriction." },
-      { "q": "How should a Nigerian business structure an employment bond to make it enforceable?", "a": "The bond must clearly state the actual cost of the training being protected. The service period must be proportionate to that investment. The repayment obligation must reflect actual costs, not a penalty. The employee must enter the bond freely with full understanding of its terms. The document should be signed before or at the start of the training, not after. And the overall terms must not effectively force the employee to remain against their will, which would conflict with Section 34(1)(c) of the 1999 Constitution prohibiting forced labour." }
+      {
+        "q": "What is the difference between an employment bond and a restrictive clause in Nigeria?",
+        "a": "An employment bond obliges an employee to remain with the employer for a specified period after training or investment, or to repay the cost of that training if they leave early. It operates during the employment relationship. A restrictive clause operates after the employment has ended. It restricts what the former employee can do, such as working for a competitor or soliciting the company's clients. Both protect a business's investment in its people but serve different purposes and are governed by different legal principles."
+      },
+      {
+        "q": "Are employment bonds enforceable in Nigeria?",
+        "a": "Yes, provided they meet the conditions established by the National Industrial Court of Nigeria. The landmark case of Overland Airways Limited v. Captain Raymond Jam confirmed that training bonds are enforceable where the terms are fair and reasonable. The courts assess whether the bond period is proportionate, whether the repayment amount reflects actual training costs rather than a punitive penalty, and whether the employee entered the bond freely. A bond that demands an amount far exceeding actual training costs, or that imposes an unreasonably long service period, risks being struck down entirely."
+      },
+      {
+        "q": "Are restrictive clauses enforceable in Nigeria?",
+        "a": "Restrictive covenants are prima facie unenforceable under Nigerian law as they constitute a restraint of trade. However, courts will enforce them where they are reasonable with reference to the interests of both parties and where there is a legitimate proprietary interest being protected. Section 68(1)(e) of the Federal Competition and Consumer Protection Act 2018 permits covenants in restraint of trade of not more than two years. Courts assess reasonableness by looking at the nature of the business, the geographic scope, and the duration of the restriction."
+      },
+      {
+        "q": "How should a Nigerian business structure an employment bond to make it enforceable?",
+        "a": "The bond must clearly state the actual cost of the training being protected. The service period must be proportionate to that investment. The repayment obligation must reflect actual costs, not a penalty. The employee must enter the bond freely with full understanding of its terms. The document should be signed before or at the start of the training, not after. And the overall terms must not effectively force the employee to remain against their will, which would conflict with Section 34(1)(c) of the 1999 Constitution prohibiting forced labour."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" }
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      }
     ],
     "insights": [
-      { "title": "Accountability in Business Nigeria", "href": "/articles/accountability-in-business-nigeria/" },
-      { "title": "Should You Employ Your Family?", "href": "/articles/should-you-employ-family-in-your-business/" },
-      { "title": "What Is HR Outsourcing?", "href": "/articles/what-is-hr-outsourcing/" },
-      { "title": "Restructuring Without Losing Your Best People", "href": "/articles/restructuring-without-losing-your-best-people/" },
-      { "title": "Why Nigerian Businesses Train Their Staff", "href": "/articles/why-nigerian-businesses-train-staff/" }
+      {
+        "title": "Accountability in Business Nigeria",
+        "href": "/articles/accountability-in-business-nigeria/"
+      },
+      {
+        "title": "Should You Employ Your Family?",
+        "href": "/articles/should-you-employ-family-in-your-business/"
+      },
+      {
+        "title": "What Is HR Outsourcing?",
+        "href": "/articles/what-is-hr-outsourcing/"
+      },
+      {
+        "title": "Restructuring Without Losing Your Best People",
+        "href": "/articles/restructuring-without-losing-your-best-people/"
+      },
+      {
+        "title": "Why Nigerian Businesses Train Their Staff",
+        "href": "/articles/why-nigerian-businesses-train-staff/"
+      }
     ]
   }
 }

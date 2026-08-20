@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "How to Find the Best Recruitment Agency in Nigeria | What to Look For",
-    "description": "Looking for a recruitment agency in Nigeria? Here is what separates a reliable recruiter from one that wastes your time and money, and what ATH Recruiters does differently."
+    "description": "Looking for a recruitment agency in Nigeria? Here is what separates a reliable recruiter from one that wastes your time and money, and what ATH Recruiters does differently.",
+    "image": "/images/og/og-article-best-recruitment-agency-nigeria.jpg"
   },
   "tag": "Recruitment · ATH Recruiters",
   "title": "How to Find the Best Recruitment Agency in Nigeria",
@@ -30,11 +31,26 @@
       "type": "list",
       "heading": "What to Look For in a Nigerian Recruitment Agency",
       "list": [
-        { "b": "A verified, maintained talent pool.", "t": "The best agencies do not start looking when you brief them. They maintain a community of pre-screened, ready-to-work candidates and match from that pool. This is what drives fast turnaround without sacrificing quality." },
-        { "b": "A documented vetting process.", "t": "Ask exactly how candidates are screened. Reference checks, skills verification, background checks, and structured interviews are the minimum. If the agency cannot describe its process clearly, it probably does not have one." },
-        { "b": "Clear turnaround times by role type.", "t": "Standard roles should have a defined turnaround, 24 to 48 hours for an agency with a live talent pool. Specialist or senior roles take longer by design. An agency that cannot give you a timeframe is not managing the process well." },
-        { "b": "Transparent pricing.", "t": "Reputable agencies in Nigeria charge either a flat placement fee, a percentage of the first-year salary, or a subscription model for ongoing hiring. Hidden charges, vague retainers, or fees that appear after placement are red flags." },
-        { "b": "Coverage of the roles you actually need.", "t": "Not all agencies cover all role types. Some specialise in executive placement. Others focus on volume hiring or domestic staff. Find one that has a track record in your specific hiring category." }
+        {
+          "b": "A verified, maintained talent pool.",
+          "t": "The best agencies do not start looking when you brief them. They maintain a community of pre-screened, ready-to-work candidates and match from that pool. This is what drives fast turnaround without sacrificing quality."
+        },
+        {
+          "b": "A documented vetting process.",
+          "t": "Ask exactly how candidates are screened. Reference checks, skills verification, background checks, and structured interviews are the minimum. If the agency cannot describe its process clearly, it probably does not have one."
+        },
+        {
+          "b": "Clear turnaround times by role type.",
+          "t": "Standard roles should have a defined turnaround, 24 to 48 hours for an agency with a live talent pool. Specialist or senior roles take longer by design. An agency that cannot give you a timeframe is not managing the process well."
+        },
+        {
+          "b": "Transparent pricing.",
+          "t": "Reputable agencies in Nigeria charge either a flat placement fee, a percentage of the first-year salary, or a subscription model for ongoing hiring. Hidden charges, vague retainers, or fees that appear after placement are red flags."
+        },
+        {
+          "b": "Coverage of the roles you actually need.",
+          "t": "Not all agencies cover all role types. Some specialise in executive placement. Others focus on volume hiring or domestic staff. Find one that has a track record in your specific hiring category."
+        }
       ]
     },
     {
@@ -59,26 +75,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "What should I look for in a recruitment agency in Nigeria?", "a": "Look for a verified talent pool, a structured vetting process, a clear turnaround commitment, transparent pricing, and a track record of placing candidates in roles similar to yours. Avoid agencies that send you unvetted CVs in bulk, charge high fees upfront without performance guarantees, or cannot explain how they screen candidates." },
-      { "q": "Does ATH Recruiters handle domestic staff recruitment in Nigeria?", "a": "Yes. ATH Recruiters places domestic staff including housekeepers, cooks, drivers, and nannies for private homes and individuals in Abuja and across Nigeria. Candidates go through the same vetting process as commercial placements." },
-      { "q": "What is the difference between ATH Recruiters and Abuja Talent Hub?", "a": "They are the same organisation. ATH Recruiters is the official brand name, and Abuja Talent Hub is the community name used to describe the network of pre-screened, ready-to-work candidates. Both refer to the recruitment brand operated by Traction Outsourcing Limited." }
+      {
+        "q": "What should I look for in a recruitment agency in Nigeria?",
+        "a": "Look for a verified talent pool, a structured vetting process, a clear turnaround commitment, transparent pricing, and a track record of placing candidates in roles similar to yours. Avoid agencies that send you unvetted CVs in bulk, charge high fees upfront without performance guarantees, or cannot explain how they screen candidates."
+      },
+      {
+        "q": "Does ATH Recruiters handle domestic staff recruitment in Nigeria?",
+        "a": "Yes. ATH Recruiters places domestic staff including housekeepers, cooks, drivers, and nannies for private homes and individuals in Abuja and across Nigeria. Candidates go through the same vetting process as commercial placements."
+      },
+      {
+        "q": "What is the difference between ATH Recruiters and Abuja Talent Hub?",
+        "a": "They are the same organisation. ATH Recruiters is the official brand name, and Abuja Talent Hub is the community name used to describe the network of pre-screened, ready-to-work candidates. Both refer to the recruitment brand operated by Traction Outsourcing Limited."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
-      { "title": "Hire Staff in Nigeria From Abroad", "href": "/articles/hire-staff-nigeria-from-abroad/" },
-      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
-      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
-      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" }
+      {
+        "title": "What Is Traction in Business?",
+        "href": "/articles/what-is-traction-in-business/"
+      },
+      {
+        "title": "Hire Staff in Nigeria From Abroad",
+        "href": "/articles/hire-staff-nigeria-from-abroad/"
+      },
+      {
+        "title": "Company Registration for Foreigners",
+        "href": "/articles/company-registration-nigeria-foreigners/"
+      },
+      {
+        "title": "How to Register a Company in Nigeria",
+        "href": "/articles/how-to-register-a-company-in-nigeria/"
+      },
+      {
+        "title": "Why Nigerian Startups Fail",
+        "href": "/articles/article-why-nigerian-startups-fail/"
+      }
     ]
   }
 }

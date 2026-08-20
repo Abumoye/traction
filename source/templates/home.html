@@ -114,7 +114,7 @@
     <h2 class="section-title reveal">{{ brands.title }}</h2>
     <div class="logo-strip reveal">
       {% for l in brands.logos %}
-      <div class="logo-chip">{{ l }}</div>
+      <div class="logo-chip"><img src="{{ l.image }}" alt="{{ l.name }}" loading="lazy"></div>
       {% endfor %}
     </div>
   </div>

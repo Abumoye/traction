@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "How to Hire Staff in Nigeria From Abroad | UK, US, Dubai, Anywhere",
-    "description": "Diaspora founder or foreign business owner with a Nigerian operation? Here is how to hire reliable staff in Nigeria from the UK, US, Dubai, Canada, or anywhere else, without the stress."
+    "description": "Diaspora founder or foreign business owner with a Nigerian operation? Here is how to hire reliable staff in Nigeria from the UK, US, Dubai, Canada, or anywhere else, without the stress.",
+    "image": "/images/og/og-article-hire-staff-nigeria-from-abroad.jpg"
   },
   "tag": "Staff Outsourcing · Recruitment",
   "title": "Running a Business in Nigeria From the UK, US, or Dubai? Here Is How to Build a Team Without Being There",
@@ -60,14 +61,30 @@
     {
       "type": "list",
       "list": [
-        { "t": "Operations Staff" },
-        { "t": "Sales & Customer Service" },
-        { "t": "HR & Admin" },
-        { "t": "Domestic Staff & Drivers" },
-        { "t": "COO / Chief of Staff" },
-        { "t": "Head of Operations" },
-        { "t": "Legal Staff" },
-        { "t": "Senior Management" }
+        {
+          "t": "Operations Staff"
+        },
+        {
+          "t": "Sales & Customer Service"
+        },
+        {
+          "t": "HR & Admin"
+        },
+        {
+          "t": "Domestic Staff & Drivers"
+        },
+        {
+          "t": "COO / Chief of Staff"
+        },
+        {
+          "t": "Head of Operations"
+        },
+        {
+          "t": "Legal Staff"
+        },
+        {
+          "t": "Senior Management"
+        }
       ]
     },
     {
@@ -103,27 +120,72 @@
   },
   "faq": {
     "entries": [
-      { "q": "Can I hire staff in Nigeria if I live abroad?", "a": "Yes. You can hire and manage staff in Nigeria from anywhere in the world. The most reliable way to do it is through a staff outsourcing firm based in Nigeria that handles recruitment, payroll, statutory compliance, and HR on your behalf, so you focus on the business outcomes without managing the administrative process." },
-      { "q": "How do I find reliable staff for my Nigerian business from the UK or US?", "a": "Work with a recruitment agency based in Nigeria that has a verified talent pool and a structured vetting process. ATH Recruiters maintains a community of pre-screened candidates across operations, sales, admin, domestic, and senior management roles, with turnaround times starting from 24 to 48 hours for standard roles." },
-      { "q": "What is staff outsourcing and why do diaspora business owners use it?", "a": "Staff outsourcing means a third-party firm employs your Nigerian team on your behalf, handling their contracts, payroll, tax, and statutory deductions (ITF, NSITF, PenCom), while you direct their work. Diaspora business owners use it because it removes the need to set up a full HR function in Nigeria and ensures compliance with Nigerian labour law without needing to be physically present." },
-      { "q": "What types of roles can I hire for in Nigeria from abroad?", "a": "Operations staff, sales and customer service teams, HR and admin personnel, domestic staff including housekeepers, cooks, and drivers, and senior management including COOs, Chiefs of Staff, Heads of Operations, and legal staff. Both junior and senior roles can be sourced, screened, and placed remotely." }
+      {
+        "q": "Can I hire staff in Nigeria if I live abroad?",
+        "a": "Yes. You can hire and manage staff in Nigeria from anywhere in the world. The most reliable way to do it is through a staff outsourcing firm based in Nigeria that handles recruitment, payroll, statutory compliance, and HR on your behalf, so you focus on the business outcomes without managing the administrative process."
+      },
+      {
+        "q": "How do I find reliable staff for my Nigerian business from the UK or US?",
+        "a": "Work with a recruitment agency based in Nigeria that has a verified talent pool and a structured vetting process. ATH Recruiters maintains a community of pre-screened candidates across operations, sales, admin, domestic, and senior management roles, with turnaround times starting from 24 to 48 hours for standard roles."
+      },
+      {
+        "q": "What is staff outsourcing and why do diaspora business owners use it?",
+        "a": "Staff outsourcing means a third-party firm employs your Nigerian team on your behalf, handling their contracts, payroll, tax, and statutory deductions (ITF, NSITF, PenCom), while you direct their work. Diaspora business owners use it because it removes the need to set up a full HR function in Nigeria and ensures compliance with Nigerian labour law without needing to be physically present."
+      },
+      {
+        "q": "What types of roles can I hire for in Nigeria from abroad?",
+        "a": "Operations staff, sales and customer service teams, HR and admin personnel, domestic staff including housekeepers, cooks, and drivers, and senior management including COOs, Chiefs of Staff, Heads of Operations, and legal staff. Both junior and senior roles can be sourced, screened, and placed remotely."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "How to Find the Best Recruitment Agency in Nigeria", "href": "/articles/best-recruitment-agency-nigeria/" },
-      { "title": "Recruit Qualified Staff in Nigeria in 48 Hours", "href": "/articles/recruit-staff-nigeria-48-hours/" },
-      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
-      { "title": "What Is HR Outsourcing?", "href": "/articles/what-is-hr-outsourcing/" },
-      { "title": "Why Nigerian Businesses Are Outsourcing HR", "href": "/articles/why-nigerian-businesses-outsourcing-hr/" }
+      {
+        "title": "How to Find the Best Recruitment Agency in Nigeria",
+        "href": "/articles/best-recruitment-agency-nigeria/"
+      },
+      {
+        "title": "Recruit Qualified Staff in Nigeria in 48 Hours",
+        "href": "/articles/recruit-staff-nigeria-48-hours/"
+      },
+      {
+        "title": "Company Registration for Foreigners",
+        "href": "/articles/company-registration-nigeria-foreigners/"
+      },
+      {
+        "title": "What Is HR Outsourcing?",
+        "href": "/articles/what-is-hr-outsourcing/"
+      },
+      {
+        "title": "Why Nigerian Businesses Are Outsourcing HR",
+        "href": "/articles/why-nigerian-businesses-outsourcing-hr/"
+      }
     ]
   }
 }

@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Why Nigerian Startups Fail Within Their First Five Years | Traction Outsourcing",
-    "description": "More than nine in ten Nigerian SMEs fail within five years. The data points to one recurring cause: not the idea, not the market, not the founder, but structure. Here is what that means and what to do about it."
+    "description": "More than nine in ten Nigerian SMEs fail within five years. The data points to one recurring cause: not the idea, not the market, not the founder, but structure. Here is what that means and what to do about it.",
+    "image": "/images/og/og-article-why-nigerian-startups-fail.jpg"
   },
   "tag": "Startup Structuring · Nigerian Business",
   "title": "Why Nigerian Startups Fail Within Their First Five Years: A Structural Diagnosis",
@@ -34,9 +35,18 @@
     {
       "type": "list",
       "list": [
-        { "b": "9 in 10", "t": "Nigerian SMEs fail within their first five years (SMEDAN/NBS)" },
-        { "b": "60%", "t": "Nigerian startup failure rate 2010-2018, highest in Africa's major ecosystems" },
-        { "b": "4 in 10", "t": "Startup failures globally caused by building something nobody needed (CB Insights)" }
+        {
+          "b": "9 in 10",
+          "t": "Nigerian SMEs fail within their first five years (SMEDAN/NBS)"
+        },
+        {
+          "b": "60%",
+          "t": "Nigerian startup failure rate 2010-2018, highest in Africa's major ecosystems"
+        },
+        {
+          "b": "4 in 10",
+          "t": "Startup failures globally caused by building something nobody needed (CB Insights)"
+        }
       ]
     },
     {
@@ -68,11 +78,21 @@
     {
       "type": "list",
       "list": [
-        { "t": "A real understanding of who the paying customer is and what they can actually afford" },
-        { "t": "A cost structure that has been tested against realistic sales volumes rather than optimistic ones" },
-        { "t": "Clear ownership of who is responsible for which decisions" },
-        { "t": "A cash flow discipline that separates what the business owns from what the founder is personally funding" },
-        { "t": "Employment and governance documentation — including a proper <a href=\"/articles/article-employee-handbook-nigerian-sme/\">employee handbook</a> and role definitions — that means the business can function if a key person leaves" }
+        {
+          "t": "A real understanding of who the paying customer is and what they can actually afford"
+        },
+        {
+          "t": "A cost structure that has been tested against realistic sales volumes rather than optimistic ones"
+        },
+        {
+          "t": "Clear ownership of who is responsible for which decisions"
+        },
+        {
+          "t": "A cash flow discipline that separates what the business owns from what the founder is personally funding"
+        },
+        {
+          "t": "Employment and governance documentation — including a proper <a href=\"/articles/article-employee-handbook-nigerian-sme/\">employee handbook</a> and role definitions — that means the business can function if a key person leaves"
+        }
       ]
     },
     {
@@ -107,26 +127,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "Why do Nigerian startups fail?", "a": "Most Nigerian startup failures trace back to structural gaps rather than a single dramatic mistake. The absence of clear roles, reporting lines, documented processes, and financial discipline lets problems accumulate until a cash shortfall, a key staff departure, or a sudden spike in demand exposes how much of the operation was held together informally." },
-      { "q": "What percentage of Nigerian startups fail within five years?", "a": "Data from SMEDAN and the National Bureau of Statistics shows that more than nine in ten Nigerian SMEs fail within their first five years of operation. A separate analysis of Nigerian startups between 2010 and 2018 put the failure rate at over sixty percent, the highest among Africa's major business ecosystems during that period." },
-      { "q": "How can I prevent my Nigerian startup from failing?", "a": "Build the organisational structure, reporting lines, and documentation before the business needs them under pressure. This means a clear understanding of who the paying customer is, a cost structure tested against realistic sales volumes, defined roles and decision rights, and cash flow discipline from the start. Structure is not bureaucracy. It is what lets a business survive its own growth." },
-      { "q": "What is startup structuring in Nigeria?", "a": "Startup structuring is the process of building the governance, financial, operational, and HR foundations a new business needs to function without relying entirely on the founder. It covers company registration, shareholding structure, organogram, financial systems, role definitions, and employment frameworks. Traction Outsourcing Limited offers startup structuring as a dedicated service for Nigerian founders at pre-launch and early-growth stage." }
+      {
+        "q": "Why do Nigerian startups fail?",
+        "a": "Most Nigerian startup failures trace back to structural gaps rather than a single dramatic mistake. The absence of clear roles, reporting lines, documented processes, and financial discipline lets problems accumulate until a cash shortfall, a key staff departure, or a sudden spike in demand exposes how much of the operation was held together informally."
+      },
+      {
+        "q": "What percentage of Nigerian startups fail within five years?",
+        "a": "Data from SMEDAN and the National Bureau of Statistics shows that more than nine in ten Nigerian SMEs fail within their first five years of operation. A separate analysis of Nigerian startups between 2010 and 2018 put the failure rate at over sixty percent, the highest among Africa's major business ecosystems during that period."
+      },
+      {
+        "q": "How can I prevent my Nigerian startup from failing?",
+        "a": "Build the organisational structure, reporting lines, and documentation before the business needs them under pressure. This means a clear understanding of who the paying customer is, a cost structure tested against realistic sales volumes, defined roles and decision rights, and cash flow discipline from the start. Structure is not bureaucracy. It is what lets a business survive its own growth."
+      },
+      {
+        "q": "What is startup structuring in Nigeria?",
+        "a": "Startup structuring is the process of building the governance, financial, operational, and HR foundations a new business needs to function without relying entirely on the founder. It covers company registration, shareholding structure, organogram, financial systems, role definitions, and employment frameworks. Traction Outsourcing Limited offers startup structuring as a dedicated service for Nigerian founders at pre-launch and early-growth stage."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" }
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      }
     ],
     "insights": [
-      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
-      { "title": "What Is Structure in Business?", "href": "/articles/what-is-structure-in-business/" },
-      { "title": "Accountability in Business Nigeria", "href": "/articles/accountability-in-business-nigeria/" },
-      { "title": "Profit vs Cashflow", "href": "/articles/profit-vs-cashflow-king-of-business/" },
-      { "title": "The Real Cost of a Bad Hire", "href": "/articles/article-cost-of-bad-hire-nigeria/" }
+      {
+        "title": "What Is Traction in Business?",
+        "href": "/articles/what-is-traction-in-business/"
+      },
+      {
+        "title": "What Is Structure in Business?",
+        "href": "/articles/what-is-structure-in-business/"
+      },
+      {
+        "title": "Accountability in Business Nigeria",
+        "href": "/articles/accountability-in-business-nigeria/"
+      },
+      {
+        "title": "Profit vs Cashflow",
+        "href": "/articles/profit-vs-cashflow-king-of-business/"
+      },
+      {
+        "title": "The Real Cost of a Bad Hire",
+        "href": "/articles/article-cost-of-bad-hire-nigeria/"
+      }
     ]
   }
 }

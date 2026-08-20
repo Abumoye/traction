@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "MD vs CEO in Nigeria: What the Difference Actually Means",
-    "description": "Many Nigerian business cards say MD/CEO on the same line. Here is what the titles actually mean, what Nigerian company law says about them, and which one your business should use."
+    "description": "Many Nigerian business cards say MD/CEO on the same line. Here is what the titles actually mean, what Nigerian company law says about them, and which one your business should use.",
+    "image": "/images/og/og-article-md-vs-ceo-nigeria.jpg"
   },
   "tag": "Business Advisory · Corporate Governance",
   "title": "MD vs CEO in Nigeria: What the Difference Actually Means",
@@ -110,25 +111,64 @@
   },
   "faq": {
     "entries": [
-      { "q": "What is the difference between MD and CEO in Nigeria?", "a": "In Nigerian company practice, Managing Director (MD) and Chief Executive Officer (CEO) refer to the same role: the most senior executive director responsible for the day-to-day running of the company. The titles are functionally identical and are often combined as MD/CEO. The distinction that matters is between the MD/CEO and the Chairman, who heads the board of directors and is typically a non-executive director in a public company." },
-      { "q": "Can a company have both an MD and a CEO in Nigeria?", "a": "It is uncommon. In most Nigerian companies, the roles are held by the same person and combined as MD/CEO. Having a separate Managing Director and a separate Chief Executive Officer in the same company is rare and typically only occurs in large conglomerates or during transitional governance arrangements. CAMA 2020 does not mandate the split and corporate governance guidelines do not encourage it as a default structure." },
-      { "q": "What is a Chairman/CEO in Nigeria?", "a": "A Chairman/CEO combines two distinct roles in one person: the Chairman who heads the board of directors, and the CEO who leads the executive management of the company. In a public company this raises governance concerns because the Chairman is supposed to be a non-executive director independent of day-to-day operations. For private companies where the owner also manages the business, the title is less problematic but still unusual. Most governance frameworks recommend separating the two roles." },
-      { "q": "What is the maximum number of members in a private company in Nigeria?", "a": "Under the Companies and Allied Matters Act 2020, a private company in Nigeria cannot have more than 50 members, excluding current and former employees of the company. This is one of the key distinctions between a private company and a public company, which has no upper limit on the number of members." }
+      {
+        "q": "What is the difference between MD and CEO in Nigeria?",
+        "a": "In Nigerian company practice, Managing Director (MD) and Chief Executive Officer (CEO) refer to the same role: the most senior executive director responsible for the day-to-day running of the company. The titles are functionally identical and are often combined as MD/CEO. The distinction that matters is between the MD/CEO and the Chairman, who heads the board of directors and is typically a non-executive director in a public company."
+      },
+      {
+        "q": "Can a company have both an MD and a CEO in Nigeria?",
+        "a": "It is uncommon. In most Nigerian companies, the roles are held by the same person and combined as MD/CEO. Having a separate Managing Director and a separate Chief Executive Officer in the same company is rare and typically only occurs in large conglomerates or during transitional governance arrangements. CAMA 2020 does not mandate the split and corporate governance guidelines do not encourage it as a default structure."
+      },
+      {
+        "q": "What is a Chairman/CEO in Nigeria?",
+        "a": "A Chairman/CEO combines two distinct roles in one person: the Chairman who heads the board of directors, and the CEO who leads the executive management of the company. In a public company this raises governance concerns because the Chairman is supposed to be a non-executive director independent of day-to-day operations. For private companies where the owner also manages the business, the title is less problematic but still unusual. Most governance frameworks recommend separating the two roles."
+      },
+      {
+        "q": "What is the maximum number of members in a private company in Nigeria?",
+        "a": "Under the Companies and Allied Matters Act 2020, a private company in Nigeria cannot have more than 50 members, excluding current and former employees of the company. This is one of the key distinctions between a private company and a public company, which has no upper limit on the number of members."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" }
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      }
     ],
     "insights": [
-      { "title": "What Is Structure in Business?", "href": "/articles/what-is-structure-in-business/" },
-      { "title": "What Is Business Restructuring?", "href": "/articles/what-is-business-restructuring-nigeria/" },
-      { "title": "Accountability in Business Nigeria", "href": "/articles/accountability-in-business-nigeria/" },
-      { "title": "Restrictive Clause vs Bond Nigeria", "href": "/articles/restrictive-clause-vs-bond-nigeria/" },
-      { "title": "Build a Resilient Management Team", "href": "/articles/how-to-build-resilient-management-team-nigeria/" }
+      {
+        "title": "What Is Structure in Business?",
+        "href": "/articles/what-is-structure-in-business/"
+      },
+      {
+        "title": "What Is Business Restructuring?",
+        "href": "/articles/what-is-business-restructuring-nigeria/"
+      },
+      {
+        "title": "Accountability in Business Nigeria",
+        "href": "/articles/accountability-in-business-nigeria/"
+      },
+      {
+        "title": "Restrictive Clause vs Bond Nigeria",
+        "href": "/articles/restrictive-clause-vs-bond-nigeria/"
+      },
+      {
+        "title": "Build a Resilient Management Team",
+        "href": "/articles/how-to-build-resilient-management-team-nigeria/"
+      }
     ]
   }
 }

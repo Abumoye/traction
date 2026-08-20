@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "What Is HR Outsourcing? A Guide for Nigerian Business Owners",
-    "description": "HR outsourcing means handing your recruitment, payroll, and compliance to experts so you can run your business. Here is what it is, how it works, and whether your Nigerian business needs it."
+    "description": "HR outsourcing means handing your recruitment, payroll, and compliance to experts so you can run your business. Here is what it is, how it works, and whether your Nigerian business needs it.",
+    "image": "/images/og/og-article-what-is-hr-outsourcing.jpg"
   },
   "tag": "Staff Outsourcing · HR Management",
   "title": "What Is HR Outsourcing? A Guide for Nigerian Business Owners",
@@ -37,10 +38,22 @@
     {
       "type": "list",
       "list": [
-        { "b": "Cost.", "t": "Hiring a qualified in-house HR manager in Abuja costs upwards of ₦300,000 per month before other staff costs. HR outsourcing delivers the same capability at a fraction of that, with no recruitment, onboarding, or retention costs attached." },
-        { "b": "Compliance.", "t": "Nigerian labour law, tax obligations, and statutory deduction requirements change regularly. Missing a PenCom remittance or filing ITF incorrectly creates penalties. An outsourced HR firm stays current so you do not have to." },
-        { "b": "Speed.", "t": "A business that needs to hire twenty people in two weeks cannot wait for an internal HR process to catch up. Outsourcing firms maintain ready pools of vetted candidates and can move immediately." },
-        { "b": "Founder time.", "t": "The business owner who is handling payroll disputes on a Saturday is not building the business. HR outsourcing returns that time to the people who should be spending it on growth, not administration." }
+        {
+          "b": "Cost.",
+          "t": "Hiring a qualified in-house HR manager in Abuja costs upwards of ₦300,000 per month before other staff costs. HR outsourcing delivers the same capability at a fraction of that, with no recruitment, onboarding, or retention costs attached."
+        },
+        {
+          "b": "Compliance.",
+          "t": "Nigerian labour law, tax obligations, and statutory deduction requirements change regularly. Missing a PenCom remittance or filing ITF incorrectly creates penalties. An outsourced HR firm stays current so you do not have to."
+        },
+        {
+          "b": "Speed.",
+          "t": "A business that needs to hire twenty people in two weeks cannot wait for an internal HR process to catch up. Outsourcing firms maintain ready pools of vetted candidates and can move immediately."
+        },
+        {
+          "b": "Founder time.",
+          "t": "The business owner who is handling payroll disputes on a Saturday is not building the business. HR outsourcing returns that time to the people who should be spending it on growth, not administration."
+        }
       ]
     },
     {
@@ -71,26 +84,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "What is HR outsourcing in Nigeria?", "a": "HR outsourcing in Nigeria means hiring a specialist firm to manage some or all of your human resources functions, including recruitment, payroll administration, statutory deductions (ITF, NSITF, PenCom), employee contracts, and compliance with Nigerian labour law, on behalf of your business." },
-      { "q": "Is HR outsourcing suitable for small businesses in Nigeria?", "a": "Yes. HR outsourcing is particularly valuable for small and medium-sized businesses in Nigeria that need professional HR management but cannot justify the cost of a full in-house HR team. It gives you access to experienced HR professionals at a fraction of the cost of hiring them permanently." },
-      { "q": "What is the difference between HR outsourcing and staff outsourcing?", "a": "Staff outsourcing means a third-party firm employs your workers on your behalf and manages their contracts, payroll, and compliance. HR outsourcing is broader, it can include staff outsourcing, recruitment, policy development, performance management, and general HR advisory. The two terms are sometimes used interchangeably in Nigeria, but staff outsourcing is a subset of the wider HR outsourcing category." }
+      {
+        "q": "What is HR outsourcing in Nigeria?",
+        "a": "HR outsourcing in Nigeria means hiring a specialist firm to manage some or all of your human resources functions, including recruitment, payroll administration, statutory deductions (ITF, NSITF, PenCom), employee contracts, and compliance with Nigerian labour law, on behalf of your business."
+      },
+      {
+        "q": "Is HR outsourcing suitable for small businesses in Nigeria?",
+        "a": "Yes. HR outsourcing is particularly valuable for small and medium-sized businesses in Nigeria that need professional HR management but cannot justify the cost of a full in-house HR team. It gives you access to experienced HR professionals at a fraction of the cost of hiring them permanently."
+      },
+      {
+        "q": "What is the difference between HR outsourcing and staff outsourcing?",
+        "a": "Staff outsourcing means a third-party firm employs your workers on your behalf and manages their contracts, payroll, and compliance. HR outsourcing is broader, it can include staff outsourcing, recruitment, policy development, performance management, and general HR advisory. The two terms are sometimes used interchangeably in Nigeria, but staff outsourcing is a subset of the wider HR outsourcing category."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
-      { "title": "Hire Staff in Nigeria From Abroad", "href": "/articles/hire-staff-nigeria-from-abroad/" },
-      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
-      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
-      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" }
+      {
+        "title": "What Is Traction in Business?",
+        "href": "/articles/what-is-traction-in-business/"
+      },
+      {
+        "title": "Hire Staff in Nigeria From Abroad",
+        "href": "/articles/hire-staff-nigeria-from-abroad/"
+      },
+      {
+        "title": "Company Registration for Foreigners",
+        "href": "/articles/company-registration-nigeria-foreigners/"
+      },
+      {
+        "title": "How to Register a Company in Nigeria",
+        "href": "/articles/how-to-register-a-company-in-nigeria/"
+      },
+      {
+        "title": "Why Nigerian Startups Fail",
+        "href": "/articles/article-why-nigerian-startups-fail/"
+      }
     ]
   }
 }

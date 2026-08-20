@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "What Is HMO in Nigeria? Why Nigerian Businesses Use Health Insurance",
-    "description": "HMO stands for Health Maintenance Organisation. In Nigeria, it is how businesses provide health coverage for their staff. Here is what it means, how it works, and why it matters for your business."
+    "description": "HMO stands for Health Maintenance Organisation. In Nigeria, it is how businesses provide health coverage for their staff. Here is what it means, how it works, and why it matters for your business.",
+    "image": "/images/og/og-article-what-is-hmo-nigeria.jpg"
   },
   "tag": "HR Management · Partnerships",
   "title": "What Is HMO in Nigeria? Why Nigerian Businesses Use Health Insurance",
@@ -36,9 +37,18 @@
     {
       "type": "list",
       "list": [
-        { "b": "Legal obligation.", "t": "The National Health Insurance Authority Act 2022 requires formal sector employers in Nigeria to provide health insurance for their employees. Businesses that do not are technically non-compliant, which creates risk in any formal due diligence process, by an investor, an auditor, or a corporate client vetting their supply chain." },
-        { "b": "Staff retention.", "t": "HMO is one of the most valued employee benefits in Nigeria. In a competitive hiring environment, businesses that offer health coverage attract and retain better candidates than those that do not. The cost of the premium is almost always less than the cost of replacing a good employee who left for a competitor that offers benefits." },
-        { "b": "Productivity.", "t": "A workforce that has access to healthcare takes fewer sick days, recovers faster, and is less likely to face the financial stress that comes from paying for medical care out of pocket. The return on a well-structured HMO plan shows up in attendance records and output quality." }
+        {
+          "b": "Legal obligation.",
+          "t": "The National Health Insurance Authority Act 2022 requires formal sector employers in Nigeria to provide health insurance for their employees. Businesses that do not are technically non-compliant, which creates risk in any formal due diligence process, by an investor, an auditor, or a corporate client vetting their supply chain."
+        },
+        {
+          "b": "Staff retention.",
+          "t": "HMO is one of the most valued employee benefits in Nigeria. In a competitive hiring environment, businesses that offer health coverage attract and retain better candidates than those that do not. The cost of the premium is almost always less than the cost of replacing a good employee who left for a competitor that offers benefits."
+        },
+        {
+          "b": "Productivity.",
+          "t": "A workforce that has access to healthcare takes fewer sick days, recovers faster, and is less likely to face the financial stress that comes from paying for medical care out of pocket. The return on a well-structured HMO plan shows up in attendance records and output quality."
+        }
       ]
     },
     {
@@ -63,26 +73,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "What does HMO mean in Nigeria?", "a": "HMO stands for Health Maintenance Organisation. In Nigeria, an HMO is a licensed health insurance provider that manages group health coverage for businesses and their employees. The employer pays a premium, and enrolled staff can access medical care at the HMO's network of hospitals and clinics without paying out of pocket at the point of care." },
-      { "q": "Is HMO mandatory for Nigerian businesses?", "a": "Under the National Health Insurance Authority Act 2022, formal sector employers in Nigeria are required to provide health insurance for their employees. The National Health Insurance Authority (NHIA) oversees this requirement. In practice, enforcement has been uneven, but the legal obligation exists, and businesses that provide HMO cover are better positioned for compliance, staff retention, and due diligence by investors and institutional partners." },
-      { "q": "How do Nigerian businesses get HMO coverage for their staff?", "a": "Nigerian businesses enrol with a licensed HMO provider, pay a group premium covering all enrolled staff, and employees receive HMO cards granting access to the provider's network of hospitals and clinics. The employer typically negotiates the plan level, coverage scope, and premium with the HMO directly or through an HR partner. Traction Outsourcing works with Hallmark HMO to provide accessible health cover for Nigerian businesses and their employees." }
+      {
+        "q": "What does HMO mean in Nigeria?",
+        "a": "HMO stands for Health Maintenance Organisation. In Nigeria, an HMO is a licensed health insurance provider that manages group health coverage for businesses and their employees. The employer pays a premium, and enrolled staff can access medical care at the HMO's network of hospitals and clinics without paying out of pocket at the point of care."
+      },
+      {
+        "q": "Is HMO mandatory for Nigerian businesses?",
+        "a": "Under the National Health Insurance Authority Act 2022, formal sector employers in Nigeria are required to provide health insurance for their employees. The National Health Insurance Authority (NHIA) oversees this requirement. In practice, enforcement has been uneven, but the legal obligation exists, and businesses that provide HMO cover are better positioned for compliance, staff retention, and due diligence by investors and institutional partners."
+      },
+      {
+        "q": "How do Nigerian businesses get HMO coverage for their staff?",
+        "a": "Nigerian businesses enrol with a licensed HMO provider, pay a group premium covering all enrolled staff, and employees receive HMO cards granting access to the provider's network of hospitals and clinics. The employer typically negotiates the plan level, coverage scope, and premium with the HMO directly or through an HR partner. Traction Outsourcing works with Hallmark HMO to provide accessible health cover for Nigerian businesses and their employees."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
-      { "title": "Hire Staff in Nigeria From Abroad", "href": "/articles/hire-staff-nigeria-from-abroad/" },
-      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
-      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
-      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" }
+      {
+        "title": "What Is Traction in Business?",
+        "href": "/articles/what-is-traction-in-business/"
+      },
+      {
+        "title": "Hire Staff in Nigeria From Abroad",
+        "href": "/articles/hire-staff-nigeria-from-abroad/"
+      },
+      {
+        "title": "Company Registration for Foreigners",
+        "href": "/articles/company-registration-nigeria-foreigners/"
+      },
+      {
+        "title": "How to Register a Company in Nigeria",
+        "href": "/articles/how-to-register-a-company-in-nigeria/"
+      },
+      {
+        "title": "Why Nigerian Startups Fail",
+        "href": "/articles/article-why-nigerian-startups-fail/"
+      }
     ]
   }
 }

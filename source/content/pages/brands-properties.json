@@ -1,9 +1,14 @@
 {
-  "_route": { "template": "flex.html", "output": "brands/properties/index.html", "url": "/brands/properties/" },
+  "_route": {
+    "template": "flex.html",
+    "output": "brands/properties/index.html",
+    "url": "/brands/properties/"
+  },
   "brand": "properties",
   "meta": {
     "title": "Property Management & Brokerage Abuja | Traction Properties",
-    "description": "Traction Properties and Managers is a premium property management and brokerage firm in Abuja, Nigeria. Explore properties for sale and rent."
+    "description": "Traction Properties and Managers is a premium property management and brokerage firm in Abuja, Nigeria. Explore properties for sale and rent.",
+    "image": "/images/og/og-traction-properties.jpg"
   },
   "hero": {
     "eyebrow": "Traction Properties",
@@ -47,9 +52,21 @@
       "columns": 3,
       "style": "icon-list",
       "entries": [
-        { "icon": "fa-file-contract", "title": "Clear Title Documentation", "text": "" },
-        { "icon": "fa-credit-card", "title": "Flexible Payment Plans", "text": "" },
-        { "icon": "fa-user-tie", "title": "Professional Advisory", "text": "" }
+        {
+          "icon": "fa-file-contract",
+          "title": "Clear Title Documentation",
+          "text": ""
+        },
+        {
+          "icon": "fa-credit-card",
+          "title": "Flexible Payment Plans",
+          "text": ""
+        },
+        {
+          "icon": "fa-user-tie",
+          "title": "Professional Advisory",
+          "text": ""
+        }
       ]
     },
     {
@@ -58,12 +75,36 @@
       "sub": "We provide full-scale, hands-off property management solutions for homeowners and commercial landlords across Abuja, ensuring steady asset yield and pristine structural conservation.",
       "columns": 3,
       "entries": [
-        { "icon": "fa-users", "title": "Tenant Management", "text": "Full tenant communication, onboarding, and dispute resolution handled on your behalf." },
-        { "icon": "fa-user-check", "title": "Tenant Verification", "text": "Rigorous background checks and verification protocols before any tenant is placed." },
-        { "icon": "fa-money-bill-wave", "title": "Rent Collection", "text": "Prompt collection and disbursement protocols with full financial reporting." },
-        { "icon": "fa-gavel", "title": "Legal Representation", "text": "Comprehensive legal agreements and representation to protect your asset." },
-        { "icon": "fa-tools", "title": "Facility Management", "text": "Proactive inspections, maintenance scheduling, and contractor oversight." },
-        { "icon": "fa-hard-hat", "title": "Renovation & Maintenance", "text": "General contracting, site maintenance, and renovation project management." }
+        {
+          "icon": "fa-users",
+          "title": "Tenant Management",
+          "text": "Full tenant communication, onboarding, and dispute resolution handled on your behalf."
+        },
+        {
+          "icon": "fa-user-check",
+          "title": "Tenant Verification",
+          "text": "Rigorous background checks and verification protocols before any tenant is placed."
+        },
+        {
+          "icon": "fa-money-bill-wave",
+          "title": "Rent Collection",
+          "text": "Prompt collection and disbursement protocols with full financial reporting."
+        },
+        {
+          "icon": "fa-gavel",
+          "title": "Legal Representation",
+          "text": "Comprehensive legal agreements and representation to protect your asset."
+        },
+        {
+          "icon": "fa-tools",
+          "title": "Facility Management",
+          "text": "Proactive inspections, maintenance scheduling, and contractor oversight."
+        },
+        {
+          "icon": "fa-hard-hat",
+          "title": "Renovation & Maintenance",
+          "text": "General contracting, site maintenance, and renovation project management."
+        }
       ]
     }
   ],

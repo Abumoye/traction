@@ -1,8 +1,13 @@
 {
-  "_route": { "template": "flex.html", "output": "founder/index.html", "url": "/founder/" },
+  "_route": {
+    "template": "flex.html",
+    "output": "founder/index.html",
+    "url": "/founder/"
+  },
   "meta": {
     "title": "Who is Prince Elijah Abumoye | Founder, Traction Outsourcing Limited",
-    "description": "Official biography of Prince Elijah Abumoye, visionary entrepreneur, author, corporate trainer, and founder of Traction Outsourcing Limited."
+    "description": "Official biography of Prince Elijah Abumoye, visionary entrepreneur, author, corporate trainer, and founder of Traction Outsourcing Limited.",
+    "image": "/images/og/og-founder.jpg"
   },
   "hero": {
     "eyebrow": "Our Founder",
@@ -23,9 +28,24 @@
       "heading": "Companies He Leads",
       "columns": 3,
       "entries": [
-        { "title": "Traction Outsourcing Limited", "text": "HR and management consulting: staff outsourcing, startup structuring, corporate restructuring, business advisory, training, and corporate retreats.", "cta": "Visit Traction Outsourcing", "href": "/" },
-        { "title": "Traction Properties", "text": "Property management and real estate brokerage in Abuja, Nigeria.", "cta": "Visit Traction Properties", "href": "/brands/properties/" },
-        { "title": "ATH Recruiters", "text": "Abuja Talent Hub — affordable, fast recruitment and staffing across Nigeria.", "cta": "Visit ATH Recruiters", "href": "/brands/recruiters/" }
+        {
+          "title": "Traction Outsourcing Limited",
+          "text": "HR and management consulting: staff outsourcing, startup structuring, corporate restructuring, business advisory, training, and corporate retreats.",
+          "cta": "Visit Traction Outsourcing",
+          "href": "/"
+        },
+        {
+          "title": "Traction Properties",
+          "text": "Property management and real estate brokerage in Abuja, Nigeria.",
+          "cta": "Visit Traction Properties",
+          "href": "/brands/properties/"
+        },
+        {
+          "title": "ATH Recruiters",
+          "text": "Abuja Talent Hub — affordable, fast recruitment and staffing across Nigeria.",
+          "cta": "Visit ATH Recruiters",
+          "href": "/brands/recruiters/"
+        }
       ]
     }
   ],

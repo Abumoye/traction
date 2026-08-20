@@ -1,17 +1,31 @@
 {
-  "_route": { "template": "flex.html", "output": "brands/properties/estate-lands/index.html", "url": "/brands/properties/estate-lands/" },
+  "_route": {
+    "template": "flex.html",
+    "output": "brands/properties/estate-lands/index.html",
+    "url": "/brands/properties/estate-lands/"
+  },
   "brand": "properties",
   "meta": {
     "title": "Affordable Estate Lands in Abuja | Traction Properties",
-    "description": "Buy affordable estate land in Abuja. Plots available in Kuje, Jikwoyi, Asokoro 2, Asokoro 2 behind NAF Valley Estate, Katampe Extension 2, and Guzape. Prices from N3,000,000. Contact Traction Properties today."
+    "description": "Buy affordable estate land in Abuja. Plots available in Kuje, Jikwoyi, Asokoro 2, Asokoro 2 behind NAF Valley Estate, Katampe Extension 2, and Guzape. Prices from N3,000,000. Contact Traction Properties today.",
+    "image": "/images/og/og-traction-properties.jpg"
   },
   "hero": {
     "eyebrow": "Prime Real Estate · Abuja, Nigeria",
     "headline": "Affordable Estate Lands In Abuja.",
     "sub": "Own a piece of Nigeria's capital city. Verified titles, flexible payment plans, and prime locations across the FCT. Starting from ₦3,000,000.",
     "actions": [
-      { "label": "View All Locations", "href": "#locations", "style": "btn-primary" },
-      { "label": "Chat on WhatsApp", "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20estate%20lands%20in%20Abuja.", "style": "btn-ghost", "blank": true }
+      {
+        "label": "View All Locations",
+        "href": "#locations",
+        "style": "btn-primary"
+      },
+      {
+        "label": "Chat on WhatsApp",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20estate%20lands%20in%20Abuja.",
+        "style": "btn-ghost",
+        "blank": true
+      }
     ]
   },
   "sections": [
@@ -20,11 +34,31 @@
       "columns": 4,
       "style": "icon-list",
       "entries": [
-        { "icon": "fa-certificate", "title": "Verified Land Titles", "text": "" },
-        { "icon": "fa-shield-alt", "title": "Secure Transactions", "text": "" },
-        { "icon": "fa-handshake", "title": "Flexible Payment Plans", "text": "" },
-        { "icon": "fa-map-marked-alt", "title": "6 Prime Locations", "text": "" },
-        { "icon": "fa-phone-alt", "title": "24/7 Client Support", "text": "" }
+        {
+          "icon": "fa-certificate",
+          "title": "Verified Land Titles",
+          "text": ""
+        },
+        {
+          "icon": "fa-shield-alt",
+          "title": "Secure Transactions",
+          "text": ""
+        },
+        {
+          "icon": "fa-handshake",
+          "title": "Flexible Payment Plans",
+          "text": ""
+        },
+        {
+          "icon": "fa-map-marked-alt",
+          "title": "6 Prime Locations",
+          "text": ""
+        },
+        {
+          "icon": "fa-phone-alt",
+          "title": "24/7 Client Support",
+          "text": ""
+        }
       ]
     },
     {
