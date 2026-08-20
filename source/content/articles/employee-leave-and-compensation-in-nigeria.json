@@ -1,0 +1,142 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/employee-leave-and-compensation-in-nigeria/index.html",
+    "url": "/articles/employee-leave-and-compensation-in-nigeria/"
+  },
+  "meta": {
+    "title": "Employee Leave and Compensation in Nigeria: A Guide for Employers",
+    "description": "Annual leave, sick leave, maternity leave, public holidays, and the current minimum wage in Nigeria, explained for employers and HR teams."
+  },
+  "tag": "HR Compliance",
+  "title": "Employee Leave and Compensation in Nigeria: A Guide for Employers",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "July 20, 2026",
+    "read_time": "4 min read"
+  },
+  "image": "/images/articles/employee-leave-and-compensation-in-nigeria.jpg",
+  "dek": "A company in Port Harcourt once lost a National Industrial Court claim over 47 days of untaken annual leave that had quietly built up over six years. The employer's argument, that leave not taken was simply forfeited, had no basis in Nigerian law. That case is a useful reminder that leave and compensation are not soft HR topics, they are compliance obligations with real financial consequences.",
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "This guide covers what Nigerian labour law actually requires for annual leave, sick leave, maternity leave, public holidays, and the national minimum wage, and where the law is silent and left to company policy instead."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Who the Labour Act Actually Covers",
+      "paragraphs": [
+        "The Labour Act (Cap L1, Laws of the Federation of Nigeria 2004) is the primary statute behind most of what follows, but it does not apply to everyone the same way. The Act is written around the term \"worker,\" which in practice covers manual labourers and non-executive clerical staff. Employees exercising administrative, executive, technical, or professional functions sit largely outside the Act's direct provisions and are instead governed mainly by the terms of their employment contract.",
+        "In practice, most formal employers in Nigeria apply the Act's leave standards, or better, across their entire workforce regardless of this technical distinction, since it is simpler to administer one policy and it avoids the appearance of treating staff unequally. But it is worth knowing the line exists, particularly when a contract is silent on a specific leave type."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Annual Leave",
+      "paragraphs": [
+        "The statutory minimum is 6 working days of paid annual leave after 12 months of continuous service, rising to 12 working days for young workers under 16, including apprentices. An employee who joins partway through a year does not begin accruing leave until they complete a full 12 months of continuous service.",
+        "Six days sounds low next to what most Nigerian employees actually receive. In practice, the statutory minimum is treated as a floor, not a target, most formal-sector employers offer 20 to 30 working days a year through the employment contract or internal policy, and that enhanced entitlement is what governs once it is written down.",
+        "<strong>6 to 30 working days.</strong> Statutory minimum is 6 working days after 12 months' service; typical private-sector practice runs 20 to 30 working days a year."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Carry-Over and Payout",
+      "paragraphs": [
+        "An employer generally cannot pay wages in place of leave the employee has not taken while they remain in service. Leave can be deferred by mutual agreement, but only within limits, the earning and deferral period together must not exceed 24 months. What an employer cannot do is run a blanket \"use it or lose it\" policy that simply erases unused leave at year end. Where an employee was operationally prevented from taking leave, kept on critical work, denied requests, the leave is not forfeited. If the employment ends before that leave is used, the employer must pay its cash equivalent, calculated at the employee's final salary rate, which is exactly what the Port Harcourt case above turned on."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Sick Leave",
+      "paragraphs": [
+        "Employees are entitled to up to 12 working days of paid sick leave in a calendar year. To qualify, the illness generally needs to be certified by a registered medical practitioner, informal self-certification is not enough to trigger the statutory entitlement. Sick pay is calculated on normal wages only, excluding overtime and other allowances."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Maternity Leave",
+      "paragraphs": [
+        "Maternity leave runs to roughly 12 weeks, split before and after childbirth, and applies to female employees. During this period, the Labour Act requires the employer to pay at least 50% of the employee's salary as a statutory floor. A meaningful number of employers pay full salary through the maternity leave period as an enhanced benefit rather than the bare minimum, worth factoring into a competitive policy.",
+        "An employee may request an extension beyond the standard period for medical reasons affecting her or the baby. Whether that extended period is paid, and at what rate, is left to the employer's discretion and the specifics of the case, there is no blanket statutory answer."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Paternity and Other Non-Statutory Leave",
+      "paragraphs": [
+        "There is currently no statutory paternity leave requirement for private sector employees in Nigeria. Male federal civil servants are entitled to 14 days of paternity leave following a 2021 Federal Executive Council approval, but that applies to public sector employment specifically. Private employers are free to offer paternity leave as a matter of policy, and a growing number do, but where there is no such policy, male employees typically draw on their annual leave instead.",
+        "The same applies to study leave, compassionate or bereavement leave, and relief leave, none of these are statutory entitlements under the Act. They exist entirely at the discretion of the employer, through the employment contract, an internal HR policy, or case-by-case approval."
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "Leave Types at a Glance",
+      "list": [
+        { "b": "Annual Leave —", "t": "6 working days after 12 months' service. Status: Statutory." },
+        { "b": "Sick Leave —", "t": "Up to 12 working days per year, with medical certification. Status: Statutory." },
+        { "b": "Maternity Leave —", "t": "~12 weeks, at least 50% of salary paid. Status: Statutory." },
+        { "b": "Paternity Leave —", "t": "14 days (public sector only). Status: Not statutory in private sector." },
+        { "b": "Study, Compassionate, Relief Leave —", "t": "None. Status: Policy-based only." }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Public Holidays and Weekly Rest",
+      "paragraphs": [
+        "Nigeria observes around 11 public holidays a year, declared as paid work-free days, in addition to annual leave, not counted against it. If a public holiday coincides with a worker's weekly rest day, the worker is not entitled to a substitute day off. Separately, every worker is entitled to at least one weekly rest day of not less than 24 continuous hours after 6 consecutive working days, and that rest day is paid.",
+        "Where an employee is required to work on a public holiday or their weekly rest day, they are entitled to compensation at the applicable overtime rate, or, alternatively, a corresponding day off within 14 days."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Compensation: The National Minimum Wage",
+      "paragraphs": [
+        "The national minimum wage in Nigeria is currently ₦70,000 per month, set under the National Minimum Wage (Amendment) Act 2024, which raised it from the previous ₦30,000. It applies broadly across the public and private sector, subject to limited statutory exemptions, and non-compliance carries real penalties, including fines and liability for outstanding wage arrears.",
+        "<strong>₦70,000 / month.</strong> Current national minimum wage under the National Minimum Wage (Amendment) Act 2024.",
+        "Beyond the statutory floor, compensation structures in Nigeria vary widely by sector and role, and are shaped as much by market competition for skilled talent as by the law itself. The minimum wage sets the compliance boundary, it does not set a competitive salary.",
+        "<strong>A note on accuracy:</strong> Minimum wage figures and leave entitlements are reviewed periodically and can change. This guide reflects the position as understood in July 2026. Confirm current figures against the Federal Ministry of Labour and Employment or a qualified HR or legal professional before relying on them for a specific compliance decision."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Getting Leave and Compensation Policy Right",
+      "paragraphs": [
+        "Most leave disputes in Nigeria do not come from employers deliberately breaking the law. They come from informal policies, an unwritten \"use it or lose it\" understanding, a verbal promise about paternity leave that was never documented, a payroll system that does not track accrued leave against final pay at exit. None of that shows up as a problem until an employee leaves or a dispute lands in front of the National Industrial Court."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "",
+    "text": "Traction Outsourcing manages payroll, statutory compliance, and HR policy for businesses across Nigeria, so leave entitlements and minimum wage compliance are handled correctly from the start, not discovered as a liability later.",
+    "button": "See How We Handle Payroll & HR Compliance",
+    "href": "/services/staff-outsourcing/"
+  },
+  "faq": {
+    "entries": [
+      { "q": "How many days of annual leave are employees entitled to in Nigeria?", "a": "The Labour Act sets a statutory minimum of 6 working days of paid annual leave after 12 months of continuous service, or 12 working days for young workers under 16, including apprentices. In practice, most formal-sector employers in Nigeria offer considerably more, commonly 20 to 30 days a year, through the employment contract or company policy." },
+      { "q": "Is maternity leave paid in Nigeria?", "a": "Yes, though only partially under the statutory minimum. The Labour Act provides for a maternity leave period of around 12 weeks, split before and after childbirth, during which the employer must pay at least 50% of the employee's salary. Many employers pay full salary through the maternity leave period as an enhanced benefit." },
+      { "q": "How many sick leave days are employees entitled to in Nigeria?", "a": "Up to 12 working days of paid sick leave in a calendar year, provided the illness is certified by a registered medical practitioner. Sick pay is based on normal wages and does not include overtime or other allowances." },
+      { "q": "What is the current minimum wage in Nigeria?", "a": "The national minimum wage in Nigeria is 70,000 naira per month, set by the National Minimum Wage (Amendment) Act 2024. It applies to employers across the public and private sector, subject to limited exemptions, and is reviewed periodically." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
+      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
+      { "title": "Bank Outsourcing", "href": "/services/bank-outsourcing/" }
+    ],
+    "insights": [
+      { "title": "Accountability in Business: How to Hold Your Staff Accountable", "href": "/articles/accountability-in-business-nigeria/" },
+      { "title": "What Does Staff Outsourcing Include in Nigeria?", "href": "/articles/what-does-staff-outsourcing-include-nigeria/" },
+      { "title": "The Hidden Cost of Managing Staff in Nigeria", "href": "/articles/hidden-cost-managing-staff-nigeria/" },
+      { "title": "The Cost of a Bad Hire in Nigeria", "href": "/articles/article-cost-of-bad-hire-nigeria/" },
+      { "title": "Building an Employee Handbook for a Nigerian SME", "href": "/articles/article-employee-handbook-nigerian-sme/" }
+    ]
+  }
+}

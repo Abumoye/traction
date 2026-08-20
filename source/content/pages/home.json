@@ -1,0 +1,200 @@
+{
+  "_route": {
+    "template": "home.html",
+    "output": "index.html",
+    "url": "/"
+  },
+  "meta": {
+    "title": "Traction Outsourcing Limited | HR & Management Consulting",
+    "description": "Traction Outsourcing Limited: HR and business consulting in Abuja, Nigeria. Talent acquisition, HR outsourcing, and corporate restructuring across Africa"
+  },
+  "hero": {
+    "eyebrow": "Traction Outsourcing Limited",
+    "headline": "Structuring, Staffing, and Scaling High-Performance Businesses in Nigeria",
+    "sub": "From setting up investor-ready startups to managing outsourced teams and corporate retreats, Traction Outsourcing Limited builds the operational frameworks your business needs to thrive.",
+    "primary_cta": {
+      "label": "Book a Free Clarity Call",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+    },
+    "secondary_cta": {
+      "label": "Explore Our Services",
+      "href": "#services"
+    }
+  },
+  "services": [
+    {
+      "icon": "fa-sitemap",
+      "title": "Startup Structuring & Governance",
+      "text": "Build your business on a rock-solid foundation. We guide you through compliant CAC registration, co-founder equity agreements, IP protection, and governance frameworks that appeal to investors.",
+      "cta": "Learn More About Startup Setup",
+      "href": "/services/startup-structuring/"
+    },
+    {
+      "icon": "fa-diagram-project",
+      "title": "Operations & Corporate Restructuring",
+      "text": "Stop operational chaos. We analyze your workflows, eliminate redundancies, and design clear organograms so every team member knows exactly who they report to and what they own.",
+      "cta": "Streamline Your Operations",
+      "href": "/services/corporate-restructuring/"
+    },
+    {
+      "icon": "fa-compass",
+      "title": "Business Advisory",
+      "text": "Strategic planning, feasibility studies, and negotiation support for entrepreneurs navigating growth, market entry, and critical structural decisions.",
+      "cta": "Learn More",
+      "href": "/services/business-advisory/"
+    },
+    {
+      "icon": "fa-chalkboard-user",
+      "title": "Corporate and Professional Trainings",
+      "text": "We design and deliver targeted training programmes that close skill gaps, shift workplace culture, and build the internal capacity your business needs to operate without constant senior-level intervention.",
+      "cta": "Learn More",
+      "href": "/services/employee-training/"
+    },
+    {
+      "icon": "fa-plane",
+      "title": "Corporate Retreats & Events",
+      "text": "High-end international retreats combining executive strategy sessions with premier travel. Our next retreat: T-ICR 2026 in Kigali, Rwanda, November 22-30.",
+      "cta": "Learn More",
+      "href": "/services/corporate-retreats/"
+    },
+    {
+      "icon": "fa-user-check",
+      "title": "Vetted Staff Outsourcing & Payroll",
+      "text": "Outsource your recruitment, onboarding, and payroll to local experts. We manage statutory compliance including ITF, NSITF, and PenCom so you can scale without the legal liabilities.",
+      "cta": "Explore Outsourcing Options",
+      "href": "/services/staff-outsourcing/"
+    }
+  ],
+  "why_us": {
+    "title": "Why Businesses Come to Us",
+    "sub": "Three pain points bring most of our clients in. If any of these sounds familiar, you are in the right place.",
+    "points": [
+      {
+        "title": "Stuck in the Day-to-Day?",
+        "text": "If your business cannot run without your constant physical presence, your operational structure is broken. We design custom organograms and workflows that give you your time back."
+      },
+      {
+        "title": "Struggling to Find and Keep Top Talent?",
+        "text": "Hiring the wrong person costs millions in lost time and revenue. We handle the heavy lifting of recruitment, background checks, and payroll compliance."
+      },
+      {
+        "title": "Unprepared for Scaling or Funding?",
+        "text": "Poor corporate governance or messy regulatory setups will stop you from winning major contracts or raising capital. We secure your legal foundations before the opportunity arrives."
+      }
+    ],
+    "cta": {
+      "label": "Click here to get a free 30-minute Clarity Call. We will help you determine what your business needs",
+      "href": "https://wa.me/2348052033145"
+    }
+  },
+  "difference": {
+    "title": "The Traction Difference",
+    "sub": "We work with two types of clients. Both need structure. Both get results.",
+    "cards": [
+      {
+        "title": "You have the vision. We provide the blueprint.",
+        "text": "We help you move quickly from an informal idea to a fully compliant corporate entity ready for partnerships, contracts, and investor conversations.",
+        "cta": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "As you grow, complexity multiplies.",
+        "text": "We audit your processes, retrain or outsource your workforce, and restructure legacy systems to eliminate operational drag and maximize profitability.",
+        "cta": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      }
+    ]
+  },
+  "insights": {
+    "title": "Latest Insights",
+    "cta": {
+      "label": "View All Articles",
+      "href": "/articles/"
+    },
+    "entries": [
+      {
+        "tag": "Business Travel",
+        "title": "Kigali: Africa's Cleanest City and Rising Business Hub",
+        "text": "Why Nigerian executives are taking Kigali seriously, and why you should too.",
+        "href": "/articles/kigali-africa-business-hub/",
+        "image": "/images/articles/kigali-africa-business-hub.jpg"
+      },
+      {
+        "tag": "Business Growth",
+        "title": "What Is Traction in Business?",
+        "text": "The measurable evidence that a business idea is becoming real, and how to build it in the Nigerian market.",
+        "href": "/articles/what-is-traction-in-business/",
+        "image": "/images/articles/what-is-traction-in-business.jpg"
+      },
+      {
+        "tag": "HR Compliance",
+        "title": "Employee Leave and Compensation in Nigeria",
+        "text": "What HMO means, how it works in Nigerian businesses, and what employers are required to provide.",
+        "href": "/articles/employee-leave-and-compensation-in-nigeria/",
+        "image": "/images/articles/employee-leave-and-compensation-in-nigeria.jpg"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "cta": {
+      "label": "See What Clients Are Saying About Us",
+      "href": "https://www.google.com/search?q=Traction+Outsourcing+Limited+reviews"
+    },
+    "entries": [
+      {
+        "initials": "JG",
+        "name": "Joshua",
+        "text": "Their services are great, fast and reliable. I had a remarkable experience working with them."
+      },
+      {
+        "initials": "DE",
+        "name": "Elizabeth",
+        "text": "Traction Outsourcing is a very professional and reliable organization, their services are top notch. Their trainings are straightforward and impactful."
+      }
+    ]
+  },
+  "brands": {
+    "title": "Brands We Work With",
+    "logos": [
+      "Gifts n Boxes",
+      "Afroreach Research",
+      "Beacon Trust",
+      "Bravies",
+      "Chairo Properties",
+      "Demipos Hotel",
+      "Fourtwoseven Engineering",
+      "Grown and Glow",
+      "La Luna Restaurant",
+      "Tifes Hub",
+      "Toolbox Ateliers",
+      "Super Rise and Shine"
+    ]
+  },
+  "faq": {
+    "title": "Common Questions",
+    "entries": [
+      {
+        "q": "What does Traction Outsourcing do?",
+        "a": "Traction Outsourcing Limited is a management consulting and HR solutions firm based in Abuja, Nigeria, serving clients across all major industries throughout Africa. Services include talent acquisition, HR process outsourcing, learning and development, startup structuring, corporate restructuring, business strategy consulting, and corporate retreats. ATH Recruiters, the recruitment arm of the firm, connects businesses with vetted, qualified talent across sectors."
+      },
+      {
+        "q": "Where is Traction Outsourcing located in Abuja?",
+        "a": "Traction Outsourcing Limited is based at 26, Algiers Street, Wuse Zone 5, FCT, Abuja."
+      },
+      {
+        "q": "Is Traction Outsourcing a management consulting firm in Nigeria?",
+        "a": "Yes. Traction Outsourcing operates as a management consulting and business advisory firm serving companies across Nigeria, with a particular focus on staffing, HR, structuring, and governance work for growing businesses and SMEs."
+      },
+      {
+        "q": "How do I get started with Traction Outsourcing?",
+        "a": "Book a free 30-minute clarity call through the button on this page, or reach out on WhatsApp or by phone. A member of the team will help determine which service fits your business before any engagement begins."
+      }
+    ]
+  },
+  "cta_section": {
+    "title": "Ready to Stop Firefighting and Start Scaling Your Business?",
+    "text": "Let us sit down and review your current team structure, compliance health, and operational bottlenecks.",
+    "button": "Submit & Schedule a Strategy Call"
+  }
+}

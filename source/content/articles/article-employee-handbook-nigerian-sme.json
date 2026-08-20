@@ -1,0 +1,101 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/article-employee-handbook-nigerian-sme/index.html",
+    "url": "/articles/article-employee-handbook-nigerian-sme/"
+  },
+  "meta": {
+    "title": "Employee Handbook for Nigerian SMEs | Traction Outsourcing",
+    "description": "Most Nigerian SMEs run on memory instead of policy. Why an employee handbook is a high-leverage document, and how to structure one."
+  },
+  "tag": "HR Advisory",
+  "title": "How to Write an Employee Handbook for a Nigerian SME",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "July 14, 2026",
+    "read_time": "4 min read"
+  },
+  "image": "/images/articles/employee-handbook-nigerian-sme.jpg",
+  "dek": "A client once called us in the middle of a crisis that had nothing to do with sales, cash flow, or competition. Two staff members had gotten into a dispute in front of customers. One had missed work repeatedly without explanation. The business owner wanted to know what she could do about it. When we asked what her disciplinary policy said about repeated absenteeism, there was a long pause. There was no policy. There had never been one. Every decision about conduct, leave, and discipline had been made in the moment, based on mood, memory, and whichever version of fairness felt right that day.",
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "This is not a rare situation. It is the default condition of most growing Nigerian businesses."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Why This Keeps Happening",
+      "paragraphs": [
+        "Academic research into HR practices among Nigerian SMEs consistently points to the same pattern: human resource decisions are rarely handled by a dedicated function. In the large majority of small and medium businesses, HR decisions rest entirely with the owner or managing director, made informally and reactively rather than through any documented framework. There is nothing unusual about this. Most businesses start as one person doing everything, and structure tends to arrive only after growth has already made the absence of structure painful.",
+        "The cost of that delay shows up in ways owners do not always connect back to the missing policy. Recent workforce data shows that a majority of Nigerian employers report real difficulty finding candidates whose expectations, skills, and conduct match what the business actually needs. Some of that mismatch is about skill. A significant part of it is about expectations that were never written down in the first place, so no one, including the employer, was ever entirely sure what \"meeting expectations\" meant."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "What a Handbook Actually Does",
+      "paragraphs": [
+        "An employee handbook is not a formality for businesses that have \"made it.\" It is a governance tool, and it does three specific jobs that nothing else in a small business does as efficiently.",
+        "It removes ambiguity before conflict arrives. Disputes over lateness, leave, dress code, or termination almost always escalate faster when there is no written standard to point to. A handbook converts what would otherwise be a personal disagreement between an owner and a staff member into a question of whether documented policy was followed. That shift alone defuses a large share of workplace conflict before it starts.",
+        "It protects the business legally. Nigerian labour law gives employers real obligations around termination notice, working hours, and conditions of service. A business without a handbook is not exempt from those obligations; it is simply operating without evidence that it has communicated them. When a dispute reaches a labour office or a court, the absence of a documented policy tends to be read against the employer, regardless of how reasonable the underlying decision actually was.",
+        "It sets the culture before the culture sets itself. Every business has a culture, whether or not anyone designed it. Left undocumented, culture tends to be shaped by whoever is loudest, whoever has been there longest, or whoever the owner likes best. A handbook lets you decide, in advance and in writing, what kind of workplace you are actually building."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "What Belongs in a Nigerian SME Handbook",
+      "paragraphs": [
+        "A functional handbook for a growing Nigerian business does not need to be a two-hundred-page corporate manual. It needs to be complete enough to answer the questions that come up most often, and specific enough that no one has to guess.",
+        "At minimum, it should cover: working hours and attendance expectations, leave entitlements including annual, sick, and maternity or paternity leave, a clear code of conduct, a disciplinary procedure with defined steps rather than vague language, grounds and process for termination, confidentiality obligations, and a grievance channel that lets staff raise concerns without fear of retaliation. Each of these should be written in plain language that a new hire can read once and actually understand, not legal phrasing borrowed from a template with no relevance to how the business actually runs."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "The Real Cost of Skipping This Step",
+      "paragraphs": [
+        "Business owners often delay writing a handbook because it feels like a task for later, once the company is \"big enough\" to need one. In practice, the businesses that suffer most from the absence of a handbook are the ones still small enough that one bad hire, one mishandled dispute, or one inconsistent decision can meaningfully damage morale across the entire team.",
+        "A ten-person company has far less room to absorb the fallout of an unclear termination than a two-hundred-person one does. The smaller the business, the higher the relative cost of getting people decisions wrong, and the more a handbook actually matters."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Building It Properly",
+      "paragraphs": [
+        "A handbook that is copied from the internet and never adapted to your actual business is close to useless. It needs to reflect your real working hours, your real leave structure, your real disciplinary process, and Nigerian labour law as it applies to your specific sector and state. Getting this right the first time saves you from having to rebuild it later, usually in the middle of a dispute, which is the worst possible time to be writing policy.",
+        "Traction Outsourcing has built handbooks, codes of conduct, and full HR policy frameworks for businesses across manufacturing, hospitality, real estate, and professional services in Nigeria. We know what belongs in yours, and what does not."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Do not wait for a crisis to discover you have no policy to point to.",
+    "text": "Let us build an employee handbook that actually reflects how your business runs.",
+    "button": "Get Your Handbook Built",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  },
+  "faq": {
+    "entries": [
+      { "q": "Why does a Nigerian SME need an employee handbook?", "a": "Without a written handbook, policy exists only in the founder's memory, applied inconsistently and impossible to enforce fairly. A handbook turns informal understanding into a document every employee can be held to equally." },
+      { "q": "What should be included in a Nigerian employee handbook?", "a": "A working handbook covers company policy, conduct expectations, leave and attendance rules, disciplinary procedure, and the practical day-to-day questions new employees actually ask, not just a legal boilerplate." },
+      { "q": "What happens if a business skips having an employee handbook?", "a": "Disputes get settled inconsistently, expectations vary by manager, and the business has no documented standard to point to when a disagreement over conduct or policy ends up in front of a court or tribunal." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
+      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
+      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
+      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+    ],
+    "insights": [
+      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
+      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
+      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
+      { "title": "Kigali: Africa's Rising Business Hub", "href": "/articles/kigali-africa-business-hub/" },
+      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" },
+      { "title": "Employee Leave & Compensation", "href": "/articles/employee-leave-and-compensation-in-nigeria/" }
+    ]
+  }
+}

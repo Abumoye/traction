@@ -1,0 +1,80 @@
+{
+  "_route": { "template": "flex.html", "output": "partnerships/index.html", "url": "/partnerships/" },
+  "meta": {
+    "title": "Partnerships | Traction Outsourcing Limited",
+    "description": "Traction Outsourcing partners with leading HMO, logistics, security, real estate, and media brands across Nigeria, including HMO cover for staff and families."
+  },
+  "hero": {
+    "eyebrow": "Partnerships",
+    "headline": "Corporate Partnerships",
+    "sub": "We partner with leading brands across sectors, HMO, logistics, security, real estate, health and wellness, travel, media, oil and gas, training, government, and philanthropic organizations, to open up more opportunities for our clients, our employees, young Nigerians, and SMEs."
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "heading": "Our Latest Partnerships",
+      "sub": "Every partnership is announced here first. Filter by category or browse them all, then click through to read the full story.",
+      "columns": 2,
+      "entries": [
+        {
+          "icon": "fa-headset",
+          "title": "Traction Outsourcing Launches 24/7 Virtual Client Support",
+          "text": "Clients can now reach Traction Outsourcing at any hour, on any day, through a dedicated round-the-clock digital support desk covering HR advisory, recruitment, and general enquiries.",
+          "cta": "Read the full story",
+          "href": "/partnerships/24-hour-client-support/"
+        },
+        {
+          "icon": "fa-heart-pulse",
+          "title": "Hallmark HMO Partners with Traction Outsourcing",
+          "text": "Affordable, process-driven HMO plans across a network of over 10,000 hospitals, now available to Traction Outsourcing clients, staff, and families.",
+          "cta": "Read the full story",
+          "href": "/partnerships/hallmark-hmo/"
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "Partnership Categories",
+      "sub": "Every partnership on this site is filed under one of the categories below.",
+      "style": "plain",
+      "columns": 3,
+      "entries": [
+        { "title": "HMO", "text": "" },
+        { "title": "Logistics", "text": "" },
+        { "title": "Security", "text": "" },
+        { "title": "Real Estate", "text": "" },
+        { "title": "Health & Wellness", "text": "" },
+        { "title": "Travel", "text": "" },
+        { "title": "Media & Entertainment", "text": "" },
+        { "title": "Oil & Gas", "text": "" },
+        { "title": "Training & Development", "text": "" },
+        { "title": "MoU", "text": "" },
+        { "title": "Government Parastatals", "text": "" },
+        { "title": "Philanthropists", "text": "" },
+        { "title": "Company Updates", "text": "" }
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "No partnerships in this category yet. Check back soon."
+      ]
+    },
+    {
+      "type": "form",
+      "heading": "Do You Want To Partner With Us?",
+      "sub": "Leave your details and someone from our team will reach out. (We will contact you soon.)",
+      "form_id": "leadForm",
+      "button": "Submit",
+      "fields": [
+        { "name": "leadName", "placeholder": "Full Name", "input_type": "text", "required": true },
+        { "name": "leadCompany", "placeholder": "Company / Organization Name", "input_type": "text", "required": true },
+        { "name": "leadPhone", "placeholder": "Phone / WhatsApp Number", "input_type": "tel", "required": true },
+        { "name": "leadEmail", "placeholder": "Email Address", "input_type": "email", "required": true },
+        { "name": "leadCategory", "placeholder": "Partnership Category (HMO, Logistics, Security, Real Estate, Health & Wellness, Travel, Media & Entertainment, Oil & Gas, Training & Development, MoU, Government Parastatals, Philanthropists, or Other)", "input_type": "text", "required": true },
+        { "name": "leadMessage", "placeholder": "Tell us briefly about your organization and what you have in mind", "input_type": "text", "required": true }
+      ]
+    }
+  ],
+  "has_form": true
+}

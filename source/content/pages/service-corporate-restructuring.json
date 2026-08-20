@@ -1,0 +1,244 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "services/corporate-restructuring/index.html",
+    "url": "/services/corporate-restructuring/"
+  },
+  "meta": {
+    "title": "Corporate Restructuring in Nigeria | Traction Outsourcing Limited",
+    "description": "Traction Outsourcing re-engineers legacy business frameworks and reporting lines to remove operational blockages and restore performance."
+  },
+  "hero": {
+    "eyebrow": "Areas Of Impact",
+    "headline": "Corporate Restructuring",
+    "sub": "Legacy frameworks quietly slow a business down long before anyone names the problem. We name it, then rebuild the structure around where the business actually needs to go.",
+    "actions": [
+      {
+        "label": "Request A Free Consultation",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20corporate%20restructuring",
+        "style": "btn-primary"
+      },
+      {
+        "label": "Chat on WhatsApp",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20corporate%20restructuring",
+        "style": "btn-secondary",
+        "blank": true
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "heading": "When a Business Needs Restructuring",
+      "sub": "Traction Outsourcing Limited manages every dimension of a restructuring engagement, from governance and organograms through to ownership structures, shareholder matters, and statutory requirements.",
+      "columns": 3,
+      "style": "plain",
+      "entries": [
+        {
+          "title": "Growth Has Outpaced Your Structure",
+          "text": "Reporting lines, roles, and decision-making built for an earlier headcount start breaking under current growth. We rebuild the framework around where the business is now."
+        },
+        {
+          "title": "Two Entities Need to Run as One Group",
+          "text": "Separate entities with separate histories need a shared governance register, organogram, and policy structure to actually function as a single group."
+        },
+        {
+          "title": "You Are Bringing In a New Investor",
+          "text": "New investment often requires a cleaner ownership or holding structure. We manage the full process, from the operational rebuild to the ownership restructure, shareholder agreements, and statutory documentation."
+        },
+        {
+          "title": "A Shareholder or Ownership Dispute Needs Resolving",
+          "text": "Disputes over shares, roles, or decision rights need both a resolution and a workable structure afterward. Traction Outsourcing Limited handles both sides so one does not undo the other."
+        },
+        {
+          "title": "The Business Is Under Financial Pressure",
+          "text": "Where a genuine turnaround or workout plan is needed, Traction Outsourcing Limited manages the formal process alongside the operational and staffing implications, end to end."
+        },
+        {
+          "title": "Nobody Can Explain the Structure Anymore",
+          "text": "If reporting lines exist on paper but not in practice, and no one can explain who actually decides what, that is a structure problem we solve directly."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Not sure which of these applies to you?",
+      "button": "Ask Us on WhatsApp",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27m%20not%20sure%20what%20kind%20of%20restructuring%20my%20business%20needs"
+    },
+    {
+      "type": "text",
+      "heading": "What Restructuring Actually Fixes",
+      "sub": "The same business, before and after the framework is rebuilt around it."
+    },
+    {
+      "type": "raw-text",
+      "heading": "Before",
+      "list": [
+        "Reporting lines that exist on paper but not in practice",
+        "Two people doing one job, one person doing three",
+        "Decisions bottlenecked at the top for things that should not need it",
+        "Departments that do not know what the other is doing",
+        "Growth plans built on top of an undefined structure"
+      ]
+    },
+    {
+      "type": "raw-text",
+      "heading": "After Traction Outsourcing",
+      "list": [
+        "A governance register that matches how the business actually runs",
+        "Clear organograms across every entity in the group",
+        "JDs and KPIs that remove ambiguity from senior roles",
+        "A performance management system tied to the new structure",
+        "A phased implementation roadmap, not a document that sits unused"
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "What We Rebuild",
+      "sub": "Restructuring is not one document. It is the set of frameworks that have to move together.",
+      "columns": 3,
+      "entries": [
+        {
+          "icon": "fa-sitemap",
+          "title": "Governance Register",
+          "text": "Who decides what, and where authority actually sits."
+        },
+        {
+          "icon": "fa-diagram-project",
+          "title": "Organograms",
+          "text": "Reporting lines redrawn to match the real business, including across multiple entities. See <a href=\"/articles/article-organogram/\">how we approach this</a>."
+        },
+        {
+          "icon": "fa-file-signature",
+          "title": "JDs & KPIs",
+          "text": "Senior roles defined with clear accountability, not inherited job titles."
+        },
+        {
+          "icon": "fa-gauge-high",
+          "title": "Performance Systems",
+          "text": "A structure for measuring output that fits the new framework, not the old one."
+        },
+        {
+          "icon": "fa-book",
+          "title": "Policy Handbooks",
+          "text": "Staff policy that reflects the restructured business, not a template from elsewhere."
+        },
+        {
+          "icon": "fa-route",
+          "title": "Implementation Roadmap",
+          "text": "A week-by-week rollout, so the restructuring survives contact with the business."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Ready to see what a rebuilt structure looks like for your business?",
+      "button": "Get Started on WhatsApp",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20get%20started%20with%20corporate%20restructuring"
+    },
+    {
+      "type": "grid",
+      "heading": "What This Looks Like In Practice",
+      "columns": 2,
+      "style": "case-study",
+      "entries": [
+        {
+          "title": "Multi-Entity Engineering Group",
+          "text": "Two entities under one group, each with its own history and its own way of doing things. We built a governance register, a dual-entity organogram, JDs and KPIs for six senior roles, a shared performance management system, and an eight-week roadmap to bring it all into one working structure."
+        },
+        {
+          "title": "Engineering Services Firm",
+          "text": "Staff offer letters, a Code of Conduct, and a staff policy handbook covering multiple entities in one group, giving a growing engineering firm one consistent structure to onboard against instead of two conflicting ones."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "We Handle It End to End",
+      "paragraphs": [
+        "Restructuring is never only an organisational exercise. Ownership changes, shareholder agreements, statutory filings, governance documentation, and financial distress all have to be handled correctly for the new structure to actually hold.",
+        "Traction Outsourcing Limited manages the full restructuring engagement. That means one point of contact for the entire process, from the governance rebuild and organogram design through to ownership structures, statutory and documentation requirements, and implementation. You do not have to coordinate multiple relationships or wonder which part of the process is being handled by whom."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "We manage it. All of it.",
+      "text": "Let's rebuild your structure, completely and correctly.",
+      "button": "Chat on WhatsApp",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20talk%20about%20restructuring%20my%20business"
+    },
+    {
+      "type": "text",
+      "heading": "Join Our Clients",
+      "sub": "Businesses across Nigeria trust Traction Outsourcing Limited to get this right."
+    },
+    {
+      "type": "logos",
+      "logos": [
+        "Gifts n Boxes",
+        "Afroreach Research",
+        "Beacon Trust",
+        "Bravies",
+        "Chairo Properties",
+        "Demipos Hotel",
+        "Fourtwoseven Engineering",
+        "Grown and Glow",
+        "La Luna Restaurant",
+        "Tifes Hub",
+        "Toolbox Ateliers",
+        "Super Rise and Shine"
+      ]
+    },
+    {
+      "type": "grid",
+      "columns": 1,
+      "style": "stat",
+      "entries": [
+        { "value": "5", "label": "Legacy Frameworks Re-Engineered Across Lagos & Abuja" }
+      ]
+    },
+    {
+      "type": "form",
+      "heading": "Request A Free Consultation",
+      "sub": "Leave your details and someone from our team will reach out.",
+      "form_id": "leadForm",
+      "button": "Submit",
+      "fields": [
+        { "name": "leadName", "placeholder": "Full Name", "input_type": "text", "required": true },
+        { "name": "leadPhone", "placeholder": "Phone Number", "input_type": "tel", "required": true },
+        { "name": "leadCompany", "placeholder": "Company Name", "input_type": "text", "required": true },
+        { "name": "leadEmail", "placeholder": "Email Address", "input_type": "email", "required": true }
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "What is corporate restructuring?",
+          "a": "Corporate restructuring is a deliberate reorganisation of a business's governance, ownership, reporting lines, staffing, and operational framework to address performance problems, prepare for growth, or adapt to a change in the business environment. It goes beyond cosmetic changes to the organogram and addresses the underlying structural causes of the problems the business is experiencing."
+        },
+        {
+          "q": "Does Traction Outsourcing handle the full restructuring process, including ownership and statutory matters?",
+          "a": "Yes. Traction Outsourcing Limited manages every dimension of a restructuring engagement, including governance, organograms, role definitions, shareholder structures, ownership changes, statutory and documentation requirements, and implementation. You have one point of contact from start to finish."
+        },
+        {
+          "q": "How long does a corporate restructuring take?",
+          "a": "It depends on the complexity of the business and the scope of the changes needed. A focused restructuring of a single-entity business with clear goals typically takes four to eight weeks. Group restructuring involving multiple entities, ownership changes, or financial distress takes longer. Traction Outsourcing builds a project timeline at the diagnostic stage so the client knows what to expect before work begins."
+        },
+        {
+          "q": "What is the difference between corporate restructuring and startup structuring?",
+          "a": "Startup structuring builds foundations for a new or early-stage business that does not yet have a structure in place. Corporate restructuring rebuilds or reorganises the structure of an existing business that has outgrown, broken, or needs to change what it has. The tools overlap but the starting point and the process are different."
+        }
+      ]
+    }
+  ],
+  "has_form": true,
+  "final_cta": {
+    "title": "Ready to Rebuild Your Structure?",
+    "text": "Speak with our consulting team about how Corporate Restructuring can work for your business.",
+    "button": "Audit My Business Structure",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Corporate%20Restructuring%20at%20Traction%20Outsourcing%20Limited."
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ meta.title }}</title>
+  <link rel="canonical" href="https://tolnigeria.com{{ path }}">
+  <meta name="description" content="{{ meta.description }}">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css">
+  {% block extra_head %}{% endblock %}
+</head>
+<body{% if brand %} class="brand-{{ brand }}"{% endif %}>
+  {% if brand == 'properties' %}
+    {% include "partials/nav-properties.html" %}
+  {% elif brand == 'recruiters' %}
+    {% include "partials/nav-recruiters.html" %}
+  {% else %}
+    {% include "partials/nav.html" %}
+  {% endif %}
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  {% if brand == 'properties' %}
+    {% include "partials/footer-properties.html" %}
+  {% elif brand == 'recruiters' %}
+    {% include "partials/footer-recruiters.html" %}
+  {% else %}
+    {% include "partials/footer.html" %}
+  {% endif %}
+  <script src="/js/nav.js"></script>
+  <script src="/js/reveal.js"></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,178 @@
+{
+  "_route": { "template": "flex.html", "output": "brands/recruiters/index.html", "url": "/brands/recruiters/" },
+  "brand": "recruiters",
+  "meta": {
+    "title": "ATH Recruiters | Abuja Talent Hub Recruitment Agency",
+    "description": "ATH Recruiters (Abuja Talent Hub) is an affordable recruitment agency in Nigeria for mass recruitment, graduate training, and staff hiring from ₦30,000."
+  },
+  "has_form": true,
+  "hero": {
+    "eyebrow": "ATH Recruiters — Abuja Talent Hub",
+    "headline": "Reliable Staff, Fast. Anywhere In Nigeria.",
+    "actions": [
+      { "label": "Request Staff on WhatsApp", "href": "https://wa.me/2348125078087?text=I%20need%20to%20hire%20staff%20urgently", "style": "btn-primary", "blank": true },
+      { "label": "See Our Plans", "href": "#ath-plans", "style": "btn-ghost" }
+    ]
+  },
+  "sections": [
+    {
+      "type": "text",
+      "id": "ath-about",
+      "heading": "What Is ATH Recruiters?",
+      "paragraphs": [
+        "ATH Recruiters, also widely known as Abuja Talent Hub, is the official staffing brand of Traction Outsourcing Limited and one of the recruitment agencies in Abuja serving businesses across Nigeria. This is the official website for both ATH Recruiters and Abuja Talent Hub. We were built to solve one specific problem: getting Nigerian businesses and homes the right person, fast, and affordably. We maintain a verified community of ready-to-work candidates, from entry-level graduates to experienced professionals, so that when you need staff, you are not starting from zero, you are choosing from people who are already screened and available.",
+        "<a href=\"https://maps.app.goo.gl/wRXnUb2ABAwSTNpT8\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-google\"></i> Find &amp; Review Us on Google</a>"
+      ]
+    },
+    {
+      "type": "grid",
+      "bg": "ash",
+      "heading": "Who We Work With",
+      "sub": "We are built for the businesses and households that need staff without the overhead of a full HR department.",
+      "columns": 2,
+      "entries": [
+        { "icon": "fa-store", "title": "Small & Growing Businesses", "text": "From single-location shops to multi-branch operations that need to hire quickly and repeatedly." },
+        { "icon": "fa-house-user", "title": "Private Individuals & Homes", "text": "As a domestic staff recruitment agency in Abuja and across Nigeria, we place housekeepers, cooks, drivers, and personal staff that families and individuals can trust." }
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "Graduate Recruitment & Mass Training",
+      "sub": "Two of the most common reasons businesses come to ATH Recruiters, also known as Abuja Talent Hub.",
+      "columns": 2,
+      "entries": [
+        { "icon": "fa-graduation-cap", "title": "Graduate Recruitment", "text": "We source and place graduate talent for entry-level and junior roles across Nigeria, matched to the specific skills your business needs rather than a generic CV pool. A practical option if you are asking where to train graduates in Nigeria or Abuja." },
+        { "icon": "fa-people-group", "title": "Mass Recruitment & Training", "text": "For businesses hiring in bulk, Plan A supports mass recruitment with unlimited candidate requests, while Plan C includes structured onboarding and skills training delivered by our management consultants, built for mass training initiatives in Nigeria." }
+      ]
+    },
+    {
+      "type": "grid",
+      "bg": "ash",
+      "heading": "What We Recruit For",
+      "sub": "If it involves people showing up and doing the job well, we have likely staffed it.",
+      "columns": 4,
+      "style": "icon-list",
+      "entries": [
+        { "icon": "fa-store", "title": "Shops & Retail Stores", "text": "" },
+        { "icon": "fa-hotel", "title": "Hotels & Hospitality", "text": "" },
+        { "icon": "fa-utensils", "title": "Restaurants & Fast Food", "text": "" },
+        { "icon": "fa-house-chimney", "title": "Private Homes & Domestic Staff", "text": "" },
+        { "icon": "fa-helmet-safety", "title": "Construction Sites", "text": "" },
+        { "icon": "fa-spa", "title": "Salons & Spas", "text": "" },
+        { "icon": "fa-briefcase-medical", "title": "Clinics & Pharmacies", "text": "" },
+        { "icon": "fa-school", "title": "Schools", "text": "" },
+        { "icon": "fa-truck", "title": "Logistics & Dispatch", "text": "" },
+        { "icon": "fa-building", "title": "Offices & Corporate Support", "text": "" },
+        { "icon": "fa-microchip", "title": "FinTechs & Startups", "text": "" },
+        { "icon": "fa-boxes-stacked", "title": "FMCG & Distribution", "text": "" }
+      ]
+    },
+    {
+      "type": "grid",
+      "bg": "ink",
+      "columns": 2,
+      "style": "stat",
+      "entries": [
+        { "value": "48 HRS", "label": "Turnaround Time (*for select recruitment plans)" },
+        { "value": "₦30,000", "label": "Qualified Staff, Starting From (*for select recruitment plans)" }
+      ]
+    },
+    {
+      "type": "grid",
+      "bg": "ash",
+      "heading": "Why Abuja Businesses Choose Our Affordable Staffing Services",
+      "sub": "Speed, professionalism, and pricing built for small businesses and private individuals across Abuja, not just large corporations.",
+      "columns": 4,
+      "entries": [
+        { "icon": "fa-bolt", "title": "Fast Turnaround", "text": "Candidates delivered in as little as 24 to 48 hours on select plans, so an open role does not stay open for long." },
+        { "icon": "fa-user-check", "title": "Professional & Vetted", "text": "Every candidate is screened before you ever see a CV, backed by our management consulting standards." },
+        { "icon": "fa-headset", "title": "24/7 Customer Support", "text": "Our team is reachable around the clock, so a staffing emergency never has to wait until Monday morning." },
+        { "icon": "fa-sack-dollar", "title": "Affordable Pricing", "text": "Plans starting from ₦30,000, built to keep quality staffing accessible for small businesses and homes across Abuja." }
+      ]
+    },
+    {
+      "type": "grid",
+      "id": "ath-plans",
+      "heading": "Our Recruitment Plans",
+      "sub": "Three ways to work with us, depending on how often you hire and what kind of role you are filling.",
+      "columns": 2,
+      "entries": [
+        {
+          "title": "Plan A — High-Volume Staffing",
+          "text": "Tailored search and selection services designed to fill core operational roles with precision. This tier provides direct access to our verified community professionals, ensuring cultural fit and technical competence.<br><br><em>Ideal for roles with high attrition rates or rapid scaling needs in industries like Sales, Hospitality, Construction, FinTechs, Technology, Industries, FMCG, ad-hoc staffing, homes, private staff, and more.</em><br><br>✓ Unlimited candidate requests<br>✓ First time waiting period of 1 month<br>✓ Best for roles with high attrition rates<br>✓ Just 24-48 hours waiting period during subscription<br>✓ Available in all states in Nigeria",
+          "cta": "Ask About Plan A",
+          "href": "https://wa.me/2348125078087?text=I%27m%20interested%20in%20Plan%20A%20-%20High-Volume%20Staffing"
+        },
+        {
+          "title": "Plan B — Specialized Talent Search",
+          "text": "A highly strategic, comprehensive recruitment service dedicated to sourcing specialized talent and leadership roles across various Nigerian states and international markets.<br><br><em>Best for companies that usually need one staff member at a time, with a very low attrition rate.</em><br><br>✓ Candidate sourcing<br>✓ Candidate selection<br>✓ Pre-interview advisory<br>✓ Save time wasted on vacancy ads<br>✓ Save time wasted on sourcing through CVs<br>✓ Save time wasted on pre-interview screening<br>✓ One-off service<br>✓ Qualified candidates in 2 weeks or less<br>✓ Available in all states in Nigeria",
+          "cta": "Ask About Plan B",
+          "href": "https://wa.me/2348125078087?text=I%27m%20interested%20in%20Plan%20B%20-%20Specialized%20Talent%20Search"
+        },
+        {
+          "title": "Plan C — End-to-End Executive HR Partnership",
+          "text": "A fully managed, consultant-led recruitment process from initial sourcing through to corporate integration.<br><br><em>Best for organizations seeking a complete corporate onboarding experience, expert interview panels, and post-hire development.</em><br><br>✓ First-level interviewing with a Traction Outsourcing HR professional<br>✓ Second-level joint panel interviews with Traction Outsourcing HR professional and your management<br>✓ Full HR compliance support, including standardized staff offer letters, tailored job descriptions, and optional staff background check<br>✓ Includes 2 standardized trainings delivered by our management consultants (1 general staff training and 1 corporate onboarding training)<br>✓ Minimum of 5 recruited staff for this plan",
+          "cta": "Ask About Plan C",
+          "href": "https://wa.me/2348125078087?text=I%27m%20interested%20in%20Plan%20C%20-%20End-to-End%20Executive%20HR%20Partnership"
+        },
+        {
+          "title": "Home Plan — Home Recruitment",
+          "text": "Specially designed for homeowners who need to recruit domestic staff once, without ongoing management. We find the right person, hand them over, and you take full control from there.<br><br><em>Best for homeowners recruiting domestic staff: nannies, cooks, cleaners, drivers, gardeners, security, and other home-based roles.</em><br><br>✓ One-off recruitment service<br>✓ Candidate sourcing from verified community<br>✓ Skills and background screening<br>✓ Hands-off after placement, you manage your own home staff<br>✓ Free one-time replacement within the first month<br>✓ Single, one-time fee. No recurring charges<br>✓ No staff management included<br>✓ Available across Nigeria",
+          "cta": "Ask About the Home Plan",
+          "href": "https://wa.me/2348125078087?text=I%27m%20interested%20in%20the%20ATH%20Home%20Plan%20for%20domestic%20staff%20recruitment"
+        }
+      ]
+    },
+    {
+      "type": "logos",
+      "bg": "ash",
+      "heading": "Join Our Clients",
+      "sub": "Businesses across Nigeria trust Traction Outsourcing Limited to get this right.",
+      "logos": [
+        "Gifts n Boxes",
+        "Afroreach Research",
+        "Beacon Trust",
+        "Bravies",
+        "Chairo Properties",
+        "Demipos Hotel",
+        "Fourtwoseven Engineering",
+        "Grown and Glow",
+        "La Luna Restaurant",
+        "Tifes Hub",
+        "Toolbox Ateliers",
+        "Super Rise and Shine"
+      ]
+    },
+    {
+      "type": "form",
+      "heading": "Request A Free Consultation",
+      "sub": "Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)",
+      "form_id": "leadForm",
+      "button": "Submit",
+      "fields": [
+        { "name": "leadName", "placeholder": "Full Name", "input_type": "text" },
+        { "name": "leadPhone", "placeholder": "Phone Number", "input_type": "tel" },
+        { "name": "leadCompany", "placeholder": "Company Name", "input_type": "text" },
+        { "name": "leadEmail", "placeholder": "Email Address", "input_type": "email" }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "ath-jobs",
+      "heading": "Need A Job in Nigeria? Join Our Community Now.",
+      "button": "Join ATH Job Community",
+      "href": "https://bit.ly/athjobs",
+      "blank": true
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "entries": [
+        { "q": "Is ATH Recruiters the same as Abuja Talent Hub?", "a": "Yes. ATH Recruiters is the official recruitment brand also known as Abuja Talent Hub, operated by Traction Outsourcing Limited. Both names refer to the same verified community of ready-to-work candidates and the same recruitment service." },
+        { "q": "Is ATH Recruiters an affordable recruitment agency in Nigeria?", "a": "Yes. ATH Recruiters is built to be one of the more affordable recruitment agencies in Nigeria, with plans starting from ₦30,000 for select roles, keeping pricing accessible for small businesses and private individuals, not just large corporations." },
+        { "q": "Is ATH Recruiters a domestic staff recruitment agency in Nigeria?", "a": "Yes. ATH Recruiters works as a domestic staff recruitment agency in Abuja and across Nigeria, placing housekeepers, cooks, drivers, nannies, and other personal staff for private homes and individuals who need people they can trust." },
+        { "q": "How fast can ATH Recruiters fill a role?", "a": "Turnaround depends on the plan. Plan A offers a 24 to 48 hour turnaround for subscribers, Plan B typically delivers qualified candidates within 2 weeks for specialised roles, and Plan C is a fully managed process suited to leadership and bulk hires." }
+      ]
+    }
+  ]
+}

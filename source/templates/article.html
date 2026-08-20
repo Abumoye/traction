@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="article-hero">
+  <div class="container">
+    <span class="tag-pill">{{ tag }}</span>
+    <h1>{{ title }}</h1>
+    <div class="article-byline">
+      <span><i class="fas fa-building"></i>{{ byline.author }}</span>
+      <span><i class="fas fa-calendar"></i>{{ byline.date }}</span>
+      <span><i class="fas fa-clock"></i>{{ byline.read_time }}</span>
+    </div>
+  </div>
+  <div class="article-hero-img reveal">
+    <img src="{{ image }}" alt="{{ title }}" fetchpriority="high">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <a href="/articles/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Articles</a>
+    <div class="article-layout">
+      <article class="article-body reveal">
+        <p class="dek">{{ dek }}</p>
+
+        {% for sec in sections %}
+          {% if sec.type == 'quote' %}
+            <div class="pull-quote">{{ sec.text }}</div>
+          {% else %}
+            {% if sec.heading %}<h2>{{ sec.heading }}</h2>{% endif %}
+            {% if sec.paragraphs %}{% for p in sec.paragraphs %}<p>{{ p }}</p>{% endfor %}{% endif %}
+            {% if sec.list %}
+            <ul>
+              {% for li in sec.list %}<li>{% if li.b %}<strong>{{ li.b }}</strong> {% endif %}{{ li.t }}</li>{% endfor %}
+            </ul>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        {% if cta %}
+        <div class="article-cta">
+          <h3>{{ cta.title }}</h3>
+          <p>{{ cta.text }}</p>
+          <a href="{{ cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ cta.button }}</a>
+        </div>
+        {% endif %}
+
+        {% if faq and faq.entries %}
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list" style="margin:0;">
+          {% for item in faq.entries %}
+          <details class="faq-item">
+            <summary>{{ item.q }}</summary>
+            <div class="faq-answer">{{ item.a }}</div>
+          </details>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+
+      <aside>
+        <div class="sidebar-block cta reveal">
+          <h4>Ready to Work With Us?</h4>
+          <p>Book a free 30-minute strategy call. We will review your business needs and tell you exactly how we can help.</p>
+          <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call." class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px;" target="_blank" rel="noopener">Book a Free Strategy Call</a>
+        </div>
+        <div class="sidebar-block reveal">
+          <h4>Our Services</h4>
+          {% for s in sidebar.services %}<a href="{{ s.href }}">{{ s.title }}</a>{% endfor %}
+        </div>
+        <div class="sidebar-block reveal">
+          <h4>More Insights</h4>
+          {% for i in sidebar.insights %}<a href="{{ i.href }}">{{ i.title }}</a>{% endfor %}
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">{{ hero.eyebrow }}</span>
+    <h1>{{ hero.headline }}</h1>
+    <p class="lede">{{ hero.sub }}</p>
+    <div class="hero-actions">
+      <a href="{{ hero.primary_cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ hero.primary_cta.label }}</a>
+      <a href="{{ hero.secondary_cta.href }}" class="btn btn-ghost">{{ hero.secondary_cta.label }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <h2 class="section-title reveal">Our Services</h2>
+    <p class="section-sub reveal">Six ways we build, staff, and structure high-performance businesses across Nigeria.</p>
+    <div class="grid grid-3">
+      {% for s in services %}
+      <div class="card reveal">
+        <div class="icon-badge"><i class="fas {{ s.icon }}"></i></div>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.text }}</p>
+        <a href="{{ s.href }}" class="link-arrow">{{ s.cta }} <i class="fas fa-arrow-right"></i></a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-ash">
+  <div class="container">
+    <h2 class="section-title reveal">{{ why_us.title }}</h2>
+    <p class="section-sub reveal">{{ why_us.sub }}</p>
+    <div class="grid grid-3">
+      {% for p in why_us.points %}
+      <div class="point reveal">
+        <div class="num">0{{ loop.index }}</div>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="text-align:center;margin-top:50px;">
+      <a href="{{ why_us.cta.href }}" class="btn btn-primary reveal" target="_blank" rel="noopener">Get a Free Clarity Call</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title reveal">{{ difference.title }}</h2>
+    <p class="section-sub reveal">{{ difference.sub }}</p>
+    <div class="grid grid-2">
+      {% for c in difference.cards %}
+      <div class="diff-card reveal">
+        <h3>{{ c.title }}</h3>
+        <p>{{ c.text }}</p>
+        <a href="{{ c.href }}" class="link-arrow">{{ c.cta }} <i class="fas fa-arrow-right"></i></a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-ash">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;flex-wrap:wrap;gap:16px;">
+      <h2 class="section-title reveal" style="text-align:left;margin:0;">{{ insights.title }}</h2>
+      <a href="{{ insights.cta.href }}" class="link-arrow reveal">{{ insights.cta.label }} <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="grid grid-3">
+      {% for i in insights.entries %}
+      <a href="{{ i.href }}" class="card insight-card reveal">
+        <img src="{{ i.image }}" alt="{{ i.title }}" loading="lazy">
+        <div class="body">
+          <span class="tag-pill">{{ i.tag }}</span>
+          <h3>{{ i.title }}</h3>
+          <p>{{ i.text }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title reveal">{{ testimonials.title }}</h2>
+    <div class="grid grid-2" style="max-width:820px;margin:0 auto;">
+      {% for t in testimonials.entries %}
+      <div class="card testimonial reveal">
+        <div class="reviewer">
+          <div class="avatar">{{ t.initials }}</div>
+          <div>
+            <div style="font-weight:700;">{{ t.name }}</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">"{{ t.text }}"</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="{{ testimonials.cta.href }}" class="link-arrow reveal" target="_blank" rel="noopener">{{ testimonials.cta.label }} <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="section tight bg-ash">
+  <div class="container">
+    <h2 class="section-title reveal">{{ brands.title }}</h2>
+    <div class="logo-strip reveal">
+      {% for l in brands.logos %}
+      <div class="logo-chip">{{ l }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title reveal">{{ faq.title }}</h2>
+    <div class="faq-list reveal">
+      {% for item in faq.entries %}
+      <details class="faq-item">
+        <summary>{{ item.q }}</summary>
+        <div class="faq-answer">{{ item.a }}</div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="cta-band reveal">
+    <h2>{{ cta_section.title }}</h2>
+    <p>{{ cta_section.text }}</p>
+    <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call." class="btn btn-primary" target="_blank" rel="noopener">{{ cta_section.button }}</a>
+  </div>
+</section>
+
+{% endblock %}

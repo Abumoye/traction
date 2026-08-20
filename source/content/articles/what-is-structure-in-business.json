@@ -1,0 +1,120 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/what-is-structure-in-business/index.html",
+    "url": "/articles/what-is-structure-in-business/"
+  },
+  "meta": {
+    "title": "What Is Structure in Business? How It Works and When to Start | Nigeria",
+    "description": "Business structure is not just your CAC registration. It is how your business is organised to run without constant intervention. Here is what it means, how it works, and when Nigerian founders should build it."
+  },
+  "tag": "Business Structure · Nigerian Founders",
+  "title": "What Is Structure in Business? How Does It Work? When Should You Start?",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "July 27, 2026",
+    "read_time": "3 min read"
+  },
+  "image": "/images/articles/what-is-structure-in-business.jpg",
+  "dek": "When most Nigerian founders hear \"business structure,\" they think of CAC registration. The certificate on the wall. The RC number on the company letterhead. That is part of the picture, but it is the smallest part. Your legal registration tells the government your business exists. Structure is what determines whether your business actually works.",
+  "sections": [
+    {
+      "type": "text",
+      "heading": "What Structure Actually Means",
+      "paragraphs": [
+        "Structure is the internal framework that determines how your business operates on a daily basis. It answers questions like: who is responsible for what, who reports to whom, how decisions get made, what happens when the CEO is unavailable, and what stops one person from unknowingly doing the same job as another person two desks away.",
+        "A business without structure is not necessarily a failing business. Many Nigerian startups run profitably for years with no formal structure at all. But at some point, usually around the time the founder starts feeling like they cannot step away without something breaking, the absence of structure becomes the single biggest drag on the business.",
+        "That feeling is not a leadership problem. It is a structure problem."
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Your CAC registration tells the government your business exists. Structure is what determines whether it can actually run."
+    },
+    {
+      "type": "text",
+      "heading": "How Structure Works in Practice",
+      "paragraphs": [
+        "A structured business looks different from an unstructured one in ways that are immediately visible to anyone who works inside it."
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "Without Structure",
+      "list": [
+        { "t": "Every decision goes through the founder" },
+        { "t": "Nobody is sure who is responsible for what" },
+        { "t": "Two people doing the same job without knowing it" },
+        { "t": "New hires take months to understand how things work" },
+        { "t": "The business slows down when the CEO travels" }
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "With Structure",
+      "list": [
+        { "t": "Decisions happen at the right level without escalation" },
+        { "t": "Every role has a clear owner and defined scope" },
+        { "t": "Reporting lines are documented and actually followed" },
+        { "t": "New hires onboard to a system, not to a person" },
+        { "t": "The business keeps running when the CEO is away" }
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "Structure is not about bureaucracy. A small business with ten people can be well-structured. A company with two hundred people can be a complete mess. What matters is whether the internal framework matches how the business actually needs to operate at its current size and stage."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "When Should You Start?",
+      "paragraphs": [
+        "Earlier than you think. The honest answer for most Nigerian founders is: before your fifth hire.",
+        "At two or three people, everyone knows what everyone else is doing and the founder can manage everything personally. That works. At five or more people, informal coordination starts breaking down. People step on each other's responsibilities. The founder becomes the only person who knows how things connect. Accountability gaps appear. The business starts running on the founder's energy rather than its own systems.",
+        "By the time most founders decide they need structure, they are already managing the symptoms of not having it. They are dealing with the accountability gaps, the duplicated roles, the decisions that nobody will make without the CEO's approval. Building structure at that point is more expensive and more disruptive than building it early would have been.",
+        "The best time to build structure is when the business is calm enough that you can think clearly about how it should work, not when you are already firefighting because it is not working well enough.",
+        "The second best time is now."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "What Getting Structure Right Actually Produces",
+      "paragraphs": [
+        "A business with the right structure can hire and onboard new people without the founder personally explaining everything. It can handle a senior departure without a crisis. It can present clearly to an investor or a major client because the governance is documented and the accountability is visible. It can grow without the founder becoming an ever-tightening bottleneck at the centre of every decision.",
+        "That is not a complicated outcome to describe. It is a significant one to build. The path to it starts with an honest look at how the business is actually organised right now and a clear plan for how it needs to be organised to get where it is going.",
+        "That is exactly what <a href=\"/services/startup-structuring/\">Traction Outsourcing Limited's Startup Structuring service</a> is built to do for new and early-stage Nigerian businesses, and what the <a href=\"/services/corporate-restructuring/\">Corporate Restructuring service</a> does for businesses that have grown past their original design. If you are not sure which applies to your situation, a <a href=\"/services/business-advisory/\">Business Advisory conversation</a> is the right starting point."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Not Sure Where to Start? Talk to Us First.",
+    "text": "Book a free 30-minute call with our team. We will review where your business is right now, identify the structural gaps that are costing you, and tell you clearly what needs to happen next.",
+    "button": "Book Your Free 30-Minute Call",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20call%20about%20structuring%20my%20business."
+  },
+  "faq": {
+    "entries": [
+      { "q": "What is business structure in Nigeria?", "a": "Business structure in Nigeria refers to how a business is internally organised to operate: who is responsible for what, how decisions are made, how roles are defined, and how reporting lines work. It is separate from legal registration at the CAC, which gives the business legal existence but does not define how it actually runs. A business can be registered but have no real internal structure, and many Nigerian businesses operate this way until the absence of structure begins costing them money and good people." },
+      { "q": "When should a Nigerian business start building its structure?", "a": "Before the fifth hire. Most Nigerian founders wait until the business is already feeling chaotic before thinking about structure, which means they spend months managing problems that a clear structure would have prevented. The right time to build structure is when the business is calm enough to do it properly. A business with two or three people can operate informally. A business with five or more people that has no defined roles, no clear reporting lines, and no documented decision-making process is already accumulating structural problems that will become expensive to fix later." },
+      { "q": "What is the difference between business structure and CAC registration in Nigeria?", "a": "CAC registration gives your business legal existence. It is the certificate that says your business is a recognised entity under Nigerian law. Business structure is what happens inside that entity: how it is organised to function, who is accountable for what, and how it makes and executes decisions. Registration is a one-time administrative process. Structure is an ongoing operational framework that needs to be designed, implemented, and maintained as the business grows." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
+      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
+      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
+      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+    ],
+    "insights": [
+      { "title": "What Is Business Restructuring?", "href": "/articles/what-is-business-restructuring-nigeria/" },
+      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
+      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
+      { "title": "How to Build a Resilient Management Team", "href": "/articles/how-to-build-resilient-management-team-nigeria/" },
+      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" }
+    ]
+  }
+}

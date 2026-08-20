@@ -1,0 +1,60 @@
+name: Build site from source and publish
+
+# Rebuilds the static site from source/ (Jinja2 templates + JSON content)
+# whenever source/ changes on main, and commits the built output back into
+# the repo root — which is what GitHub Pages actually serves. This keeps
+# Pages configuration untouched (still "deploy from branch: main / root");
+# editing a JSON file under source/content/ and pushing to main is enough
+# to update the live site, no local build step required.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "source/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build dependencies
+        run: pip install jinja2 beautifulsoup4 lxml
+
+      - name: Build site
+        working-directory: source
+        run: python3 build.py
+
+      - name: Publish build output to repo root
+        run: |
+          set -e
+          SITE_DIRS="articles book-a-call brands css events founder images js partnerships privacy-policy services"
+          for d in $SITE_DIRS; do
+            rm -rf "$d"
+            cp -r "source/dist/$d" "$d"
+          done
+          cp source/dist/index.html index.html
+          cp source/dist/search-index.json search-index.json
+          rm -rf source/dist
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "traction-site-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add articles book-a-call brands css events founder images js partnerships privacy-policy services index.html search-index.json
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "Auto-build: publish site from source/ [skip ci]"
+            git push
+          fi

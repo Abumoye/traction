@@ -1,0 +1,92 @@
+{
+  "_route": { "template": "flex.html", "output": "partnerships/hallmark-hmo/index.html", "url": "/partnerships/hallmark-hmo/" },
+  "meta": {
+    "title": "Hallmark HMO Partnership | Traction Outsourcing Limited",
+    "description": "Traction Outsourcing partners with Hallmark HMO, giving businesses and individuals affordable HMO plans across 10,000+ hospitals in Nigeria."
+  },
+  "hero": {
+    "eyebrow": "HMO",
+    "headline": "Hallmark HMO Partners with Traction Outsourcing",
+    "sub": "Traction Outsourcing Limited has partnered with Hallmark HMO to give businesses and individuals access to affordable, process-driven health insurance across a network of more than 10,000 hospitals in Nigeria.",
+    "image": "/images/articles/hallmark-hmo.jpg",
+    "image_alt": "Hallmark HMO Partners with Traction Outsourcing"
+  },
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "By Traction Outsourcing Limited · July 2026",
+        "In Partnership With Hallmark HMO"
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "Starting July 2026, <a href=\"/\">Traction Outsourcing</a> clients, staff, and the wider public can access Hallmark HMO plans through Traction Outsourcing. Hallmark HMO offers health insurance for corporates and private individuals, with coverage options spanning general health, cosmetics, surgeries, and special health cases, all delivered through a hospital network of over 10,000 facilities. The partnership has no fixed end date and is expected to run on an ongoing basis.",
+        "The partnership came about because both organizations share a similar vision, providing affordable opportunities for Nigerian businesses. Through Traction Outsourcing, Nigerian businesses can now access affordable, process-driven, and accessible health insurance options for people of all ages."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "HMO Companies in Abuja: What This Partnership Means",
+      "paragraphs": [
+        "For businesses in Abuja searching for a reliable HMO provider, this partnership removes a lot of the guesswork. Traction Outsourcing already works closely with companies on HR, staffing, and structure, and now that relationship extends to health coverage. The arrangement is not exclusive, so clients are free to keep using other HMO providers if they choose. What Traction Outsourcing clients and partners gain instead are periodic discounts on their preferred Hallmark HMO plans, on top of the ease of sorting out staff healthcare through a company they already work with."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "HMO Cover for Your Staff",
+      "paragraphs": [
+        "Getting your team covered starts with a simple email. Send your company's health insurance needs to <a href=\"mailto:partner@tolnigeria.com\">partner@tolnigeria.com</a>, including your company name, location, contact number, and number of staff. A Hallmark HMO officer will follow up directly with the plan options available for your team."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "HMO for Your Family",
+      "paragraphs": [
+        "This is not limited to companies. Individuals looking for private HMO cover for themselves or their families can reach out directly on WhatsApp at 0805 203 3145. Include your full name, location, email address, and the number of individuals to be covered, and the team will take it from there."
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Prince Elijah Abumoye, founder of Traction Outsourcing Limited, said: \"As an HR professional, this news is a personal win for me. I understand the struggle of finding the right HMO plug for the companies I have worked with. Most come with so many bottlenecks that make onboarding and receiving treatment exhausting. This is why we will evangelize this news to as many businesses as possible. At least now, the problem will not be the price point. The HMO plans here are accessible and affordable.\""
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "Whether you are a business owner trying to sort out staff welfare or an individual looking for dependable family cover, this partnership is built to make that process simpler. Reach out using the details above, or get in touch with Traction Outsourcing directly to learn more."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Get In Touch",
+      "button": "Ask About This Partnership on WhatsApp",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20Hallmark%20HMO%20partnership",
+      "blank": true
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "How can my company get Hallmark HMO cover for our staff through Traction Outsourcing?",
+          "a": "Send an email to partner@tolnigeria.com with your company name, location, contact number, and number of staff. A Hallmark HMO officer will respond with the available options for your business."
+        },
+        {
+          "q": "Can individuals or families sign up for Hallmark HMO through Traction Outsourcing, or is it only for companies?",
+          "a": "Individuals and families can apply too. Send a WhatsApp message to 0805 203 3145 with your full name, location, email address, and the number of individuals to be covered."
+        },
+        {
+          "q": "Is the Hallmark HMO partnership exclusive to Traction Outsourcing clients?",
+          "a": "No, it is not exclusive. However, Traction Outsourcing clients and partners enjoy periodic discounts on their preferred HMO plans."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "Want to understand how HMO works for Nigerian businesses? Read our guide: <a href=\"/articles/what-is-hmo-nigeria/\">What Is HMO in Nigeria?</a>"
+      ]
+    }
+  ]
+}

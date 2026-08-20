@@ -1,0 +1,135 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/article-organogram/index.html",
+    "url": "/articles/article-organogram/"
+  },
+  "meta": {
+    "title": "How to Create an Organogram in Nigeria | Traction Outsourcing",
+    "description": "Need help creating an organogram? A step-by-step guide for Nigerian business owners, with a worked example for a real estate company."
+  },
+  "tag": "Business Structure",
+  "title": "How to Create an Organogram for Your Nigerian Business",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "July 14, 2026",
+    "read_time": "4 min read"
+  },
+  "image": "/images/articles/article-organogram.jpg",
+  "dek": "Designing a corporate organogram is not just about drawing lines on a piece of paper. It is about mapping the nervous system of your business.",
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "In our work at Traction Outsourcing Limited, we often see businesses that function like a series of busy hallways where everyone runs into everyone else, but nobody knows who owns the final outcome. A clear organogram solves this by turning chaos into intentional order. When your team members know exactly where they fit and who they answer to, you stop paying for overlapping roles and start paying for clear results."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Step 1: Audit Your Operational Reality",
+      "paragraphs": [
+        "Do not start by drawing a dream team that you hope to hire next year. Start by writing down every task your business completes today. Who manages the daily finances? Who handles client communication? Who makes the final decision when a project stalls? Map the functions that currently exist. If you find that one person is doing the work of three departments, that is your first insight. An organogram must reflect the actual flow of work, not just the desired aesthetic."
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "Step 2: Group Functions by Impact",
+      "paragraphs": [
+        "Once you have your list of tasks, group them into core departments. Most growing businesses in Nigeria thrive when they separate these four pillars:"
+      ],
+      "list": [
+        { "b": "Operations:", "t": "The people who build, maintain, or deliver the core product or service." },
+        { "b": "Finance & Administration:", "t": "The gatekeepers of the budget, legal compliance, and internal office stability." },
+        { "b": "Growth & Sales:", "t": "The engine responsible for new revenue and client relationships." },
+        { "b": "Talent & Culture:", "t": "The team that ensures the right people are in the right seats and that the workplace remains a place where people want to stay." }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Step 3: Define Reporting Lines and Authority",
+      "paragraphs": [
+        "This is where most structures fail. You must decide if your culture is top-down or collaborative. For a small business, a flat structure might work. As you scale, you need vertical accountability. Every person must have one clear supervisor. If an employee reports to two managers, you have created a bottleneck where decisions go to die."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Step 4: Keep It Scalable",
+      "paragraphs": [
+        "Build your organogram to be modular. If you are a startup, you might have one person acting as both the Sales Lead and the Customer Support Manager. That is fine. Just ensure the organogram shows these as two distinct functional boxes even if one person occupies both. This way, when the time comes to hire, you simply slice the role in half and bring on a new person to take over the support function."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Consider This Example: A Real Estate Company",
+      "paragraphs": [
+        "Imagine you work with a young real estate management firm. You might organize it this way: the Director sits at the top, and underneath, three primary leads carry the business."
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "Sample Organogram for a Real Estate Management Firm",
+      "list": [
+        { "b": "Operations Lead", "t": "Property maintenance, listings, site inspections, vendor negotiations, contractor relations" },
+        { "b": "Sales & Brokerage Lead", "t": "Property listings, client tours, partnerships & communication, contract agreements" },
+        { "b": "Finance & Admin Lead", "t": "Rent collection, disbursement protocols, cost & expenditure management, legal paperwork" }
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "If you are just starting, you might be all three leads. You draw the boxes for all three, but you write your own name in each. As the business grows, you hire a person for each box. The structure stays the same, but the burden on your personal capacity decreases."
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Your organogram is a living document. If your business is failing to hit its targets, the answer is often found in the lines you drew between the boxes."
+    },
+    {
+      "type": "text",
+      "heading": "Review It Like You Mean It",
+      "paragraphs": [
+        "Review your organogram from time to time, usually every six months or annually. Remove the friction, clarify the reporting, and give your people the space to execute their roles and achieve their targets with brutal execution."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "This Is a Functional Organogram",
+      "paragraphs": [
+        "What has been described above is known as a <strong>functional organogram</strong>. There are three other types, hierarchical, flat, and matrix, however every business between zero and three years old should focus on the functional organogram. During this stage of your company's growth, you want to improve employee effectiveness at work, efficiency at handling tasks, and job satisfaction. You want to lay less emphasis on who wields what authority and more on who gets what done.",
+        "If you have not yet registered the business itself, start there first. Read our guide on <a href=\"/articles/how-to-register-a-company-in-nigeria/\">how to register a company in Nigeria</a> before you build the organogram, the structure works best once the entity behind it legally exists."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "",
+    "text": "",
+    "button": "Get Help Building Your Organogram",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  },
+  "faq": {
+    "entries": [
+      { "q": "What type of organogram should a new business use?", "a": "A functional organogram, which is the structure described in this guide. There are three other types, hierarchical, flat, and matrix, but businesses between zero and three years old should focus on the functional structure, since the priority at that stage is employee effectiveness, efficiency, and clarity over who gets things done, not who holds the most authority." },
+      { "q": "How do I create an organogram for a real estate company?", "a": "Start with the director at the top, then split the business into its core functions. For a young real estate management firm, that usually means an Operations Lead handling property maintenance, listings, and vendor relations; a Sales and Brokerage Lead handling client tours, partnerships, and contract agreements; and a Finance and Admin Lead handling rent collection, disbursement, and legal paperwork. If you are a solo founder, you can occupy all three boxes yourself and hire into each one as the business grows." },
+      { "q": "How do I create an organogram in Nigeria?", "a": "Audit the tasks your business actually performs today, group them into core departments such as Operations, Finance and Administration, Growth and Sales, and Talent and Culture, give every person one clear supervisor, and design the structure to stay modular as you hire. Traction Outsourcing Limited helps Nigerian businesses build and review this kind of structure directly." },
+      { "q": "I need help creating an organogram. Where do I start?", "a": "Start by listing every task your business completes today rather than the roles you eventually want. The gaps and overlaps in that list point directly to how your organogram should be structured. If you would rather have this done for you, Traction Outsourcing Limited offers business advisory and structuring support for Nigerian SMEs." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
+      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
+      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
+      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+    ],
+    "insights": [
+      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
+      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
+      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
+      { "title": "Kigali: Africa's Rising Business Hub", "href": "/articles/kigali-africa-business-hub/" },
+      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" },
+      { "title": "Employee Leave & Compensation", "href": "/articles/employee-leave-and-compensation-in-nigeria/" }
+    ]
+  }
+}

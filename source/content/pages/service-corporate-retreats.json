@@ -1,0 +1,147 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "services/corporate-retreats/index.html",
+    "url": "/services/corporate-retreats/"
+  },
+  "meta": {
+    "title": "Corporate Retreat Planning Nigeria | Traction Outsourcing",
+    "description": "Corporate retreat planning and events management in Nigeria. Executive team building, strategy retreats, and leadership offsites across Abuja and Africa."
+  },
+  "hero": {
+    "eyebrow": "Events & Retreats",
+    "headline": "Corporate Retreat Planning & Events Management",
+    "sub": "Strategy sessions do not need a boardroom to work. We design, plan, and facilitate gatherings that put business leaders in a room together, then take them somewhere worth remembering.",
+    "actions": [
+      {
+        "label": "Plan Your Retreat",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20discuss%20planning%20a%20corporate%20retreat",
+        "style": "btn-primary"
+      },
+      {
+        "label": "Chat on WhatsApp",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20discuss%20planning%20a%20corporate%20retreat",
+        "style": "btn-secondary",
+        "blank": true
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "heading": "Upcoming Events",
+      "sub": "Here is what is on the calendar right now. New events are added as they are confirmed.",
+      "columns": 3,
+      "style": "case-study",
+      "entries": [
+        {
+          "tag": "Next Event · November 21 – 28, 2026 · Kigali, Rwanda",
+          "title": "T-ICR 2026: Traction Outsourcing International Corporate Retreat",
+          "text": "A week-long strategy retreat for CEOs, senior executives, and entrepreneurs, built around Kigali, Rwanda. Five speakers, two attendance tiers, and a week fully out of the office.",
+          "cta": "Enquire About T-ICR 2026",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Events%20%26%20Retreats%20at%20Traction%20Outsourcing%20Limited."
+        },
+        {
+          "tag": "Coming Soon",
+          "title": "Leadership Roundtable",
+          "text": "A recurring gathering for senior HR and operations leaders. Details to be announced."
+        },
+        {
+          "tag": "Coming Soon",
+          "title": "Business Advisory Workshop",
+          "text": "A working session on structuring, negotiation, and growth decisions. Details to be announced."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "Our events exist for one reason: business leaders make better decisions when they step out of the office and sit with people solving the same problems. Some of what we host is intimate, some is international, but all of it is built as a strategy environment first, not a networking add-on."
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "What We Plan and Facilitate",
+      "sub": "From a one-day board strategy session to a week-long international executive retreat, the brief determines the design.",
+      "columns": 3,
+      "entries": [
+        {
+          "title": "Executive Team Building Retreats",
+          "text": "Facilitated offsites that build cohesion between senior management, aligned around shared goals and clear decision-making frameworks."
+        },
+        {
+          "title": "Leadership Strategy Retreats",
+          "text": "Structured sessions designed around strategic goal-setting, business direction, and the decisions that will shape the next 12 to 36 months."
+        },
+        {
+          "title": "Board Strategy Sessions",
+          "text": "Facilitated board-level retreats covering governance, strategic priorities, and stakeholder alignment in an environment built for deep work."
+        },
+        {
+          "title": "International Executive Retreats",
+          "text": "Full retreat packages including logistics, accommodation, facilitation, and in-country coordination, like the T-ICR 2026 held in Kigali, Rwanda."
+        },
+        {
+          "title": "Annual Company Retreats",
+          "text": "End-of-year or mid-year company-wide gatherings combining strategy, recognition, and team bonding for organizations across Nigeria."
+        },
+        {
+          "title": "Workshops and Roundtables",
+          "text": "Recurring CEO roundtables, HR leadership forums, and sector-specific working sessions for executives navigating the same challenges."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Tell us your team size, your goal, and your timeline.",
+      "button": "Start Planning Your Retreat",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20discuss%20planning%20a%20corporate%20retreat"
+    },
+    {
+      "type": "logos",
+      "heading": "Join Our Clients",
+      "logos": [
+        "Gifts n Boxes",
+        "Afroreach Research",
+        "Beacon Trust",
+        "Bravies",
+        "Chairo Properties",
+        "Demipos Hotel",
+        "Fourtwoseven Engineering",
+        "Grown and Glow",
+        "La Luna Restaurant",
+        "Tifes Hub",
+        "Toolbox Ateliers",
+        "Super Rise and Shine"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "Does Traction Outsourcing plan corporate retreats in Nigeria?",
+          "a": "Yes. Traction Outsourcing Limited plans and manages corporate retreats for businesses across Nigeria, including team-building retreats, leadership retreats, and annual strategy offsite events. We handle venue, programming, facilitation, logistics, and accommodation depending on the scope of the engagement."
+        },
+        {
+          "q": "Can Traction Outsourcing organise a corporate retreat outside Nigeria?",
+          "a": "Yes. Our international retreat capability includes the T-ICR, the Traction Outsourcing International Corporate Retreat, which we host annually in an African destination city. We also arrange bespoke international retreats for corporate clients on request. The 2026 edition takes place in Kigali, Rwanda in November."
+        },
+        {
+          "q": "What is included in a Traction Outsourcing corporate retreat package?",
+          "a": "Packages vary by scope, but typically include venue selection and booking, programme design, facilitation and speaker coordination, accommodation arrangements, ground logistics, and post-retreat documentation. We build the package around what the client wants to achieve, not a fixed template."
+        },
+        {
+          "q": "How far in advance should we book a corporate retreat?",
+          "a": "For domestic retreats, a minimum of four to six weeks allows us to source the right venue and build the programme properly. For international retreats, three months is advisable, particularly for group travel and accommodation. The earlier you engage us, the more options we can offer."
+        }
+      ]
+    }
+  ],
+  "final_cta": {
+    "title": "Ready to Plan Your Retreat?",
+    "text": "Speak with our consulting team about how Events & Retreats can work for your business.",
+    "button": "Start Planning Your Retreat",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  }
+}

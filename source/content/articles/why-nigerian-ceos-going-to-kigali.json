@@ -1,0 +1,81 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/why-nigerian-ceos-going-to-kigali/index.html",
+    "url": "/articles/why-nigerian-ceos-going-to-kigali/"
+  },
+  "meta": {
+    "title": "Why Nigerian CEOs Are Going to Kigali in November 2026",
+    "description": "Kigali is becoming the destination of choice for Nigerian business leaders looking to connect, strategise, and explore East Africa. Here is why, and what T-ICR 2026 is bringing them together."
+  },
+  "tag": "Events & Retreats · T-ICR 2026",
+  "title": "Why Nigerian CEOs Are Going to Kigali in November 2026",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "July 27, 2026",
+    "read_time": "3 min read"
+  },
+  "image": "/images/articles/why-nigerian-ceos-going-to-kigali.jpg",
+  "dek": "Kigali was not always on the radar of Nigerian business leaders. That has changed. In November 2026, a select group of Nigerian executives will be in Rwanda for nine days, not for tourism, but for the kind of high-level conversations and strategic connections that rarely happen inside a conference room back home.",
+  "sections": [
+    {
+      "type": "text",
+      "heading": "What Kigali Offers That Other Cities Do Not",
+      "paragraphs": [
+        "Kigali has spent the last two decades becoming one of the most functional cities in Africa. It is clean, safe, well-organised, and governed by a leadership that has made ease of doing business a deliberate national priority. For Nigerian executives accustomed to navigating infrastructure challenges at home, Kigali is often a revelation.",
+        "Beyond the city itself, Rwanda sits at the gateway to East Africa, a market of over 400 million people with growing middle classes, rising consumer demand, and a regulatory environment that has been actively reformed to attract business. For Nigerian companies considering continental expansion, Kigali offers direct, on-the-ground exposure to that opportunity in a way that no amount of research from Lagos or Abuja can replicate."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Why the Retreat Format Matters",
+      "paragraphs": [
+        "Nigerian CEOs who attend conferences know the limitation of the format: keynote speeches, brief networking intervals, and very little time for the real conversations that produce business outcomes. The retreat format is different. Nine days in one location, with a small, curated group of business leaders, creates the conditions for the kind of deep, honest, strategic exchange that is genuinely rare.",
+        "T-ICR 2026 is intentionally limited to 30 participants. That constraint is a feature, not a limitation. It means every person in the room gets direct access to every mentor and every fellow participant. The connections made at a retreat of this size tend to be more durable and commercially useful than those made in a room of five hundred people."
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "The best business decisions are made in the right conversations. T-ICR 2026 is designed to create those conversations in one of Africa's most inspiring cities."
+    },
+    {
+      "type": "text",
+      "heading": "Who Is Going and Why It Matters to Be There",
+      "paragraphs": [
+        "The Traction Outsourcing International Corporate Retreat 2026 (T-ICR 2026) brings together Nigerian and African business leaders, entrepreneurs, and executives alongside mentors including Dr. Stephen Akintayo, Eizu Uwaoma, Adeyinka Igbinoba, and William Adelewa ESQ, each bringing a different perspective on business growth, leadership, and African market strategy.",
+        "The retreat runs November 22 to 30, 2026. Seats are capped at 30. <a href=\"/events/\">Full details and registration are on the T-ICR 2026 page.</a> If you are considering attending, the decision is worth making early, the retreat consistently fills before the registration deadline.",
+        "<strong>Further Reading:</strong> <a href=\"/articles/kigali-africa-business-hub/\">Kigali: Africa's Cleanest City and Rising Business Hub</a>, <a href=\"/articles/what-is-traction-in-business/\">What Is Traction in Business?</a>, <a href=\"/services/corporate-retreats/\">Corporate Retreats</a>."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Talk to Our Team Before You Make a Decision.",
+    "text": "Book a free 30-minute advisory call. No forms, no commitments, just a direct conversation about your business and what it needs.",
+    "button": "Book Your Free 30-Minute Call",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  },
+  "faq": {
+    "entries": [
+      { "q": "What is T-ICR 2026?", "a": "T-ICR 2026 is the Traction Outsourcing International Corporate Retreat, taking place in Kigali, Rwanda from November 22 to 30, 2026. It is an executive retreat designed for Nigerian and African business leaders, combining strategic business sessions, mentorship from experienced business figures, and the opportunity to experience Kigali as a base for East African expansion. Seats are limited to 30 participants." },
+      { "q": "Why is Kigali chosen for a Nigerian business retreat?", "a": "Kigali combines practical business advantages with an exceptional quality of life. It is one of the safest, cleanest, and most well-organised cities in Africa, with a government actively courting foreign investment and a growing presence of international businesses and development organisations. For Nigerian executives exploring East African expansion, Kigali offers direct exposure to a different but complementary business environment." },
+      { "q": "How do I register for T-ICR 2026?", "a": "Registration for T-ICR 2026 is open at tolnigeria.com/events/register/. The retreat is priced at ₦3,550,000 or $2,600 USD. Only 30 seats are available and registration closes November 1, 2026." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
+      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
+      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
+      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+    ],
+    "insights": [
+      { "title": "Kigali: Africa's Cleanest City and Rising Business Hub", "href": "/articles/kigali-africa-business-hub/" },
+      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
+      { "title": "How to Build a Resilient Management Team", "href": "/articles/how-to-build-resilient-management-team-nigeria/" },
+      { "title": "Why Nigerian Businesses Train Their Staff", "href": "/articles/why-nigerian-businesses-train-staff/" },
+      { "title": "Traction Outsourcing Limited Client Reviews", "href": "/articles/client-reviews-traction-outsourcing/" }
+    ]
+  }
+}

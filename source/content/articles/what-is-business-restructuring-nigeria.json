@@ -1,0 +1,96 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/what-is-business-restructuring-nigeria/index.html",
+    "url": "/articles/what-is-business-restructuring-nigeria/"
+  },
+  "meta": {
+    "title": "What Is Business Restructuring? Does Your Nigerian Business Need It?",
+    "description": "Business restructuring means rebuilding how your company is organised so it can grow, attract investors, or survive a difficult period. Here is what it means for Nigerian businesses and how to know if you need it."
+  },
+  "tag": "Corporate Restructuring · Business Advisory",
+  "title": "What Is Business Restructuring? Does Your Nigerian Business Need It?",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "July 27, 2026",
+    "read_time": "4 min read"
+  },
+  "image": "/images/articles/what-is-business-restructuring-nigeria.jpg",
+  "dek": "Most Nigerian business owners know something is wrong before they can name it. Revenue is growing but the business feels harder to manage, not easier. Decisions pile up at the top. Nobody seems to know who is responsible for what. That is usually a structure problem, and restructuring is how you fix it.",
+  "sections": [
+    {
+      "type": "text",
+      "heading": "What Business Restructuring Actually Means",
+      "paragraphs": [
+        "Business restructuring is the process of rebuilding how your company is organised, its governance, reporting lines, roles, policies, and decision-making frameworks, so that the structure matches where the business actually is and where it needs to go.",
+        "It is not about changing what your business does. It is about changing how it is built to do it. A business that started with five people and now has fifty is almost certainly running on a structure designed for five. Restructuring rebuilds it for fifty, and for the hundred it is heading toward."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "When a Nigerian Business Needs Restructuring",
+      "paragraphs": [
+        "There is no single trigger, but these are the most consistent signs that a restructuring is overdue."
+      ]
+    },
+    {
+      "type": "list",
+      "list": [
+        { "b": "The founder is the bottleneck.", "t": "If nothing significant moves without you personally approving it, the business has not built the management layer it needs. Restructuring creates that layer with clear authority and accountability." },
+        { "b": "Nobody knows who reports to whom.", "t": "When staff are unclear about their reporting lines, or when those lines exist on paper but not in practice, operational confusion and accountability gaps follow. A proper organogram solves this." },
+        { "b": "You are preparing for investment.", "t": "Investors and institutional partners look at governance structure before they look at revenue. A business without clear equity structure, board-level governance, or defined roles is difficult to invest in, regardless of performance." },
+        { "b": "Two businesses are merging or operating as one group.", "t": "When two previously separate entities need to function as a single group, they need shared governance, unified policy, and a combined structure that works across both entities." },
+        { "b": "A key person left and the business does not know how to proceed.", "t": "When one departure creates a crisis, it means the knowledge and decision-making was concentrated in one person rather than distributed across a proper management structure." }
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Restructuring is not an admission that something went wrong. It is what businesses that are serious about growth do before the problems become obvious."
+    },
+    {
+      "type": "text",
+      "heading": "What Business Restructuring Produces",
+      "paragraphs": [
+        "A well-executed restructuring produces a governance register that documents who has authority over what, clear organograms across every entity, job descriptions and KPIs for senior roles, a performance management system tied to the new structure, staff policy that reflects the restructured business, and a phased implementation roadmap so the new structure actually gets adopted rather than sitting in a folder.",
+        "The output is not a document. It is a business that knows how it runs."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "What Restructuring Does Not Mean",
+      "paragraphs": [
+        "Restructuring does not automatically mean redundancies or cost-cutting. It does not mean replacing your management team. And it does not mean the business was failing. Many restructuring engagements are triggered by growth, the business succeeded faster than its structure could keep up. The restructuring simply catches the structure up to the reality of where the business has arrived."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Talk to Our Team Before You Make a Decision.",
+    "text": "Book a free 30-minute advisory call. No forms, no commitments, just a direct conversation about your business and what it needs.",
+    "button": "Book Your Free 30-Minute Call",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  },
+  "faq": {
+    "entries": [
+      { "q": "What is the difference between business restructuring and startup structuring?", "a": "Startup structuring builds a business foundation from scratch, governance, CAC registration, equity structure, and initial frameworks for a new business. Business restructuring rebuilds an existing structure that has outgrown its original design, needs to accommodate new investors, or has developed governance and reporting problems that are slowing it down." },
+      { "q": "How do I know if my Nigerian business needs restructuring?", "a": "Common signs include: decisions consistently bottlenecked at the founder level, staff who are unclear about who they report to, two people doing the same job or one person doing three jobs, revenue growth that has not translated into operational efficiency, preparation for new investment or a new partner, or a merger of two previously separate entities." },
+      { "q": "How long does business restructuring take in Nigeria?", "a": "A single-entity restructuring, governance register, organogram, JDs and KPIs for key roles, typically takes between two and four weeks. A multi-entity restructuring with shared systems and a phased rollout usually runs closer to eight weeks. The timeline depends on the complexity of the business and how many entities are involved." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
+      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
+      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
+      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+    ],
+    "insights": [
+      { "title": "Restructuring Without Losing Your Best People", "href": "/articles/restructuring-without-losing-your-best-people/" },
+      { "title": "How to Build a Resilient Management Team in Nigeria", "href": "/articles/how-to-build-resilient-management-team-nigeria/" },
+      { "title": "What Is Structure in Business?", "href": "/articles/what-is-structure-in-business/" },
+      { "title": "MD vs CEO in Nigeria", "href": "/articles/md-vs-ceo-nigeria/" },
+      { "title": "Accountability in Business in Nigeria", "href": "/articles/accountability-in-business-nigeria/" }
+    ]
+  }
+}

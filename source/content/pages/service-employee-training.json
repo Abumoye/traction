@@ -1,0 +1,331 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "services/employee-training/index.html",
+    "url": "/services/employee-training/"
+  },
+  "meta": {
+    "title": "Employee Training Nigeria | Traction Outsourcing Limited",
+    "description": "Certificate training courses in Abuja and Lagos: leadership, PCOS & burnout management, business finance, AI literacy, customer service, HR management, and more. Online and in-person across Nigeria."
+  },
+  "hero": {
+    "eyebrow": "Corporate Training",
+    "headline": "Employee Training",
+    "sub": "A strategy is only as good as the team executing it. We train employees to close the gap between what leadership decided and what actually happens on the floor.",
+    "actions": [
+      {
+        "label": "Enquire About A Course",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20training%20courses",
+        "style": "btn-primary"
+      },
+      {
+        "label": "Chat on WhatsApp",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20training%20courses",
+        "style": "btn-secondary",
+        "blank": true
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "text",
+      "heading": "Our Training Catalogue",
+      "sub": "Certificate courses across five tracks, delivered online or in person."
+    },
+    {
+      "type": "grid",
+      "heading": "Leadership & Management Development",
+      "sub": "4 courses",
+      "columns": 3,
+      "style": "plain",
+      "entries": [
+        {
+          "title": "Strategic Management & Business Development",
+          "text": "2 Days · Online/Physical"
+        },
+        {
+          "title": "Change Management & Corporate Restructuring",
+          "text": "2 Days · Online/Physical"
+        },
+        {
+          "title": "People Management for Nigerian Professionals",
+          "text": "3 Days · Online/Physical"
+        },
+        {
+          "title": "Team Building & Collaboration",
+          "text": "1 Day · Online/Physical"
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "Business Finance & Accounting",
+      "sub": "5 courses",
+      "columns": 3,
+      "style": "plain",
+      "entries": [
+        {
+          "title": "Financial Management for CEOs",
+          "text": "3 Weekends · Physical"
+        },
+        {
+          "title": "Financial Management for Non-Finance Managers",
+          "text": "2 Weekends · Physical"
+        },
+        {
+          "title": "Management Account Preparation",
+          "text": "4 Weekends · Online/Physical"
+        },
+        {
+          "title": "Excel Essentials for Accountants",
+          "text": "3 Weekends · Online/Physical"
+        },
+        {
+          "title": "Business Analysis (Foundation)",
+          "text": "3 Days · Online/Physical"
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "AI & Computer Literacy",
+      "sub": "6 courses",
+      "columns": 3,
+      "style": "plain",
+      "entries": [
+        {
+          "title": "Introduction to AI for Business",
+          "text": "4 Days · Online/Physical"
+        },
+        {
+          "title": "Digital Literacy & Workplace Technology",
+          "text": "2 Days · Online/Physical"
+        },
+        {
+          "title": "Microsoft Tools Essentials Introduction",
+          "text": "4 Days · Online/Physical"
+        },
+        {
+          "title": "Google Workspace Essentials Introduction",
+          "text": "3 Days · Online/Physical"
+        },
+        {
+          "title": "Introduction to Productivity & Project Management Tools",
+          "text": "2 Days · Online/Physical"
+        },
+        {
+          "title": "Workplace Digital Safety & Security",
+          "text": "3 Days · Online/Physical"
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "Workplace Management",
+      "sub": "9 courses",
+      "columns": 3,
+      "style": "plain",
+      "entries": [
+        {
+          "title": "Mental Health Awareness for Managers",
+          "text": "1 Day · Online/Physical"
+        },
+        {
+          "title": "Managing PCOS, Work-Life Balance, and Burnout Prevention",
+          "text": "2 Days · Online/Physical"
+        },
+        {
+          "title": "Employee Engagement and Retention Strategies",
+          "text": "3 Days · Online/Physical"
+        },
+        {
+          "title": "Building Supportive Workplace Cultures",
+          "text": "2 Days · Online/Physical"
+        },
+        {
+          "title": "Critical Thinking & Problem-Solving Skills",
+          "text": "2 Days · Online/Physical"
+        },
+        {
+          "title": "Emotional Intelligence & Interpersonal Skills",
+          "text": "1 Day · Online/Physical"
+        },
+        {
+          "title": "Human Resource Management",
+          "text": "6 Weekends (12 Days) · Online/Physical"
+        },
+        {
+          "title": "Excel for Payroll Managers",
+          "text": "3 Weekends (6 Days) · Online/Physical"
+        },
+        {
+          "title": "Workplace Governance & Policy Development",
+          "text": "2 Days · Online/Physical"
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "Customer Service & Client Experience",
+      "sub": "4 courses",
+      "columns": 3,
+      "style": "plain",
+      "entries": [
+        {
+          "title": "Customer Service Fundamentals",
+          "text": "3 Weeks (6 Days) · Online/Physical"
+        },
+        {
+          "title": "Client Experience Specialist",
+          "text": "3 Weeks (6 Days) · Online/Physical"
+        },
+        {
+          "title": "Cultural Intelligence in Nigerian Customer Service",
+          "text": "3 Days · Online/Physical"
+        },
+        {
+          "title": "Turning Angry Customers into Advocates",
+          "text": "3 Days · Online/Physical"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "All courses are certificate courses. Fees vary by programme, delivery mode, and group size. Message us on WhatsApp with the courses you're interested in to receive an invoice."
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "Where We Deliver",
+      "columns": 3,
+      "style": "plain",
+      "entries": [
+        {
+          "title": "In Nigeria",
+          "text": "Physical classes run in Abuja, Lagos, Enugu, Anambra, Ibadan, Asaba, Kaduna, and Kano. A minimum of 5 participants is required for a physical class within Nigeria."
+        },
+        {
+          "title": "Beyond Nigeria",
+          "text": "Physical classes are also available in Kigali (Rwanda), Accra (Ghana), and Nairobi (Kenya), with a minimum of 15 participants for physical classes outside Nigeria."
+        },
+        {
+          "title": "Online",
+          "text": "Every course in the catalogue is also available online, with no minimum number of participants, so a single employee or a full team can enrol either way."
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "Need Something The Catalogue Doesn't Cover?",
+      "sub": "If the gap on your team is specific, we build a bespoke training engagement around it instead.",
+      "columns": 4,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-magnifying-glass",
+          "title": "Capability Gap Assessment",
+          "text": "Before we design a single slide, we identify where execution is actually breaking down between strategy and the floor."
+        },
+        {
+          "icon": "fa-pen-ruler",
+          "title": "Custom Curriculum Design",
+          "text": "Built around the real gap, not a generic leadership or soft-skills template pulled off the shelf."
+        },
+        {
+          "icon": "fa-chalkboard-teacher",
+          "title": "Facilitated Delivery",
+          "text": "Delivered live, in a format built for retention, whether that is a single masterclass or a multi-week programme."
+        },
+        {
+          "icon": "fa-file-lines",
+          "title": "Reinforcement Materials",
+          "text": "Documentation, SOPs, and onboarding decks so the training outlives the room it was delivered in."
+        }
+      ]
+    },
+    {
+      "type": "image-text",
+      "eyebrow": "Featured Workshop",
+      "heading": "Six Sigma In The Hospitality Sector",
+      "image": "/images/site-work-5.jpg",
+      "paragraphs": [
+        "A Six Sigma workshop facilitated at a boutique hospitality brand with Prince Elijah Abumoye as Lead Consultant, covering process discipline and operational excellence. The session was later covered as a newspaper editorial, a rare case of a training engagement generating its own press coverage."
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "What This Looks Like In Practice",
+      "columns": 2,
+      "style": "case-study",
+      "entries": [
+        {
+          "title": "Automotive Services Business",
+          "text": "SOPs and a structured Policy Onboarding Training programme delivered alongside a full Staff Policy Handbook, over a four-week rollout."
+        },
+        {
+          "title": "Executive Recruitment Client",
+          "text": "Training built into a recruitment SLA, delivered free to the client subject to minimum placement thresholds being met."
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "Join Our Clients",
+      "sub": "Businesses across Nigeria trust Traction Outsourcing Limited to get this right.",
+      "columns": 1,
+      "style": "stat",
+      "entries": [
+        {
+          "value": "1,200+",
+          "label": "Employees Trained Across Sectors"
+        }
+      ]
+    },
+    {
+      "type": "logos",
+      "logos": [
+        "Gifts n Boxes",
+        "Afroreach Research",
+        "Beacon Trust",
+        "Bravies",
+        "Chairo Properties",
+        "Demipos Hotel",
+        "Fourtwoseven Engineering",
+        "Grown and Glow",
+        "La Luna Restaurant",
+        "Tifes Hub",
+        "Toolbox Ateliers",
+        "Super Rise and Shine"
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "What types of corporate training does Traction Outsourcing offer?",
+          "a": "Traction Outsourcing Limited offers professional development and corporate training across people management, HR practice, financial management for non-finance managers, customer service, and leadership development. Training is delivered as scheduled open programmes, in-house sessions for specific teams, and bespoke programmes built around a client's particular needs."
+        },
+        {
+          "q": "Do you offer in-house corporate training for companies in Nigeria?",
+          "a": "Yes. Traction Outsourcing Limited delivers in-house training programmes for organisations that prefer to train their teams together in their own environment. In-house sessions can be adapted to the organisation's specific context, industry, and current capability level."
+        },
+        {
+          "q": "Where are your training programmes held?",
+          "a": "Open programmes are held in Abuja and Lagos. In-house programmes are delivered at the client's premises anywhere in Nigeria. Some programmes are also available in hybrid or online formats depending on the scope and content."
+        },
+        {
+          "q": "How do I enrol my team in a Traction Outsourcing training programme?",
+          "a": "Reach out through any of our contact channels, WhatsApp, email, or the enquiry form on this page. Share the number of participants, the preferred dates, and the area you want to develop, and our team will respond with the available options and how to proceed."
+        }
+      ]
+    }
+  ],
+  "final_cta": {
+    "title": "Ready to Build Your Team's Capability?",
+    "text": "Speak with our consulting team about how Corporate Trainings can work for your business.",
+    "button": "Request a Training Invoice",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Corporate%20Trainings%20at%20Traction%20Outsourcing%20Limited."
+  }
+}

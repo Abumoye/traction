@@ -1,0 +1,40 @@
+{
+  "_route": { "template": "flex.html", "output": "events/register/index.html", "url": "/events/register/" },
+  "meta": {
+    "title": "Register for T-ICR 2026 | Traction Outsourcing",
+    "description": "Register for the Traction Outsourcing International Corporate Retreat 2026 in Kigali, Rwanda, November 22-30. Only 30 seats available."
+  },
+  "hero": {
+    "eyebrow": "T-ICR 2026",
+    "headline": "Register: Kigali Retreat 2026",
+    "sub": "November 22nd - 30th, 2026 | Kigali, Rwanda | Only 30 seats available"
+  },
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "₦3,550,000 / $2,600 per person • 10% early bird discount before August 31st, 2026 • Registration closes November 1st, 2026 or when seats are filled. Full details on fees, inclusions, payment, and policies are on the Registration Information section of the Events page."
+      ]
+    },
+    {
+      "type": "form",
+      "heading": "Retreat Registration Form",
+      "form_id": "retreatForm",
+      "button": "Submit Registration",
+      "sub": "A confirmation email will be sent to you, and our team will reach out within 24 hours.",
+      "fields": [
+        { "name": "fullName", "placeholder": "Full Name", "input_type": "text", "required": true },
+        { "name": "email", "placeholder": "Email Address", "input_type": "email", "required": true },
+        { "name": "phone", "placeholder": "Phone Number (with country code), e.g. +234 805 203 3145", "input_type": "tel", "required": true },
+        { "name": "companyName", "placeholder": "Company Name", "input_type": "text", "required": true },
+        { "name": "jobTitle", "placeholder": "Job Title", "input_type": "text", "required": true },
+        { "name": "gender", "placeholder": "Gender (Male / Female / Prefer not to say)", "input_type": "text", "required": true },
+        { "name": "nationality", "placeholder": "Nationality", "input_type": "text", "required": true },
+        { "name": "groupTicket", "placeholder": "Registering as a Group? (Yes / No)", "input_type": "text", "required": true },
+        { "name": "groupSize", "placeholder": "How Many People in Your Group? (if applicable)", "input_type": "number", "required": false },
+        { "name": "paymentMade", "placeholder": "Have You Made Payment? (Yes / No, not yet)", "input_type": "text", "required": true },
+        { "name": "receiptFile", "placeholder": "Payment Receipt Upload (optional, image or PDF, up to 5MB)", "input_type": "file", "required": false }
+      ]
+    }
+  ]
+}
