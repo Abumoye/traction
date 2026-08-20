@@ -143,43 +143,91 @@ To capture them too:
 
 Everything else, the Web App URL, the email notification, stays the same.
 
-## Retreat Registration Form (/events/register/)
+## Retreat Registration Form — retired
 
-This form is different from the others: it collects nine fields instead of
-four, has an optional file upload for the payment receipt, and needs to send
-a confirmation email back to the person registering, not just a notification
-to you. It posts to the **same** Apps Script Web App as everything else,
-tagged with `formType: "retreat-registration"`, so you only have one script
-and one URL to manage.
+The old nine-field `/events/register/` form (with the receipt file upload)
+has been replaced by the four-field T-ICR 2026 registration form below. If
+you previously set up the **Kigali Retreat 2026** sheet tab and the
+`RECEIPT_FOLDER_ID` / `handleRetreatRegistration` code for it, those can
+stay in place for historical records, but the site no longer submits to
+them — `js/retreat-registration.js` has been removed from the project.
+
+## T-ICR 2026 Registration Form (/events/register/)
+
+This form collects four fields (Full Name, Phone, Email, Referral Code) and
+its button says "Proceed to Payment." Unlike the other forms, it also needs
+to send the registrant a PDF invoice by email, from **t-icr@tolnigeria.com**
+specifically, with the amount due and payment instructions. It posts to the
+**same** Apps Script Web App as everything else, tagged with
+`formType: "event-registration"`.
+
+**Before you deploy:** this form works out pricing itself — Early Bird
+(₦3,550,000 / $2,150, limited to the first 30 registrations, ending August
+31, 2026) automatically switches to Standard (₦5,000,000 / $3,030) once
+either limit is hit. This came from your correction of the previously
+published flat price, and I read "N3,550" and "3qst August" as shorthand for
+₦3,550,000 and a typo for "31st August, 2026" — let me know if either should
+be different. The invoice below reuses the Providus Bank account already
+used for the old retreat form's Naira payments; there is no USD/domiciliary
+account on file yet, so the invoice currently tells USD payers to reach out
+directly to arrange transfer details — replace `USD_PAYMENT_NOTE` in the
+script with real dollar account details once you have them, or leave it as
+is if you'd rather always coordinate USD payments manually.
 
 ### Step 1: Add a new sheet tab
 
-In the same **Traction Outsourcing Leads** spreadsheet used for everything
-else, add a new tab called **Kigali Retreat 2026**. In row 1, add these
-headers exactly, one per column:
+In the same **Traction Outsourcing Leads** spreadsheet, add a new tab
+called **T-ICR 2026 Registrations**. In row 1, add these headers exactly:
 
-`Timestamp | Full Name | Email | Phone | Company | Job Title | Gender | Nationality | Group Ticket | Group Size | Payment Made | Receipt Link`
+`Timestamp | Full Name | Phone | Email | Referral Code | Tier | Amount (NGN) | Amount (USD)`
 
-### Step 2: Create a Drive folder for receipts
+### Step 2: Confirm the send-as alias
 
-In Google Drive, create a folder called **Kigali Retreat 2026 Receipts**.
-Open it, and copy the folder ID out of the URL, it is the long string of
-letters and numbers after `folders/`:
+`GmailApp.sendEmail(...)` below sends the invoice `from: "t-icr@tolnigeria.com"`.
+This only works if **t-icr@tolnigeria.com is added and verified as a "Send
+As" alias** on the same Google account this Apps Script project is deployed
+under (Gmail → Settings → See all settings → Accounts and Import → Send
+mail as). You said this mailbox already exists and works — just double
+check it's reachable as a send-as alias from this specific account before
+relying on it, otherwise Gmail silently falls back to sending from the
+account's own address instead.
 
-`https://drive.google.com/drive/folders/`**`1a2B3cD4EfGhIjKlMnOpQrStUvWxYz`**
+## T-ICR 2026 Affiliate Sign-Up Form (/events/affiliate/)
 
-You will paste that ID into the script below.
+This form collects Name, Gender, Age, Email, Phone, State, plus a required
+disclaimer checkbox, and auto-assigns a sequential affiliate code in the
+format `aff/tol/001/26` (3 digits, never resets across years). It posts to
+the same Web App tagged with `formType: "event-affiliate"`.
 
-### Step 3: Replace the whole Apps Script
+### Step 1: Add a new sheet tab
 
-Go back into **Extensions → Apps Script** on the same project you already
-have (the one handling the service page forms and the Partnerships form).
-Delete everything in the editor and paste this complete version in, then
-update the `RECEIPT_FOLDER_ID` line near the top with the folder ID from
-Step 2:
+In the same spreadsheet, add a tab called **T-ICR 2026 Affiliates**. In row
+1, add these headers exactly:
+
+`Timestamp | Affiliate Code | Name | Gender | Age | Email | Phone | State`
+
+### Step 2: Replace the whole Apps Script
+
+Go into **Extensions → Apps Script** on the same project. Delete everything
+in the editor and paste this complete version in. If you filled in real USD
+account details in Step 1 above, put them in `USD_PAYMENT_NOTE` here too:
 
 ```javascript
-var RECEIPT_FOLDER_ID = "PASTE_YOUR_DRIVE_FOLDER_ID_HERE";
+var HELP_LINE = "0704 708 2697"; // confirm this is the right number — cut off in the original request
+
+// ---- T-ICR 2026 pricing ----
+var EARLY_BIRD_PRICE_NGN = 3550000;
+var EARLY_BIRD_PRICE_USD = 2150;
+var STANDARD_PRICE_NGN = 5000000;
+var STANDARD_PRICE_USD = 3030;
+var EARLY_BIRD_CAP = 30;
+var EARLY_BIRD_DEADLINE = new Date('2026-08-31T23:59:59+01:00');
+
+// ---- Payment details shown on the invoice ----
+var NGN_BANK_NAME = "Providus Bank PLC";
+var NGN_ACCOUNT_NUMBER = "1307188028";
+var NGN_ACCOUNT_NAME = "Traction Outsourcing Limited";
+var USD_PAYMENT_NOTE = "For USD payment, reply to this email or reach us on WhatsApp (" + HELP_LINE + ") and our team will send dollar transfer details.";
 
 function doPost(e) {
   if (!e || !e.postData || !e.postData.contents) {
@@ -190,8 +238,11 @@ function doPost(e) {
 
   var data = JSON.parse(e.postData.contents);
 
-  if (data.formType === 'retreat-registration') {
-    return handleRetreatRegistration(data);
+  if (data.formType === 'event-registration') {
+    return handleEventRegistration(data);
+  }
+  if (data.formType === 'event-affiliate') {
+    return handleEventAffiliate(data);
   }
 
   return handleLeadForm(data);
@@ -226,83 +277,140 @@ function handleLeadForm(data) {
   ).setMimeType(ContentService.MimeType.JSON);
 }
 
-function handleRetreatRegistration(data) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Kigali Retreat 2026');
-  var receiptLink = '';
+function handleEventRegistration(data) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('T-ICR 2026 Registrations');
 
-  if (data.receiptFileData) {
-    try {
-      var folder = DriveApp.getFolderById(RECEIPT_FOLDER_ID);
-      var bytes = Utilities.base64Decode(data.receiptFileData);
-      var blob = Utilities.newBlob(bytes, data.receiptFileType || 'application/octet-stream', data.receiptFileName || 'receipt');
-      var file = folder.createFile(blob);
-      file.setName((data.name || 'Unknown') + ' - ' + (data.receiptFileName || 'receipt'));
-      receiptLink = file.getUrl();
-    } catch (err) {
-      receiptLink = 'Upload failed: ' + err.message;
-    }
-  }
+  var name = (data.name || '').toString().trim();
+  var phone = (data.phone || '').toString().trim();
+  var email = (data.email || '').toString().trim();
+  var referral = (data.referral || '').toString().trim();
 
-  sheet.appendRow([
-    new Date(),
-    data.name || '',
-    data.email || '',
-    data.phone || '',
-    data.companyName || '',
-    data.jobTitle || '',
-    data.gender || '',
-    data.nationality || '',
-    data.groupTicket || '',
-    data.groupSize || '',
-    data.paymentMade || '',
-    receiptLink
-  ]);
+  var pricing = getCurrentTicketPricing(sheet);
 
-  // Notify the team
-  MailApp.sendEmail({
-    to: "tractionoutsourcing@gmail.com",
-    subject: "New Kigali Retreat Registration: " + (data.name || "Unknown"),
-    body: "Name: " + data.name + "\\nEmail: " + data.email + "\\nPhone: " + data.phone +
-          "\\nCompany: " + data.companyName + "\\nJob Title: " + data.jobTitle +
-          "\\nGender: " + data.gender + "\\nNationality: " + data.nationality +
-          "\\nGroup Ticket: " + data.groupTicket + "\\nGroup Size: " + data.groupSize +
-          "\\nPayment Made: " + data.paymentMade +
-          "\\nReceipt: " + (receiptLink || "Not uploaded")
-  });
+  sheet.appendRow([new Date(), name, phone, email, referral, pricing.tier, pricing.ngn, pricing.usd]);
 
-  // Confirmation email to the registrant
-  if (data.email) {
-    MailApp.sendEmail({
-      to: data.email,
-      subject: "Registration Received: Traction Outsourcing International Corporate Retreat 2026",
-      body: "Hi " + (data.name || "there") + ",\\n\\n" +
-            "Thank you for registering for the Traction Outsourcing International Corporate Retreat 2026 in Kigali, Rwanda (November 22-30, 2026).\\n\\n" +
-            "We have received your registration and our team will review it and reach out to you within 24 hours or less.\\n\\n" +
-            "If you have not yet made payment, you can do so by bank transfer to:\\n" +
-            "Bank: Providus Bank PLC\\nAccount Number: 1307188028\\nAccount Name: Traction Outsourcing Limited\\n\\n" +
-            "If you have any questions in the meantime, reach us on WhatsApp at 0805 203 3145 or reply to this email.\\n\\n" +
-            "Best regards,\\nTraction Outsourcing Limited"
-    });
-  }
+  sendEventInvoiceEmail(name, phone, email, referral, pricing);
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+function getCurrentTicketPricing(sheet) {
+  var now = new Date();
+  var rowCount = Math.max(sheet.getLastRow() - 1, 0); // minus header, prior registrations only
+  var earlyBirdOpen = now <= EARLY_BIRD_DEADLINE && rowCount < EARLY_BIRD_CAP;
+  if (earlyBirdOpen) {
+    return { tier: 'Early Bird', ngn: EARLY_BIRD_PRICE_NGN, usd: EARLY_BIRD_PRICE_USD };
+  }
+  return { tier: 'Standard', ngn: STANDARD_PRICE_NGN, usd: STANDARD_PRICE_USD };
+}
+
+function formatNaira(n) { return "₦" + n.toLocaleString('en-NG'); }
+function formatUsd(n) { return "$" + n.toLocaleString('en-US'); }
+
+function sendEventInvoiceEmail(name, phone, email, referral, pricing) {
+  var html = buildInvoiceHtml(name, phone, email, referral, pricing);
+  var pdf = Utilities.newBlob(html, 'text/html', 'invoice.html').getAs('application/pdf');
+  pdf.setName('T-ICR-2026-Invoice-' + name.replace(/\s+/g, '-') + '.pdf');
+
+  var body = "Hi " + name + ",\n\n" +
+    "Thank you for registering for the Traction Outsourcing International Corporate Retreat (T-ICR) 2026 in Kigali, Rwanda.\n\n" +
+    "Your invoice is attached as a PDF. It shows the amount due at the " + pricing.tier + " rate — " +
+    formatNaira(pricing.ngn) + " or " + formatUsd(pricing.usd) + " — along with our account details for payment.\n\n" +
+    "Once you have made payment, please reply directly to this email with your payment receipt attached, so our team can confirm your registration.\n\n" +
+    "If you have any questions, reach our Help Line: " + HELP_LINE + " (WhatsApp).\n\n" +
+    "We look forward to seeing you in Kigali.\n\n" +
+    "Traction Outsourcing Limited\nt-icr@tolnigeria.com";
+
+  GmailApp.sendEmail(email, "Your T-ICR 2026 Registration & Invoice", body, {
+    from: "t-icr@tolnigeria.com",
+    name: "Traction Outsourcing — T-ICR 2026",
+    replyTo: "t-icr@tolnigeria.com",
+    attachments: [pdf]
+  });
+
+  // Notify the team too
+  MailApp.sendEmail({
+    to: "tractionoutsourcing@gmail.com",
+    subject: "New T-ICR 2026 Registration: " + name,
+    body: "Name: " + name + "\nPhone: " + phone + "\nEmail: " + email +
+          "\nReferral: " + (referral || "None") + "\nTier: " + pricing.tier +
+          "\nAmount: " + formatNaira(pricing.ngn) + " / " + formatUsd(pricing.usd)
+  });
+}
+
+function buildInvoiceHtml(name, phone, email, referral, pricing) {
+  var today = Utilities.formatDate(new Date(), 'Africa/Lagos', 'MMMM d, yyyy');
+  return '<html><body style="font-family:Arial,sans-serif;color:#1d1d1f;padding:30px;">' +
+    '<h1 style="color:#d35400;margin-bottom:0;">Traction Outsourcing Limited</h1>' +
+    '<h2 style="margin-top:4px;">T-ICR 2026 Registration Invoice</h2>' +
+    '<p>Date: ' + today + '</p>' +
+    '<table style="width:100%;border-collapse:collapse;margin-top:20px;">' +
+      '<tr><td style="padding:6px 0;width:40%;"><strong>Full Name</strong></td><td>' + name + '</td></tr>' +
+      '<tr><td style="padding:6px 0;"><strong>Phone</strong></td><td>' + phone + '</td></tr>' +
+      '<tr><td style="padding:6px 0;"><strong>Email</strong></td><td>' + email + '</td></tr>' +
+      '<tr><td style="padding:6px 0;"><strong>Referral Code</strong></td><td>' + (referral || '—') + '</td></tr>' +
+      '<tr><td style="padding:6px 0;"><strong>Ticket Tier</strong></td><td>' + pricing.tier + '</td></tr>' +
+    '</table>' +
+    '<h3 style="margin-top:30px;">Amount Due</h3>' +
+    '<p style="font-size:22px;font-weight:bold;">' + formatNaira(pricing.ngn) +
+      ' <span style="font-size:15px;font-weight:normal;">(or ' + formatUsd(pricing.usd) + ')</span></p>' +
+    '<h3 style="margin-top:30px;">Payment Instructions</h3>' +
+    '<table style="width:100%;border-collapse:collapse;">' +
+      '<tr><td style="padding:6px 0;width:40%;"><strong>Account Name</strong></td><td>' + NGN_ACCOUNT_NAME + '</td></tr>' +
+      '<tr><td style="padding:6px 0;"><strong>Bank</strong></td><td>' + NGN_BANK_NAME + '</td></tr>' +
+      '<tr><td style="padding:6px 0;"><strong>Account Number (NGN)</strong></td><td>' + NGN_ACCOUNT_NUMBER + '</td></tr>' +
+    '</table>' +
+    '<p style="margin-top:14px;font-size:13.5px;">' + USD_PAYMENT_NOTE + '</p>' +
+    '<p style="margin-top:20px;">Once payment has been made, please <strong>reply to the email this invoice was attached to, with your payment receipt attached</strong>, so our team can confirm your registration.</p>' +
+    '<p>For questions, reach our Help Line: <strong>' + HELP_LINE + '</strong> (WhatsApp).</p>' +
+    '<p style="margin-top:30px;color:#6e6e73;font-size:12px;">Traction Outsourcing Limited — t-icr@tolnigeria.com</p>' +
+    '</body></html>';
+}
+
+function handleEventAffiliate(data) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('T-ICR 2026 Affiliates');
+
+  var name = (data.name || '').toString().trim();
+  var gender = (data.gender || '').toString().trim();
+  var age = (data.age || '').toString().trim();
+  var email = (data.email || '').toString().trim();
+  var phone = (data.phone || '').toString().trim();
+  var state = (data.state || '').toString().trim();
+
+  // Header row is row 1, so the row count before this append equals the
+  // number of affiliates already on record — a clean, never-resetting
+  // sequential number.
+  var seq = sheet.getLastRow();
+  var yearSuffix = Utilities.formatDate(new Date(), 'Africa/Lagos', 'yy');
+  var code = 'aff/tol/' + ('00' + seq).slice(-3) + '/' + yearSuffix;
+
+  sheet.appendRow([new Date(), code, name, gender, age, email, phone, state]);
+
+  MailApp.sendEmail({
+    to: email,
+    subject: "Your Traction Outsourcing Affiliate Code",
+    body: "Hi " + name + ",\n\nWelcome! You are now registered as a Traction Outsourcing affiliate for the T-ICR 2026.\n\n" +
+          "Your unique affiliate code is: " + code + "\n\nShare this code with prospective delegates. Our team will be in touch with more details on how referrals are tracked and rewarded.\n\nTraction Outsourcing Limited"
+  });
+
+  MailApp.sendEmail({
+    to: "tractionoutsourcing@gmail.com",
+    subject: "New T-ICR 2026 Affiliate: " + name + " (" + code + ")",
+    body: "Name: " + name + "\nGender: " + gender + "\nAge: " + age + "\nEmail: " + email + "\nPhone: " + phone + "\nState: " + state + "\nCode: " + code
+  });
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success', code: code })
   ).setMimeType(ContentService.MimeType.JSON);
 }
 ```
 
 Create a **new deployment version** afterward (Deploy → Manage deployments
 → Edit → New version), same as any other script change. The Web App URL
-stays the same, so nothing needs to change in `js/lead-form.js` or
-`js/retreat-registration.js`.
-
-### A note on the file upload
-
-Receipt files are capped at 5MB on the website side before they are even
-sent. Apps Script can time out on very large requests, so if someone
-reports the form hanging when attaching a receipt, that is the first thing
-to check. Everything else about the form works fine without a receipt
-attached, since it is optional.
+stays the same, so nothing needs to change in `js/lead-form.js`,
+`js/event-registration.js`, or `js/event-affiliate.js`.
 
 ## Testing it
 
@@ -318,8 +426,13 @@ expected and does not mean anything is broken, it just means the
 function was called outside of a real form submission. Always test by
 submitting the actual form on the live website instead.
 
-For the retreat registration form specifically, test with and without
-attaching a receipt file, and confirm three things happen: a new row
-appears in the **Kigali Retreat 2026** tab, a notification email arrives
-at tractionoutsourcing@gmail.com, and a confirmation email arrives at the
-email address you registered with.
+For the T-ICR 2026 registration form, confirm three things happen: a new
+row appears in the **T-ICR 2026 Registrations** tab, a notification email
+arrives at tractionoutsourcing@gmail.com, and an invoice PDF email arrives
+at the address you registered with, sent from t-icr@tolnigeria.com (check
+it actually shows that From address, not a fallback — that's the sign the
+send-as alias in Step 2 above is working).
+
+For the affiliate form, confirm a new row appears in the **T-ICR 2026
+Affiliates** tab with a code like `aff/tol/001/26`, and that the same code
+arrives by email at the address submitted.

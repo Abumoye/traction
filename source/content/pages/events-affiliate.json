@@ -1,0 +1,77 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "events/affiliate/index.html",
+    "url": "/events/affiliate/"
+  },
+  "meta": {
+    "title": "Become a T-ICR 2026 Affiliate | Traction Outsourcing",
+    "description": "Sign up as a Traction Outsourcing affiliate and get a unique referral code for the T-ICR 2026 Kigali retreat.",
+    "image": "/images/og/og-events.jpg"
+  },
+  "hero": {
+    "eyebrow": "T-ICR 2026 Affiliate Program",
+    "headline": "Become an Affiliate",
+    "sub": "Get your own unique referral code and help bring delegates to the Traction Outsourcing International Corporate Retreat 2026 in Kigali, Rwanda."
+  },
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "Sign up below to join the T-ICR 2026 affiliate program. Once submitted, you will be assigned a unique affiliate code by email, which you can share with prospective delegates."
+      ]
+    },
+    {
+      "type": "form",
+      "heading": "Affiliate Sign-Up",
+      "form_id": "affiliateForm",
+      "button": "Submit",
+      "sub": "All fields are required.",
+      "fields": [
+        {
+          "name": "name",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true
+        },
+        {
+          "name": "gender",
+          "placeholder": "Gender (Male / Female / Prefer not to say)",
+          "input_type": "text",
+          "required": true
+        },
+        {
+          "name": "age",
+          "placeholder": "Age",
+          "input_type": "number",
+          "required": true
+        },
+        {
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true
+        },
+        {
+          "name": "phone",
+          "placeholder": "Phone Number (with country code), e.g. +234 805 203 3145",
+          "input_type": "tel",
+          "required": true
+        },
+        {
+          "name": "state",
+          "placeholder": "State of Residence",
+          "input_type": "text",
+          "required": true
+        },
+        {
+          "name": "consent",
+          "input_type": "checkbox",
+          "required": true,
+          "label": "I understand and agree that becoming a Traction Outsourcing affiliate does not create an employment, agency, or partnership relationship between me and Traction Outsourcing Limited or any of its brands (including ATH Recruiters and Traction Properties and Managers), and that I am not authorized to act, contract, incur liability, or make representations on behalf of Traction Outsourcing Limited or any of its brands. I agree that Traction Outsourcing Limited shall be fully indemnified and held harmless against any claim, loss, damage, liability, or expense arising from any act, omission, statement, or representation I make in connection with my affiliate activity that has not received the prior written consent of Traction Outsourcing Limited. I confirm that the information provided above is accurate and that I am submitting this application voluntarily."
+        }
+      ]
+    }
+  ],
+  "scripts": ["/js/event-affiliate.js"]
+}

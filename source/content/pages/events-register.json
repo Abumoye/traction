@@ -6,38 +6,32 @@
   },
   "meta": {
     "title": "Register for T-ICR 2026 | Traction Outsourcing",
-    "description": "Register for the Traction Outsourcing International Corporate Retreat 2026 in Kigali, Rwanda, November 22-30. Only 30 seats available.",
+    "description": "Register for the Traction Outsourcing International Corporate Retreat 2026 in Kigali, Rwanda, November 22-30. Only 30 Early Bird seats available.",
     "image": "/images/og/og-events.jpg"
   },
   "hero": {
     "eyebrow": "T-ICR 2026",
     "headline": "Register: Kigali Retreat 2026",
-    "sub": "November 22nd - 30th, 2026 | Kigali, Rwanda | Only 30 seats available"
+    "sub": "November 22nd - 30th, 2026 | Kigali, Rwanda | Only 30 Early Bird seats available"
   },
   "sections": [
     {
       "type": "text",
       "paragraphs": [
-        "₦3,550,000 / $2,600 per person • 10% early bird discount before August 31st, 2026 • Registration closes November 1st, 2026 or when seats are filled. Full details on fees, inclusions, payment, and policies are on the Registration Information section of the Events page."
+        "Early Bird: ₦3,550,000 / $2,150 per person — limited to the first 30 registrations, ending August 31st, 2026. Standard: ₦5,000,000 / $3,030 per person afterward. Fill in the form below and click Proceed to Payment — an invoice with our account details will be emailed to you from t-icr@tolnigeria.com. Full details on inclusions, payment, and policies are on the Registration Information section of the Events page."
       ]
     },
     {
       "type": "form",
-      "heading": "Retreat Registration Form",
-      "form_id": "retreatForm",
-      "button": "Submit Registration",
-      "sub": "A confirmation email will be sent to you, and our team will reach out within 24 hours.",
+      "heading": "Retreat Registration",
+      "form_id": "eventRegisterForm",
+      "button": "Proceed to Payment",
+      "sub": "You will receive an invoice by email with our payment details. Reply to that email with your receipt once paid.",
       "fields": [
         {
           "name": "fullName",
           "placeholder": "Full Name",
           "input_type": "text",
-          "required": true
-        },
-        {
-          "name": "email",
-          "placeholder": "Email Address",
-          "input_type": "email",
           "required": true
         },
         {
@@ -47,54 +41,19 @@
           "required": true
         },
         {
-          "name": "companyName",
-          "placeholder": "Company Name",
-          "input_type": "text",
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
           "required": true
         },
         {
-          "name": "jobTitle",
-          "placeholder": "Job Title",
+          "name": "referral",
+          "placeholder": "Referral Code (optional)",
           "input_type": "text",
-          "required": true
-        },
-        {
-          "name": "gender",
-          "placeholder": "Gender (Male / Female / Prefer not to say)",
-          "input_type": "text",
-          "required": true
-        },
-        {
-          "name": "nationality",
-          "placeholder": "Nationality",
-          "input_type": "text",
-          "required": true
-        },
-        {
-          "name": "groupTicket",
-          "placeholder": "Registering as a Group? (Yes / No)",
-          "input_type": "text",
-          "required": true
-        },
-        {
-          "name": "groupSize",
-          "placeholder": "How Many People in Your Group? (if applicable)",
-          "input_type": "number",
-          "required": false
-        },
-        {
-          "name": "paymentMade",
-          "placeholder": "Have You Made Payment? (Yes / No, not yet)",
-          "input_type": "text",
-          "required": true
-        },
-        {
-          "name": "receiptFile",
-          "placeholder": "Payment Receipt Upload (optional, image or PDF, up to 5MB)",
-          "input_type": "file",
           "required": false
         }
       ]
     }
-  ]
+  ],
+  "scripts": ["/js/event-registration.js"]
 }
