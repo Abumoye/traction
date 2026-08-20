@@ -1,0 +1,144 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "services/startup-structuring/index.html",
+    "url": "/services/startup-structuring/"
+  },
+  "meta": {
+    "title": "Startup Structuring in Nigeria | Traction Outsourcing Limited",
+    "description": "Traction Outsourcing builds the governance, organograms, and operational foundations new and growing businesses in Nigeria need to scale with confidence."
+  },
+  "hero": {
+    "eyebrow": "Areas Of Impact",
+    "headline": "Startup Structuring",
+    "sub": "Every strong business is standing on a structure nobody sees. We build that structure first, so the business you are growing does not outgrow itself.",
+    "actions": [
+      {
+        "label": "Start Structuring My Business",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Startup%20Structuring%20at%20Traction%20Outsourcing%20Limited.",
+        "style": "btn-primary"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "Most Nigerian businesses do not fail because the idea was weak. They fail because the founder was still writing job descriptions from memory in month eighteen, still deciding pay by conversation, still the only person who knew how anything worked. Growth without structure just means more people relying on a system that was never actually built. We fix that before it becomes expensive."
+      ]
+    },
+    {
+      "type": "steps",
+      "heading": "How We Build The Foundation",
+      "sub": "Three stages, done in sequence, so nothing is designed on top of a gap.",
+      "entries": [
+        {
+          "n": "01",
+          "title": "Registration & Preliminaries",
+          "text": "We help you set the tone of your business nomenclature, ensuring that it is unique and distinguishable. At this phase, we register your business or company (<a href=\"/articles/how-to-register-a-company-in-nigeria/\">CAC registration</a>), get you a Nigeria Revenue Service (NRS) Tax Identification Number, create a brand image for you, trademark your name in the appropriate class, get you your VAT certificate, create your official communication letters according to Corporate Affairs Commission stipulations and the Company and Allied Matters Act (CAMA), and register your company with three top-tier banks in Nigeria. Ensuring that you have a solid head start."
+        },
+        {
+          "n": "02",
+          "title": "Design and Document",
+          "text": "We create a functional and capital organogram with reporting lines and role architecture around where the business is going, not just where it is today. We create job descriptions, KPIs, staff policy handbooks, and onboarding material. This gives you a concrete foundation to build your legacy business from day zero."
+        },
+        {
+          "n": "03",
+          "title": "Deploy",
+          "text": "We train, assign roles, and ensure your team understands the fine print. We hand over a structure the team can step into immediately, with training where it is needed, so the business is not relying on the founder to explain it every time someone new joins."
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "columns": 3,
+      "style": "stat",
+      "entries": [
+        { "value": "10+", "label": "Structuring Projects, Last 6 Months" },
+        { "value": "2", "label": "Sectors: Retail & Professional Services" },
+        { "value": "100%", "label": "Documented, Not Verbal" }
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "What This Looks Like In Practice",
+      "sub": "A look at the kind of structuring work we do, drawn from real engagements.",
+      "columns": 2,
+      "style": "case-study",
+      "entries": [
+        {
+          "title": "Retail & Personal Care Business",
+          "text": "A growing retail business needed structure across seven roles before it could scale past its founder. We built the job descriptions, a commission framework for its frontline roles, and the staff attestation documents that gave the business its first real operating system."
+        },
+        {
+          "title": "Gifting & Retail Business",
+          "text": "Twelve roles, one organogram, and a training deck built to onboard staff without the founder in the room. What used to be tribal knowledge became a structure new hires could pick up on day one."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Join Our Clients",
+      "sub": "Businesses across Nigeria trust Traction Outsourcing Limited to get this right."
+    },
+    {
+      "type": "logos",
+      "logos": [
+        "Gifts n Boxes",
+        "Afroreach Research",
+        "Beacon Trust",
+        "Bravies",
+        "Chairo Properties",
+        "Demipos Hotel",
+        "Fourtwoseven Engineering",
+        "Grown and Glow",
+        "La Luna Restaurant",
+        "Tifes Hub",
+        "Toolbox Ateliers",
+        "Super Rise and Shine"
+      ]
+    },
+    {
+      "type": "form",
+      "heading": "Request A Free Consultation",
+      "sub": "Leave your details and someone from our team will reach out.",
+      "form_id": "leadForm",
+      "button": "Submit",
+      "fields": [
+        { "name": "leadName", "placeholder": "Full Name", "input_type": "text", "required": true },
+        { "name": "leadPhone", "placeholder": "Phone Number", "input_type": "tel", "required": true },
+        { "name": "leadCompany", "placeholder": "Company Name", "input_type": "text", "required": true },
+        { "name": "leadEmail", "placeholder": "Email Address", "input_type": "email", "required": true }
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "What is startup structuring?",
+          "a": "Startup structuring is the process of building the governance, legal, financial, and operational foundations a new business needs to function properly. It covers company registration, shareholding structure, role definitions, financial systems, and the HR and compliance frameworks that determine whether a business can grow in an organised and legally sound way."
+        },
+        {
+          "q": "What does my startup need to get started properly?",
+          "a": "Most startups need four things in place before they can operate soundly: a registered company with the correct shareholding structure, a clear definition of who does what and who reports to whom, a basic financial management system, and employment contracts or consultant agreements for anyone working in the business. Traction Outsourcing Limited builds these foundations as a structured engagement rather than a checklist."
+        },
+        {
+          "q": "How is startup structuring different from business registration?",
+          "a": "Business registration is one step inside startup structuring. Registration gives your company a legal identity. Structuring builds everything else: governance, organogram, financial framework, HR policies, and operational procedures. Many registered companies operate without structure and face problems with investor readiness, compliance, and internal accountability as a result."
+        },
+        {
+          "q": "When is the right time to structure a startup?",
+          "a": "The right time is before the problems that come from no structure arrive: disputes between founders, confusion about roles, inability to onboard staff properly, or difficulty presenting the business to investors or partners. Traction Outsourcing Limited works with founders at pre-launch and early-growth stage, but also with businesses that have been operating informally for years and need to formalise what already exists."
+        }
+      ]
+    }
+  ],
+  "has_form": true,
+  "final_cta": {
+    "title": "Ready to Structure Your Startup?",
+    "text": "Speak with our consulting team about how Startup Structuring can work for your business.",
+    "button": "Start Structuring My Business",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Startup%20Structuring%20at%20Traction%20Outsourcing%20Limited."
+  }
+}

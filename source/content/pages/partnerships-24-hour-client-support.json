@@ -1,0 +1,90 @@
+{
+  "_route": { "template": "flex.html", "output": "partnerships/24-hour-client-support/index.html", "url": "/partnerships/24-hour-client-support/" },
+  "meta": {
+    "title": "24/7 Virtual Client Support | Traction Outsourcing",
+    "description": "Traction Outsourcing offers 24/7 virtual client support, connecting multinationals to a BPO, HR, recruitment, and training partner in Nigeria."
+  },
+  "hero": {
+    "eyebrow": "Company Updates",
+    "headline": "Traction Outsourcing Launches 24/7 Virtual Client Support",
+    "sub": "Traction Outsourcing Limited has launched a 24-hour online client support programme, giving clients a direct digital line to the firm at any hour of the day, regardless of their time zone.",
+    "image": "/images/articles/24-hour-client-support.jpg",
+    "image_alt": "Traction Outsourcing 24-hour client support agent wearing a headset"
+  },
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "By Traction Outsourcing Limited · July 2026"
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "Starting this month, clients of <a href=\"/\">Traction Outsourcing</a> will no longer have to work around a 9-to-5 window to reach the firm online. Whether a client is raising a concern late at night, following up from a different time zone, or simply cannot get through during regular business hours, the new programme ensures someone is always available to respond digitally. The service covers all core touchpoints, HR advisory, recruitment, business solutions, and general client enquiries, through a dedicated online support desk built to run around the clock. The programme covers digital channels only and does not extend to in-person, walk-in support at the office."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Why This Matters for Clients",
+      "paragraphs": [
+        "Traction Outsourcing works with businesses across Nigeria and increasingly with partners outside the country. A client in a different time zone should not have to wait half a day just to get a response to a simple question. The 24-hour programme closes that gap. It means faster resolution on urgent HR matters, quicker turnaround on recruitment enquiries, and a support system that keeps pace with clients rather than making them wait on it."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "A BPO and HR Partner Firm for Multinationals in Nigeria",
+      "paragraphs": [
+        "For multinationals operating in Nigeria, and for international businesses evaluating a business process outsourcing partner before entering the market, availability outside Lagos or Abuja business hours often decides whether an issue gets resolved quickly or sits for a day. Traction Outsourcing works as a BPO and HR partner firm covering staff outsourcing and HR management, executive and general recruitment through ATH Recruiters, employee training, business advisory, and corporate restructuring. The 24/7 virtual client support desk extends that relationship beyond standard working hours, so a multinational coordinating from a different time zone, or a business development team following up outside the typical 9-to-5, still gets a direct response from a real support desk rather than an out-of-office message."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "How It Works",
+      "paragraphs": [
+        "Clients can reach the support desk online through WhatsApp or email, with every enquiry logged and tracked from first contact to resolution. A dedicated team monitors these channels in shifts, so a query raised at 2am gets the same attention as one raised at 2pm. Where an issue requires escalation to a specialist or account manager, the support desk manages that handoff internally, so clients are not left repeating themselves to different people."
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Prince Elijah Abumoye, founder of Traction Outsourcing Limited, said: \"Business does not stop when the office closes. Our clients have needs that come up outside standard working hours, and increasingly, our clients are not even in the same time zone as us. This programme is about meeting them where they are, when they need us, not when it is convenient for us.\""
+    },
+    {
+      "type": "text",
+      "heading": "Getting Support",
+      "paragraphs": [
+        "Clients can now reach Traction Outsourcing at any time through direct calls on 0707 870 7777, WhatsApp at 0805 203 3145, or by email at <a href=\"mailto:partner@tolnigeria.com\">partner@tolnigeria.com</a>. For urgent matters, WhatsApp remains the fastest route to a response.",
+        "Traction Outsourcing Limited continues to build its service offering around what clients actually need, not just what is convenient to deliver. The 24-hour support programme is the latest step in that direction, and the firm expects to expand the channels and team behind it as demand grows."
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Get In Touch",
+      "button": "Reach Support on WhatsApp",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%2024-hour%20client%20support%20programme",
+      "blank": true
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "Is Traction Outsourcing a BPO company in Nigeria?",
+          "a": "Yes. Traction Outsourcing operates as a business process outsourcing and HR partner firm in Nigeria, covering staff outsourcing, recruitment, training, business advisory, and corporate restructuring, backed by 24/7 virtual client support."
+        },
+        {
+          "q": "Does Traction Outsourcing support multinational and international businesses operating in Nigeria?",
+          "a": "Yes. Traction Outsourcing works with multinationals and international businesses operating in or entering Nigeria, including those coordinating across different time zones, through its 24/7 virtual client support desk."
+        },
+        {
+          "q": "Can I reach an HR, recruitment, or business development partner firm in Nigeria outside standard working hours?",
+          "a": "Yes. The 24/7 virtual client support desk covers HR advisory, recruitment, training, and business development enquiries at any hour, through WhatsApp or email, regardless of standard Nigerian working hours."
+        },
+        {
+          "q": "How can I reach Traction Outsourcing outside normal business hours?",
+          "a": "Clients can reach the 24-hour support desk through WhatsApp at 0805 203 3145 or by email at partner@tolnigeria.com. WhatsApp is the fastest route for urgent matters."
+        }
+      ]
+    }
+  ]
+}

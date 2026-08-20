@@ -1,0 +1,134 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/md-vs-ceo-nigeria/index.html",
+    "url": "/articles/md-vs-ceo-nigeria/"
+  },
+  "meta": {
+    "title": "MD vs CEO in Nigeria: What the Difference Actually Means",
+    "description": "Many Nigerian business cards say MD/CEO on the same line. Here is what the titles actually mean, what Nigerian company law says about them, and which one your business should use."
+  },
+  "tag": "Business Advisory · Corporate Governance",
+  "title": "MD vs CEO in Nigeria: What the Difference Actually Means",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "August 6, 2026",
+    "read_time": "5 min read"
+  },
+  "image": "/images/articles/md-vs-ceo-nigeria.jpg",
+  "dek": "Walk into any room of Nigerian business owners and you will find business cards that say Managing Director/CEO, Chairman/CEO, and sometimes just Founder. Some of these combinations are accurate. Some are not. And most of the people using them are not entirely sure which applies to their situation.",
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "The question of whether to use MD, CEO, or both is not a branding question. It is a corporate governance question with a specific answer under Nigerian law. Getting it right matters because your title signals to clients, investors, banks, and counterparties what your actual authority inside the company is. Getting it wrong, particularly in formal correspondence and company filings, can create confusion that has practical consequences."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "First: Owners and Directors Are Not the Same Thing",
+      "paragraphs": [
+        "Before the MD versus CEO question can be answered properly, one distinction has to be clear: the people who own a company and the people who run a company are two different categories under Nigerian law, even when they happen to be the same person.",
+        "<strong>Members</strong> (also called shareholders or owners) are the people who contribute capital to form the company. Under the Companies and Allied Matters Act 2020 (CAMA 2020), a private company in Nigeria cannot have more than 50 members, excluding current and former employees. A public company has no upper limit.",
+        "<strong>Directors</strong> are employed by the members to manage the day-to-day affairs of the company. They form a board, and the law under CAMA 2020 requires a minimum of one director for a private company, though in practice most companies appoint more than one. Directors carry out the executive functions of the business: setting policy, overseeing staff, and ensuring the company performs as it should.",
+        "The reason this distinction matters is that for small and medium businesses in Nigeria, the owner and the director are often the same person. Mr David who owns a fabrication company and personally manages it is simultaneously a member and a director. That combination shapes which title he should carry."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "So What Is a Managing Director?",
+      "paragraphs": [
+        "A Managing Director is simply the most senior director on the board. Every company that has a board of directors has one director who is ultimately responsible for the executive management of the entire company. That person is the Managing Director. In Nigerian business, the title is used interchangeably with Chief Executive Officer, and the two are often combined as MD/CEO.",
+        "They are, functionally, the same role. Both the MD and the CEO are the most senior executive in the company, responsible for its day-to-day operations. This is why in Nigerian practice you routinely see the two combined as <strong>MD/CEO</strong>, because the person holding the title is doing both things simultaneously, and the combination simply acknowledges both naming conventions."
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "MD and CEO are not two different jobs. They are two names for the same job. In Nigerian practice, the two are used together as MD/CEO."
+    },
+    {
+      "type": "text",
+      "heading": "Where It Gets More Complicated: Public Companies",
+      "paragraphs": [
+        "For private companies the picture is relatively straightforward. For public companies it becomes more layered, and this is where the Chairman/CEO question becomes relevant.",
+        "A public company's board of directors is divided into two categories:",
+        "<strong>Executive directors</strong> are involved in the day-to-day running of the company. The most senior of these is the Managing Director or CEO.",
+        "<strong>Non-executive directors</strong> are independent people appointed to assist in policy formulation. They are not involved in daily operations. From among the non-executive directors, a Chairman is appointed to head the entire board.",
+        "This is a critical distinction. The Chairman of the board, by Nigerian corporate governance convention and the requirements of the Securities and Exchange Commission for listed companies, should be a non-executive director. The Chairman is not running the company. The MD/CEO is running the company. These are two separate roles held by two separate people."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Nigerian Example",
+      "paragraphs": [
+        "Zenith Bank is a public company. Jim Ovia serves as Chairman of the board, presiding over both executive and non-executive directors and contributing to policy direction. The MD/CEO, who is directly responsible for the day-to-day operations of Zenith Bank, is a separate person entirely. Ovia does not run Zenith Bank on a daily basis. The MD/CEO does."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Can Someone Be Both Chairman and CEO?",
+      "paragraphs": [
+        "Technically yes, but it is unusual and, for public companies in Nigeria, a governance concern. The title Chairman/CEO means one person is simultaneously heading the board and leading the executive management of the company.",
+        "For a public company, this raises a direct conflict with the principle that the Chairman should be independent of executive management. The Securities and Exchange Commission of Nigeria and the Nigerian Code of Corporate Governance discourage the combination in public companies precisely because it concentrates authority in a single person without the checks that the separation is designed to provide.",
+        "For private companies, particularly founder-led businesses where the owner is also the most senior executive and also chairs board meetings, the combination is more common and more defensible. A sole founder who owns the company, chairs the board, and runs daily operations is, in practice, doing all three things. Whether they choose to write Chairman/CEO or simply MD/CEO on their business card is largely a matter of preference, with the caveat that Chairman/CEO sends a different signal to sophisticated counterparties than MD/CEO does."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Can a Company Have Both an MD and a CEO?",
+      "paragraphs": [
+        "This is rare. In standard Nigerian corporate structure, the roles are not separated into two people. The Managing Director is the CEO. They are held by the same individual with a combined title.",
+        "Having a distinct person as MD and a separate distinct person as CEO in the same company is unusual in Nigerian practice and would require a deliberate governance decision to define what authority each person holds independently of the other. It occasionally appears in large conglomerates during leadership transitions or in multinational subsidiaries where the global entity distinguishes between a local Managing Director and a regional CEO, but it is not the default structure and CAMA 2020 does not contemplate or require it."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "CAMA 2020 Position",
+      "paragraphs": [
+        "The Companies and Allied Matters Act 2020 does not use the term Chief Executive Officer as a legal designation. It recognises the Managing Director as the most senior executive officer of a company. The CEO title, while widely used in Nigerian business, is a corporate practice convention rather than a statutory designation. This is why MD/CEO as a combined title is both common and accurate: the statutory role is MD, and CEO is the internationally recognised equivalent."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Which Title Should Your Company Use?",
+      "paragraphs": [
+        "The practical guidance for Nigerian businesses:",
+        "<strong>For a private company founder who owns and manages the business:</strong> MD/CEO is accurate and widely understood. It acknowledges both the statutory role (Managing Director) and the international convention (Chief Executive Officer). If you chair your own board meetings as well, you may add Chairman to your internal title, but MD/CEO is sufficient for external use.",
+        "<strong>For a private company with a board and a hired management team:</strong> The most senior executive is the MD or MD/CEO. If there is a designated Chairman from among the board, that person carries the Chairman title separately.",
+        "<strong>For a public company:</strong> The Chairman must be a non-executive director and should not hold an executive title simultaneously. The most senior executive is the MD/CEO. Combining Chairman and CEO into one title for a public company conflicts with governance standards and should be avoided.",
+        "Getting these titles right from the start is part of building a company with proper governance foundations. Whether you are structuring a new business, formalising a company that has been operating informally, or restructuring an existing governance arrangement, the titles your leadership carries should accurately reflect the roles the law recognises and that investors, banks, and counterparties will understand.",
+        "Traction Outsourcing Limited works with Nigerian businesses on exactly this kind of foundation work through our <a href=\"/services/startup-structuring/\">Startup Structuring</a> and <a href=\"/services/corporate-restructuring/\">Corporate Restructuring</a> services. If you are setting up governance correctly from the beginning or fixing a structure that has accumulated problems over time, a conversation with our <a href=\"/services/business-advisory/\">Business Advisory</a> team is the right starting point.",
+        "Further Reading: <a href=\"/articles/what-is-structure-in-business/\">What Is Structure in Business?</a>, <a href=\"/articles/what-is-business-restructuring-nigeria/\">What Is Business Restructuring?</a>, <a href=\"/articles/accountability-in-business-nigeria/\">Accountability in Business Nigeria</a>, <a href=\"/articles/restrictive-clause-vs-bond-nigeria/\">Restrictive Clause vs Bond in Nigeria</a>."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Not Sure How to Structure Your Company's Leadership?",
+    "text": "Book a free 30-minute advisory call. We will review your current governance structure, explain what the roles should look like for your type of company, and tell you what needs to change. Or explore our <a href=\"/services/startup-structuring/\">Startup Structuring</a> and <a href=\"/services/corporate-restructuring/\">Corporate Restructuring</a> services.",
+    "button": "Book Your Free 30-Minute Call",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20company%20governance%20and%20leadership%20structure."
+  },
+  "faq": {
+    "entries": [
+      { "q": "What is the difference between MD and CEO in Nigeria?", "a": "In Nigerian company practice, Managing Director (MD) and Chief Executive Officer (CEO) refer to the same role: the most senior executive director responsible for the day-to-day running of the company. The titles are functionally identical and are often combined as MD/CEO. The distinction that matters is between the MD/CEO and the Chairman, who heads the board of directors and is typically a non-executive director in a public company." },
+      { "q": "Can a company have both an MD and a CEO in Nigeria?", "a": "It is uncommon. In most Nigerian companies, the roles are held by the same person and combined as MD/CEO. Having a separate Managing Director and a separate Chief Executive Officer in the same company is rare and typically only occurs in large conglomerates or during transitional governance arrangements. CAMA 2020 does not mandate the split and corporate governance guidelines do not encourage it as a default structure." },
+      { "q": "What is a Chairman/CEO in Nigeria?", "a": "A Chairman/CEO combines two distinct roles in one person: the Chairman who heads the board of directors, and the CEO who leads the executive management of the company. In a public company this raises governance concerns because the Chairman is supposed to be a non-executive director independent of day-to-day operations. For private companies where the owner also manages the business, the title is less problematic but still unusual. Most governance frameworks recommend separating the two roles." },
+      { "q": "What is the maximum number of members in a private company in Nigeria?", "a": "Under the Companies and Allied Matters Act 2020, a private company in Nigeria cannot have more than 50 members, excluding current and former employees of the company. This is one of the key distinctions between a private company and a public company, which has no upper limit on the number of members." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
+      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" }
+    ],
+    "insights": [
+      { "title": "What Is Structure in Business?", "href": "/articles/what-is-structure-in-business/" },
+      { "title": "What Is Business Restructuring?", "href": "/articles/what-is-business-restructuring-nigeria/" },
+      { "title": "Accountability in Business Nigeria", "href": "/articles/accountability-in-business-nigeria/" },
+      { "title": "Restrictive Clause vs Bond Nigeria", "href": "/articles/restrictive-clause-vs-bond-nigeria/" },
+      { "title": "Build a Resilient Management Team", "href": "/articles/how-to-build-resilient-management-team-nigeria/" }
+    ]
+  }
+}

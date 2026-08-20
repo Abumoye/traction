@@ -1,0 +1,75 @@
+{
+  "_route": { "template": "flex.html", "output": "brands/properties/index.html", "url": "/brands/properties/" },
+  "brand": "properties",
+  "meta": {
+    "title": "Property Management & Brokerage Abuja | Traction Properties",
+    "description": "Traction Properties and Managers is a premium property management and brokerage firm in Abuja, Nigeria. Explore properties for sale and rent."
+  },
+  "hero": {
+    "eyebrow": "Traction Properties",
+    "headline": "Property Management & Real Estate Brokerage in Abuja",
+    "sub": "Traction Properties and Managers is a premier property management, commercial brokerage, and real estate advisory firm based in the heart of Abuja, Nigeria. Built on deep structural transparency and institutional market intelligence, we assist property owners, corporate investors, and premium tenants navigate asset evaluation with confidence. Our systems combine comprehensive facility oversight with risk-adjusted investment blueprints to safeguard luxury residential and commercial assets.",
+    "image": "/images/traction-properties-logo.png",
+    "image_alt": "Traction Properties and Managers"
+  },
+  "sections": [
+    {
+      "type": "text",
+      "heading": "Exclusive Properties For Sale",
+      "paragraphs": []
+    },
+    {
+      "type": "image-text",
+      "image": "/images/property-sale1.jpeg",
+      "heading": "Luxury 4-Bedroom Semi-Detached",
+      "paragraphs": [
+        "Location: Kado, Abuja",
+        "₦ 380,000,000",
+        "Land Size: xx0 SQM"
+      ]
+    },
+    {
+      "type": "image-text",
+      "image": "/images/property-sale2.jpeg",
+      "heading": "Premium 4-Bedroom Terrace Duplex",
+      "reverse": true,
+      "paragraphs": [
+        "Location: Mabushi, Abuja",
+        "₦ 350,000,000",
+        "Land Size: xx0 SQM"
+      ]
+    },
+    {
+      "type": "grid",
+      "bg": "ink",
+      "heading": "<span class=\"eyebrow\">Why Traction Properties</span><br>Properties You Can TRUST. Backed by Professionals.",
+      "sub": "We handle every step of the acquisition process, from due diligence to documentation, so you can invest with confidence.",
+      "columns": 3,
+      "style": "icon-list",
+      "entries": [
+        { "icon": "fa-file-contract", "title": "Clear Title Documentation", "text": "" },
+        { "icon": "fa-credit-card", "title": "Flexible Payment Plans", "text": "" },
+        { "icon": "fa-user-tie", "title": "Professional Advisory", "text": "" }
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "We Can Manage Your Property For You",
+      "sub": "We provide full-scale, hands-off property management solutions for homeowners and commercial landlords across Abuja, ensuring steady asset yield and pristine structural conservation.",
+      "columns": 3,
+      "entries": [
+        { "icon": "fa-users", "title": "Tenant Management", "text": "Full tenant communication, onboarding, and dispute resolution handled on your behalf." },
+        { "icon": "fa-user-check", "title": "Tenant Verification", "text": "Rigorous background checks and verification protocols before any tenant is placed." },
+        { "icon": "fa-money-bill-wave", "title": "Rent Collection", "text": "Prompt collection and disbursement protocols with full financial reporting." },
+        { "icon": "fa-gavel", "title": "Legal Representation", "text": "Comprehensive legal agreements and representation to protect your asset." },
+        { "icon": "fa-tools", "title": "Facility Management", "text": "Proactive inspections, maintenance scheduling, and contractor oversight." },
+        { "icon": "fa-hard-hat", "title": "Renovation & Maintenance", "text": "General contracting, site maintenance, and renovation project management." }
+      ]
+    }
+  ],
+  "final_cta": {
+    "title": "Contact A Property Manager",
+    "button": "Contact A Property Manager",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20speak%20with%20a%20property%20manager."
+  }
+}

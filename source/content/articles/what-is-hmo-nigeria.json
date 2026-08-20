@@ -1,0 +1,88 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/what-is-hmo-nigeria/index.html",
+    "url": "/articles/what-is-hmo-nigeria/"
+  },
+  "meta": {
+    "title": "What Is HMO in Nigeria? Why Nigerian Businesses Use Health Insurance",
+    "description": "HMO stands for Health Maintenance Organisation. In Nigeria, it is how businesses provide health coverage for their staff. Here is what it means, how it works, and why it matters for your business."
+  },
+  "tag": "HR Management · Partnerships",
+  "title": "What Is HMO in Nigeria? Why Nigerian Businesses Use Health Insurance",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "July 27, 2026",
+    "read_time": "3 min read"
+  },
+  "image": "/images/articles/what-is-hmo-nigeria.jpg",
+  "dek": "Most Nigerian employees do not have health insurance. Most Nigerian business owners know they should provide it but are not sure how it works or whether their business is ready for it. This article explains both.",
+  "sections": [
+    {
+      "type": "text",
+      "heading": "What HMO Means in Nigeria",
+      "paragraphs": [
+        "HMO stands for Health Maintenance Organisation. In Nigeria, an HMO is a licensed health insurance provider that manages group health coverage for businesses and their employees.",
+        "The way it works is straightforward: the employer enrols their staff with an HMO provider and pays a group premium. Each enrolled employee receives an HMO card that gives them access to medical care at the HMO's network of partner hospitals and clinics. When a staff member needs to see a doctor or access treatment, they present their card and receive care without paying out of pocket at the point of service. The cost is covered by the premium the employer has already paid."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Why Nigerian Businesses Provide HMO for Their Staff",
+      "paragraphs": [
+        "The reasons Nigerian businesses invest in staff health coverage fall into three categories."
+      ]
+    },
+    {
+      "type": "list",
+      "list": [
+        { "b": "Legal obligation.", "t": "The National Health Insurance Authority Act 2022 requires formal sector employers in Nigeria to provide health insurance for their employees. Businesses that do not are technically non-compliant, which creates risk in any formal due diligence process, by an investor, an auditor, or a corporate client vetting their supply chain." },
+        { "b": "Staff retention.", "t": "HMO is one of the most valued employee benefits in Nigeria. In a competitive hiring environment, businesses that offer health coverage attract and retain better candidates than those that do not. The cost of the premium is almost always less than the cost of replacing a good employee who left for a competitor that offers benefits." },
+        { "b": "Productivity.", "t": "A workforce that has access to healthcare takes fewer sick days, recovers faster, and is less likely to face the financial stress that comes from paying for medical care out of pocket. The return on a well-structured HMO plan shows up in attendance records and output quality." }
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Providing HMO is not a luxury benefit for large corporations. It is a competitive advantage that any Nigerian business with staff can access."
+    },
+    {
+      "type": "text",
+      "heading": "How Traction Outsourcing Helps Nigerian Businesses Access HMO",
+      "paragraphs": [
+        "Traction Outsourcing works in partnership with <a href=\"/partnerships/hallmark-hmo/\">Hallmark HMO</a> to provide accessible health coverage for Nigerian businesses and their employees. Whether you are enrolling five staff or five hundred, the process can be managed through a single point of contact, with plan options structured around what your business can realistically afford and what your staff genuinely need.",
+        "If you currently outsource your HR or payroll through Traction Outsourcing, adding health cover for your team is a straightforward next step. If you are new to HMO and want to understand what your options are, a conversation with our team is the right starting point.",
+        "<strong>Further Reading:</strong> <a href=\"/articles/what-is-hr-outsourcing/\">What Is HR Outsourcing?</a>, <a href=\"/articles/employee-leave-and-compensation-in-nigeria/\">Employee Leave and Compensation in Nigeria</a>, <a href=\"/services/staff-outsourcing/\">Staff Outsourcing and HR Management</a>."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Talk to Our Team Before You Make a Decision.",
+    "text": "Book a free 30-minute advisory call. No forms, no commitments, just a direct conversation about your business and what it needs.",
+    "button": "Book Your Free 30-Minute Call",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  },
+  "faq": {
+    "entries": [
+      { "q": "What does HMO mean in Nigeria?", "a": "HMO stands for Health Maintenance Organisation. In Nigeria, an HMO is a licensed health insurance provider that manages group health coverage for businesses and their employees. The employer pays a premium, and enrolled staff can access medical care at the HMO's network of hospitals and clinics without paying out of pocket at the point of care." },
+      { "q": "Is HMO mandatory for Nigerian businesses?", "a": "Under the National Health Insurance Authority Act 2022, formal sector employers in Nigeria are required to provide health insurance for their employees. The National Health Insurance Authority (NHIA) oversees this requirement. In practice, enforcement has been uneven, but the legal obligation exists, and businesses that provide HMO cover are better positioned for compliance, staff retention, and due diligence by investors and institutional partners." },
+      { "q": "How do Nigerian businesses get HMO coverage for their staff?", "a": "Nigerian businesses enrol with a licensed HMO provider, pay a group premium covering all enrolled staff, and employees receive HMO cards granting access to the provider's network of hospitals and clinics. The employer typically negotiates the plan level, coverage scope, and premium with the HMO directly or through an HR partner. Traction Outsourcing works with Hallmark HMO to provide accessible health cover for Nigerian businesses and their employees." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
+      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
+      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
+      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+    ],
+    "insights": [
+      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
+      { "title": "Hire Staff in Nigeria From Abroad", "href": "/articles/hire-staff-nigeria-from-abroad/" },
+      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
+      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
+      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "book-a-call/index.html",
+    "url": "/book-a-call/"
+  },
+  "meta": {
+    "title": "Book a Free Strategy Call | Traction Outsourcing Limited",
+    "description": "Book a free 30-minute strategy call with the Traction Outsourcing Limited team. Tell us about your business and we will tell you exactly how we can help."
+  },
+  "hero": {
+    "eyebrow": "Free 30-Minute Call",
+    "headline": "Book a Strategy Call With Our Team",
+    "sub": "Tell us about your business, what you are working on, and where you are stuck. We will tell you honestly how we can help and what the right next step looks like.",
+    "actions": [
+      { "label": "Choose a Time on Our Calendar", "href": "https://calendar.zoho.com/zc/view/slot-booking/zz08011220ecd2ffd38a77cd00604ba77eb8c4c8a1b33d3153f966ab3d38577a911e124242", "style": "btn-primary", "blank": true },
+      { "label": "Message Us on WhatsApp", "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call.", "style": "btn-secondary", "blank": true }
+    ]
+  },
+  "sections": [
+    {
+      "type": "cta",
+      "heading": "Prefer WhatsApp?",
+      "text": "Send us a message directly and we will find a time that works.",
+      "button": "Send us a message directly",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call.",
+      "blank": true
+    }
+  ]
+}

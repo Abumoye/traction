@@ -1,0 +1,82 @@
+{
+  "_route": { "template": "flex.html", "output": "brands/properties/estate-lands/index.html", "url": "/brands/properties/estate-lands/" },
+  "brand": "properties",
+  "meta": {
+    "title": "Affordable Estate Lands in Abuja | Traction Properties",
+    "description": "Buy affordable estate land in Abuja. Plots available in Kuje, Jikwoyi, Asokoro 2, Asokoro 2 behind NAF Valley Estate, Katampe Extension 2, and Guzape. Prices from N3,000,000. Contact Traction Properties today."
+  },
+  "hero": {
+    "eyebrow": "Prime Real Estate · Abuja, Nigeria",
+    "headline": "Affordable Estate Lands In Abuja.",
+    "sub": "Own a piece of Nigeria's capital city. Verified titles, flexible payment plans, and prime locations across the FCT. Starting from ₦3,000,000.",
+    "actions": [
+      { "label": "View All Locations", "href": "#locations", "style": "btn-primary" },
+      { "label": "Chat on WhatsApp", "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20estate%20lands%20in%20Abuja.", "style": "btn-ghost", "blank": true }
+    ]
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "columns": 4,
+      "style": "icon-list",
+      "entries": [
+        { "icon": "fa-certificate", "title": "Verified Land Titles", "text": "" },
+        { "icon": "fa-shield-alt", "title": "Secure Transactions", "text": "" },
+        { "icon": "fa-handshake", "title": "Flexible Payment Plans", "text": "" },
+        { "icon": "fa-map-marked-alt", "title": "6 Prime Locations", "text": "" },
+        { "icon": "fa-phone-alt", "title": "24/7 Client Support", "text": "" }
+      ]
+    },
+    {
+      "type": "grid",
+      "id": "locations",
+      "heading": "<span class=\"eyebrow\">Available Plots</span><br>Choose Your Location",
+      "sub": "Five carefully selected locations across Abuja, from emerging growth corridors to established premium districts.",
+      "columns": 3,
+      "entries": [
+        {
+          "title": "Guzape",
+          "text": "<span style=\"font-size:12px;color:var(--ink-faint);\">Abuja Municipal Area Council · AMAC</span><br><br>✓ Minutes from Asokoro and the Central District<br>✓ Premium residential community, rapidly developing<br>✓ High appreciation rate year on year<br>✓ Gazette and survey plan available<br><br><strong>From ₦3,000,000</strong> <span style=\"font-size:12px;color:var(--ink-faint);\">Per plot · Price may vary by size</span>",
+          "cta": "Enquire About Guzape",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20estate%20land%20in%20Guzape%2C%20Abuja."
+        },
+        {
+          "title": "Asokoro 2",
+          "text": "<span style=\"font-size:12px;color:var(--ink-faint);\">Abuja Municipal Area Council · AMAC</span><br><br>✓ Extension of Asokoro, Abuja's diplomatic zone<br>✓ Excellent road network access<br>✓ Proximity to government facilities and embassies<br>✓ Clean title documentation<br><br><strong>From ₦3,000,000</strong> <span style=\"font-size:12px;color:var(--ink-faint);\">Per plot · Price may vary by size</span>",
+          "cta": "Enquire About Asokoro 2",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20estate%20land%20in%20Asokoro%202%2C%20Abuja."
+        },
+        {
+          "title": "Asokoro 2",
+          "text": "<span style=\"font-size:12px;color:var(--ink-faint);\">Behind NAF Valley Estate · Abuja</span><br><br>✓ Directly behind NAF Valley Estate<br>✓ Serene, secured residential corridor<br>✓ Close proximity to Asokoro diplomatic zone<br>✓ Clean title documentation<br><br><strong>From ₦3,000,000</strong> <span style=\"font-size:12px;color:var(--ink-faint);\">Per plot · Price may vary by size</span>",
+          "cta": "Enquire About Asokoro 2",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20estate%20land%20in%20Asokoro%202%20behind%20NAF%20Valley%20Estate%2C%20Abuja."
+        },
+        {
+          "title": "Katampe Ext. 2",
+          "text": "<span style=\"font-size:12px;color:var(--ink-faint);\">Katampe Extension · Abuja</span><br><br>✓ Emerging upscale neighbourhood in Abuja<br>✓ Close to Maitama and Wuse districts<br>✓ Fast-developing road infrastructure<br>✓ Strong future value potential<br><br><strong>From ₦3,000,000</strong> <span style=\"font-size:12px;color:var(--ink-faint);\">Per plot · Price may vary by size</span>",
+          "cta": "Enquire About Katampe",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20estate%20land%20in%20Katampe%20Extension%202%2C%20Abuja."
+        },
+        {
+          "title": "Jikwoyi",
+          "text": "<span style=\"font-size:12px;color:var(--ink-faint);\">Abuja Municipal Area Council · AMAC</span><br><br>✓ Rapidly growing residential corridor<br>✓ Excellent transport links to Abuja CBD<br>✓ Affordable entry price for investors<br>✓ Suitable for building or long-term investment<br><br><strong>From ₦3,000,000</strong> <span style=\"font-size:12px;color:var(--ink-faint);\">Per plot · Price may vary by size</span>",
+          "cta": "Enquire About Jikwoyi",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20estate%20land%20in%20Jikwoyi%2C%20Abuja."
+        },
+        {
+          "title": "Kuje",
+          "text": "<span style=\"font-size:12px;color:var(--ink-faint);\">Kuje Area Council · FCT</span><br><br>✓ Peaceful, low-density satellite town<br>✓ One of FCT's fastest growing communities<br>✓ Good road access from Abuja city centre<br>✓ Ideal for land banking and future development<br><br><strong>From ₦3,000,000</strong> <span style=\"font-size:12px;color:var(--ink-faint);\">Per plot · Price may vary by size</span>",
+          "cta": "Enquire About Kuje",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20estate%20land%20in%20Kuje%2C%20Abuja."
+        }
+      ]
+    }
+  ],
+  "final_cta": {
+    "title": "Ready to Own Land in Abuja?",
+    "text": "Speak with our property consultants today. No pressure, no hidden fees, just straightforward land acquisition done right. Or call us directly at 0805 203 3145.",
+    "button": "Chat on WhatsApp",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20want%20to%20enquire%20about%20estate%20lands%20in%20Abuja."
+  }
+}

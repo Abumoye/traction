@@ -1,0 +1,38 @@
+[
+  {
+    "key": "all",
+    "label": "All Articles"
+  },
+  {
+    "key": "recruitment-talent",
+    "label": "Recruitment & Talent"
+  },
+  {
+    "key": "staff-outsourcing",
+    "label": "Staff Outsourcing & HR"
+  },
+  {
+    "key": "startup-structuring",
+    "label": "Startup Structuring"
+  },
+  {
+    "key": "corporate-restructuring",
+    "label": "Corporate Restructuring"
+  },
+  {
+    "key": "business-advisory",
+    "label": "Business Advisory"
+  },
+  {
+    "key": "training-leadership",
+    "label": "Training & Leadership"
+  },
+  {
+    "key": "events-travel",
+    "label": "Events & Business Travel"
+  },
+  {
+    "key": "client-reviews",
+    "label": "Client Reviews & News"
+  }
+]

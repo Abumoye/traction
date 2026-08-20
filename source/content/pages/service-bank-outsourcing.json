@@ -1,0 +1,177 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "services/bank-outsourcing/index.html",
+    "url": "/services/bank-outsourcing/"
+  },
+  "meta": {
+    "title": "Bank Outsourcing Companies in Nigeria | Traction Outsourcing Limited",
+    "description": "Outsourced staffing for banks and financial institutions in Nigeria: tellers, customer service, direct sales agents, back-office, and compliance support."
+  },
+  "hero": {
+    "eyebrow": "Bank Outsourcing",
+    "headline": "Outsourcing for Banks & Financial Institutions",
+    "sub": "Traction Outsourcing supports banks and financial institutions across Nigeria with outsourced staff for teller operations, customer service, sales, and back-office support, built with the documentation and governance a regulated institution needs.",
+    "actions": [
+      {
+        "label": "Request A Consultation",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20bank%20staff%20outsourcing",
+        "style": "btn-primary"
+      },
+      {
+        "label": "Chat on WhatsApp",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20bank%20staff%20outsourcing",
+        "style": "btn-secondary",
+        "blank": true
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "Banks and financial institutions carry a staffing load that most businesses never touch, front-line roles that need to scale with branch expansion, back-office functions that need to run without interruption, and every one of them sitting inside a regulatory environment that does not tolerate loose arrangements. Bringing in a general staffing agency that treats a bank the same as a retail shop rarely holds up.",
+        "Traction Outsourcing supports banks and financial institutions with outsourced staffing built around that reality, proper documentation, clear service level agreements, and roles managed with the same seriousness the institution applies to its own operations. We are not new to this. We understand what a financial institution actually needs from a staffing partner, and we are positioned to take on more of it."
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "Roles We Place for Banks",
+      "sub": "Front-line, back-office, and support roles, scoped to a single branch or rolled out across many.",
+      "columns": 4,
+      "style": "plain",
+      "entries": [
+        {
+          "title": "Tellers & Cash Officers",
+          "text": "Front-line cash handling and transaction support"
+        },
+        {
+          "title": "Customer Service & Contact Center",
+          "text": "Branch front desk and call center representatives"
+        },
+        {
+          "title": "Direct Sales Agents",
+          "text": "Account opening, card, and loan product sales support"
+        },
+        {
+          "title": "Back-Office & Operations",
+          "text": "Transaction processing and administrative support"
+        },
+        {
+          "title": "Loan & Credit Support",
+          "text": "Documentation and processing support for lending teams"
+        },
+        {
+          "title": "Compliance & KYC Support",
+          "text": "Onboarding documentation and verification support staff"
+        },
+        {
+          "title": "IT & Technical Support",
+          "text": "Branch-level and desk-side technical support"
+        },
+        {
+          "title": "Facility, Security & Drivers",
+          "text": "Branch facility staff, security, and dispatch support"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Need a role that isn't listed here?",
+      "button": "Ask Us on WhatsApp",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20staffing%20role%20not%20listed%20on%20your%20bank%20outsourcing%20page"
+    },
+    {
+      "type": "text",
+      "heading": "Built Around How Banks Actually Operate",
+      "paragraphs": [
+        "Outsourcing a function does not outsource accountability for it. Nigerian banks and other CBN-supervised financial institutions are expected to maintain documented risk assessments and governance oversight for any outsourced arrangement, including staffing, as part of their broader risk and cybersecurity framework obligations.",
+        "Traction Outsourcing structures every bank staffing arrangement with that reality in mind, clear documentation, defined service level agreements, and reporting the institution can actually rely on internally, not a loose staffing arrangement dressed up after the fact. We work quietly and professionally, fitting into how the institution already operates rather than asking it to adapt to us."
+      ]
+    },
+    {
+      "type": "steps",
+      "heading": "How It Works",
+      "sub": "The same disciplined process we use across every staffing engagement, scoped to a financial institution's requirements.",
+      "entries": [
+        {
+          "n": "1",
+          "title": "Diagnose",
+          "text": "We understand the roles, branch footprint, and governance requirements before proposing anything."
+        },
+        {
+          "n": "2",
+          "title": "Design",
+          "text": "We build the staffing plan, documentation, and SLAs the institution's risk framework requires."
+        },
+        {
+          "n": "3",
+          "title": "Deploy",
+          "text": "We place, manage, and report on staff for as long as the arrangement runs, branch by branch if needed."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Let's talk about your institution's staffing needs.",
+      "button": "Request A Consultation",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20bank%20staff%20outsourcing"
+    },
+    {
+      "type": "grid",
+      "heading": "Why Financial Institutions Work With Us",
+      "columns": 4,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-user-shield",
+          "title": "Discretion As Standard",
+          "text": "Staffing arrangements built to sit inside your institution quietly and professionally, without disruption to how you operate."
+        },
+        {
+          "icon": "fa-certificate",
+          "title": "HR-Certified Leadership",
+          "text": "Our practice is led by PHRi, SHRM-SCP, and CIPM certified HR professionals, not generalists managing staffing as a side function."
+        },
+        {
+          "icon": "fa-file-shield",
+          "title": "Documentation-First",
+          "text": "Every arrangement is built with the SLAs and reporting your governance framework requires, not added on after the fact."
+        },
+        {
+          "icon": "fa-headset",
+          "title": "24/7 Virtual Client Support",
+          "text": "Reach us at any hour through our round-the-clock support desk, not just during standard business hours."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "Does Traction Outsourcing work with banks in Nigeria?",
+          "a": "Yes. Traction Outsourcing supports banks and financial institutions in Nigeria with outsourced staff across teller operations, customer service, direct sales, back-office support, and more, managed with the documentation and governance financial institutions require."
+        },
+        {
+          "q": "What roles can a bank outsource through Traction Outsourcing?",
+          "a": "Common roles include tellers and cash officers, customer service and contact center staff, direct sales agents, back-office and operations support, loan and credit support, compliance and KYC support staff, IT support, and facility and security staff."
+        },
+        {
+          "q": "Is outsourced bank staff still the bank's regulatory responsibility?",
+          "a": "Yes. Regulatory bodies are clear that outsourcing an operational function does not outsource accountability for it. Banks remain responsible for the outcomes of outsourced roles, which is why every arrangement is built with proper documentation, SLAs, and reporting the institution can rely on."
+        },
+        {
+          "q": "How does Traction Outsourcing support compliance for outsourced bank staff?",
+          "a": "Nigerian banks are expected to maintain documented risk assessments and governance oversight for any outsourced function, in line with CBN requirements for supervised financial institutions. We structure our staffing arrangements with clear documentation, defined SLAs, and reporting built to sit inside that governance requirement rather than outside it."
+        }
+      ]
+    }
+  ],
+  "final_cta": {
+    "title": "Ready to Discuss Staffing for Your Institution?",
+    "text": "Speak with our consulting team about how Bank Outsourcing can work for your business.",
+    "button": "Request A Consultation",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  }
+}

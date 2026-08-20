@@ -1,0 +1,167 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/how-to-register-a-company-in-nigeria/index.html",
+    "url": "/articles/how-to-register-a-company-in-nigeria/"
+  },
+  "meta": {
+    "title": "How to Register a Company in Nigeria (2026 CAC Guide) | Traction Outsourcing",
+    "description": "How to register a company in Nigeria in 2026: CAC business name vs limited liability, required documents, step-by-step process, costs, and what to do after registration."
+  },
+  "tag": "CAC Registration",
+  "title": "How to Register a Company in Nigeria: The Complete 2026 CAC Registration Guide",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "July 18, 2026",
+    "read_time": "4 min read"
+  },
+  "image": "/images/articles/cac-registration.jpg",
+  "dek": "If you are asking \"how do I start my business in Nigeria,\" the honest answer starts with one body: the Corporate Affairs Commission. Everything else, tax, banking, contracts, credibility, depends on getting this part right first.",
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "An unregistered business can still serve customers and make money, but it cannot open a corporate bank account, cannot bid for most government or corporate contracts, and cannot access loans, grants, or accelerator programmes, nearly all of which ask for proof of registration before they consider an application. Registering with the Corporate Affairs Commission (CAC) under the Companies and Allied Matters Act (CAMA) 2020 is what turns a business idea into a legally recognized entity."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Business Name or Limited Company? Choosing Your Structure",
+      "paragraphs": [
+        "Before you touch the CAC portal, decide what kind of entity you are registering. For most first-time founders, the choice is between two options."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Business Name",
+      "paragraphs": [
+        "A business name covers sole proprietorships and general partnerships. It has no separate legal personality, which means you, the owner, are personally liable for the business's debts and obligations. It is the cheaper, faster option, and it suits small operations, freelancers, and side businesses that do not yet need the protection or formality of a company structure."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Private Limited Company (Ltd)",
+      "paragraphs": [
+        "A limited company is a separate legal entity from its owners. Your personal assets are protected from the company's debts, which matters as soon as you are taking on contracts, hiring staff, or raising money. It requires more documentation, a minimum share capital, generally ₦100,000 for a standard private company, and higher compliance obligations going forward, including annual returns."
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "What You Need Before You Start",
+      "list": [
+        { "t": "Two or three proposed business names, in order of preference" },
+        { "t": "Details of directors, shareholders, and, for a limited company, a company secretary" },
+        { "t": "A clear, specific description of your business activities, vague descriptions slow down approval" },
+        { "t": "A physical Nigerian address for the business, a P.O. Box is generally not accepted" },
+        { "t": "Valid means of identification for everyone involved, scanned in color, black and white scans are a common cause of rejection" },
+        { "t": "For a limited company, your proposed share capital and a Memorandum and Articles of Association covering the full scope of the business" }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "How to Register with CAC, Step by Step",
+      "paragraphs": []
+    },
+    {
+      "type": "text",
+      "heading": "1. Search and Reserve Your Name",
+      "paragraphs": [
+        "Use the CAC public search, available through the CAC portal, to confirm your preferred name is not already taken or too similar to an existing one. Reserve it once confirmed."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "2. Complete the Online Application",
+      "paragraphs": [
+        "Registration is done through the CAC's online portal. You create an account, fill in the registration form with the details of the owner or directors, and upload your supporting documents."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "3. Submit Your Application",
+      "paragraphs": [
+        "Complete the registration form on the CAC portal and upload your supporting documents for review."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "4. Receive Your Certificate",
+      "paragraphs": [
+        "Once your application is approved, your registration certificate is issued digitally, there is no physical document to collect. A business name is typically ready within a few business days. A limited company generally takes longer, often one to two weeks, depending on how complete and accurate your documents are."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "After Registration: Tax and What Comes Next",
+      "paragraphs": [
+        "Your CAC certificate is the starting point, not the finish line. A registered business still needs a Tax Identification Number (TIN) to open a corporate bank account and to remain compliant. There has been discussion of eventually merging the CAC registration number with a business's TIN so the two are issued together, but as things currently stand, TIN registration is still its own separate step handled through the relevant tax authority, not something that happens automatically the moment your CAC certificate is issued. Budget the time for it as a distinct task until that changes.",
+        "Beyond tax registration, most growing businesses also need a VAT certificate if applicable to their activities, a corporate bank account (which requires your RC number and TIN), and, if the brand name itself is valuable, a trademark filed in the appropriate class, which is a separate process from CAC registration entirely. None of this is optional if you intend to operate formally, open institutional doors, or eventually raise money."
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "Common Mistakes That Get Applications Rejected",
+      "list": [
+        { "t": "Submitting black and white identification scans instead of color" },
+        { "t": "Proposing a name too similar to one already registered" },
+        { "t": "Writing vague objects of association instead of a specific description of what the business actually does" },
+        { "t": "Using a P.O. Box instead of a physical address" },
+        { "t": "Incomplete director or shareholder information on a limited company application" }
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "Each of these is a minor detail on its own, but any one of them can send an application back for correction, adding days or weeks to a process that should take days."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Registering a Business in Nigeria as a Foreigner or From the Diaspora",
+      "paragraphs": [
+        "Living outside Nigeria does not, by itself, change how you register a business. The CAC portal is online, and a Nigerian citizen abroad registering a wholly Nigerian-owned company follows the exact same process, and faces the exact same requirements, as someone registering from Lagos or Abuja. What actually changes the process is ownership, not location.",
+        "A business is treated as having foreign participation the moment any non-Nigerian individual or foreign entity holds shares in it, even a small percentage. Once that is the case, the company must also register with the Nigerian Investment Promotion Commission (NIPC), obtain a Business Permit from the Federal Ministry of Interior, and meet a minimum share capital requirement that is significantly higher than what a wholly Nigerian-owned company needs to declare. If the business intends to bring in foreign staff, Expatriate Quota approval is a further step. These thresholds are reviewed periodically, so confirm the current requirements with NIPC or a professional before you structure the shareholding, rather than relying on a figure from an older article.",
+        "A wholly Nigerian-owned company, regardless of where its owner lives, does not trigger any of this. If you are a Nigerian in the diaspora registering a business you will own outright, you can go through the standard CAC process described above."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Should You Register Yourself or Use a Professional?",
+      "paragraphs": [
+        "The CAC portal is built for self-service, and plenty of founders register their own business name without issue. Where it gets more complicated is everything the registration certificate does not cover on its own: choosing the right structure for where the business is actually going, getting the objects of association specific enough to hold up, sorting out TIN and VAT registration, and building the internal structure, job descriptions, and reporting lines a business needs the moment it hires its first employee.",
+        "That is the gap Traction Outsourcing works in. Registration is the first phase of our <a href=\"/services/startup-structuring/\">startup structuring service</a>, which covers CAC registration, your TIN, VAT certificate, trademark filing, and your official CAMA-compliant communication letters, then continues into building the organogram, job descriptions, and policies your business needs to actually run once it exists on paper. If you want to see what that structure actually looks like, read <a href=\"/articles/article-organogram/\">how to create an organogram for your Nigerian business</a> next."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "",
+    "text": "Registering the business is the first step. Building it to actually run without you doing everything yourself is the harder part, and it is where most founders get stuck.",
+    "button": "See How We Structure Startups",
+    "href": "/services/startup-structuring/"
+  },
+  "faq": {
+    "entries": [
+      { "q": "How do I start my business in Nigeria?", "a": "Start by choosing a business structure, either a business name or a limited liability company, then register it with the Corporate Affairs Commission. Once registered, move on to tax registration, opening a corporate bank account, and building the internal structure your business needs to actually run." },
+      { "q": "How do I register a company in Nigeria?", "a": "You register with the Corporate Affairs Commission, either yourself through the CAC portal or through an accredited agent. The process involves reserving a name, preparing your documents, submitting your application, then receiving your certificate." },
+      { "q": "What is the difference between a business name and a limited company in Nigeria?", "a": "A business name has no separate legal personality, so the owner is personally liable for its debts. A limited company is a separate legal entity, which limits personal liability, but comes with more documentation and higher ongoing compliance obligations." },
+      { "q": "Can Nigerians living abroad register a company in Nigeria?", "a": "Yes. A Nigerian citizen abroad registering a wholly Nigerian-owned company follows the same CAC process as anyone registering from within Nigeria, since the portal is fully online. Location does not change the requirements, ownership does." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
+      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
+      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
+      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+    ],
+    "insights": [
+      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
+      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
+      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" },
+      { "title": "Hire Staff in Nigeria From Abroad", "href": "/articles/hire-staff-nigeria-from-abroad/" },
+      { "title": "How to Find the Best Recruitment Agency in Nigeria", "href": "/articles/best-recruitment-agency-nigeria/" }
+    ]
+  }
+}

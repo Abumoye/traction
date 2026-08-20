@@ -1,387 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Management & Brokerage Abuja | Traction Properties</title>
-    <meta name="description" content="Traction Properties and Managers is a premium property management and brokerage firm in Abuja, Nigeria. Explore properties for sale and rent.">
-    <meta name="keywords" content="property manager in nigeria, properties for sale abuja, real estate brokerage abuja, luxury apartments abuja">
-    <link rel="canonical" href="https://tolnigeria.com/brands/properties/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Property Management & Brokerage Abuja | Traction Properties">
-    <meta property="og:description" content="Traction Properties and Managers is a premium property management, brokerage, and real estate advisory firm based in Abuja, Nigeria. Explore our properties for sale and rent.">
-    <meta property="og:url" content="https://tolnigeria.com/brands/properties/">
-    <meta property="og:image" content="https://tolnigeria.com/images/og/og-traction-properties.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/jpeg">
-
-
-    <link rel="icon" type="image/png" href="/images/traction-properties-favicon.png">
-    <link rel="apple-touch-icon" href="/images/traction-properties-icon-512.png">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-    <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
-
-    <!-- Page-specific styling -->
-    <style>
-        .intro-section { padding: 60px 10%; background: var(--light-bg); text-align: center; }
-        .section-title { text-align: center; color: var(--primary-color); font-size: 30px; margin: 50px 0 30px; position: relative; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 0 10%; margin-bottom: 50px; }
-        .property-card { background: white; border-radius: 8px; border: 1px solid #eee; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
-        .carousel-placeholder { height: 220px; background: #e8e8e8; display: flex; align-items: center; justify-content: center; color: #666; font-style: italic; text-align: center; padding: 0 15px; }
-        .card-details { padding: 20px; }
-        .card-details h3 { margin: 0 0 10px 0; color: var(--primary-color); font-size: 20px; }
-        .price-tag { color: var(--accent-color); font-weight: bold; font-size: 18px; margin: 5px 0; }
-        .call-btn { display: inline-flex; align-items: center; justify-content: center; background-color: var(--primary-color); color: white; text-decoration: none; padding: 10px 15px; border-radius: 5px; font-weight: bold; width: 100%; text-align: center; margin-top: 15px; box-sizing: border-box; }
-        .call-btn:hover { background-color: var(--accent-color); }
-        .benefits-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
-        .benefits-list li { background: white; padding: 20px; border-radius: 6px; border-left: 4px solid var(--accent-color); box-shadow: 0 2px 8px rgba(0,0,0,0.02); font-weight: 600; }
-
-        @media (max-width: 900px) {
-            .intro-section { padding: 40px 6%; }
-            .grid { padding: 0 6%; }
-            .section-title { font-size: 24px; margin: 35px 0 20px; }
-        }
-    
-        /* WHY TRACTION section */
-        .why-section { background: #1a2f6e; color: white; padding: 70px 5%; }
-        .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1100px; margin: 0 auto; align-items: center; }
-        .why-left .section-label { color: #ffffff; display: block; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
-        .why-left .section-heading { font-family: Georgia, serif; font-size: clamp(24px, 3.5vw, 40px); font-weight: 700; color: white; line-height: 1.15; margin-bottom: 14px; }
-        .why-left .section-sub { font-size: 15px; color: rgba(255,255,255,0.70); line-height: 1.7; max-width: 480px; }
-        .why-points { list-style: none; margin-top: 30px; display: flex; flex-direction: column; gap: 20px; }
-        .why-point { display: flex; gap: 14px; align-items: flex-start; }
-        .why-icon { width: 42px; height: 42px; border-radius: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .why-icon i { color: #ffffff; font-size: 15px; }
-        .why-point-text h4 { font-size: 14px; font-weight: 600; color: white; margin-bottom: 3px; }
-        .why-point-text p { font-size: 13px; color: rgba(255,255,255,0.62); line-height: 1.6; }
-        .why-right { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-        .stat-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 26px 18px; text-align: center; }
-        .stat-box.wide { grid-column: span 2; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.20); }
-        .stat-num { font-family: Georgia, serif; font-size: 44px; font-weight: 700; color: #ffffff; line-height: 1; margin-bottom: 6px; }
-        .stat-label { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.5; }
-        @media (max-width: 900px) { .why-grid { grid-template-columns: 1fr; gap: 36px; } .why-right { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 480px) { .why-right { grid-template-columns: 1fr; } .why-right .stat-box.wide { grid-column: span 1; } }
-
-    
-        /* TP Brand Header */
-        .tp-header {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 0 5%; height: 70px;
-            background: rgba(35, 62, 144, 0.97);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.15);
-        }
-        .tp-logo { display: flex; align-items: center; text-decoration: none; }
-        .tp-logo img { height: 42px; width: auto; }
-        .tp-nav { display: flex; align-items: center; gap: 28px; }
-        .tp-nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: color 0.2s; }
-        .tp-nav a:hover { color: #ffffff; }
-        .tp-nav .nav-cta { background: #ffffff; color: #233e90; padding: 9px 22px; border-radius: 4px; font-weight: 700; font-size: 13px; }
-        .tp-nav .nav-cta:hover { background: #e8ecf7; color: #1a2f6e; }
-        .tp-nav .nav-tol { border: 1.5px solid rgba(255,255,255,0.50); color: #ffffff; padding: 7px 18px; border-radius: 4px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.3px; }
-        .tp-nav .nav-tol:hover { border-color: #ffffff; background: rgba(255,255,255,0.10); }
-        .tp-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-        .tp-hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
-        .tp-hamburger.toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg) !important; }
-        .tp-hamburger.toggle span:nth-child(2) { opacity: 0 !important; }
-        .tp-hamburger.toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg) !important; }
-        @media (max-width: 768px) {
-            .tp-hamburger { display: flex; }
-            .tp-nav {
-                position: fixed;
-                top: 0; right: -100%;
-                width: 280px; max-width: 80vw;
-                height: 100vh;
-                background: #1a2f6e;
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 80px 40px 40px;
-                box-sizing: border-box;
-                transition: right 0.4s cubic-bezier(0.1, 0.9, 0.2, 1);
-                z-index: 105;
-                overflow-y: auto;
-                gap: 0;
-            }
-            .tp-nav.open { right: 0; display: flex; }
-            .tp-nav a { font-size: 18px; color: rgba(255,255,255,0.88); width: 100%; padding: 0 0 16px 0; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.12); }
-            .tp-nav a:last-child { border-bottom: none; margin-bottom: 0; }
-            .tp-nav .nav-tol { border-bottom: 1px solid rgba(255,255,255,0.12); border-right: none; border-left: none; border-top: none; border-radius: 0; padding: 0 0 16px 0; background: none; font-size: 18px; margin-bottom: 20px; }
-            .tp-nav .nav-cta { background: #ffffff; color: #233e90; border-radius: 4px; padding: 12px 22px; margin-top: 4px; border-bottom: none; margin-bottom: 0; width: auto; align-self: flex-start; }
-        }
-        /* Push content below fixed header */
-        main { padding-top: 70px; }
-    </style>
-    <!-- Microsoft Clarity -->
-    <script>
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "xrmumbaimr");
-    </script>
-        <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://tolnigeria.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Our Brands",
-      "item": "https://tolnigeria.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Traction Properties",
-      "item": "https://tolnigeria.com/brands/properties/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Traction Outsourcing Limited",
-  "url": "https://tolnigeria.com/"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  "name": "Traction Properties",
-  "description": "Traction Properties is a premium property management and real estate brokerage brand of Traction Outsourcing Limited, offering verified land titles, homes, and commercial properties in Abuja, Nigeria.",
-  "url": "https://tolnigeria.com/brands/properties/",
-  "telephone": "+234-805-203-3145",
-  "email": "properties@tolnigeria.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "26, Algiers Street, Wuse Zone 5",
-    "addressLocality": "Abuja",
-    "addressRegion": "FCT",
-    "addressCountry": "NG"
-  },
-  "areaServed": "Abuja, Nigeria",
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "Traction Outsourcing Limited",
-    "url": "https://tolnigeria.com/"
-  },
-  "image": "https://tolnigeria.com/images/traction-opengraph.png"
-}
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Management & Brokerage Abuja | Traction Properties</title>
+  <link rel="canonical" href="https://tolnigeria.com/brands/properties/">
+  <meta name="description" content="Traction Properties and Managers is a premium property management and brokerage firm in Abuja, Nigeria. Explore properties for sale and rent.">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css">
+  
 </head>
-<body>
+<body class="brand-properties">
+  
+    <header class="site-header brand-properties" id="siteHeader">
+  <div class="nav-inner">
+    <a href="/brands/properties/" class="brand">
+      <img src="/images/traction-properties-and-managers.png" alt="Traction Properties and Managers Logo" style="height:26px;width:auto;">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/brands/properties/">Houses For Sale</a>
+      <a href="/brands/properties/estate-lands/">Estate Lands</a>
+      <a href="/" class="nav-sub-brand"><i class="fas fa-arrow-left" style="font-size:10px;margin-right:6px;"></i>Traction Outsourcing</a>
+      <a href="tel:+2348052033145" class="nav-cta"><i class="fas fa-phone" style="margin-right:6px;font-size:12px;"></i>Call Us</a>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+  
+  <main>
+    
 
-    <!-- Header / Navigation -->
-    <header class="tp-header">
-        <a href="/brands/properties/" class="tp-logo">
-            <img src="/images/traction-properties-logo-white.png" alt="Traction Properties and Managers">
-        </a>
-        <button class="tp-hamburger" id="tpHamburger" aria-label="Open menu">
-            <span></span><span></span><span></span>
-        </button>
-        <nav class="tp-nav" id="tpNav">
-            <a href="/brands/properties/">Houses For Sale</a>
-            <a href="/brands/properties/estate-lands/">Estate Lands</a>
-            <a href="/" class="nav-tol">Traction Outsourcing</a>
-            <a href="tel:+2348052033145" class="nav-cta"><i class="fas fa-phone"></i>&nbsp; Call Us</a>
-        </nav>
-    </header>
+<section class="hero" style="padding:170px 0 60px;">
+  <div class="container">
+    <span class="eyebrow">Traction Properties</span>
+    <h1 style="">Property Management & Real Estate Brokerage in Abuja</h1>
+    <p class="lede">Traction Properties and Managers is a premier property management, commercial brokerage, and real estate advisory firm based in the heart of Abuja, Nigeria. Built on deep structural transparency and institutional market intelligence, we assist property owners, corporate investors, and premium tenants navigate asset evaluation with confidence. Our systems combine comprehensive facility oversight with risk-adjusted investment blueprints to safeguard luxury residential and commercial assets.</p>
+    
+    <div class="article-hero-img reveal" style="margin-top:50px;"><img src="/images/traction-properties-logo.png" alt="Traction Properties and Managers"></div>
+  </div>
+</section>
 
-    <main>
 
-    <!-- Brand Introduction -->
-    <section class="intro-section">
-        <img src="/images/traction-properties-logo.png" width="3835" height="881" alt="Traction Properties and Managers" style="height: 80px; width: auto; margin-bottom: 15px;">
-        <h1 style="font-size: 32px; color: var(--primary-color); margin: 0 0 14px;">Property Management & Real Estate Brokerage in Abuja</h1>
-        <p style="max-width: 850px; margin: 0 auto; font-size: 17px; color: #555; line-height: 1.8; text-align: justify;">
-            Traction Properties and Managers is a premier property management, commercial brokerage, and real estate advisory firm based in the heart of Abuja, Nigeria. Built on deep structural transparency and institutional market intelligence, we assist property owners, corporate investors, and premium tenants navigate asset evaluation with confidence. Our systems combine comprehensive facility oversight with risk-adjusted investment blueprints to safeguard luxury residential and commercial assets.
-        </p>
-    </section>
+<section  class="section  ">
+  <div class="container" style="">
 
-    <!-- Section: Properties for Sale -->
-    <h2 class="section-title">Exclusive Properties For Sale</h2>
-    <div class="grid">
-        <div class="property-card">
-            <img src="/images/property-sale1.jpeg" width="1000" height="1250" alt="Luxury 4-Bedroom Semi-Detached Duplex for Sale in Kado Fish Market, Lifecamp" style="width: 100%; height: 320px; object-fit: cover;">
-            <div class="card-details">
-                <h3>Luxury 4-Bedroom Semi-Detached</h3>
-                <p><strong>Location:</strong> Kado, Abuja</p>
-                <div class="price-tag">&#8358; 380,000,000</div>
-                <p style="font-size: 14px; color: #777;"><strong>Land Size:</strong> xx0 SQM</p>
-            </div>
+    
+      <h2 class="section-title reveal">Exclusive Properties For Sale</h2>
+      
+      <div class="reveal" style="max-width:760px;margin:0 auto;font-size:18px;">
+        
+      </div>
+
+    
+
+  </div>
+</section>
+
+<section  class="section  ">
+  <div class="container" style="">
+
+    
+      <div class="grid grid-2 reveal" style="align-items:center;">
+        <div style="direction:ltr;"><img src="/images/property-sale1.jpeg" alt="Luxury 4-Bedroom Semi-Detached" style="border-radius:var(--r-lg);width:100%;"></div>
+        <div style="direction:ltr;">
+          
+          <h2 style="text-align:left;font-size:32px;">Luxury 4-Bedroom Semi-Detached</h2>
+          <p>Location: Kado, Abuja</p><p>₦ 380,000,000</p><p>Land Size: xx0 SQM</p>
+          
         </div>
-        <div class="property-card">
-            <img src="/images/property-sale2.jpeg" width="1000" height="1777" alt="Premium 4-Bedroom Terrace Duplex for Sale in Mabushi, Abuja" style="width: 100%; height: 320px; object-fit: cover;">
-            <div class="card-details">
-                <h3>Premium 4-Bedroom Terrace Duplex</h3>
-                <p><strong>Location:</strong> Mabushi, Abuja</p>
-                <div class="price-tag">&#8358; 350,000,000</div>
-                <p style="font-size: 14px; color: #777;"><strong>Land Size:</strong> xx0 SQM</p>
-            </div>
+      </div>
+
+    
+
+  </div>
+</section>
+
+<section  class="section  ">
+  <div class="container" style="">
+
+    
+      <div class="grid grid-2 reveal" style="align-items:center;direction:rtl">
+        <div style="direction:ltr;"><img src="/images/property-sale2.jpeg" alt="Premium 4-Bedroom Terrace Duplex" style="border-radius:var(--r-lg);width:100%;"></div>
+        <div style="direction:ltr;">
+          
+          <h2 style="text-align:left;font-size:32px;">Premium 4-Bedroom Terrace Duplex</h2>
+          <p>Location: Mabushi, Abuja</p><p>₦ 350,000,000</p><p>Land Size: xx0 SQM</p>
+          
         </div>
+      </div>
+
+    
+
+  </div>
+</section>
+
+<section  class="section  bg-ink">
+  <div class="container" style="">
+
+    
+      <h2 class="section-title reveal"><span class="eyebrow">Why Traction Properties</span><br>Properties You Can TRUST. Backed by Professionals.</h2>
+      <p class="section-sub reveal">We handle every step of the acquisition process, from due diligence to documentation, so you can invest with confidence.</p>
+      <div class="grid grid-3">
+        
+          
+          <div class="deliverable-item reveal">
+            <i class="fas fa-file-contract"></i>
+            <div><strong>Clear Title Documentation</strong><span></span></div>
+          </div>
+          
+        
+          
+          <div class="deliverable-item reveal">
+            <i class="fas fa-credit-card"></i>
+            <div><strong>Flexible Payment Plans</strong><span></span></div>
+          </div>
+          
+        
+          
+          <div class="deliverable-item reveal">
+            <i class="fas fa-user-tie"></i>
+            <div><strong>Professional Advisory</strong><span></span></div>
+          </div>
+          
+        
+      </div>
+
+    
+
+  </div>
+</section>
+
+<section  class="section  ">
+  <div class="container" style="">
+
+    
+      <h2 class="section-title reveal">We Can Manage Your Property For You</h2>
+      <p class="section-sub reveal">We provide full-scale, hands-off property management solutions for homeowners and commercial landlords across Abuja, ensuring steady asset yield and pristine structural conservation.</p>
+      <div class="grid grid-3">
+        
+          
+          <div class="card reveal">
+            <div class="icon-badge"><i class="fas fa-users"></i></div>
+            <h3>Tenant Management</h3>
+            <p>Full tenant communication, onboarding, and dispute resolution handled on your behalf.</p>
+            
+          </div>
+          
+        
+          
+          <div class="card reveal">
+            <div class="icon-badge"><i class="fas fa-user-check"></i></div>
+            <h3>Tenant Verification</h3>
+            <p>Rigorous background checks and verification protocols before any tenant is placed.</p>
+            
+          </div>
+          
+        
+          
+          <div class="card reveal">
+            <div class="icon-badge"><i class="fas fa-money-bill-wave"></i></div>
+            <h3>Rent Collection</h3>
+            <p>Prompt collection and disbursement protocols with full financial reporting.</p>
+            
+          </div>
+          
+        
+          
+          <div class="card reveal">
+            <div class="icon-badge"><i class="fas fa-gavel"></i></div>
+            <h3>Legal Representation</h3>
+            <p>Comprehensive legal agreements and representation to protect your asset.</p>
+            
+          </div>
+          
+        
+          
+          <div class="card reveal">
+            <div class="icon-badge"><i class="fas fa-tools"></i></div>
+            <h3>Facility Management</h3>
+            <p>Proactive inspections, maintenance scheduling, and contractor oversight.</p>
+            
+          </div>
+          
+        
+          
+          <div class="card reveal">
+            <div class="icon-badge"><i class="fas fa-hard-hat"></i></div>
+            <h3>Renovation & Maintenance</h3>
+            <p>General contracting, site maintenance, and renovation project management.</p>
+            
+          </div>
+          
+        
+      </div>
+
+    
+
+  </div>
+</section>
+
+
+
+<section class="section tight">
+  <div class="cta-band reveal">
+    <h2>Contact A Property Manager</h2>
+    <p></p>
+    <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20speak%20with%20a%20property%20manager." class="btn btn-primary" target="_blank" rel="noopener">Contact A Property Manager</a>
+  </div>
+</section>
+
+
+
+  </main>
+  
+    <footer class="site-footer brand-properties">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Head Office</h4>
+        <a href="https://maps.google.com/?q=Traction+Outsourcing+Limited+26+Algiers+Street+Wuse+Zone+5+Abuja" target="_blank" rel="noopener">26, Algiers Street,<br>Wuse Zone 5, FCT,<br>Nigeria.</a>
+      </div>
+      <div>
+        <h4>Contact Details</h4>
+        <a href="https://wa.me/2348052033145" target="_blank" rel="noopener"><i class="fab fa-whatsapp" style="color:#25D366;margin-right:6px;"></i>0805 203 3145</a>
+        <a href="tel:+2347078707777"><i class="fas fa-phone" style="margin-right:6px;"></i>0707 870 7777</a>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="/brands/properties/">Houses For Sale</a>
+        <a href="/brands/properties/estate-lands/">Estate Lands</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </div>
+      <div>
+        <h4>Email &amp; Social</h4>
+        <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a>
+        <a href="https://www.instagram.com/tractionoutsourcing" target="_blank" rel="noopener"><i class="fab fa-instagram" style="margin-right:6px;"></i>Instagram</a>
+      </div>
     </div>
-
-
-    <style>
-        @media (max-width: 600px) {
-            .estate-card-content { padding: 36px 24px !important; }
-        }
-    
-        /* WHY TRACTION section */
-        .why-section { background: #1a2f6e; color: white; padding: 70px 5%; }
-        .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1100px; margin: 0 auto; align-items: center; }
-        .why-left .section-label { color: #ffffff; display: block; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
-        .why-left .section-heading { font-family: Georgia, serif; font-size: clamp(24px, 3.5vw, 40px); font-weight: 700; color: white; line-height: 1.15; margin-bottom: 14px; }
-        .why-left .section-sub { font-size: 15px; color: rgba(255,255,255,0.70); line-height: 1.7; max-width: 480px; }
-        .why-points { list-style: none; margin-top: 30px; display: flex; flex-direction: column; gap: 20px; }
-        .why-point { display: flex; gap: 14px; align-items: flex-start; }
-        .why-icon { width: 42px; height: 42px; border-radius: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .why-icon i { color: #ffffff; font-size: 15px; }
-        .why-point-text h4 { font-size: 14px; font-weight: 600; color: white; margin-bottom: 3px; }
-        .why-point-text p { font-size: 13px; color: rgba(255,255,255,0.62); line-height: 1.6; }
-        .why-right { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-        .stat-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 26px 18px; text-align: center; }
-        .stat-box.wide { grid-column: span 2; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.20); }
-        .stat-num { font-family: Georgia, serif; font-size: 44px; font-weight: 700; color: #ffffff; line-height: 1; margin-bottom: 6px; }
-        .stat-label { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.5; }
-        @media (max-width: 900px) { .why-grid { grid-template-columns: 1fr; gap: 36px; } .why-right { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 480px) { .why-right { grid-template-columns: 1fr; } .why-right .stat-box.wide { grid-column: span 1; } }
-
-    
-        .why-right { display: block; }
-        .why-benefits-row { display: flex; gap: 0; }
-        .why-benefit {
-            flex: 1; display: flex; flex-direction: column; align-items: center;
-            gap: 14px; padding: 32px 20px; text-align: center;
-            border-right: 1px solid rgba(255,255,255,0.10);
-        }
-        .why-benefit:last-child { border-right: none; }
-        .why-benefit span { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.88); line-height: 1.4; }
-        @media (max-width: 600px) { .why-benefits-row { flex-direction: column; } .why-benefit { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.10); } .why-benefit:last-child { border-bottom: none; } }
-    
-        /* Property Management Cards */
-        .mgmt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 900px; margin: 0 auto 36px; text-align: left; }
-        .mgmt-card { background: #1a2f6e; border-radius: 10px; padding: 28px 24px; color: white; }
-        .mgmt-card i { font-size: 22px; color: rgba(255,255,255,0.7); margin-bottom: 14px; display: block; }
-        .mgmt-card h4 { font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
-        .mgmt-card p { font-size: 13px; color: rgba(255,255,255,0.68); line-height: 1.6; margin: 0; }
-        .mgmt-cta { display: inline-flex; align-items: center; gap: 10px; background: #233e90; color: #ffffff; padding: 14px 32px; border-radius: 6px; font-weight: 700; font-size: 15px; text-decoration: none; transition: background 0.2s; margin-top: 8px; }
-        .mgmt-cta:hover { background: #1a2f6e; }
-        @media (max-width: 768px) { .mgmt-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 480px) { .mgmt-grid { grid-template-columns: 1fr; } }
-    </style>
-
-    <!-- WHY SECTION -->
-    <section class="section why-section" id="why-traction">
-        <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
-            <span class="section-label" style="color: rgba(255,255,255,0.7);">Why Traction Properties</span>
-            <h2 class="section-heading" style="color: white; font-size: clamp(24px, 3.5vw, 40px); margin-bottom: 14px;">Properties You Can TRUST. Backed by Professionals.</h2>
-            <p style="font-size: 15px; color: rgba(255,255,255,0.70); line-height: 1.7; max-width: 560px; margin: 0 auto 44px;">We handle every step of the acquisition process, from due diligence to documentation, so you can invest with confidence.</p>
-            <div class="why-benefits-row">
-                <div class="why-benefit">
-                    <div class="why-icon"><i class="fas fa-file-contract"></i></div>
-                    <span>Clear Title Documentation</span>
-                </div>
-                <div class="why-benefit">
-                    <div class="why-icon"><i class="fas fa-credit-card"></i></div>
-                    <span>Flexible Payment Plans</span>
-                </div>
-                <div class="why-benefit">
-                    <div class="why-icon"><i class="fas fa-user-tie"></i></div>
-                    <span>Professional Advisory</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Section: Property Management Services -->
-    <section class="intro-section" style="background: #fff; border-top: 1px solid #eee;">
-        <h2 style="color: var(--primary-color); font-size: 30px; margin-bottom: 15px;">We Can Manage Your Property For You</h2>
-        <p style="max-width: 700px; margin: 0 auto 40px; color: #666;">We provide full-scale, hands-off property management solutions for homeowners and commercial landlords across Abuja, ensuring steady asset yield and pristine structural conservation.</p>
-
-        <div class="mgmt-grid">
-            <div class="mgmt-card"><i class="fas fa-users"></i><h4>Tenant Management</h4><p>Full tenant communication, onboarding, and dispute resolution handled on your behalf.</p></div>
-            <div class="mgmt-card"><i class="fas fa-user-check"></i><h4>Tenant Verification</h4><p>Rigorous background checks and verification protocols before any tenant is placed.</p></div>
-            <div class="mgmt-card"><i class="fas fa-money-bill-wave"></i><h4>Rent Collection</h4><p>Prompt collection and disbursement protocols with full financial reporting.</p></div>
-            <div class="mgmt-card"><i class="fas fa-gavel"></i><h4>Legal Representation</h4><p>Comprehensive legal agreements and representation to protect your asset.</p></div>
-            <div class="mgmt-card"><i class="fas fa-tools"></i><h4>Facility Management</h4><p>Proactive inspections, maintenance scheduling, and contractor oversight.</p></div>
-            <div class="mgmt-card"><i class="fas fa-hard-hat"></i><h4>Renovation & Maintenance</h4><p>General contracting, site maintenance, and renovation project management.</p></div>
-        </div>
-        <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20speak%20with%20a%20property%20manager." target="_blank" rel="noopener" class="mgmt-cta"><i class="fab fa-whatsapp"></i> Contact A Property Manager</a>
-    </section>
-
-    <!-- Complete Corporate Footer Section -->
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-row">
-                <div class="footer-col">
-                    <h3>Head Office</h3>
-                    <a href="https://maps.google.com/?q=Traction+Outsourcing+Limited+26+Algiers+Street+Wuse+Zone+5+Abuja" target="_blank">26, Algiers Street,<br>Wuse Zone 5, FCT,<br>Nigeria.</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Details</h3>
-                    <a href="https://wa.me/2348052033145" target="_blank" rel="noopener"><i class="fab fa-whatsapp" style="color:#25D366;margin-right:6px;"></i>0805 203 3145</a>
-                    <a href="https://wa.me/2348125078087" target="_blank" rel="noopener"><i class="fab fa-whatsapp" style="color:#25D366;margin-right:6px;"></i>0812 507 8087</a>
-                    <a href="tel:+2347078707777"><i class="fas fa-phone" style="color:#aaa;margin-right:6px;"></i>0707 870 7777</a>
-                </div>
-            </div>
-            <div class="footer-row">
-                <div class="footer-col">
-                    <h3>Email</h3>
-                    <a href="mailto:properties@tolnigeria.com">properties@tolnigeria.com</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Follow Us</h3>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/traction_properties" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@traction_properties" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Traction Properties is a brand of Traction Outsourcing Limited. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy/">Privacy Policy</a> &nbsp;|&nbsp; <a href="/">Go to Traction Outsourcing Limited</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const hamburger = document.getElementById('tpHamburger');
-        const nav = document.getElementById('tpNav');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('toggle');
-            nav.classList.toggle('open');
-        });
-        document.addEventListener('click', (e) => {
-            if (nav.classList.contains('open') && !nav.contains(e.target) && !hamburger.contains(e.target)) {
-                hamburger.classList.remove('toggle');
-                nav.classList.remove('open');
-            }
-        });
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('toggle');
-                nav.classList.remove('open');
-            });
-        });
-    </script>
-
+    <div class="footer-bottom">
+      &copy; 2026 Traction Properties is a brand of <a href="/">Traction Outsourcing Limited</a>. All Rights Reserved. &nbsp;|&nbsp; <a href="/privacy-policy/">Privacy Policy</a> &nbsp;|&nbsp; <a href="/">Go to Traction Outsourcing Limited</a>
+    </div>
+  </div>
+</footer>
+  
+  <script src="/js/nav.js"></script>
+  <script src="/js/reveal.js"></script>
+  
 </body>
 </html>

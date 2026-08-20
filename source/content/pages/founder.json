@@ -1,0 +1,38 @@
+{
+  "_route": { "template": "flex.html", "output": "founder/index.html", "url": "/founder/" },
+  "meta": {
+    "title": "Who is Prince Elijah Abumoye | Founder, Traction Outsourcing Limited",
+    "description": "Official biography of Prince Elijah Abumoye, visionary entrepreneur, author, corporate trainer, and founder of Traction Outsourcing Limited."
+  },
+  "hero": {
+    "eyebrow": "Our Founder",
+    "headline": "Prince Elijah Abumoye",
+    "image": "/images/prince-elijah-abumoye.jpg",
+    "image_alt": "Prince Elijah Abumoye - Founder of Traction Outsourcing Limited"
+  },
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "Prince Elijah Abumoye, born September 5th, 1994, is the visionary entrepreneur and founder of Traction Outsourcing Limited. He is a seasoned business leader, author, corporate trainer, and senior executive with extensive hands-on leadership experience, including past executive roles as a Chief Operating Officer (COO) and Country Head of HR for a multinational organization working across Nigeria, Rwanda, and Dubai. Through Traction Outsourcing, Traction Properties, and ATH Recruiters, he has worked with several businesses across Nigeria.",
+        "Prince Elijah holds a BSc from the University of Lagos. With a strong foundation in corporate governance, workforce collaboration, and strategic human resource development, Prince Elijah leverages his rich background to help businesses establish structures and high-performing teams across Nigeria."
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "Companies He Leads",
+      "columns": 3,
+      "entries": [
+        { "title": "Traction Outsourcing Limited", "text": "HR and management consulting: staff outsourcing, startup structuring, corporate restructuring, business advisory, training, and corporate retreats.", "cta": "Visit Traction Outsourcing", "href": "/" },
+        { "title": "Traction Properties", "text": "Property management and real estate brokerage in Abuja, Nigeria.", "cta": "Visit Traction Properties", "href": "/brands/properties/" },
+        { "title": "ATH Recruiters", "text": "Abuja Talent Hub — affordable, fast recruitment and staffing across Nigeria.", "cta": "Visit ATH Recruiters", "href": "/brands/recruiters/" }
+      ]
+    }
+  ],
+  "final_cta": {
+    "title": "Want to Work Directly With Our Team?",
+    "text": "Book a free 30-minute clarity call to discuss what your business needs.",
+    "button": "Book a Free Clarity Call",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/what-does-staff-outsourcing-include-nigeria/index.html",
+    "url": "/articles/what-does-staff-outsourcing-include-nigeria/"
+  },
+  "meta": {
+    "title": "What Does Staff Outsourcing Actually Include in Nigeria?",
+    "description": "Most Nigerian businesses think staff outsourcing means someone else handles recruitment. Here is what it actually covers — from IQ tests to quarterly check-ins and statutory deductions."
+  },
+  "tag": "Staff Outsourcing · HR Management",
+  "title": "What Does Staff Outsourcing Actually Include in Nigeria?",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "August 7, 2026",
+    "read_time": "4 min read"
+  },
+  "image": "/images/articles/what-does-staff-outsourcing-include-nigeria.jpg",
+  "dek": "Ask most Nigerian business owners what staff outsourcing includes and they will say recruitment. Find someone, place them, done. That is not outsourcing. That is recruitment with a different name. Real staff outsourcing picks up where recruitment ends and does not put the work back on you until the working relationship is over.",
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "The confusion is understandable. Many firms in Nigeria market \"outsourcing\" while delivering little more than a placement service. The client still handles onboarding, still manages payroll, still remits pension and tax, still deals with underperformance, and still scrambles when a staff member leaves without notice. That is not outsourcing. That is hiring with extra steps.",
+        "Here is what a full staff outsourcing engagement actually covers."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Before the Staff Member Arrives",
+      "paragraphs": [
+        "The work starts long before anyone resumes at your premises. At Traction Outsourcing Limited, every candidate goes through a structured pre-placement process that most businesses could not run internally even if they wanted to."
+      ]
+    },
+    {
+      "type": "list",
+      "list": [
+        { "b": "Pre-Employment Training", "t": "All candidates receive structured pre-employment training covering workplace readiness and role-specific preparation before placement." },
+        { "b": "Skills-Based Evaluation", "t": "Practical skills assessment tests specific to the role are administered before any candidate is presented to a client." },
+        { "b": "Pre-Employment IQ Testing", "t": "Standardised IQ assessments are administered to all candidates as part of the structured vetting process." },
+        { "b": "Background Checks", "t": "Comprehensive background checks covering identity, employment history, and references are completed on all confirmed staff." },
+        { "b": "Medical Checks", "t": "A compulsory medical check is completed during onboarding for every outsourced staff member, without exception." },
+        { "b": "Full Onboarding", "t": "Documentation, orientation, policy handover, and role briefing are managed by our team before the staff member begins work at your premises." }
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "This is the part most businesses never see. By the time a staff member walks through your door under a Traction Outsourcing engagement, they have already been tested, verified, trained, medically cleared, and fully briefed. Your first day with them is not their first day preparing."
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "By the time a staff member walks through your door under a Traction Outsourcing engagement, they have already been tested, verified, trained, medically cleared, and fully briefed."
+    },
+    {
+      "type": "text",
+      "heading": "During the Engagement",
+      "paragraphs": [
+        "Once placed, the outsourcing firm does not disappear. The ongoing management of the staff member — everything that normally sits on an HR department's desk — remains with Traction Outsourcing Limited for the duration of the engagement."
+      ]
+    },
+    {
+      "type": "list",
+      "list": [
+        { "b": "Payroll Management", "t": "Full payroll processing: accurate computation, timely disbursement, and complete records maintained on your behalf every cycle." },
+        { "b": "Pension, Tax & Statutory Deductions", "t": "All statutory obligations including PAYE, pension, NHF, ITF, and NSITF are remitted correctly and on time." },
+        { "b": "Quarterly Corporate Check-Ins", "t": "Our management team conducts quarterly check-ins — physical and virtual — with all outsourced staff to monitor welfare, performance, and engagement." },
+        { "b": "Bi-Annual Group Training", "t": "All outsourced staff receive bi-annual group training sessions, customised per client, for role development and business alignment." },
+        { "b": "Staff Replacement", "t": "Where a placed staff member does not work out, Traction Outsourcing provides a replacement. Terms apply by staff cadre." },
+        { "b": "Nationwide Coverage", "t": "We recruit and manage outsourced staff for businesses across all 36 states and the FCT — not only in Abuja." }
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "The quarterly check-ins are worth pausing on. Most Nigerian businesses that manage staff internally have no structured process for checking whether their people are performing, engaged, or experiencing issues that will become a problem later. Our management team does this for every outsourced staff member, every quarter, without you having to initiate it."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "What This Means for Your Business",
+      "paragraphs": [
+        "Everything above means one thing for you: your attention stays on running and growing your business. Not on sourcing candidates who turn out to be unsuitable. Not on chasing pension remittances. Not on managing a staff member's underperformance without a framework for doing it. Not on scrambling to replace someone who has left without adequate notice.",
+        "The businesses that benefit most from full <a href=\"/services/staff-outsourcing/\">Staff Outsourcing and HR Management</a> are the ones that have spent money, time, and management attention on the things listed above and have calculated — often after the fact — that it would have cost them less to outsource. The ones that outsource from the beginning never have to make that calculation.",
+        "<strong>Further Reading:</strong> <a href=\"/articles/what-is-hr-outsourcing/\">What Is HR Outsourcing?</a>, <a href=\"/articles/article-cost-of-bad-hire-nigeria/\">The Real Cost of a Bad Hire in Nigeria</a>, <a href=\"/articles/recruit-staff-nigeria-48-hours/\">Recruit Staff in Nigeria in 48 Hours from ₦30,000</a>, <a href=\"/articles/why-nigerian-businesses-train-staff/\">Why Nigerian Businesses Train Their Staff</a>."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Ready to Hand Over the HR Work?",
+    "text": "Book a free 30-minute advisory call. We will review your current staffing situation and tell you exactly what a Traction Outsourcing engagement would cover for your business.",
+    "button": "Book Your Free 30-Minute Call",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20staff%20outsourcing."
+  },
+  "faq": {
+    "entries": [
+      { "q": "What does staff outsourcing include in Nigeria?", "a": "Full staff outsourcing in Nigeria covers the entire employee lifecycle: sourcing and recruitment, pre-employment training, IQ and skills testing, background checks, medical checks, onboarding, payroll administration, pension and tax remittances, performance oversight, quarterly check-ins, bi-annual training, and staff replacement where needed. The outsourcing firm manages all of this on behalf of the client business." },
+      { "q": "Is payroll included in staff outsourcing in Nigeria?", "a": "Yes. Payroll management is a core component of full staff outsourcing in Nigeria. This includes accurate payroll computation, timely disbursement, and all statutory deductions including PAYE, pension contributions, NHF, ITF, and NSITF remittances handled on behalf of the client." },
+      { "q": "Do outsourcing companies in Nigeria conduct background checks?", "a": "A structured outsourcing firm will conduct background checks on all confirmed staff before they resume. At Traction Outsourcing Limited, background checks covering identity verification, work history, and references are compulsory for every outsourced staff member placed with a client." },
+      { "q": "What is the difference between recruitment and staff outsourcing in Nigeria?", "a": "Recruitment ends once a candidate is placed and the employer takes over. Staff outsourcing continues after placement — the outsourcing firm remains responsible for payroll, compliance, performance oversight, training, check-ins, and all statutory obligations on an ongoing basis." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "Staff Outsourcing & HR Management", "href": "/services/staff-outsourcing/" },
+      { "title": "ATH Recruiters", "href": "/brands/recruiters/" },
+      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" }
+    ],
+    "insights": [
+      { "title": "What Is HR Outsourcing?", "href": "/articles/what-is-hr-outsourcing/" },
+      { "title": "The Real Cost of a Bad Hire", "href": "/articles/article-cost-of-bad-hire-nigeria/" },
+      { "title": "Recruit Staff in 48 Hours", "href": "/articles/recruit-staff-nigeria-48-hours/" },
+      { "title": "Accountability in Business Nigeria", "href": "/articles/accountability-in-business-nigeria/" },
+      { "title": "Why Nigerian Businesses Train Staff", "href": "/articles/why-nigerian-businesses-train-staff/" }
+    ]
+  }
+}

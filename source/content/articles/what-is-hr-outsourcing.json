@@ -1,0 +1,96 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/what-is-hr-outsourcing/index.html",
+    "url": "/articles/what-is-hr-outsourcing/"
+  },
+  "meta": {
+    "title": "What Is HR Outsourcing? A Guide for Nigerian Business Owners",
+    "description": "HR outsourcing means handing your recruitment, payroll, and compliance to experts so you can run your business. Here is what it is, how it works, and whether your Nigerian business needs it."
+  },
+  "tag": "Staff Outsourcing · HR Management",
+  "title": "What Is HR Outsourcing? A Guide for Nigerian Business Owners",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "July 27, 2026",
+    "read_time": "4 min read"
+  },
+  "image": "/images/articles/what-is-hr-outsourcing.jpg",
+  "dek": "If you are running a business in Nigeria and your time is disappearing into payroll spreadsheets, staff disputes, and statutory compliance questions, HR outsourcing is probably the answer, and it is simpler than most business owners think.",
+  "sections": [
+    {
+      "type": "text",
+      "heading": "What HR Outsourcing Actually Means",
+      "paragraphs": [
+        "HR outsourcing means engaging a specialist firm to handle some or all of your human resources functions. Instead of building and managing an internal HR department, you hand the work to people whose entire job is to do it well.",
+        "In practice, this covers a wide range of activities: recruiting and onboarding staff, processing monthly payroll, deducting and remitting statutory contributions (ITF, NSITF, PenCom), drafting employment contracts, managing leave and benefits, handling staff disciplinary matters, and ensuring your business remains compliant with Nigerian labour law.",
+        "You remain in charge of your business. The outsourced firm manages the HR infrastructure that keeps it running properly."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Why Nigerian Businesses Outsource Their HR",
+      "paragraphs": [
+        "The reasons vary by business size and stage, but the most common ones are consistent across industries."
+      ]
+    },
+    {
+      "type": "list",
+      "list": [
+        { "b": "Cost.", "t": "Hiring a qualified in-house HR manager in Abuja costs upwards of ₦300,000 per month before other staff costs. HR outsourcing delivers the same capability at a fraction of that, with no recruitment, onboarding, or retention costs attached." },
+        { "b": "Compliance.", "t": "Nigerian labour law, tax obligations, and statutory deduction requirements change regularly. Missing a PenCom remittance or filing ITF incorrectly creates penalties. An outsourced HR firm stays current so you do not have to." },
+        { "b": "Speed.", "t": "A business that needs to hire twenty people in two weeks cannot wait for an internal HR process to catch up. Outsourcing firms maintain ready pools of vetted candidates and can move immediately." },
+        { "b": "Founder time.", "t": "The business owner who is handling payroll disputes on a Saturday is not building the business. HR outsourcing returns that time to the people who should be spending it on growth, not administration." }
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "The best HR function for most growing Nigerian businesses is one they do not have to manage directly."
+    },
+    {
+      "type": "text",
+      "heading": "What Is Typically Included",
+      "paragraphs": [
+        "The scope of HR outsourcing varies by provider and engagement. At <a href=\"/services/staff-outsourcing/\">Traction Outsourcing</a>, a standard staff outsourcing engagement covers recruitment, employment contracts, payroll processing, ITF and NSITF registration and remittance, PenCom compliance, leave management, and ongoing HR administration. Additional services such as policy development, performance management frameworks, and organogram design can be added depending on the business's needs."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Which Businesses Should Consider It",
+      "paragraphs": [
+        "HR outsourcing works for businesses at almost every stage, but it is most valuable for startups that are hiring their first ten employees and want to do it correctly from the beginning, growing SMEs whose headcount has outpaced their HR capacity, diaspora founders and foreign investors who need a Nigerian team managed professionally from abroad, and established businesses that want to reduce their fixed HR overhead without losing capability.",
+        "If you have staff, you have HR requirements. The question is whether you are meeting them well."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Talk to Our Team Before You Make a Decision.",
+    "text": "Book a free 30-minute advisory call. No forms, no commitments, just a direct conversation about your business and what it needs.",
+    "button": "Book Your Free 30-Minute Call",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  },
+  "faq": {
+    "entries": [
+      { "q": "What is HR outsourcing in Nigeria?", "a": "HR outsourcing in Nigeria means hiring a specialist firm to manage some or all of your human resources functions, including recruitment, payroll administration, statutory deductions (ITF, NSITF, PenCom), employee contracts, and compliance with Nigerian labour law, on behalf of your business." },
+      { "q": "Is HR outsourcing suitable for small businesses in Nigeria?", "a": "Yes. HR outsourcing is particularly valuable for small and medium-sized businesses in Nigeria that need professional HR management but cannot justify the cost of a full in-house HR team. It gives you access to experienced HR professionals at a fraction of the cost of hiring them permanently." },
+      { "q": "What is the difference between HR outsourcing and staff outsourcing?", "a": "Staff outsourcing means a third-party firm employs your workers on your behalf and manages their contracts, payroll, and compliance. HR outsourcing is broader, it can include staff outsourcing, recruitment, policy development, performance management, and general HR advisory. The two terms are sometimes used interchangeably in Nigeria, but staff outsourcing is a subset of the wider HR outsourcing category." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
+      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
+      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
+      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+    ],
+    "insights": [
+      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
+      { "title": "Hire Staff in Nigeria From Abroad", "href": "/articles/hire-staff-nigeria-from-abroad/" },
+      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
+      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
+      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" }
+    ]
+  }
+}

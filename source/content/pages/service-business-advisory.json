@@ -1,0 +1,197 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "services/business-advisory/index.html",
+    "url": "/services/business-advisory/"
+  },
+  "meta": {
+    "title": "Business Advisory Services Nigeria | Traction Outsourcing",
+    "description": "Business advisory services in Abuja, Nigeria: strategic planning, feasibility studies, and operational advisory for Nigerian SMEs and corporates ready to scale or restructure."
+  },
+  "hero": {
+    "eyebrow": "Areas Of Impact",
+    "headline": "Business Advisory Services",
+    "sub": "The decisions that move a business forward rarely have a clean answer. We sit on your side of the table and help you make the call with the full picture in front of you.",
+    "actions": [
+      {
+        "label": "Request A Free Consultation",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20business%20advisory%20services",
+        "style": "btn-primary"
+      },
+      {
+        "label": "Chat on WhatsApp",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20business%20advisory%20services",
+        "style": "btn-secondary",
+        "blank": true
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "A joint venture term sheet. A vesting structure that needs to survive twenty years. A dormant contract that needs to either be revived or ended cleanly. A market entry decision that needs testing before real money moves. These are not situations with a textbook answer, they are situations where the details of your specific business decide the outcome. We advise on the actual business in front of us, not a generic framework."
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "What We Advise On",
+      "sub": "Business advisory covers more ground than deal negotiation alone. Here is the full scope.",
+      "columns": 3,
+      "entries": [
+        {
+          "icon": "fa-chess-knight",
+          "title": "Strategic Planning & Growth Advisory",
+          "text": "Direction-setting for where the business is headed next, tested against the reality of the Nigerian market, not a borrowed playbook."
+        },
+        {
+          "icon": "fa-sitemap",
+          "title": "Organizational & Operational Advisory",
+          "text": "Advice on how the business is run day to day, tying into our <a href=\"/services/corporate-restructuring/\">corporate restructuring</a> service where the structure itself needs to change."
+        },
+        {
+          "icon": "fa-diagram-project",
+          "title": "Business Process Advisory",
+          "text": "A close look at how work actually moves through the business, and where it is quietly losing time or money."
+        },
+        {
+          "icon": "fa-magnifying-glass-chart",
+          "title": "Feasibility & Market Studies",
+          "text": "Testing whether a new venture, product line, or market entry idea holds up before you commit real money to it."
+        },
+        {
+          "icon": "fa-shield-halved",
+          "title": "Risk & Governance Advisory",
+          "text": "Identifying where a business is exposed, and building the governance structure to close the gap."
+        },
+        {
+          "icon": "fa-handshake",
+          "title": "Negotiation & Deal Advisory",
+          "text": "Full negotiation positions, joint venture and vesting structures, and contract strategy, the kind of work in the case files below."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Not sure which of these applies to your situation?",
+      "button": "Ask Us on WhatsApp",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20talk%20through%20a%20business%20decision%20I%27m%20facing"
+    },
+    {
+      "type": "grid",
+      "heading": "From The Case Files",
+      "sub": "A look at how advisory engagements actually run, drawn from real work.",
+      "columns": 3,
+      "style": "case-study",
+      "entries": [
+        {
+          "tag": "Negotiation",
+          "title": "Hospitality Venue, Nightclub Joint Venture",
+          "text": "A lounge inside an established hotel, being reimagined as a nightclub under a new operator. We prepared the full negotiation position, opening terms through to walk-away terms, across eight deal points, and identified bar revenue and beverage control as the highest-margin point worth holding firm on. The engagement closed with a signed Memorandum of Understanding under Nigerian law, with arbitration seated in Abuja."
+        },
+        {
+          "tag": "Structuring",
+          "title": "Family-Owned Holding Company, Long-Term Vesting Structure",
+          "text": "A vesting agreement built to hold for twenty years needs to be right the first time. We structured a dual-tranche vesting arrangement, split across years one to five and years six to ten, with claims only exercisable at the five and ten-year milestones, and a twenty-year sale restriction from incorporation to protect the structure long after the advisory engagement ends."
+        },
+        {
+          "tag": "Contract Strategy",
+          "title": "Restaurant Business, Dormant Contract Review",
+          "text": "Not every advisory question is about growth. Sometimes it is about deciding whether a stalled agreement is worth reviving. We reviewed the dormancy, recommended an activation-then-terminate strategy, and drafted the formal activation letter with a fourteen-business-day response deadline tied to the relevant contract clause."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "heading": "How It Works",
+      "sub": "The same disciplined process behind every case file above.",
+      "entries": [
+        {
+          "n": "01",
+          "title": "Diagnose",
+          "text": "We get into the actual situation, the numbers, the relationships, the history, before forming a view."
+        },
+        {
+          "n": "02",
+          "title": "Design",
+          "text": "We build the position, structure, or plan, weighing what you are willing to trade against what you are not."
+        },
+        {
+          "n": "03",
+          "title": "Deploy",
+          "text": "We support you through execution, negotiation, or rollout, not just a report handed over at the end."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Bring us the decision you're sitting on.",
+      "button": "Chat on WhatsApp",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20talk%20through%20a%20business%20decision"
+    },
+    {
+      "type": "text",
+      "heading": "Join Our Clients",
+      "sub": "Businesses across Nigeria trust Traction Outsourcing Limited to get this right."
+    },
+    {
+      "type": "logos",
+      "logos": [
+        "Gifts n Boxes",
+        "Afroreach Research",
+        "Beacon Trust",
+        "Bravies",
+        "Chairo Properties",
+        "Demipos Hotel",
+        "Fourtwoseven Engineering",
+        "Grown and Glow",
+        "La Luna Restaurant",
+        "Tifes Hub",
+        "Toolbox Ateliers",
+        "Super Rise and Shine"
+      ]
+    },
+    {
+      "type": "form",
+      "heading": "Request A Free Consultation",
+      "sub": "Leave your details and someone from our team will reach out.",
+      "form_id": "leadForm",
+      "button": "Submit",
+      "fields": [
+        { "name": "leadName", "placeholder": "Full Name", "input_type": "text", "required": true },
+        { "name": "leadPhone", "placeholder": "Phone Number", "input_type": "tel", "required": true },
+        { "name": "leadCompany", "placeholder": "Company Name", "input_type": "text", "required": true },
+        { "name": "leadEmail", "placeholder": "Email Address", "input_type": "email", "required": true }
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "What is business advisory?",
+          "a": "Business advisory is structured support from experienced practitioners who assess a business's current situation, identify the critical decisions and gaps, and work with the owner or leadership team to develop and implement a practical path forward. It is different from consultancy in that it is ongoing and relationship-based rather than project-based and report-driven."
+        },
+        {
+          "q": "How do I know when my business needs a business advisor?",
+          "a": "The clearest signal is when you are making significant decisions without enough information, experience, or objective input to make them well. Other signals include recurring problems that keep returning despite interventions, a business that is growing but losing control of its margins or cashflow, or a strategic inflection point such as a new market, a new partner, or a restructuring."
+        },
+        {
+          "q": "Does Traction Outsourcing help with negotiations and deal structuring?",
+          "a": "Yes. Business advisory engagements at Traction Outsourcing Limited include support for negotiations, commercial deal structuring, vendor and partner agreements, and other situations where an experienced external perspective materially improves the outcome for the client."
+        },
+        {
+          "q": "Is business advisory only for large companies?",
+          "a": "No. The businesses that benefit most from advisory support are often small and medium-sized enterprises making decisions without the experienced management bench that larger companies take for granted. Traction Outsourcing Limited works with businesses at every stage, including early-growth startups, established SMEs, and corporate entities navigating transitions."
+        }
+      ]
+    }
+  ],
+  "has_form": true,
+  "final_cta": {
+    "title": "Ready to Talk Through Your Decision?",
+    "text": "Speak with our consulting team about how Business Advisory can work for your business.",
+    "button": "Book a Strategy Session",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Business%20Advisory%20at%20Traction%20Outsourcing%20Limited."
+  }
+}

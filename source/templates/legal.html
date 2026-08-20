@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section" style="padding-top:170px;">
+  <div class="container" style="max-width:780px;">
+    <h1 style="font-size:40px;" class="reveal">{{ title }}</h1>
+    {% if updated %}<p style="color:var(--ink-faint);font-size:14px;" class="reveal">Last updated: {{ updated }}</p>{% endif %}
+    <div class="reveal" style="font-size:16px;color:var(--ink-soft);margin-top:20px;">
+      {% for block in blocks %}
+        {% if block.heading %}<h2 style="font-size:22px;margin-top:40px;text-align:left;">{{ block.heading }}</h2>{% endif %}
+        {% for p in block.paragraphs %}<p>{{ p }}</p>{% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

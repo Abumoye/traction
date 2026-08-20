@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero" style="padding-top:170px;">
+  <div class="container">
+    <span class="eyebrow">{{ hero.eyebrow }}</span>
+    <h1>{{ hero.headline }}</h1>
+    <p class="lede">{{ hero.sub }}</p>
+    <div class="hero-actions">
+      <a href="{{ hero.cta.href }}" class="btn btn-primary">{{ hero.cta.label }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container" style="max-width:820px;">
+    {% for p in intro %}<p class="reveal" style="font-size:18px;">{{ p }}</p>{% endfor %}
+  </div>
+</section>
+
+<section class="section bg-ash">
+  <div class="container">
+    <h2 class="section-title reveal">{{ full_service.title }}</h2>
+    <p class="section-sub reveal">{{ full_service.sub }}</p>
+    <div class="grid grid-3">
+      {% for item in full_service.entries %}
+      <div class="card reveal">
+        <div class="icon-badge"><i class="fas {{ item.icon }}"></i></div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title reveal" style="font-size:28px;">{{ deliverables.title }}</h2>
+    <p class="section-sub reveal">{{ deliverables.sub }}</p>
+    <div class="grid grid-2" style="max-width:980px;margin:0 auto;">
+      {% for item in deliverables.entries %}
+      <div class="deliverable-item reveal">
+        <i class="fas {{ item.icon }}"></i>
+        <div><strong>{{ item.title }}</strong><span>{{ item.text }}</span></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-ash">
+  <div class="container">
+    <h2 class="section-title reveal">{{ roles.title }}</h2>
+    <p class="section-sub reveal">{{ roles.sub }}</p>
+    <div class="grid grid-4">
+      {% for r in roles.entries %}
+      <div class="role-item reveal"><h4>{{ r.title }}</h4><p>{{ r.text }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title reveal">{{ how_it_works.title }}</h2>
+    <p class="section-sub reveal">{{ how_it_works.sub }}</p>
+    <div class="grid grid-3">
+      {% for step in how_it_works.steps %}
+      <div class="step reveal">
+        <div class="step-num">{{ step.n }}</div>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-ash">
+  <div class="container">
+    <h2 class="section-title reveal">{{ industries.title }}</h2>
+    <p class="section-sub reveal">{{ industries.sub }}</p>
+    <div class="grid grid-3">
+      {% for ind in industries.entries %}
+      <div class="industry-item reveal"><h4>{{ ind.title }}</h4><p>{{ ind.text }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title reveal">{{ why_choose.title }}</h2>
+    <div class="grid grid-2" style="max-width:900px;margin:0 auto;">
+      {% for w in why_choose.entries %}
+      <div class="why-item reveal">
+        <i class="fas fa-circle-check"></i>
+        <div><strong>{{ w.title }}</strong><span>{{ w.text }}</span></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section bg-ash" id="lead-form">
+  <div class="container" style="max-width:600px;">
+    <h2 class="section-title reveal">Request A Free Consultation</h2>
+    <p class="section-sub reveal">Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)</p>
+    <form class="card reveal" id="leadForm">
+      <div style="display:grid;gap:14px;">
+        <input name="leadName" placeholder="Full name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+        <input name="leadPhone" placeholder="Phone number" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+        <input name="leadCompany" placeholder="Company name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+        <input name="leadEmail" type="email" placeholder="Email address" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit &amp; Request Consultation</button>
+        <p id="leadFormStatus" style="text-align:center;font-size:13.5px;margin:0;"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title reveal">{{ faq.title }}</h2>
+    <div class="faq-list reveal">
+      {% for item in faq.entries %}
+      <details class="faq-item">
+        <summary>{{ item.q }}</summary>
+        <div class="faq-answer">{{ item.a }}</div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+{% block extra_scripts %}<script src="/js/lead-form.js"></script>{% endblock %}

@@ -1,0 +1,118 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/article-cost-of-bad-hire-nigeria/index.html",
+    "url": "/articles/article-cost-of-bad-hire-nigeria/"
+  },
+  "meta": {
+    "title": "The Real Cost of a Bad Hire in Nigeria (And How to Avoid It)",
+    "description": "A bad hire costs far more than a salary. Here is what the data says about the true cost of a wrong hire in Nigeria, where the damage actually comes from, and how structured recruitment prevents it."
+  },
+  "tag": "Recruitment · Talent Management",
+  "title": "The Real Cost of a Bad Hire in Nigeria (And How to Avoid It)",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "July 14, 2026",
+    "read_time": "4 min read"
+  },
+  "image": "/images/articles/article-cost-of-bad-hire-nigeria.jpg",
+  "dek": "A growing Abuja business needs an operations manager urgently. The founder is stretched thin, interviews are rushed, and a confident candidate with an impressive CV gets the offer within a week. Four months later, projects are behind schedule, two junior staff have quietly resigned, and the founder is back where they started, except now with a severance package to pay, a damaged team, and the same vacant role still open.",
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "This pattern repeats across Nigerian businesses more often than most owners admit. The cost of a bad hire rarely announces itself. It shows up slowly, in missed deadlines and quiet resignations, long after the decision that caused it."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "What the Data Actually Says",
+      "paragraphs": [
+        "The most widely cited benchmark comes from the United States Department of Labor, which estimates that a bad hire costs a business a minimum of thirty percent of that employee's first-year salary, purely in direct replacement costs. That figure is described as conservative for a reason.",
+        "The Society for Human Resource Management puts the fuller cost, once lost productivity and management time are included, between fifty and two hundred percent of annual salary depending on seniority, with executive-level bad hires sitting at the top of that range."
+      ]
+    },
+    {
+      "type": "list",
+      "list": [
+        { "b": "30%", "t": "Minimum direct replacement cost as a share of the employee's first-year salary (US DoL)" },
+        { "b": "200%", "t": "Upper end of total cost including lost productivity and management time for senior roles (SHRM)" },
+        { "b": "3 in 4", "t": "Employers who admit to having hired the wrong person for a role at some point (CareerBuilder)" }
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "These figures were built around Western labour markets, but the underlying mechanics translate directly to Nigeria, often with the damage compounding faster. A Nigerian business rehiring for the same role a second time within a year is not just repeating a recruitment fee. It is absorbing the cost of statutory notice or severance, the delay in productivity while the seat sits empty again, and the reputational cost among remaining staff who watched the first hire fail.",
+        "There is a local dimension that pure salary multipliers do not capture. Recent workforce research shows that a majority of Nigerian employers report genuine difficulty finding candidates who match what the role actually requires. That skills mismatch pushes businesses toward rushed hiring simply to fill a seat. And rushed hiring is precisely the condition under which bad hires happen."
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "The salary paid to a bad hire is the smallest part of the loss. The larger damage comes from three places that rarely appear on a balance sheet."
+    },
+    {
+      "type": "text",
+      "heading": "Where the Damage Actually Comes From",
+      "paragraphs": [
+        "<strong>Management time.</strong> A manager or founder dealing with an underperforming hire spends a disproportionate share of their week correcting mistakes, having difficult conversations, and redoing work that should not need redoing. That is time not spent on growth, on clients, or on the parts of the business that actually generate revenue.",
+        "<strong>Team morale.</strong> A bad hire who is allowed to stay too long sends a quiet signal to the rest of the team about what the business is willing to tolerate. Strong performers notice when weak performance goes unaddressed, and some of them start looking elsewhere. This connects directly to the <a href=\"/articles/accountability-in-business-nigeria/\">accountability culture</a> the business has built, or failed to build.",
+        "<strong>The second hiring cycle.</strong> Every bad hire that fails means the business is effectively paying for the same vacancy twice: once for the person who did not work out, and again for the replacement search. If the replacement search is conducted the same way as the first, the outcome is likely to be the same."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Why Structured Recruitment Prevents This",
+      "paragraphs": [
+        "Most bad hires are not the result of bad luck. They are the result of a hiring process that relied too heavily on a strong interview performance and too little on structured evaluation.",
+        "Research on hiring methodology consistently shows that structured interviews, where every candidate is assessed against the same defined criteria, predict job performance far more reliably than open-ended conversation. The businesses that avoid repeat bad hires tend to share the same discipline:"
+      ]
+    },
+    {
+      "type": "list",
+      "list": [
+        { "t": "They define the role and its success metrics in detail before the search begins, not during it" },
+        { "t": "They run every candidate through the same structured process instead of relying on gut feeling" },
+        { "t": "They verify claims through reference and background checks rather than taking a CV at face value" },
+        { "t": "Where the role is critical, they use an experienced recruitment partner who has the vetting infrastructure and the distance to evaluate objectively" }
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [
+        "This is exactly what <a href=\"/brands/recruiters/\">ATH Recruiters</a>, a brand of Traction Outsourcing Limited, is built to do. Our structured vetting process screens candidates against the role before they reach your interview, not after. We handle sourcing, screening, and verification so the shortlist you receive has already been tested against your requirements, not just their own CV.",
+        "For businesses that need more than recruitment, our <a href=\"/services/staff-outsourcing/\">Staff Outsourcing and HR Management</a> service covers the full employment lifecycle, from onboarding through performance management, so the hire that passes the recruitment process is also set up to succeed in the role. And if the pattern of bad hires is a symptom of a deeper organisational problem, such as vague roles, unclear reporting lines, or no performance management structure, our <a href=\"/services/business-advisory/\">Business Advisory</a> service addresses the root cause.",
+        "<strong>Further Reading:</strong> <a href=\"/articles/best-recruitment-agency-nigeria/\">How to Find the Best Recruitment Agency in Nigeria</a>, <a href=\"/articles/recruit-staff-nigeria-48-hours/\">Recruit Staff in Nigeria in 48 Hours from ₦30,000</a>, <a href=\"/articles/accountability-in-business-nigeria/\">Accountability in Business Nigeria</a>, <a href=\"/articles/why-nigerian-businesses-train-staff/\">Why Nigerian Businesses Train Their Staff</a>."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Your Next Hiring Mistake Is More Expensive Than You Think.",
+    "text": "Book a free 30-minute advisory call. We will look at your current hiring process and tell you honestly where the risk sits and how to close it before the next vacancy.",
+    "button": "Book Your Free 30-Minute Call",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  },
+  "faq": {
+    "entries": [
+      { "q": "How much does a bad hire cost a company in Nigeria?", "a": "A bad hire costs significantly more than the salary paid. Direct replacement costs alone are estimated at a minimum of 30% of the employee's first-year salary, with the fuller cost including lost productivity, management time, and team disruption running between 50% and 200% of annual salary depending on seniority. In Nigeria, the damage often compounds faster because of re-advertising costs, re-onboarding time, and the morale impact on the team that watched the first hire fail." },
+      { "q": "What causes a bad hire in Nigeria?", "a": "Bad hires most often come from rushed, informal recruitment: vague job descriptions, no structured interview process, and no clear definition of what success in the role looks like before the search begins. Skills mismatch is also a significant factor in the Nigerian market, where employers report genuine difficulty finding candidates who match role requirements, which pushes businesses toward filling the seat quickly rather than correctly." },
+      { "q": "How does structured recruitment prevent bad hires?", "a": "Structured recruitment prevents bad hires by defining the role and its success metrics before the search begins, running every candidate through the same evaluation criteria, verifying claims through reference and background checks, and using experienced recruitment partners who assess candidates objectively without the time pressure that leads to rushed decisions. Businesses that follow this discipline consistently report fewer repeat hires for the same role." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "ATH Recruiters", "href": "/brands/recruiters/" },
+      { "title": "Staff Outsourcing & HR Management", "href": "/services/staff-outsourcing/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
+      { "title": "Corporate Trainings", "href": "/services/employee-training/" }
+    ],
+    "insights": [
+      { "title": "How to Find the Best Recruitment Agency", "href": "/articles/best-recruitment-agency-nigeria/" },
+      { "title": "Recruit Staff in 48 Hours from ₦30,000", "href": "/articles/recruit-staff-nigeria-48-hours/" },
+      { "title": "Accountability in Business Nigeria", "href": "/articles/accountability-in-business-nigeria/" },
+      { "title": "What Is HR Outsourcing?", "href": "/articles/what-is-hr-outsourcing/" },
+      { "title": "Why Nigerian Businesses Train Staff", "href": "/articles/why-nigerian-businesses-train-staff/" }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/client-reviews-traction-outsourcing/index.html",
+    "url": "/articles/client-reviews-traction-outsourcing/"
+  },
+  "meta": {
+    "title": "Traction Outsourcing Limited Reviews | What Clients Say",
+    "description": "Read real client reviews of Traction Outsourcing Limited, the HR and management consulting firm in Abuja, covering recruitment, training, and advisory services."
+  },
+  "tag": "Client Reviews · Company News",
+  "title": "Traction Outsourcing Limited Receives Client Reviews Praising Its Recruitment, Training, and Advisory Work",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "July 31, 2026",
+    "read_time": "4 min read"
+  },
+  "image": "/images/articles/client-reviews-traction-outsourcing.jpg",
+  "dek": "Traction Outsourcing Limited is an HR and management consulting firm based in Abuja, providing talent acquisition, HR outsourcing, training, and corporate restructuring services to businesses across Nigeria. The firm works with organisations across industries, from real estate and hospitality to retail and professional services, helping them build stronger teams and more organised operations.",
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "Much of that work happens behind the scenes, in the systems, hires, and training sessions that help a business run better. But every so often, clients take the time to describe what the experience of working with Traction Outsourcing Limited has actually been like. As of this writing, the firm holds a 5.0 out of 5 rating across 14 reviews on Google, and below are five of them from clients who have used different parts of the firm's services, from recruitment to strategic advisory."
+      ]
+    },
+    {
+      "type": "list",
+      "heading": "What Clients Are Saying",
+      "list": [
+        { "b": "Recruitment & Training — ★★★★★ — Mayowa.", "t": "\"The team provided exceptional support in training, recruitment, and business organization, helping us structure our operations more efficiently. The recruitment process was seamless, the training impactful, and their business advisory sessions provided real clarity and traction for our growth.\"" },
+        { "b": "Corporate Restructuring & Advisory — ★★★★★ — The team at Bravies Homz.", "t": "\"Working with Traction Outsourcing Limited has been a game-changer for our business. Their professionalism, deep industry insight, and strategic guidance have helped us streamline operations, improve structure, and position our brand for growth. What stands out most is their hands-on approach. They do not just consult, they partner with you to make real progress.\"" },
+        { "b": "Talent Acquisition — ★★★★★ — Sandra.", "t": "\"Very reliable. Your selections are good. I will continue to refer your team.\"" },
+        { "b": "HR Outsourcing & Strategy — ★★★★★ — Noah.", "t": "\"Traction Outsourcing takes great interest in the success of its clients. That is why I recommend the company. If you need staffing, growth, training, and strategy, you can bet on this company to deliver.\"" },
+        { "b": "Training & Capacity Building — ★★★★★ — Ufanabasi.", "t": "\"Excellent delivery of value on trainings and really dependable outsourcing firm. They are easy to work with, professional, and consistent with their service.\"" }
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "Clients keep returning to the same points: the recruitment process is fast and the candidates fit, the training is practical rather than theoretical, and the advisory work leaves them with a clearer, more organised business than before."
+    },
+    {
+      "type": "text",
+      "heading": "Why This Pattern Matters",
+      "paragraphs": [
+        "A single good review can be a one-off. A pattern across recruitment, training, restructuring, and advisory clients, all describing the same reliability and hands-on approach, is closer to a working description of how <a href=\"/\">Traction Outsourcing Limited</a> operates. It also reflects why the firm built dedicated brands like <a href=\"/brands/recruiters/\">ATH Recruiters</a> for talent acquisition and a full <a href=\"/services/corporate-restructuring/\">corporate restructuring</a> practice for businesses that need to fix structure, not just fill roles.",
+        "If you have worked with Traction Outsourcing Limited on recruitment, training, restructuring, or advisory support, we would welcome your review below. If you are still deciding whether the firm is the right fit for your business, the reviews above and on Google are a fair place to start."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Talk to Our Team Before You Make a Decision.",
+    "text": "Book a free 30-minute advisory call. No forms, no commitments, just a direct conversation about your business and what it needs.",
+    "button": "Book Your Free 30-Minute Call",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  },
+  "faq": {
+    "entries": [
+      { "q": "Is Traction Outsourcing Limited a reliable HR consulting firm in Nigeria?", "a": "Yes. Traction Outsourcing Limited is an HR and management consulting firm in Abuja that has worked with businesses across real estate, hospitality, and professional services. The firm holds a 5.0 out of 5 rating across 14 reviews on Google, covering its recruitment, training, and advisory work." },
+      { "q": "What services do clients praise most in Traction Outsourcing Limited reviews?", "a": "Clients most often mention the quality and reliability of candidates placed through recruitment, the clarity gained from business advisory and restructuring sessions, and the practical value of the firm's staff training programmes." },
+      { "q": "Where can I read more reviews of Traction Outsourcing Limited?", "a": "You can read the full list of client reviews on the Traction Outsourcing Limited Google Business Profile. Clients who have worked with the firm can also leave a review directly from the same page." }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
+      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
+      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
+      { "title": "Business Advisory", "href": "/services/business-advisory/" },
+      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
+      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+    ],
+    "insights": [
+      { "title": "How to Find the Best Recruitment Agency in Nigeria", "href": "/articles/best-recruitment-agency-nigeria/" },
+      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
+      { "title": "Why Nigerian Businesses Train Their Staff", "href": "/articles/why-nigerian-businesses-train-staff/" },
+      { "title": "What Is Structure in Business?", "href": "/articles/what-is-structure-in-business/" },
+      { "title": "How to Build a Resilient Management Team", "href": "/articles/how-to-build-resilient-management-team-nigeria/" }
+    ]
+  }
+}

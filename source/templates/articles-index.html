@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="hero" style="padding:170px 0 40px;">
+  <div class="container">
+    <span class="eyebrow">Insights</span>
+    <h1 style="font-size:clamp(34px,5vw,56px);">Corporate Insights & Strategy</h1>
+    <p class="lede">Read expert corporate advisory articles covering workforce management, business structuring, organogram development, and recruitment trends across Nigeria.</p>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="container">
+    <div class="search-wrap reveal">
+      <div class="search-box">
+        <i class="fas fa-magnifying-glass"></i>
+        <input type="text" id="articleSearch" placeholder="Search articles — try “payroll”, “Kigali”, “organogram”…" aria-label="Search articles">
+      </div>
+    </div>
+    <p class="results-count" id="resultsCount" style="text-align:center;color:var(--ink-faint);font-size:14px;margin:-24px 0 10px;"></p>
+
+    <div class="filter-bar reveal">
+      {% for c in categories %}
+      <button class="filter-pill {% if c.key == 'all' %}active{% endif %}" data-filter="{{ c.key }}">{{ c.label }}</button>
+      {% endfor %}
+    </div>
+
+    <a href="{{ featured.url }}" class="featured-article reveal" id="featuredArticle">
+      <img src="{{ featured.image }}" alt="{{ featured.image_alt }}">
+      <div class="fa-body">
+        <span class="tag-pill">{{ featured.tag }}</span>
+        <h2 style="font-size:28px;">{{ featured.title }}</h2>
+        <p>{{ featured.excerpt }}</p>
+        <div style="font-size:13px;color:var(--ink-faint);"><i class="fas fa-clock"></i> {{ featured.read_time }}</div>
+      </div>
+    </a>
+
+    <div class="article-row-grid" id="articleGrid">
+      {% for a in articles %}
+      <a href="{{ a.url }}" class="card insight-card reveal">
+        <img src="{{ a.image }}" alt="{{ a.image_alt }}" loading="lazy">
+        <div class="body">
+          <span class="tag-pill">{{ a.tag }}</span>
+          <h3>{{ a.title }}</h3>
+          <p>{{ a.excerpt }}</p>
+          <div style="font-size:13px;color:var(--ink-faint);"><i class="fas fa-clock"></i> {{ a.read_time }}</div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="no-results" id="noResults">
+      <i class="fas fa-magnifying-glass" style="font-size:32px;color:var(--hairline);margin-bottom:16px;"></i>
+      <h3>No articles match your search</h3>
+      <p>Try a different keyword, or clear the filter above.</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+{% block extra_scripts %}
+<script src="/js/search.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function(){ TractionSearch.init('/search-index.json'); });</script>
+{% endblock %}
