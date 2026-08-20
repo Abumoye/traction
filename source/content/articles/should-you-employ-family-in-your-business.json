@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Should You Employ Your Family in Your Business? An Honest Answer | Nigeria",
-    "description": "Yes, you can employ your family in your business and do it successfully. Traction Outsourcing Limited does it. But the key is structure. Here is an honest guide for Nigerian founders."
+    "description": "Yes, you can employ your family in your business and do it successfully. Traction Outsourcing Limited does it. But the key is structure. Here is an honest guide for Nigerian founders.",
+    "image": "/images/og/og-article-should-you-employ-family-in-your-business.jpg"
   },
   "tag": "Business Advisory · HR Management",
   "title": "Should You Employ Your Family in Your Business? An Honest Answer for Nigerian Founders",
@@ -73,12 +74,24 @@
     {
       "type": "list",
       "list": [
-        { "t": "Issue a formal offer letter with the role title, salary, probation period, and reporting line clearly stated" },
-        { "t": "Write a proper job description so both of you know exactly what the role requires" },
-        { "t": "Define who they report to, and make sure it is not left ambiguous because of the family connection" },
-        { "t": "Set performance expectations and a review date, and actually conduct the review" },
-        { "t": "Apply the same HR policies to them that apply to every other employee" },
-        { "t": "Have an honest conversation at the start about what happens if the role is not working" }
+        {
+          "t": "Issue a formal offer letter with the role title, salary, probation period, and reporting line clearly stated"
+        },
+        {
+          "t": "Write a proper job description so both of you know exactly what the role requires"
+        },
+        {
+          "t": "Define who they report to, and make sure it is not left ambiguous because of the family connection"
+        },
+        {
+          "t": "Set performance expectations and a review date, and actually conduct the review"
+        },
+        {
+          "t": "Apply the same HR policies to them that apply to every other employee"
+        },
+        {
+          "t": "Have an honest conversation at the start about what happens if the role is not working"
+        }
       ]
     },
     {
@@ -97,26 +110,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "Can you employ a family member in your Nigerian business?", "a": "Yes. Employing a family member in your Nigerian business is entirely possible and can work very well. The condition is that the employment must be structured properly: a formal offer letter, a clear job description, defined reporting lines, performance expectations, and the same accountability standards you would apply to any other employee. The family relationship does not eliminate the need for structure. In some ways, it makes structure more important, not less." },
-      { "q": "What goes wrong when you employ family in a business without structure?", "a": "Three things most commonly go wrong. First, accountability disappears: other staff notice that the family member is not being held to the same standards, and performance across the business suffers. Second, the founder ends up managing two relationships simultaneously, the professional one and the personal one, and the lines between them blur in ways that create tension in both. Third, exit becomes nearly impossible: if the arrangement is not working, ending the employment feels like a family rejection rather than a business decision, and founders avoid making the call long after they should." },
-      { "q": "How should I structure the employment of a family member in my Nigerian business?", "a": "Treat the employment exactly as you would any other hire. Issue a formal offer letter with defined role, salary, reporting line, probation period, and performance expectations. Have the same HR documentation in place. Set a review period and actually conduct the review. Make it clear from the beginning, in writing, what the role requires and what the consequences of underperformance are. The family relationship is personal. The employment is professional. Keeping those two things clearly separated in documentation and in practice is what makes the arrangement work." }
+      {
+        "q": "Can you employ a family member in your Nigerian business?",
+        "a": "Yes. Employing a family member in your Nigerian business is entirely possible and can work very well. The condition is that the employment must be structured properly: a formal offer letter, a clear job description, defined reporting lines, performance expectations, and the same accountability standards you would apply to any other employee. The family relationship does not eliminate the need for structure. In some ways, it makes structure more important, not less."
+      },
+      {
+        "q": "What goes wrong when you employ family in a business without structure?",
+        "a": "Three things most commonly go wrong. First, accountability disappears: other staff notice that the family member is not being held to the same standards, and performance across the business suffers. Second, the founder ends up managing two relationships simultaneously, the professional one and the personal one, and the lines between them blur in ways that create tension in both. Third, exit becomes nearly impossible: if the arrangement is not working, ending the employment feels like a family rejection rather than a business decision, and founders avoid making the call long after they should."
+      },
+      {
+        "q": "How should I structure the employment of a family member in my Nigerian business?",
+        "a": "Treat the employment exactly as you would any other hire. Issue a formal offer letter with defined role, salary, reporting line, probation period, and performance expectations. Have the same HR documentation in place. Set a review period and actually conduct the review. Make it clear from the beginning, in writing, what the role requires and what the consequences of underperformance are. The family relationship is personal. The employment is professional. Keeping those two things clearly separated in documentation and in practice is what makes the arrangement work."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "Nigerian Employee Handbook Guide for SMEs", "href": "/articles/article-employee-handbook-nigerian-sme/" },
-      { "title": "Employee Leave and Compensation in Nigeria", "href": "/articles/employee-leave-and-compensation-in-nigeria/" },
-      { "title": "Accountability in Business in Nigeria", "href": "/articles/accountability-in-business-nigeria/" },
-      { "title": "The Hidden Cost of Managing Staff in Nigeria", "href": "/articles/hidden-cost-managing-staff-nigeria/" },
-      { "title": "The Cost of a Bad Hire in Nigeria", "href": "/articles/article-cost-of-bad-hire-nigeria/" }
+      {
+        "title": "Nigerian Employee Handbook Guide for SMEs",
+        "href": "/articles/article-employee-handbook-nigerian-sme/"
+      },
+      {
+        "title": "Employee Leave and Compensation in Nigeria",
+        "href": "/articles/employee-leave-and-compensation-in-nigeria/"
+      },
+      {
+        "title": "Accountability in Business in Nigeria",
+        "href": "/articles/accountability-in-business-nigeria/"
+      },
+      {
+        "title": "The Hidden Cost of Managing Staff in Nigeria",
+        "href": "/articles/hidden-cost-managing-staff-nigeria/"
+      },
+      {
+        "title": "The Cost of a Bad Hire in Nigeria",
+        "href": "/articles/article-cost-of-bad-hire-nigeria/"
+      }
     ]
   }
 }

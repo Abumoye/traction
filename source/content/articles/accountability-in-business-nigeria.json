@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Accountability in Business: Hold Staff Accountable Without Losing Them | Nigeria",
-    "description": "Accountability in Nigerian business is not about being harsh. It is about being clear. Here is how to hold your staff accountable in a way that improves performance without damaging your best relationships."
+    "description": "Accountability in Nigerian business is not about being harsh. It is about being clear. Here is how to hold your staff accountable in a way that improves performance without damaging your best relationships.",
+    "image": "/images/og/og-article-accountability-in-business-nigeria.jpg"
   },
   "tag": "Business Advisory · People Management",
   "title": "Accountability in Business: How to Hold Your Staff Accountable Without Losing Them",
@@ -104,26 +105,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "How do you hold staff accountable in a Nigerian business without them leaving?", "a": "The key is to make expectations clear before holding anyone accountable for them. Most accountability breakdowns in Nigerian businesses happen because the expectations were never documented, the consequences were never stated, and the conversation was avoided for too long. When expectations are clear, written, and agreed upon at the start, accountability becomes a straightforward conversation about whether the standard was met, not a personal confrontation. Staff who understand what is expected of them and are treated with respect during performance conversations are far less likely to leave than staff who feel blindsided or targeted." },
-      { "q": "What is the biggest accountability mistake Nigerian business owners make?", "a": "Waiting too long. Most Nigerian business owners avoid the accountability conversation until the situation has become so obvious that everyone in the office already knows about it. By that point, the conversation is no longer about correcting a performance gap. It is about addressing a pattern that has been allowed to set, and that is a much harder conversation to have. The earlier you address underperformance, the easier the conversation is and the more likely it is to produce a genuine change." },
-      { "q": "How do you handle accountability when the staff member is older or more senior than you?", "a": "Respectfully, directly, and based entirely on documented expectations rather than personal judgment. The conversation should focus on the role, not the person. Keeping the accountability conversation anchored to documented role requirements rather than personal assessments removes the social friction that age and seniority create in Nigerian workplaces, and makes it easier for both parties to have the conversation professionally." }
+      {
+        "q": "How do you hold staff accountable in a Nigerian business without them leaving?",
+        "a": "The key is to make expectations clear before holding anyone accountable for them. Most accountability breakdowns in Nigerian businesses happen because the expectations were never documented, the consequences were never stated, and the conversation was avoided for too long. When expectations are clear, written, and agreed upon at the start, accountability becomes a straightforward conversation about whether the standard was met, not a personal confrontation. Staff who understand what is expected of them and are treated with respect during performance conversations are far less likely to leave than staff who feel blindsided or targeted."
+      },
+      {
+        "q": "What is the biggest accountability mistake Nigerian business owners make?",
+        "a": "Waiting too long. Most Nigerian business owners avoid the accountability conversation until the situation has become so obvious that everyone in the office already knows about it. By that point, the conversation is no longer about correcting a performance gap. It is about addressing a pattern that has been allowed to set, and that is a much harder conversation to have. The earlier you address underperformance, the easier the conversation is and the more likely it is to produce a genuine change."
+      },
+      {
+        "q": "How do you handle accountability when the staff member is older or more senior than you?",
+        "a": "Respectfully, directly, and based entirely on documented expectations rather than personal judgment. The conversation should focus on the role, not the person. Keeping the accountability conversation anchored to documented role requirements rather than personal assessments removes the social friction that age and seniority create in Nigerian workplaces, and makes it easier for both parties to have the conversation professionally."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "What Does Staff Outsourcing Include in Nigeria?", "href": "/articles/what-does-staff-outsourcing-include-nigeria/" },
-      { "title": "How to Build a Resilient Management Team in Nigeria", "href": "/articles/how-to-build-resilient-management-team-nigeria/" },
-      { "title": "Restructuring Without Losing Your Best People", "href": "/articles/restructuring-without-losing-your-best-people/" },
-      { "title": "MD vs CEO in Nigeria", "href": "/articles/md-vs-ceo-nigeria/" },
-      { "title": "Employee Leave and Compensation in Nigeria", "href": "/articles/employee-leave-and-compensation-in-nigeria/" }
+      {
+        "title": "What Does Staff Outsourcing Include in Nigeria?",
+        "href": "/articles/what-does-staff-outsourcing-include-nigeria/"
+      },
+      {
+        "title": "How to Build a Resilient Management Team in Nigeria",
+        "href": "/articles/how-to-build-resilient-management-team-nigeria/"
+      },
+      {
+        "title": "Restructuring Without Losing Your Best People",
+        "href": "/articles/restructuring-without-losing-your-best-people/"
+      },
+      {
+        "title": "MD vs CEO in Nigeria",
+        "href": "/articles/md-vs-ceo-nigeria/"
+      },
+      {
+        "title": "Employee Leave and Compensation in Nigeria",
+        "href": "/articles/employee-leave-and-compensation-in-nigeria/"
+      }
     ]
   }
 }

@@ -88,7 +88,7 @@
     }
   },
   "difference": {
-    "title": "The Traction Difference",
+    "title": "The <span style=\"color:var(--orange);font-weight:800;\">Traction Outsourcing</span> Difference",
     "sub": "We work with two types of clients. Both need structure. Both get results.",
     "cards": [
       {
@@ -157,18 +157,54 @@
   "brands": {
     "title": "Brands We Work With",
     "logos": [
-      "Gifts n Boxes",
-      "Afroreach Research",
-      "Beacon Trust",
-      "Bravies",
-      "Chairo Properties",
-      "Demipos Hotel",
-      "Fourtwoseven Engineering",
-      "Grown and Glow",
-      "La Luna Restaurant",
-      "Tifes Hub",
-      "Toolbox Ateliers",
-      "Super Rise and Shine"
+      {
+        "name": "Gifts n Boxes",
+        "image": "/images/Gifts-n-boxes.png"
+      },
+      {
+        "name": "Afroreach Research",
+        "image": "/images/afroreach-research.png"
+      },
+      {
+        "name": "Beacon Trust",
+        "image": "/images/beacon-trust.jpg"
+      },
+      {
+        "name": "Bravies",
+        "image": "/images/bravies.png"
+      },
+      {
+        "name": "Chairo Properties",
+        "image": "/images/chairo-properties.png"
+      },
+      {
+        "name": "Demipos Hotel",
+        "image": "/images/demipos-hotel.png"
+      },
+      {
+        "name": "Fourtwoseven Engineering",
+        "image": "/images/fourtwoseven-engineering.jpg"
+      },
+      {
+        "name": "Grown and Glow",
+        "image": "/images/grown-and-glow.png"
+      },
+      {
+        "name": "La Luna Restaurant",
+        "image": "/images/la-luna-restaurant.png"
+      },
+      {
+        "name": "Tifes Hub",
+        "image": "/images/tifes-hub.png"
+      },
+      {
+        "name": "Toolbox Ateliers",
+        "image": "/images/toolbox-ateliers.png"
+      },
+      {
+        "name": "Super Rise and Shine",
+        "image": "/images/super-rise-and-shine.png"
+      }
     ]
   },
   "faq": {

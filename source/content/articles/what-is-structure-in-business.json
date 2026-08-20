@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "What Is Structure in Business? How It Works and When to Start | Nigeria",
-    "description": "Business structure is not just your CAC registration. It is how your business is organised to run without constant intervention. Here is what it means, how it works, and when Nigerian founders should build it."
+    "description": "Business structure is not just your CAC registration. It is how your business is organised to run without constant intervention. Here is what it means, how it works, and when Nigerian founders should build it.",
+    "image": "/images/og/og-article-what-is-structure-in-business.jpg"
   },
   "tag": "Business Structure · Nigerian Founders",
   "title": "What Is Structure in Business? How Does It Work? When Should You Start?",
@@ -42,22 +43,42 @@
       "type": "list",
       "heading": "Without Structure",
       "list": [
-        { "t": "Every decision goes through the founder" },
-        { "t": "Nobody is sure who is responsible for what" },
-        { "t": "Two people doing the same job without knowing it" },
-        { "t": "New hires take months to understand how things work" },
-        { "t": "The business slows down when the CEO travels" }
+        {
+          "t": "Every decision goes through the founder"
+        },
+        {
+          "t": "Nobody is sure who is responsible for what"
+        },
+        {
+          "t": "Two people doing the same job without knowing it"
+        },
+        {
+          "t": "New hires take months to understand how things work"
+        },
+        {
+          "t": "The business slows down when the CEO travels"
+        }
       ]
     },
     {
       "type": "list",
       "heading": "With Structure",
       "list": [
-        { "t": "Decisions happen at the right level without escalation" },
-        { "t": "Every role has a clear owner and defined scope" },
-        { "t": "Reporting lines are documented and actually followed" },
-        { "t": "New hires onboard to a system, not to a person" },
-        { "t": "The business keeps running when the CEO is away" }
+        {
+          "t": "Decisions happen at the right level without escalation"
+        },
+        {
+          "t": "Every role has a clear owner and defined scope"
+        },
+        {
+          "t": "Reporting lines are documented and actually followed"
+        },
+        {
+          "t": "New hires onboard to a system, not to a person"
+        },
+        {
+          "t": "The business keeps running when the CEO is away"
+        }
       ]
     },
     {
@@ -95,26 +116,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "What is business structure in Nigeria?", "a": "Business structure in Nigeria refers to how a business is internally organised to operate: who is responsible for what, how decisions are made, how roles are defined, and how reporting lines work. It is separate from legal registration at the CAC, which gives the business legal existence but does not define how it actually runs. A business can be registered but have no real internal structure, and many Nigerian businesses operate this way until the absence of structure begins costing them money and good people." },
-      { "q": "When should a Nigerian business start building its structure?", "a": "Before the fifth hire. Most Nigerian founders wait until the business is already feeling chaotic before thinking about structure, which means they spend months managing problems that a clear structure would have prevented. The right time to build structure is when the business is calm enough to do it properly. A business with two or three people can operate informally. A business with five or more people that has no defined roles, no clear reporting lines, and no documented decision-making process is already accumulating structural problems that will become expensive to fix later." },
-      { "q": "What is the difference between business structure and CAC registration in Nigeria?", "a": "CAC registration gives your business legal existence. It is the certificate that says your business is a recognised entity under Nigerian law. Business structure is what happens inside that entity: how it is organised to function, who is accountable for what, and how it makes and executes decisions. Registration is a one-time administrative process. Structure is an ongoing operational framework that needs to be designed, implemented, and maintained as the business grows." }
+      {
+        "q": "What is business structure in Nigeria?",
+        "a": "Business structure in Nigeria refers to how a business is internally organised to operate: who is responsible for what, how decisions are made, how roles are defined, and how reporting lines work. It is separate from legal registration at the CAC, which gives the business legal existence but does not define how it actually runs. A business can be registered but have no real internal structure, and many Nigerian businesses operate this way until the absence of structure begins costing them money and good people."
+      },
+      {
+        "q": "When should a Nigerian business start building its structure?",
+        "a": "Before the fifth hire. Most Nigerian founders wait until the business is already feeling chaotic before thinking about structure, which means they spend months managing problems that a clear structure would have prevented. The right time to build structure is when the business is calm enough to do it properly. A business with two or three people can operate informally. A business with five or more people that has no defined roles, no clear reporting lines, and no documented decision-making process is already accumulating structural problems that will become expensive to fix later."
+      },
+      {
+        "q": "What is the difference between business structure and CAC registration in Nigeria?",
+        "a": "CAC registration gives your business legal existence. It is the certificate that says your business is a recognised entity under Nigerian law. Business structure is what happens inside that entity: how it is organised to function, who is accountable for what, and how it makes and executes decisions. Registration is a one-time administrative process. Structure is an ongoing operational framework that needs to be designed, implemented, and maintained as the business grows."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "What Is Business Restructuring?", "href": "/articles/what-is-business-restructuring-nigeria/" },
-      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
-      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
-      { "title": "How to Build a Resilient Management Team", "href": "/articles/how-to-build-resilient-management-team-nigeria/" },
-      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" }
+      {
+        "title": "What Is Business Restructuring?",
+        "href": "/articles/what-is-business-restructuring-nigeria/"
+      },
+      {
+        "title": "What Is Traction in Business?",
+        "href": "/articles/what-is-traction-in-business/"
+      },
+      {
+        "title": "How to Register a Company in Nigeria",
+        "href": "/articles/how-to-register-a-company-in-nigeria/"
+      },
+      {
+        "title": "How to Build a Resilient Management Team",
+        "href": "/articles/how-to-build-resilient-management-team-nigeria/"
+      },
+      {
+        "title": "Why Nigerian Startups Fail",
+        "href": "/articles/article-why-nigerian-startups-fail/"
+      }
     ]
   }
 }

@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "What Is Traction in Business? Meaning, Metrics & How to Build It | Traction Outsourcing",
-    "description": "What is traction in business? Traction Outsourcing Limited is measurable proof your business idea is working. Learn what it means, how to measure it, and how to build it as a Nigerian founder."
+    "description": "What is traction in business? Traction Outsourcing Limited is measurable proof your business idea is working. Learn what it means, how to measure it, and how to build it as a Nigerian founder.",
+    "image": "/images/og/og-article-what-is-traction-in-business.jpg"
   },
   "tag": "Business Growth",
   "title": "What Is Traction in Business?",
@@ -62,11 +63,26 @@
     {
       "type": "list",
       "list": [
-        { "b": "Product or Service Business:", "t": "Paying customers, revenue, repeat purchase rate, retention" },
-        { "b": "SaaS / Subscription:", "t": "Monthly recurring revenue (MRR), churn rate, net revenue retention, customer count" },
-        { "b": "Consumer App / Platform:", "t": "Daily/monthly active users, retention curves, engagement depth (not downloads)" },
-        { "b": "B2B / Consulting:", "t": "Signed clients, contract value, renewal rate, referrals from existing clients" },
-        { "b": "E-Commerce / Retail:", "t": "Gross merchandise value, repeat purchase rate, average order value" }
+        {
+          "b": "Product or Service Business:",
+          "t": "Paying customers, revenue, repeat purchase rate, retention"
+        },
+        {
+          "b": "SaaS / Subscription:",
+          "t": "Monthly recurring revenue (MRR), churn rate, net revenue retention, customer count"
+        },
+        {
+          "b": "Consumer App / Platform:",
+          "t": "Daily/monthly active users, retention curves, engagement depth (not downloads)"
+        },
+        {
+          "b": "B2B / Consulting:",
+          "t": "Signed clients, contract value, renewal rate, referrals from existing clients"
+        },
+        {
+          "b": "E-Commerce / Retail:",
+          "t": "Gross merchandise value, repeat purchase rate, average order value"
+        }
       ]
     },
     {
@@ -153,27 +169,72 @@
   },
   "faq": {
     "entries": [
-      { "q": "What is traction in business?", "a": "Business traction is the measurable, quantitative evidence that people actually want what your business is offering, demonstrated through paying customers, revenue growth, consistent retention, or meaningful engagement, not through downloads or social media followers that cost nothing to accumulate." },
-      { "q": "Why is traction important for a business?", "a": "Traction proves that the business is not just an idea with a plan behind it, it is a real thing that real people are choosing with their time or money. It is the evidence that attracts investors, unlocks credit, wins corporate clients, and separates the businesses that grow from the ones that stay small or disappear." },
-      { "q": "What is the difference between traction and growth?", "a": "Traction is the early evidence that the business is working, customers coming in, revenue accumulating, retention holding. Growth is what happens when you scale that evidence, hiring specialists, expanding channels, maximizing what is already working. You cannot have real growth without first establishing traction." },
-      { "q": "What is the difference between traction and product-market fit?", "a": "Traction is the early signal: measurable evidence that customers want what you are offering. Product-market fit is the durable state where that signal becomes self-sustaining, accelerating demand. Traction is what gets you toward product-market fit; product-market fit is what happens when traction becomes consistent enough to compound on its own." }
+      {
+        "q": "What is traction in business?",
+        "a": "Business traction is the measurable, quantitative evidence that people actually want what your business is offering, demonstrated through paying customers, revenue growth, consistent retention, or meaningful engagement, not through downloads or social media followers that cost nothing to accumulate."
+      },
+      {
+        "q": "Why is traction important for a business?",
+        "a": "Traction proves that the business is not just an idea with a plan behind it, it is a real thing that real people are choosing with their time or money. It is the evidence that attracts investors, unlocks credit, wins corporate clients, and separates the businesses that grow from the ones that stay small or disappear."
+      },
+      {
+        "q": "What is the difference between traction and growth?",
+        "a": "Traction is the early evidence that the business is working, customers coming in, revenue accumulating, retention holding. Growth is what happens when you scale that evidence, hiring specialists, expanding channels, maximizing what is already working. You cannot have real growth without first establishing traction."
+      },
+      {
+        "q": "What is the difference between traction and product-market fit?",
+        "a": "Traction is the early signal: measurable evidence that customers want what you are offering. Product-market fit is the durable state where that signal becomes self-sustaining, accelerating demand. Traction is what gets you toward product-market fit; product-market fit is what happens when traction becomes consistent enough to compound on its own."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" },
-      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
-      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
-      { "title": "The Cost of a Bad Hire in Nigeria", "href": "/articles/article-cost-of-bad-hire-nigeria/" },
-      { "title": "How to Find the Best Recruitment Agency in Nigeria", "href": "/articles/best-recruitment-agency-nigeria/" }
+      {
+        "title": "Why Nigerian Startups Fail",
+        "href": "/articles/article-why-nigerian-startups-fail/"
+      },
+      {
+        "title": "How to Register a Company in Nigeria",
+        "href": "/articles/how-to-register-a-company-in-nigeria/"
+      },
+      {
+        "title": "Company Registration for Foreigners",
+        "href": "/articles/company-registration-nigeria-foreigners/"
+      },
+      {
+        "title": "The Cost of a Bad Hire in Nigeria",
+        "href": "/articles/article-cost-of-bad-hire-nigeria/"
+      },
+      {
+        "title": "How to Find the Best Recruitment Agency in Nigeria",
+        "href": "/articles/best-recruitment-agency-nigeria/"
+      }
     ]
   }
 }

@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "How to Register a Company in Nigeria (2026 CAC Guide) | Traction Outsourcing",
-    "description": "How to register a company in Nigeria in 2026: CAC business name vs limited liability, required documents, step-by-step process, costs, and what to do after registration."
+    "description": "How to register a company in Nigeria in 2026: CAC business name vs limited liability, required documents, step-by-step process, costs, and what to do after registration.",
+    "image": "/images/og/og-article-how-to-register-company-nigeria.jpg"
   },
   "tag": "CAC Registration",
   "title": "How to Register a Company in Nigeria: The Complete 2026 CAC Registration Guide",
@@ -49,12 +50,24 @@
       "type": "list",
       "heading": "What You Need Before You Start",
       "list": [
-        { "t": "Two or three proposed business names, in order of preference" },
-        { "t": "Details of directors, shareholders, and, for a limited company, a company secretary" },
-        { "t": "A clear, specific description of your business activities, vague descriptions slow down approval" },
-        { "t": "A physical Nigerian address for the business, a P.O. Box is generally not accepted" },
-        { "t": "Valid means of identification for everyone involved, scanned in color, black and white scans are a common cause of rejection" },
-        { "t": "For a limited company, your proposed share capital and a Memorandum and Articles of Association covering the full scope of the business" }
+        {
+          "t": "Two or three proposed business names, in order of preference"
+        },
+        {
+          "t": "Details of directors, shareholders, and, for a limited company, a company secretary"
+        },
+        {
+          "t": "A clear, specific description of your business activities, vague descriptions slow down approval"
+        },
+        {
+          "t": "A physical Nigerian address for the business, a P.O. Box is generally not accepted"
+        },
+        {
+          "t": "Valid means of identification for everyone involved, scanned in color, black and white scans are a common cause of rejection"
+        },
+        {
+          "t": "For a limited company, your proposed share capital and a Memorandum and Articles of Association covering the full scope of the business"
+        }
       ]
     },
     {
@@ -102,11 +115,21 @@
       "type": "list",
       "heading": "Common Mistakes That Get Applications Rejected",
       "list": [
-        { "t": "Submitting black and white identification scans instead of color" },
-        { "t": "Proposing a name too similar to one already registered" },
-        { "t": "Writing vague objects of association instead of a specific description of what the business actually does" },
-        { "t": "Using a P.O. Box instead of a physical address" },
-        { "t": "Incomplete director or shareholder information on a limited company application" }
+        {
+          "t": "Submitting black and white identification scans instead of color"
+        },
+        {
+          "t": "Proposing a name too similar to one already registered"
+        },
+        {
+          "t": "Writing vague objects of association instead of a specific description of what the business actually does"
+        },
+        {
+          "t": "Using a P.O. Box instead of a physical address"
+        },
+        {
+          "t": "Incomplete director or shareholder information on a limited company application"
+        }
       ]
     },
     {
@@ -141,27 +164,72 @@
   },
   "faq": {
     "entries": [
-      { "q": "How do I start my business in Nigeria?", "a": "Start by choosing a business structure, either a business name or a limited liability company, then register it with the Corporate Affairs Commission. Once registered, move on to tax registration, opening a corporate bank account, and building the internal structure your business needs to actually run." },
-      { "q": "How do I register a company in Nigeria?", "a": "You register with the Corporate Affairs Commission, either yourself through the CAC portal or through an accredited agent. The process involves reserving a name, preparing your documents, submitting your application, then receiving your certificate." },
-      { "q": "What is the difference between a business name and a limited company in Nigeria?", "a": "A business name has no separate legal personality, so the owner is personally liable for its debts. A limited company is a separate legal entity, which limits personal liability, but comes with more documentation and higher ongoing compliance obligations." },
-      { "q": "Can Nigerians living abroad register a company in Nigeria?", "a": "Yes. A Nigerian citizen abroad registering a wholly Nigerian-owned company follows the same CAC process as anyone registering from within Nigeria, since the portal is fully online. Location does not change the requirements, ownership does." }
+      {
+        "q": "How do I start my business in Nigeria?",
+        "a": "Start by choosing a business structure, either a business name or a limited liability company, then register it with the Corporate Affairs Commission. Once registered, move on to tax registration, opening a corporate bank account, and building the internal structure your business needs to actually run."
+      },
+      {
+        "q": "How do I register a company in Nigeria?",
+        "a": "You register with the Corporate Affairs Commission, either yourself through the CAC portal or through an accredited agent. The process involves reserving a name, preparing your documents, submitting your application, then receiving your certificate."
+      },
+      {
+        "q": "What is the difference between a business name and a limited company in Nigeria?",
+        "a": "A business name has no separate legal personality, so the owner is personally liable for its debts. A limited company is a separate legal entity, which limits personal liability, but comes with more documentation and higher ongoing compliance obligations."
+      },
+      {
+        "q": "Can Nigerians living abroad register a company in Nigeria?",
+        "a": "Yes. A Nigerian citizen abroad registering a wholly Nigerian-owned company follows the same CAC process as anyone registering from within Nigeria, since the portal is fully online. Location does not change the requirements, ownership does."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
-      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
-      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" },
-      { "title": "Hire Staff in Nigeria From Abroad", "href": "/articles/hire-staff-nigeria-from-abroad/" },
-      { "title": "How to Find the Best Recruitment Agency in Nigeria", "href": "/articles/best-recruitment-agency-nigeria/" }
+      {
+        "title": "Company Registration for Foreigners",
+        "href": "/articles/company-registration-nigeria-foreigners/"
+      },
+      {
+        "title": "What Is Traction in Business?",
+        "href": "/articles/what-is-traction-in-business/"
+      },
+      {
+        "title": "Why Nigerian Startups Fail",
+        "href": "/articles/article-why-nigerian-startups-fail/"
+      },
+      {
+        "title": "Hire Staff in Nigeria From Abroad",
+        "href": "/articles/hire-staff-nigeria-from-abroad/"
+      },
+      {
+        "title": "How to Find the Best Recruitment Agency in Nigeria",
+        "href": "/articles/best-recruitment-agency-nigeria/"
+      }
     ]
   }
 }

@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Why Nigerian Businesses Are Outsourcing Their HR Entirely",
-    "description": "More Nigerian businesses are moving their entire HR function to an outsourcing firm. Here is why the shift is happening and what it takes to make the move correctly."
+    "description": "More Nigerian businesses are moving their entire HR function to an outsourcing firm. Here is why the shift is happening and what it takes to make the move correctly.",
+    "image": "/images/og/og-article-why-nigerian-businesses-outsourcing-hr.jpg"
   },
   "tag": "Staff Outsourcing · HR Strategy",
   "title": "Why Nigerian Businesses Are Outsourcing Their HR Entirely",
@@ -40,12 +41,30 @@
       "type": "list",
       "heading": "Six Reasons the Shift Is Accelerating",
       "list": [
-        { "b": "Statutory Compliance Is Getting Harder to Ignore", "t": "PAYE, pension contributions, NHF, ITF, NSITF — the list of mandatory remittances is long and the penalties for non-compliance are real. Most SMEs handle these inconsistently or not at all. An outsourcing firm manages all of it as a core function, not an afterthought." },
-        { "b": "Bad Hires Are Too Expensive", "t": "The cost of a wrong hire in Nigeria — salary paid, time lost, team disruption, and the cost of replacing them — regularly exceeds 50% of that person's annual salary. Structured outsourcing firms run pre-employment testing, background checks, and medical checks before anyone resumes. That is protection most businesses cannot build internally." },
-        { "b": "Founder Time Is Too Valuable to Spend on HR Administration", "t": "The founders and senior managers of growing Nigerian businesses are the most expensive people in those businesses. When they spend their time on payroll queries, attendance disputes, and recruitment logistics, the business is paying its highest rates for its lowest-value work." },
-        { "b": "Training and Development Cannot Be an Afterthought", "t": "Businesses that outsource to Traction Outsourcing Limited get bi-annual group training for their outsourced staff, customised per client. Most businesses managing staff internally train their people once, if at all. The gap in performance between a trained and an untrained workforce compounds significantly over time." },
-        { "b": "Active Staff Management Requires Dedicated Attention", "t": "Quarterly check-ins with every outsourced staff member, conducted by our management team, catch performance and welfare issues before they become problems the client has to deal with. Most businesses find out something is wrong only after it has already affected operations." },
-        { "b": "Growth Requires Nationwide Reach", "t": "A business expanding beyond its home city needs to recruit and manage staff in locations it does not have a management presence in. An outsourcing firm with nationwide reach solves this without requiring the business to open HR operations in every new city." }
+        {
+          "b": "Statutory Compliance Is Getting Harder to Ignore",
+          "t": "PAYE, pension contributions, NHF, ITF, NSITF — the list of mandatory remittances is long and the penalties for non-compliance are real. Most SMEs handle these inconsistently or not at all. An outsourcing firm manages all of it as a core function, not an afterthought."
+        },
+        {
+          "b": "Bad Hires Are Too Expensive",
+          "t": "The cost of a wrong hire in Nigeria — salary paid, time lost, team disruption, and the cost of replacing them — regularly exceeds 50% of that person's annual salary. Structured outsourcing firms run pre-employment testing, background checks, and medical checks before anyone resumes. That is protection most businesses cannot build internally."
+        },
+        {
+          "b": "Founder Time Is Too Valuable to Spend on HR Administration",
+          "t": "The founders and senior managers of growing Nigerian businesses are the most expensive people in those businesses. When they spend their time on payroll queries, attendance disputes, and recruitment logistics, the business is paying its highest rates for its lowest-value work."
+        },
+        {
+          "b": "Training and Development Cannot Be an Afterthought",
+          "t": "Businesses that outsource to Traction Outsourcing Limited get bi-annual group training for their outsourced staff, customised per client. Most businesses managing staff internally train their people once, if at all. The gap in performance between a trained and an untrained workforce compounds significantly over time."
+        },
+        {
+          "b": "Active Staff Management Requires Dedicated Attention",
+          "t": "Quarterly check-ins with every outsourced staff member, conducted by our management team, catch performance and welfare issues before they become problems the client has to deal with. Most businesses find out something is wrong only after it has already affected operations."
+        },
+        {
+          "b": "Growth Requires Nationwide Reach",
+          "t": "A business expanding beyond its home city needs to recruit and manage staff in locations it does not have a management presence in. An outsourcing firm with nationwide reach solves this without requiring the business to open HR operations in every new city."
+        }
       ]
     },
     {
@@ -67,26 +86,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "Why are Nigerian businesses outsourcing their HR?", "a": "Nigerian businesses are outsourcing HR because managing staff internally is consuming more time, money, and management attention than it produces value. The costs of recruitment errors, statutory non-compliance, payroll administration, training, and managing underperformance have become clearer as businesses grow. Outsourcing the entire HR function to a specialist firm eliminates these costs and frees the management team to focus on revenue and growth." },
-      { "q": "Is HR outsourcing suitable for small businesses in Nigeria?", "a": "Yes. Small businesses in Nigeria are often the ones that benefit most from HR outsourcing because they typically have no dedicated HR staff at all. Everything falls on the founder or a general manager who is already stretched. An outsourcing firm provides the full HR infrastructure without the cost of a full-time HR department." },
-      { "q": "What is the risk of not outsourcing HR in Nigeria?", "a": "The risks include statutory non-compliance, bad hires that cost significantly more than a recruitment fee, unmanaged underperformance that spreads through a team, and founder time consumed by HR administration rather than business development. These risks compound as the business grows and the workforce expands." },
-      { "q": "How do I start outsourcing HR for my Nigerian business?", "a": "The starting point is a conversation with an outsourcing firm to review your current workforce, statutory obligations, and specific needs. Traction Outsourcing Limited offers a free 30-minute advisory call where we assess your current situation and tell you honestly what a full outsourcing engagement would cover." }
+      {
+        "q": "Why are Nigerian businesses outsourcing their HR?",
+        "a": "Nigerian businesses are outsourcing HR because managing staff internally is consuming more time, money, and management attention than it produces value. The costs of recruitment errors, statutory non-compliance, payroll administration, training, and managing underperformance have become clearer as businesses grow. Outsourcing the entire HR function to a specialist firm eliminates these costs and frees the management team to focus on revenue and growth."
+      },
+      {
+        "q": "Is HR outsourcing suitable for small businesses in Nigeria?",
+        "a": "Yes. Small businesses in Nigeria are often the ones that benefit most from HR outsourcing because they typically have no dedicated HR staff at all. Everything falls on the founder or a general manager who is already stretched. An outsourcing firm provides the full HR infrastructure without the cost of a full-time HR department."
+      },
+      {
+        "q": "What is the risk of not outsourcing HR in Nigeria?",
+        "a": "The risks include statutory non-compliance, bad hires that cost significantly more than a recruitment fee, unmanaged underperformance that spreads through a team, and founder time consumed by HR administration rather than business development. These risks compound as the business grows and the workforce expands."
+      },
+      {
+        "q": "How do I start outsourcing HR for my Nigerian business?",
+        "a": "The starting point is a conversation with an outsourcing firm to review your current workforce, statutory obligations, and specific needs. Traction Outsourcing Limited offers a free 30-minute advisory call where we assess your current situation and tell you honestly what a full outsourcing engagement would cover."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Staff Outsourcing & HR Management", "href": "/services/staff-outsourcing/" },
-      { "title": "ATH Recruiters", "href": "/brands/recruiters/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" }
+      {
+        "title": "Staff Outsourcing & HR Management",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "ATH Recruiters",
+        "href": "/brands/recruiters/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      }
     ],
     "insights": [
-      { "title": "What Outsourcing Actually Includes", "href": "/articles/what-does-staff-outsourcing-include-nigeria/" },
-      { "title": "What Is HR Outsourcing?", "href": "/articles/what-is-hr-outsourcing/" },
-      { "title": "The Real Cost of a Bad Hire", "href": "/articles/article-cost-of-bad-hire-nigeria/" },
-      { "title": "Accountability in Business Nigeria", "href": "/articles/accountability-in-business-nigeria/" },
-      { "title": "Why Nigerian Businesses Train Staff", "href": "/articles/why-nigerian-businesses-train-staff/" }
+      {
+        "title": "What Outsourcing Actually Includes",
+        "href": "/articles/what-does-staff-outsourcing-include-nigeria/"
+      },
+      {
+        "title": "What Is HR Outsourcing?",
+        "href": "/articles/what-is-hr-outsourcing/"
+      },
+      {
+        "title": "The Real Cost of a Bad Hire",
+        "href": "/articles/article-cost-of-bad-hire-nigeria/"
+      },
+      {
+        "title": "Accountability in Business Nigeria",
+        "href": "/articles/accountability-in-business-nigeria/"
+      },
+      {
+        "title": "Why Nigerian Businesses Train Staff",
+        "href": "/articles/why-nigerian-businesses-train-staff/"
+      }
     ]
   }
 }

@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Tall Poppy Syndrome in Business | Why Friends Don't Buy From You",
-    "description": "Friends like your posts and still buy elsewhere. Here is what Tall Poppy Syndrome reveals about growth, friendship, and where your real customers come from."
+    "description": "Friends like your posts and still buy elsewhere. Here is what Tall Poppy Syndrome reveals about growth, friendship, and where your real customers come from.",
+    "image": "/images/og/og-article-tall-poppy.jpg"
   },
   "tag": "Workplace Psychology · Business Advisory",
   "title": "Tall Poppy Syndrome: Why Your Closest Friends Are Often the Last to Become Your Customers",
@@ -67,26 +68,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "What is Tall Poppy Syndrome in business?", "a": "Tall Poppy Syndrome is the social instinct to resent or pull back from someone who visibly outgrows their peer group. In business, it often shows up as friends and early acquaintances becoming quieter supporters, not louder ones, once a founder's business starts to succeed." },
-      { "q": "Why do friends struggle to support a growing business?", "a": "Friendship is usually built on relative equality. When one person visibly grows through a business, a promotion, or new opportunities, that balance shifts. It is rarely malice. More often it is discomfort with a relationship that no longer feels level, and that discomfort quietly shows up as friends going elsewhere for what you sell." },
-      { "q": "Should a founder stop growing to avoid Tall Poppy Syndrome?", "a": "No. The answer is not to shrink to keep people comfortable. It is to understand where your early customers will realistically come from, usually people who meet you as a business owner first, and to build the structure that lets strangers trust you quickly since your oldest friends may take longer." }
+      {
+        "q": "What is Tall Poppy Syndrome in business?",
+        "a": "Tall Poppy Syndrome is the social instinct to resent or pull back from someone who visibly outgrows their peer group. In business, it often shows up as friends and early acquaintances becoming quieter supporters, not louder ones, once a founder's business starts to succeed."
+      },
+      {
+        "q": "Why do friends struggle to support a growing business?",
+        "a": "Friendship is usually built on relative equality. When one person visibly grows through a business, a promotion, or new opportunities, that balance shifts. It is rarely malice. More often it is discomfort with a relationship that no longer feels level, and that discomfort quietly shows up as friends going elsewhere for what you sell."
+      },
+      {
+        "q": "Should a founder stop growing to avoid Tall Poppy Syndrome?",
+        "a": "No. The answer is not to shrink to keep people comfortable. It is to understand where your early customers will realistically come from, usually people who meet you as a business owner first, and to build the structure that lets strangers trust you quickly since your oldest friends may take longer."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "The Dangers of Proximity to Success", "href": "/articles/article-dangers-of-proximity-to-success/" },
-      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
-      { "title": "Accountability in Business", "href": "/articles/accountability-in-business-nigeria/" },
-      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" },
-      { "title": "What Is Structure in Business?", "href": "/articles/what-is-structure-in-business/" }
+      {
+        "title": "The Dangers of Proximity to Success",
+        "href": "/articles/article-dangers-of-proximity-to-success/"
+      },
+      {
+        "title": "What Is Traction in Business?",
+        "href": "/articles/what-is-traction-in-business/"
+      },
+      {
+        "title": "Accountability in Business",
+        "href": "/articles/accountability-in-business-nigeria/"
+      },
+      {
+        "title": "Why Nigerian Startups Fail",
+        "href": "/articles/article-why-nigerian-startups-fail/"
+      },
+      {
+        "title": "What Is Structure in Business?",
+        "href": "/articles/what-is-structure-in-business/"
+      }
     ]
   }
 }

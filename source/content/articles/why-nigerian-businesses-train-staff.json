@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Why Nigerian Businesses Train Their Staff | The Real Reason",
-    "description": "Nigerian businesses that invest in staff training outperform those that do not. Here is why training is a business decision, not just an HR exercise, and what it actually produces."
+    "description": "Nigerian businesses that invest in staff training outperform those that do not. Here is why training is a business decision, not just an HR exercise, and what it actually produces.",
+    "image": "/images/og/og-article-why-nigerian-businesses-train-staff.jpg"
   },
   "tag": "Corporate Trainings · HR Management",
   "title": "Why Nigerian Businesses Train Their Staff",
@@ -30,10 +31,22 @@
       "type": "list",
       "heading": "The Four Things Nigerian Businesses Actually Train For",
       "list": [
-        { "b": "Closing skill gaps that are costing the business money.", "t": "Every business has roles where the person doing the job is doing it at 70 percent of what it should be. Training closes that gap without replacing the person, which is almost always cheaper and less disruptive." },
-        { "b": "Preparing staff for growth.", "t": "A business that is scaling needs managers who can manage, finance staff who understand cash flow, and sales teams that can close. Training builds the internal capability so the business can promote from within rather than continuously hiring externally." },
-        { "b": "Reducing founder dependency.", "t": "Many Nigerian business owners are the most skilled person in the room at almost everything. Training builds a team that can operate without constant senior-level input, which is a precondition for the business to function when the founder is unavailable." },
-        { "b": "Retaining good people.", "t": "Experienced staff in Nigeria know they have options. Businesses that invest in developing their people signal that they see long-term value in those people. That signal is a retention tool that costs less than a salary increase and lasts longer." }
+        {
+          "b": "Closing skill gaps that are costing the business money.",
+          "t": "Every business has roles where the person doing the job is doing it at 70 percent of what it should be. Training closes that gap without replacing the person, which is almost always cheaper and less disruptive."
+        },
+        {
+          "b": "Preparing staff for growth.",
+          "t": "A business that is scaling needs managers who can manage, finance staff who understand cash flow, and sales teams that can close. Training builds the internal capability so the business can promote from within rather than continuously hiring externally."
+        },
+        {
+          "b": "Reducing founder dependency.",
+          "t": "Many Nigerian business owners are the most skilled person in the room at almost everything. Training builds a team that can operate without constant senior-level input, which is a precondition for the business to function when the founder is unavailable."
+        },
+        {
+          "b": "Retaining good people.",
+          "t": "Experienced staff in Nigeria know they have options. Businesses that invest in developing their people signal that they see long-term value in those people. That signal is a retention tool that costs less than a salary increase and lasts longer."
+        }
       ]
     },
     {
@@ -57,26 +70,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "What types of staff training do Nigerian businesses need most?", "a": "The most requested training categories for Nigerian businesses are leadership and people management, customer service and client handling, financial literacy for non-finance managers, digital literacy and AI tools, and HR and payroll management. The right training depends on the specific gaps in the business, which is why a training needs assessment should come before the programme." },
-      { "q": "How often should a Nigerian business train its staff?", "a": "At minimum, Nigerian businesses should invest in structured staff training once a year, with targeted interventions when specific skill gaps emerge or when new tools, systems, or roles are introduced. High-growth businesses typically train more frequently to keep their workforce aligned with where the business is going." },
-      { "q": "Does staff training improve retention in Nigerian businesses?", "a": "Yes. Staff who receive consistent training are more likely to stay with a business because they feel invested in and see a path for growth. In Nigeria, where experienced talent is competitive, training is one of the most cost-effective retention tools available, far cheaper than the cost of replacing a high performer." }
+      {
+        "q": "What types of staff training do Nigerian businesses need most?",
+        "a": "The most requested training categories for Nigerian businesses are leadership and people management, customer service and client handling, financial literacy for non-finance managers, digital literacy and AI tools, and HR and payroll management. The right training depends on the specific gaps in the business, which is why a training needs assessment should come before the programme."
+      },
+      {
+        "q": "How often should a Nigerian business train its staff?",
+        "a": "At minimum, Nigerian businesses should invest in structured staff training once a year, with targeted interventions when specific skill gaps emerge or when new tools, systems, or roles are introduced. High-growth businesses typically train more frequently to keep their workforce aligned with where the business is going."
+      },
+      {
+        "q": "Does staff training improve retention in Nigerian businesses?",
+        "a": "Yes. Staff who receive consistent training are more likely to stay with a business because they feel invested in and see a path for growth. In Nigeria, where experienced talent is competitive, training is one of the most cost-effective retention tools available, far cheaper than the cost of replacing a high performer."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "How to Build a Resilient Management Team", "href": "/articles/how-to-build-resilient-management-team-nigeria/" },
-      { "title": "What Is Structure in Business?", "href": "/articles/what-is-structure-in-business/" },
-      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
-      { "title": "Traction Outsourcing Limited Client Reviews", "href": "/articles/client-reviews-traction-outsourcing/" },
-      { "title": "Why Nigerian Businesses Are Outsourcing HR", "href": "/articles/why-nigerian-businesses-outsourcing-hr/" }
+      {
+        "title": "How to Build a Resilient Management Team",
+        "href": "/articles/how-to-build-resilient-management-team-nigeria/"
+      },
+      {
+        "title": "What Is Structure in Business?",
+        "href": "/articles/what-is-structure-in-business/"
+      },
+      {
+        "title": "What Is Traction in Business?",
+        "href": "/articles/what-is-traction-in-business/"
+      },
+      {
+        "title": "Traction Outsourcing Limited Client Reviews",
+        "href": "/articles/client-reviews-traction-outsourcing/"
+      },
+      {
+        "title": "Why Nigerian Businesses Are Outsourcing HR",
+        "href": "/articles/why-nigerian-businesses-outsourcing-hr/"
+      }
     ]
   }
 }

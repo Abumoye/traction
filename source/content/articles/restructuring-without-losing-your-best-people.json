@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Restructuring Without Losing Your Best People | Nigerian Business Guide",
-    "description": "If restructuring has always meant layoffs to you, it is time to separate the fear from the facts. Here is how Nigerian CEOs can restructure and keep the people who make the business work."
+    "description": "If restructuring has always meant layoffs to you, it is time to separate the fear from the facts. Here is how Nigerian CEOs can restructure and keep the people who make the business work.",
+    "image": "/images/og/og-article-restructuring-without-losing-your-best-people.jpg"
   },
   "tag": "Corporate Restructuring · People Management",
   "title": "Restructuring Without Losing Your Best People: A Nigerian Business Owner's Guide",
@@ -73,26 +74,68 @@
   },
   "faq": {
     "entries": [
-      { "q": "Does business restructuring always mean layoffs in Nigeria?", "a": "No. Restructuring does not automatically mean anyone loses their job. Most restructuring exercises are about clarifying roles, governance, and reporting lines, not reducing headcount. Staff exits only become necessary when a role is genuinely duplicated or when a position no longer exists in the new structure. A well-executed restructuring can actually improve staff morale by removing the confusion and role ambiguity that frustrates good employees." },
-      { "q": "How do I tell my staff that the business is being restructured?", "a": "Early, directly, and honestly. The single biggest mistake business owners make is announcing a restructuring without context. Staff will fill the silence with their own conclusions, and those conclusions are almost always worse than the reality. Tell them what is changing, why, and what it means for them personally. If some roles are affected, say so clearly. Uncertainty is more damaging than difficult news delivered well." },
-      { "q": "What is the best way to retain key staff during a business restructuring?", "a": "Involve them early. The staff most likely to leave during a restructuring are the high performers who have other options, and they leave because they feel undervalued or uncertain about their future. Bringing key people into the conversation before the new structure is finalised, giving them clearly defined roles with real authority, and being honest about the process all reduce the risk of losing the people you most need to keep." }
+      {
+        "q": "Does business restructuring always mean layoffs in Nigeria?",
+        "a": "No. Restructuring does not automatically mean anyone loses their job. Most restructuring exercises are about clarifying roles, governance, and reporting lines, not reducing headcount. Staff exits only become necessary when a role is genuinely duplicated or when a position no longer exists in the new structure. A well-executed restructuring can actually improve staff morale by removing the confusion and role ambiguity that frustrates good employees."
+      },
+      {
+        "q": "How do I tell my staff that the business is being restructured?",
+        "a": "Early, directly, and honestly. The single biggest mistake business owners make is announcing a restructuring without context. Staff will fill the silence with their own conclusions, and those conclusions are almost always worse than the reality. Tell them what is changing, why, and what it means for them personally. If some roles are affected, say so clearly. Uncertainty is more damaging than difficult news delivered well."
+      },
+      {
+        "q": "What is the best way to retain key staff during a business restructuring?",
+        "a": "Involve them early. The staff most likely to leave during a restructuring are the high performers who have other options, and they leave because they feel undervalued or uncertain about their future. Bringing key people into the conversation before the new structure is finalised, giving them clearly defined roles with real authority, and being honest about the process all reduce the risk of losing the people you most need to keep."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "What Is Business Restructuring? Does Your Nigerian Business Need It?", "href": "/articles/what-is-business-restructuring-nigeria/" },
-      { "title": "How to Build a Resilient Management Team in Nigeria", "href": "/articles/how-to-build-resilient-management-team-nigeria/" },
-      { "title": "Accountability in Business in Nigeria", "href": "/articles/accountability-in-business-nigeria/" },
-      { "title": "MD vs CEO in Nigeria", "href": "/articles/md-vs-ceo-nigeria/" },
-      { "title": "The Tall Poppy Syndrome", "href": "/articles/article-tall-poppy-syndrome/" }
+      {
+        "title": "What Is Business Restructuring? Does Your Nigerian Business Need It?",
+        "href": "/articles/what-is-business-restructuring-nigeria/"
+      },
+      {
+        "title": "How to Build a Resilient Management Team in Nigeria",
+        "href": "/articles/how-to-build-resilient-management-team-nigeria/"
+      },
+      {
+        "title": "Accountability in Business in Nigeria",
+        "href": "/articles/accountability-in-business-nigeria/"
+      },
+      {
+        "title": "MD vs CEO in Nigeria",
+        "href": "/articles/md-vs-ceo-nigeria/"
+      },
+      {
+        "title": "The Tall Poppy Syndrome",
+        "href": "/articles/article-tall-poppy-syndrome/"
+      }
     ]
   }
 }

@@ -6,6 +6,18 @@
   <title>{{ meta.title }}</title>
   <link rel="canonical" href="https://tolnigeria.com{{ path }}">
   <meta name="description" content="{{ meta.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Traction Outsourcing Limited">
+  <meta property="og:title" content="{{ meta.title }}">
+  <meta property="og:description" content="{{ meta.description }}">
+  <meta property="og:url" content="https://tolnigeria.com{{ path }}">
+  <meta property="og:image" content="https://tolnigeria.com{{ meta.image | default('/images/traction-opengraph.png') }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ meta.title }}">
+  <meta name="twitter:description" content="{{ meta.description }}">
+  <meta name="twitter:image" content="https://tolnigeria.com{{ meta.image | default('/images/traction-opengraph.png') }}">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>

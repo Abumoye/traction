@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Employee Handbook for Nigerian SMEs | Traction Outsourcing",
-    "description": "Most Nigerian SMEs run on memory instead of policy. Why an employee handbook is a high-leverage document, and how to structure one."
+    "description": "Most Nigerian SMEs run on memory instead of policy. Why an employee handbook is a high-leverage document, and how to structure one.",
+    "image": "/images/og/og-article-employee-handbook.jpg"
   },
   "tag": "HR Advisory",
   "title": "How to Write an Employee Handbook for a Nigerian SME",
@@ -75,27 +76,72 @@
   },
   "faq": {
     "entries": [
-      { "q": "Why does a Nigerian SME need an employee handbook?", "a": "Without a written handbook, policy exists only in the founder's memory, applied inconsistently and impossible to enforce fairly. A handbook turns informal understanding into a document every employee can be held to equally." },
-      { "q": "What should be included in a Nigerian employee handbook?", "a": "A working handbook covers company policy, conduct expectations, leave and attendance rules, disciplinary procedure, and the practical day-to-day questions new employees actually ask, not just a legal boilerplate." },
-      { "q": "What happens if a business skips having an employee handbook?", "a": "Disputes get settled inconsistently, expectations vary by manager, and the business has no documented standard to point to when a disagreement over conduct or policy ends up in front of a court or tribunal." }
+      {
+        "q": "Why does a Nigerian SME need an employee handbook?",
+        "a": "Without a written handbook, policy exists only in the founder's memory, applied inconsistently and impossible to enforce fairly. A handbook turns informal understanding into a document every employee can be held to equally."
+      },
+      {
+        "q": "What should be included in a Nigerian employee handbook?",
+        "a": "A working handbook covers company policy, conduct expectations, leave and attendance rules, disciplinary procedure, and the practical day-to-day questions new employees actually ask, not just a legal boilerplate."
+      },
+      {
+        "q": "What happens if a business skips having an employee handbook?",
+        "a": "Disputes get settled inconsistently, expectations vary by manager, and the business has no documented standard to point to when a disagreement over conduct or policy ends up in front of a court or tribunal."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
-      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
-      { "title": "Company Registration for Foreigners", "href": "/articles/company-registration-nigeria-foreigners/" },
-      { "title": "Kigali: Africa's Rising Business Hub", "href": "/articles/kigali-africa-business-hub/" },
-      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" },
-      { "title": "Employee Leave & Compensation", "href": "/articles/employee-leave-and-compensation-in-nigeria/" }
+      {
+        "title": "What Is Traction in Business?",
+        "href": "/articles/what-is-traction-in-business/"
+      },
+      {
+        "title": "How to Register a Company in Nigeria",
+        "href": "/articles/how-to-register-a-company-in-nigeria/"
+      },
+      {
+        "title": "Company Registration for Foreigners",
+        "href": "/articles/company-registration-nigeria-foreigners/"
+      },
+      {
+        "title": "Kigali: Africa's Rising Business Hub",
+        "href": "/articles/kigali-africa-business-hub/"
+      },
+      {
+        "title": "Why Nigerian Startups Fail",
+        "href": "/articles/article-why-nigerian-startups-fail/"
+      },
+      {
+        "title": "Employee Leave & Compensation",
+        "href": "/articles/employee-leave-and-compensation-in-nigeria/"
+      }
     ]
   }
 }

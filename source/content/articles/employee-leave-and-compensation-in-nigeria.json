@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Employee Leave and Compensation in Nigeria: A Guide for Employers",
-    "description": "Annual leave, sick leave, maternity leave, public holidays, and the current minimum wage in Nigeria, explained for employers and HR teams."
+    "description": "Annual leave, sick leave, maternity leave, public holidays, and the current minimum wage in Nigeria, explained for employers and HR teams.",
+    "image": "/images/og/og-article-employee-leave-and-compensation-in-nigeria.jpg"
   },
   "tag": "HR Compliance",
   "title": "Employee Leave and Compensation in Nigeria: A Guide for Employers",
@@ -75,11 +76,26 @@
       "type": "list",
       "heading": "Leave Types at a Glance",
       "list": [
-        { "b": "Annual Leave —", "t": "6 working days after 12 months' service. Status: Statutory." },
-        { "b": "Sick Leave —", "t": "Up to 12 working days per year, with medical certification. Status: Statutory." },
-        { "b": "Maternity Leave —", "t": "~12 weeks, at least 50% of salary paid. Status: Statutory." },
-        { "b": "Paternity Leave —", "t": "14 days (public sector only). Status: Not statutory in private sector." },
-        { "b": "Study, Compassionate, Relief Leave —", "t": "None. Status: Policy-based only." }
+        {
+          "b": "Annual Leave —",
+          "t": "6 working days after 12 months' service. Status: Statutory."
+        },
+        {
+          "b": "Sick Leave —",
+          "t": "Up to 12 working days per year, with medical certification. Status: Statutory."
+        },
+        {
+          "b": "Maternity Leave —",
+          "t": "~12 weeks, at least 50% of salary paid. Status: Statutory."
+        },
+        {
+          "b": "Paternity Leave —",
+          "t": "14 days (public sector only). Status: Not statutory in private sector."
+        },
+        {
+          "b": "Study, Compassionate, Relief Leave —",
+          "t": "None. Status: Policy-based only."
+        }
       ]
     },
     {
@@ -116,27 +132,72 @@
   },
   "faq": {
     "entries": [
-      { "q": "How many days of annual leave are employees entitled to in Nigeria?", "a": "The Labour Act sets a statutory minimum of 6 working days of paid annual leave after 12 months of continuous service, or 12 working days for young workers under 16, including apprentices. In practice, most formal-sector employers in Nigeria offer considerably more, commonly 20 to 30 days a year, through the employment contract or company policy." },
-      { "q": "Is maternity leave paid in Nigeria?", "a": "Yes, though only partially under the statutory minimum. The Labour Act provides for a maternity leave period of around 12 weeks, split before and after childbirth, during which the employer must pay at least 50% of the employee's salary. Many employers pay full salary through the maternity leave period as an enhanced benefit." },
-      { "q": "How many sick leave days are employees entitled to in Nigeria?", "a": "Up to 12 working days of paid sick leave in a calendar year, provided the illness is certified by a registered medical practitioner. Sick pay is based on normal wages and does not include overtime or other allowances." },
-      { "q": "What is the current minimum wage in Nigeria?", "a": "The national minimum wage in Nigeria is 70,000 naira per month, set by the National Minimum Wage (Amendment) Act 2024. It applies to employers across the public and private sector, subject to limited exemptions, and is reviewed periodically." }
+      {
+        "q": "How many days of annual leave are employees entitled to in Nigeria?",
+        "a": "The Labour Act sets a statutory minimum of 6 working days of paid annual leave after 12 months of continuous service, or 12 working days for young workers under 16, including apprentices. In practice, most formal-sector employers in Nigeria offer considerably more, commonly 20 to 30 days a year, through the employment contract or company policy."
+      },
+      {
+        "q": "Is maternity leave paid in Nigeria?",
+        "a": "Yes, though only partially under the statutory minimum. The Labour Act provides for a maternity leave period of around 12 weeks, split before and after childbirth, during which the employer must pay at least 50% of the employee's salary. Many employers pay full salary through the maternity leave period as an enhanced benefit."
+      },
+      {
+        "q": "How many sick leave days are employees entitled to in Nigeria?",
+        "a": "Up to 12 working days of paid sick leave in a calendar year, provided the illness is certified by a registered medical practitioner. Sick pay is based on normal wages and does not include overtime or other allowances."
+      },
+      {
+        "q": "What is the current minimum wage in Nigeria?",
+        "a": "The national minimum wage in Nigeria is 70,000 naira per month, set by the National Minimum Wage (Amendment) Act 2024. It applies to employers across the public and private sector, subject to limited exemptions, and is reviewed periodically."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Bank Outsourcing", "href": "/services/bank-outsourcing/" }
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Bank Outsourcing",
+        "href": "/services/bank-outsourcing/"
+      }
     ],
     "insights": [
-      { "title": "Accountability in Business: How to Hold Your Staff Accountable", "href": "/articles/accountability-in-business-nigeria/" },
-      { "title": "What Does Staff Outsourcing Include in Nigeria?", "href": "/articles/what-does-staff-outsourcing-include-nigeria/" },
-      { "title": "The Hidden Cost of Managing Staff in Nigeria", "href": "/articles/hidden-cost-managing-staff-nigeria/" },
-      { "title": "The Cost of a Bad Hire in Nigeria", "href": "/articles/article-cost-of-bad-hire-nigeria/" },
-      { "title": "Building an Employee Handbook for a Nigerian SME", "href": "/articles/article-employee-handbook-nigerian-sme/" }
+      {
+        "title": "Accountability in Business: How to Hold Your Staff Accountable",
+        "href": "/articles/accountability-in-business-nigeria/"
+      },
+      {
+        "title": "What Does Staff Outsourcing Include in Nigeria?",
+        "href": "/articles/what-does-staff-outsourcing-include-nigeria/"
+      },
+      {
+        "title": "The Hidden Cost of Managing Staff in Nigeria",
+        "href": "/articles/hidden-cost-managing-staff-nigeria/"
+      },
+      {
+        "title": "The Cost of a Bad Hire in Nigeria",
+        "href": "/articles/article-cost-of-bad-hire-nigeria/"
+      },
+      {
+        "title": "Building an Employee Handbook for a Nigerian SME",
+        "href": "/articles/article-employee-handbook-nigerian-sme/"
+      }
     ]
   }
 }

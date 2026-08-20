@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Startup Structuring in Nigeria | Traction Outsourcing Limited",
-    "description": "Traction Outsourcing builds the governance, organograms, and operational foundations new and growing businesses in Nigeria need to scale with confidence."
+    "description": "Traction Outsourcing builds the governance, organograms, and operational foundations new and growing businesses in Nigeria need to scale with confidence.",
+    "image": "/images/og/og-startup-structuring.jpg"
   },
   "hero": {
     "eyebrow": "Areas Of Impact",
@@ -54,9 +55,18 @@
       "columns": 3,
       "style": "stat",
       "entries": [
-        { "value": "10+", "label": "Structuring Projects, Last 6 Months" },
-        { "value": "2", "label": "Sectors: Retail & Professional Services" },
-        { "value": "100%", "label": "Documented, Not Verbal" }
+        {
+          "value": "10+",
+          "label": "Structuring Projects, Last 6 Months"
+        },
+        {
+          "value": "2",
+          "label": "Sectors: Retail & Professional Services"
+        },
+        {
+          "value": "100%",
+          "label": "Documented, Not Verbal"
+        }
       ]
     },
     {
@@ -84,18 +94,54 @@
     {
       "type": "logos",
       "logos": [
-        "Gifts n Boxes",
-        "Afroreach Research",
-        "Beacon Trust",
-        "Bravies",
-        "Chairo Properties",
-        "Demipos Hotel",
-        "Fourtwoseven Engineering",
-        "Grown and Glow",
-        "La Luna Restaurant",
-        "Tifes Hub",
-        "Toolbox Ateliers",
-        "Super Rise and Shine"
+        {
+          "name": "Gifts n Boxes",
+          "image": "/images/Gifts-n-boxes.png"
+        },
+        {
+          "name": "Afroreach Research",
+          "image": "/images/afroreach-research.png"
+        },
+        {
+          "name": "Beacon Trust",
+          "image": "/images/beacon-trust.jpg"
+        },
+        {
+          "name": "Bravies",
+          "image": "/images/bravies.png"
+        },
+        {
+          "name": "Chairo Properties",
+          "image": "/images/chairo-properties.png"
+        },
+        {
+          "name": "Demipos Hotel",
+          "image": "/images/demipos-hotel.png"
+        },
+        {
+          "name": "Fourtwoseven Engineering",
+          "image": "/images/fourtwoseven-engineering.jpg"
+        },
+        {
+          "name": "Grown and Glow",
+          "image": "/images/grown-and-glow.png"
+        },
+        {
+          "name": "La Luna Restaurant",
+          "image": "/images/la-luna-restaurant.png"
+        },
+        {
+          "name": "Tifes Hub",
+          "image": "/images/tifes-hub.png"
+        },
+        {
+          "name": "Toolbox Ateliers",
+          "image": "/images/toolbox-ateliers.png"
+        },
+        {
+          "name": "Super Rise and Shine",
+          "image": "/images/super-rise-and-shine.png"
+        }
       ]
     },
     {
@@ -105,10 +151,30 @@
       "form_id": "leadForm",
       "button": "Submit",
       "fields": [
-        { "name": "leadName", "placeholder": "Full Name", "input_type": "text", "required": true },
-        { "name": "leadPhone", "placeholder": "Phone Number", "input_type": "tel", "required": true },
-        { "name": "leadCompany", "placeholder": "Company Name", "input_type": "text", "required": true },
-        { "name": "leadEmail", "placeholder": "Email Address", "input_type": "email", "required": true }
+        {
+          "name": "leadName",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true
+        },
+        {
+          "name": "leadPhone",
+          "placeholder": "Phone Number",
+          "input_type": "tel",
+          "required": true
+        },
+        {
+          "name": "leadCompany",
+          "placeholder": "Company Name",
+          "input_type": "text",
+          "required": true
+        },
+        {
+          "name": "leadEmail",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true
+        }
       ]
     },
     {

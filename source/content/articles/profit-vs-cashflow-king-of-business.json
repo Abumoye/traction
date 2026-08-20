@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Profit vs Cashflow: The King of Business | Traction Outsourcing",
-    "description": "Your business can be profitable and still collapse. Here is the difference between profit and cashflow, why every term matters, and why cashflow tells a richer story about your business than profit ever will."
+    "description": "Your business can be profitable and still collapse. Here is the difference between profit and cashflow, why every term matters, and why cashflow tells a richer story about your business than profit ever will.",
+    "image": "/images/og/og-article-profit-vs-cashflow-king-of-business.jpg"
   },
   "tag": "Business Advisory · Financial Management",
   "title": "Profit vs Cashflow: The King of Business",
@@ -28,12 +29,30 @@
       "type": "list",
       "heading": "The Terms Every Business Owner Must Understand",
       "list": [
-        { "b": "Revenue.", "t": "The total amount of money your business earns from selling its products or services before any expenses are deducted. Also called turnover or top line. Revenue tells you how much business you did, not how much you kept." },
-        { "b": "Cost of Goods Sold (COGS).", "t": "The direct costs of producing or delivering what you sell. For a product business, this is materials and manufacturing. For a service business, this is the direct labour and resources used to deliver the service." },
-        { "b": "Gross Profit.", "t": "Revenue minus Cost of Goods Sold. It tells you how efficiently you produce or deliver your offering. A high gross profit means your core offering is financially sound. A low one means delivery costs are eating your earnings before you even pay overheads." },
-        { "b": "Operating Expenses.", "t": "The costs of running the business beyond production: rent, salaries, marketing, utilities, subscriptions, and other overhead. These are incurred regardless of how much you sell." },
-        { "b": "Net Profit.", "t": "What remains after all expenses, including COGS, operating expenses, interest, and tax, are deducted from revenue. This is the bottom line. It is what most people mean when they say profit." },
-        { "b": "Cashflow.", "t": "The actual movement of money in and out of your business over a specific period. Not what you are owed. Not what you have invoiced. What has actually arrived in your account and what has actually left it." }
+        {
+          "b": "Revenue.",
+          "t": "The total amount of money your business earns from selling its products or services before any expenses are deducted. Also called turnover or top line. Revenue tells you how much business you did, not how much you kept."
+        },
+        {
+          "b": "Cost of Goods Sold (COGS).",
+          "t": "The direct costs of producing or delivering what you sell. For a product business, this is materials and manufacturing. For a service business, this is the direct labour and resources used to deliver the service."
+        },
+        {
+          "b": "Gross Profit.",
+          "t": "Revenue minus Cost of Goods Sold. It tells you how efficiently you produce or deliver your offering. A high gross profit means your core offering is financially sound. A low one means delivery costs are eating your earnings before you even pay overheads."
+        },
+        {
+          "b": "Operating Expenses.",
+          "t": "The costs of running the business beyond production: rent, salaries, marketing, utilities, subscriptions, and other overhead. These are incurred regardless of how much you sell."
+        },
+        {
+          "b": "Net Profit.",
+          "t": "What remains after all expenses, including COGS, operating expenses, interest, and tax, are deducted from revenue. This is the bottom line. It is what most people mean when they say profit."
+        },
+        {
+          "b": "Cashflow.",
+          "t": "The actual movement of money in and out of your business over a specific period. Not what you are owed. Not what you have invoiced. What has actually arrived in your account and what has actually left it."
+        }
       ]
     },
     {
@@ -58,22 +77,42 @@
       "type": "list",
       "heading": "What Profit Tells You",
       "list": [
-        { "t": "Whether you made more than you spent" },
-        { "t": "The efficiency of your cost structure" },
-        { "t": "Your gross and net margins" },
-        { "t": "How the accounting period closed" },
-        { "t": "What tax liability may be due" }
+        {
+          "t": "Whether you made more than you spent"
+        },
+        {
+          "t": "The efficiency of your cost structure"
+        },
+        {
+          "t": "Your gross and net margins"
+        },
+        {
+          "t": "How the accounting period closed"
+        },
+        {
+          "t": "What tax liability may be due"
+        }
       ]
     },
     {
       "type": "list",
       "heading": "What Cashflow Tells You",
       "list": [
-        { "t": "Whether you can pay your bills today" },
-        { "t": "When money actually arrives and leaves" },
-        { "t": "How customers actually behave" },
-        { "t": "Where your business is liquid or exposed" },
-        { "t": "Whether growth is sustainable right now" }
+        {
+          "t": "Whether you can pay your bills today"
+        },
+        {
+          "t": "When money actually arrives and leaves"
+        },
+        {
+          "t": "How customers actually behave"
+        },
+        {
+          "t": "Where your business is liquid or exposed"
+        },
+        {
+          "t": "Whether growth is sustainable right now"
+        }
       ]
     },
     {
@@ -99,14 +138,38 @@
       "type": "list",
       "heading": "What Your Cashflow Data Is Telling You (If You Know How to Read It)",
       "list": [
-        { "b": "Who your customers really are.", "t": "When do they pay? Immediately or in 60 days? Do corporates pay slower than individuals? Your cashflow patterns reveal your actual customer profile." },
-        { "b": "What market segment they belong to.", "t": "High-frequency small payments signal a mass market. Irregular large payments signal enterprise clients. Each requires a different business model." },
-        { "b": "Why they use your product or service.", "t": "Repeat patterns at specific intervals reveal whether customers use you for routine needs or one-off problems. Each requires a different retention strategy." },
-        { "b": "What they use it for.", "t": "Which services generate the fastest payment? Which generate delays or disputes? The answer tells you which offerings have the clearest value to customers." },
-        { "b": "When demand peaks and dips.", "t": "Seasonal cashflow patterns reveal your real business cycle, which may differ entirely from your assumptions. This shapes staffing, inventory, and financing decisions." },
-        { "b": "Where your most valuable customers are.", "t": "Cashflow by branch or channel reveals which markets are genuinely profitable versus which are quietly consuming resources." },
-        { "b": "Frequency and loyalty signals.", "t": "At scale, cashflow data reveals how often customers return, how that changes over time, and where your highest-value segment sits in the customer lifecycle." },
-        { "b": "Where your business is financially exposed.", "t": "Consistent gaps between when you pay and when you receive reveal structural liquidity risks that profit figures never surface." }
+        {
+          "b": "Who your customers really are.",
+          "t": "When do they pay? Immediately or in 60 days? Do corporates pay slower than individuals? Your cashflow patterns reveal your actual customer profile."
+        },
+        {
+          "b": "What market segment they belong to.",
+          "t": "High-frequency small payments signal a mass market. Irregular large payments signal enterprise clients. Each requires a different business model."
+        },
+        {
+          "b": "Why they use your product or service.",
+          "t": "Repeat patterns at specific intervals reveal whether customers use you for routine needs or one-off problems. Each requires a different retention strategy."
+        },
+        {
+          "b": "What they use it for.",
+          "t": "Which services generate the fastest payment? Which generate delays or disputes? The answer tells you which offerings have the clearest value to customers."
+        },
+        {
+          "b": "When demand peaks and dips.",
+          "t": "Seasonal cashflow patterns reveal your real business cycle, which may differ entirely from your assumptions. This shapes staffing, inventory, and financing decisions."
+        },
+        {
+          "b": "Where your most valuable customers are.",
+          "t": "Cashflow by branch or channel reveals which markets are genuinely profitable versus which are quietly consuming resources."
+        },
+        {
+          "b": "Frequency and loyalty signals.",
+          "t": "At scale, cashflow data reveals how often customers return, how that changes over time, and where your highest-value segment sits in the customer lifecycle."
+        },
+        {
+          "b": "Where your business is financially exposed.",
+          "t": "Consistent gaps between when you pay and when you receive reveal structural liquidity risks that profit figures never surface."
+        }
       ]
     },
     {
@@ -143,25 +206,64 @@
   },
   "faq": {
     "entries": [
-      { "q": "What is the difference between profit and cashflow?", "a": "Profit is the amount left after you subtract your expenses from your revenue. It is an accounting figure that tells you whether your business made more than it spent in a given period. Cashflow is the actual movement of money in and out of your business: when it arrived, when it left, and how much is available at any point. A business can be profitable on paper and still run out of cash if customers pay late, expenses fall due immediately, or growth is funded through cash reserves." },
-      { "q": "Why is cashflow called the king of business?", "a": "Cashflow is called the king of business because it determines whether a business can actually operate, regardless of what the profit figures say. A business without cash cannot pay salaries, buy stock, or cover rent, even if its accounts show a profit. Beyond survival, cashflow data reveals customer behaviour, payment patterns, seasonality, and market signals that enable data-backed decisions about pricing, hiring, and growth." },
-      { "q": "What is the difference between gross profit and net profit?", "a": "Gross profit is what remains after you subtract the direct cost of producing or delivering your product or service from your revenue. Net profit is what remains after all expenses, including operating costs, salaries, rent, tax, and overheads, are deducted from revenue. Gross profit tells you how efficiently you deliver your product. Net profit tells you how much the business actually keeps." }
+      {
+        "q": "What is the difference between profit and cashflow?",
+        "a": "Profit is the amount left after you subtract your expenses from your revenue. It is an accounting figure that tells you whether your business made more than it spent in a given period. Cashflow is the actual movement of money in and out of your business: when it arrived, when it left, and how much is available at any point. A business can be profitable on paper and still run out of cash if customers pay late, expenses fall due immediately, or growth is funded through cash reserves."
+      },
+      {
+        "q": "Why is cashflow called the king of business?",
+        "a": "Cashflow is called the king of business because it determines whether a business can actually operate, regardless of what the profit figures say. A business without cash cannot pay salaries, buy stock, or cover rent, even if its accounts show a profit. Beyond survival, cashflow data reveals customer behaviour, payment patterns, seasonality, and market signals that enable data-backed decisions about pricing, hiring, and growth."
+      },
+      {
+        "q": "What is the difference between gross profit and net profit?",
+        "a": "Gross profit is what remains after you subtract the direct cost of producing or delivering your product or service from your revenue. Net profit is what remains after all expenses, including operating costs, salaries, rent, tax, and overheads, are deducted from revenue. Gross profit tells you how efficiently you deliver your product. Net profit tells you how much the business actually keeps."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" }
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      }
     ],
     "insights": [
-      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
-      { "title": "What Is Structure in Business?", "href": "/articles/what-is-structure-in-business/" },
-      { "title": "What Is Business Restructuring?", "href": "/articles/what-is-business-restructuring-nigeria/" },
-      { "title": "Accountability in Business Nigeria", "href": "/articles/accountability-in-business-nigeria/" },
-      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" }
+      {
+        "title": "What Is Traction in Business?",
+        "href": "/articles/what-is-traction-in-business/"
+      },
+      {
+        "title": "What Is Structure in Business?",
+        "href": "/articles/what-is-structure-in-business/"
+      },
+      {
+        "title": "What Is Business Restructuring?",
+        "href": "/articles/what-is-business-restructuring-nigeria/"
+      },
+      {
+        "title": "Accountability in Business Nigeria",
+        "href": "/articles/accountability-in-business-nigeria/"
+      },
+      {
+        "title": "Why Nigerian Startups Fail",
+        "href": "/articles/article-why-nigerian-startups-fail/"
+      }
     ]
   }
 }

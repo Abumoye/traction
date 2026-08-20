@@ -1,8 +1,13 @@
 {
-  "_route": { "template": "flex.html", "output": "events/index.html", "url": "/events/" },
+  "_route": {
+    "template": "flex.html",
+    "output": "events/index.html",
+    "url": "/events/"
+  },
   "meta": {
     "title": "T-ICR 2026 Kigali Rwanda | Traction Outsourcing",
-    "description": "Join CEOs and executives in Kigali, Rwanda (Nov 22-30, 2026) for the Traction International Corporate Retreat. Flights, mentorship and Pan-African matchmaking."
+    "description": "Join CEOs and executives in Kigali, Rwanda (Nov 22-30, 2026) for the Traction Outsourcing International Corporate Retreat. Flights, mentorship and Pan-African matchmaking.",
+    "image": "/images/og/og-events.jpg"
   },
   "hero": {
     "eyebrow": "Register Now",
@@ -23,12 +28,36 @@
       "columns": 3,
       "style": "profile",
       "entries": [
-        { "image": "/images/stephen-akintayo.jpg", "title": "Dr. Stephen Akintayo", "role": "Chairman, SACI Holdings & GTEXT Holdings" },
-        { "image": "/images/oluwatosin-olaseinde.jpg", "title": "Oluwatosin Olaseinde", "role": "Founder, MonieAfrica & CEO, Ladda" },
-        { "image": "/images/eizu-uwaoma.jpg", "title": "Eizu Uwaoma", "role": "Founder & CEO, Hexavia Group" },
-        { "image": "/images/adeyinka-igbinoba.jpg", "title": "Adeyinka Igbinoba", "role": "CEO, AIG Media Pro" },
-        { "image": "/images/adelewa-williams.jpg", "title": "Williams Adelewa ESQ", "role": "Founder, Inspire Law Africa" },
-        { "image": "/images/prince-elijah-abumoye.jpg", "title": "Prince Elijah Abumoye", "role": "CEO, Traction Outsourcing" }
+        {
+          "image": "/images/stephen-akintayo.jpg",
+          "title": "Dr. Stephen Akintayo",
+          "role": "Chairman, SACI Holdings & GTEXT Holdings"
+        },
+        {
+          "image": "/images/oluwatosin-olaseinde.jpg",
+          "title": "Oluwatosin Olaseinde",
+          "role": "Founder, MonieAfrica & CEO, Ladda"
+        },
+        {
+          "image": "/images/eizu-uwaoma.jpg",
+          "title": "Eizu Uwaoma",
+          "role": "Founder & CEO, Hexavia Group"
+        },
+        {
+          "image": "/images/adeyinka-igbinoba.jpg",
+          "title": "Adeyinka Igbinoba",
+          "role": "CEO, AIG Media Pro"
+        },
+        {
+          "image": "/images/adelewa-williams.jpg",
+          "title": "Williams Adelewa ESQ",
+          "role": "Founder, Inspire Law Africa"
+        },
+        {
+          "image": "/images/prince-elijah-abumoye.jpg",
+          "title": "Prince Elijah Abumoye",
+          "role": "CEO, Traction Outsourcing"
+        }
       ]
     },
     {
@@ -45,15 +74,51 @@
       "columns": 3,
       "style": "icon-list",
       "entries": [
-        { "icon": "fa-plane", "title": "Complete Flight Logistics", "text": "Return tickets included (Abuja - Kigali / Lagos - Kigali and back)." },
-        { "icon": "fa-car", "title": "Airport Pickup", "text": "Ground transfer to and from Kigali International Airport." },
-        { "icon": "fa-utensils", "title": "Feeding", "text": "Meals covered for the full duration of the retreat." },
-        { "icon": "fa-bed", "title": "Accommodation", "text": "Full stay at our luxury accommodation partner in Kigali." },
-        { "icon": "fa-fire", "title": "Elite Business Session", "text": "Intensive fireside chat and vision-building sessions with industry giants." },
-        { "icon": "fa-map-location-dot", "title": "Curated Kigali Tour", "text": "Guided tour to historical and tourism sites across Kigali, plus all local Kigali logistics." },
-        { "icon": "fa-champagne-glasses", "title": "Social Integration", "text": "1 free exclusive social networking night in the vibrant heart of Kigali." },
-        { "icon": "fa-people-group", "title": "Diaspora Access", "text": "A dedicated 1-day general meeting with members of the Nigerian community living in Kigali." },
-        { "icon": "fa-handshake", "title": "Business Matchmaking", "text": "Guided matchmaking sessions to explore direct expansion or investment partnerships." }
+        {
+          "icon": "fa-plane",
+          "title": "Complete Flight Logistics",
+          "text": "Return tickets included (Abuja - Kigali / Lagos - Kigali and back)."
+        },
+        {
+          "icon": "fa-car",
+          "title": "Airport Pickup",
+          "text": "Ground transfer to and from Kigali International Airport."
+        },
+        {
+          "icon": "fa-utensils",
+          "title": "Feeding",
+          "text": "Meals covered for the full duration of the retreat."
+        },
+        {
+          "icon": "fa-bed",
+          "title": "Accommodation",
+          "text": "Full stay at our luxury accommodation partner in Kigali."
+        },
+        {
+          "icon": "fa-fire",
+          "title": "Elite Business Session",
+          "text": "Intensive fireside chat and vision-building sessions with industry giants."
+        },
+        {
+          "icon": "fa-map-location-dot",
+          "title": "Curated Kigali Tour",
+          "text": "Guided tour to historical and tourism sites across Kigali, plus all local Kigali logistics."
+        },
+        {
+          "icon": "fa-champagne-glasses",
+          "title": "Social Integration",
+          "text": "1 free exclusive social networking night in the vibrant heart of Kigali."
+        },
+        {
+          "icon": "fa-people-group",
+          "title": "Diaspora Access",
+          "text": "A dedicated 1-day general meeting with members of the Nigerian community living in Kigali."
+        },
+        {
+          "icon": "fa-handshake",
+          "title": "Business Matchmaking",
+          "text": "Guided matchmaking sessions to explore direct expansion or investment partnerships."
+        }
       ]
     },
     {
@@ -63,8 +128,14 @@
       "columns": 2,
       "style": "stat",
       "entries": [
-        { "value": "₦3,550,000", "label": "per person (Naira)" },
-        { "value": "$2,600", "label": "per person (US Dollar)" }
+        {
+          "value": "₦3,550,000",
+          "label": "per person (Naira)"
+        },
+        {
+          "value": "$2,600",
+          "label": "per person (US Dollar)"
+        }
       ]
     },
     {
@@ -97,10 +168,26 @@
       "columns": 2,
       "style": "icon-list",
       "entries": [
-        { "icon": "fa-check", "title": "", "text": "Direct access to Nigerian CEOs and senior executives exploring Rwanda as an East African base" },
-        { "icon": "fa-check", "title": "", "text": "Business matchmaking and structured networking sessions" },
-        { "icon": "fa-check", "title": "", "text": "The exclusive social networking night and key retreat sessions" },
-        { "icon": "fa-check", "title": "", "text": "No flight logistics required, the local tier covers in-Kigali participation only" }
+        {
+          "icon": "fa-check",
+          "title": "",
+          "text": "Direct access to Nigerian CEOs and senior executives exploring Rwanda as an East African base"
+        },
+        {
+          "icon": "fa-check",
+          "title": "",
+          "text": "Business matchmaking and structured networking sessions"
+        },
+        {
+          "icon": "fa-check",
+          "title": "",
+          "text": "The exclusive social networking night and key retreat sessions"
+        },
+        {
+          "icon": "fa-check",
+          "title": "",
+          "text": "No flight logistics required, the local tier covers in-Kigali participation only"
+        }
       ]
     },
     {
@@ -154,12 +241,42 @@
       "columns": 3,
       "style": "profile",
       "entries": [
-        { "image": "/images/stephen-akintayo.jpg", "title": "Dr. Stephen Akintayo", "role": "Billionaire Investor & Business Coach", "text": "Africa's foremost business coach and real estate investor. Founder of the Gtext Group, Dr. Akintayo is known for empowering hundreds of thousands of entrepreneurs across Nigeria and the diaspora." },
-        { "image": "/images/eizu-uwaoma.jpg", "title": "Eizu Uwaoma", "role": "Strategy Consultant & Business Growth Expert", "text": "Founder of Hexavia Group and author of multiple business titles. Eizu Uwaoma is one of Nigeria's leading business strategists and executive educators on organizational structure and growth." },
-        { "image": "/images/adeyinka-igbinoba.jpg", "title": "Adeyinka Igbinoba", "role": "Leadership Coach, Lecturer, Human Capital Expert & Real Estate Developer", "text": "A widely respected Nigerian leadership coach, speaker, HR consultant, and Real Estate Developer recognized for her expertise in building affordable family homes in Nigeria, people management, talent development, and building high-performance workplace cultures." },
-        { "image": "/images/oluwatosin-olaseinde.jpg", "title": "Oluwatosin Olaseinde", "role": "Founder & CEO, Money Africa & Ladda", "text": "A chartered accountant, entrepreneur, and Founder and CEO of Money Africa and Ladda. Oluwatosin is a Washington Mandela Fellow, 2020 LinkedIn Top Voice in Finance and Economy, and one of the Top 50 African Business Heroes." },
-        { "image": "/images/adelewa-williams.jpg", "title": "William Adelewa ESQ", "role": "Lawyer, Business Consultant & Partner", "text": "A Nigerian lawyer with over a decade of experience in corporate law, litigation, tech, and real estate. He is known for strategy, innovation, and his commitment to developing young African business leaders and building legacy businesses across African cities." },
-        { "image": "/images/prince-elijah-abumoye.jpg", "title": "Prince Elijah Abumoye", "role": "Founder & CEO, Traction Outsourcing Limited, Host", "text": "A certified HR and business consulting expert with almost a decade of experience in Nigeria, Dubai, and Rwanda, working in multiple industries including management consulting, real estate, FMCG, Logistics, e.t.c. Founder of Traction Outsourcing Limited and host of the T-ICR 2026." }
+        {
+          "image": "/images/stephen-akintayo.jpg",
+          "title": "Dr. Stephen Akintayo",
+          "role": "Billionaire Investor & Business Coach",
+          "text": "Africa's foremost business coach and real estate investor. Founder of the Gtext Group, Dr. Akintayo is known for empowering hundreds of thousands of entrepreneurs across Nigeria and the diaspora."
+        },
+        {
+          "image": "/images/eizu-uwaoma.jpg",
+          "title": "Eizu Uwaoma",
+          "role": "Strategy Consultant & Business Growth Expert",
+          "text": "Founder of Hexavia Group and author of multiple business titles. Eizu Uwaoma is one of Nigeria's leading business strategists and executive educators on organizational structure and growth."
+        },
+        {
+          "image": "/images/adeyinka-igbinoba.jpg",
+          "title": "Adeyinka Igbinoba",
+          "role": "Leadership Coach, Lecturer, Human Capital Expert & Real Estate Developer",
+          "text": "A widely respected Nigerian leadership coach, speaker, HR consultant, and Real Estate Developer recognized for her expertise in building affordable family homes in Nigeria, people management, talent development, and building high-performance workplace cultures."
+        },
+        {
+          "image": "/images/oluwatosin-olaseinde.jpg",
+          "title": "Oluwatosin Olaseinde",
+          "role": "Founder & CEO, Money Africa & Ladda",
+          "text": "A chartered accountant, entrepreneur, and Founder and CEO of Money Africa and Ladda. Oluwatosin is a Washington Mandela Fellow, 2020 LinkedIn Top Voice in Finance and Economy, and one of the Top 50 African Business Heroes."
+        },
+        {
+          "image": "/images/adelewa-williams.jpg",
+          "title": "William Adelewa ESQ",
+          "role": "Lawyer, Business Consultant & Partner",
+          "text": "A Nigerian lawyer with over a decade of experience in corporate law, litigation, tech, and real estate. He is known for strategy, innovation, and his commitment to developing young African business leaders and building legacy businesses across African cities."
+        },
+        {
+          "image": "/images/prince-elijah-abumoye.jpg",
+          "title": "Prince Elijah Abumoye",
+          "role": "Founder & CEO, Traction Outsourcing Limited, Host",
+          "text": "A certified HR and business consulting expert with almost a decade of experience in Nigeria, Dubai, and Rwanda, working in multiple industries including management consulting, real estate, FMCG, Logistics, e.t.c. Founder of Traction Outsourcing Limited and host of the T-ICR 2026."
+        }
       ]
     },
     {
@@ -175,9 +292,21 @@
       "columns": 3,
       "style": "case-study",
       "entries": [
-        { "tag": "Silver", "title": "₦1,000,000 / $740", "text": "Logo on event website & materials. Mention in mails & newsletters. Social media shout-outs. Press release & event signage mention. Dedicated banner at event." },
-        { "tag": "Gold", "title": "₦2,500,000 / $1,850", "text": "Everything in Silver. Company name in event title. Premium logo on all materials & backdrops. Dedicated booth at event. Branded escort uniforms." },
-        { "tag": "Platinum", "title": "₦7,500,000 / $5,550", "text": "Everything in Gold. Brand used as full event backdrop. 30-minute marketing speech at retreat. Branded shirts worn on city tour day." }
+        {
+          "tag": "Silver",
+          "title": "₦1,000,000 / $740",
+          "text": "Logo on event website & materials. Mention in mails & newsletters. Social media shout-outs. Press release & event signage mention. Dedicated banner at event."
+        },
+        {
+          "tag": "Gold",
+          "title": "₦2,500,000 / $1,850",
+          "text": "Everything in Silver. Company name in event title. Premium logo on all materials & backdrops. Dedicated booth at event. Branded escort uniforms."
+        },
+        {
+          "tag": "Platinum",
+          "title": "₦7,500,000 / $5,550",
+          "text": "Everything in Gold. Brand used as full event backdrop. 30-minute marketing speech at retreat. Branded shirts worn on city tour day."
+        }
       ]
     },
     {
@@ -192,10 +321,22 @@
       "type": "faq",
       "heading": "Common Questions",
       "entries": [
-        { "q": "What is the T-ICR 2026?", "a": "The T-ICR 2026, Traction Outsourcing International Corporate Retreat 2026, is an executive retreat and business conference taking place in Kigali, Rwanda from November 22 to 30, 2026. It brings together Nigerian and African business leaders for structured programming, speaker sessions, business matchmaking, and an immersive experience in one of Africa's most dynamic business cities." },
-        { "q": "Who should attend the T-ICR 2026?", "a": "The T-ICR 2026 is designed for CEOs, founders, senior executives, and business owners who want to combine high-quality business learning and networking with an international experience. Seats are allocated on a first-come basis and close once the event is full." },
-        { "q": "What does the T-ICR 2026 registration fee cover?", "a": "The registration fee of NGN 3,550,000 or USD 2,600 covers accommodation for the full retreat period, return flights (Abuja/Lagos to Kigali and back), programme fees, speaker sessions, business matchmaking, group activities, feeding, and ground logistics in Kigali. Full details are available on request." },
-        { "q": "How do I register for the T-ICR 2026?", "a": "Registration closes November 1, 2026. To secure your place, reach out via WhatsApp on 0704 708 2697 or email partner@tolnigeria.com. Seats are allocated on a first-come basis and close once the event is full." }
+        {
+          "q": "What is the T-ICR 2026?",
+          "a": "The T-ICR 2026, Traction Outsourcing International Corporate Retreat 2026, is an executive retreat and business conference taking place in Kigali, Rwanda from November 22 to 30, 2026. It brings together Nigerian and African business leaders for structured programming, speaker sessions, business matchmaking, and an immersive experience in one of Africa's most dynamic business cities."
+        },
+        {
+          "q": "Who should attend the T-ICR 2026?",
+          "a": "The T-ICR 2026 is designed for CEOs, founders, senior executives, and business owners who want to combine high-quality business learning and networking with an international experience. Seats are allocated on a first-come basis and close once the event is full."
+        },
+        {
+          "q": "What does the T-ICR 2026 registration fee cover?",
+          "a": "The registration fee of NGN 3,550,000 or USD 2,600 covers accommodation for the full retreat period, return flights (Abuja/Lagos to Kigali and back), programme fees, speaker sessions, business matchmaking, group activities, feeding, and ground logistics in Kigali. Full details are available on request."
+        },
+        {
+          "q": "How do I register for the T-ICR 2026?",
+          "a": "Registration closes November 1, 2026. To secure your place, reach out via WhatsApp on 0704 708 2697 or email partner@tolnigeria.com. Seats are allocated on a first-come basis and close once the event is full."
+        }
       ]
     }
   ]

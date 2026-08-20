@@ -1,8 +1,13 @@
 {
-  "_route": { "template": "flex.html", "output": "partnerships/hallmark-hmo/index.html", "url": "/partnerships/hallmark-hmo/" },
+  "_route": {
+    "template": "flex.html",
+    "output": "partnerships/hallmark-hmo/index.html",
+    "url": "/partnerships/hallmark-hmo/"
+  },
   "meta": {
     "title": "Hallmark HMO Partnership | Traction Outsourcing Limited",
-    "description": "Traction Outsourcing partners with Hallmark HMO, giving businesses and individuals affordable HMO plans across 10,000+ hospitals in Nigeria."
+    "description": "Traction Outsourcing partners with Hallmark HMO, giving businesses and individuals affordable HMO plans across 10,000+ hospitals in Nigeria.",
+    "image": "/images/og/og-article-hallmark-hmo.jpg"
   },
   "hero": {
     "eyebrow": "HMO",

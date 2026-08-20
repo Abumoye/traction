@@ -6,7 +6,8 @@
   },
   "meta": {
     "title": "Company Registration in Nigeria for Foreigners: The ₦100 Million Requirement | Traction Outsourcing",
-    "description": "Foreign investors registering a company in Nigeria face a real-world ₦100 million share capital threshold, not the ₦10 million CAC minimum. Here is what that means for your permits, banking, and operations."
+    "description": "Foreign investors registering a company in Nigeria face a real-world ₦100 million share capital threshold, not the ₦10 million CAC minimum. Here is what that means for your permits, banking, and operations.",
+    "image": "/images/og/og-article-company-registration-nigeria-foreigners.jpg"
   },
   "tag": "Business Advisory · Startup Structuring",
   "title": "Company Registration in Nigeria for Foreigners: The ₦100 Million Share Capital Requirement",
@@ -76,14 +77,38 @@
     {
       "type": "list",
       "list": [
-        { "b": "Confirm the Business Activity.", "t": "Before any documents are filed, the proposed business activity must be reviewed against Nigeria's sector restrictions and the negative list of prohibited investments. Some sectors require regulatory approval before operations can commence, regardless of corporate structure." },
-        { "b": "Determine the Correct Share Capital.", "t": "This decision must account for what the company needs downstream. Share capital affects CAC filing costs, stamp duties, ownership structure, business permit eligibility, expatriate quota applications, banking credibility, and future investment documentation. For most operational foreign companies, ₦100 million is the figure that matters." },
-        { "b": "Incorporate at the CAC.", "t": "The company is registered with the Corporate Affairs Commission. This produces the certificate of incorporation, memorandum and articles of association, and the company's registration particulars. The CAC process can often be managed without the investor being physically present in Nigeria." },
-        { "b": "Register with the Nigerian Investment Promotion Commission.", "t": "The NIPC Act requires enterprises with foreign participation to apply for business registration with the Commission. NIPC registration places the company within Nigeria's formal foreign investment framework and is relevant to investor protections, profit repatriation, capital importation, and regulatory engagement." },
-        { "b": "Obtain a Business Permit.", "t": "This is the approval that authorises a foreign-owned or foreign-participating company to carry on business in Nigeria. It is issued by the Federal Ministry of Interior. This is where the ₦100 million paid-up capital requirement becomes directly relevant. Without it, a foreign-owned company's operations are on uncertain legal ground regardless of how clean the CAC filing is." },
-        { "b": "Complete Tax Registration and Banking.", "t": "Tax registration with the Federal Inland Revenue Service is an early requirement. Bank account opening for a foreign-owned company is a substantive process requiring incorporation documents, board resolutions, shareholder and director information, tax documentation, and often additional compliance materials depending on the bank." },
-        { "b": "Apply for Expatriate Quota if Foreign Staff Will Work in Nigeria.", "t": "Foreign ownership of a Nigerian company does not give the foreign owner the right to work in Nigeria. Where expatriate staff, founders, directors, or technical personnel will physically work in the country, expatriate quota approval must be obtained from the Federal Ministry of Interior before those individuals can be properly employed and present." },
-        { "b": "Document Capital Importation Before Transferring Funds.", "t": "Foreign capital brought into Nigeria must be imported through authorised banking channels so that a Certificate of Capital Importation can be obtained. This certificate is what permits future repatriation of dividends, profits, and capital. Funds transferred without proper importation documentation create a problem that is slow and expensive to correct." }
+        {
+          "b": "Confirm the Business Activity.",
+          "t": "Before any documents are filed, the proposed business activity must be reviewed against Nigeria's sector restrictions and the negative list of prohibited investments. Some sectors require regulatory approval before operations can commence, regardless of corporate structure."
+        },
+        {
+          "b": "Determine the Correct Share Capital.",
+          "t": "This decision must account for what the company needs downstream. Share capital affects CAC filing costs, stamp duties, ownership structure, business permit eligibility, expatriate quota applications, banking credibility, and future investment documentation. For most operational foreign companies, ₦100 million is the figure that matters."
+        },
+        {
+          "b": "Incorporate at the CAC.",
+          "t": "The company is registered with the Corporate Affairs Commission. This produces the certificate of incorporation, memorandum and articles of association, and the company's registration particulars. The CAC process can often be managed without the investor being physically present in Nigeria."
+        },
+        {
+          "b": "Register with the Nigerian Investment Promotion Commission.",
+          "t": "The NIPC Act requires enterprises with foreign participation to apply for business registration with the Commission. NIPC registration places the company within Nigeria's formal foreign investment framework and is relevant to investor protections, profit repatriation, capital importation, and regulatory engagement."
+        },
+        {
+          "b": "Obtain a Business Permit.",
+          "t": "This is the approval that authorises a foreign-owned or foreign-participating company to carry on business in Nigeria. It is issued by the Federal Ministry of Interior. This is where the ₦100 million paid-up capital requirement becomes directly relevant. Without it, a foreign-owned company's operations are on uncertain legal ground regardless of how clean the CAC filing is."
+        },
+        {
+          "b": "Complete Tax Registration and Banking.",
+          "t": "Tax registration with the Federal Inland Revenue Service is an early requirement. Bank account opening for a foreign-owned company is a substantive process requiring incorporation documents, board resolutions, shareholder and director information, tax documentation, and often additional compliance materials depending on the bank."
+        },
+        {
+          "b": "Apply for Expatriate Quota if Foreign Staff Will Work in Nigeria.",
+          "t": "Foreign ownership of a Nigerian company does not give the foreign owner the right to work in Nigeria. Where expatriate staff, founders, directors, or technical personnel will physically work in the country, expatriate quota approval must be obtained from the Federal Ministry of Interior before those individuals can be properly employed and present."
+        },
+        {
+          "b": "Document Capital Importation Before Transferring Funds.",
+          "t": "Foreign capital brought into Nigeria must be imported through authorised banking channels so that a Certificate of Capital Importation can be obtained. This certificate is what permits future repatriation of dividends, profits, and capital. Funds transferred without proper importation documentation create a problem that is slow and expensive to correct."
+        }
       ]
     },
     {
@@ -129,27 +154,72 @@
   },
   "faq": {
     "entries": [
-      { "q": "Can a foreigner own 100 percent of a company in Nigeria?", "a": "Yes. Nigerian law permits foreigners to own up to 100 percent equity in a Nigerian company, except in prohibited sectors such as arms, narcotics, and a small list of restricted activities. A Nigerian partner is not legally required for most business types, though the practical case for local coordination and support is different from the legal requirement." },
-      { "q": "What is the minimum share capital for a foreign-owned company in Nigeria?", "a": "The Corporate Affairs Commission sets a minimum share capital of ₦10 million for companies with foreign participation. However, the Federal Ministry of Interior requires a minimum paid-up capital of ₦100 million before it will grant a business permit to a wholly foreign-owned or foreign-participating company. In practice, ₦100 million is the threshold that determines whether the company can lawfully operate, employ expatriates, open accounts properly, and engage with Nigerian banks and regulators." },
-      { "q": "What is a business permit and does my foreign company need one?", "a": "A business permit is the government authorisation that allows a foreign-owned or foreign-participating company to carry on business in Nigeria. It is issued by the Federal Ministry of Interior and is entirely separate from CAC incorporation and NIPC registration. Without a business permit, a foreign-owned company may be incorporated but is still unable to lawfully operate, hire expatriates, or satisfy the requirements of most Nigerian banks, regulators, and institutional partners." },
-      { "q": "Does CAC registration mean a foreign company is ready to operate in Nigeria?", "a": "No. CAC registration gives the company legal existence. For a foreign-owned company, that is only the first step. Full operational readiness also requires NIPC registration, tax registration, a business permit, banking documentation, and in most cases sector-specific approvals and expatriate quota applications where foreign personnel will work in Nigeria." }
+      {
+        "q": "Can a foreigner own 100 percent of a company in Nigeria?",
+        "a": "Yes. Nigerian law permits foreigners to own up to 100 percent equity in a Nigerian company, except in prohibited sectors such as arms, narcotics, and a small list of restricted activities. A Nigerian partner is not legally required for most business types, though the practical case for local coordination and support is different from the legal requirement."
+      },
+      {
+        "q": "What is the minimum share capital for a foreign-owned company in Nigeria?",
+        "a": "The Corporate Affairs Commission sets a minimum share capital of ₦10 million for companies with foreign participation. However, the Federal Ministry of Interior requires a minimum paid-up capital of ₦100 million before it will grant a business permit to a wholly foreign-owned or foreign-participating company. In practice, ₦100 million is the threshold that determines whether the company can lawfully operate, employ expatriates, open accounts properly, and engage with Nigerian banks and regulators."
+      },
+      {
+        "q": "What is a business permit and does my foreign company need one?",
+        "a": "A business permit is the government authorisation that allows a foreign-owned or foreign-participating company to carry on business in Nigeria. It is issued by the Federal Ministry of Interior and is entirely separate from CAC incorporation and NIPC registration. Without a business permit, a foreign-owned company may be incorporated but is still unable to lawfully operate, hire expatriates, or satisfy the requirements of most Nigerian banks, regulators, and institutional partners."
+      },
+      {
+        "q": "Does CAC registration mean a foreign company is ready to operate in Nigeria?",
+        "a": "No. CAC registration gives the company legal existence. For a foreign-owned company, that is only the first step. Full operational readiness also requires NIPC registration, tax registration, a business permit, banking documentation, and in most cases sector-specific approvals and expatriate quota applications where foreign personnel will work in Nigeria."
+      }
     ]
   },
   "sidebar": {
     "services": [
-      { "title": "Startup Structuring", "href": "/services/startup-structuring/" },
-      { "title": "Business Advisory", "href": "/services/business-advisory/" },
-      { "title": "Corporate Restructuring", "href": "/services/corporate-restructuring/" },
-      { "title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/" },
-      { "title": "Corporate Trainings", "href": "/services/employee-training/" },
-      { "title": "Events & Retreats", "href": "/services/corporate-retreats/" }
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Events & Retreats",
+        "href": "/services/corporate-retreats/"
+      }
     ],
     "insights": [
-      { "title": "How to Register a Company in Nigeria", "href": "/articles/how-to-register-a-company-in-nigeria/" },
-      { "title": "Hire Staff in Nigeria From Abroad", "href": "/articles/hire-staff-nigeria-from-abroad/" },
-      { "title": "What Is Traction in Business?", "href": "/articles/what-is-traction-in-business/" },
-      { "title": "What Is Business Restructuring in Nigeria?", "href": "/articles/what-is-business-restructuring-nigeria/" },
-      { "title": "Why Nigerian Startups Fail", "href": "/articles/article-why-nigerian-startups-fail/" }
+      {
+        "title": "How to Register a Company in Nigeria",
+        "href": "/articles/how-to-register-a-company-in-nigeria/"
+      },
+      {
+        "title": "Hire Staff in Nigeria From Abroad",
+        "href": "/articles/hire-staff-nigeria-from-abroad/"
+      },
+      {
+        "title": "What Is Traction in Business?",
+        "href": "/articles/what-is-traction-in-business/"
+      },
+      {
+        "title": "What Is Business Restructuring in Nigeria?",
+        "href": "/articles/what-is-business-restructuring-nigeria/"
+      },
+      {
+        "title": "Why Nigerian Startups Fail",
+        "href": "/articles/article-why-nigerian-startups-fail/"
+      }
     ]
   }
 }
