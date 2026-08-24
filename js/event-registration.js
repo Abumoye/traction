@@ -14,7 +14,7 @@
    paste the resulting Web App URL below.
    ========================================================= */
 
-const EVENT_REGISTRATION_SCRIPT_URL = "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL";
+const EVENT_REGISTRATION_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxMQo0BeqiJpbPuEvt_76xIbZXDu-A5HK7Q193iuu4Ii9GCIP0MdKzzmCmubQ0SSAGC/exec";
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('eventRegisterForm');
