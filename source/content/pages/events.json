@@ -20,10 +20,28 @@
       "type": "text",
       "heading": "Traction Outsourcing International Corporate Retreat, 2026",
       "sub": "Date: November 22nd - 30th, 2026 | Location: Kigali, Rwanda",
-      "paragraphs": []
+      "paragraphs": [],
+      "actions": [
+        {
+          "label": "Learn About This Event",
+          "href": "#panel",
+          "style": "btn-ghost"
+        },
+        {
+          "label": "Register Now",
+          "href": "/events/register/",
+          "style": "btn-primary"
+        },
+        {
+          "label": "Sell Tickets & Earn Commission",
+          "href": "/events/affiliate/",
+          "style": "btn-ghost"
+        }
+      ]
     },
     {
       "type": "grid",
+      "id": "panel",
       "heading": "The 2026 Panel",
       "columns": 3,
       "style": "profile",

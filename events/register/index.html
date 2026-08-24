@@ -82,40 +82,25 @@
   <div class="container" style="">
 
     
-      
-      
-      <div class="reveal" style="max-width:920px;margin:0 auto;font-size:18px;">
-        <p>Early Bird: ₦3,550,000 / $2,600 per person — limited to the first 30 registrations, ending August 31st, 2026. Standard: ₦5,000,000 / $3,665 per person afterward. Registration closes November 1st, 2026. Fill in the form below and click Proceed to Payment — an invoice with our account details will be emailed to you from t-icr@tolnigeria.com. Full details on inclusions, payment, and policies are on the Registration Information section of the Events page.</p>
-      </div>
-
-    
-
-  </div>
-</section>
-
-<section  class="section  ">
-  <div class="container" style="">
-
-    
       <h2 class="section-title reveal">Retreat Registration</h2>
-      <p class="section-sub reveal">You will receive an invoice by email with our payment details. Reply to that email with your receipt once paid.</p>
+      
       <form class="card reveal" id="eventRegisterForm" style="max-width:560px;margin:0 auto;">
         <div style="display:grid;gap:14px;">
           
             
-            <input name="fullName" type="text" placeholder="Full Name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+            <input name="fullName" type="text" placeholder="Full Name" required   minlength="2" style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
             
           
             
-            <input name="phone" type="tel" placeholder="Phone Number (with country code), e.g. +234 805 203 3145" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+            <input name="phone" type="tel" placeholder="Phone Number (with country code), e.g. +234 805 203 3145" required pattern="^[0-9+\s()-]{7,}$" title="Enter a valid phone number"  style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
             
           
             
-            <input name="email" type="email" placeholder="Email Address" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+            <input name="email" type="email" placeholder="Email Address" required    style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
             
           
             
-            <input name="referral" type="text" placeholder="Referral Code (optional)"  style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+            <input name="referral" type="text" placeholder="Referral Code (optional)"     style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
             
           
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Proceed to Payment</button>

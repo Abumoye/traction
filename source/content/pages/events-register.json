@@ -16,29 +16,25 @@
   },
   "sections": [
     {
-      "type": "text",
-      "paragraphs": [
-        "Early Bird: ₦3,550,000 / $2,600 per person — limited to the first 30 registrations, ending August 31st, 2026. Standard: ₦5,000,000 / $3,665 per person afterward. Registration closes November 1st, 2026. Fill in the form below and click Proceed to Payment — an invoice with our account details will be emailed to you from t-icr@tolnigeria.com. Full details on inclusions, payment, and policies are on the Registration Information section of the Events page."
-      ]
-    },
-    {
       "type": "form",
       "heading": "Retreat Registration",
       "form_id": "eventRegisterForm",
       "button": "Proceed to Payment",
-      "sub": "You will receive an invoice by email with our payment details. Reply to that email with your receipt once paid.",
       "fields": [
         {
           "name": "fullName",
           "placeholder": "Full Name",
           "input_type": "text",
-          "required": true
+          "required": true,
+          "minlength": 2
         },
         {
           "name": "phone",
           "placeholder": "Phone Number (with country code), e.g. +234 805 203 3145",
           "input_type": "tel",
-          "required": true
+          "required": true,
+          "pattern": "^[0-9+\\s()-]{7,}$",
+          "title": "Enter a valid phone number"
         },
         {
           "name": "email",
