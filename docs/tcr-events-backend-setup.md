@@ -1,59 +1,137 @@
-# T-ICR 2026 Registration & Affiliate — New Sheet & Script Setup Guide
+# T-ICR 2026 Registration & Affiliate — Sheet, Script & WhatsApp Setup Guide
 
 This is a **brand new, standalone** Google Sheet and Apps Script Web App,
 separate from the "Traction Outsourcing Leads" sheet used by the other
 forms on the site. It powers two pages:
 
-- `/events/register/` — 4-field registration form ("Proceed to Payment"),
-  which emails a PDF invoice from **t-icr@tolnigeria.com**.
+- `/events/register/` — 4-field registration form (Full Name, Phone,
+  Email, Referral Code).
 - `/events/affiliate/` — affiliate sign-up form, which auto-assigns a code
-  like `aff/tol/001/26` and emails it to the affiliate.
+  like `aff/tol/001/26`.
+
+No emails or invoices are sent by either form. Instead, every submission
+is (1) saved as a row in a Google Sheet, and (2) pushed as a WhatsApp
+message to **0704 708 2697** via the official WhatsApp Business Platform
+(Meta Cloud API), so your team sees it immediately.
 
 Both forms post to the **same** Web App URL (one script, one deployment),
 routed internally by a `formType` field — so you only need to do this setup
 once and paste one URL into two files at the end.
 
+**Heads up on timing:** the WhatsApp part needs a verified Meta Business
+account and an approved message template before it will actually send —
+that's not something that finishes in one sitting (business verification
+and template review can take anywhere from minutes to a few days). The
+Sheet and forms will work immediately once deployed; WhatsApp delivery
+comes online once Meta's side is approved. Until then, submissions still
+land safely in the Sheet, so nothing is lost while you wait on approval.
+
 ## What you will end up with
 
-- A new Google Sheet (name it whatever you like, e.g. **T-ICR 2026
-  Registrations & Affiliates**).
-- Two tabs: **Registrations** and **Affiliates**.
-- A new Apps Script project deployed as a Web App, with its own URL.
+- A Google Sheet in the **tractionoutsourcing@gmail.com** Google account,
+  with two tabs: **Registrations** and **Affiliates**.
+- A new Apps Script project (bound to that Sheet) deployed as a Web App.
+- A Meta WhatsApp Business Platform app that sends the notification
+  messages to 0704 708 2697 whenever the script calls it.
 
-## Step 1: Create the Sheet and tabs
+---
 
-1. Go to [sheets.google.com](https://sheets.google.com) and create a new
+## Part A — The Google Sheet
+
+1. Sign in to **tractionoutsourcing@gmail.com**, go to
+   [sheets.google.com](https://sheets.google.com), and create a new
    spreadsheet. Name it **T-ICR 2026 Registrations & Affiliates**.
-2. Rename the first tab (bottom left) to **Registrations**. In row 1, add
+2. Move it into whichever Drive folder you want it stored in (right-click
+   the file in Drive → Move). Any folder works — this is just
+   organization, it doesn't affect the script.
+3. Rename the first tab (bottom left) to **Registrations**. In row 1, add
    these headers exactly, one per column:
-   `Timestamp | Full Name | Phone | Email | Referral Code | Tier | Amount (NGN) | Amount (USD)`
-3. Add a second tab called **Affiliates**. In row 1, add these headers
+   `Timestamp | Full Name | Phone | Email | Referral Code`
+4. Add a second tab called **Affiliates**. In row 1, add these headers
    exactly:
    `Timestamp | Affiliate Code | Name | Gender | Age | Email | Phone | Bank Name | Account Number | Account Name`
 
-## Step 2: Add the Apps Script
+## Part B — WhatsApp Business Platform (Meta Cloud API)
+
+This is the part that takes real setup time. Do this from
+**tractionoutsourcing@gmail.com** or whichever account should own the
+business assets.
+
+1. Go to [business.facebook.com](https://business.facebook.com) and
+   create (or use an existing) Meta Business Account for Traction
+   Outsourcing Limited.
+2. Go to [developers.facebook.com](https://developers.facebook.com),
+   create a new App, choose type **Business**, and add the **WhatsApp**
+   product to it.
+3. In the WhatsApp product setup, you'll get a **test phone number**
+   automatically for development. To send to 0704 708 2697 during
+   testing, add it under **API Setup → To → Manage phone number list**
+   as a verified recipient (it'll get a verification code by WhatsApp).
+   Test numbers work immediately with no business verification needed —
+   good for confirming everything works end to end before going further.
+4. For this to work reliably on an ongoing basis (not just a temporary
+   test number that expires), you'll want to: add your own business
+   WhatsApp-enabled phone number as the sending number, and complete
+   **Meta Business Verification** (Business Settings → Security Center →
+   Start Verification) so the app can message any number, not just
+   pre-approved test recipients. This is the step that can take days —
+   Meta reviews business documents.
+5. Generate a **permanent access token**: Business Settings → Users →
+   System Users → create a system user → assign it to your WhatsApp app
+   with `whatsapp_business_messaging` permission → **Generate Token**
+   (choose "Never expires" if offered, or the longest duration available).
+   Copy this token somewhere safe — you'll paste it into the script.
+6. Note your **Phone Number ID** (not the phone number itself — a numeric
+   ID shown in WhatsApp → API Setup, under the "From" number). You'll
+   need this too.
+
+### Create the two message templates
+
+Outbound business-initiated WhatsApp messages must use a **pre-approved
+template** (you can't just send arbitrary free text to a number that
+hasn't messaged you first). In Meta's WhatsApp Manager → **Message
+Templates → Create Template**, create these two, both category
+**Utility**, language **English (US)**:
+
+**Template 1** — name it exactly `ticr_2026_registration_alert`, body:
+```
+New T-ICR 2026 registration:
+Name: {{1}}
+Phone: {{2}}
+Email: {{3}}
+Referral: {{4}}
+```
+
+**Template 2** — name it exactly `ticr_2026_affiliate_alert`, body:
+```
+New T-ICR 2026 affiliate:
+Name: {{1}}
+Code: {{2}}
+Phone: {{3}}
+Gender: {{4}}
+Age: {{5}}
+Payout details: {{6}}
+```
+
+Submit both for review. Utility templates are usually approved within a
+few minutes to a few hours, sometimes longer. You'll see the status
+change to "Approved" in WhatsApp Manager once ready — the script below
+won't work until both show Approved.
+
+## Part C — Add the Apps Script
 
 1. In the Sheet, go to **Extensions → Apps Script**.
 2. Delete anything in the editor and paste the code below.
-3. Click the save icon, name the project **T-ICR 2026 Events Handler**.
+3. Fill in the four `REPLACE_WITH_...` constants near the top with what
+   you gathered in Part B.
+4. Click the save icon, name the project **T-ICR 2026 Events Handler**.
 
 ```javascript
-var HELP_LINE = "0704 708 2697";
-
-// ---- T-ICR 2026 pricing ----
-var EARLY_BIRD_PRICE_NGN = 3550000;
-var EARLY_BIRD_PRICE_USD = 2600;
-var STANDARD_PRICE_NGN = 5000000;
-var STANDARD_PRICE_USD = 3665;
-var EARLY_BIRD_CAP = 30; // first 30 registrations get the Early Bird rate
-var EARLY_BIRD_DEADLINE = new Date('2026-08-31T23:59:59+01:00'); // 31 Aug 2026, WAT
-var REGISTRATION_CLOSE = new Date('2026-11-01T23:59:59+01:00'); // 1 Nov 2026, WAT
-
-// ---- Payment details shown on the invoice ----
-var NGN_BANK_NAME = "Providus Bank PLC";
-var NGN_ACCOUNT_NUMBER = "1307188028";
-var NGN_ACCOUNT_NAME = "Traction Outsourcing Limited";
-var USD_PAYMENT_NOTE = "For USD payment, reply to this email or reach us on WhatsApp (" + HELP_LINE + ") and our team will send dollar transfer details.";
+// ---- WhatsApp Business Platform (Meta Cloud API) ----
+var WHATSAPP_PHONE_NUMBER_ID = "REPLACE_WITH_YOUR_WHATSAPP_PHONE_NUMBER_ID";
+var WHATSAPP_ACCESS_TOKEN = "REPLACE_WITH_YOUR_PERMANENT_ACCESS_TOKEN";
+var WHATSAPP_API_VERSION = "v21.0";
+var NOTIFY_WHATSAPP_NUMBER = "2347047082697"; // 0704 708 2697, international format, no leading +
 
 function doPost(e) {
   if (!e || !e.postData || !e.postData.contents) {
@@ -81,117 +159,15 @@ function handleEventRegistration(data) {
   var email = (data.email || '').toString().trim();
   var referral = (data.referral || '').toString().trim();
 
-  var now = new Date();
+  sheet.appendRow([new Date(), name, phone, email, referral]);
 
-  if (now > REGISTRATION_CLOSE) {
-    sheet.appendRow([now, name, phone, email, referral, 'Closed — late submission', '', '']);
-    sendRegistrationClosedEmail(name, email);
-    MailApp.sendEmail({
-      to: "tractionoutsourcing@gmail.com",
-      subject: "Late T-ICR 2026 Registration (after close): " + name,
-      body: "Name: " + name + "\nPhone: " + phone + "\nEmail: " + email + "\nReferral: " + (referral || "None") +
-            "\n\nThis came in after the November 1, 2026 registration close date. They were told registration is closed."
-    });
-    return ContentService.createTextOutput(
-      JSON.stringify({ status: 'success' })
-    ).setMimeType(ContentService.MimeType.JSON);
-  }
-
-  var pricing = getCurrentTicketPricing(sheet, now);
-
-  sheet.appendRow([now, name, phone, email, referral, pricing.tier, pricing.ngn, pricing.usd]);
-
-  sendEventInvoiceEmail(name, phone, email, referral, pricing);
+  sendWhatsAppTemplate('ticr_2026_registration_alert', [
+    name, phone, email, referral || 'None'
+  ]);
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success' })
   ).setMimeType(ContentService.MimeType.JSON);
-}
-
-function getCurrentTicketPricing(sheet, now) {
-  var rowCount = Math.max(sheet.getLastRow() - 1, 0); // minus header, prior registrations only
-  var earlyBirdOpen = now <= EARLY_BIRD_DEADLINE && rowCount < EARLY_BIRD_CAP;
-  if (earlyBirdOpen) {
-    return { tier: 'Early Bird', ngn: EARLY_BIRD_PRICE_NGN, usd: EARLY_BIRD_PRICE_USD };
-  }
-  return { tier: 'Standard', ngn: STANDARD_PRICE_NGN, usd: STANDARD_PRICE_USD };
-}
-
-function formatNaira(n) { return "₦" + n.toLocaleString('en-NG'); }
-function formatUsd(n) { return "$" + n.toLocaleString('en-US'); }
-
-function sendEventInvoiceEmail(name, phone, email, referral, pricing) {
-  var html = buildInvoiceHtml(name, phone, email, referral, pricing);
-  var pdf = Utilities.newBlob(html, 'text/html', 'invoice.html').getAs('application/pdf');
-  pdf.setName('T-ICR-2026-Invoice-' + name.replace(/\s+/g, '-') + '.pdf');
-
-  var body = "Hi " + name + ",\n\n" +
-    "Thank you for registering for the Traction Outsourcing International Corporate Retreat (T-ICR) 2026 in Kigali, Rwanda.\n\n" +
-    "Your invoice is attached as a PDF. It shows the amount due at the " + pricing.tier + " rate — " +
-    formatNaira(pricing.ngn) + " or " + formatUsd(pricing.usd) + " — along with our account details for payment.\n\n" +
-    "Once you have made payment, please reply directly to this email with your payment receipt attached, so our team can confirm your registration.\n\n" +
-    "If you have any questions, reach our Help Line: " + HELP_LINE + " (WhatsApp).\n\n" +
-    "We look forward to seeing you in Kigali.\n\n" +
-    "Traction Outsourcing Limited\nt-icr@tolnigeria.com";
-
-  GmailApp.sendEmail(email, "Your T-ICR 2026 Registration & Invoice", body, {
-    from: "t-icr@tolnigeria.com",
-    name: "Traction Outsourcing — T-ICR 2026",
-    replyTo: "t-icr@tolnigeria.com",
-    attachments: [pdf]
-  });
-
-  // Notify the team too
-  MailApp.sendEmail({
-    to: "tractionoutsourcing@gmail.com",
-    subject: "New T-ICR 2026 Registration: " + name,
-    body: "Name: " + name + "\nPhone: " + phone + "\nEmail: " + email +
-          "\nReferral: " + (referral || "None") + "\nTier: " + pricing.tier +
-          "\nAmount: " + formatNaira(pricing.ngn) + " / " + formatUsd(pricing.usd)
-  });
-}
-
-function sendRegistrationClosedEmail(name, email) {
-  var body = "Hi " + name + ",\n\n" +
-    "Thank you for your interest in the Traction Outsourcing International Corporate Retreat (T-ICR) 2026.\n\n" +
-    "Registration closed on November 1, 2026, so we're unable to process this submission automatically. " +
-    "If you'd like to check for a late spot, please reach our Help Line: " + HELP_LINE + " (WhatsApp).\n\n" +
-    "Traction Outsourcing Limited";
-
-  GmailApp.sendEmail(email, "T-ICR 2026 Registration — Registration Closed", body, {
-    from: "t-icr@tolnigeria.com",
-    name: "Traction Outsourcing — T-ICR 2026",
-    replyTo: "t-icr@tolnigeria.com"
-  });
-}
-
-function buildInvoiceHtml(name, phone, email, referral, pricing) {
-  var today = Utilities.formatDate(new Date(), 'Africa/Lagos', 'MMMM d, yyyy');
-  return '<html><body style="font-family:Arial,sans-serif;color:#1d1d1f;padding:30px;">' +
-    '<h1 style="color:#d35400;margin-bottom:0;">Traction Outsourcing Limited</h1>' +
-    '<h2 style="margin-top:4px;">T-ICR 2026 Registration Invoice</h2>' +
-    '<p>Date: ' + today + '</p>' +
-    '<table style="width:100%;border-collapse:collapse;margin-top:20px;">' +
-      '<tr><td style="padding:6px 0;width:40%;"><strong>Full Name</strong></td><td>' + name + '</td></tr>' +
-      '<tr><td style="padding:6px 0;"><strong>Phone</strong></td><td>' + phone + '</td></tr>' +
-      '<tr><td style="padding:6px 0;"><strong>Email</strong></td><td>' + email + '</td></tr>' +
-      '<tr><td style="padding:6px 0;"><strong>Referral Code</strong></td><td>' + (referral || '—') + '</td></tr>' +
-      '<tr><td style="padding:6px 0;"><strong>Ticket Tier</strong></td><td>' + pricing.tier + '</td></tr>' +
-    '</table>' +
-    '<h3 style="margin-top:30px;">Amount Due</h3>' +
-    '<p style="font-size:22px;font-weight:bold;">' + formatNaira(pricing.ngn) +
-      ' <span style="font-size:15px;font-weight:normal;">(or ' + formatUsd(pricing.usd) + ')</span></p>' +
-    '<h3 style="margin-top:30px;">Payment Instructions</h3>' +
-    '<table style="width:100%;border-collapse:collapse;">' +
-      '<tr><td style="padding:6px 0;width:40%;"><strong>Account Name</strong></td><td>' + NGN_ACCOUNT_NAME + '</td></tr>' +
-      '<tr><td style="padding:6px 0;"><strong>Bank</strong></td><td>' + NGN_BANK_NAME + '</td></tr>' +
-      '<tr><td style="padding:6px 0;"><strong>Account Number (NGN)</strong></td><td>' + NGN_ACCOUNT_NUMBER + '</td></tr>' +
-    '</table>' +
-    '<p style="margin-top:14px;font-size:13.5px;">' + USD_PAYMENT_NOTE + '</p>' +
-    '<p style="margin-top:20px;">Once payment has been made, please <strong>reply to the email this invoice was attached to, with your payment receipt attached</strong>, so our team can confirm your registration.</p>' +
-    '<p>For questions, reach our Help Line: <strong>' + HELP_LINE + '</strong> (WhatsApp).</p>' +
-    '<p style="margin-top:30px;color:#6e6e73;font-size:12px;">Traction Outsourcing Limited — t-icr@tolnigeria.com</p>' +
-    '</body></html>';
 }
 
 /* =============================== AFFILIATE =============================== */
@@ -217,39 +193,57 @@ function handleEventAffiliate(data) {
 
   sheet.appendRow([new Date(), code, name, gender, age, email, phone, bankName, accountNumber, accountName]);
 
-  MailApp.sendEmail({
-    to: email,
-    subject: "Your Traction Outsourcing Affiliate Code",
-    body: "Hi " + name + ",\n\nWelcome! You are now registered as a Traction Outsourcing affiliate for the T-ICR 2026.\n\n" +
-          "Your unique affiliate code is: " + code + "\n\nShare this code with prospective delegates. Our team will be in touch with more details on how referrals are tracked and rewarded.\n\nTraction Outsourcing Limited"
-  });
+  var payoutDetails = bankName + ' - ' + accountNumber + ' - ' + accountName;
 
-  MailApp.sendEmail({
-    to: "tractionoutsourcing@gmail.com",
-    subject: "New T-ICR 2026 Affiliate: " + name + " (" + code + ")",
-    body: "Name: " + name + "\nGender: " + gender + "\nAge: " + age + "\nEmail: " + email + "\nPhone: " + phone +
-          "\nBank: " + bankName + "\nAccount Number: " + accountNumber + "\nAccount Name: " + accountName +
-          "\nCode: " + code
-  });
+  sendWhatsAppTemplate('ticr_2026_affiliate_alert', [
+    name, code, phone, gender, age, payoutDetails
+  ]);
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success', code: code })
   ).setMimeType(ContentService.MimeType.JSON);
 }
+
+/* ============================= WHATSAPP SEND ============================= */
+
+function sendWhatsAppTemplate(templateName, paramValues) {
+  var url = 'https://graph.facebook.com/' + WHATSAPP_API_VERSION + '/' + WHATSAPP_PHONE_NUMBER_ID + '/messages';
+
+  var payload = {
+    messaging_product: 'whatsapp',
+    to: NOTIFY_WHATSAPP_NUMBER,
+    type: 'template',
+    template: {
+      name: templateName,
+      language: { code: 'en_US' },
+      components: [
+        {
+          type: 'body',
+          parameters: paramValues.map(function (v) {
+            return { type: 'text', text: String(v) };
+          })
+        }
+      ]
+    }
+  };
+
+  var options = {
+    method: 'post',
+    contentType: 'application/json',
+    headers: { Authorization: 'Bearer ' + WHATSAPP_ACCESS_TOKEN },
+    payload: JSON.stringify(payload),
+    muteHttpExceptions: true
+  };
+
+  var response = UrlFetchApp.fetch(url, options);
+  // Always log the response — this is the first place to look if a
+  // WhatsApp message doesn't arrive (see Testing section below).
+  Logger.log('WhatsApp send response: ' + response.getResponseCode() + ' ' + response.getContentText());
+  return response;
+}
 ```
 
-## Step 3: Confirm the send-as alias
-
-`GmailApp.sendEmail(...)` in the script sends the invoice and the
-"registration closed" email `from: "t-icr@tolnigeria.com"`. This only
-works if **t-icr@tolnigeria.com is added and verified as a "Send As"
-alias** on the same Google account you deploy this Apps Script project
-from (Gmail → Settings → See all settings → Accounts and Import → Send
-mail as). If it isn't set up as a send-as alias on that specific account,
-Gmail silently falls back to sending from the account's own address
-instead of t-icr@tolnigeria.com — so check this before relying on it.
-
-## Step 4: Deploy it as a Web App
+## Part D: Deploy it as a Web App
 
 1. In the Apps Script editor, click **Deploy → New deployment**.
 2. Click the gear icon next to "Select type" and choose **Web app**.
@@ -265,7 +259,7 @@ instead of t-icr@tolnigeria.com — so check this before relying on it.
 6. Copy the **Web app URL** it gives you. It looks like:
    `https://script.google.com/macros/s/XXXXXXXXXXXX/exec`
 
-## Step 5: Wire it into the site
+## Part E: Wire it into the site
 
 Open both of these files in the repo and replace the placeholder with your
 copied URL in each:
@@ -282,53 +276,40 @@ const EVENT_REGISTRATION_SCRIPT_URL = "https://script.google.com/macros/s/XXXXXX
 ```
 
 (Same URL in both files — it's one deployment serving both forms.) Commit
-and push, or ask me to rebuild once you've confirmed both changes.
+and push, or send it back to me and I'll rebuild and re-ship it.
 
 ## Redeploying after changes
 
-If you edit the Apps Script code later, you need to create a **new
-deployment** (Deploy → Manage deployments → Edit → New version) for the
-change to go live — editing the code alone does not update the existing
-URL, so nothing needs to change on the website side afterward.
-
-## What's already decided in this script (confirm these are right)
-
-- **Early Bird**: ₦3,550,000 / $2,600, limited to the first 30
-  registrations, ending August 31, 2026.
-- **Standard**: ₦5,000,000 / $3,665, applies once either limit is passed.
-- **Registration closes**: November 1, 2026 — after this, submissions are
-  still recorded (tagged "Closed — late submission") but the person gets a
-  "registration is closed, contact our Help Line" email instead of an
-  invoice, and no price/tier is assigned.
-- **Help Line**: 0704 708 2697.
-- **NGN payment account**: Providus Bank PLC, account 1307188028, Traction
-  Outsourcing Limited — pulled from the site's existing lead-form setup
-  doc, so this should already be correct.
-- **USD payment account**: none on file. The invoice currently tells
-  dollar payers to reply to the email or reach the Help Line to arrange
-  transfer details. If you have real USD/domiciliary account details,
-  give them to me and I'll add them to `USD_PAYMENT_NOTE` (or you can add
-  them directly in the script — it's the one variable near the top).
+If you edit the Apps Script code later (e.g. update the phone number ID or
+token), you need to create a **new deployment** (Deploy → Manage
+deployments → Edit → New version) for the change to go live — editing the
+code alone does not update the existing URL, so nothing needs to change on
+the website side afterward.
 
 ## Testing it
 
-Submit both forms on the live site (not the Apps Script editor's Run
-button — that fails with a "postData" error because it isn't a real form
-submission).
+**Test the Sheet first, independent of WhatsApp.** Submit the form on the
+live site and confirm a new row appears in the right tab. If nothing
+appears, open the Apps Script editor → **Executions** (left sidebar) to
+see if the request came in and whether it threw an error. (Do not test by
+clicking the Run ▶ button in the editor — that calls `doPost()` with no
+request data and always fails with a "postData" error; that's expected
+and not a sign anything is broken. Always test via the real form.)
 
-For registration, confirm: a new row appears in the **Registrations** tab
-with the correct tier/amount, a notification email arrives at
-tractionoutsourcing@gmail.com, and an invoice PDF email arrives at the
-address you registered with — check it actually shows
-**From: t-icr@tolnigeria.com**, not a fallback address, which is the sign
-the send-as alias in Step 3 is working.
+**Then test WhatsApp delivery.** After a submission, check Executions for
+the `sendWhatsAppTemplate` log line — it logs the HTTP response code and
+body from Meta. A `200` with `"messages"` in the body means it sent. A
+non-200 response almost always means one of: the template isn't Approved
+yet, the recipient number isn't a verified test recipient (if you haven't
+finished business verification yet), the access token is wrong or
+expired, or the Phone Number ID is wrong. The error message in the log
+will say which.
 
-For the affiliate form, confirm a new row appears in the **Affiliates**
-tab with a code like `aff/tol/001/26`, including the bank details you
-entered, and that the same code arrives by email at the address submitted.
+## If you'd rather not go through Meta's business verification
 
-To test the "registration closed" behavior without waiting until November,
-temporarily change `REGISTRATION_CLOSE` near the top of the script to a
-date in the past, submit the form once, confirm you get the closed-message
-email instead of an invoice, then change it back to
-`'2026-11-01T23:59:59+01:00'` and redeploy (new version, per above).
+If Business Verification turns out to be more than you want to deal with
+right now, the Sheet and forms still work completely fine on their own —
+every submission is safely recorded — and I can swap the notification
+step for something simpler later (either the free CallMeBot-based
+approach I mentioned earlier, or a click-to-chat link the visitor sends
+themselves). Just let me know and I'll update the script.
