@@ -4,18 +4,18 @@
 
    Submits to a DEDICATED Google Apps Script Web App (formType:
    "event-affiliate"), separate from the lead-form / registration script,
-   which appends the entry to a Google Sheet tab, auto-assigns a
-   sequential affiliate code (aff/tol/NNN/YY), and sends a WhatsApp
-   notification (including the code) to the team — no email is sent.
-   This shares the SAME Web App URL as event-registration.js (one
-   script, one deployment, two forms — routed by formType).
+   which appends the entry to a Google Sheet tab and auto-assigns a
+   sequential affiliate code (aff/tol/NNN/YY) — no email or automated
+   WhatsApp message is sent. This shares the SAME Web App URL as
+   event-registration.js (one script, one deployment, two forms — routed
+   by formType).
 
    SETUP REQUIRED: see /docs/tcr-events-backend-setup.md for the full
    step-by-step (new Sheet, new Apps Script project, deployment) and
    paste the resulting Web App URL below.
    ========================================================= */
 
-const EVENT_AFFILIATE_SCRIPT_URL = "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL";
+const EVENT_AFFILIATE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxMQo0BeqiJpbPuEvt_76xIbZXDu-A5HK7Q193iuu4Ii9GCIP0MdKzzmCmubQ0SSAGC/exec";
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('affiliateForm');

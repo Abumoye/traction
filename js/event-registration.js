@@ -4,17 +4,17 @@
 
    Submits to a DEDICATED Google Apps Script Web App (formType:
    "event-registration"), separate from the lead-form script, which
-   appends the entry to a Google Sheet and sends a WhatsApp notification
-   to the team — no email or invoice is sent. Shares the same Web App
-   URL as event-affiliate.js (one script, one deployment, two forms —
-   routed by formType).
+   appends the entry to a Google Sheet — no email, invoice, or automated
+   WhatsApp message is sent. Shares the same Web App URL as
+   event-affiliate.js (one script, one deployment, two forms — routed by
+   formType).
 
    SETUP REQUIRED: see /docs/tcr-events-backend-setup.md for the full
    step-by-step (new Sheet, new Apps Script project, deployment) and
    paste the resulting Web App URL below.
    ========================================================= */
 
-const EVENT_REGISTRATION_SCRIPT_URL = "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL";
+const EVENT_REGISTRATION_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxMQo0BeqiJpbPuEvt_76xIbZXDu-A5HK7Q193iuu4Ii9GCIP0MdKzzmCmubQ0SSAGC/exec";
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('eventRegisterForm');
