@@ -2,17 +2,20 @@
    Traction Outsourcing Limited — T-ICR 2026 Registration Handler
    Used on /events/register/ only.
 
-   Submits to the SAME Google Apps Script Web App used by js/lead-form.js
-   (formType: "event-registration"), which appends the entry to a Google
-   Sheet, works out Early Bird vs Standard pricing, generates a PDF
-   invoice, and emails it from t-icr@tolnigeria.com.
+   Submits to a DEDICATED Google Apps Script Web App (formType:
+   "event-registration"), separate from the lead-form script, which
+   appends the entry to a Google Sheet, works out Early Bird vs Standard
+   pricing, generates a PDF invoice, and emails it from
+   t-icr@tolnigeria.com. Shares the same Web App URL as
+   event-affiliate.js (one script, one deployment, two forms — routed
+   by formType).
 
-   SETUP REQUIRED: the deployed Apps Script needs to be updated with the
-   new formType handler before this works — see the "T-ICR 2026
-   Registration Form" section in /docs/lead-form-setup.md.
+   SETUP REQUIRED: see /docs/tcr-events-backend-setup.md for the full
+   step-by-step (new Sheet, new Apps Script project, deployment) and
+   paste the resulting Web App URL below.
    ========================================================= */
 
-const EVENT_REGISTRATION_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeu2T0WE1M-4d2erYY9IUazEKTsWPmuG9cnIYK61PQkdfY8OqvvOTubLFcFJRfdL5iVw/exec";
+const EVENT_REGISTRATION_SCRIPT_URL = "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL";
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('eventRegisterForm');
@@ -24,6 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
+
+        if (EVENT_REGISTRATION_SCRIPT_URL === "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL") {
+            statusEl.textContent = "This form is not fully set up yet. Please reach us on WhatsApp instead.";
+            statusEl.style.color = "#c0392b";
+            return;
+        }
 
         const data = {
             formType: "event-registration",

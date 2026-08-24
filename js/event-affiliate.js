@@ -2,17 +2,19 @@
    Traction Outsourcing Limited — T-ICR 2026 Affiliate Sign-Up Handler
    Used on /events/affiliate/ only.
 
-   Submits to the SAME Google Apps Script Web App used by js/lead-form.js
-   (formType: "event-affiliate"), which appends the entry to a separate
-   Google Sheet tab, auto-assigns a sequential affiliate code
-   (aff/tol/NNN/YY), and emails it to the affiliate.
+   Submits to a DEDICATED Google Apps Script Web App (formType:
+   "event-affiliate"), separate from the lead-form / registration script,
+   which appends the entry to a Google Sheet tab, auto-assigns a
+   sequential affiliate code (aff/tol/NNN/YY), and emails it to the
+   affiliate. This shares the SAME Web App URL as event-registration.js
+   (one script, one deployment, two forms — routed by formType).
 
-   SETUP REQUIRED: the deployed Apps Script needs to be updated with the
-   new formType handler before this works — see the "T-ICR 2026
-   Affiliate Sign-Up Form" section in /docs/lead-form-setup.md.
+   SETUP REQUIRED: see /docs/tcr-events-backend-setup.md for the full
+   step-by-step (new Sheet, new Apps Script project, deployment) and
+   paste the resulting Web App URL below.
    ========================================================= */
 
-const EVENT_AFFILIATE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeu2T0WE1M-4d2erYY9IUazEKTsWPmuG9cnIYK61PQkdfY8OqvvOTubLFcFJRfdL5iVw/exec";
+const EVENT_AFFILIATE_SCRIPT_URL = "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL";
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('affiliateForm');
@@ -25,6 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
+        if (EVENT_AFFILIATE_SCRIPT_URL === "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL") {
+            statusEl.textContent = "This form is not fully set up yet. Please reach us on WhatsApp instead.";
+            statusEl.style.color = "#c0392b";
+            return;
+        }
+
         const data = {
             formType: "event-affiliate",
             sourcePage: window.location.pathname,
@@ -33,12 +41,14 @@ document.addEventListener('DOMContentLoaded', function () {
             age: form.age.value.trim(),
             email: form.email.value.trim(),
             phone: form.phone.value.trim(),
-            state: form.state.value.trim(),
+            bankName: form.bankName.value.trim(),
+            accountNumber: form.accountNumber.value.trim(),
+            accountName: form.accountName.value.trim(),
             consent: form.consent.checked
         };
 
         const requiredValid = data.name && data.gender && data.age && data.email
-            && data.phone && data.state && data.consent;
+            && data.phone && data.bankName && data.accountNumber && data.accountName && data.consent;
 
         if (!requiredValid) {
             statusEl.textContent = "Please fill in every field and accept the disclaimer before submitting.";

@@ -124,7 +124,7 @@
     {
       "type": "grid",
       "heading": "Secure Your Slot",
-      "sub": "Early Bird pricing ends August 31st, 2026, or once 30 Early Bird seats are filled, whichever comes first. Standard pricing applies afterward.",
+      "sub": "Early Bird pricing ends August 31st, 2026, or once 30 Early Bird seats are filled, whichever comes first. Standard pricing applies afterward. Registration closes November 1st, 2026.",
       "columns": 2,
       "style": "stat",
       "entries": [
@@ -133,7 +133,7 @@
           "label": "Early Bird · per person (Naira) — first 30 seats only"
         },
         {
-          "value": "$2,150",
+          "value": "$2,600",
           "label": "Early Bird · per person (US Dollar) — first 30 seats only"
         },
         {
@@ -141,7 +141,7 @@
           "label": "Standard · per person (Naira)"
         },
         {
-          "value": "$3,030",
+          "value": "$3,665",
           "label": "Standard · per person (US Dollar)"
         }
       ]
@@ -346,7 +346,7 @@
         },
         {
           "q": "What does the T-ICR 2026 registration fee cover?",
-          "a": "The registration fee is NGN 3,550,000 or USD 2,150 at the Early Bird rate, limited to the first 30 registrations and ending August 31st, 2026, or NGN 5,000,000 / USD 3,030 at the Standard rate afterward. It covers accommodation for the full retreat period, return flights (Abuja/Lagos to Kigali and back), programme fees, speaker sessions, business matchmaking, group activities, feeding, and ground logistics in Kigali. Full details are available on request."
+          "a": "The registration fee is NGN 3,550,000 or USD 2,600 at the Early Bird rate, limited to the first 30 registrations and ending August 31st, 2026, or NGN 5,000,000 / USD 3,665 at the Standard rate afterward. Registration closes November 1st, 2026. It covers accommodation for the full retreat period, return flights (Abuja/Lagos to Kigali and back), programme fees, speaker sessions, business matchmaking, group activities, feeding, and ground logistics in Kigali. Full details are available on request."
         },
         {
           "q": "How do I register for the T-ICR 2026?",

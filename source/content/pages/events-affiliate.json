@@ -59,8 +59,20 @@
           "required": true
         },
         {
-          "name": "state",
-          "placeholder": "State of Residence",
+          "name": "bankName",
+          "placeholder": "Bank Name",
+          "input_type": "text",
+          "required": true
+        },
+        {
+          "name": "accountNumber",
+          "placeholder": "Account Number",
+          "input_type": "text",
+          "required": true
+        },
+        {
+          "name": "accountName",
+          "placeholder": "Account Name",
           "input_type": "text",
           "required": true
         },
