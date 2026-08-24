@@ -4,11 +4,10 @@
 
    Submits to a DEDICATED Google Apps Script Web App (formType:
    "event-registration"), separate from the lead-form script, which
-   appends the entry to a Google Sheet, works out Early Bird vs Standard
-   pricing, generates a PDF invoice, and emails it from
-   t-icr@tolnigeria.com. Shares the same Web App URL as
-   event-affiliate.js (one script, one deployment, two forms — routed
-   by formType).
+   appends the entry to a Google Sheet and sends a WhatsApp notification
+   to the team — no email or invoice is sent. Shares the same Web App
+   URL as event-affiliate.js (one script, one deployment, two forms —
+   routed by formType).
 
    SETUP REQUIRED: see /docs/tcr-events-backend-setup.md for the full
    step-by-step (new Sheet, new Apps Script project, deployment) and
@@ -60,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             body: JSON.stringify(data)
         })
         .then(function () {
-            statusEl.textContent = "Thank you. Please check " + data.email + " (including spam/junk) for an invoice from t-icr@tolnigeria.com with your payment amount and account details. Reply to that email with your receipt once paid.";
+            statusEl.textContent = "Thank you. Your registration has been received — our team will reach out to you shortly with payment details.";
             statusEl.style.color = "#1e7e34";
             form.reset();
             submitBtn.innerText = defaultBtnText;

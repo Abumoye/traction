@@ -27,6 +27,13 @@
       <div class="reveal" style="max-width:{{ sec.text_width | default('920px') }};margin:0 auto;font-size:18px;">
         {% for p in sec.paragraphs %}<p>{{ p }}</p>{% endfor %}
       </div>
+      {% if sec.actions %}
+      <div class="hero-actions reveal" style="justify-content:center;margin-top:{{ '0' if not sec.paragraphs and not sec.sub and not sec.heading else '28px' }};">
+        {% for a in sec.actions %}
+        <a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
 
     {% elif sec.type == 'grid' %}
       {% if sec.heading %}<h2 class="section-title reveal">{{ sec.heading }}</h2>{% endif %}
@@ -132,8 +139,13 @@
               <input type="checkbox" name="{{ f.name }}" {% if f.required | default(false) %}required{% endif %} style="margin-top:3px;flex-shrink:0;width:16px;height:16px;">
               <span>{{ f.label | safe }}</span>
             </label>
+            {% elif f.input_type == 'select' %}
+            <select name="{{ f.name }}" {% if f.required | default(true) %}required{% endif %} style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);background:var(--white);color:var(--ink);" {% if f.placeholder %}data-placeholder="{{ f.placeholder }}"{% endif %}>
+              <option value="" disabled selected>{{ f.placeholder | default('Select an option') }}</option>
+              {% for opt in f.options %}<option value="{{ opt }}">{{ opt }}</option>{% endfor %}
+            </select>
             {% else %}
-            <input name="{{ f.name }}" type="{{ f.input_type | default('text') }}" placeholder="{{ f.placeholder }}" {% if f.required | default(true) %}required{% endif %} style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+            <input name="{{ f.name }}" type="{{ f.input_type | default('text') }}" placeholder="{{ f.placeholder }}" {% if f.required | default(true) %}required{% endif %} {% if f.pattern %}pattern="{{ f.pattern }}"{% endif %} {% if f.title %}title="{{ f.title }}"{% endif %} {% if f.minlength %}minlength="{{ f.minlength }}"{% endif %} style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
             {% endif %}
           {% endfor %}
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">{{ sec.button | default('Submit') }}</button>

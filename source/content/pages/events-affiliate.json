@@ -16,12 +16,6 @@
   },
   "sections": [
     {
-      "type": "text",
-      "paragraphs": [
-        "Sign up below to join the T-ICR 2026 affiliate program. Once submitted, you will be assigned a unique affiliate code by email, which you can share with prospective delegates."
-      ]
-    },
-    {
       "type": "form",
       "heading": "Affiliate Sign-Up",
       "form_id": "affiliateForm",
@@ -32,13 +26,15 @@
           "name": "name",
           "placeholder": "Full Name",
           "input_type": "text",
-          "required": true
+          "required": true,
+          "minlength": 2
         },
         {
           "name": "gender",
-          "placeholder": "Gender (Male / Female / Prefer not to say)",
-          "input_type": "text",
-          "required": true
+          "placeholder": "Select Gender",
+          "input_type": "select",
+          "required": true,
+          "options": ["Male", "Female", "Prefer not to say"]
         },
         {
           "name": "age",
