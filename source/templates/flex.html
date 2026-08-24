@@ -127,10 +127,17 @@
       <form class="card reveal" id="{{ sec.form_id | default('leadForm') }}" style="max-width:560px;margin:0 auto;">
         <div style="display:grid;gap:14px;">
           {% for f in sec.fields %}
-          <input name="{{ f.name }}" type="{{ f.input_type | default('text') }}" placeholder="{{ f.placeholder }}" {% if f.required | default(true) %}required{% endif %} style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+            {% if f.input_type == 'checkbox' %}
+            <label style="display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.55;color:var(--ink-soft);cursor:pointer;">
+              <input type="checkbox" name="{{ f.name }}" {% if f.required | default(false) %}required{% endif %} style="margin-top:3px;flex-shrink:0;width:16px;height:16px;">
+              <span>{{ f.label | safe }}</span>
+            </label>
+            {% else %}
+            <input name="{{ f.name }}" type="{{ f.input_type | default('text') }}" placeholder="{{ f.placeholder }}" {% if f.required | default(true) %}required{% endif %} style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+            {% endif %}
           {% endfor %}
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">{{ sec.button | default('Submit') }}</button>
-          <p id="leadFormStatus" style="text-align:center;font-size:13.5px;margin:0;"></p>
+          <p id="{{ sec.form_id | default('leadForm') }}Status" style="text-align:center;font-size:13.5px;margin:0;"></p>
         </div>
       </form>
 
@@ -157,4 +164,4 @@
 {% endif %}
 
 {% endblock %}
-{% block extra_scripts %}{% if has_form %}<script src="/js/lead-form.js"></script>{% endif %}{% endblock %}
+{% block extra_scripts %}{% if has_form %}<script src="/js/lead-form.js"></script>{% endif %}{% for s in scripts | default([]) %}<script src="{{ s }}"></script>{% endfor %}{% endblock %}
