@@ -9,10 +9,12 @@ forms on the site. It powers two pages:
 - `/events/affiliate/` — affiliate sign-up form, which auto-assigns a code
   like `aff/tol/001/26`.
 
-No emails or invoices are sent by either form, and there is **no
-automated WhatsApp message**. Every submission is simply saved as a row
-in a Google Sheet — that's it. Your team checks the Sheet directly to see
-new registrations and affiliate sign-ups.
+No invoices are sent, and there is **no automated WhatsApp message** to
+the team. Every submission is saved as a row in a Google Sheet, and the
+**affiliate form additionally sends one automatic welcome email** to the
+affiliate themselves (not to the team) — from `tractionoutsourcing@gmail.com`,
+containing their referral code and a link to join the affiliate WhatsApp
+group. The registration form does not send any email.
 
 Both forms post to the **same** Web App URL (one script, one deployment),
 routed internally by a `formType` field — so you only need to do this
@@ -23,7 +25,8 @@ setup once and paste one URL into two files at the end.
 - A Google Sheet in the **tractionoutsourcing@gmail.com** Google account,
   with two tabs: **PARTICIPANTS** and **AFFILIATES**.
 - A new Apps Script project (bound to that Sheet) deployed as a Web App
-  that does nothing but append each submission as a new row.
+  that appends each submission as a new row, and — for affiliates only —
+  sends the applicant a welcome email with their referral code.
 
 ---
 
@@ -118,11 +121,58 @@ function handleEventAffiliate(data) {
 
   sheet.appendRow([new Date(), code, name, gender, age, email, phone, bankName, accountNumber, accountName]);
 
+  sendAffiliateWelcomeEmail(email, name, code);
+
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success', code: code })
   ).setMimeType(ContentService.MimeType.JSON);
 }
+
+/* ========================= AFFILIATE WELCOME EMAIL ========================= */
+
+function sendAffiliateWelcomeEmail(email, fullName, code) {
+  var firstName = (fullName || '').toString().trim().split(/\s+/)[0] || 'there';
+
+  var subject = 'Welcome to T-ICR Affiliate Program';
+
+  var body =
+    'Dear ' + firstName + ',\n\n' +
+    'Welcome to T-ICR Affiliate Program. This year, we are working as a ' +
+    'team to earn a minimum of N1,000,000 per affiliate for this program.\n\n' +
+    'This is your referral code: ' + code + '\n\n' +
+    'You can start sharing your network and start earning\n\n' +
+    'To support you on this journey, kindly join this private group. ' +
+    'Kindly join here: https://chat.whatsapp.com/BeQoGJ41eeW5GYtJQQJnWI\n\n' +
+    'Talk to you soon!';
+
+  try {
+    GmailApp.sendEmail(email, subject, body, {
+      name: 'T-ICR 2026 Affiliate Program',
+      replyTo: 't-icr@tolnigeria.com'
+    });
+  } catch (err) {
+    // Never let a failed email block the submission itself — the row is
+    // already saved above regardless of whether this send succeeds.
+    Logger.log('Affiliate welcome email failed: ' + err);
+  }
+}
 ```
+
+### Updating an already-deployed script
+
+Since your script is already deployed and working, adding the email step
+means two extra things beyond just pasting the new code in:
+
+1. **Re-authorize.** This is the first time the script touches Gmail, so
+   Google needs your permission again. After pasting the new code and
+   saving, pick `sendAffiliateWelcomeEmail` from the function dropdown at
+   the top of the editor and click **Run** once. It's expected to show an
+   error (it has no real data to work with when run this way) — what
+   matters is the permission popup that appears first; click through it
+   and allow the "Send email as you" permission.
+2. **Create a new deployment version**, same as any other code update —
+   see "Redeploying after changes" below. Editing the code alone does not
+   push the change live.
 
 ## Part C — Deploy it as a Web App
 
