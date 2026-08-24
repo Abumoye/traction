@@ -29,7 +29,7 @@ land safely in the Sheet, so nothing is lost while you wait on approval.
 ## What you will end up with
 
 - A Google Sheet in the **tractionoutsourcing@gmail.com** Google account,
-  with two tabs: **Registrations** and **Affiliates**.
+  with two tabs: **PARTICIPANTS** and **AFFILIATES**.
 - A new Apps Script project (bound to that Sheet) deployed as a Web App.
 - A Meta WhatsApp Business Platform app that sends the notification
   messages to 0704 708 2697 whenever the script calls it.
@@ -38,18 +38,25 @@ land safely in the Sheet, so nothing is lost while you wait on approval.
 
 ## Part A — The Google Sheet
 
-1. Sign in to **tractionoutsourcing@gmail.com**, go to
-   [sheets.google.com](https://sheets.google.com), and create a new
-   spreadsheet. Name it **T-ICR 2026 Registrations & Affiliates**.
-2. Move it into whichever Drive folder you want it stored in (right-click
-   the file in Drive → Move). Any folder works — this is just
-   organization, it doesn't affect the script.
-3. Rename the first tab (bottom left) to **Registrations**. In row 1, add
-   these headers exactly, one per column:
+I already created the Sheet for you, in your **tractionoutsourcing@gmail.com**
+account, titled **"T-ICR 2026 Registrations & Affiliates"**:
+
+**[Open the Sheet](https://docs.google.com/spreadsheets/d/1LS6XDHBzbO5AA0y6QJgDWnjKyTyGRim1I-9wRn_2weM/edit)**
+
+I don't have a tool that can add or rename tabs inside an existing
+spreadsheet (only whole-file creation), so there are two quick manual
+steps left — about 30 seconds total:
+
+1. Open the link above. Rename the first tab (bottom left, currently
+   "Sheet1" or similar — double-click it) to **PARTICIPANTS**. It already
+   has the header row filled in:
    `Timestamp | Full Name | Phone | Email | Referral Code`
-4. Add a second tab called **Affiliates**. In row 1, add these headers
-   exactly:
+2. Right-click the tab strip → **Insert sheet**, and name the new tab
+   **AFFILIATES**. In row 1 of that new tab, add these headers exactly,
+   one per column:
    `Timestamp | Affiliate Code | Name | Gender | Age | Email | Phone | Bank Name | Account Number | Account Name`
+
+That's it for the Sheet — no need to create a new one from scratch.
 
 ## Part B — WhatsApp Business Platform (Meta Cloud API)
 
@@ -120,7 +127,13 @@ won't work until both show Approved.
 
 ## Part C — Add the Apps Script
 
-1. In the Sheet, go to **Extensions → Apps Script**.
+I don't have a tool that can create or deploy Apps Script projects either
+(no Apps Script API access), so this part is manual too — but it's just
+copy-paste:
+
+1. Open the Sheet from Part A, then go to **Extensions → Apps Script**.
+   (Doing it from inside this exact Sheet is what binds the script to it —
+   no need to enter a Spreadsheet ID anywhere in the code.)
 2. Delete anything in the editor and paste the code below.
 3. Fill in the four `REPLACE_WITH_...` constants near the top with what
    you gathered in Part B.
@@ -152,7 +165,7 @@ function doPost(e) {
 /* ============================= REGISTRATION ============================= */
 
 function handleEventRegistration(data) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Registrations');
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('PARTICIPANTS');
 
   var name = (data.name || '').toString().trim();
   var phone = (data.phone || '').toString().trim();
@@ -173,7 +186,7 @@ function handleEventRegistration(data) {
 /* =============================== AFFILIATE =============================== */
 
 function handleEventAffiliate(data) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Affiliates');
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('AFFILIATES');
 
   var name = (data.name || '').toString().trim();
   var gender = (data.gender || '').toString().trim();
