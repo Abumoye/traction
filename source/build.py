@@ -29,11 +29,36 @@ CONTENT = ROOT / "content"
 DIST = ROOT / "dist"
 
 env = Environment(loader=FileSystemLoader(str(ROOT / "templates")))
+env.filters["tojson"] = lambda obj: json.dumps(obj, indent=2, ensure_ascii=False)
 
 
 def load(path: Path):
     with open(path, encoding="utf-8") as f:
         return json.load(f)
+
+
+def build_faqpage_schema(data):
+    """Auto-derive FAQPage JSON-LD from any 'faq' sections already on the
+    page, so FAQ structured data never has to be hand-duplicated (and can
+    never drift from what's actually visible on the page)."""
+    entries = []
+    for sec in data.get("sections", []):
+        if sec.get("type") == "faq":
+            entries.extend(sec.get("entries", []))
+    if not entries:
+        return None
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": e["q"],
+                "acceptedAnswer": {"@type": "Answer", "text": e["a"]},
+            }
+            for e in entries
+        ],
+    }
 
 
 def write(path: Path, html: str):
@@ -47,8 +72,19 @@ def render_json_page(json_path: Path):
     route = data.pop("_route", None)
     if route is None:
         raise ValueError(f"{json_path} is missing a _route block")
+
+    # Any page can carry a top-level "schema" array of raw schema.org
+    # objects (Event, BreadcrumbList, WebSite, etc.) in its content JSON;
+    # base.html renders each as its own <script type="application/ld+json">.
+    # FAQPage is added automatically for any page with a 'faq' section,
+    # unless the page already supplies its own FAQPage block.
+    schema = list(data.pop("schema", []))
+    faqpage = build_faqpage_schema(data)
+    if faqpage and not any(s.get("@type") == "FAQPage" for s in schema):
+        schema.append(faqpage)
+
     tpl = env.get_template(route["template"])
-    html = tpl.render(path=route["url"], **data)
+    html = tpl.render(path=route["url"], schema=schema, **data)
     write(DIST / route["output"], html)
 
 
