@@ -315,5 +315,227 @@
         "href": "/articles/what-is-hmo-nigeria/"
       }
     ]
-  }
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Services",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Staff Outsourcing & HR Management",
+          "item": "https://tolnigeria.com/services/staff-outsourcing/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Staff Outsourcing & Workforce Outsourcing Nigeria",
+      "alternateName": [
+        "HR Outsourcing Nigeria",
+        "Manpower Outsourcing Nigeria",
+        "Workforce Outsourcing Nigeria",
+        "Payroll Outsourcing Nigeria"
+      ],
+      "serviceType": "Staff Outsourcing and HR Management",
+      "description": "Full-cycle staff outsourcing and HR management for businesses across Nigeria. Services include staff sourcing and placement, payroll administration and statutory compliance, employee lifecycle management, HR policy and compliance, performance and attendance oversight, and HR advisory and structural support. Every placement includes pre-employment training, skills-based evaluation, IQ testing, background checks, compulsory medical checks, and full onboarding, followed by quarterly corporate check-ins, bi-annual group training, and immediate staff replacement where needed. Available nationwide across all 36 states and the FCT for real estate, construction, mining, hospitality, FMCG, agriculture, technology, and banking businesses.",
+      "keywords": "staff outsourcing Nigeria, HR outsourcing Nigeria, outsourcing company Abuja, payroll outsourcing Nigeria, recruitment mining Nigeria, construction staff outsourcing, hospitality staff outsourcing, FMCG outsourcing Nigeria, agriculture recruitment Nigeria, banking outsourcing Nigeria, real estate staff outsourcing, logistics outsourcing Nigeria, technology staff outsourcing Nigeria, workforce outsourcing Nigeria, workforce management Nigeria",
+      "provider": {
+        "@type": "Organization",
+        "name": "Traction Outsourcing Limited",
+        "description": "Traction Outsourcing Limited is a management consulting and HR solutions firm based in Abuja, Nigeria, serving clients across all major industries throughout Africa.",
+        "url": "https://tolnigeria.com/",
+        "sameAs": "https://www.wikidata.org/wiki/Q140694466",
+        "telephone": "+234-805-203-3145",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "26, Algiers Street, Wuse Zone 5",
+          "addressLocality": "Abuja",
+          "addressRegion": "FCT",
+          "postalCode": "900285",
+          "addressCountry": "NG"
+        }
+      },
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "Abuja (FCT)",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Nigeria"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Lagos",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Nigeria"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Rivers",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Nigeria"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Kano",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Nigeria"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Ogun",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Nigeria"
+          }
+        },
+        {
+          "@type": "Country",
+          "name": "Nigeria"
+        }
+      ],
+      "url": "https://tolnigeria.com/services/staff-outsourcing/",
+      "image": "https://tolnigeria.com/images/og/og-staff-outsourcing.jpg",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Staff Outsourcing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Staff Sourcing and Placement",
+              "description": "Recruitment and placement of verified candidates, sourced and screened through ATH Recruiters, across all industries including mining, construction, hospitality, FMCG, agriculture, real estate, logistics, technology, and banking."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Payroll Administration and Statutory Compliance",
+              "description": "Accurate, timely payroll processing with full compliance to Nigerian statutory requirements, including PAYE, pension, NHF, ITF, and NSITF remittances."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Employee Lifecycle Management",
+              "description": "HR processes covering the full employee lifecycle from onboarding to exit, keeping the workforce organised, documented, and audit-ready at every stage."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "HR Policy & Compliance",
+              "description": "Development and maintenance of policy handbooks, SLAs, and staff documentation to keep the client business protected and consistent."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Performance & Attendance Oversight",
+              "description": "Ongoing tracking of attendance and performance so issues surface early rather than becoming problems discovered too late."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "HR Advisory & Structural Support",
+              "description": "Design and management of organisational structure changes, tying into corporate restructuring services where needed."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pre-Employment Training",
+              "description": "Structured pre-employment training for all candidates before placement, covering workplace readiness and role-specific preparation."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Skills-Based Evaluation and IQ Testing",
+              "description": "Practical skills assessments and standardised IQ tests administered to all candidates before placement."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Background Checks and Medical Checks",
+              "description": "Comprehensive background verification and compulsory medical checks for all confirmed staff before they resume."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Full Onboarding Management",
+              "description": "Complete onboarding management including documentation, orientation, policy handover, and role briefing before staff resume."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Staff Replacement",
+              "description": "Immediate staff replacement where a placed staff member does not work out. Terms apply by staff cadre."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Nationwide Recruitment",
+              "description": "Recruitment and staff management across all 36 Nigerian states and the FCT, not only Abuja."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Quarterly Corporate Check-Ins",
+              "description": "Physical and virtual quarterly check-ins with all outsourced staff to monitor welfare, performance, and engagement."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bi-Annual Group Training",
+              "description": "Customised bi-annual group training sessions for all outsourced staff, addressing role-specific development and business alignment."
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

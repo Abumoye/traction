@@ -93,5 +93,35 @@
         "Want to understand how HMO works for Nigerian businesses? Read our guide: <a href=\"/articles/what-is-hmo-nigeria/\">What Is HMO in Nigeria?</a>"
       ]
     }
+  ],
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Hallmark HMO Partners with Traction Outsourcing",
+      "description": "Traction Outsourcing partners with Hallmark HMO, giving businesses and individuals affordable HMO plans across 10,000+ hospitals in Nigeria.",
+      "datePublished": "2026-07-14",
+      "dateModified": "2026-07-19",
+      "url": "https://tolnigeria.com/partnerships/hallmark-hmo/",
+      "mainEntityOfPage": "https://tolnigeria.com/partnerships/hallmark-hmo/",
+      "image": "https://tolnigeria.com/images/articles/hallmark-hmo.jpg",
+      "about": [
+        { "@type": "Organization", "name": "Hallmark HMO" },
+        { "@type": "Organization", "name": "Traction Outsourcing Limited", "url": "https://tolnigeria.com/" }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Traction Outsourcing Limited",
+        "description": "Traction Outsourcing Limited is a management consulting and HR solutions firm based in Abuja, Nigeria, serving clients across all major industries throughout Africa. Services include talent acquisition, HR process outsourcing, learning and development, startup structuring, corporate restructuring, business strategy consulting, and corporate retreats.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
+        }
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Traction Outsourcing Limited"
+      }
+    }
   ]
 }

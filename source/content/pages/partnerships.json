@@ -76,5 +76,20 @@
       ]
     }
   ],
-  "has_form": true
+  "has_form": true,
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Corporate Partnerships",
+      "url": "https://tolnigeria.com/partnerships/",
+      "description": "Traction Outsourcing partners with leading HMO, logistics, security, real estate, and media brands across Nigeria, including HMO cover for staff and families.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Traction Outsourcing Limited",
+        "url": "https://tolnigeria.com/"
+      },
+      "image": "https://tolnigeria.com/images/traction-opengraph.png"
+    }
+  ]
 }
