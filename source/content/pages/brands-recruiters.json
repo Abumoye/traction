@@ -11,6 +11,92 @@
     "image": "/images/og/og-ath-recruiters.jpg"
   },
   "has_form": true,
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Brands",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ATH Recruiters",
+          "item": "https://tolnigeria.com/brands/recruiters/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": ["EmploymentAgency", "LocalBusiness"],
+      "name": "Abuja Talent Hub - ATH Recruiters",
+      "alternateName": ["Abuja Talent Hub", "ATH Recruiters", "ATH"],
+      "sameAs": ["https://maps.app.goo.gl/wRXnUb2ABAwSTNpT8"],
+      "description": "ATH Recruiters, also known as Abuja Talent Hub, is an affordable recruitment agency in Nigeria connecting small businesses and private individuals with verified, ready-to-work staff, including graduate recruitment and mass hiring.",
+      "url": "https://tolnigeria.com/brands/recruiters/",
+      "logo": "https://tolnigeria.com/images/ath-recruiters.png",
+      "image": "https://tolnigeria.com/images/og/og-ath-recruiters.jpg",
+      "telephone": "+234-812-507-8087",
+      "priceRange": "$$",
+      "currenciesAccepted": "NGN",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "26, Algiers Street, Wuse Zone 5",
+        "addressLocality": "Abuja",
+        "addressRegion": "FCT",
+        "postalCode": "900285",
+        "addressCountry": "NG"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Abuja" },
+        { "@type": "Country", "name": "Nigeria" }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Small and growing businesses, private individuals and households, and startups in Abuja and across Nigeria seeking affordable, fast staffing without a full in-house HR department"
+      },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Traction Outsourcing Limited",
+        "description": "Traction Outsourcing Limited is a management consulting and HR solutions firm based in Abuja, Nigeria, serving clients across all major industries throughout Africa. Services include talent acquisition, HR process outsourcing, learning and development, startup structuring, corporate restructuring, business strategy consulting, and corporate retreats.",
+        "url": "https://tolnigeria.com/",
+        "sameAs": "https://www.wikidata.org/wiki/Q140694466"
+      },
+      "knowsAbout": ["Mass Recruitment", "Graduate Recruitment", "Staff Training", "Manpower Outsourcing", "Domestic Staffing", "Hospitality Staffing", "Corporate Onboarding"],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Plan A: High-Volume Staffing",
+          "description": "Mass recruitment and high-attrition staffing with unlimited candidate requests and 24-48 hour turnaround during subscription."
+        },
+        {
+          "@type": "Offer",
+          "name": "Plan B: Specialized Talent Search",
+          "description": "One-off sourcing and selection for specialized or leadership roles, with qualified candidates delivered in 2 weeks or less."
+        },
+        {
+          "@type": "Offer",
+          "name": "Plan C: End-to-End Executive HR Partnership",
+          "description": "Fully managed, consultant-led recruitment including panel interviews, HR compliance support, and staff training, for a minimum of 5 recruited staff."
+        },
+        {
+          "@type": "Offer",
+          "name": "Home Plan: Home Recruitment",
+          "description": "One-off domestic staff recruitment for homeowners, covering nannies, cooks, cleaners, drivers, gardeners, and other home-based roles, for a single one-time fee with a free one-time replacement within the first month."
+        }
+      ]
+    }
+  ],
   "hero": {
     "eyebrow": "ATH Recruiters — Abuja Talent Hub",
     "headline": "Reliable Staff, Fast. Anywhere In Nigeria.",

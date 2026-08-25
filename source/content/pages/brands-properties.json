@@ -10,6 +10,57 @@
     "description": "Traction Properties and Managers is a premium property management and brokerage firm in Abuja, Nigeria. Explore properties for sale and rent.",
     "image": "/images/og/og-traction-properties.jpg"
   },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Brands",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Traction Properties",
+          "item": "https://tolnigeria.com/brands/properties/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Traction Properties and Managers",
+      "alternateName": "Traction Properties",
+      "description": "Traction Properties and Managers is a premium property management and real estate brokerage firm based in Abuja, Nigeria, offering property management, commercial brokerage, and real estate advisory services, including properties for sale and rent, tenant management, and facility management.",
+      "url": "https://tolnigeria.com/brands/properties/",
+      "telephone": "+234-805-203-3145",
+      "email": "properties@tolnigeria.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "26, Algiers Street, Wuse Zone 5",
+        "addressLocality": "Abuja",
+        "addressRegion": "FCT",
+        "addressCountry": "NG"
+      },
+      "areaServed": "Abuja, Nigeria",
+      "knowsAbout": ["Tenant Management", "Tenant Verification", "Rent Collection", "Legal Representation", "Facility Management", "Renovation & Maintenance"],
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Traction Outsourcing Limited",
+        "url": "https://tolnigeria.com/"
+      },
+      "image": "https://tolnigeria.com/images/og/og-traction-properties.jpg"
+    }
+  ],
   "hero": {
     "eyebrow": "Traction Properties",
     "headline": "Property Management & Real Estate Brokerage in Abuja",

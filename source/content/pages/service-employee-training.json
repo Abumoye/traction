@@ -364,5 +364,455 @@
     "text": "Speak with our consulting team about how Corporate Trainings can work for your business.",
     "button": "Request a Training Invoice",
     "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Corporate%20Trainings%20at%20Traction%20Outsourcing%20Limited."
-  }
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Services",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Employee Training",
+          "item": "https://tolnigeria.com/services/employee-training/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Employee Training",
+      "provider": {
+        "@type": "Organization",
+        "name": "Traction Outsourcing Limited",
+        "description": "Traction Outsourcing Limited is a management consulting and HR solutions firm based in Abuja, Nigeria, serving clients across all major industries throughout Africa. Services include talent acquisition, HR process outsourcing, learning and development, startup structuring, corporate restructuring, business strategy consulting, and corporate retreats.",
+        "url": "https://tolnigeria.com/",
+        "sameAs": "https://www.wikidata.org/wiki/Q140694466",
+        "telephone": "+234-805-203-3145",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "26, Algiers Street, Wuse Zone 5",
+          "addressLocality": "Abuja",
+          "addressRegion": "FCT",
+          "postalCode": "900285",
+          "addressCountry": "NG"
+        }
+      },
+      "areaServed": "Nigeria",
+      "url": "https://tolnigeria.com/services/employee-training/",
+      "description": "Certificate training courses across leadership, finance, AI and computer literacy, workplace management, and customer service, delivered online and in person in Nigeria, Rwanda, Ghana, and Kenya.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Employee Training Catalogue",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Leadership & Management Development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Business Finance & Accounting"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "AI & Computer Literacy"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Workplace Management"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Customer Service & Client Experience"
+            }
+          }
+        ]
+      },
+      "image": "https://tolnigeria.com/images/traction-opengraph.png"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Traction Outsourcing Professional Training Catalogue",
+      "description": "Certificate training courses delivered online and in-person across Abuja, Lagos, and Nigeria.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Course",
+            "name": "Strategic Management & Business Development",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "timeRequired": "P2D",
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "2 Days",
+            "availableLanguage": "en",
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "online",
+              "location": "Nigeria"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Course",
+            "name": "Change Management & Corporate Restructuring",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "2 Days",
+            "url": "https://tolnigeria.com/services/employee-training/#leadership-management"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Course",
+            "name": "People Management for Nigerian Professionals",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "3 Days",
+            "description": "People management training for Nigerian business owners, team leads, and HR professionals. Available in Abuja and Lagos.",
+            "url": "https://tolnigeria.com/services/employee-training/#leadership-management"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Course",
+            "name": "Team Building & Collaboration",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "1 Day",
+            "url": "https://tolnigeria.com/services/employee-training/#leadership-management"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Course",
+            "name": "Financial Management for CEOs",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": "onsite",
+            "courseWorkload": "3 Weekends",
+            "description": "Financial management training designed for Nigerian CEOs and business owners. Physical classes in Abuja and Lagos.",
+            "url": "https://tolnigeria.com/services/employee-training/#business-finance-accounting"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Course",
+            "name": "Financial Management for Non-Finance Managers",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "2 Weekends",
+            "url": "https://tolnigeria.com/services/employee-training/#business-finance-accounting"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Course",
+            "name": "Management Account Preparation",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "4 Weekends",
+            "url": "https://tolnigeria.com/services/employee-training/#business-finance-accounting"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Course",
+            "name": "Excel Essentials for Accountants",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "3 Weekends",
+            "url": "https://tolnigeria.com/services/employee-training/#business-finance-accounting"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Course",
+            "name": "Business Analysis (Foundation)",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "3 Days",
+            "url": "https://tolnigeria.com/services/employee-training/#business-finance-accounting"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Course",
+            "name": "Introduction to AI for Business",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "4 Days",
+            "description": "AI literacy and business application training for Nigerian professionals. Available online and in Abuja.",
+            "url": "https://tolnigeria.com/services/employee-training/#ai-computer-literacy"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@type": "Course",
+            "name": "Digital Literacy & Workplace Technology",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "2 Days",
+            "url": "https://tolnigeria.com/services/employee-training/#ai-computer-literacy"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "item": {
+            "@type": "Course",
+            "name": "Microsoft Tools Essentials Introduction",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "4 Days",
+            "url": "https://tolnigeria.com/services/employee-training/#ai-computer-literacy"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "item": {
+            "@type": "Course",
+            "name": "Google Workspace Essentials Introduction",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "3 Days",
+            "url": "https://tolnigeria.com/services/employee-training/#ai-computer-literacy"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "item": {
+            "@type": "Course",
+            "name": "Introduction to Productivity & Project Management Tools",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "2 Days",
+            "url": "https://tolnigeria.com/services/employee-training/#ai-computer-literacy"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "item": {
+            "@type": "Course",
+            "name": "Workplace Digital Safety & Security",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "3 Days",
+            "url": "https://tolnigeria.com/services/employee-training/#ai-computer-literacy"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "item": {
+            "@type": "Course",
+            "name": "Mental Health Awareness for Managers",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "1 Day",
+            "description": "Mental health awareness training for managers in Nigeria. Delivered in Abuja and Lagos.",
+            "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "item": {
+            "@type": "Course",
+            "name": "Managing PCOS, Work-Life Balance, and Burnout Prevention",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "2 Days",
+            "description": "PCOS management, work-life balance, and burnout prevention training for Nigerian professionals. Available in Abuja, Lagos, and online across Nigeria.",
+            "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "item": {
+            "@type": "Course",
+            "name": "Employee Engagement and Retention Strategies",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "3 Days",
+            "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "item": {
+            "@type": "Course",
+            "name": "Building Supportive Workplace Cultures",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "2 Days",
+            "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "item": {
+            "@type": "Course",
+            "name": "Critical Thinking & Problem-Solving Skills",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "2 Days",
+            "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "item": {
+            "@type": "Course",
+            "name": "Emotional Intelligence & Interpersonal Skills",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "1 Day",
+            "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "item": {
+            "@type": "Course",
+            "name": "Human Resource Management",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "6 Weekends (12 Days)",
+            "description": "Comprehensive human resource management course for Nigerian HR professionals and business owners. Abuja and Lagos.",
+            "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "item": {
+            "@type": "Course",
+            "name": "Excel for Payroll Managers",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "3 Weekends (6 Days)",
+            "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "item": {
+            "@type": "Course",
+            "name": "Workplace Governance & Policy Development",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "2 Days",
+            "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "item": {
+            "@type": "Course",
+            "name": "Customer Service Fundamentals",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "3 Weeks (6 Days)",
+            "description": "Customer service training for Nigerian businesses. Certificate course in Abuja and Lagos.",
+            "url": "https://tolnigeria.com/services/employee-training/#customer-service"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "item": {
+            "@type": "Course",
+            "name": "Client Experience Specialist",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "3 Weeks (6 Days)",
+            "url": "https://tolnigeria.com/services/employee-training/#customer-service"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "item": {
+            "@type": "Course",
+            "name": "Cultural Intelligence in Nigerian Customer Service",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "3 Days",
+            "url": "https://tolnigeria.com/services/employee-training/#customer-service"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "item": {
+            "@type": "Course",
+            "name": "Turning Angry Customers into Advocates",
+            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "courseMode": ["online", "onsite"],
+            "courseWorkload": "3 Days",
+            "description": "Practical training for handling difficult customers in Nigeria. Available for teams in Abuja and Lagos.",
+            "url": "https://tolnigeria.com/services/employee-training/#customer-service"
+          }
+        }
+      ]
+    }
+  ]
 }

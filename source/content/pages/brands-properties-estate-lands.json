@@ -10,6 +10,38 @@
     "description": "Buy affordable estate land in Abuja. Plots available in Kuje, Jikwoyi, Asokoro 2, Asokoro 2 behind NAF Valley Estate, Katampe Extension 2, and Guzape. Prices from N3,000,000. Contact Traction Properties today.",
     "image": "/images/og/og-traction-properties.jpg"
   },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Traction Properties and Managers",
+      "url": "https://tolnigeria.com/brands/properties/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tolnigeria.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Traction Properties", "item": "https://tolnigeria.com/brands/properties/" },
+        { "@type": "ListItem", "position": 3, "name": "Estate Lands in Abuja", "item": "https://tolnigeria.com/brands/properties/estate-lands/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Affordable Estate Lands in Abuja",
+      "description": "Buy affordable estate land in Abuja with verified titles and flexible payment plans. Plots available in Guzape, Asokoro 2, Asokoro 2 behind NAF Valley Estate, Katampe Extension 2, Jikwoyi, and Kuje, starting from ₦3,000,000.",
+      "url": "https://tolnigeria.com/brands/properties/estate-lands/",
+      "serviceType": "Real Estate Land Sales",
+      "areaServed": "Abuja, Nigeria",
+      "provider": {
+        "@type": "RealEstateAgent",
+        "name": "Traction Properties and Managers",
+        "url": "https://tolnigeria.com/brands/properties/"
+      },
+      "image": "https://tolnigeria.com/images/og/og-traction-properties.jpg"
+    }
+  ],
   "hero": {
     "eyebrow": "Prime Real Estate · Abuja, Nigeria",
     "headline": "Affordable Estate Lands In Abuja.",
