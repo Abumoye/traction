@@ -8,7 +8,8 @@
   "meta": {
     "title": "Property Management & Brokerage Abuja | Traction Properties",
     "description": "Traction Properties and Managers is a premium property management and brokerage firm in Abuja, Nigeria. Explore properties for sale and rent.",
-    "image": "/images/og/og-traction-properties.jpg"
+    "image": "/images/og/og-traction-properties.jpg",
+    "image_alt": "White text/logo card on a solid dark blue background, showing a white house-shaped roof icon beside the wordmark 'traction Properties & Managers'."
   },
   "schema": [
     {

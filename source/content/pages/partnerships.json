@@ -2,7 +2,8 @@
   "_route": { "template": "flex.html", "output": "partnerships/index.html", "url": "/partnerships/" },
   "meta": {
     "title": "Partnerships | Traction Outsourcing Limited",
-    "description": "Traction Outsourcing partners with leading HMO, logistics, security, real estate, and media brands across Nigeria, including HMO cover for staff and families."
+    "description": "Traction Outsourcing partners with leading HMO, logistics, security, real estate, and media brands across Nigeria, including HMO cover for staff and families.",
+    "image_alt": "Traction Outsourcing Limited team headshots beside the company logo and the tagline Built by Africans, for Africa."
   },
   "hero": {
     "eyebrow": "Partnerships",
