@@ -172,6 +172,27 @@
   },
   "services": [
     {
+      "icon": "fa-user-check",
+      "title": "HR & Workforce Outsourcing",
+      "text": "Outsource your recruitment, onboarding, and payroll to local experts. We manage statutory compliance including ITF, NSITF, and PenCom so you can scale without the legal liabilities.",
+      "cta": "Explore Outsourcing Options",
+      "href": "/services/staff-outsourcing/"
+    },
+    {
+      "icon": "fa-plane",
+      "title": "Corporate Retreats & Events",
+      "text": "High-end international retreats combining executive strategy sessions with premier travel. Our next retreat: T-ICR 2026 in Kigali, Rwanda, November 22-30.",
+      "cta": "Learn More",
+      "href": "/services/corporate-retreats/"
+    },
+    {
+      "icon": "fa-chalkboard-user",
+      "title": "Corporate and Professional Trainings",
+      "text": "We design and deliver targeted training programmes that close skill gaps, shift workplace culture, and build the internal capacity your business needs to operate without constant senior-level intervention.",
+      "cta": "Learn More",
+      "href": "/services/employee-training/"
+    },
+    {
       "icon": "fa-sitemap",
       "title": "Startup Structuring & Governance",
       "text": "Build your business on a rock-solid foundation. We guide you through compliant CAC registration, co-founder equity agreements, IP protection, and governance frameworks that appeal to investors.",
@@ -191,27 +212,6 @@
       "text": "Strategic planning, feasibility studies, and negotiation support for entrepreneurs navigating growth, market entry, and critical structural decisions.",
       "cta": "Learn More",
       "href": "/services/business-advisory/"
-    },
-    {
-      "icon": "fa-chalkboard-user",
-      "title": "Corporate and Professional Trainings",
-      "text": "We design and deliver targeted training programmes that close skill gaps, shift workplace culture, and build the internal capacity your business needs to operate without constant senior-level intervention.",
-      "cta": "Learn More",
-      "href": "/services/employee-training/"
-    },
-    {
-      "icon": "fa-plane",
-      "title": "Corporate Retreats & Events",
-      "text": "High-end international retreats combining executive strategy sessions with premier travel. Our next retreat: T-ICR 2026 in Kigali, Rwanda, November 22-30.",
-      "cta": "Learn More",
-      "href": "/services/corporate-retreats/"
-    },
-    {
-      "icon": "fa-user-check",
-      "title": "HR & Workforce Outsourcing",
-      "text": "Outsource your recruitment, onboarding, and payroll to local experts. We manage statutory compliance including ITF, NSITF, and PenCom so you can scale without the legal liabilities.",
-      "cta": "Explore Outsourcing Options",
-      "href": "/services/staff-outsourcing/"
     }
   ],
   "why_us": {
