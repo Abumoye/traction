@@ -5,13 +5,13 @@
     "url": "/services/staff-outsourcing/"
   },
   "meta": {
-    "title": "Staff Outsourcing & Workforce Outsourcing Nigeria | Recruitment, Payroll & HR Management | Traction Outsourcing Limited",
+    "title": "HR & Workforce Outsourcing | Recruitment, Payroll & HR Management | Traction Outsourcing Limited",
     "description": "Traction Outsourcing Limited provides full staff outsourcing and workforce outsourcing services for businesses across Nigeria — including recruitment, payroll management, and HR for real estate, construction, mining, hospitality, FMCG, agriculture, technology, and banking.",
     "image": "/images/og/og-staff-outsourcing.jpg"
   },
   "hero": {
     "eyebrow": "Staff Outsourcing & HR Management",
-    "headline": "Staff Outsourcing & Workforce Outsourcing Nigeria",
+    "headline": "HR & Workforce Outsourcing",
     "sub": "We manage the people side of your business, from sourcing and payroll to compliance and HR administration, so you can focus on running the business, not the paperwork.",
     "cta": {
       "label": "Request a Free Consultation",
@@ -336,7 +336,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Staff Outsourcing & HR Management",
+          "name": "HR & Workforce Outsourcing",
           "item": "https://tolnigeria.com/services/staff-outsourcing/"
         }
       ]
@@ -344,14 +344,15 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Staff Outsourcing & Workforce Outsourcing Nigeria",
+      "name": "HR & Workforce Outsourcing",
       "alternateName": [
         "HR Outsourcing Nigeria",
         "Manpower Outsourcing Nigeria",
         "Workforce Outsourcing Nigeria",
-        "Payroll Outsourcing Nigeria"
+        "Payroll Outsourcing Nigeria",
+        "Staff Outsourcing & Workforce Outsourcing Nigeria"
       ],
-      "serviceType": "Staff Outsourcing and HR Management",
+      "serviceType": "HR and Workforce Outsourcing",
       "description": "Full-cycle staff outsourcing and HR management for businesses across Nigeria. Services include staff sourcing and placement, payroll administration and statutory compliance, employee lifecycle management, HR policy and compliance, performance and attendance oversight, and HR advisory and structural support. Every placement includes pre-employment training, skills-based evaluation, IQ testing, background checks, compulsory medical checks, and full onboarding, followed by quarterly corporate check-ins, bi-annual group training, and immediate staff replacement where needed. Available nationwide across all 36 states and the FCT for real estate, construction, mining, hospitality, FMCG, agriculture, technology, and banking businesses.",
       "keywords": "staff outsourcing Nigeria, HR outsourcing Nigeria, outsourcing company Abuja, payroll outsourcing Nigeria, recruitment mining Nigeria, construction staff outsourcing, hospitality staff outsourcing, FMCG outsourcing Nigeria, agriculture recruitment Nigeria, banking outsourcing Nigeria, real estate staff outsourcing, logistics outsourcing Nigeria, technology staff outsourcing Nigeria, workforce outsourcing Nigeria, workforce management Nigeria",
       "provider": {
