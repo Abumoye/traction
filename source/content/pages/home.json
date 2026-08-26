@@ -255,25 +255,25 @@
     ]
   },
   "insights": {
-    "title": "Latest Insights",
+    "title": "Latest Events & Insights",
     "cta": {
       "label": "View All Articles",
       "href": "/articles/"
     },
     "entries": [
       {
+        "tag": "Corporate Events",
+        "title": "T-ICR 2026 Kigali Rwanda",
+        "text": "Join CEOs and executives in Kigali, Rwanda, November 22-30, for our flagship international corporate retreat.",
+        "href": "/events/",
+        "image": "/images/og/og-events.jpg"
+      },
+      {
         "tag": "Business Travel",
         "title": "Kigali: Africa's Cleanest City and Rising Business Hub",
         "text": "Why Nigerian executives are taking Kigali seriously, and why you should too.",
         "href": "/articles/kigali-africa-business-hub/",
         "image": "/images/articles/kigali-africa-business-hub.jpg"
-      },
-      {
-        "tag": "Business Growth",
-        "title": "What Is Traction in Business?",
-        "text": "The measurable evidence that a business idea is becoming real, and how to build it in the Nigerian market.",
-        "href": "/articles/what-is-traction-in-business/",
-        "image": "/images/articles/what-is-traction-in-business.jpg"
       },
       {
         "tag": "HR Compliance",
