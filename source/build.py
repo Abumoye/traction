@@ -264,6 +264,7 @@ def main():
     articles_meta = {
         "title": "Articles & Insights | Traction Outsourcing Limited",
         "description": "Read expert corporate advisory articles covering workforce management, business structuring, organogram development, and recruitment trends across Nigeria.",
+        "image_alt": "Traction Outsourcing Limited team headshots beside the company logo and the tagline Built by Africans, for Africa.",
     }
     articles_route = {"url": "/articles/"}
     articles_schema = [
