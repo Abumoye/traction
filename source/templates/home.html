@@ -3,7 +3,7 @@
 
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">{{ hero.eyebrow }}</span>
+    {% if hero.eyebrow %}<span class="eyebrow">{{ hero.eyebrow }}</span>{% endif %}
     <h1>{{ hero.headline }}</h1>
     <p class="lede">{{ hero.sub }}</p>
     <div class="hero-actions">
