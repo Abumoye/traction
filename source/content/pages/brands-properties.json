@@ -65,7 +65,7 @@
   "hero": {
     "eyebrow": "Traction Properties",
     "headline": "Property Management & Real Estate Brokerage in Abuja",
-    "sub": "Traction Properties and Managers is a premier property management, commercial brokerage, and real estate advisory firm based in the heart of Abuja, Nigeria. Built on deep structural transparency and institutional market intelligence, we assist property owners, corporate investors, and premium tenants navigate asset evaluation with confidence. Our systems combine comprehensive facility oversight with risk-adjusted investment blueprints to safeguard luxury residential and commercial assets.",
+    "sub": "Traction Properties and Managers is a property management, commercial brokerage, and real estate advisory firm based in Abuja, Nigeria. We help property owners, corporate investors, and tenants buy, sell, and manage residential and commercial property, handling everything from due diligence and documentation to day-to-day tenant management and facility upkeep.",
     "image": "/images/traction-properties-logo.png",
     "image_alt": "Traction Properties and Managers"
   },
@@ -99,7 +99,7 @@
     {
       "type": "grid",
       "bg": "ink",
-      "heading": "<span class=\"eyebrow\">Why Traction Properties</span><br>Properties You Can TRUST. Backed by Professionals.",
+      "heading": "<span class=\"eyebrow\">Why Traction Properties</span><br>Backed by Professionals You Can Trust.",
       "sub": "We handle every step of the acquisition process, from due diligence to documentation, so you can invest with confidence.",
       "columns": 3,
       "style": "icon-list",
@@ -124,7 +124,7 @@
     {
       "type": "grid",
       "heading": "We Can Manage Your Property For You",
-      "sub": "We provide full-scale, hands-off property management solutions for homeowners and commercial landlords across Abuja, ensuring steady asset yield and pristine structural conservation.",
+      "sub": "We provide full property management for homeowners and commercial landlords across Abuja, handling tenants, rent, maintenance, and repairs so you do not have to.",
       "columns": 3,
       "entries": [
         {
@@ -156,6 +156,28 @@
           "icon": "fa-hard-hat",
           "title": "Renovation & Maintenance",
           "text": "General contracting, site maintenance, and renovation project management."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "What services does Traction Properties offer in Abuja?",
+          "a": "Traction Properties and Managers provides property management, commercial brokerage, and real estate advisory in Abuja, Nigeria. This includes tenant management, tenant verification, rent collection, legal representation, facility management, and renovation and maintenance for homeowners, corporate investors, and commercial landlords."
+        },
+        {
+          "q": "Does Traction Properties manage properties I already own, or only handle sales?",
+          "a": "Both. We handle full-scale property management for homeowners and commercial landlords, including tenant management, rent collection, and maintenance, and we also broker property sales and rentals across Abuja."
+        },
+        {
+          "q": "Where does Traction Properties operate?",
+          "a": "Traction Properties is based in Abuja, Nigeria, and manages and brokers properties across the city, including areas such as Kado, Mabushi, and Wuse."
+        },
+        {
+          "q": "How do I list a property or get a property manager through Traction Properties?",
+          "a": "Contact a property manager directly through the WhatsApp link on this page. Our team will walk you through the process, whether you are listing a property for sale or rent, or need ongoing property management."
         }
       ]
     }
