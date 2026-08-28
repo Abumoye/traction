@@ -20,8 +20,8 @@
   <div class="container">
     <a href="/articles/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Articles</a>
     <div class="article-layout">
-      <article class="article-body reveal">
-        <p class="dek">{{ dek }}</p>
+      <article class="article-body">
+        <p class="dek reveal">{{ dek }}</p>
 
         {% for sec in sections %}
           {% if sec.type == 'quote' %}
