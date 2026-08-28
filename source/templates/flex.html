@@ -110,6 +110,29 @@
     {% elif sec.type == 'quote' %}
       <div class="pull-quote reveal" style="max-width:760px;margin:0 auto;text-align:center;border-left:none;border-top:4px solid var(--orange);padding:24px 0 0;">{{ sec.text }}</div>
 
+    {% elif sec.type == 'book' %}
+      <div class="book-showcase reveal">
+        <div class="book-cover"><img src="{{ sec.image }}" alt="{{ sec.image_alt | default(sec.title) }}" loading="lazy"></div>
+        <div class="book-info">
+          {% if sec.eyebrow %}<span class="eyebrow">{{ sec.eyebrow }}</span>{% endif %}
+          <h2 style="text-align:left;font-size:32px;">{{ sec.title }}</h2>
+          {% if sec.subtitle %}<p class="book-subtitle">{{ sec.subtitle }}</p>{% endif %}
+          {% for p in sec.blurb_paragraphs %}<p>{{ p }}</p>{% endfor %}
+          <div class="book-price-row">
+            {% if sec.price_value %}<span class="book-price-value">{{ sec.price_value }}</span>{% endif %}
+            {% if sec.price_sale %}<span class="book-price-sale">{{ sec.price_sale }}</span>{% endif %}
+          </div>
+          {% if sec.price_note %}<p class="book-price-note">{{ sec.price_note }}</p>{% endif %}
+          {% if sec.cta %}<a href="{{ sec.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ sec.cta }}</a>{% endif %}
+          {% if sec.sample_text %}
+          <details class="book-sample">
+            <summary>{{ sec.sample_label | default('Read a Sample') }}</summary>
+            <div class="book-sample-text">{{ sec.sample_text | safe }}</div>
+          </details>
+          {% endif %}
+        </div>
+      </div>
+
     {% elif sec.type == 'cta' %}
       <div class="cta-band reveal">
         <h2>{{ sec.heading }}</h2>

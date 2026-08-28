@@ -342,6 +342,29 @@ section.bg-ash .logo-chip { background: var(--white); }
 .faq-item[open] summary::after { transform: rotate(45deg); }
 .faq-item .faq-answer { padding: 0 4px 22px; color: var(--ink-soft); font-size: 15.5px; }
 
+/* ---------------- Book showcase ---------------- */
+.book-showcase { display: grid; grid-template-columns: 340px 1fr; gap: 52px; align-items: start; }
+@media (max-width: 780px) { .book-showcase { grid-template-columns: 1fr; } }
+.book-cover img { width: 100%; border-radius: var(--r-lg); box-shadow: 0 24px 48px rgba(0,0,0,0.18); }
+.book-subtitle { font-size: 17px; font-style: italic; color: var(--ink-faint); margin: -6px 0 18px; }
+.book-price-row { display: flex; align-items: baseline; gap: 14px; margin: 22px 0 4px; flex-wrap: wrap; }
+.book-price-value { font-size: 18px; color: var(--ink-faint); text-decoration: line-through; }
+.book-price-sale { font-size: 34px; font-weight: 700; color: var(--orange); letter-spacing: -0.01em; }
+.book-price-note { font-size: 13px; font-weight: 600; color: var(--orange); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 22px; }
+.book-sample { border-top: 1px solid var(--hairline); margin-top: 28px; }
+.book-sample summary {
+  cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; padding: 20px 0; font-weight: 600; font-size: 16px;
+}
+.book-sample summary::-webkit-details-marker { display: none; }
+.book-sample summary::after { content: "+"; font-size: 22px; color: var(--orange); flex-shrink: 0; transition: transform 0.3s var(--ease); }
+.book-sample[open] summary::after { transform: rotate(45deg); }
+.book-sample-text {
+  padding: 0 0 24px; color: var(--ink-soft); font-size: 15.5px; line-height: 1.7;
+  max-height: 420px; overflow-y: auto; border-bottom: 1px solid var(--hairline);
+}
+.book-sample-text p { margin: 0 0 14px; }
+
 /* ---------------- CTA band ---------------- */
 .cta-band {
   background: var(--ink);
