@@ -6,7 +6,7 @@
   },
   "meta": {
     "title": "Who is Prince Elijah Abumoye | Founder, Traction Outsourcing Limited",
-    "description": "Official biography of Prince Elijah Abumoye, visionary entrepreneur, author, corporate trainer, and founder of Traction Outsourcing Limited.",
+    "description": "Official biography of Prince Elijah Abumoye, founder of Traction Outsourcing Limited and author of Nigerian Bosses Are Bad. Entrepreneur, corporate trainer, and business leader based in Abuja, Nigeria.",
     "image": "/images/og/og-founder.jpg",
     "image_alt": "Portrait of Prince Elijah Abumoye, Founder of Traction Outsourcing Limited, wearing a blue traditional cap and agbada against a black background."
   },
@@ -152,6 +152,29 @@
         "availableLanguage": "English"
       },
       "image": "https://tolnigeria.com/images/prince-elijah-abumoye.jpg"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Nigerian Bosses Are Bad",
+      "alternateName": "Nigerian Bosses Are Bad: A Short Book on Perspective, Pressure, and the People Who Lead Us",
+      "author": {
+        "@type": "Person",
+        "name": "Prince Elijah Abumoye",
+        "url": "https://tolnigeria.com/founder/"
+      },
+      "bookFormat": "https://schema.org/EBook",
+      "image": "https://tolnigeria.com/images/books/nigerian-bosses-are-bad-cover.jpg",
+      "url": "https://tolnigeria.com/founder/",
+      "inLanguage": "en",
+      "description": "Somewhere in Lagos tonight, somebody is typing a resignation letter at 11 p.m. If you have worked under a Nigerian boss, you have said it at least once: this one is wicked, that woman does not have human blood, how can somebody treat people like this? Nigerian Bosses Are Bad is a short book on perspective, pressure, and the people who lead us.",
+      "offers": {
+        "@type": "Offer",
+        "price": "5000",
+        "priceCurrency": "NGN",
+        "availability": "https://schema.org/InStock",
+        "url": "https://tolnigeria.com/founder/"
+      }
     }
   ]
 }
