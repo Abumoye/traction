@@ -7,8 +7,8 @@
 
    SETUP REQUIRED (one-time, about 5 minutes):
    1. Create a free account at https://www.emailjs.com
-   2. Email Services -> Add New Service (e.g. connect a Gmail address)
-      -> copy the Service ID it gives you.
+   2. Email Services -> Add New Service -> connect the Gmail address
+      tractionoutsourcing@gmail.com -> copy the Service ID it gives you.
    3. Email Templates -> Create New Template. In the template body, use
       these variable names so they get filled in automatically:
         {{to_name}}        - the visitor's name
@@ -16,9 +16,20 @@
                               template's "To email" field)
         {{document_title}} - which resource they requested
         {{document_link}}  - the direct download link to send them
+        {{from_name}}      - "Traction Outsourcing Limited" (sent by the
+                              form on every submission, use it in the
+                              template's "From Name" field)
+        {{reply_to}}       - tractionoutsourcing@gmail.com (use it in the
+                              template's "Reply To" field, so a reply from
+                              the recipient comes straight back to you)
       -> copy the Template ID.
-   4. Account -> General -> copy your Public Key.
-   5. Paste all three values into the constants below and redeploy.
+   4. In that same template's settings, set "BCC" to
+      tractionoutsourcing@gmail.com. This is what sends you a copy every
+      time someone downloads a resource, at no extra cost (EmailJS bills
+      per send, not per recipient on the message).
+   5. Account -> General -> copy your Public Key.
+   6. Paste all three values (Service ID, Template ID, Public Key) into
+      the constants below and redeploy.
    Until these are filled in, the form will politely tell visitors it
    isn't ready yet instead of failing silently.
    ========================================================= */
@@ -107,7 +118,9 @@ document.addEventListener('DOMContentLoaded', function () {
             to_name: name,
             to_email: email,
             document_title: title,
-            document_link: fileUrl
+            document_link: fileUrl,
+            from_name: 'Traction Outsourcing Limited',
+            reply_to: 'tractionoutsourcing@gmail.com'
         }).then(function () {
             statusEl.textContent = 'Sent! Check ' + email + ' for the download link.';
             statusEl.style.color = '#1e7e34';

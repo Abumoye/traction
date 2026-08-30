@@ -15,6 +15,7 @@
     "headline": "Books and Resources",
     "sub": "Practical resources for professionals and organizations — starting with Nigerian Bosses Are Bad, plus free tools you can put to work today."
   },
+  "has_resource_form": true,
   "sections": [
     {
       "type": "text",
@@ -44,6 +45,21 @@
       "sample_text": "<p><strong>Chapter Two</strong><br>The Boss Who Changes Her Mind Every Monday</p><p>Tunde had a private nickname for his CEO within six months of joining the fintech in Yaba. He called her NEPA. Her instructions took light like PHCN, here now, gone before you'd finished adjusting to it.</p><p>The product roadmap that was locked on Monday was scrapped by Wednesday. A payment-processor deal he'd spent three weeks negotiating died two days before signing, killed by a text that said only, it's not the right time anymore. He'd stay up getting a set of wireframes exactly right, proud of the work, and two days later learn none of it would ship.</p><p>There is a version of this story where Amaka is simply indecisive, a founder who talks a confident game in pitch decks and falls apart the moment a real decision needs holding. That version isn't entirely wrong.</p><p>It also isn't the whole picture. Amaka runs a fintech company inside a regulatory environment where the Central Bank can issue a circular on a Tuesday morning that makes Monday's entire business model illegal by lunchtime. Her cloud&hellip;</p>"
     },
     {
+      "type": "resource-grid",
+      "heading": "Free Resources",
+      "sub": "Practical tools for HR teams and business leaders, ready to download at no cost. Enter your name and email and the download link lands in your inbox right away.",
+      "columns": 3,
+      "entries": [
+        {
+          "icon": "fa-file-excel",
+          "title": "Nigerian Payroll Excel Template (Updated for 2026 Tax Laws)",
+          "description": "A full Nigerian payroll template updated for the 2026 tax laws, including a sample e-slip, the old PAYE structure for comparison, the new PAYE structure, a Withholding Tax (WHT) sheet, and other reference sheets.",
+          "cta": "Get Document",
+          "file_url": "/downloads/nigerian-payroll-paye-template-2026.xlsx"
+        }
+      ]
+    },
+    {
       "type": "faq",
       "heading": "Common Questions",
       "entries": [
@@ -62,6 +78,10 @@
         {
           "q": "Who are these resources for?",
           "a": "HR professionals, business owners, executives, and organizations in Nigeria and across Africa looking for practical tools they can use immediately."
+        },
+        {
+          "q": "Where can I download the Nigerian Payroll Excel Template?",
+          "a": "Scroll to the Free Resources section on this page and click \"Get Document\" on the Nigerian Payroll Excel Template. Enter your name and email, and the download link, updated for the 2026 tax laws, is sent straight to your inbox."
         }
       ]
     }
@@ -101,6 +121,20 @@
         "priceCurrency": "NGN",
         "availability": "https://schema.org/InStock",
         "url": "https://tolnigeria.com/books/"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "DigitalDocument",
+      "name": "Nigerian Payroll Excel Template (Updated for 2026 Tax Laws)",
+      "description": "A free Nigerian payroll template updated for the 2026 tax laws, including a sample e-slip, the old PAYE structure for comparison, the new PAYE structure, and a Withholding Tax (WHT) sheet.",
+      "url": "https://tolnigeria.com/books/",
+      "isAccessibleForFree": true,
+      "encodingFormat": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Traction Outsourcing Limited",
+        "url": "https://tolnigeria.com/"
       }
     }
   ]

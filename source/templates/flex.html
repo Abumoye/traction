@@ -111,8 +111,8 @@
       <div class="pull-quote reveal" style="max-width:760px;margin:0 auto;text-align:center;border-left:none;border-top:4px solid var(--orange);padding:24px 0 0;">{{ sec.text }}</div>
 
     {% elif sec.type == 'book' %}
-      <div class="book-showcase reveal">
-        <div class="book-cover"><img src="{{ sec.image }}" alt="{{ sec.image_alt | default(sec.title) }}" loading="lazy"></div>
+      <div class="book-showcase">
+        <div class="book-cover reveal"><img src="{{ sec.image }}" alt="{{ sec.image_alt | default(sec.title) }}" loading="lazy"></div>
         <div class="book-info">
           {% if sec.eyebrow %}<span class="eyebrow">{{ sec.eyebrow }}</span>{% endif %}
           <h2 style="text-align:left;font-size:32px;">{{ sec.title }}</h2>
