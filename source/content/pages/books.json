@@ -22,32 +22,28 @@
       "tight": true
     },
     {
-      "type": "book",
-      "tight": true,
-      "resource_type": "paid",
-      "eyebrow": "Featured Book · Leadership",
-      "image": "/images/books/nigerian-bosses-are-bad-cover.jpg",
-      "image_alt": "Book cover for Nigerian Bosses Are Bad: A Short Book on Perspective, Pressure, and the People Who Lead Us, by Prince Elijah Abumoye.",
-      "title": "Nigerian Bosses Are Bad",
-      "subtitle": "A Short Book on Perspective, Pressure, and the People Who Lead Us",
-      "blurb_paragraphs": [
-        "Somewhere in Lagos tonight, somebody is typing a resignation letter at 11 p.m. They will save it in drafts. They will not send it, because rent does not care how you feel about your Oga, and neither does the landlord who is already asking for next quarter before this one has ended.",
-        "If you have worked under a Nigerian boss, you have said it at least once. Maybe under your breath in the office toilet. Maybe into your phone on the drive home. \"This one is wicked.\" \"That woman does not have human blood.\" \"How can somebody treat people like this?\""
-      ],
-      "price_value": "₦25,000",
-      "price_sale": "₦5,000",
-      "price_note": "Limited-Time Offer (E-Book Only)",
-      "cta": "Buy Now",
-      "href": "https://wa.me/2347047082697?text=Hello%2C%20I%20want%20to%20buy%20%22Nigerian%20Bosses%20Are%20Bad%22%20book.",
-      "sample_label": "Read a Sample",
-      "sample_text": "<p><strong>Chapter Two</strong><br>The Boss Who Changes Her Mind Every Monday</p><p>Tunde had a private nickname for his CEO within six months of joining the fintech in Yaba. He called her NEPA. Her instructions took light like PHCN, here now, gone before you'd finished adjusting to it.</p><p>The product roadmap that was locked on Monday was scrapped by Wednesday. A payment-processor deal he'd spent three weeks negotiating died two days before signing, killed by a text that said only, it's not the right time anymore. He'd stay up getting a set of wireframes exactly right, proud of the work, and two days later learn none of it would ship.</p><p>There is a version of this story where Amaka is simply indecisive, a founder who talks a confident game in pitch decks and falls apart the moment a real decision needs holding. That version isn't entirely wrong.</p><p>It also isn't the whole picture. Amaka runs a fintech company inside a regulatory environment where the Central Bank can issue a circular on a Tuesday morning that makes Monday's entire business model illegal by lunchtime. Her cloud&hellip;</p>"
-    },
-    {
       "type": "resource-grid",
       "tight": true,
-      "heading": "Free Resources",
-      "sub": "Practical tools for HR teams and business leaders, ready to download at no cost. Enter your name and email and the download link lands in your inbox right away.",
       "columns": 3,
+      "featured": {
+        "resource_type": "paid",
+        "eyebrow": "Featured Book · Leadership",
+        "image": "/images/books/nigerian-bosses-are-bad-cover.jpg",
+        "image_alt": "Book cover for Nigerian Bosses Are Bad: A Short Book on Perspective, Pressure, and the People Who Lead Us, by Prince Elijah Abumoye.",
+        "title": "Nigerian Bosses Are Bad",
+        "subtitle": "A Short Book on Perspective, Pressure, and the People Who Lead Us",
+        "blurb_paragraphs": [
+          "Somewhere in Lagos tonight, somebody is typing a resignation letter at 11 p.m. They will save it in drafts. They will not send it, because rent does not care how you feel about your Oga, and neither does the landlord who is already asking for next quarter before this one has ended.",
+          "If you have worked under a Nigerian boss, you have said it at least once. Maybe under your breath in the office toilet. Maybe into your phone on the drive home. \"This one is wicked.\" \"That woman does not have human blood.\" \"How can somebody treat people like this?\""
+        ],
+        "price_value": "₦25,000",
+        "price_sale": "₦5,000",
+        "price_note": "Limited-Time Offer (E-Book Only)",
+        "cta": "Buy Now",
+        "href": "https://wa.me/2347047082697?text=Hello%2C%20I%20want%20to%20buy%20%22Nigerian%20Bosses%20Are%20Bad%22%20book.",
+        "sample_label": "Read a Sample",
+        "sample_text": "<p><strong>Chapter Two</strong><br>The Boss Who Changes Her Mind Every Monday</p><p>Tunde had a private nickname for his CEO within six months of joining the fintech in Yaba. He called her NEPA. Her instructions took light like PHCN, here now, gone before you'd finished adjusting to it.</p><p>The product roadmap that was locked on Monday was scrapped by Wednesday. A payment-processor deal he'd spent three weeks negotiating died two days before signing, killed by a text that said only, it's not the right time anymore. He'd stay up getting a set of wireframes exactly right, proud of the work, and two days later learn none of it would ship.</p><p>There is a version of this story where Amaka is simply indecisive, a founder who talks a confident game in pitch decks and falls apart the moment a real decision needs holding. That version isn't entirely wrong.</p><p>It also isn't the whole picture. Amaka runs a fintech company inside a regulatory environment where the Central Bank can issue a circular on a Tuesday morning that makes Monday's entire business model illegal by lunchtime. Her cloud&hellip;</p>"
+      },
       "entries": [
         {
           "icon_image": "/images/icons/nigerian-payroll-excel-template-icon.png",
@@ -84,7 +80,7 @@
         },
         {
           "q": "Where can I download the Nigerian Payroll Excel Template?",
-          "a": "Scroll to the Free Resources section on this page and click \"Get Document\" on the Nigerian Payroll Excel Template. Enter your name and email, and the download link, updated for the 2026 tax laws, is sent straight to your inbox."
+          "a": "Find the Nigerian Payroll Excel Template on this page and click \"Get Document.\" Enter your name and email, and the download link, updated for the 2026 tax laws, is sent straight to your inbox."
         }
       ]
     }

@@ -1,10 +1,10 @@
 /* =========================================================
    Traction Outsourcing Limited — Books & Resources filter
    Used on /books/. Three pills (All / Free / Paid) toggle which
-   resources are visible. Works across different section types
-   (the "book" showcase section and "resource-grid" cards) via a
+   resources are visible. Every filterable item -- the featured
+   book banner and each card in the 3-column grid -- carries a
    shared [data-resource-type] attribute, set by the template from
-   each item's resource_type field in content/pages/books.json.
+   its resource_type field in content/pages/books.json.
    ========================================================= */
 document.addEventListener('DOMContentLoaded', function () {
     var pills = document.querySelectorAll('.filter-pill[data-resource-filter]');
@@ -16,13 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
             el.hidden = !(filter === 'all' || type === filter);
         });
 
-        // A resource-grid section whose cards are all hidden by the filter
-        // would otherwise leave its heading/sub floating above nothing --
-        // hide the whole section in that case.
+        // A resource-grid section whose items (featured banner and/or
+        // grid cards) are all hidden by the filter would otherwise leave
+        // its heading/sub floating above nothing -- hide the whole
+        // section in that case.
         document.querySelectorAll('[data-resource-grid]').forEach(function (section) {
-            var cards = section.querySelectorAll('.resource-card');
-            var anyVisible = Array.prototype.some.call(cards, function (c) { return !c.hidden; });
-            section.hidden = cards.length > 0 && !anyVisible;
+            var items = section.querySelectorAll('[data-resource-type]');
+            var anyVisible = Array.prototype.some.call(items, function (c) { return !c.hidden; });
+            section.hidden = items.length > 0 && !anyVisible;
         });
     }
 
