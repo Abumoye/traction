@@ -214,37 +214,36 @@
   <div class="container">
     <span class="eyebrow">Books & Resources</span>
     <h1 style="">Books and Resources</h1>
-    <p class="lede">Practical resources for professionals and organizations — starting with Nigerian Bosses Are Bad, plus free tools you can put to work today.</p>
+    
     
     
   </div>
 </section>
 
 
-<section  class="section  ">
+<section    class="section tight ">
   <div class="container" style="">
 
     
-      <h2 class="section-title reveal">Resources Built From Real Consulting Work</h2>
-      
-      <div class="reveal" style="max-width:920px;margin:0 auto;font-size:18px;">
-        <p>Every resource on this page comes out of work Traction Outsourcing has done inside real Nigerian businesses — the patterns we see repeated in HR audits, leadership training, and corporate restructuring engagements across Nigeria and Africa.</p><p>Some of what you'll find here is free: practical documents built for HR teams, founders, and executives who want a faster starting point. Others, like the book below, are paid resources for readers who want a deeper, more personal take.</p>
+      <div class="filter-bar reveal">
+        <button type="button" class="filter-pill active" data-resource-filter="all">All Resources</button>
+        <button type="button" class="filter-pill" data-resource-filter="free">Free</button>
+        <button type="button" class="filter-pill" data-resource-filter="paid">Paid</button>
       </div>
-      
 
     
 
   </div>
 </section>
 
-<section  class="section  ">
+<section  data-resource-type="paid"  class="section  ">
   <div class="container" style="">
 
     
       <div class="book-showcase">
         <div class="book-cover reveal"><img src="/images/books/nigerian-bosses-are-bad-cover.jpg" alt="Book cover for Nigerian Bosses Are Bad: A Short Book on Perspective, Pressure, and the People Who Lead Us, by Prince Elijah Abumoye." loading="lazy"></div>
         <div class="book-info">
-          <span class="eyebrow">Featured Book</span>
+          <span class="eyebrow">Featured Book · Leadership</span>
           <h2 style="text-align:left;font-size:32px;">Nigerian Bosses Are Bad</h2>
           <p class="book-subtitle">A Short Book on Perspective, Pressure, and the People Who Lead Us</p>
           <p>Somewhere in Lagos tonight, somebody is typing a resignation letter at 11 p.m. They will save it in drafts. They will not send it, because rent does not care how you feel about your Oga, and neither does the landlord who is already asking for next quarter before this one has ended.</p><p>If you have worked under a Nigerian boss, you have said it at least once. Maybe under your breath in the office toilet. Maybe into your phone on the drive home. "This one is wicked." "That woman does not have human blood." "How can somebody treat people like this?"</p>
@@ -268,7 +267,7 @@
   </div>
 </section>
 
-<section  class="section  ">
+<section   data-resource-grid="true" class="section  ">
   <div class="container" style="">
 
     
@@ -276,8 +275,9 @@
       <p class="section-sub reveal">Practical tools for HR teams and business leaders, ready to download at no cost. Enter your name and email and the download link lands in your inbox right away.</p>
       <div class="grid grid-3">
         
-        <div class="card resource-card reveal">
+        <div class="card resource-card reveal" data-resource-type="free">
           <div class="icon-badge"><i class="fas fa-file-excel"></i></div>
+          <span class="tag-pill">Payroll</span>
           <h3>Nigerian Payroll Excel Template (Updated for 2026 Tax Laws)</h3>
           <p>A full Nigerian payroll template updated for the 2026 tax laws, including a sample e-slip, the old PAYE structure for comparison, the new PAYE structure, a Withholding Tax (WHT) sheet, and other reference sheets.</p>
           <button type="button" class="btn btn-primary resource-download-btn" data-resource-title="Nigerian Payroll Excel Template (Updated for 2026 Tax Laws)" data-resource-file="/downloads/nigerian-payroll-paye-template-2026.xlsx">Get Document</button>
@@ -290,7 +290,7 @@
   </div>
 </section>
 
-<section  class="section  ">
+<section    class="section  ">
   <div class="container" style="">
 
     
@@ -396,6 +396,6 @@
   
   <script src="/js/nav.js"></script>
   <script src="/js/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script src="/js/resource-download.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script src="/js/resource-download.js"></script><script src="/js/resource-filter.js"></script>
 </body>
 </html>
