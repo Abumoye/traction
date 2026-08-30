@@ -297,6 +297,9 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
   display: inline-block; font-size: 12px; font-weight: 600; color: var(--orange);
   background: var(--orange-soft); padding: 5px 11px; border-radius: var(--r-pill); margin-bottom: 12px;
 }
+.tag-pill-free { color: #1e8e3e; background: #e6f4ea; }
+.resource-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.resource-tags .tag-pill { margin-bottom: 0; }
 
 /* ---------------- Testimonials ---------------- */
 .testimonial { padding: 32px; }
