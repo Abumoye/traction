@@ -38,7 +38,7 @@ jobs:
       - name: Publish build output to repo root
         run: |
           set -e
-          SITE_DIRS="articles book-a-call brands css events founder images js partnerships privacy-policy services"
+          SITE_DIRS="articles book-a-call books brands css events founder images js partnerships privacy-policy services"
           for d in $SITE_DIRS; do
             rm -rf "$d"
             cp -r "source/dist/$d" "$d"
@@ -51,7 +51,7 @@ jobs:
         run: |
           git config user.name "traction-site-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add articles book-a-call brands css events founder images js partnerships privacy-policy services index.html search-index.json
+          git add articles book-a-call books brands css events founder images js partnerships privacy-policy services index.html search-index.json
           if git diff --cached --quiet; then
             echo "No changes to publish."
           else

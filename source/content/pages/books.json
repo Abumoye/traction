@@ -1,0 +1,107 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "books/index.html",
+    "url": "/books/"
+  },
+  "meta": {
+    "title": "Nigerian Bosses Are Bad – Book & Free Resources | Traction Outsourcing",
+    "description": "Buy the e-book Nigerian Bosses Are Bad by Prince Elijah Abumoye, plus free resources for HR professionals, executives, and organizations across Nigeria.",
+    "image": "/images/og/og-books.jpg",
+    "image_alt": "Nigerian Bosses Are Bad book cover next to the text Books & Resources, Traction Outsourcing Limited."
+  },
+  "hero": {
+    "eyebrow": "Books & Resources",
+    "headline": "Books and Resources",
+    "sub": "Practical resources for professionals and organizations — starting with Nigerian Bosses Are Bad, plus free tools you can put to work today."
+  },
+  "sections": [
+    {
+      "type": "text",
+      "heading": "Resources Built From Real Consulting Work",
+      "paragraphs": [
+        "Every resource on this page comes out of work Traction Outsourcing has done inside real Nigerian businesses — the patterns we see repeated in HR audits, leadership training, and corporate restructuring engagements across Nigeria and Africa.",
+        "Some of what you'll find here is free: practical documents built for HR teams, founders, and executives who want a faster starting point. Others, like the book below, are paid resources for readers who want a deeper, more personal take."
+      ]
+    },
+    {
+      "type": "book",
+      "eyebrow": "Featured Book",
+      "image": "/images/books/nigerian-bosses-are-bad-cover.jpg",
+      "image_alt": "Book cover for Nigerian Bosses Are Bad: A Short Book on Perspective, Pressure, and the People Who Lead Us, by Prince Elijah Abumoye.",
+      "title": "Nigerian Bosses Are Bad",
+      "subtitle": "A Short Book on Perspective, Pressure, and the People Who Lead Us",
+      "blurb_paragraphs": [
+        "Somewhere in Lagos tonight, somebody is typing a resignation letter at 11 p.m. They will save it in drafts. They will not send it, because rent does not care how you feel about your Oga, and neither does the landlord who is already asking for next quarter before this one has ended.",
+        "If you have worked under a Nigerian boss, you have said it at least once. Maybe under your breath in the office toilet. Maybe into your phone on the drive home. \"This one is wicked.\" \"That woman does not have human blood.\" \"How can somebody treat people like this?\""
+      ],
+      "price_value": "₦25,000",
+      "price_sale": "₦5,000",
+      "price_note": "Limited-Time Offer (E-Book Only)",
+      "cta": "Buy Now",
+      "href": "https://wa.me/2347047082697?text=Hello%2C%20I%20want%20to%20buy%20%22Nigerian%20Bosses%20Are%20Bad%22%20book.",
+      "sample_label": "Read a Sample",
+      "sample_text": "<p><strong>Chapter Two</strong><br>The Boss Who Changes Her Mind Every Monday</p><p>Tunde had a private nickname for his CEO within six months of joining the fintech in Yaba. He called her NEPA. Her instructions took light like PHCN, here now, gone before you'd finished adjusting to it.</p><p>The product roadmap that was locked on Monday was scrapped by Wednesday. A payment-processor deal he'd spent three weeks negotiating died two days before signing, killed by a text that said only, it's not the right time anymore. He'd stay up getting a set of wireframes exactly right, proud of the work, and two days later learn none of it would ship.</p><p>There is a version of this story where Amaka is simply indecisive, a founder who talks a confident game in pitch decks and falls apart the moment a real decision needs holding. That version isn't entirely wrong.</p><p>It also isn't the whole picture. Amaka runs a fintech company inside a regulatory environment where the Central Bank can issue a circular on a Tuesday morning that makes Monday's entire business model illegal by lunchtime. Her cloud&hellip;</p>"
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "How do I buy Nigerian Bosses Are Bad?",
+          "a": "Click \"Buy Now\" on this page. It opens WhatsApp with a pre-filled message to our team, who will complete the purchase with you and send the e-book directly."
+        },
+        {
+          "q": "Is Nigerian Bosses Are Bad available in print, or only as an e-book?",
+          "a": "It is currently available exclusively as an e-book."
+        },
+        {
+          "q": "Are the free resources on this page really free?",
+          "a": "Yes. Click \"Get Document\" on any free resource, enter your name and email, and the download link is sent straight to your inbox at no cost."
+        },
+        {
+          "q": "Who are these resources for?",
+          "a": "HR professionals, business owners, executives, and organizations in Nigeria and across Africa looking for practical tools they can use immediately."
+        }
+      ]
+    }
+  ],
+  "final_cta": {
+    "title": "Want to Work Directly With Our Team?",
+    "text": "Book a free 30-minute clarity call to discuss what your business needs.",
+    "button": "Book a Free Clarity Call",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Books & Resources | Traction Outsourcing Limited",
+      "description": "A hub of paid and free resources for professionals and organizations, featuring the e-book Nigerian Bosses Are Bad by Prince Elijah Abumoye.",
+      "url": "https://tolnigeria.com/books/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Nigerian Bosses Are Bad",
+      "alternateName": "Nigerian Bosses Are Bad: A Short Book on Perspective, Pressure, and the People Who Lead Us",
+      "author": {
+        "@type": "Person",
+        "name": "Prince Elijah Abumoye",
+        "url": "https://tolnigeria.com/books/"
+      },
+      "bookFormat": "https://schema.org/EBook",
+      "image": "https://tolnigeria.com/images/books/nigerian-bosses-are-bad-cover.jpg",
+      "url": "https://tolnigeria.com/books/",
+      "inLanguage": "en",
+      "description": "Somewhere in Lagos tonight, somebody is typing a resignation letter at 11 p.m. If you have worked under a Nigerian boss, you have said it at least once: this one is wicked, that woman does not have human blood, how can somebody treat people like this? Nigerian Bosses Are Bad is a short book on perspective, pressure, and the people who lead us.",
+      "offers": {
+        "@type": "Offer",
+        "price": "5000",
+        "priceCurrency": "NGN",
+        "availability": "https://schema.org/InStock",
+        "url": "https://tolnigeria.com/books/"
+      }
+    }
+  ]
+}

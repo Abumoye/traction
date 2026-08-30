@@ -171,6 +171,7 @@ def write(path: Path, html: str):
 REDIRECTS = {
     # old output path (relative to dist/) -> new absolute URL path
     "articles/article-tall-poppy-syndrome/index.html": "/articles/tall-poppy-syndrome/",
+    "founder/index.html": "/books/",
 }
 
 

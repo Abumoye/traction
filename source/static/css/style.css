@@ -365,6 +365,31 @@ section.bg-ash .logo-chip { background: var(--white); }
 }
 .book-sample-text p { margin: 0 0 14px; }
 
+/* ---------------- Free resource cards + Get Document modal ---------------- */
+.resource-card { display: flex; flex-direction: column; }
+.resource-card .btn { margin-top: auto; align-self: flex-start; }
+
+.resource-modal {
+  border: none;
+  border-radius: var(--r-lg);
+  padding: 40px;
+  max-width: 440px;
+  width: calc(100% - 40px);
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+}
+.resource-modal::backdrop { background: rgba(29,29,31,0.55); backdrop-filter: blur(2px); }
+.resource-modal-form { position: relative; }
+.resource-modal-close {
+  position: absolute; top: -12px; right: -12px; width: 32px; height: 32px;
+  border-radius: 50%; border: none; background: var(--ash); color: var(--ink);
+  font-size: 20px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.resource-modal-close:hover { background: var(--ash-deep); }
+.resource-modal h3 { margin: 0 0 8px; font-size: 22px; text-align: left; }
+.resource-modal-sub { margin: 0 0 22px; font-size: 14px; color: var(--ink-soft); }
+
 /* ---------------- CTA band ---------------- */
 .cta-band {
   background: var(--ink);
