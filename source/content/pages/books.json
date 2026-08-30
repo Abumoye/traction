@@ -33,6 +33,7 @@
         "title": "Nigerian Bosses Are Bad",
         "subtitle": "A Short Book on Perspective, Pressure, and the People Who Lead Us",
         "blurb_paragraphs": [
+          "Nigerian Bosses Are Bad is a short e-book by Prince Elijah Abumoye, founder of Traction Outsourcing Limited, about why so many bosses in Nigerian workplaces get called wicked, unfair, or impossible to please, and what is really happening underneath that reputation. Written for employees, managers, and business owners across Nigeria, it uses real workplace scenarios rather than management theory to unpack the pressure, structure, and decisions behind difficult leadership, and what changes once a business finally gets those things right. The stories in the book are drawn from patterns Traction Outsourcing has seen firsthand across HR audits, leadership training, and corporate restructuring work inside real Nigerian companies, so the bosses described here will feel familiar rather than invented for effect. Nigerian Bosses Are Bad is available now exclusively as an e-book, and can be bought directly from this page.",
           "Somewhere in Lagos tonight, somebody is typing a resignation letter at 11 p.m. They will save it in drafts. They will not send it, because rent does not care how you feel about your Oga, and neither does the landlord who is already asking for next quarter before this one has ended.",
           "If you have worked under a Nigerian boss, you have said it at least once. Maybe under your breath in the office toilet. Maybe into your phone on the drive home. \"This one is wicked.\" \"That woman does not have human blood.\" \"How can somebody treat people like this?\""
         ],
@@ -62,6 +63,14 @@
       "tight": true,
       "heading": "Common Questions",
       "entries": [
+        {
+          "q": "What is the book Nigerian Bosses Are Bad about?",
+          "a": "Nigerian Bosses Are Bad is a short e-book by Prince Elijah Abumoye, founder of Traction Outsourcing Limited, about why so many bosses in Nigerian workplaces are seen as unfair or difficult, and what pressure and poor structure have to do with it. It uses real workplace scenarios rather than management theory to explain what changes when a business finally gets its leadership and structure right."
+        },
+        {
+          "q": "Who wrote Nigerian Bosses Are Bad?",
+          "a": "Nigerian Bosses Are Bad was written by Prince Elijah Abumoye, founder of Traction Outsourcing Limited, a corporate restructuring and HR outsourcing firm based in Abuja, Nigeria."
+        },
         {
           "q": "How do I buy Nigerian Bosses Are Bad?",
           "a": "Click \"Buy Now\" on this page. It opens WhatsApp with a pre-filled message to our team, who will complete the purchase with you and send the e-book directly."
@@ -110,6 +119,16 @@
         "url": "https://tolnigeria.com/books/"
       },
       "bookFormat": "https://schema.org/EBook",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Traction Outsourcing Limited",
+        "url": "https://tolnigeria.com/",
+        "sameAs": [
+          "https://www.wikidata.org/wiki/Q140694466",
+          "https://instagram.com/tractionoutsourcing",
+          "https://tiktok.com/@tractionoutsourcing"
+        ]
+      },
       "image": "https://tolnigeria.com/images/books/nigerian-bosses-are-bad-cover.jpg",
       "url": "https://tolnigeria.com/books/",
       "inLanguage": "en",
