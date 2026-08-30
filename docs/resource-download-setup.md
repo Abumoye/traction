@@ -12,6 +12,10 @@ what lets a plain HTML page send email on its own.
   and email, and clicks "Download."
 - An email is sent immediately to that visitor with the direct download
   link (they are not shown the file inline — it's a straight download).
+  The link is the full, absolute URL to the actual file on tolnigeria.com
+  (for example `https://tolnigeria.com/downloads/nigerian-payroll-paye-template-2026.xlsx`)
+  — clicking it downloads the real file straight from your own site, with
+  no third-party service, no view-only page, and no expiration date.
 - A copy (BCC) of that same email lands in **tractionoutsourcing@gmail.com**
   every time, so you can see who requested what.
 - Free tier: 200 emails/month, no cost, no credit card required.

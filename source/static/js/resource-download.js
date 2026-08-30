@@ -34,9 +34,9 @@
    isn't ready yet instead of failing silently.
    ========================================================= */
 
-const RESOURCE_EMAILJS_SERVICE_ID = "REPLACE_WITH_YOUR_EMAILJS_SERVICE_ID";
-const RESOURCE_EMAILJS_TEMPLATE_ID = "REPLACE_WITH_YOUR_EMAILJS_TEMPLATE_ID";
-const RESOURCE_EMAILJS_PUBLIC_KEY = "REPLACE_WITH_YOUR_EMAILJS_PUBLIC_KEY";
+const RESOURCE_EMAILJS_SERVICE_ID = "service_1oodwas";
+const RESOURCE_EMAILJS_TEMPLATE_ID = "template_crleo3n";
+const RESOURCE_EMAILJS_PUBLIC_KEY = "p_j0hUJOA7fqSRNrK";
 
 document.addEventListener('DOMContentLoaded', function () {
     const dialog = document.getElementById('resourceModal');
@@ -114,11 +114,18 @@ document.addEventListener('DOMContentLoaded', function () {
         submitBtn.innerText = 'Sending...';
         statusEl.textContent = '';
 
+        // fileUrl is a site-relative path (e.g. "/downloads/x.xlsx"). A
+        // relative path is meaningless once it's sitting in someone's
+        // inbox, so turn it into a full, clickable URL before sending.
+        const absoluteFileUrl = fileUrl.indexOf('http') === 0
+            ? fileUrl
+            : window.location.origin + fileUrl;
+
         emailjs.send(RESOURCE_EMAILJS_SERVICE_ID, RESOURCE_EMAILJS_TEMPLATE_ID, {
             to_name: name,
             to_email: email,
             document_title: title,
-            document_link: fileUrl,
+            document_link: absoluteFileUrl,
             from_name: 'Traction Outsourcing Limited',
             reply_to: 'tractionoutsourcing@gmail.com'
         }).then(function () {
