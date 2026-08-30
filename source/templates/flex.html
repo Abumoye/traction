@@ -111,8 +111,8 @@
       <div class="pull-quote reveal" style="max-width:760px;margin:0 auto;text-align:center;border-left:none;border-top:4px solid var(--orange);padding:24px 0 0;">{{ sec.text }}</div>
 
     {% elif sec.type == 'book' %}
-      <div class="book-showcase reveal">
-        <div class="book-cover"><img src="{{ sec.image }}" alt="{{ sec.image_alt | default(sec.title) }}" loading="lazy"></div>
+      <div class="book-showcase">
+        <div class="book-cover reveal"><img src="{{ sec.image }}" alt="{{ sec.image_alt | default(sec.title) }}" loading="lazy"></div>
         <div class="book-info">
           {% if sec.eyebrow %}<span class="eyebrow">{{ sec.eyebrow }}</span>{% endif %}
           <h2 style="text-align:left;font-size:32px;">{{ sec.title }}</h2>
@@ -131,6 +131,20 @@
           </details>
           {% endif %}
         </div>
+      </div>
+
+    {% elif sec.type == 'resource-grid' %}
+      {% if sec.heading %}<h2 class="section-title reveal">{{ sec.heading }}</h2>{% endif %}
+      {% if sec.sub %}<p class="section-sub reveal">{{ sec.sub }}</p>{% endif %}
+      <div class="grid grid-{{ sec.columns | default(3) }}">
+        {% for r in sec.entries %}
+        <div class="card resource-card reveal">
+          {% if r.icon %}<div class="icon-badge"><i class="fas {{ r.icon }}"></i></div>{% endif %}
+          <h3>{{ r.title }}</h3>
+          <p>{{ r.description }}</p>
+          <button type="button" class="btn btn-primary resource-download-btn" data-resource-title="{{ r.title }}" data-resource-file="{{ r.file_url }}">{{ r.cta | default('Get Document') }}</button>
+        </div>
+        {% endfor %}
       </div>
 
     {% elif sec.type == 'cta' %}
@@ -188,6 +202,23 @@
 </section>
 {% endfor %}
 
+{% if has_resource_form %}
+<dialog id="resourceModal" class="resource-modal">
+  <form class="resource-modal-form" id="resourceForm">
+    <button type="button" class="resource-modal-close" id="resourceModalClose" aria-label="Close">&times;</button>
+    <h3 id="resourceModalTitle">Get This Document</h3>
+    <p class="resource-modal-sub">Enter your details and we'll email you the download link right away.</p>
+    <input type="hidden" id="resourceFileUrl" name="resourceFileUrl">
+    <div style="display:grid;gap:14px;">
+      <input type="text" id="resourceName" name="resourceName" placeholder="Full Name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input type="email" id="resourceEmail" name="resourceEmail" placeholder="Email Address" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <button type="submit" class="btn btn-primary" id="resourceSubmitBtn" style="width:100%;justify-content:center;">Download</button>
+      <p id="resourceFormStatus" style="text-align:center;font-size:13.5px;margin:0;"></p>
+    </div>
+  </form>
+</dialog>
+{% endif %}
+
 {% if final_cta %}
 <section class="section tight">
   <div class="cta-band reveal">
@@ -199,4 +230,4 @@
 {% endif %}
 
 {% endblock %}
-{% block extra_scripts %}{% if has_form %}<script src="/js/lead-form.js"></script>{% endif %}{% for s in scripts | default([]) %}<script src="{{ s }}"></script>{% endfor %}{% endblock %}
+{% block extra_scripts %}{% if has_form %}<script src="/js/lead-form.js"></script>{% endif %}{% if has_resource_form %}<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script src="/js/resource-download.js"></script>{% endif %}{% for s in scripts | default([]) %}<script src="{{ s }}"></script>{% endfor %}{% endblock %}

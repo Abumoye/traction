@@ -171,6 +171,7 @@ def write(path: Path, html: str):
 REDIRECTS = {
     # old output path (relative to dist/) -> new absolute URL path
     "articles/article-tall-poppy-syndrome/index.html": "/articles/tall-poppy-syndrome/",
+    "founder/index.html": "/",
 }
 
 
@@ -248,6 +249,8 @@ def main():
     shutil.copytree(ROOT / "static" / "js", DIST / "js")
     if (ROOT / "static" / "images").exists():
         shutil.copytree(ROOT / "static" / "images", DIST / "images", dirs_exist_ok=True)
+    if (ROOT / "static" / "downloads").exists():
+        shutil.copytree(ROOT / "static" / "downloads", DIST / "downloads", dirs_exist_ok=True)
 
     # ---- Every "page" json (home, services, founder, brands, partnerships,
     #      events, legal, etc.) is fully self-describing via _route ----
