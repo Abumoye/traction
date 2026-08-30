@@ -12,22 +12,19 @@
   },
   "hero": {
     "eyebrow": "Books & Resources",
-    "headline": "Books and Resources",
-    "sub": "Practical resources for professionals and organizations — starting with Nigerian Bosses Are Bad, plus free tools you can put to work today."
+    "headline": "Books and Resources"
   },
   "has_resource_form": true,
+  "has_resource_filter": true,
   "sections": [
     {
-      "type": "text",
-      "heading": "Resources Built From Real Consulting Work",
-      "paragraphs": [
-        "Every resource on this page comes out of work Traction Outsourcing has done inside real Nigerian businesses — the patterns we see repeated in HR audits, leadership training, and corporate restructuring engagements across Nigeria and Africa.",
-        "Some of what you'll find here is free: practical documents built for HR teams, founders, and executives who want a faster starting point. Others, like the book below, are paid resources for readers who want a deeper, more personal take."
-      ]
+      "type": "resource-filter",
+      "tight": true
     },
     {
       "type": "book",
-      "eyebrow": "Featured Book",
+      "resource_type": "paid",
+      "eyebrow": "Featured Book · Leadership",
       "image": "/images/books/nigerian-bosses-are-bad-cover.jpg",
       "image_alt": "Book cover for Nigerian Bosses Are Bad: A Short Book on Perspective, Pressure, and the People Who Lead Us, by Prince Elijah Abumoye.",
       "title": "Nigerian Bosses Are Bad",
@@ -52,6 +49,8 @@
       "entries": [
         {
           "icon": "fa-file-excel",
+          "resource_type": "free",
+          "category": "Payroll",
           "title": "Nigerian Payroll Excel Template (Updated for 2026 Tax Laws)",
           "description": "A full Nigerian payroll template updated for the 2026 tax laws, including a sample e-slip, the old PAYE structure for comparison, the new PAYE structure, a Withholding Tax (WHT) sheet, and other reference sheets.",
           "cta": "Get Document",

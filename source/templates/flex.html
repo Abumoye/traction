@@ -18,10 +18,17 @@
 </section>
 
 {% for sec in sections %}
-<section {% if sec.id %}id="{{ sec.id }}"{% endif %} class="section {{ 'tight' if sec.tight else '' }} {{ 'bg-ash' if sec.bg == 'ash' else ('bg-ink' if sec.bg == 'ink' else '') }}">
+<section {% if sec.id %}id="{{ sec.id }}"{% endif %} {% if sec.resource_type %}data-resource-type="{{ sec.resource_type }}"{% endif %} {% if sec.type == 'resource-grid' %}data-resource-grid="true"{% endif %} class="section {{ 'tight' if sec.tight else '' }} {{ 'bg-ash' if sec.bg == 'ash' else ('bg-ink' if sec.bg == 'ink' else '') }}">
   <div class="container" style="{{ 'max-width:' + sec.max_width if sec.max_width else '' }}">
 
-    {% if sec.type == 'text' %}
+    {% if sec.type == 'resource-filter' %}
+      <div class="filter-bar reveal">
+        <button type="button" class="filter-pill active" data-resource-filter="all">{{ sec.all_label | default('All Resources') }}</button>
+        <button type="button" class="filter-pill" data-resource-filter="free">{{ sec.free_label | default('Free') }}</button>
+        <button type="button" class="filter-pill" data-resource-filter="paid">{{ sec.paid_label | default('Paid') }}</button>
+      </div>
+
+    {% elif sec.type == 'text' %}
       {% if sec.heading %}<h2 class="section-title reveal">{{ sec.heading }}</h2>{% endif %}
       {% if sec.sub %}<p class="section-sub reveal">{{ sec.sub }}</p>{% endif %}
       <div class="reveal" style="max-width:{{ sec.text_width | default('920px') }};margin:0 auto;font-size:18px;">
@@ -138,8 +145,9 @@
       {% if sec.sub %}<p class="section-sub reveal">{{ sec.sub }}</p>{% endif %}
       <div class="grid grid-{{ sec.columns | default(3) }}">
         {% for r in sec.entries %}
-        <div class="card resource-card reveal">
+        <div class="card resource-card reveal" data-resource-type="{{ r.resource_type | default('free') }}">
           {% if r.icon %}<div class="icon-badge"><i class="fas {{ r.icon }}"></i></div>{% endif %}
+          {% if r.category %}<span class="tag-pill">{{ r.category }}</span>{% endif %}
           <h3>{{ r.title }}</h3>
           <p>{{ r.description }}</p>
           <button type="button" class="btn btn-primary resource-download-btn" data-resource-title="{{ r.title }}" data-resource-file="{{ r.file_url }}">{{ r.cta | default('Get Document') }}</button>
@@ -230,4 +238,4 @@
 {% endif %}
 
 {% endblock %}
-{% block extra_scripts %}{% if has_form %}<script src="/js/lead-form.js"></script>{% endif %}{% if has_resource_form %}<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script src="/js/resource-download.js"></script>{% endif %}{% for s in scripts | default([]) %}<script src="{{ s }}"></script>{% endfor %}{% endblock %}
+{% block extra_scripts %}{% if has_form %}<script src="/js/lead-form.js"></script>{% endif %}{% if has_resource_form %}<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script src="/js/resource-download.js"></script>{% endif %}{% if has_resource_filter %}<script src="/js/resource-filter.js"></script>{% endif %}{% for s in scripts | default([]) %}<script src="{{ s }}"></script>{% endfor %}{% endblock %}
