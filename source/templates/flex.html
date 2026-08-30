@@ -146,7 +146,7 @@
       <div class="grid grid-{{ sec.columns | default(3) }}">
         {% for r in sec.entries %}
         <div class="card resource-card reveal" data-resource-type="{{ r.resource_type | default('free') }}">
-          {% if r.icon %}<div class="icon-badge"><i class="fas {{ r.icon }}"></i></div>{% endif %}
+          {% if r.icon_image %}<div class="resource-icon-img"><img src="{{ r.icon_image }}" alt="{{ r.icon_alt | default('') }}" loading="lazy"></div>{% elif r.icon %}<div class="icon-badge"><i class="fas {{ r.icon }}"></i></div>{% endif %}
           {% if r.category %}<span class="tag-pill">{{ r.category }}</span>{% endif %}
           <h3>{{ r.title }}</h3>
           <p>{{ r.description }}</p>

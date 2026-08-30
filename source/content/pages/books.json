@@ -23,6 +23,7 @@
     },
     {
       "type": "book",
+      "tight": true,
       "resource_type": "paid",
       "eyebrow": "Featured Book · Leadership",
       "image": "/images/books/nigerian-bosses-are-bad-cover.jpg",
@@ -43,12 +44,14 @@
     },
     {
       "type": "resource-grid",
+      "tight": true,
       "heading": "Free Resources",
       "sub": "Practical tools for HR teams and business leaders, ready to download at no cost. Enter your name and email and the download link lands in your inbox right away.",
       "columns": 3,
       "entries": [
         {
-          "icon": "fa-file-excel",
+          "icon_image": "/images/icons/nigerian-payroll-excel-template-icon.png",
+          "icon_alt": "Excel icon for the Nigerian Payroll Excel Template",
           "resource_type": "free",
           "category": "Payroll",
           "title": "Nigerian Payroll Excel Template (Updated for 2026 Tax Laws)",
@@ -60,6 +63,7 @@
     },
     {
       "type": "faq",
+      "tight": true,
       "heading": "Common Questions",
       "entries": [
         {
