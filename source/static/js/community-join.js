@@ -23,7 +23,7 @@
    people there instead.
    ========================================================= */
 
-const COMMUNITY_JOIN_SCRIPT_URL = "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL";
+const COMMUNITY_JOIN_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwd0xvVLA8ODm86rmaKhawIkvweVXVa-yP2edfUxiPrLDgrK_pr2rOQZfqRW7TPjmaQSA/exec";
 const COMMUNITY_JOIN_MAX_FILE_BYTES = 8 * 1024 * 1024; // 8MB per file
 const COMMUNITY_JOIN_SUPPORT_WHATSAPP = "https://wa.me/2348125078087";
 
