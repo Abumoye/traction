@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
     Promise.all([fileToBase64(cvFile), fileToBase64(photoFile)])
       .then(function (files) {
         const payload = {
+          formType: 'ath-community-join',
           fullName: form.fullName.value.trim(),
           gender: form.gender.value,
           phone: form.phone.value.trim(),

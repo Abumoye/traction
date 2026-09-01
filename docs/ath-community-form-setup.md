@@ -28,6 +28,15 @@ everything already set up under `athrecruiters@gmail.com`.
 
 ## Step 1: Update the Apps Script project
 
+**If this Apps Script project ALSO contains the Leads/Retreat form
+code** (a file with `RECEIPT_FOLDER_ID` and its own `doPost`), stop and
+read [Step 1b](#step-1b-if-this-project-also-has-the-leadsretreat-code)
+below instead of this one. A project can only have one function named
+`doPost` — if two files both define one, only one of them silently
+runs and the other is ignored with no error, which is exactly the "form
+submits but nothing happens" symptom this setup produced the first
+time around.
+
 1. Open the existing Apps Script project (the one with the current
    `Index.html` and `Code.gs`).
 2. Open `Code.gs` and **replace its entire contents** with the code
@@ -183,6 +192,65 @@ function sendConfirmationEmail(email, memberCode, name) {
 ```
 
 3. Save the file (the save icon, or Ctrl/Cmd+S).
+
+## Step 1b: If this project ALSO has the Leads/Retreat code
+
+Skip this section entirely if the code above is the only thing in the
+project. If instead the project's file list also shows a file with
+`RECEIPT_FOLDER_ID`, `handleLeadForm`, and `handleRetreatRegistration`
+in it (the backend that already handles the lead forms on `/services/*/`
+pages and the Kigali retreat registration), that file already has its
+own `function doPost(e) { ... }`. Having two files each define `doPost`
+is invalid — only one silently wins, and it's not something Apps Script
+warns you about.
+
+The fix is to keep exactly one `doPost` in the whole project and have
+it hand off to a community-specific function instead:
+
+1. In the file with `Code.gs` (the community form's file, from Step 1),
+   rename its function from `function doPost(e) {` to
+   `function handleCommunityJoin(data) {`, and remove the `if (!e ||
+   !e.postData...)` guard at the top of it — that check now lives in the
+   other file's `doPost`, which will already have parsed the JSON before
+   calling this function. Everything else in the function body (the
+   validation, the Sheet/Drive/email logic) stays exactly the same.
+2. In the *other* file (the one with `RECEIPT_FOLDER_ID`), find its
+   `doPost` function. It should look like this:
+
+   ```javascript
+   function doPost(e) {
+     if (!e || !e.postData || !e.postData.contents) {
+       return ContentService.createTextOutput(
+         JSON.stringify({ status: 'error', message: 'No form data received...' })
+       ).setMimeType(ContentService.MimeType.JSON);
+     }
+
+     var data = JSON.parse(e.postData.contents);
+
+     if (data.formType === 'retreat-registration') {
+       return handleRetreatRegistration(data);
+     }
+
+     return handleLeadForm(data);
+   }
+   ```
+
+   Add a new branch for the community form, just above the final
+   `return handleLeadForm(data);` line:
+
+   ```javascript
+     if (data.formType === 'ath-community-join') {
+       return handleCommunityJoin(data);
+     }
+
+     return handleLeadForm(data);
+   }
+   ```
+
+3. Save both files. The community form's page already sends
+   `formType: 'ath-community-join'` in its payload, so this dispatch
+   will route it correctly without touching the existing Leads or
+   Retreat behavior at all.
 
 ## Step 2: Deploy it as a Web App
 
