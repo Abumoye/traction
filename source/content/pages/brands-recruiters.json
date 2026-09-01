@@ -400,7 +400,8 @@
       "id": "ath-jobs",
       "heading": "Need A Job in Nigeria? Join Our Community Now.",
       "button": "Join ATH Job Community",
-      "href": "/brands/recruiters/join-ath-community/"
+      "href": "https://bit.ly/athjobs",
+      "blank": true
     },
     {
       "type": "faq",

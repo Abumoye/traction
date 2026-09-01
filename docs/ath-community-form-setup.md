@@ -1,6 +1,18 @@
-# ATH Job Community Form — Moving Off Apps Script Setup Guide
+# ATH Job Community Form — Moving Off Apps Script Setup Guide (DISCONTINUED)
 
-This moves the "Join ATH Job Community" registration form off its old
+**This migration was reverted.** The Apps Script Web App kept refusing
+to reliably receive submissions from an external POST request (no
+Execution log entries even after fixing the doPost collision, the
+formType routing, and the deployment access setting), so the "Join ATH
+Job Community" form has moved back to being served directly by Google
+Sites/Apps Script, and the page this doc describes
+(`/brands/recruiters/join-ath-community/`) has been removed from the
+site. This file is kept only as a record of what was tried, in case
+the migration is attempted again later.
+
+---
+
+This moved the "Join ATH Job Community" registration form off its old
 `script.google.com` URL and onto its own page on the main site:
 **https://tolnigeria.com/brands/recruiters/join-ath-community/**
 
