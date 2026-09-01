@@ -28,23 +28,38 @@ everything already set up under `athrecruiters@gmail.com`.
 
 ## Step 1: Update the Apps Script project
 
-**If this Apps Script project ALSO contains the Leads/Retreat form
-code** (a file with `RECEIPT_FOLDER_ID` and its own `doPost`), stop and
-read [Step 1b](#step-1b-if-this-project-also-has-the-leadsretreat-code)
-below instead of this one. A project can only have one function named
-`doPost` — if two files both define one, only one of them silently
-runs and the other is ignored with no error, which is exactly the "form
-submits but nothing happens" symptom this setup produced the first
-time around.
+This project is shared with the site-wide lead form (the one used on
+every `/services/*/` page) and, previously, the Kigali Retreat
+registration. A project can only have one function named `doPost` —
+having it split across two files (`Code.gs` and `Codes.gs`) each
+defining their own `doPost` was exactly what caused community
+submissions to silently go nowhere the first time this was set up.
+Retreat registration has since been discontinued and its sheet
+deleted, so the project is now consolidated into a **single `Code.gs`
+file** with one `doPost` that dispatches by `data.formType`:
+`'ath-community-join'` for the community form, anything else for the
+general lead form. `Index.html` stays as the project's only HTML file
+(it's unused — kept only because Apps Script projects don't strictly
+need to be empty of it — the community form itself lives on the main
+site now).
 
-1. Open the existing Apps Script project (the one with the current
-   `Index.html` and `Code.gs`).
+1. Open the existing Apps Script project (the one with `Index.html`,
+   `Code.gs`, and `Codes.gs`).
 2. Open `Code.gs` and **replace its entire contents** with the code
-   below. (`Index.html` is no longer used at all — the form now lives in
-   this site's own template — but you can leave that file in the project
-   or delete it, either is fine.)
+   below.
+3. Delete the `Codes.gs` file entirely (its file-list three-dot menu →
+   Delete) — everything it did now lives in `Code.gs`.
 
 ```javascript
+// Traction Outsourcing / ATH Recruiters — shared Apps Script backend.
+//
+// One project, one doPost, dispatching by data.formType:
+//   - 'ath-community-join'  -> ATH Job Community registration (Members sheet)
+//   - anything else         -> general website lead form (Leads sheet)
+//
+// The Kigali Retreat registration handler has been removed -- that
+// form and sheet are no longer in use.
+
 const SPREADSHEET_ID = "1U77pMiYV4AZfv5a6JBJBHA2gHekv4mlhvbC8sm5c98A";
 const SHEET_NAME = "Members";
 const PARENT_FOLDER_ID = "123j4DZ124Lm70EnWTvNU0BYlY6Z-7lu9";
@@ -52,11 +67,10 @@ const FROM_EMAIL = "athrecruiters@gmail.com";
 const COMMUNITY_LINK = "https://chat.whatsapp.com/J1118dIsEht9UEi2maNrAQ";
 const NEW_FORM_URL = "https://tolnigeria.com/brands/recruiters/join-ath-community/";
 
-// This project no longer serves the form's HTML itself -- the form now
-// lives at NEW_FORM_URL, on the main site, so it has a real URL instead
-// of a script.google.com one. doGet is kept only so that anyone who still
-// has the old script.google.com link bookmarked or shared gets pointed to
-// the right place instead of a dead page.
+// The community form used to be served directly from this project's
+// script.google.com URL. It now lives at NEW_FORM_URL on the main
+// site, so doGet just redirects anyone who still has the old link
+// bookmarked or shared, instead of showing a dead page.
 function doGet() {
   const html = HtmlService.createHtmlOutput(
     '<!DOCTYPE html><html><head><meta charset="UTF-8">' +
@@ -69,23 +83,53 @@ function doGet() {
   return html.setTitle('ATH Job Community — Moved');
 }
 
-// ====================== MAIN SUBMISSION (called from the website) ======================
-// The new join page on tolnigeria.com posts here as plain JSON (not a
-// native HTML form submission), so this replaces the old
-// google.script.run-based processForm(formObject) entry point. CV and
-// photo arrive as base64 strings instead of native File objects, since
-// that's what a plain fetch() from a browser can actually send.
 function doPost(e) {
+  if (!e || !e.postData || !e.postData.contents) {
+    return jsonOutput({ status: 'error', message: 'No form data received. This function only works when called from a website form, not when run manually in the editor.' });
+  }
+
+  const data = JSON.parse(e.postData.contents);
+
+  if (data.formType === 'ath-community-join') {
+    return handleCommunityJoin(data);
+  }
+
+  return handleLeadForm(data);
+}
+
+// ====================== GENERAL WEBSITE LEAD FORM ======================
+function handleLeadForm(data) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Leads');
+
+  sheet.appendRow([
+    new Date(),
+    data.sourcePage || '',
+    data.name || '',
+    data.phone || '',
+    data.companyName || '',
+    data.email || '',
+    data.category || '',
+    data.message || ''
+  ]);
+
+  MailApp.sendEmail({
+    to: "athrecruiters@gmail.com",
+    subject: "New Website Lead: " + (data.name || "Unknown"),
+    body: "Page: " + data.sourcePage + "\\nName: " + data.name +
+          "\\nPhone: " + data.phone + "\\nCompany: " + data.companyName +
+          "\\nEmail: " + data.email +
+          (data.category ? "\\nCategory: " + data.category : "") +
+          (data.message ? "\\nMessage: " + data.message : "")
+  });
+
+  return jsonOutput({ status: 'success' });
+}
+
+// ====================== ATH JOB COMMUNITY SUBMISSION ======================
+// CV and photo arrive as base64 strings (not native File objects), since
+// that's what a plain fetch() from the browser can actually send.
+function handleCommunityJoin(data) {
   try {
-    if (!e || !e.postData || !e.postData.contents) {
-      return jsonOutput({
-        success: false,
-        message: "No form data received. This function only works when called from the website form, not when run manually in the editor."
-      });
-    }
-
-    const data = JSON.parse(e.postData.contents);
-
     const missing = [];
     ["fullName", "gender", "phone", "email", "dob", "highestDegree", "state", "city"].forEach(function (field) {
       if (!data[field]) missing.push(field);
@@ -143,7 +187,7 @@ function doPost(e) {
     return jsonOutput({ success: true, memberCode: memberCode });
 
   } catch (error) {
-    console.error("Submission Error:", error.toString());
+    console.error("Community Join Submission Error:", error.toString());
     return jsonOutput({ success: false, message: error.toString() });
   }
 }
@@ -191,66 +235,7 @@ function sendConfirmationEmail(email, memberCode, name) {
 }
 ```
 
-3. Save the file (the save icon, or Ctrl/Cmd+S).
-
-## Step 1b: If this project ALSO has the Leads/Retreat code
-
-Skip this section entirely if the code above is the only thing in the
-project. If instead the project's file list also shows a file with
-`RECEIPT_FOLDER_ID`, `handleLeadForm`, and `handleRetreatRegistration`
-in it (the backend that already handles the lead forms on `/services/*/`
-pages and the Kigali retreat registration), that file already has its
-own `function doPost(e) { ... }`. Having two files each define `doPost`
-is invalid — only one silently wins, and it's not something Apps Script
-warns you about.
-
-The fix is to keep exactly one `doPost` in the whole project and have
-it hand off to a community-specific function instead:
-
-1. In the file with `Code.gs` (the community form's file, from Step 1),
-   rename its function from `function doPost(e) {` to
-   `function handleCommunityJoin(data) {`, and remove the `if (!e ||
-   !e.postData...)` guard at the top of it — that check now lives in the
-   other file's `doPost`, which will already have parsed the JSON before
-   calling this function. Everything else in the function body (the
-   validation, the Sheet/Drive/email logic) stays exactly the same.
-2. In the *other* file (the one with `RECEIPT_FOLDER_ID`), find its
-   `doPost` function. It should look like this:
-
-   ```javascript
-   function doPost(e) {
-     if (!e || !e.postData || !e.postData.contents) {
-       return ContentService.createTextOutput(
-         JSON.stringify({ status: 'error', message: 'No form data received...' })
-       ).setMimeType(ContentService.MimeType.JSON);
-     }
-
-     var data = JSON.parse(e.postData.contents);
-
-     if (data.formType === 'retreat-registration') {
-       return handleRetreatRegistration(data);
-     }
-
-     return handleLeadForm(data);
-   }
-   ```
-
-   Add a new branch for the community form, just above the final
-   `return handleLeadForm(data);` line:
-
-   ```javascript
-     if (data.formType === 'ath-community-join') {
-       return handleCommunityJoin(data);
-     }
-
-     return handleLeadForm(data);
-   }
-   ```
-
-3. Save both files. The community form's page already sends
-   `formType: 'ath-community-join'` in its payload, so this dispatch
-   will route it correctly without touching the existing Leads or
-   Retreat behavior at all.
+4. Save the file (the save icon, or Ctrl/Cmd+S).
 
 ## Step 2: Deploy it as a Web App
 
