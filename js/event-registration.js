@@ -4,10 +4,13 @@
 
    Submits to a DEDICATED Google Apps Script Web App (formType:
    "event-registration"), separate from the lead-form script, which
-   appends the entry to a Google Sheet — no email, invoice, or automated
-   WhatsApp message is sent. Shares the same Web App URL as
-   event-affiliate.js (one script, one deployment, two forms — routed by
-   formType).
+   appends the entry to a Google Sheet — no email or invoice is sent
+   from Apps Script. Shares the same Web App URL as event-affiliate.js
+   (one script, one deployment, two forms — routed by formType).
+
+   After a successful submission, the visitor's own browser is sent to
+   WhatsApp with a pre-filled message -- this is purely client-side
+   (a wa.me link), not something Apps Script sends on the team's behalf.
 
    SETUP REQUIRED: see /docs/tcr-events-backend-setup.md for the full
    step-by-step (new Sheet, new Apps Script project, deployment) and
@@ -15,6 +18,8 @@
    ========================================================= */
 
 const EVENT_REGISTRATION_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxMQo0BeqiJpbPuEvt_76xIbZXDu-A5HK7Q193iuu4Ii9GCIP0MdKzzmCmubQ0SSAGC/exec";
+const EVENT_REGISTRATION_WHATSAPP_NUMBER = "2347047082697";
+const EVENT_REGISTRATION_WHATSAPP_MESSAGE = "Hello, I am interested in TICR 2026";
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('eventRegisterForm');
@@ -59,11 +64,19 @@ document.addEventListener('DOMContentLoaded', function () {
             body: JSON.stringify(data)
         })
         .then(function () {
-            statusEl.textContent = "Thank you. Your registration has been received — our team will reach out to you shortly with payment details.";
+            statusEl.textContent = "Thank you. Your registration has been received — redirecting you to WhatsApp now.";
             statusEl.style.color = "#1e7e34";
             form.reset();
             submitBtn.innerText = defaultBtnText;
             submitBtn.disabled = false;
+
+            // Give the visitor a moment to see the confirmation message
+            // before sending them on to WhatsApp.
+            var whatsappUrl = "https://wa.me/" + EVENT_REGISTRATION_WHATSAPP_NUMBER +
+                "?text=" + encodeURIComponent(EVENT_REGISTRATION_WHATSAPP_MESSAGE);
+            window.setTimeout(function () {
+                window.location.href = whatsappUrl;
+            }, 1200);
         })
         .catch(function () {
             statusEl.textContent = "Something went wrong. Please try again or reach us on WhatsApp.";
