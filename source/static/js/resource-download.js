@@ -5,27 +5,33 @@
    free client-side email-sending service, since this site is static
    and has no backend server of its own to send email from.
 
-   TWO SEPARATE EMAILJS ACCOUNTS ARE USED, so the book's confirmation
-   email is fully distinct from the Payroll template's (own "from"
-   address, own "reply to", own BCC copy):
+   ONE EMAILJS ACCOUNT, TWO EMAIL SERVICES/TEMPLATES — the book keeps
+   its own Service + Template inside the same tractionoutsourcing@gmail.com
+   EmailJS account, so its confirmation email is tracked and worded
+   separately from the Payroll template's, even though both still send
+   from, reply to, and BCC the same tractionoutsourcing@gmail.com inbox:
      - "default" group — used by every resource EXCEPT the featured
-       book. Sends from tractionoutsourcing@gmail.com.
+       book (e.g. the Payroll Excel template).
      - "book" group — used only by the featured book (the template
        sets this via the button's data-resource-group="book"
        attribute, driven by "emailjs_group": "book" on the featured
-       entry in content/pages/resources.json). Sends from
-       resources.tractionoutsourcing@gmail.com.
+       entry in content/pages/resources.json).
    A resource with no "emailjs_group" set falls back to "default".
+   Because both groups live in the same account, they share one Public
+   Key (Account -> General) — only the Service ID and Template ID
+   differ per group.
 
-   SETUP REQUIRED PER ACCOUNT (one-time, about 5 minutes each):
-   1. Create a free account at https://www.emailjs.com using the
-      Gmail address that group should send from
-      (tractionoutsourcing@gmail.com for "default",
-      resources.tractionoutsourcing@gmail.com for "book").
-   2. Email Services -> Add New Service -> connect that Gmail address
-      -> copy the Service ID it gives you.
-   3. Email Templates -> Create New Template. In the template body, use
-      these variable names so they get filled in automatically:
+   SETUP REQUIRED FOR THE "book" GROUP (one-time, about 5 minutes):
+   1. Log into the existing EmailJS account (tractionoutsourcing@gmail.com).
+   2. Email Services -> Add New Service -> connect
+      tractionoutsourcing@gmail.com again as a second, separate service
+      -> copy the new Service ID it gives you (this will differ from
+      the "default" group's Service ID even though it's the same Gmail
+      address).
+   3. Email Templates -> Create New Template (separate from the
+      "default" group's template, so the book's wording/subject can
+      differ if you want). In the template body, use these variable
+      names so they get filled in automatically:
         {{to_name}}        - the visitor's name
         {{to_email}}       - the visitor's email (also set this as the
                               template's "To email" field)
@@ -34,24 +40,18 @@
         {{from_name}}      - "Traction Outsourcing Limited" (sent by the
                               form on every submission, use it in the
                               template's "From Name" field)
-        {{reply_to}}       - the reply address for that group (set in
-                              the "reply_to" field of that group's
-                              config below; use {{reply_to}} in the
-                              template's "Reply To" field so a reply
-                              from the recipient comes straight back to
-                              the right inbox)
+        {{reply_to}}       - tractionoutsourcing@gmail.com (use it in
+                              the template's "Reply To" field)
       -> copy the Template ID.
-   4. In that same template's settings, set "BCC" to the inbox that
-      group's downloads should be copied to (see RESOURCE_EMAILJS_CONFIGS
-      below for which inbox each group is meant to notify). This is what
-      sends a copy every time someone downloads a resource, at no extra
-      cost (EmailJS bills per send, not per recipient on the message).
-   5. Account -> General -> copy your Public Key.
-   6. Paste the Service ID, Template ID, and Public Key into that
-      group's entry in RESOURCE_EMAILJS_CONFIGS below and redeploy.
-   Until a group's three values are filled in, resources in that group
-   will politely tell visitors the form isn't ready yet instead of
-   failing silently — other groups keep working normally.
+   4. In that same template's settings, set "BCC" to
+      tractionoutsourcing@gmail.com (same inbox as the "default" group).
+   5. Paste the new Service ID and Template ID into the "book" entry in
+      RESOURCE_EMAILJS_CONFIGS below and redeploy. The Public Key stays
+      the same as the "default" group's — no need to look it up again.
+   Until the "book" group's Service ID and Template ID are filled in,
+   the book's form will politely tell visitors it isn't ready yet
+   instead of failing silently — the "default" group (Payroll template,
+   etc.) keeps working normally the whole time.
    ========================================================= */
 
 const RESOURCE_EMAILJS_CONFIGS = {
@@ -61,16 +61,18 @@ const RESOURCE_EMAILJS_CONFIGS = {
         publicKey: "p_j0hUJOA7fqSRNrK",
         replyTo: "tractionoutsourcing@gmail.com"
     },
-    // "book" group — sends from resources.tractionoutsourcing@gmail.com,
-    // replies go back to resources.tractionoutsourcing@gmail.com, and
-    // that same inbox gets the BCC copy of every book download. Fill
-    // these three in once the resources.tractionoutsourcing@gmail.com
-    // EmailJS account and template are set up.
+    // "book" group — same EmailJS account and same
+    // tractionoutsourcing@gmail.com inbox as "default" (sends from,
+    // replies to, and BCCs that same address), just tracked through
+    // its own Email Service + Template so the book's confirmation
+    // email is distinct from the Payroll template's. Fill in serviceId
+    // and templateId once that second Service/Template is created;
+    // publicKey is shared with "default" since it's the same account.
     book: {
         serviceId: "REPLACE_WITH_BOOK_SERVICE_ID",
         templateId: "REPLACE_WITH_BOOK_TEMPLATE_ID",
-        publicKey: "REPLACE_WITH_BOOK_PUBLIC_KEY",
-        replyTo: "resources.tractionoutsourcing@gmail.com"
+        publicKey: "p_j0hUJOA7fqSRNrK",
+        replyTo: "tractionoutsourcing@gmail.com"
     }
 };
 
