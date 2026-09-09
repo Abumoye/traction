@@ -69,8 +69,8 @@ const RESOURCE_EMAILJS_CONFIGS = {
     // and templateId once that second Service/Template is created;
     // publicKey is shared with "default" since it's the same account.
     book: {
-        serviceId: "REPLACE_WITH_BOOK_SERVICE_ID",
-        templateId: "REPLACE_WITH_BOOK_TEMPLATE_ID",
+        serviceId: "service_5wvccdf",
+        templateId: "template_l9flzkk",
         publicKey: "p_j0hUJOA7fqSRNrK",
         replyTo: "tractionoutsourcing@gmail.com"
     }
