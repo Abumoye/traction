@@ -126,15 +126,26 @@
         <div class="book-cover reveal"><img src="{{ sec.featured.image }}" alt="{{ sec.featured.image_alt | default(sec.featured.title) }}" loading="lazy"></div>
         <div class="book-info">
           {% if sec.featured.eyebrow %}<span class="eyebrow">{{ sec.featured.eyebrow }}</span>{% endif %}
+          {% if (sec.featured.resource_type | default('paid')) == 'free' %}
+          <div class="resource-tags" style="margin:10px 0 0;">
+            <span class="tag-pill tag-pill-free">Free</span>
+          </div>
+          {% endif %}
           <h2 style="text-align:left;font-size:32px;">{{ sec.featured.title }}</h2>
           {% if sec.featured.subtitle %}<p class="book-subtitle">{{ sec.featured.subtitle }}</p>{% endif %}
           {% for p in sec.featured.blurb_paragraphs %}<p>{{ p }}</p>{% endfor %}
+          {% if sec.featured.price_value or sec.featured.price_sale %}
           <div class="book-price-row">
             {% if sec.featured.price_value %}<span class="book-price-value">{{ sec.featured.price_value }}</span>{% endif %}
             {% if sec.featured.price_sale %}<span class="book-price-sale">{{ sec.featured.price_sale }}</span>{% endif %}
           </div>
+          {% endif %}
           {% if sec.featured.price_note %}<p class="book-price-note">{{ sec.featured.price_note }}</p>{% endif %}
-          {% if sec.featured.cta %}<a href="{{ sec.featured.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ sec.featured.cta }}</a>{% endif %}
+          {% if sec.featured.file_url %}
+          <button type="button" class="btn btn-primary resource-download-btn" data-resource-title="{{ sec.featured.title }}" data-resource-file="{{ sec.featured.file_url }}">{{ sec.featured.cta | default('Get Document') }}</button>
+          {% elif sec.featured.cta %}
+          <a href="{{ sec.featured.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ sec.featured.cta }}</a>
+          {% endif %}
           {% if sec.featured.sample_text %}
           <details class="book-sample">
             <summary>{{ sec.featured.sample_label | default('Read a Sample') }}</summary>
