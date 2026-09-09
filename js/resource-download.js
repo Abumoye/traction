@@ -1,6 +1,6 @@
 /* =========================================================
    Traction Outsourcing Limited — Free Resource Download Modal
-   Used on /books/ for the "Get Document" flow on free resources.
+   Used on /resources/ for the "Get Document" flow on free resources.
    Powered by EmailJS (https://www.emailjs.com) — a free client-side
    email-sending service, since this site is static and has no backend
    server of its own to send email from.

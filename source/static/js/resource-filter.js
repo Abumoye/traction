@@ -1,10 +1,10 @@
 /* =========================================================
    Traction Outsourcing Limited — Books & Resources filter
-   Used on /books/. Three pills (All / Free / Paid) toggle which
+   Used on /resources/. Three pills (All / Free / Paid) toggle which
    resources are visible. Every filterable item -- the featured
    book banner and each card in the 3-column grid -- carries a
    shared [data-resource-type] attribute, set by the template from
-   its resource_type field in content/pages/books.json.
+   its resource_type field in content/pages/resources.json.
    ========================================================= */
 document.addEventListener('DOMContentLoaded', function () {
     var pills = document.querySelectorAll('.filter-pill[data-resource-filter]');

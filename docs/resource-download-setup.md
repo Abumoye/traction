@@ -1,6 +1,6 @@
 # Free Resource Downloads — EmailJS Setup Guide
 
-This connects the "Get Document" popup on `/books/` (Full Name, Email,
+This connects the "Get Document" popup on `/resources/` (Full Name, Email,
 Download button) to an automatic email containing the direct download
 link, using a free client-side email service called EmailJS. No server
 and no paid tools required — this site is fully static, so EmailJS is
@@ -94,7 +94,7 @@ silently or look broken.
    handling of the file type is what decides this, and PDF/Word/Excel all
    download reliably on their own).
 2. Add an entry to the `resource-grid` section's `entries` list in
-   `content/pages/books.json`:
+   `content/pages/resources.json`:
 
    ```json
    {
