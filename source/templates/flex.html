@@ -142,7 +142,7 @@
           {% endif %}
           {% if sec.featured.price_note %}<p class="book-price-note">{{ sec.featured.price_note }}</p>{% endif %}
           {% if sec.featured.file_url %}
-          <button type="button" class="btn btn-primary resource-download-btn" data-resource-title="{{ sec.featured.title }}" data-resource-file="{{ sec.featured.file_url }}">{{ sec.featured.cta | default('Get Document') }}</button>
+          <button type="button" class="btn btn-primary resource-download-btn" data-resource-title="{{ sec.featured.title }}" data-resource-file="{{ sec.featured.file_url }}" data-resource-group="{{ sec.featured.emailjs_group | default('default') }}">{{ sec.featured.cta | default('Get Document') }}</button>
           {% elif sec.featured.cta %}
           <a href="{{ sec.featured.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ sec.featured.cta }}</a>
           {% endif %}
@@ -169,7 +169,7 @@
           <h3>{{ r.title }}</h3>
           <p>{{ r.description }}</p>
           {% if r.file_url %}
-          <button type="button" class="btn btn-primary resource-download-btn" data-resource-title="{{ r.title }}" data-resource-file="{{ r.file_url }}">{{ r.cta | default('Get Document') }}</button>
+          <button type="button" class="btn btn-primary resource-download-btn" data-resource-title="{{ r.title }}" data-resource-file="{{ r.file_url }}" data-resource-group="{{ r.emailjs_group | default('default') }}">{{ r.cta | default('Get Document') }}</button>
           {% elif r.href %}
           <a href="{{ r.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ r.cta | default('Learn More') }}</a>
           {% endif %}

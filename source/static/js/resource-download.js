@@ -1,14 +1,29 @@
 /* =========================================================
    Traction Outsourcing Limited — Free Resource Download Modal
-   Used on /resources/ for the "Get Document" flow on free resources.
-   Powered by EmailJS (https://www.emailjs.com) — a free client-side
-   email-sending service, since this site is static and has no backend
-   server of its own to send email from.
+   Used on /resources/ for the "Get Document" / "Get Book" flow on
+   free resources. Powered by EmailJS (https://www.emailjs.com) — a
+   free client-side email-sending service, since this site is static
+   and has no backend server of its own to send email from.
 
-   SETUP REQUIRED (one-time, about 5 minutes):
-   1. Create a free account at https://www.emailjs.com
-   2. Email Services -> Add New Service -> connect the Gmail address
-      tractionoutsourcing@gmail.com -> copy the Service ID it gives you.
+   TWO SEPARATE EMAILJS ACCOUNTS ARE USED, so the book's confirmation
+   email is fully distinct from the Payroll template's (own "from"
+   address, own "reply to", own BCC copy):
+     - "default" group — used by every resource EXCEPT the featured
+       book. Sends from tractionoutsourcing@gmail.com.
+     - "book" group — used only by the featured book (the template
+       sets this via the button's data-resource-group="book"
+       attribute, driven by "emailjs_group": "book" on the featured
+       entry in content/pages/resources.json). Sends from
+       resources.tractionoutsourcing@gmail.com.
+   A resource with no "emailjs_group" set falls back to "default".
+
+   SETUP REQUIRED PER ACCOUNT (one-time, about 5 minutes each):
+   1. Create a free account at https://www.emailjs.com using the
+      Gmail address that group should send from
+      (tractionoutsourcing@gmail.com for "default",
+      resources.tractionoutsourcing@gmail.com for "book").
+   2. Email Services -> Add New Service -> connect that Gmail address
+      -> copy the Service ID it gives you.
    3. Email Templates -> Create New Template. In the template body, use
       these variable names so they get filled in automatically:
         {{to_name}}        - the visitor's name
@@ -19,35 +34,55 @@
         {{from_name}}      - "Traction Outsourcing Limited" (sent by the
                               form on every submission, use it in the
                               template's "From Name" field)
-        {{reply_to}}       - tractionoutsourcing@gmail.com (use it in the
-                              template's "Reply To" field, so a reply from
-                              the recipient comes straight back to you)
+        {{reply_to}}       - the reply address for that group (set in
+                              the "reply_to" field of that group's
+                              config below; use {{reply_to}} in the
+                              template's "Reply To" field so a reply
+                              from the recipient comes straight back to
+                              the right inbox)
       -> copy the Template ID.
-   4. In that same template's settings, set "BCC" to
-      tractionoutsourcing@gmail.com. This is what sends you a copy every
-      time someone downloads a resource, at no extra cost (EmailJS bills
-      per send, not per recipient on the message).
+   4. In that same template's settings, set "BCC" to the inbox that
+      group's downloads should be copied to (see RESOURCE_EMAILJS_CONFIGS
+      below for which inbox each group is meant to notify). This is what
+      sends a copy every time someone downloads a resource, at no extra
+      cost (EmailJS bills per send, not per recipient on the message).
    5. Account -> General -> copy your Public Key.
-   6. Paste all three values (Service ID, Template ID, Public Key) into
-      the constants below and redeploy.
-   Until these are filled in, the form will politely tell visitors it
-   isn't ready yet instead of failing silently.
+   6. Paste the Service ID, Template ID, and Public Key into that
+      group's entry in RESOURCE_EMAILJS_CONFIGS below and redeploy.
+   Until a group's three values are filled in, resources in that group
+   will politely tell visitors the form isn't ready yet instead of
+   failing silently — other groups keep working normally.
    ========================================================= */
 
-const RESOURCE_EMAILJS_SERVICE_ID = "service_1oodwas";
-const RESOURCE_EMAILJS_TEMPLATE_ID = "template_crleo3n";
-const RESOURCE_EMAILJS_PUBLIC_KEY = "p_j0hUJOA7fqSRNrK";
+const RESOURCE_EMAILJS_CONFIGS = {
+    default: {
+        serviceId: "service_1oodwas",
+        templateId: "template_crleo3n",
+        publicKey: "p_j0hUJOA7fqSRNrK",
+        replyTo: "tractionoutsourcing@gmail.com"
+    },
+    // "book" group — sends from resources.tractionoutsourcing@gmail.com,
+    // replies go back to resources.tractionoutsourcing@gmail.com, and
+    // that same inbox gets the BCC copy of every book download. Fill
+    // these three in once the resources.tractionoutsourcing@gmail.com
+    // EmailJS account and template are set up.
+    book: {
+        serviceId: "REPLACE_WITH_BOOK_SERVICE_ID",
+        templateId: "REPLACE_WITH_BOOK_TEMPLATE_ID",
+        publicKey: "REPLACE_WITH_BOOK_PUBLIC_KEY",
+        replyTo: "resources.tractionoutsourcing@gmail.com"
+    }
+};
 
 document.addEventListener('DOMContentLoaded', function () {
     const dialog = document.getElementById('resourceModal');
     if (!dialog) return;
 
-    const isConfigured = RESOURCE_EMAILJS_SERVICE_ID.indexOf('REPLACE_WITH') !== 0
-        && RESOURCE_EMAILJS_TEMPLATE_ID.indexOf('REPLACE_WITH') !== 0
-        && RESOURCE_EMAILJS_PUBLIC_KEY.indexOf('REPLACE_WITH') !== 0;
-
-    if (isConfigured && window.emailjs) {
-        emailjs.init({ publicKey: RESOURCE_EMAILJS_PUBLIC_KEY });
+    function isGroupConfigured(config) {
+        return !!config
+            && config.serviceId.indexOf('REPLACE_WITH') !== 0
+            && config.templateId.indexOf('REPLACE_WITH') !== 0
+            && config.publicKey.indexOf('REPLACE_WITH') !== 0;
     }
 
     const form = document.getElementById('resourceForm');
@@ -64,11 +99,13 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.addEventListener('click', function () {
             const title = btn.getAttribute('data-resource-title') || 'This Document';
             const fileUrl = btn.getAttribute('data-resource-file') || '';
+            const group = btn.getAttribute('data-resource-group') || 'default';
 
             form.reset();
             titleEl.textContent = 'Get "' + title + '"';
             fileUrlInput.value = fileUrl;
             form.dataset.resourceTitle = title;
+            form.dataset.resourceGroup = group;
             statusEl.textContent = '';
             statusEl.style.color = '';
             submitBtn.disabled = false;
@@ -97,6 +134,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = emailInput.value.trim();
         const fileUrl = fileUrlInput.value;
         const title = form.dataset.resourceTitle || 'This Document';
+        const group = form.dataset.resourceGroup || 'default';
+        const config = RESOURCE_EMAILJS_CONFIGS[group] || RESOURCE_EMAILJS_CONFIGS.default;
 
         if (!name || !email) {
             statusEl.textContent = 'Please fill in your name and email.';
@@ -104,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        if (!isConfigured || !window.emailjs) {
+        if (!isGroupConfigured(config) || !window.emailjs) {
             statusEl.textContent = 'This form is not fully set up yet. Please reach us on WhatsApp instead.';
             statusEl.style.color = '#c0392b';
             return;
@@ -121,13 +160,15 @@ document.addEventListener('DOMContentLoaded', function () {
             ? fileUrl
             : window.location.origin + fileUrl;
 
-        emailjs.send(RESOURCE_EMAILJS_SERVICE_ID, RESOURCE_EMAILJS_TEMPLATE_ID, {
+        emailjs.send(config.serviceId, config.templateId, {
             to_name: name,
             to_email: email,
             document_title: title,
             document_link: absoluteFileUrl,
             from_name: 'Traction Outsourcing Limited',
-            reply_to: 'tractionoutsourcing@gmail.com'
+            reply_to: config.replyTo
+        }, {
+            publicKey: config.publicKey
         }).then(function () {
             statusEl.textContent = 'Sent! Check ' + email + ' for the download link.';
             statusEl.style.color = '#1e7e34';
