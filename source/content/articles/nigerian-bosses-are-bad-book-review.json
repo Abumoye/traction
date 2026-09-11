@@ -1,0 +1,112 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/nigerian-bosses-are-bad-book-review/index.html",
+    "url": "/articles/nigerian-bosses-are-bad-book-review/"
+  },
+  "meta": {
+    "title": "Nigerian Bosses Are Bad: A Book That Gets Under Your Skin, in a Good Way",
+    "description": "What readers are saying about Nigerian Bosses Are Bad, the free e-book by Prince Elijah Abumoye on why Nigerian bosses behave the way they do, and what it would take to change it.",
+    "image": "/images/og/og-article-nigerian-bosses-are-bad-book-review.jpg",
+    "image_alt": "The book cover for Nigerian Bosses Are Bad by Prince Elijah Abumoye, displayed beside a Free to Read badge."
+  },
+  "tag": "Book Reviews · Leadership Development",
+  "title": "A Book That Gets Under Your Skin, in a Good Way",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "September 11, 2026",
+    "read_time": "3 min read"
+  },
+  "image": "/images/articles/nigerian-bosses-are-bad-book-review.jpg",
+  "dek": "A supervisor snaps at a junior staff member in front of the whole office because a report came in late. Everyone in the room goes quiet, eyes down, pretending to work. Nobody says anything. Most people who have worked in Nigeria have either lived this moment or watched it happen to someone else.",
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "This is not an unusual scene in Nigerian offices. It happens in Lagos, in Abuja, in Port Harcourt, in small businesses and large ones alike. <em>Nigerian Bosses Are Bad</em>, written by Prince Elijah Abumoye, sits inside these moments and asks a harder question than the title suggests. Not just \"why do bosses behave this way,\" but \"what would it take for us to actually change it.\" The book moves through the foreword and the early chapters with an honesty that can feel uncomfortable before it feels useful."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Almost Put It Down, Then Couldn't Stop Reading",
+      "paragraphs": [
+        "One reader described exactly that discomfort. Early in the book, before the first chapter properly begins, the tone shifts in a way that almost felt like it was making excuses for bad bosses. The reader admitted to nearly putting the book down at that point, suspicious that it was going soft on behavior that deserved no defense. But reading on changed that impression completely. The book traces bad behavior back to where it actually starts, and makes the case that understanding the root is what allows anything to change."
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "People don't judge intents, they judge actions."
+    },
+    {
+      "type": "text",
+      "heading": "It Explains, Without Excusing",
+      "paragraphs": [
+        "That distinction sits at the center of the book. A boss who is carrying pressure, fear, or an old wound from years back can come across as harsh or unfair, even when that was never the intention. The same reader noted that almost everyone running a business in Nigeria is carrying some kind of trauma, and that it shapes how they lead, whether they notice it or not. Sometimes it takes an outside voice, or a book like this one, to show a leader something about themselves that they could not see on their own."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Not Just What to Do, But Why",
+      "paragraphs": [
+        "What stood out most to this reader was that the book \"isn't just telling us what to do, but telling us whys and leaving us to make our decisions.\" That approach makes the book useful for staff and bosses in equal measure. A staff member reading it may finally find language for something they always felt but never explained. A boss reading it with an open mind may recognize themselves in a chapter and choose to lead differently the next day."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "The Chapter That Stayed With One Reader",
+      "paragraphs": [
+        "One chapter in particular stayed with this reader: the story of a social media manager whose work rarely showed up as a clean number on a spreadsheet, and the quiet skill required to explain that value to people who only trust figures. It is a small story, but it captures something bigger about how much of real work in Nigerian offices goes unseen and unmeasured, simply because nobody has learned to talk about it properly."
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Read It Free",
+      "paragraphs": [
+        "<em>Nigerian Bosses Are Bad</em> is available free to read at <a href=\"/resources/\">tolnigeria.com/resources</a>. It was written by Prince Elijah Abumoye, founder of Traction Outsourcing Limited, out of years spent inside Nigerian workplaces, watching good people leave and good leaders struggle to understand why. If you lead a team, it may show you something about yourself. If you work under one, it may finally put words to something you have carried for a while. Either way, it is worth the read.",
+        "Further Reading: <a href=\"/articles/when-the-ceo-is-the-weak-link/\">When the CEO Is the Weak Link</a>, <a href=\"/articles/accountability-in-business-nigeria/\">Accountability in Business Nigeria</a>, <a href=\"/articles/how-to-build-resilient-management-team-nigeria/\">How to Build a Resilient Management Team</a>."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Read Nigerian Bosses Are Bad for Free",
+    "text": "Get instant access to the free e-book, sent straight to your inbox. No cost, no catch.",
+    "button": "Get the Free Book",
+    "href": "/resources/"
+  },
+  "faq": {
+    "entries": [
+      {
+        "q": "What is Nigerian Bosses Are Bad about?",
+        "a": "Nigerian Bosses Are Bad is a short e-book by Prince Elijah Abumoye, founder of Traction Outsourcing Limited, about why so many bosses in Nigerian workplaces are seen as unfair or difficult, and what pressure, trauma, and poor structure have to do with it. It uses real workplace scenarios rather than management theory, and focuses on explaining behavior without excusing it."
+      },
+      {
+        "q": "Who wrote Nigerian Bosses Are Bad?",
+        "a": "Nigerian Bosses Are Bad was written by Prince Elijah Abumoye, founder of Traction Outsourcing Limited, a corporate restructuring and HR outsourcing firm based in Abuja, Nigeria, drawing on years spent inside Nigerian workplaces."
+      },
+      {
+        "q": "Is Nigerian Bosses Are Bad free to read?",
+        "a": "Yes. The book is available free at tolnigeria.com/resources. Enter your name and email, and the download link is sent straight to your inbox at no cost."
+      },
+      {
+        "q": "Who should read Nigerian Bosses Are Bad?",
+        "a": "The book is written for both staff and bosses. Staff often find language for pressures they have felt but never explained, while bosses who read it with an open mind often recognize themselves in a chapter and find a reason to lead differently."
+      }
+    ]
+  },
+  "sidebar": {
+    "services": [
+      {"title": "Business Advisory", "href": "/services/business-advisory/"},
+      {"title": "Corporate Restructuring", "href": "/services/corporate-restructuring/"},
+      {"title": "Corporate Trainings", "href": "/services/employee-training/"},
+      {"title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/"},
+      {"title": "Startup Structuring", "href": "/services/startup-structuring/"}
+    ],
+    "insights": [
+      {"title": "When the CEO Is the Weak Link", "href": "/articles/when-the-ceo-is-the-weak-link/"},
+      {"title": "Accountability in Business Nigeria", "href": "/articles/accountability-in-business-nigeria/"},
+      {"title": "How to Build a Resilient Management Team in Nigeria", "href": "/articles/how-to-build-resilient-management-team-nigeria/"},
+      {"title": "MD vs CEO in Nigeria", "href": "/articles/md-vs-ceo-nigeria/"},
+      {"title": "Excellence or Perfection: Driving Your Team to Produce Results", "href": "/articles/excellence-vs-perfection-team-results/"}
+    ]
+  }
+}
