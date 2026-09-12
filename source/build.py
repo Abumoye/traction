@@ -172,6 +172,24 @@ REDIRECTS = {
     # old output path (relative to dist/) -> new absolute URL path
     "articles/article-tall-poppy-syndrome/index.html": "/articles/tall-poppy-syndrome/",
     "founder/index.html": "/",
+
+    # Legacy flat ".html" article URLs from before the site moved to
+    # directory-based extensionless URLs. Google is still crawling these
+    # (they show up in Search Console) even though the site itself hasn't
+    # linked to a ".html" article path in a long time.
+    "articles/article-organogram.html": "/articles/article-organogram/",
+    "articles/article-why-nigerian-startups-fail.html": "/articles/article-why-nigerian-startups-fail/",
+    "articles/article-employee-handbook-nigerian-sme.html": "/articles/article-employee-handbook-nigerian-sme/",
+    "articles/article-tall-poppy-syndrome.html": "/articles/tall-poppy-syndrome/",
+    "articles/article-dangers-of-proximity-to-success.html": "/articles/article-dangers-of-proximity-to-success/",
+
+    # Old article slugs from before final naming.
+    "articles/restrictive-clause-bond-nigeria/index.html": "/articles/restrictive-clause-vs-bond-nigeria/",
+    "articles/what-is-business-traction-in-business/index.html": "/articles/what-is-traction-in-business/",
+    "articles/what-is-business-traction-in-business-meaning-metrics--how-to-build-it/index.html": "/articles/what-is-traction-in-business/",
+
+    # Retired /books/ hub, replaced by /resources/.
+    "books/index.html": "/resources/",
 }
 
 
