@@ -528,11 +528,17 @@ footer.site-footer { background: var(--ash); padding: 80px 0 30px; margin-top: 6
 
 .article-layout { display: grid; grid-template-columns: 2.1fr 1fr; gap: 60px; align-items: start; }
 @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } }
-.article-body { font-size: 18px; color: var(--ink-soft); max-width: 720px; }
+.article-body { font-size: 18px; color: var(--ink-soft); max-width: 720px; min-width: 0; }
 .article-body .dek { font-size: 21px; color: var(--ink); font-weight: 500; }
 .article-body h2 { font-size: 26px; margin: 44px 0 18px; }
 .article-body ul { padding-left: 22px; }
 .article-body li { margin-bottom: 14px; }
+.article-table-wrap { overflow-x: auto; margin: 28px 0; border: 1px solid rgba(29,29,31,0.08); border-radius: 12px; }
+.article-body table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 560px; }
+.article-body table th, .article-body table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(29,29,31,0.08); vertical-align: top; }
+.article-body table th { background: var(--orange-soft); color: var(--ink); font-weight: 700; white-space: nowrap; }
+.article-body table tr:last-child td { border-bottom: none; }
+.article-body table td { color: var(--ink-soft); }
 .pull-quote {
   font-size: 24px; font-weight: 600; color: var(--ink); line-height: 1.35;
   border-left: 4px solid var(--orange); padding: 4px 0 4px 26px; margin: 40px 0;
