@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="login-page">
+  <div class="login-box">
+    {% if logo %}<img src="{{ logo }}" alt="Traction Outsourcing Limited Logo" class="login-logo" onerror="this.style.display='none'">{% endif %}
+    <h1 class="login-title">LOGIN!</h1>
+    {% if sub %}<p class="login-sub">{{ sub }}</p>{% endif %}
+    <form id="loginForm" class="login-form" autocomplete="off">
+      <input type="password" id="loginPassword" name="password" placeholder="Password" autocomplete="new-password" required>
+      <button type="submit" class="btn btn-primary login-btn" id="loginBtn">
+        <span id="loginBtnText">LOGIN</span>
+        <span id="loginSpinner" class="spinner" hidden></span>
+      </button>
+    </form>
+    <p id="loginError" class="login-error" hidden></p>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+(function () {
+  var AUTH_ENDPOINT = {{ auth_endpoint | tojson }};
+  var form = document.getElementById('loginForm');
+  var btn = document.getElementById('loginBtn');
+  var btnText = document.getElementById('loginBtnText');
+  var spinner = document.getElementById('loginSpinner');
+  var errorEl = document.getElementById('loginError');
+  var input = document.getElementById('loginPassword');
+
+  function showError(message) {
+    btn.disabled = false;
+    btnText.hidden = false;
+    spinner.hidden = true;
+    errorEl.hidden = false;
+    errorEl.textContent = message;
+    input.value = '';
+    input.focus();
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var password = input.value; // sent exactly as typed -- case sensitive
+    if (!password) return;
+
+    errorEl.hidden = true;
+    btn.disabled = true;
+    btnText.hidden = true;
+    spinner.hidden = false;
+
+    fetch(AUTH_ENDPOINT + '?password=' + encodeURIComponent(password))
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data && data.access === true) {
+          sessionStorage.setItem('szh_authenticated', '1');
+          window.location.href = '/project/szh/hrtraining/';
+        } else {
+          showError('access denied');
+        }
+      })
+      .catch(function () {
+        showError('access denied');
+      });
+  });
+})();
+</script>
+{% endblock %}

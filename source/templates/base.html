@@ -12,6 +12,9 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {%- if noindex %}
+  <meta name="robots" content="noindex,nofollow">
+  {%- endif %}
   <title>{{ meta.title }}</title>
   <link rel="canonical" href="https://tolnigeria.com{{ path }}">
   <meta name="description" content="{{ meta.description }}">
@@ -47,12 +50,14 @@
   {% block extra_head %}{% endblock %}
 </head>
 <body{% if brand %} class="brand-{{ brand }}"{% endif %}>
+  {% if not hide_nav %}
   {% if brand == 'properties' %}
     {% include "partials/nav-properties.html" %}
   {% elif brand == 'recruiters' %}
     {% include "partials/nav-recruiters.html" %}
   {% else %}
     {% include "partials/nav.html" %}
+  {% endif %}
   {% endif %}
   <main>
     {% block content %}{% endblock %}

@@ -1,0 +1,16 @@
+{
+  "_route": {
+    "template": "project-login.html",
+    "output": "project/szh/index.html",
+    "url": "/project/szh/"
+  },
+  "meta": {
+    "title": "Sign In",
+    "description": "Restricted access."
+  },
+  "noindex": true,
+  "hide_nav": true,
+  "logo": "/images/traction-outsourcing-logo.png",
+  "sub": "Enter your access code to continue.",
+  "auth_endpoint": "REPLACE_WITH_APPS_SCRIPT_WEB_APP_URL"
+}
