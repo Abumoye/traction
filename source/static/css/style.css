@@ -664,6 +664,7 @@ body.brand-recruiters {
   border-radius: 50%;
   animation: spz 0.7s linear infinite;
 }
+.spinner[hidden] { display: none; } /* .spinner's own display would otherwise win over [hidden] at equal specificity */
 @keyframes spz { to { transform: rotate(360deg); } }
 
 /* Simplified static header for the HR training hub */
