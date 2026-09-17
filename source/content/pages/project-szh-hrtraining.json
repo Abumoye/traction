@@ -1,0 +1,55 @@
+{
+  "_route": {
+    "template": "project-hrtraining.html",
+    "output": "project/szh/hrtraining/index.html",
+    "url": "/project/szh/hrtraining/"
+  },
+  "meta": {
+    "title": "HR Training Hub",
+    "description": "Restricted access."
+  },
+  "noindex": true,
+  "hide_nav": true,
+  "back_href": "/",
+  "consultant_href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20speak%20with%20my%20consultant.",
+  "heading": "HR Training Hub",
+  "sub": "Six practical modules covering the HR fundamentals every growing business needs.",
+  "modules": [
+    {
+      "title": "HR Operations",
+      "description": "Learn how Human resource management plays a central role in creating healthy organizations and helping them survive. See how HR managers are responsible for all of the diverse issues associated with people in organizations.",
+      "download_href": "REPLACE_DOWNLOAD_LINK_MODULE_1",
+      "watch_href": "REPLACE_WATCH_LINK_MODULE_1"
+    },
+    {
+      "title": "Recruitment and Selection",
+      "description": "Understand recruitment methods, workforce planning, employment practices, interviewing techniques, onboarding strategies.",
+      "download_href": "REPLACE_DOWNLOAD_LINK_MODULE_2",
+      "watch_href": "REPLACE_WATCH_LINK_MODULE_2"
+    },
+    {
+      "title": "Compensation and Benefits",
+      "description": "Learn Workplace compensation structures, applicable laws, total rewards, payroll, data collections, work-life balance practices.",
+      "download_href": "REPLACE_DOWNLOAD_LINK_MODULE_3",
+      "watch_href": "REPLACE_WATCH_LINK_MODULE_3"
+    },
+    {
+      "title": "Employee Relations",
+      "description": "Learn more about talent management, retention, attrition, employee relations programmes, ADR methods, employee offboarding, grievance management.",
+      "download_href": "REPLACE_DOWNLOAD_LINK_MODULE_4",
+      "watch_href": "REPLACE_WATCH_LINK_MODULE_4"
+    },
+    {
+      "title": "Human Resources Development and Retention",
+      "description": "Understand retention strategies, workplace trainings, career development practices, performance appraisal.",
+      "download_href": "REPLACE_DOWNLOAD_LINK_MODULE_5",
+      "watch_href": "REPLACE_WATCH_LINK_MODULE_5"
+    },
+    {
+      "title": "Nigerian Labour Law",
+      "description": "A practical grounding in Nigerian labour law essentials, covering employee rights, termination procedures, and the compliance obligations every employer needs to know.",
+      "download_href": "REPLACE_DOWNLOAD_LINK_MODULE_6",
+      "watch_href": "REPLACE_WATCH_LINK_MODULE_6"
+    }
+  ]
+}

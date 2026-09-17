@@ -603,3 +603,129 @@ body.brand-recruiters {
 .site-footer.brand-recruiters .footer-grid a:hover { color: var(--orange); }
 .site-footer.brand-properties .footer-bottom a,
 .site-footer.brand-recruiters .footer-bottom a { color: var(--orange); font-weight: 600; }
+
+/* =========================================================
+   Hidden project pages (/project/szh/, /project/szh/hrtraining/)
+   noindex, not linked from nav -- own header/no-header layout
+   ========================================================= */
+.login-page {
+  min-height: calc(100vh - 220px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 80px;
+  background:
+    radial-gradient(60% 50% at 50% 0%, var(--orange-soft) 0%, rgba(253,236,226,0) 70%),
+    var(--white);
+}
+.login-box {
+  width: 100%;
+  max-width: 420px;
+  background: var(--white);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+  padding: 48px 36px;
+  text-align: center;
+  box-shadow: 0 24px 48px rgba(29,29,31,0.10);
+}
+.login-logo { height: 36px; width: auto; margin: 0 auto 24px; }
+.login-title { font-size: 32px; letter-spacing: -0.02em; margin-bottom: 10px; }
+.login-sub { font-size: 15px; color: var(--ink-faint); margin: 0 0 28px; }
+.login-form { display: flex; flex-direction: column; gap: 14px; }
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 15px 18px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--hairline);
+  font-size: 15px;
+  font-family: inherit;
+  background: var(--ash);
+  color: var(--ink);
+  text-align: center;
+}
+.login-form input[type="password"]:focus { outline: none; border-color: var(--orange); background: var(--white); }
+.login-btn { justify-content: center; width: 100%; }
+.login-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+.login-error {
+  margin: 18px 0 0;
+  color: #c0392b;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2.5px solid rgba(255,255,255,0.45);
+  border-top-color: var(--white);
+  border-radius: 50%;
+  animation: spz 0.7s linear infinite;
+}
+@keyframes spz { to { transform: rotate(360deg); } }
+
+/* Simplified static header for the HR training hub */
+.hr-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--hairline);
+}
+.hr-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hr-header-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.hr-header-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 9px 16px;
+  border-radius: var(--r-pill);
+  background: rgba(29,29,31,0.05);
+  transition: background 0.25s ease;
+  white-space: nowrap;
+}
+.hr-header-link:hover { background: rgba(29,29,31,0.09); }
+.hr-header-link.hr-header-cta { background: var(--orange); color: var(--white); }
+.hr-header-link.hr-header-cta:hover { background: var(--orange-dark); }
+@media (max-width: 640px) {
+  .hr-header-inner { justify-content: center; text-align: center; }
+  .hr-header-links { justify-content: center; width: 100%; }
+}
+
+.hrtraining-section { padding-top: 60px; }
+.module-grid { margin-top: 10px; }
+.module-card { display: flex; flex-direction: column; }
+.module-card .eyebrow { margin-bottom: 14px; }
+.module-card p { flex-grow: 1; }
+.module-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.module-actions .btn {
+  flex: 1 1 auto;
+  justify-content: center;
+  padding: 12px 18px;
+  font-size: 14px;
+  white-space: nowrap;
+}

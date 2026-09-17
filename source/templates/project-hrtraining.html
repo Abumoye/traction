@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header class="hr-header" id="hrHeader">
+  <div class="container hr-header-inner">
+    <a href="/" class="brand">
+      <img src="/images/traction-outsourcing-logo.png" alt="Traction Outsourcing Limited Logo" onerror="this.style.display='none'">
+      Traction Outsourcing
+    </a>
+    <nav class="hr-header-links">
+      <a href="{{ back_href | default('/') }}" class="hr-header-link"><i class="fas fa-arrow-left"></i> Traction Outsourcing</a>
+      <a href="#" id="logoutBtn" class="hr-header-link">Logout</a>
+      <a href="{{ consultant_href }}" class="hr-header-link hr-header-cta" target="_blank" rel="noopener">Call your consultant</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section hrtraining-section">
+  <div class="container">
+    <h1 class="section-title reveal">{{ heading | default('HR Training Hub') }}</h1>
+    {% if sub %}<p class="section-sub reveal">{{ sub }}</p>{% endif %}
+    <div class="grid grid-3 module-grid">
+      {% for m in modules %}
+      <div class="card module-card reveal">
+        <span class="eyebrow">Module {{ loop.index }}</span>
+        <h3>{{ m.title }}</h3>
+        <p>{{ m.description }}</p>
+        <div class="module-actions">
+          <a href="{{ m.download_href }}" class="btn btn-ghost">
+            <i class="fas fa-download"></i> Download
+          </a>
+          <a href="{{ m.watch_href }}" class="btn btn-primary" target="_blank" rel="noopener">
+            <i class="fas fa-video"></i> Watch Live Class
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+(function () {
+  if (sessionStorage.getItem('szh_authenticated') !== '1') {
+    window.location.href = '/project/szh/';
+    return;
+  }
+  var logoutBtn = document.getElementById('logoutBtn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      sessionStorage.removeItem('szh_authenticated');
+      window.location.href = '/project/szh/';
+    });
+  }
+})();
+</script>
+{% endblock %}
