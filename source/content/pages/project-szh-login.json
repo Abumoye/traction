@@ -12,5 +12,5 @@
   "hide_nav": true,
   "logo": "/images/traction-outsourcing-logo.png",
   "sub": "Enter your access code to continue.",
-  "auth_endpoint": "REPLACE_WITH_APPS_SCRIPT_WEB_APP_URL"
+  "auth_endpoint": "https://script.google.com/macros/s/AKfycbz66tfUURnk9iaVFwjrH5tLGIJ25gB4zWmhXutpX5ZkwaQTDYmN8FlOdCNAZ5tR4ThT/exec"
 }
