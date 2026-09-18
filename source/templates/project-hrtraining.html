@@ -10,7 +10,7 @@
     <nav class="hr-header-links">
       <a href="{{ back_href | default('/') }}" class="hr-header-link"><i class="fas fa-arrow-left"></i> Traction Outsourcing</a>
       <a href="#" id="logoutBtn" class="hr-header-link">Logout</a>
-      <a href="{{ consultant_href }}" class="hr-header-link hr-header-cta" target="_blank" rel="noopener">Call your consultant</a>
+      <a href="{{ consultant_href }}" class="hr-header-link hr-header-cta" target="_blank" rel="noopener">{{ consultant_label | default('Call your consultant') }}</a>
     </nav>
   </div>
 </header>
