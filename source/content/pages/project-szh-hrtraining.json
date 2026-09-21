@@ -19,38 +19,50 @@
     {
       "title": "HR Operations",
       "description": "Learn how Human resource management plays a central role in creating healthy organizations and helping them survive. See how HR managers are responsible for all of the diverse issues associated with people in organizations.",
-      "download_href": "/downloads/hr-training-module-1-hr-operations-workbook.pdf",
-      "watch_href": "REPLACE_WATCH_LINK_MODULE_1"
+      "download_workbook_href": "/downloads/hr-training-module-1-hr-operations-workbook.pdf",
+      "download_guide_href": "/downloads/hr-training-module-1-hr-operations-student-guide.pdf",
+      "watch_href_1": "REPLACE_WATCH_LINK_MODULE_1_CLASS_1",
+      "watch_href_2": "REPLACE_WATCH_LINK_MODULE_1_CLASS_2"
     },
     {
       "title": "Recruitment and Selection",
       "description": "Understand recruitment methods, workforce planning, employment practices, interviewing techniques, onboarding strategies.",
-      "download_href": "/downloads/hr-training-module-2-recruitment-selection-workbook.pdf",
-      "watch_href": "REPLACE_WATCH_LINK_MODULE_2"
+      "download_workbook_href": "/downloads/hr-training-module-2-recruitment-selection-workbook.pdf",
+      "download_guide_href": "/downloads/hr-training-module-2-recruitment-selection-student-guide.pdf",
+      "watch_href_1": "REPLACE_WATCH_LINK_MODULE_2_CLASS_1",
+      "watch_href_2": "REPLACE_WATCH_LINK_MODULE_2_CLASS_2"
     },
     {
       "title": "Compensation and Benefits",
       "description": "Learn Workplace compensation structures, applicable laws, total rewards, payroll, data collections, work-life balance practices.",
-      "download_href": "/downloads/hr-training-module-3-compensation-benefits-workbook.pdf",
-      "watch_href": "REPLACE_WATCH_LINK_MODULE_3"
+      "download_workbook_href": "/downloads/hr-training-module-3-compensation-benefits-workbook.pdf",
+      "download_guide_href": "/downloads/hr-training-module-3-compensation-benefits-student-guide.pdf",
+      "watch_href_1": "REPLACE_WATCH_LINK_MODULE_3_CLASS_1",
+      "watch_href_2": "REPLACE_WATCH_LINK_MODULE_3_CLASS_2"
     },
     {
       "title": "Employee Relations",
       "description": "Learn more about talent management, retention, attrition, employee relations programmes, ADR methods, employee offboarding, grievance management.",
-      "download_href": "/downloads/hr-training-module-4-employee-relations-workbook.pdf",
-      "watch_href": "REPLACE_WATCH_LINK_MODULE_4"
+      "download_workbook_href": "/downloads/hr-training-module-4-employee-relations-workbook.pdf",
+      "download_guide_href": "/downloads/hr-training-module-4-employee-relations-student-guide.pdf",
+      "watch_href_1": "REPLACE_WATCH_LINK_MODULE_4_CLASS_1",
+      "watch_href_2": "REPLACE_WATCH_LINK_MODULE_4_CLASS_2"
     },
     {
       "title": "Human Resources Development and Retention",
       "description": "Understand retention strategies, workplace trainings, career development practices, performance appraisal.",
-      "download_href": "/downloads/hr-training-module-5-hr-development-retention-workbook.pdf",
-      "watch_href": "REPLACE_WATCH_LINK_MODULE_5"
+      "download_workbook_href": "/downloads/hr-training-module-5-hr-development-retention-workbook.pdf",
+      "download_guide_href": "/downloads/hr-training-module-5-hr-development-retention-student-guide.pdf",
+      "watch_href_1": "REPLACE_WATCH_LINK_MODULE_5_CLASS_1",
+      "watch_href_2": "REPLACE_WATCH_LINK_MODULE_5_CLASS_2"
     },
     {
       "title": "Nigerian Labour Law",
       "description": "A practical grounding in Nigerian labour law essentials, covering employee rights, termination procedures, and the compliance obligations every employer needs to know.",
-      "download_href": "/downloads/hr-training-module-6-nigerian-labour-law-workbook.pdf",
-      "watch_href": "REPLACE_WATCH_LINK_MODULE_6"
+      "download_workbook_href": "/downloads/hr-training-module-6-nigerian-labour-law-workbook.pdf",
+      "download_guide_href": "/downloads/hr-training-module-6-nigerian-labour-law-student-guide.pdf",
+      "watch_href_1": "REPLACE_WATCH_LINK_MODULE_6_CLASS_1",
+      "watch_href_2": "REPLACE_WATCH_LINK_MODULE_6_CLASS_2"
     }
   ]
 }
