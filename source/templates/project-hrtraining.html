@@ -26,11 +26,17 @@
         <h3>{{ m.title }}</h3>
         <p>{{ m.description }}</p>
         <div class="module-actions">
-          <a href="{{ m.download_href }}" class="btn btn-ghost" target="_blank" rel="noopener">
-            <i class="fas fa-download"></i> Download
+          <a href="{{ m.download_workbook_href }}" class="btn btn-ghost" target="_blank" rel="noopener">
+            <i class="fas fa-download"></i> Download Workbook
           </a>
-          <a href="{{ m.watch_href }}" class="btn btn-primary" target="_blank" rel="noopener">
-            <i class="fas fa-video"></i> Watch Live Class
+          <a href="{{ m.download_guide_href }}" class="btn btn-ghost" target="_blank" rel="noopener">
+            <i class="fas fa-download"></i> Download Student Guide
+          </a>
+          <a href="{{ m.watch_href_1 }}" class="btn btn-primary" target="_blank" rel="noopener">
+            <i class="fas fa-video"></i> Watch Live Class (1)
+          </a>
+          <a href="{{ m.watch_href_2 }}" class="btn btn-primary" target="_blank" rel="noopener">
+            <i class="fas fa-video"></i> Watch Live Class (2)
           </a>
         </div>
       </div>
