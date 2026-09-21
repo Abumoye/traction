@@ -90,29 +90,53 @@
       ]
     },
     {
-      "type": "grid",
+      "type": "property-grid",
       "id": "listings",
       "heading": "<span class=\"eyebrow\">Available Now</span><br>Houses For Rent",
-      "sub": "A sample of homes currently available. Reach out for the full, up-to-date list and viewing schedule.",
+      "sub": "A sample of homes currently available. Reach out for the full, up-to-date list and viewing schedule. Properties with a unique ID badge are fully verified listings — search any ID above to jump straight to it.",
       "columns": 3,
+      "filters": {
+        "locations": ["TBD, Abuja"],
+        "bedrooms": ["Self-Con", "1 Bedroom", "2 Bedroom", "3 Bedroom", "4 Bedroom"],
+        "house_types": ["Bungalow", "Duplex"],
+        "road_access": ["Tarred Road", "Untarred Road"]
+      },
       "entries": [
         {
           "title": "3-Bedroom Bungalow",
-          "text": "<span style=\"font-size:12px;color:var(--ink-faint);\">Location: TBD, Abuja</span><br><br>✓ Fitted kitchen<br>✓ Serviced compound<br>✓ 24-hour security<br><br><strong>₦ X,XXX,000 / year</strong> <span style=\"font-size:12px;color:var(--ink-faint);\">Price to be confirmed</span>",
+          "location": "TBD, Abuja",
+          "bedrooms": "3 Bedroom",
+          "house_type": "Bungalow",
+          "road_access": "",
+          "description": "Fitted kitchen, serviced compound, 24-hour security.",
+          "price": "₦ X,XXX,000 / year · Price to be confirmed",
+          "images": [],
           "cta": "Enquire About This Home",
           "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%203-bedroom%20bungalow%20for%20rent%20in%20Abuja."
         },
         {
-          "title": "4-Bedroom Terrace Duplex",
-          "text": "<span style=\"font-size:12px;color:var(--ink-faint);\">Location: TBD, Abuja</span><br><br>✓ Bq (boys' quarters) included<br>✓ Gated estate<br>✓ Constant water supply<br><br><strong>₦ X,XXX,000 / year</strong> <span style=\"font-size:12px;color:var(--ink-faint);\">Price to be confirmed</span>",
+          "title": "4-Bedroom Duplex",
+          "location": "TBD, Abuja",
+          "bedrooms": "4 Bedroom",
+          "house_type": "Duplex",
+          "road_access": "",
+          "description": "Bq (boys' quarters) included, gated estate, constant water supply.",
+          "price": "₦ X,XXX,000 / year · Price to be confirmed",
+          "images": [],
           "cta": "Enquire About This Home",
-          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%204-bedroom%20terrace%20duplex%20for%20rent%20in%20Abuja."
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%204-bedroom%20duplex%20for%20rent%20in%20Abuja."
         },
         {
-          "title": "2-Bedroom Flat",
-          "text": "<span style=\"font-size:12px;color:var(--ink-faint);\">Location: TBD, Abuja</span><br><br>✓ Newly renovated<br>✓ Prepaid meter<br>✓ Close to major roads<br><br><strong>₦ X,XXX,000 / year</strong> <span style=\"font-size:12px;color:var(--ink-faint);\">Price to be confirmed</span>",
+          "title": "Self-Con Studio",
+          "location": "TBD, Abuja",
+          "bedrooms": "Self-Con",
+          "house_type": "Bungalow",
+          "road_access": "",
+          "description": "Newly renovated, prepaid meter, close to major roads.",
+          "price": "₦ X,XXX,000 / year · Price to be confirmed",
+          "images": [],
           "cta": "Enquire About This Home",
-          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%202-bedroom%20flat%20for%20rent%20in%20Abuja."
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%20self-con%20studio%20for%20rent%20in%20Abuja."
         }
       ]
     },
@@ -135,6 +159,10 @@
         {
           "q": "What areas of Abuja do you have rentals in?",
           "a": "We manage and broker rentals across Abuja, including areas such as Kado, Mabushi, and Wuse. Contact us with your preferred location and we will match you with available homes."
+        },
+        {
+          "q": "What does the property ID on a listing mean?",
+          "a": "Every fully verified listing — one with confirmed photos, price, and location — carries a unique property ID badge, such as 104AB. You can search for a specific listing by typing its ID into the search box above the listings. Listings still being finalized do not yet have an ID."
         }
       ]
     }
@@ -144,5 +172,6 @@
     "text": "Tell us your budget, location, and bedroom count. Or call us directly at 0805 203 3145.",
     "button": "Chat on WhatsApp",
     "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20looking%20for%20a%20house%20for%20rent%20in%20Abuja."
-  }
+  },
+  "scripts": ["/js/property-carousel.js", "/js/property-filter.js"]
 }

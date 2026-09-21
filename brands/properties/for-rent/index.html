@@ -123,6 +123,14 @@
         "@type": "Answer",
         "text": "We manage and broker rentals across Abuja, including areas such as Kado, Mabushi, and Wuse. Contact us with your preferred location and we will match you with available homes."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the property ID on a listing mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every fully verified listing — one with confirmed photos, price, and location — carries a unique property ID badge, such as 104AB. You can search for a specific listing by typing its ID into the search box above the listings. Listings still being finalized do not yet have an ID."
+      }
     }
   ]
 }
@@ -222,37 +230,130 @@
 
     
       <h2 class="section-title reveal"><span class="eyebrow">Available Now</span><br>Houses For Rent</h2>
-      <p class="section-sub reveal">A sample of homes currently available. Reach out for the full, up-to-date list and viewing schedule.</p>
+      <p class="section-sub reveal">A sample of homes currently available. Reach out for the full, up-to-date list and viewing schedule. Properties with a unique ID badge are fully verified listings — search any ID above to jump straight to it.</p>
+
+      
+      <div class="property-filter-bar reveal" data-property-filter-bar>
+        <div class="property-filter-search">
+          <i class="fas fa-search"></i>
+          <input type="text" id="propertyIdSearch" placeholder="Search by property ID (e.g. 104AB)">
+        </div>
+        
+        <select data-property-filter="location">
+          <option value="">All Locations</option>
+          <option value="TBD, Abuja">TBD, Abuja</option>
+        </select>
+        
+        
+        <select data-property-filter="bedrooms">
+          <option value="">All Bedrooms</option>
+          <option value="Self-Con">Self-Con</option><option value="1 Bedroom">1 Bedroom</option><option value="2 Bedroom">2 Bedroom</option><option value="3 Bedroom">3 Bedroom</option><option value="4 Bedroom">4 Bedroom</option>
+        </select>
+        
+        
+        <select data-property-filter="house-type">
+          <option value="">All House Types</option>
+          <option value="Bungalow">Bungalow</option><option value="Duplex">Duplex</option>
+        </select>
+        
+        
+        <select data-property-filter="road-access">
+          <option value="">All Road Access</option>
+          <option value="Tarred Road">Tarred Road</option><option value="Untarred Road">Untarred Road</option>
+        </select>
+        
+        <button type="button" class="property-filter-reset" id="propertyFilterReset">Reset Filters</button>
+      </div>
+      
+
       <div class="grid grid-3">
         
-          
-          <div class="card reveal">
+        <div class="card property-card reveal"
+             data-location="TBD, Abuja"
+             data-bedrooms="3 Bedroom"
+             data-house-type="Bungalow"
+             data-road-access=""
+             data-property-id="">
+          <div class="property-carousel" data-carousel>
             
+              <div class="property-carousel-slide active property-carousel-placeholder"><i class="fas fa-image"></i><span>Photos Coming Soon</span></div>
+            
+            
+          </div>
+          <div class="property-card-body">
             <h3>3-Bedroom Bungalow</h3>
-            <p><span style="font-size:12px;color:var(--ink-faint);">Location: TBD, Abuja</span><br><br>✓ Fitted kitchen<br>✓ Serviced compound<br>✓ 24-hour security<br><br><strong>₦ X,XXX,000 / year</strong> <span style="font-size:12px;color:var(--ink-faint);">Price to be confirmed</span></p>
-            <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%203-bedroom%20bungalow%20for%20rent%20in%20Abuja." class="link-arrow">Enquire About This Home <i class="fas fa-arrow-right"></i></a>
-          </div>
-          
-        
-          
-          <div class="card reveal">
             
-            <h3>4-Bedroom Terrace Duplex</h3>
-            <p><span style="font-size:12px;color:var(--ink-faint);">Location: TBD, Abuja</span><br><br>✓ Bq (boys' quarters) included<br>✓ Gated estate<br>✓ Constant water supply<br><br><strong>₦ X,XXX,000 / year</strong> <span style="font-size:12px;color:var(--ink-faint);">Price to be confirmed</span></p>
-            <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%204-bedroom%20terrace%20duplex%20for%20rent%20in%20Abuja." class="link-arrow">Enquire About This Home <i class="fas fa-arrow-right"></i></a>
-          </div>
-          
-        
-          
-          <div class="card reveal">
+            <p class="property-meta">
+              <span><i class="fas fa-map-marker-alt"></i>TBD, Abuja</span>
+              <span><i class="fas fa-bed"></i>3 Bedroom</span>
+              <span><i class="fas fa-home"></i>Bungalow</span>
+              
+            </p>
             
-            <h3>2-Bedroom Flat</h3>
-            <p><span style="font-size:12px;color:var(--ink-faint);">Location: TBD, Abuja</span><br><br>✓ Newly renovated<br>✓ Prepaid meter<br>✓ Close to major roads<br><br><strong>₦ X,XXX,000 / year</strong> <span style="font-size:12px;color:var(--ink-faint);">Price to be confirmed</span></p>
-            <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%202-bedroom%20flat%20for%20rent%20in%20Abuja." class="link-arrow">Enquire About This Home <i class="fas fa-arrow-right"></i></a>
+            <p>Fitted kitchen, serviced compound, 24-hour security.</p>
+            <p class="property-price">₦ X,XXX,000 / year · Price to be confirmed</p>
+            <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%203-bedroom%20bungalow%20for%20rent%20in%20Abuja." class="btn btn-primary" target="_blank" rel="noopener">Enquire About This Home</a>
           </div>
-          
+        </div>
+        
+        <div class="card property-card reveal"
+             data-location="TBD, Abuja"
+             data-bedrooms="4 Bedroom"
+             data-house-type="Duplex"
+             data-road-access=""
+             data-property-id="">
+          <div class="property-carousel" data-carousel>
+            
+              <div class="property-carousel-slide active property-carousel-placeholder"><i class="fas fa-image"></i><span>Photos Coming Soon</span></div>
+            
+            
+          </div>
+          <div class="property-card-body">
+            <h3>4-Bedroom Duplex</h3>
+            
+            <p class="property-meta">
+              <span><i class="fas fa-map-marker-alt"></i>TBD, Abuja</span>
+              <span><i class="fas fa-bed"></i>4 Bedroom</span>
+              <span><i class="fas fa-home"></i>Duplex</span>
+              
+            </p>
+            
+            <p>Bq (boys' quarters) included, gated estate, constant water supply.</p>
+            <p class="property-price">₦ X,XXX,000 / year · Price to be confirmed</p>
+            <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%204-bedroom%20duplex%20for%20rent%20in%20Abuja." class="btn btn-primary" target="_blank" rel="noopener">Enquire About This Home</a>
+          </div>
+        </div>
+        
+        <div class="card property-card reveal"
+             data-location="TBD, Abuja"
+             data-bedrooms="Self-Con"
+             data-house-type="Bungalow"
+             data-road-access=""
+             data-property-id="">
+          <div class="property-carousel" data-carousel>
+            
+              <div class="property-carousel-slide active property-carousel-placeholder"><i class="fas fa-image"></i><span>Photos Coming Soon</span></div>
+            
+            
+          </div>
+          <div class="property-card-body">
+            <h3>Self-Con Studio</h3>
+            
+            <p class="property-meta">
+              <span><i class="fas fa-map-marker-alt"></i>TBD, Abuja</span>
+              <span><i class="fas fa-bed"></i>Self-Con</span>
+              <span><i class="fas fa-home"></i>Bungalow</span>
+              
+            </p>
+            
+            <p>Newly renovated, prepaid meter, close to major roads.</p>
+            <p class="property-price">₦ X,XXX,000 / year · Price to be confirmed</p>
+            <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%20self-con%20studio%20for%20rent%20in%20Abuja." class="btn btn-primary" target="_blank" rel="noopener">Enquire About This Home</a>
+          </div>
+        </div>
         
       </div>
+      <p class="property-filter-empty" id="propertyFilterEmpty" hidden>No properties match your filters. Try adjusting your search.</p>
 
     
 
@@ -284,6 +385,11 @@
         <details class="faq-item">
           <summary>What areas of Abuja do you have rentals in?</summary>
           <div class="faq-answer">We manage and broker rentals across Abuja, including areas such as Kado, Mabushi, and Wuse. Contact us with your preferred location and we will match you with available homes.</div>
+        </details>
+        
+        <details class="faq-item">
+          <summary>What does the property ID on a listing mean?</summary>
+          <div class="faq-answer">Every fully verified listing — one with confirmed photos, price, and location — carries a unique property ID badge, such as 104AB. You can search for a specific listing by typing its ID into the search box above the listings. Listings still being finalized do not yet have an ID.</div>
         </details>
         
       </div>
@@ -331,7 +437,7 @@
       <div>
         <h4>Email &amp; Social</h4>
         <a href="mailto:partner@tolnigeria.com">partner@tolnigeria.com</a>
-        <a href="https://www.instagram.com/tractionoutsourcing" target="_blank" rel="noopener"><i class="fab fa-instagram" style="margin-right:6px;"></i>Instagram</a>
+        <a href="https://www.instagram.com/traction_properties" target="_blank" rel="noopener"><i class="fab fa-instagram" style="margin-right:6px;"></i>Instagram</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -342,6 +448,6 @@
   
   <script src="/js/nav.js"></script>
   <script src="/js/reveal.js"></script>
-  
+  <script src="/js/property-carousel.js"></script><script src="/js/property-filter.js"></script>
 </body>
 </html>
