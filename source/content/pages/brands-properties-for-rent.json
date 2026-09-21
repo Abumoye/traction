@@ -1,0 +1,148 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "brands/properties/for-rent/index.html",
+    "url": "/brands/properties/for-rent/"
+  },
+  "brand": "properties",
+  "meta": {
+    "title": "Houses For Rent in Abuja | Traction Properties",
+    "description": "Browse houses for rent in Abuja through Traction Properties and Managers. Verified landlords, clear tenancy agreements, and flexible lease terms across the FCT.",
+    "image": "/images/og/og-traction-properties.jpg",
+    "image_alt": "White text/logo card on a solid dark blue background, showing a white house-shaped roof icon beside the wordmark 'traction Properties & Managers'."
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Traction Properties and Managers",
+      "url": "https://tolnigeria.com/brands/properties/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tolnigeria.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Traction Properties", "item": "https://tolnigeria.com/brands/properties/" },
+        { "@type": "ListItem", "position": 3, "name": "Houses For Rent in Abuja", "item": "https://tolnigeria.com/brands/properties/for-rent/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Houses For Rent in Abuja",
+      "description": "Traction Properties and Managers helps tenants find verified houses for rent across Abuja, with clear tenancy agreements and full move-in support.",
+      "url": "https://tolnigeria.com/brands/properties/for-rent/",
+      "serviceType": "Residential Property Rental",
+      "areaServed": "Abuja, Nigeria",
+      "provider": {
+        "@type": "RealEstateAgent",
+        "name": "Traction Properties and Managers",
+        "url": "https://tolnigeria.com/brands/properties/"
+      },
+      "image": "https://tolnigeria.com/images/og/og-traction-properties.jpg"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Traction Properties",
+    "headline": "Houses For Rent in Abuja.",
+    "sub": "Find a verified rental home in Abuja without the usual stress. We vet every landlord, handle the paperwork, and make sure the tenancy agreement protects you before you move in.",
+    "actions": [
+      {
+        "label": "View Available Rentals",
+        "href": "#listings",
+        "style": "btn-primary"
+      },
+      {
+        "label": "Chat on WhatsApp",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20looking%20for%20a%20house%20for%20rent%20in%20Abuja.",
+        "style": "btn-ghost",
+        "blank": true
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "columns": 4,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-user-shield",
+          "title": "Verified Landlords",
+          "text": ""
+        },
+        {
+          "icon": "fa-file-signature",
+          "title": "Clear Tenancy Agreements",
+          "text": ""
+        },
+        {
+          "icon": "fa-key",
+          "title": "Move-In Ready Homes",
+          "text": ""
+        },
+        {
+          "icon": "fa-headset",
+          "title": "Dedicated Rental Support",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "id": "listings",
+      "heading": "<span class=\"eyebrow\">Available Now</span><br>Houses For Rent",
+      "sub": "A sample of homes currently available. Reach out for the full, up-to-date list and viewing schedule.",
+      "columns": 3,
+      "entries": [
+        {
+          "title": "3-Bedroom Bungalow",
+          "text": "<span style=\"font-size:12px;color:var(--ink-faint);\">Location: TBD, Abuja</span><br><br>✓ Fitted kitchen<br>✓ Serviced compound<br>✓ 24-hour security<br><br><strong>₦ X,XXX,000 / year</strong> <span style=\"font-size:12px;color:var(--ink-faint);\">Price to be confirmed</span>",
+          "cta": "Enquire About This Home",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%203-bedroom%20bungalow%20for%20rent%20in%20Abuja."
+        },
+        {
+          "title": "4-Bedroom Terrace Duplex",
+          "text": "<span style=\"font-size:12px;color:var(--ink-faint);\">Location: TBD, Abuja</span><br><br>✓ Bq (boys' quarters) included<br>✓ Gated estate<br>✓ Constant water supply<br><br><strong>₦ X,XXX,000 / year</strong> <span style=\"font-size:12px;color:var(--ink-faint);\">Price to be confirmed</span>",
+          "cta": "Enquire About This Home",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%204-bedroom%20terrace%20duplex%20for%20rent%20in%20Abuja."
+        },
+        {
+          "title": "2-Bedroom Flat",
+          "text": "<span style=\"font-size:12px;color:var(--ink-faint);\">Location: TBD, Abuja</span><br><br>✓ Newly renovated<br>✓ Prepaid meter<br>✓ Close to major roads<br><br><strong>₦ X,XXX,000 / year</strong> <span style=\"font-size:12px;color:var(--ink-faint);\">Price to be confirmed</span>",
+          "cta": "Enquire About This Home",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%202-bedroom%20flat%20for%20rent%20in%20Abuja."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "How do I rent a house through Traction Properties?",
+          "a": "Reach out through the WhatsApp link on this page with your budget, preferred location, and number of bedrooms. Our team will share matching listings, arrange a viewing, and guide you through the tenancy agreement and move-in process."
+        },
+        {
+          "q": "Are the rental listings on this page the full list?",
+          "a": "No, this page shows a sample of available homes. Our full inventory changes frequently, so contact us directly for the most current list of houses for rent in Abuja."
+        },
+        {
+          "q": "Does Traction Properties verify landlords before listing a rental?",
+          "a": "Yes. We verify property ownership and documentation before a home is listed for rent, and we manage the tenancy agreement so both tenant and landlord are protected."
+        },
+        {
+          "q": "What areas of Abuja do you have rentals in?",
+          "a": "We manage and broker rentals across Abuja, including areas such as Kado, Mabushi, and Wuse. Contact us with your preferred location and we will match you with available homes."
+        }
+      ]
+    }
+  ],
+  "final_cta": {
+    "title": "Looking For a House to Rent?",
+    "text": "Tell us your budget, location, and bedroom count. Or call us directly at 0805 203 3145.",
+    "button": "Chat on WhatsApp",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20looking%20for%20a%20house%20for%20rent%20in%20Abuja."
+  }
+}
