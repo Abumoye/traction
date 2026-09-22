@@ -320,10 +320,16 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
   background: rgba(29,29,31,0.78); color: var(--white); font-size: 11px; font-weight: 700;
   letter-spacing: 0.4px; padding: 5px 10px; border-radius: var(--r-pill);
 }
-.property-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--ink-faint); margin-bottom: 14px !important; }
+.property-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; font-size: 12.5px; color: var(--ink-faint); margin-bottom: 14px !important; }
 .property-meta span { display: inline-flex; align-items: center; gap: 5px; }
+.property-meta span:not(:first-child)::before { content: "|"; font-weight: 800; color: rgba(29,29,31,0.3); margin-right: 8px; }
 .property-meta i { color: var(--orange); font-size: 11px; }
 .property-price { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 18px !important; }
+.property-fees { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.property-fees li { display: flex; align-items: center; gap: 9px; font-size: 14px; color: var(--ink-soft); }
+.property-fees i { color: var(--orange); font-size: 13px; width: 16px; text-align: center; flex-shrink: 0; }
+.property-fees .fee-label { color: var(--ink-faint); }
+.property-fees .fee-value { font-weight: 700; color: var(--ink); margin-left: auto; }
 
 .property-filter-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; margin-bottom: 40px; }
 .property-filter-search { position: relative; }

@@ -110,11 +110,16 @@
           "bedrooms": "4 Bedroom",
           "house_type": "Duplex",
           "road_access": "",
-          "description": "Close to Stella Maris / Magistrate Court, Lifecamp.<br>Fully finished and fully fitted rooms and kitchen. Primary &amp; secondary living room, all rooms en-suite, spacious kitchen, store, rear space, family lounge, large windows, guest toilet. Spacious parking, 24/7 security, serene &amp; secure environment.<br>Caution: 5% &middot; Agency/Legal: 15%",
+          "description": "Close to Stella Maris / Magistrate Court, Lifecamp.<br>Fully finished and fully fitted rooms and kitchen. Primary &amp; secondary living room, all rooms en-suite, spacious kitchen, store, rear space, family lounge, large windows, guest toilet. Spacious parking, 24/7 security, serene &amp; secure environment.",
           "price": "₦ 14,000,000 / annum",
           "price_value": 14000000,
           "price_currency": "NGN",
           "price_period": "year",
+          "fees": [
+            { "label": "Rent Amount", "amount_value": 14000000, "amount_display": "₦ 14,000,000", "icon": "fa-money-bill-wave" },
+            { "label": "Agency & Legal Fees", "amount_value": 2100000, "amount_display": "₦ 2,100,000", "icon": "fa-file-invoice-dollar" },
+            { "label": "Caution Fee", "amount_value": 700000, "amount_display": "₦ 700,000", "icon": "fa-shield-alt" }
+          ],
           "images": [
             "/images/properties/lifecamp-terrace-duplex-1-front-view.jpg",
             "/images/properties/lifecamp-terrace-duplex-2-primary-living-room.jpg",
@@ -125,7 +130,7 @@
           ],
           "cta": "Enquire About This Home",
           "property_id": "100AB",
-          "href": "https://wa.me/2348125078087?text=Hi%2C%20I%20am%20interested%20in%20the%204-bedroom%20terrace%20duplex%20%2B%20BQ%20for%20rent%20in%20Lifecamp%2C%20Abuja%20(ID%3A%20100AB)."
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%204-bedroom%20terrace%20duplex%20%2B%20BQ%20for%20rent%20in%20Lifecamp%2C%20Abuja%20(ID%3A%20100AB)."
         },
         {
           "title": "3-Bedroom Bungalow",
