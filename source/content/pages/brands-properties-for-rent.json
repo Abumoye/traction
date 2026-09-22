@@ -96,12 +96,32 @@
       "sub": "A sample of homes currently available. Reach out for the full, up-to-date list and viewing schedule. Properties with a unique ID badge are fully verified listings — search any ID above to jump straight to it.",
       "columns": 3,
       "filters": {
-        "locations": ["TBD, Abuja"],
+        "locations": ["Lifecamp, Abuja", "TBD, Abuja"],
         "bedrooms": ["Self-Con", "1 Bedroom", "2 Bedroom", "3 Bedroom", "4 Bedroom"],
         "house_types": ["Bungalow", "Duplex"],
         "road_access": ["Tarred Road", "Untarred Road"]
       },
       "entries": [
+        {
+          "title": "4-Bedroom Terrace Duplex + BQ",
+          "location": "Lifecamp, Abuja",
+          "bedrooms": "4 Bedroom",
+          "house_type": "Duplex",
+          "road_access": "",
+          "description": "Close to Stella Maris / Magistrate Court, Lifecamp.<br>Fully finished and fully fitted rooms and kitchen. Primary &amp; secondary living room, all rooms en-suite, spacious kitchen, store, rear space, family lounge, large windows, guest toilet. Spacious parking, 24/7 security, serene &amp; secure environment.<br>Caution: 5% &middot; Agency/Legal: 15%",
+          "price": "₦ 14,000,000 / annum",
+          "images": [
+            "/images/properties/lifecamp-terrace-duplex-1-front-view.jpg",
+            "/images/properties/lifecamp-terrace-duplex-2-primary-living-room.jpg",
+            "/images/properties/lifecamp-terrace-duplex-3-secondary-living-room.jpg",
+            "/images/properties/lifecamp-terrace-duplex-4-primary-kitchen.jpg",
+            "/images/properties/lifecamp-terrace-duplex-5-secondary-kitchen.jpg",
+            "/images/properties/lifecamp-terrace-duplex-6-parking-area.jpg"
+          ],
+          "cta": "Enquire About This Home",
+          "property_id": "100AB",
+          "href": "https://wa.me/2348125078087?text=Hi%2C%20I%20am%20interested%20in%20the%204-bedroom%20terrace%20duplex%20%2B%20BQ%20for%20rent%20in%20Lifecamp%2C%20Abuja%20(ID%3A%20100AB)."
+        },
         {
           "title": "3-Bedroom Bungalow",
           "location": "TBD, Abuja",
