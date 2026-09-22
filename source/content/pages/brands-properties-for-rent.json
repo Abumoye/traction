@@ -8,8 +8,8 @@
   "meta": {
     "title": "Houses For Rent in Abuja | Traction Properties",
     "description": "Browse houses for rent in Abuja through Traction Properties and Managers. Verified landlords, clear tenancy agreements, and flexible lease terms across the FCT.",
-    "image": "/images/og/og-traction-properties.jpg",
-    "image_alt": "White text/logo card on a solid dark blue background, showing a white house-shaped roof icon beside the wordmark 'traction Properties & Managers'."
+    "image": "/images/og/og-traction-properties-for-rent.jpg",
+    "image_alt": "Traction Properties 'Homes For Rent' promo graphic: a modern white two-storey duplex under a blue sky, beside a list of Abuja rental locations (Lifecamp, Maitama, Wuse, Jabi, Lugbe, Kaura, Lokogoma), a 'Rent Now' button, a 'Verified Private Listings' badge, and the numbers 0805-203-3145 and 0812-507-8087."
   },
   "schema": [
     {
@@ -40,7 +40,7 @@
         "name": "Traction Properties and Managers",
         "url": "https://tolnigeria.com/brands/properties/"
       },
-      "image": "https://tolnigeria.com/images/og/og-traction-properties.jpg"
+      "image": "https://tolnigeria.com/images/og/og-traction-properties-for-rent.jpg"
     }
   ],
   "hero": {
