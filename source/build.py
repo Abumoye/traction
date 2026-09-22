@@ -202,6 +202,24 @@ def build_realestate_listing_schema(data, route):
                     },
                 },
             }
+
+            # Any additional listing fees (agency/legal, caution/security
+            # deposit, etc.) authored on the entry as e.g.
+            # {"label": "Caution Fee", "amount_value": 700000, ...} go on
+            # the Offer as schema.org PropertyValue facts, so a fee shown
+            # on the card is always reflected in the structured data too.
+            fee_props = [
+                {
+                    "@type": "PropertyValue",
+                    "name": fee["label"],
+                    "value": fee["amount_value"],
+                    "unitText": e.get("price_currency", "NGN"),
+                }
+                for fee in e.get("fees", [])
+                if fee.get("amount_value") is not None
+            ]
+            if fee_props:
+                listing["offers"]["additionalProperty"] = fee_props
             if e.get("description"):
                 listing["description"] = strip_html(e["description"])
             if photos:

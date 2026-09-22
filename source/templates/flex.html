@@ -189,7 +189,19 @@
             </p>
             {% endif %}
             {% if e.description %}<p>{{ e.description }}</p>{% endif %}
-            {% if e.price %}<p class="property-price">{{ e.price }}</p>{% endif %}
+            {% if e.fees %}
+            <ul class="property-fees">
+              {% for fee in e.fees %}
+              <li>
+                {% if fee.icon %}<i class="fas {{ fee.icon }}"></i>{% endif %}
+                <span class="fee-label">{{ fee.label }}</span>
+                <span class="fee-value">{{ fee.amount_display }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+            {% elif e.price %}
+            <p class="property-price">{{ e.price }}</p>
+            {% endif %}
             {% if e.href %}<a href="{{ e.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ e.cta | default('Enquire About This Home') }}</a>{% endif %}
           </div>
         </div>
