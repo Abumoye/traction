@@ -98,10 +98,10 @@
       "sub": "A sample of homes currently available. Reach out for the full, up-to-date list and viewing schedule. Properties with a unique ID badge are fully verified listings — search any ID above to jump straight to it.",
       "columns": 3,
       "filters": {
-        "locations": ["Lifecamp, Abuja", "Lugbe, Abuja", "TBD, Abuja"],
-        "bedrooms": ["Self-Con", "1 Bedroom", "2 Bedroom", "3 Bedroom", "4 Bedroom"],
+        "locations": ["Lifecamp, Abuja", "Lugbe, Abuja"],
+        "bedrooms": ["2 Bedroom", "4 Bedroom"],
         "house_types": ["Bungalow", "Duplex"],
-        "road_access": ["Tarred Road", "Untarred Road"]
+        "road_access": ["Tarred Road"]
       },
       "entries": [
         {
@@ -109,7 +109,7 @@
           "location": "Lifecamp, Abuja",
           "bedrooms": "4 Bedroom",
           "house_type": "Duplex",
-          "road_access": "",
+          "road_access": "Tarred Road",
           "description": "Close to Stella Maris / Magistrate Court, Lifecamp.<br>Fully finished and fully fitted rooms and kitchen. Primary &amp; secondary living room, all rooms en-suite, spacious kitchen, store, rear space, family lounge, large windows, guest toilet. Spacious parking, 24/7 security, serene &amp; secure environment.",
           "price": "₦ 14,000,000 / annum",
           "price_value": 14000000,
@@ -137,7 +137,7 @@
           "location": "Lugbe, Abuja",
           "bedrooms": "2 Bedroom",
           "house_type": "Bungalow",
-          "road_access": "",
+          "road_access": "Tarred Road",
           "description": "Fully finished and fully fitted rooms and kitchen. All rooms en-suite, spacious kitchen, large premises, good car parking space, good security, serene &amp; secure environment.",
           "price": "₦ 3,000,000 / annum",
           "price_value": 3000000,
@@ -154,42 +154,6 @@
           "cta": "Enquire About This Home",
           "property_id": "101AB",
           "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%202-bedroom%20bungalow%20for%20rent%20in%20Lugbe%2C%20Abuja%20(ID%3A%20101AB)."
-        },
-        {
-          "title": "3-Bedroom Bungalow",
-          "location": "TBD, Abuja",
-          "bedrooms": "3 Bedroom",
-          "house_type": "Bungalow",
-          "road_access": "",
-          "description": "Fitted kitchen, serviced compound, 24-hour security.",
-          "price": "₦ X,XXX,000 / year · Price to be confirmed",
-          "images": [],
-          "cta": "Enquire About This Home",
-          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%203-bedroom%20bungalow%20for%20rent%20in%20Abuja."
-        },
-        {
-          "title": "4-Bedroom Duplex",
-          "location": "TBD, Abuja",
-          "bedrooms": "4 Bedroom",
-          "house_type": "Duplex",
-          "road_access": "",
-          "description": "Bq (boys' quarters) included, gated estate, constant water supply.",
-          "price": "₦ X,XXX,000 / year · Price to be confirmed",
-          "images": [],
-          "cta": "Enquire About This Home",
-          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%204-bedroom%20duplex%20for%20rent%20in%20Abuja."
-        },
-        {
-          "title": "Self-Con Studio",
-          "location": "TBD, Abuja",
-          "bedrooms": "Self-Con",
-          "house_type": "Bungalow",
-          "road_access": "",
-          "description": "Newly renovated, prepaid meter, close to major roads.",
-          "price": "₦ X,XXX,000 / year · Price to be confirmed",
-          "images": [],
-          "cta": "Enquire About This Home",
-          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%20self-con%20studio%20for%20rent%20in%20Abuja."
         }
       ]
     },
