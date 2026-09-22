@@ -19,6 +19,7 @@ and renders each through the template it names. Adding a new page is
 Run:  python3 build.py
 Then: python3 -m http.server -d dist 8080   (preview locally)
 """
+import html
 import json
 import re
 import shutil
@@ -128,6 +129,86 @@ def build_article_schema(data, route):
         schema["datePublished"] = date
         schema["dateModified"] = date
     return schema
+
+
+def strip_html(text: str) -> str:
+    """Collapse raw HTML (as used freely inside content JSON string fields
+    site-wide, e.g. property descriptions with <br>/<strong>) down to plain
+    text, for use in JSON-LD fields that must not contain markup."""
+    if not text:
+        return text
+    text = re.sub(r"<br\s*/?>", " ", text)
+    text = re.sub(r"<[^>]+>", "", text)
+    text = html.unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def build_realestate_listing_schema(data, route):
+    """Auto-derive RealEstateListing JSON-LD for every 'property-grid'
+    section entry that is a fully verified listing -- same gate as the
+    property ID badge (property_id set) plus structured price fields
+    (price_value/price_currency/price_period), so a listing never gets
+    schema before it has real, verifiable data, and a new listing gets
+    correct schema automatically the moment it's marked complete, with no
+    schema hand-authored per listing."""
+    out = []
+    for sec in data.get("sections", []):
+        if sec.get("type") != "property-grid":
+            continue
+        for e in sec.get("entries", []):
+            if not e.get("property_id") or not e.get("price_value"):
+                continue
+
+            accommodation = {"@type": "House", "name": e.get("title")}
+
+            if e.get("location"):
+                parts = [p.strip() for p in e["location"].split(",") if p.strip()]
+                address = {"@type": "PostalAddress", "addressCountry": "NG"}
+                if parts:
+                    address["addressLocality"] = parts[0]
+                if len(parts) > 1:
+                    address["addressRegion"] = parts[1]
+                accommodation["address"] = address
+
+            bedrooms_match = re.match(r"(\d+)", e.get("bedrooms") or "")
+            if bedrooms_match:
+                accommodation["numberOfBedrooms"] = int(bedrooms_match.group(1))
+
+            if e.get("house_type"):
+                accommodation["accommodationCategory"] = e["house_type"]
+
+            photos = [SITE_URL + img for img in e.get("images", []) if img]
+            if photos:
+                accommodation["photo"] = [{"@type": "ImageObject", "url": p} for p in photos]
+
+            listing = {
+                "@context": "https://schema.org",
+                "@type": "RealEstateListing",
+                "@id": SITE_URL + route["url"] + "#" + e["property_id"],
+                "url": SITE_URL + route["url"],
+                "identifier": e["property_id"],
+                "name": e.get("title"),
+                "mainEntity": accommodation,
+                "offers": {
+                    "@type": "Offer",
+                    "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
+                    "price": e["price_value"],
+                    "priceCurrency": e.get("price_currency", "NGN"),
+                    "priceSpecification": {
+                        "@type": "UnitPriceSpecification",
+                        "price": e["price_value"],
+                        "priceCurrency": e.get("price_currency", "NGN"),
+                        "unitText": e.get("price_period", "year"),
+                    },
+                },
+            }
+            if e.get("description"):
+                listing["description"] = strip_html(e["description"])
+            if photos:
+                listing["image"] = photos[0]
+
+            out.append(listing)
+    return out
 
 
 def build_faqpage_schema(data):
@@ -251,6 +332,9 @@ def render_json_page(json_path: Path):
         faqpage = build_faqpage_schema(data)
         if faqpage:
             schema.append(faqpage)
+
+    if "RealEstateListing" not in existing_types:
+        schema.extend(build_realestate_listing_schema(data, route))
 
     tpl = env.get_template(route["template"])
     html = tpl.render(path=route["url"], schema=schema, **data)
