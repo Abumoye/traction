@@ -98,7 +98,7 @@
       "sub": "A sample of homes currently available. Reach out for the full, up-to-date list and viewing schedule. Properties with a unique ID badge are fully verified listings — search any ID above to jump straight to it.",
       "columns": 3,
       "filters": {
-        "locations": ["Lifecamp, Abuja", "TBD, Abuja"],
+        "locations": ["Lifecamp, Abuja", "Lugbe, Abuja", "TBD, Abuja"],
         "bedrooms": ["Self-Con", "1 Bedroom", "2 Bedroom", "3 Bedroom", "4 Bedroom"],
         "house_types": ["Bungalow", "Duplex"],
         "road_access": ["Tarred Road", "Untarred Road"]
@@ -131,6 +131,29 @@
           "cta": "Enquire About This Home",
           "property_id": "100AB",
           "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%204-bedroom%20terrace%20duplex%20%2B%20BQ%20for%20rent%20in%20Lifecamp%2C%20Abuja%20(ID%3A%20100AB)."
+        },
+        {
+          "title": "2-Bedroom Bungalow",
+          "location": "Lugbe, Abuja",
+          "bedrooms": "2 Bedroom",
+          "house_type": "Bungalow",
+          "road_access": "",
+          "description": "Fully finished and fully fitted rooms and kitchen. All rooms en-suite, spacious kitchen, large premises, good car parking space, good security, serene &amp; secure environment.",
+          "price": "₦ 3,000,000 / annum",
+          "price_value": 3000000,
+          "price_currency": "NGN",
+          "price_period": "year",
+          "fees": [
+            { "label": "Rent Amount", "amount_value": 3000000, "amount_display": "₦ 3,000,000", "icon": "fa-money-bill-wave" },
+            { "label": "Agency & Legal Fees", "amount_value": 750000, "amount_display": "₦ 750,000", "icon": "fa-file-invoice-dollar" },
+            { "label": "Caution Fee", "amount_value": 300000, "amount_display": "₦ 300,000", "icon": "fa-shield-alt" }
+          ],
+          "images": [
+            "/images/properties/lugbe-bungalow-1-front-exterior.jpg"
+          ],
+          "cta": "Enquire About This Home",
+          "property_id": "101AB",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%202-bedroom%20bungalow%20for%20rent%20in%20Lugbe%2C%20Abuja%20(ID%3A%20101AB)."
         },
         {
           "title": "3-Bedroom Bungalow",
