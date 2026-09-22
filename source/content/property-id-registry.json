@@ -1,0 +1,6 @@
+{
+  "_readme": "Registry of unique property IDs used across Traction Properties listings (Houses For Rent, Houses For Sale, Estate Lands). Format: 3 digits followed by 2 uppercase letters, e.g. 104AB (5 characters total). Before assigning a new ID to a completed listing (one with confirmed images, price, and location), check it is not already in 'assigned' below, then add it. Only completed listings get an ID -- placeholder/incomplete listings must not have one.",
+  "format": "###AA",
+  "next_suggested_number": 100,
+  "assigned": []
+}

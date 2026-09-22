@@ -117,6 +117,86 @@
     {% elif sec.type == 'quote' %}
       <div class="pull-quote reveal" style="max-width:760px;margin:0 auto;text-align:center;border-left:none;border-top:4px solid var(--orange);padding:24px 0 0;">{{ sec.text }}</div>
 
+    {% elif sec.type == 'property-grid' %}
+      {% if sec.heading %}<h2 class="section-title reveal">{{ sec.heading }}</h2>{% endif %}
+      {% if sec.sub %}<p class="section-sub reveal">{{ sec.sub }}</p>{% endif %}
+
+      {% if sec.filters %}
+      <div class="property-filter-bar reveal" data-property-filter-bar>
+        <div class="property-filter-search">
+          <i class="fas fa-search"></i>
+          <input type="text" id="propertyIdSearch" placeholder="Search by property ID (e.g. 104AB)">
+        </div>
+        {% if sec.filters.locations %}
+        <select data-property-filter="location">
+          <option value="">All Locations</option>
+          {% for loc in sec.filters.locations %}<option value="{{ loc }}">{{ loc }}</option>{% endfor %}
+        </select>
+        {% endif %}
+        {% if sec.filters.bedrooms %}
+        <select data-property-filter="bedrooms">
+          <option value="">All Bedrooms</option>
+          {% for b in sec.filters.bedrooms %}<option value="{{ b }}">{{ b }}</option>{% endfor %}
+        </select>
+        {% endif %}
+        {% if sec.filters.house_types %}
+        <select data-property-filter="house-type">
+          <option value="">All House Types</option>
+          {% for h in sec.filters.house_types %}<option value="{{ h }}">{{ h }}</option>{% endfor %}
+        </select>
+        {% endif %}
+        {% if sec.filters.road_access %}
+        <select data-property-filter="road-access">
+          <option value="">All Road Access</option>
+          {% for r in sec.filters.road_access %}<option value="{{ r }}">{{ r }}</option>{% endfor %}
+        </select>
+        {% endif %}
+        <button type="button" class="property-filter-reset" id="propertyFilterReset">Reset Filters</button>
+      </div>
+      {% endif %}
+
+      <div class="grid grid-{{ sec.columns | default(3) }}">
+        {% for e in sec.entries %}
+        <div class="card property-card reveal"
+             data-location="{{ e.location | default('') }}"
+             data-bedrooms="{{ e.bedrooms | default('') }}"
+             data-house-type="{{ e.house_type | default('') }}"
+             data-road-access="{{ e.road_access | default('') }}"
+             data-property-id="{{ e.property_id | default('') }}">
+          <div class="property-carousel" data-carousel>
+            {% if e.images %}
+              {% for img in e.images %}
+              <div class="property-carousel-slide{{ ' active' if loop.first else '' }}"><img src="{{ img }}" alt="{{ e.title }}" loading="lazy"></div>
+              {% endfor %}
+              {% if e.images | length > 1 %}
+              <button type="button" class="property-carousel-arrow property-carousel-prev" aria-label="Previous photo"><i class="fas fa-chevron-left"></i></button>
+              <button type="button" class="property-carousel-arrow property-carousel-next" aria-label="Next photo"><i class="fas fa-chevron-right"></i></button>
+              <div class="property-carousel-dots">{% for img in e.images %}<span class="property-carousel-dot{{ ' active' if loop.first else '' }}"></span>{% endfor %}</div>
+              {% endif %}
+            {% else %}
+              <div class="property-carousel-slide active property-carousel-placeholder"><i class="fas fa-image"></i><span>Photos Coming Soon</span></div>
+            {% endif %}
+            {% if e.property_id %}<span class="property-id-badge">ID: {{ e.property_id }}</span>{% endif %}
+          </div>
+          <div class="property-card-body">
+            <h3>{{ e.title }}</h3>
+            {% if e.location or e.bedrooms or e.house_type or e.road_access %}
+            <p class="property-meta">
+              {% if e.location %}<span><i class="fas fa-map-marker-alt"></i>{{ e.location }}</span>{% endif %}
+              {% if e.bedrooms %}<span><i class="fas fa-bed"></i>{{ e.bedrooms }}</span>{% endif %}
+              {% if e.house_type %}<span><i class="fas fa-home"></i>{{ e.house_type }}</span>{% endif %}
+              {% if e.road_access %}<span><i class="fas fa-road"></i>{{ e.road_access }}</span>{% endif %}
+            </p>
+            {% endif %}
+            {% if e.description %}<p>{{ e.description }}</p>{% endif %}
+            {% if e.price %}<p class="property-price">{{ e.price }}</p>{% endif %}
+            {% if e.href %}<a href="{{ e.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ e.cta | default('Enquire About This Home') }}</a>{% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% if sec.filters %}<p class="property-filter-empty" id="propertyFilterEmpty" hidden>No properties match your filters. Try adjusting your search.</p>{% endif %}
+
     {% elif sec.type == 'resource-grid' %}
       {% if sec.heading %}<h2 class="section-title reveal">{{ sec.heading }}</h2>{% endif %}
       {% if sec.sub %}<p class="section-sub reveal">{{ sec.sub }}</p>{% endif %}
