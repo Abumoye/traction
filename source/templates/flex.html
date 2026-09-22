@@ -5,7 +5,7 @@
   <div class="container">
     {% if hero.eyebrow %}<span class="eyebrow">{{ hero.eyebrow }}</span>{% endif %}
     <h1 style="{{ hero.h1_style | default('') }}">{{ hero.headline }}</h1>
-    {% if hero.sub %}<p class="lede">{{ hero.sub }}</p>{% endif %}
+    {% if hero.sub %}<p class="lede" style="{{ hero.sub_style | default('') }}">{{ hero.sub }}</p>{% endif %}
     {% if hero.actions %}
     <div class="hero-actions">
       {% for a in hero.actions %}

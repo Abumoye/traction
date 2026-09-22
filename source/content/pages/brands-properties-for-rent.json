@@ -64,6 +64,7 @@
   "sections": [
     {
       "type": "grid",
+      "tight": true,
       "columns": 4,
       "style": "icon-list",
       "entries": [
@@ -92,6 +93,7 @@
     {
       "type": "property-grid",
       "id": "listings",
+      "tight": true,
       "heading": "<span class=\"eyebrow\">Available Now</span><br>Houses For Rent",
       "sub": "A sample of homes currently available. Reach out for the full, up-to-date list and viewing schedule. Properties with a unique ID badge are fully verified listings — search any ID above to jump straight to it.",
       "columns": 3,
@@ -165,6 +167,7 @@
     },
     {
       "type": "faq",
+      "tight": true,
       "heading": "Common Questions",
       "entries": [
         {

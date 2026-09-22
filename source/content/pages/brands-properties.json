@@ -65,65 +65,47 @@
   "hero": {
     "eyebrow": "Traction Properties",
     "headline": "Property Management & Real Estate Brokerage in Abuja",
-    "sub": "Traction Properties and Managers is a property management, commercial brokerage, and real estate advisory firm based in Abuja, Nigeria. We help property owners, corporate investors, and tenants buy, sell, and manage residential and commercial property, handling everything from due diligence and documentation to day-to-day tenant management and facility upkeep."
+    "h1_style": "max-width: 100%;",
+    "sub": "Traction Properties and Managers is a property management, commercial brokerage, and real estate advisory firm based in Abuja, Nigeria. We help property owners, corporate investors, and tenants buy, sell, and manage residential and commercial property, handling everything from due diligence and documentation to day-to-day tenant management and facility upkeep.",
+    "sub_style": "max-width: 100%;"
   },
   "sections": [
     {
-      "type": "text",
-      "heading": "Exclusive Properties For Sale",
-      "paragraphs": []
-    },
-    {
-      "type": "image-text",
-      "image": "/images/property-sale1.jpeg",
-      "heading": "Luxury 4-Bedroom Semi-Detached",
-      "paragraphs": [
-        "Location: Kado, Abuja",
-        "₦ 380,000,000",
-        "Land Size: xx0 SQM"
-      ]
-    },
-    {
-      "type": "image-text",
-      "image": "/images/property-sale2.jpeg",
-      "heading": "Premium 4-Bedroom Terrace Duplex",
-      "reverse": true,
-      "paragraphs": [
-        "Location: Mabushi, Abuja",
-        "₦ 350,000,000",
-        "Land Size: xx0 SQM"
-      ]
-    },
-    {
       "type": "grid",
-      "bg": "ink",
-      "heading": "<span class=\"eyebrow\">Why Traction Properties</span><br>Backed by Professionals You Can Trust.",
-      "sub": "We handle every step of the acquisition process, from due diligence to documentation, so you can invest with confidence.",
+      "tight": true,
+      "heading": "Explore Our Properties",
       "columns": 3,
-      "style": "icon-list",
       "entries": [
         {
-          "icon": "fa-file-contract",
-          "title": "Clear Title Documentation",
-          "text": ""
+          "icon": "fa-key",
+          "title": "Houses For Rent",
+          "text": "Rent your next home directly from us. No middleman.",
+          "cta": "Learn More",
+          "href": "/brands/properties/for-rent/"
         },
         {
-          "icon": "fa-credit-card",
-          "title": "Flexible Payment Plans",
-          "text": ""
+          "icon": "fa-home",
+          "title": "Houses For Sale",
+          "text": "Buy your next home. Experience our stress-free sales process.",
+          "cta": "Learn More",
+          "href": "/brands/properties/houses-for-sale/"
         },
         {
-          "icon": "fa-user-tie",
-          "title": "Professional Advisory",
-          "text": ""
+          "icon": "fa-map-marked-alt",
+          "title": "Estate Lands",
+          "text": "Buy lands to build, invest, or for landbanking.",
+          "cta": "Learn More",
+          "href": "/brands/properties/estate-lands/"
         }
       ]
     },
     {
       "type": "grid",
+      "tight": true,
       "heading": "We Can Manage Your Property For You",
       "sub": "We provide full property management for homeowners and commercial landlords across Abuja, handling tenants, rent, maintenance, and repairs so you do not have to.",
-      "columns": 3,
+      "columns": 6,
+      "style": "icon-list",
       "entries": [
         {
           "icon": "fa-users",
@@ -159,6 +141,7 @@
     },
     {
       "type": "faq",
+      "tight": true,
       "heading": "Common Questions",
       "entries": [
         {

@@ -1,0 +1,147 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "brands/properties/houses-for-sale/index.html",
+    "url": "/brands/properties/houses-for-sale/"
+  },
+  "brand": "properties",
+  "meta": {
+    "title": "Houses For Sale in Abuja | Traction Properties",
+    "description": "Browse houses for sale in Abuja through Traction Properties and Managers. Verified titles, clear documentation, and a stress-free buying process across the FCT.",
+    "image": "/images/og/og-traction-properties.jpg",
+    "image_alt": "White text/logo card on a solid dark blue background, showing a white house-shaped roof icon beside the wordmark 'traction Properties & Managers'."
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Traction Properties and Managers",
+      "url": "https://tolnigeria.com/brands/properties/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tolnigeria.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Traction Properties", "item": "https://tolnigeria.com/brands/properties/" },
+        { "@type": "ListItem", "position": 3, "name": "Houses For Sale in Abuja", "item": "https://tolnigeria.com/brands/properties/houses-for-sale/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Houses For Sale in Abuja",
+      "description": "Traction Properties and Managers helps buyers find verified houses for sale across Abuja, with clear title documentation and full acquisition support.",
+      "url": "https://tolnigeria.com/brands/properties/houses-for-sale/",
+      "serviceType": "Residential Property Sale",
+      "areaServed": "Abuja, Nigeria",
+      "provider": {
+        "@type": "RealEstateAgent",
+        "name": "Traction Properties and Managers",
+        "url": "https://tolnigeria.com/brands/properties/"
+      },
+      "image": "https://tolnigeria.com/images/og/og-traction-properties.jpg"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Traction Properties",
+    "headline": "Houses For Sale in Abuja.",
+    "sub": "Buy your next home with clear title documentation and a stress-free process from due diligence through to handover.",
+    "actions": [
+      { "label": "View Available Homes", "href": "#listings", "style": "btn-primary" },
+      { "label": "Chat on WhatsApp", "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20looking%20for%20a%20house%20for%20sale%20in%20Abuja.", "style": "btn-ghost", "blank": true }
+    ]
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "tight": true,
+      "bg": "ink",
+      "heading": "<span class=\"eyebrow\">Why Traction Properties</span><br>Backed by Professionals You Can Trust.",
+      "sub": "We handle every step of the acquisition process, from due diligence to documentation, so you can invest with confidence.",
+      "columns": 3,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-file-contract",
+          "title": "Clear Title Documentation",
+          "text": ""
+        },
+        {
+          "icon": "fa-credit-card",
+          "title": "Flexible Payment Plans",
+          "text": ""
+        },
+        {
+          "icon": "fa-user-tie",
+          "title": "Professional Advisory",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "property-grid",
+      "id": "listings",
+      "tight": true,
+      "heading": "<span class=\"eyebrow\">Available Now</span><br>Houses For Sale",
+      "sub": "A sample of homes currently available. Reach out for the full, up-to-date list and viewing schedule.",
+      "columns": 3,
+      "entries": [
+        {
+          "title": "Luxury 4-Bedroom Semi-Detached",
+          "location": "Kado, Abuja",
+          "bedrooms": "4 Bedroom",
+          "house_type": "",
+          "road_access": "",
+          "description": "Land size: xx0 SQM.",
+          "price": "₦ 380,000,000",
+          "images": ["/images/property-sale1.jpeg"],
+          "cta": "Enquire About This Home",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%20luxury%204-bedroom%20semi-detached%20for%20sale%20in%20Kado%2C%20Abuja."
+        },
+        {
+          "title": "Premium 4-Bedroom Terrace Duplex",
+          "location": "Mabushi, Abuja",
+          "bedrooms": "4 Bedroom",
+          "house_type": "Duplex",
+          "road_access": "",
+          "description": "Land size: xx0 SQM.",
+          "price": "₦ 350,000,000",
+          "images": ["/images/property-sale2.jpeg"],
+          "cta": "Enquire About This Home",
+          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%20premium%204-bedroom%20terrace%20duplex%20for%20sale%20in%20Mabushi%2C%20Abuja."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "tight": true,
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "How do I buy a house through Traction Properties?",
+          "a": "Reach out through the WhatsApp link on this page with your budget and preferred location. Our team will share matching listings, arrange a viewing, and guide you through documentation, payment, and handover."
+        },
+        {
+          "q": "Are the property listings on this page the full list?",
+          "a": "No, this page shows a sample of available homes. Our full inventory changes frequently, so contact us directly for the most current list of houses for sale in Abuja."
+        },
+        {
+          "q": "Does Traction Properties verify property titles before listing a sale?",
+          "a": "Yes. We verify title documentation and ownership before a home is listed for sale, and we guide buyers through the full documentation process."
+        },
+        {
+          "q": "What areas of Abuja do you have properties for sale in?",
+          "a": "We broker property sales across Abuja, including areas such as Kado and Mabushi. Contact us with your preferred location and budget and we will match you with available homes."
+        }
+      ]
+    }
+  ],
+  "final_cta": {
+    "title": "Looking To Buy a Property?",
+    "text": "Tell us your budget and preferred location. Or call us directly at 0805 203 3145.",
+    "button": "Chat on WhatsApp",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20looking%20for%20a%20house%20for%20sale%20in%20Abuja."
+  },
+  "scripts": ["/js/property-carousel.js"]
+}
