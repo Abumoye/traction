@@ -110,6 +110,9 @@
           "road_access": "",
           "description": "Close to Stella Maris / Magistrate Court, Lifecamp.<br>Fully finished and fully fitted rooms and kitchen. Primary &amp; secondary living room, all rooms en-suite, spacious kitchen, store, rear space, family lounge, large windows, guest toilet. Spacious parking, 24/7 security, serene &amp; secure environment.<br>Caution: 5% &middot; Agency/Legal: 15%",
           "price": "₦ 14,000,000 / annum",
+          "price_value": 14000000,
+          "price_currency": "NGN",
+          "price_period": "year",
           "images": [
             "/images/properties/lifecamp-terrace-duplex-1-front-view.jpg",
             "/images/properties/lifecamp-terrace-duplex-2-primary-living-room.jpg",

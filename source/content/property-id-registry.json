@@ -1,5 +1,5 @@
 {
-  "_readme": "Registry of unique property IDs used across Traction Properties listings (Houses For Rent, Houses For Sale, Estate Lands). Format: 3 digits followed by 2 uppercase letters, e.g. 104AB (5 characters total). Before assigning a new ID to a completed listing (one with confirmed images, price, and location), check it is not already in 'assigned' below, then add it. Only completed listings get an ID -- placeholder/incomplete listings must not have one.",
+  "_readme": "Registry of unique property IDs used across Traction Properties listings (Houses For Rent, Houses For Sale, Estate Lands). Format: 3 digits followed by 2 uppercase letters, e.g. 104AB (5 characters total). Before assigning a new ID to a completed listing (one with confirmed images, price, and location), check it is not already in 'assigned' below, then add it. Only completed listings get an ID -- placeholder/incomplete listings must not have one. A listing with a property_id also needs price_value (number), price_currency (e.g. 'NGN'), and price_period (e.g. 'year') alongside its display 'price' string -- build.py uses those to auto-generate RealEstateListing JSON-LD schema for the listing. Without them, no schema is generated for that listing, same as if it had no property_id.",
   "format": "###AA",
   "next_suggested_number": 101,
   "assigned": [
