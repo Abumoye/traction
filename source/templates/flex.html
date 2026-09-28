@@ -318,6 +318,16 @@
         {% for p in sec.paragraphs %}<p>{{ p }}</p>{% endfor %}
         {% if sec.list %}<ul style="padding-left:22px;">{% for li in sec.list %}<li style="margin-bottom:10px;">{{ li }}</li>{% endfor %}</ul>{% endif %}
       </div>
+
+    {% elif sec.type == 'embed' %}
+      {% if sec.heading %}<h2 class="section-title reveal">{{ sec.heading }}</h2>{% endif %}
+      {% if sec.sub %}<p class="section-sub reveal">{{ sec.sub }}</p>{% endif %}
+      <div class="embed-frame reveal" style="max-width:{{ sec.max_width_inner | default('760px') }};">
+        <iframe src="{{ sec.src }}" title="{{ sec.iframe_title | default(sec.heading) }}" loading="lazy">{{ sec.loading_text | default('Loading form...') }}</iframe>
+      </div>
+      {% if sec.fallback_text %}
+      <p class="reveal" style="text-align:center;color:var(--ink-faint);font-size:14px;max-width:{{ sec.max_width_inner | default('760px') }};margin:16px auto 0;">{{ sec.fallback_text | safe }}</p>
+      {% endif %}
     {% endif %}
 
   </div>

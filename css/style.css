@@ -612,6 +612,16 @@ footer.site-footer { background: var(--ash); padding: 80px 0 30px; margin-top: 6
   font-weight: 600;
 }
 .article-body p a:hover, .article-body li a:hover { color: var(--orange-dark); text-decoration-color: var(--orange-dark); }
+.embed-frame {
+  margin: 0 auto;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid rgba(29,29,31,0.08);
+  box-shadow: 0 10px 30px rgba(29,29,31,0.06);
+  background: var(--white);
+}
+.embed-frame iframe { display: block; width: 100%; height: 1400px; border: 0; }
+@media (max-width: 640px) { .embed-frame iframe { height: 1700px; } }
 .pull-quote {
   font-size: 24px; font-weight: 600; color: var(--ink); line-height: 1.35;
   border-left: 4px solid var(--orange); padding: 4px 0 4px 26px; margin: 40px 0;
