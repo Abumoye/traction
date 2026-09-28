@@ -1,11 +1,11 @@
 {
   "_route": {
     "template": "flex.html",
-    "output": "apply/index.html",
-    "url": "/apply/"
+    "output": "apply/real-estate-sales-manager-100/index.html",
+    "url": "/apply/real-estate-sales-manager-100/"
   },
   "meta": {
-    "title": "Apply: Real Estate Sales Manager | Traction Outsourcing Limited",
+    "title": "Real Estate Sales Manager Application | Traction Outsourcing Limited",
     "description": "Apply to join Traction Outsourcing Limited as a Real Estate Sales Manager in Abuja. Fill out the short application form and upload your CV to get started.",
     "image_alt": "Traction Outsourcing Limited team headshots beside the company logo and the tagline Built by Africans, for Africa."
   },
@@ -15,18 +15,13 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tolnigeria.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Apply: Real Estate Sales Manager", "item": "https://tolnigeria.com/apply/" }
+        { "@type": "ListItem", "position": 2, "name": "Real Estate Sales Manager", "item": "https://tolnigeria.com/apply/real-estate-sales-manager-100/" }
       ]
     }
   ],
   "hero": {
     "eyebrow": "We Are Hiring",
-    "headline": "Apply: Real Estate Sales Manager",
-    "sub": "Join the team driving property sales for Traction Properties in Abuja. Fill out the short form below and upload your CV. It takes about three minutes.",
-    "actions": [
-      { "label": "Fill the Application Form", "href": "#apply-form", "style": "btn-primary" },
-      { "label": "Ask a Question on WhatsApp", "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20have%20a%20question%20about%20the%20Real%20Estate%20Sales%20Manager%20role.", "style": "btn-ghost", "blank": true }
-    ]
+    "headline": "Real Estate Sales Manager"
   },
   "sections": [
     {
@@ -64,7 +59,9 @@
       "heading": "Application Form",
       "sub": "Please fill in every field. Your CV must be uploaded as a PDF file.",
       "form_id": "applyForm",
+      "form_max_width": "720px",
       "button": "Submit Application",
+      "success_message": "Thank you for your application. We will reach out to qualified candidates.",
       "fields": [
         {
           "name": "fullName",
@@ -72,6 +69,13 @@
           "input_type": "text",
           "required": true,
           "minlength": 2
+        },
+        {
+          "name": "gender",
+          "placeholder": "Gender",
+          "input_type": "select",
+          "required": true,
+          "options": ["Male", "Female"]
         },
         {
           "name": "phone",
@@ -111,14 +115,6 @@
           "help": "PDF only, max 5MB."
         }
       ]
-    },
-    {
-      "type": "cta",
-      "heading": "Prefer to Apply on WhatsApp?",
-      "text": "Send us your name, phone number, and CV directly and our team will follow up.",
-      "button": "Message Us on WhatsApp",
-      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20apply%20for%20the%20Real%20Estate%20Sales%20Manager%20role.",
-      "blank": true
     }
   ],
   "scripts": ["/js/apply-form.js"]

@@ -1,6 +1,6 @@
 /* =========================================================
    Traction Outsourcing Limited — Job Application Form Handler
-   Used on /apply/ only.
+   Used on /apply/real-estate-sales-manager-100/ only.
 
    Submits to a DEDICATED Google Apps Script Web App (formType: "apply"),
    separate from the lead-form / events scripts. Appends the entry to a
@@ -28,7 +28,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const submitBtn = form.querySelector('button[type="submit"]');
     const statusEl = document.getElementById('applyFormStatus');
+    const successModal = document.getElementById('applyFormSuccessModal');
     const defaultBtnText = submitBtn.innerText;
+
+    if (successModal) {
+        successModal.addEventListener('click', function (e) {
+            if (e.target === successModal) successModal.close();
+        });
+        successModal.querySelectorAll('[data-close-success-modal]').forEach(function (btn) {
+            btn.addEventListener('click', function () { successModal.close(); });
+        });
+    }
 
     function setStatus(message, isError) {
         statusEl.textContent = message;
@@ -55,13 +65,14 @@ document.addEventListener('DOMContentLoaded', function () {
             role: APPLY_ROLE_TITLE,
             sourcePage: window.location.pathname,
             fullName: form.fullName.value.trim(),
+            gender: form.gender.value.trim(),
             phone: form.phone.value.trim(),
             location: form.location.value.trim(),
             yearsExperience: form.yearsExperience.value.trim(),
             salesExperience: form.salesExperience.value.trim()
         };
 
-        const requiredValid = data.fullName && data.phone && data.location
+        const requiredValid = data.fullName && data.gender && data.phone && data.location
             && data.yearsExperience && data.salesExperience && cvFile;
 
         if (!requiredValid) {
@@ -104,9 +115,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 body: JSON.stringify(data)
             })
             .then(function () {
-                setStatus("Thank you for applying. Our team will review your application and reach out if you're shortlisted.", false);
+                statusEl.textContent = "";
                 form.reset();
                 resetButton();
+                if (successModal) {
+                    successModal.showModal();
+                } else {
+                    setStatus("Thank you for your application. We will reach out to qualified candidates.", false);
+                }
             })
             .catch(function () {
                 setStatus("Something went wrong. Please try again or reach us on WhatsApp.", true);
