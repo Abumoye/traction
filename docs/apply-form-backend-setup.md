@@ -22,38 +22,37 @@ same Web App URL. No changes needed on the Apps Script side for that.
 ## What you will end up with
 
 - A Google Sheet in the **tractionoutsourcing@gmail.com** Google account,
-  titled **"Traction Outsourcing – Job Applications"**, with one tab:
-  **APPLICATIONS**.
+  titled **"Traction Outsourcing – Job Applications"** — already created,
+  see Part A below.
 - A Google Drive folder, also in that account, titled **"Traction
   Outsourcing - Job Applications"**, where every uploaded CV is saved as
-  a PDF.
+  a PDF. The Apps Script creates this automatically the first time
+  someone applies — nothing to set up for it ahead of time.
 - A new Apps Script project (bound to the Sheet) deployed as a Web App
   that appends each submission as a new row and saves the CV to Drive.
 
 ---
 
-## Part A — The Google Sheet
+## Part A — The Google Sheet (already created)
 
-I don't have a tool that can create a new Google Sheet directly in your
-account (only whole local files I hand you), so this part is manual —
-about a minute:
+I have live access to your Google Drive, so I created this one directly
+instead of walking you through it:
 
-1. Go to [sheets.google.com](https://sheets.google.com) while signed in
-   as **tractionoutsourcing@gmail.com** and create a new blank
-   spreadsheet.
-2. Rename it (click "Untitled spreadsheet" top left) to **"Traction
-   Outsourcing – Job Applications"**.
-3. Rename the first tab (bottom left, currently "Sheet1") to
-   **APPLICATIONS**.
-4. In row 1, add these headers exactly, one per column:
-   `Timestamp | Role | Full Name | Gender | Phone | Location (Area Council) | Years of Experience | Sales Experience | CV Link`
+**[Open the Sheet](https://docs.google.com/spreadsheets/d/1vQKpYHWfG15E7PSY4_wZEWKigWiuyDNcEiBOMt1h76k/edit)**
+
+Row 1 already has the headers:
+`Timestamp | Role | Full Name | Gender | Phone | Location (Area Council) | Years of Experience | Sales Experience | CV Link`
+
+The single tab is whatever Google Sheets named it by default (it doesn't
+matter what — the Apps Script below always writes to "the first sheet in
+this spreadsheet," not a specific tab name, so there's nothing to rename).
 
 ## Part B — Add the Apps Script
 
 I don't have Apps Script API access either, so this part is manual too —
 but it's just copy-paste:
 
-1. In the Sheet from Part A, go to **Extensions → Apps Script**. (Doing
+1. Open the Sheet from Part A, then go to **Extensions → Apps Script**. (Doing
    it from inside this exact Sheet is what binds the script to it — no
    need to enter a Spreadsheet ID anywhere in the code.)
 2. Delete anything in the editor and paste the code below.
@@ -81,7 +80,9 @@ function doPost(e) {
 /* ============================== APPLICATION ============================== */
 
 function handleApply(data) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('APPLICATIONS');
+  // The first (only) sheet in this spreadsheet — not tied to a specific
+  // tab name, so renaming the tab later won't break this.
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
 
   var role = (data.role || '').toString().trim();
   var fullName = (data.fullName || '').toString().trim();
@@ -179,8 +180,8 @@ URL, so nothing needs to change on the website side afterward.
 ## Testing it
 
 Submit the form on the live site with a small real PDF (under 5MB) and
-confirm: a new row appears in the APPLICATIONS tab, and the CV Link
-column has a working link to a PDF in Drive. If nothing appears, open the
+confirm: a new row appears in the Sheet, and the CV Link column has a
+working link to a PDF in Drive. If nothing appears, open the
 Apps Script editor → **Executions** (left sidebar) to see if the request
 came in and whether it threw an error. (Do not test by clicking the
 Run ▶ button in the editor — that calls `doPost()` with no request data

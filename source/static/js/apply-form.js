@@ -13,12 +13,11 @@
    Apps Script can be reused for future job postings just by duplicating
    this file (or by changing APPLY_ROLE_TITLE) for a new page.
 
-   SETUP REQUIRED: Replace APPLY_FORM_SCRIPT_URL below with your deployed
-   Google Apps Script Web App URL. See /docs/apply-form-backend-setup.md
-   for the full deployment guide and the Apps Script code to paste.
+   Deployed Web App URL — see /docs/apply-form-backend-setup.md for the
+   Apps Script code and how to redeploy after changes.
    ========================================================= */
 
-const APPLY_FORM_SCRIPT_URL = "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL";
+const APPLY_FORM_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx0ZVyCU3EUcVB4BSzBbV1UIZy0a0ThpmoTk0Up0CeffTmE6QmhWNQR8gLxrojcqpKL/exec";
 const APPLY_ROLE_TITLE = "Real Estate Sales Manager";
 const APPLY_MAX_CV_BYTES = 5 * 1024 * 1024; // 5MB
 
