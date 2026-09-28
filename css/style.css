@@ -87,6 +87,7 @@ h3 { font-size: 22px; line-height: 1.25; }
 p { margin: 0 0 16px; color: var(--ink-soft); }
 .lede { font-size: clamp(18px, 2.2vw, 22px); color: var(--ink-soft); max-width: 740px; }
 .section-sub { text-align: center; color: var(--ink-faint); max-width: 680px; margin: 0 auto 40px; font-size: 18px; }
+.section-notice { text-align: center; color: #c0392b; font-weight: 700; max-width: 680px; margin: -20px auto 40px; font-size: 15px; letter-spacing: 0.2px; }
 
 /* ---------------- Buttons ---------------- */
 .btn {
