@@ -1,12 +1,12 @@
 {
   "_route": {
     "template": "flex.html",
-    "output": "apply/real-estate-sales-manager-100/index.html",
-    "url": "/apply/real-estate-sales-manager-100/"
+    "output": "apply/index.html",
+    "url": "/apply/"
   },
   "meta": {
-    "title": "Real Estate Sales Manager Application | Traction Outsourcing Limited",
-    "description": "Apply to join Traction Outsourcing Limited as a Real Estate Sales Manager in Abuja. Fill out the short application form and upload your CV to get started.",
+    "title": "Careers | Traction Outsourcing Limited",
+    "description": "Explore open roles at Traction Outsourcing Limited in Abuja, including real estate, HR, sales, and operations positions. Apply online today.",
     "image_alt": "Traction Outsourcing Limited team headshots beside the company logo and the tagline Built by Africans, for Africa."
   },
   "schema": [
@@ -15,107 +15,67 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tolnigeria.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Real Estate Sales Manager", "item": "https://tolnigeria.com/apply/real-estate-sales-manager-100/" }
+        { "@type": "ListItem", "position": 2, "name": "Careers", "item": "https://tolnigeria.com/apply/" }
       ]
     }
   ],
   "hero": {
-    "eyebrow": "We Are Hiring",
-    "headline": "Real Estate Sales Manager"
+    "eyebrow": "Careers",
+    "headline": "Careers at Traction Outsourcing",
+    "sub": "Explore open roles across our teams in Abuja. New openings are added here as they become available.",
+    "padding_bottom": "20px"
   },
   "sections": [
     {
-      "type": "grid",
-      "tight": true,
-      "columns": 4,
-      "style": "icon-list",
-      "entries": [
+      "type": "job-cards",
+      "jobs": [
         {
-          "icon": "fa-map-marker-alt",
-          "title": "Based in Abuja, FCT",
-          "text": ""
+          "title": "Real Estate Sales Manager",
+          "location": "Kado, Abuja",
+          "href": "/apply/real-estate-sales-manager-100/",
+          "active": true
         },
         {
-          "icon": "fa-chart-line",
-          "title": "Sales-Driven Role",
-          "text": ""
+          "title": "HR Manager",
+          "location": "Garki, Abuja",
+          "active": false
         },
         {
-          "icon": "fa-house-user",
-          "title": "Real Estate Focus",
-          "text": ""
+          "title": "HR Manager",
+          "location": "Kuje, Abuja",
+          "active": false
         },
         {
-          "icon": "fa-file-upload",
-          "title": "CV Required (PDF)",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "type": "form",
-      "id": "apply-form",
-      "tight": true,
-      "heading": "Application Form",
-      "sub": "Please fill in every field. Your CV must be uploaded as a PDF file.",
-      "form_id": "applyForm",
-      "form_max_width": "720px",
-      "button": "Submit Application",
-      "success_message": "Thank you for your application. We will reach out to qualified candidates.",
-      "fields": [
-        {
-          "name": "fullName",
-          "placeholder": "Full Name",
-          "input_type": "text",
-          "required": true,
-          "minlength": 2
+          "title": "Sales Executive",
+          "location": "Asokoro, Abuja",
+          "active": false
         },
         {
-          "name": "gender",
-          "placeholder": "Gender",
-          "input_type": "select",
-          "required": true,
-          "options": ["Male", "Female"]
+          "title": "General Manager",
+          "location": "Lugbe, Abuja",
+          "active": false
         },
         {
-          "name": "phone",
-          "placeholder": "Phone Number (with country code), e.g. +234 805 203 3145",
-          "input_type": "tel",
-          "required": true,
-          "pattern": "^[0-9+\\s()-]{7,}$",
-          "title": "Enter a valid phone number"
+          "title": "Housekeeper",
+          "location": "Wuse 2, Abuja",
+          "active": false
         },
         {
-          "name": "location",
-          "placeholder": "Location in Abuja (Area Council)",
-          "input_type": "select",
-          "required": true,
-          "options": ["Abaji", "Abuja Municipal (AMAC)", "Bwari", "Gwagwalada", "Kuje", "Kwali"]
+          "title": "Chef",
+          "location": "Wuse 2, Abuja",
+          "active": false
         },
         {
-          "name": "yearsExperience",
-          "placeholder": "Years of Real Estate Experience",
-          "input_type": "select",
-          "required": true,
-          "options": ["1", "2", "3", "4", "5"]
+          "title": "Internal Auditor",
+          "location": "Wuse 2, Abuja",
+          "active": false
         },
         {
-          "name": "salesExperience",
-          "placeholder": "Do You Have Real Estate Sales Experience?",
-          "input_type": "select",
-          "required": true,
-          "options": ["Yes", "No"]
-        },
-        {
-          "name": "cv",
-          "placeholder": "Upload Your CV",
-          "input_type": "file",
-          "accept": ".pdf,application/pdf",
-          "required": true,
-          "help": "PDF only, max 5MB."
+          "title": "Accounting Officer",
+          "location": "Wuse 2, Abuja",
+          "active": false
         }
       ]
     }
-  ],
-  "scripts": ["/js/apply-form.js"]
+  ]
 }

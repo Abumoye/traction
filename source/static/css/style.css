@@ -519,6 +519,18 @@ section.bg-ash .logo-chip { background: var(--white); }
 .form-success-modal p { font-size: 17px; line-height: 1.5; color: var(--ink); margin: 0; }
 .form-success-modal .btn { display: inline-flex; }
 
+/* ---------------- Careers / job cards ---------------- */
+.job-card { display: flex; flex-direction: column; }
+.job-card-title { font-size: 20px; margin: 0 0 8px; }
+.job-card-location { display: flex; align-items: center; gap: 8px; color: var(--ink-faint); font-size: 14px; margin: 0 0 24px; }
+.job-card-location i { color: var(--orange); font-size: 13px; }
+.job-card-btn { margin-top: auto; align-self: flex-start; }
+.job-card-inactive { opacity: 0.45; }
+.job-card-inactive:hover { transform: none; box-shadow: none; border-color: var(--hairline); }
+.job-card-inactive .job-card-location i { color: var(--ink-faint); }
+.btn-disabled { background: var(--ash-deep); color: var(--ink-faint); cursor: not-allowed; box-shadow: none; }
+.btn-disabled:hover { background: var(--ash-deep); transform: none; }
+
 /* ---------------- CTA band ---------------- */
 .cta-band {
   background: var(--ink);

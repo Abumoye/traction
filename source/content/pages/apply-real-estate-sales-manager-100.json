@@ -1,0 +1,121 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "apply/real-estate-sales-manager-100/index.html",
+    "url": "/apply/real-estate-sales-manager-100/"
+  },
+  "meta": {
+    "title": "Real Estate Sales Manager Application | Traction Outsourcing Limited",
+    "description": "Apply to join Traction Outsourcing Limited as a Real Estate Sales Manager in Abuja. Fill out the short application form and upload your CV to get started.",
+    "image_alt": "Traction Outsourcing Limited team headshots beside the company logo and the tagline Built by Africans, for Africa."
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tolnigeria.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Real Estate Sales Manager", "item": "https://tolnigeria.com/apply/real-estate-sales-manager-100/" }
+      ]
+    }
+  ],
+  "hero": {
+    "eyebrow": "We Are Hiring",
+    "headline": "Real Estate Sales Manager"
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "tight": true,
+      "columns": 4,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-map-marker-alt",
+          "title": "Based in Abuja, FCT",
+          "text": ""
+        },
+        {
+          "icon": "fa-chart-line",
+          "title": "Sales-Driven Role",
+          "text": ""
+        },
+        {
+          "icon": "fa-house-user",
+          "title": "Real Estate Focus",
+          "text": ""
+        },
+        {
+          "icon": "fa-file-upload",
+          "title": "CV Required (PDF)",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "id": "apply-form",
+      "tight": true,
+      "heading": "Application Form",
+      "sub": "Please fill in every field. Your CV must be uploaded as a PDF file.",
+      "form_id": "applyForm",
+      "form_max_width": "720px",
+      "button": "Submit Application",
+      "success_message": "Thank you for your application. We will reach out to qualified candidates.",
+      "fields": [
+        {
+          "name": "fullName",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2
+        },
+        {
+          "name": "gender",
+          "placeholder": "Gender",
+          "input_type": "select",
+          "required": true,
+          "options": ["Male", "Female"]
+        },
+        {
+          "name": "phone",
+          "placeholder": "Phone Number (with country code), e.g. +234 805 203 3145",
+          "input_type": "tel",
+          "required": true,
+          "pattern": "^[0-9+\\s()-]{7,}$",
+          "title": "Enter a valid phone number"
+        },
+        {
+          "name": "location",
+          "placeholder": "Location in Abuja (Area Council)",
+          "input_type": "select",
+          "required": true,
+          "options": ["Abaji", "Abuja Municipal (AMAC)", "Bwari", "Gwagwalada", "Kuje", "Kwali"]
+        },
+        {
+          "name": "yearsExperience",
+          "placeholder": "Years of Real Estate Experience",
+          "input_type": "select",
+          "required": true,
+          "options": ["1", "2", "3", "4", "5"]
+        },
+        {
+          "name": "salesExperience",
+          "placeholder": "Do You Have Real Estate Sales Experience?",
+          "input_type": "select",
+          "required": true,
+          "options": ["Yes", "No"]
+        },
+        {
+          "name": "cv",
+          "placeholder": "Upload Your CV",
+          "input_type": "file",
+          "accept": ".pdf,application/pdf",
+          "required": true,
+          "help": "PDF only, max 5MB."
+        }
+      ]
+    }
+  ],
+  "scripts": ["/js/apply-form.js"]
+}
