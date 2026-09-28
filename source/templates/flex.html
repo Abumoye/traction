@@ -290,6 +290,7 @@
     {% elif sec.type == 'form' %}
       <h2 class="section-title reveal">{{ sec.heading }}</h2>
       {% if sec.sub %}<p class="section-sub reveal">{{ sec.sub }}</p>{% endif %}
+      {%- if sec.notice %}<p class="section-notice reveal">{{ sec.notice }}</p>{% endif %}
       <form class="card reveal" id="{{ sec.form_id | default('leadForm') }}" style="max-width:{{ sec.form_max_width | default('560px') }};margin:0 auto;">
         <div style="display:grid;gap:14px;">
           {% for f in sec.fields %}

@@ -58,6 +58,7 @@
       "tight": true,
       "heading": "Application Form",
       "sub": "Please fill in every field. Your CV must be uploaded as a PDF file.",
+      "notice": "DO NOT APPLY MORE THAN ONCE. DOUBLE APPLICATIONS WILL BE DISQUALIFIED",
       "form_id": "applyForm",
       "form_max_width": "720px",
       "button": "Submit Application",
