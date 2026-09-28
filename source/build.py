@@ -289,9 +289,6 @@ REDIRECTS = {
 
     # Retired /books/ hub, replaced by /resources/.
     "books/index.html": "/resources/",
-
-    # /apply/ renamed to a role-specific, numbered slug.
-    "apply/index.html": "/apply/real-estate-sales-manager-100/",
 }
 
 
