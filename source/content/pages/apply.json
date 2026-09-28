@@ -58,15 +58,59 @@
       ]
     },
     {
-      "type": "embed",
+      "type": "form",
       "id": "apply-form",
       "tight": true,
       "heading": "Application Form",
       "sub": "Please fill in every field. Your CV must be uploaded as a PDF file.",
-      "src": "PLACEHOLDER_GOOGLE_FORM_EMBED_URL",
-      "iframe_title": "Real Estate Sales Manager Application Form",
-      "loading_text": "Loading application form...",
-      "fallback_text": "Form not loading? <a href=\"PLACEHOLDER_GOOGLE_FORM_LINK\" target=\"_blank\" rel=\"noopener\">Open it in a new tab</a> instead."
+      "form_id": "applyForm",
+      "button": "Submit Application",
+      "fields": [
+        {
+          "name": "fullName",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2
+        },
+        {
+          "name": "phone",
+          "placeholder": "Phone Number (with country code), e.g. +234 805 203 3145",
+          "input_type": "tel",
+          "required": true,
+          "pattern": "^[0-9+\\s()-]{7,}$",
+          "title": "Enter a valid phone number"
+        },
+        {
+          "name": "location",
+          "placeholder": "Location in Abuja (Area Council)",
+          "input_type": "select",
+          "required": true,
+          "options": ["Abaji", "Abuja Municipal (AMAC)", "Bwari", "Gwagwalada", "Kuje", "Kwali"]
+        },
+        {
+          "name": "yearsExperience",
+          "placeholder": "Years of Real Estate Experience",
+          "input_type": "select",
+          "required": true,
+          "options": ["1", "2", "3", "4", "5"]
+        },
+        {
+          "name": "salesExperience",
+          "placeholder": "Do You Have Real Estate Sales Experience?",
+          "input_type": "select",
+          "required": true,
+          "options": ["Yes", "No"]
+        },
+        {
+          "name": "cv",
+          "placeholder": "Upload Your CV",
+          "input_type": "file",
+          "accept": ".pdf,application/pdf",
+          "required": true,
+          "help": "PDF only, max 5MB."
+        }
+      ]
     },
     {
       "type": "cta",
@@ -76,5 +120,6 @@
       "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20apply%20for%20the%20Real%20Estate%20Sales%20Manager%20role.",
       "blank": true
     }
-  ]
+  ],
+  "scripts": ["/js/apply-form.js"]
 }
