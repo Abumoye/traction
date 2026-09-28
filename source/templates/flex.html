@@ -290,7 +290,7 @@
     {% elif sec.type == 'form' %}
       <h2 class="section-title reveal">{{ sec.heading }}</h2>
       {% if sec.sub %}<p class="section-sub reveal">{{ sec.sub }}</p>{% endif %}
-      <form class="card reveal" id="{{ sec.form_id | default('leadForm') }}" style="max-width:560px;margin:0 auto;">
+      <form class="card reveal" id="{{ sec.form_id | default('leadForm') }}" style="max-width:{{ sec.form_max_width | default('560px') }};margin:0 auto;">
         <div style="display:grid;gap:14px;">
           {% for f in sec.fields %}
             {% if f.input_type == 'checkbox' %}
@@ -317,6 +317,14 @@
           <p id="{{ sec.form_id | default('leadForm') }}Status" style="text-align:center;font-size:13.5px;margin:0;"></p>
         </div>
       </form>
+      {%- if sec.success_message %}
+      <dialog id="{{ sec.form_id | default('leadForm') }}SuccessModal" class="form-success-modal">
+        <button type="button" class="resource-modal-close" data-close-success-modal aria-label="Close">&times;</button>
+        <div class="form-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <p>{{ sec.success_message }}</p>
+        <button type="button" class="btn btn-primary" data-close-success-modal style="margin:18px auto 0;">Close</button>
+      </dialog>
+      {%- endif %}
 
     {% elif sec.type == 'raw-text' %}
       {% if sec.heading %}<h2 style="font-size:26px;margin-bottom:16px;text-align:left;">{{ sec.heading }}</h2>{% endif %}

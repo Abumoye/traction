@@ -4,9 +4,9 @@ This is a **brand new, standalone** Google Sheet and Apps Script Web App,
 separate from the "Traction Outsourcing Leads" sheet and the T-ICR events
 sheet used by the other forms on the site. It powers:
 
-- `/apply/` — the job application form (currently the **Real Estate Sales
-  Manager** role, 6 fields: Full Name, Phone, Location in Abuja, Years of
-  Experience, Sales Experience, and a CV upload).
+- `/apply/real-estate-sales-manager-100/` — the job application form (currently the **Real Estate Sales
+  Manager** role, 7 fields: Full Name, Gender, Phone, Location in Abuja,
+  Years of Experience, Sales Experience, and a CV upload).
 
 Every submission is saved as a row in a Google Sheet, and the uploaded CV
 is saved as a PDF file in a dedicated Google Drive folder, with a link to
@@ -16,7 +16,7 @@ optional notification tip is at the bottom of this doc).
 
 Because the role title is sent along with every submission, this same
 Sheet and Apps Script can be reused for future job postings — you'd just
-duplicate `/apply/` into a new page for the new role and point it at the
+duplicate `/apply/real-estate-sales-manager-100/` into a new page for the new role and point it at the
 same Web App URL. No changes needed on the Apps Script side for that.
 
 ## What you will end up with
@@ -46,7 +46,7 @@ about a minute:
 3. Rename the first tab (bottom left, currently "Sheet1") to
    **APPLICATIONS**.
 4. In row 1, add these headers exactly, one per column:
-   `Timestamp | Role | Full Name | Phone | Location (Area Council) | Years of Experience | Sales Experience | CV Link`
+   `Timestamp | Role | Full Name | Gender | Phone | Location (Area Council) | Years of Experience | Sales Experience | CV Link`
 
 ## Part B — Add the Apps Script
 
@@ -85,6 +85,7 @@ function handleApply(data) {
 
   var role = (data.role || '').toString().trim();
   var fullName = (data.fullName || '').toString().trim();
+  var gender = (data.gender || '').toString().trim();
   var phone = (data.phone || '').toString().trim();
   var location = (data.location || '').toString().trim();
   var yearsExperience = (data.yearsExperience || '').toString().trim();
@@ -101,7 +102,7 @@ function handleApply(data) {
     cvLink = 'Upload failed - contact applicant for CV';
   }
 
-  sheet.appendRow([new Date(), role, fullName, phone, location, yearsExperience, salesExperience, cvLink]);
+  sheet.appendRow([new Date(), role, fullName, gender, phone, location, yearsExperience, salesExperience, cvLink]);
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success' })
@@ -197,7 +198,7 @@ A few things worth knowing about the CV upload specifically:
 
 ## Reusing this for a future job posting
 
-Duplicate the `/apply/` page's content file for the new role, change the
+Duplicate the `/apply/real-estate-sales-manager-100/` page's content file for the new role, change the
 headline and any role-specific copy, and duplicate `/js/apply-form.js`
 with a new `APPLY_ROLE_TITLE` (or just change it if you're replacing the
 current posting) — point the new copy at the **same**

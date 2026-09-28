@@ -501,6 +501,24 @@ section.bg-ash .logo-chip { background: var(--white); }
 .resource-modal h3 { margin: 0 0 8px; font-size: 22px; text-align: left; }
 .resource-modal-sub { margin: 0 0 22px; font-size: 14px; color: var(--ink-soft); }
 
+/* ---------------- Form success pop-up ---------------- */
+.form-success-modal {
+  border: none;
+  border-radius: var(--r-lg);
+  padding: 44px 36px;
+  max-width: 420px;
+  width: calc(100% - 40px);
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+  text-align: center;
+  position: relative;
+}
+.form-success-modal::backdrop { background: rgba(29,29,31,0.55); backdrop-filter: blur(2px); }
+.form-success-icon { font-size: 44px; color: #1e7e34; margin-bottom: 16px; }
+.form-success-modal p { font-size: 17px; line-height: 1.5; color: var(--ink); margin: 0; }
+.form-success-modal .btn { display: inline-flex; }
+
 /* ---------------- CTA band ---------------- */
 .cta-band {
   background: var(--ink);
