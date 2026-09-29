@@ -59,79 +59,47 @@
     {
       "type": "text",
       "level": 3,
-      "icon": "fas fa-recycle",
       "heading": "Why the City Stays Clean",
       "paragraphs": [
-        "The cleanliness is structural. Rwanda banned plastic bags in 2008, imposing heavy fines for offenders. The last Saturday of each month is then dedicated to city cleanliness through <strong>Umuganda</strong>, a national community service tradition that involves everyone from ordinary citizens to the President."
+        "The cleanliness is structural. Rwanda banned plastic bags in 2008, imposing heavy fines for offenders. The last Saturday of each month is then dedicated to city cleanliness through Umuganda, a national community service tradition that involves everyone from ordinary citizens to the President."
       ]
     },
     {
       "type": "text",
       "level": 3,
-      "icon": "fas fa-road",
       "heading": "What a Nigerian Executive Notices First",
       "paragraphs": [
         "For a Nigerian executive visiting Kigali for the first time, this may come as a shock. When Prince Elijah Abumoye, CEO of Traction Outsourcing Limited, visited Kigali, this is how he described it:"
       ]
     },
     {
-      "type": "quote",
-      "text": "The roads do not have potholes, the streets do not have litter, and the air does not carry the smell of open waste. I walked through the inner roads and the result remains the same. Small stalls on untarred roads still keep the no-plastic rule. It was an amazing experience for me.",
-      "cite": "Prince Elijah Abumoye",
-      "cite_role": "CEO, Traction Outsourcing Limited"
+      "type": "text",
+      "paragraphs": [
+        "\"The roads do not have potholes, the streets do not have litter, and the air does not carry the smell of open waste. I walked through the inner roads and the result remains the same. Small stalls on untarred roads still keep the no-plastic rule. It was an amazing experience for me.\""
+      ]
     },
     {
       "type": "text",
-      "icon": "fas fa-chart-line",
       "heading": "Kigali's Business Growth: The Numbers Behind the Story",
       "paragraphs": [
-        "Rwanda's GDP grew by 9.4% in 2025, according to the <a href=\"https://statistics.gov.rw/sites/default/files/documents/2026-03/GDP%202025.pdf\" target=\"_blank\" rel=\"noopener\">National Institute of Statistics of Rwanda</a>, making it one of the fastest-growing economies on the continent. Kigali alone contributes over 40% of Rwanda's GDP."
-      ]
-    },
-    {
-      "type": "stats",
-      "items": [
-        {
-          "icon": "fas fa-arrow-trend-up",
-          "value": "9.4%",
-          "label": "Rwanda GDP growth, 2025",
-          "source": "NISR",
-          "source_href": "https://statistics.gov.rw/sites/default/files/documents/2026-03/GDP%202025.pdf"
-        },
-        {
-          "icon": "fas fa-city",
-          "value": "40%+",
-          "label": "Kigali's share of Rwanda's GDP"
-        },
-        {
-          "icon": "fas fa-handshake",
-          "value": "100%",
-          "label": "Foreign ownership allowed in key sectors"
-        },
-        {
-          "icon": "fas fa-earth-africa",
-          "value": "300M+",
-          "label": "People in the East African Community market"
-        }
+        "Rwanda's GDP grew by 9.4% in 2025, according to the National Institute of Statistics of Rwanda, making it one of the fastest-growing economies on the continent. Kigali alone contributes over 40% of Rwanda's GDP."
       ]
     },
     {
       "type": "text",
       "level": 3,
-      "icon": "fas fa-briefcase",
       "heading": "A Pro-Business Environment",
       "paragraphs": [
-        "Rwanda is also pro-business. The <a href=\"https://rdb.rw/\" target=\"_blank\" rel=\"noopener\">Rwanda Development Board</a> operates a One Stop Centre where businesses can register in a few hours, and the country allows 100% foreign ownership across key sectors.",
-        "The <a href=\"https://kifc.rw/\" target=\"_blank\" rel=\"noopener\">Kigali International Financial Centre (KIFC)</a> aims to attract foreign companies and stimulate regional economic growth, positioning Rwanda as the East African Community's financial gateway."
+        "Rwanda is also pro-business. The Rwanda Development Board operates a One Stop Centre where businesses can register in a few hours, and the country allows 100% foreign ownership across key sectors.",
+        "The Kigali International Financial Centre (KIFC) aims to attract foreign companies and stimulate regional economic growth, positioning Rwanda as the East African Community's financial gateway."
       ]
     },
     {
       "type": "text",
       "level": 3,
-      "icon": "fas fa-globe",
       "heading": "A Gateway to East Africa",
       "paragraphs": [
-        "For Nigerian founders and executives eyeing East Africa as a market, Kigali offers easy access to the <a href=\"https://www.eac.int/\" target=\"_blank\" rel=\"noopener\">East African Community</a>, a bloc of over 300 million people, with some of the least bureaucratic market entry conditions in Africa. If you are weighing the reverse move and bringing foreign partners into Nigeria, read our guide to <a href=\"/articles/company-registration-nigeria-foreigners/\">company registration in Nigeria for foreigners</a>."
+        "For Nigerian founders and executives eyeing East Africa as a market, Kigali offers easy access to the East African Community, a bloc of over 300 million people, with some of the least bureaucratic market entry conditions in Africa. If you are weighing the reverse move and bringing foreign partners into Nigeria, read our guide to company registration in Nigeria for foreigners."
       ]
     },
     {
