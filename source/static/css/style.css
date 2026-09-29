@@ -670,6 +670,45 @@ footer.site-footer { background: var(--ash); padding: 80px 0 30px; margin-top: 6
 .back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--ink-faint); margin-bottom: 24px; }
 .back-link:hover { color: var(--orange); }
 
+/* ---- Article building blocks: icon headings, stat cards, callout, contact card, sources ---- */
+.article-body h2 i, .article-body h3 i { color: var(--orange); margin-right: 12px; font-size: 0.85em; }
+.article-body h3 { font-size: 20px; margin: 32px 0 12px; color: var(--ink); }
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 28px 0 8px; }
+.stat-card { background: var(--ash); border-radius: var(--r-md); padding: 20px 18px; display: flex; flex-direction: column; gap: 4px; }
+.stat-card i { color: var(--orange); font-size: 18px; margin-bottom: 6px; }
+.stat-card strong { font-size: 28px; line-height: 1.1; color: var(--ink); letter-spacing: -0.01em; }
+.stat-card span { font-size: 14.5px; line-height: 1.4; color: var(--ink-soft); }
+.stat-card small { font-size: 12.5px; color: var(--ink-faint); margin-top: 4px; }
+.stat-card small a { color: var(--ink-faint); text-decoration: underline; text-underline-offset: 2px; }
+.pull-quote-cited blockquote { margin: 0; }
+.pull-quote-cited figcaption { font-size: 15px; font-weight: 500; color: var(--ink-faint); margin-top: 14px; }
+.pull-quote-cited figcaption::before { content: "\2013\00a0"; }
+.pull-quote-cited figcaption a { color: var(--orange); font-weight: 600; }
+.article-callout { background: var(--orange-soft); border-radius: var(--r-lg); padding: 32px; margin: 44px 0; }
+.article-callout h2 { margin-top: 6px; }
+.callout-eyebrow { display: inline-block; font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--orange-dark); }
+.callout-note { font-weight: 600; color: var(--ink); }
+.callout-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.icon-list { list-style: none; padding-left: 0 !important; display: grid; gap: 12px; }
+.icon-list li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start; margin: 0; }
+.icon-list li i { color: var(--orange); font-size: 17px; margin-top: 5px; text-align: center; }
+.contact-card { border: 1px solid var(--hairline); border-radius: var(--r-lg); padding: 28px; margin: 40px 0; background: var(--white); }
+.contact-card h3 { margin: 0 0 8px; }
+.contact-card ul { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 12px; }
+.contact-card li { margin: 0; }
+.article-body .contact-card a { text-decoration: none; display: flex; align-items: center; gap: 14px; padding: 12px 14px; border-radius: var(--r-sm); background: var(--ash); color: var(--ink); font-weight: 600; font-size: 16px; }
+.article-body .contact-card a:hover { color: var(--ink); background: var(--orange-soft); }
+.contact-card a i { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--white); color: var(--orange); font-size: 17px; flex-shrink: 0; }
+.contact-card a i.fa-whatsapp { color: #25D366; }
+.contact-card a span { display: flex; flex-direction: column; line-height: 1.3; }
+.contact-card a small { font-size: 12.5px; font-weight: 500; color: var(--ink-faint); }
+.article-sources { margin: 44px 0 8px; padding-top: 24px; border-top: 1px solid var(--hairline); }
+.article-sources h3 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint); margin: 0 0 12px; }
+.article-sources ol { padding-left: 20px; font-size: 14.5px; }
+.article-sources li { margin-bottom: 6px; }
+.article-body .article-sources a { font-weight: 400; color: var(--ink-soft); text-decoration-color: currentColor; text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 640px) { .article-callout, .contact-card { padding: 22px; } .stat-card strong { font-size: 24px; } }
+
 /* ==========================================================================
    Sub-brand pages — ATH Recruiters & Traction Properties
    Distinct branding/navigation from the main Traction Outsourcing site.

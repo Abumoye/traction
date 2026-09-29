@@ -9,6 +9,7 @@
       <span><i class="fas fa-building"></i>{{ byline.author }}</span>
       <span><i class="fas fa-calendar"></i>{{ byline.date }}</span>
       <span><i class="fas fa-clock"></i>{{ byline.read_time }}</span>
+      {% if byline.updated %}<span><i class="fas fa-rotate"></i>Updated {{ byline.updated }}</span>{% endif %}
     </div>
   </div>
   <div class="article-hero-img reveal">
@@ -23,15 +24,79 @@
       <article class="article-body">
         <p class="dek reveal">{{ dek }}</p>
 
+        {#
+          Section types:
+            text (default)  heading, optional icon (Font Awesome class) and
+                            level (2 or 3), paragraphs, list (items may carry
+                            an icon)
+            quote           text, optional cite and cite_href
+            stats           items: icon, value, label, optional source + source_href
+            callout         highlighted box: eyebrow, icon, heading, paragraphs,
+                            list (icon items), buttons [{text, href, style}]
+            contact         heading, text, items: icon, label, value, href
+            sources         heading, items: text, href
+        #}
         {% for sec in sections %}
           {% if sec.type == 'quote' %}
+            {% if sec.cite %}
+            <figure class="pull-quote pull-quote-cited">
+              <blockquote>{{ sec.text }}</blockquote>
+              <figcaption>{% if sec.cite_href %}<a href="{{ sec.cite_href }}">{{ sec.cite }}</a>{% else %}{{ sec.cite }}{% endif %}{% if sec.cite_role %}, {{ sec.cite_role }}{% endif %}</figcaption>
+            </figure>
+            {% else %}
             <div class="pull-quote">{{ sec.text }}</div>
+            {% endif %}
+          {% elif sec.type == 'stats' %}
+            <div class="stat-grid">
+              {% for st in sec['items'] %}
+              <div class="stat-card">
+                {% if st.icon %}<i class="{{ st.icon }}" aria-hidden="true"></i>{% endif %}
+                <strong>{{ st.value }}</strong>
+                <span>{{ st.label }}</span>
+                {% if st.source %}<small>{% if st.source_href %}<a href="{{ st.source_href }}" target="_blank" rel="noopener">{{ st.source }}</a>{% else %}{{ st.source }}{% endif %}</small>{% endif %}
+              </div>
+              {% endfor %}
+            </div>
+          {% elif sec.type == 'callout' %}
+            <div class="article-callout">
+              {% if sec.eyebrow %}<span class="callout-eyebrow">{{ sec.eyebrow }}</span>{% endif %}
+              {% if sec.heading %}<h2>{% if sec.icon %}<i class="{{ sec.icon }}" aria-hidden="true"></i>{% endif %}{{ sec.heading }}</h2>{% endif %}
+              {% for p in sec.paragraphs or [] %}<p>{{ p }}</p>{% endfor %}
+              {% if sec.list %}
+              <ul class="icon-list">
+                {% for li in sec.list %}<li>{% if li.icon %}<i class="{{ li.icon }}" aria-hidden="true"></i>{% endif %}<span>{% if li.b %}<strong>{{ li.b }}</strong> {% endif %}{{ li.t }}</span></li>{% endfor %}
+              </ul>
+              {% endif %}
+              {% if sec.note %}<p class="callout-note">{{ sec.note }}</p>{% endif %}
+              {% if sec.buttons %}
+              <div class="callout-actions">
+                {% for b in sec.buttons %}<a href="{{ b.href }}" class="btn {{ 'btn-ghost' if b.style == 'ghost' else 'btn-primary' }}">{{ b.text }}</a>{% endfor %}
+              </div>
+              {% endif %}
+            </div>
+          {% elif sec.type == 'contact' %}
+            <div class="contact-card">
+              {% if sec.heading %}<h3>{{ sec.heading }}</h3>{% endif %}
+              {% if sec.text %}<p>{{ sec.text }}</p>{% endif %}
+              <ul>
+                {% for c in sec['items'] %}
+                <li><a href="{{ c.href }}"{% if c.href.startswith('http') %} target="_blank" rel="noopener"{% endif %}><i class="{{ c.icon }}" aria-hidden="true"></i><span><small>{{ c.label }}</small>{{ c.value }}</span></a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% elif sec.type == 'sources' %}
+            <div class="article-sources">
+              <h3>{{ sec.heading or 'Sources' }}</h3>
+              <ol>
+                {% for s in sec['items'] %}<li><a href="{{ s.href }}" target="_blank" rel="noopener">{{ s.text }}</a></li>{% endfor %}
+              </ol>
+            </div>
           {% else %}
-            {% if sec.heading %}<h2>{{ sec.heading }}</h2>{% endif %}
+            {% if sec.heading %}{% if sec.level == 3 %}<h3>{% if sec.icon %}<i class="{{ sec.icon }}" aria-hidden="true"></i>{% endif %}{{ sec.heading }}</h3>{% else %}<h2>{% if sec.icon %}<i class="{{ sec.icon }}" aria-hidden="true"></i>{% endif %}{{ sec.heading }}</h2>{% endif %}{% endif %}
             {% if sec.paragraphs %}{% for p in sec.paragraphs %}<p>{{ p }}</p>{% endfor %}{% endif %}
             {% if sec.list %}
-            <ul>
-              {% for li in sec.list %}<li>{% if li.b %}<strong>{{ li.b }}</strong> {% endif %}{{ li.t }}</li>{% endfor %}
+            <ul{% if sec.list[0].icon %} class="icon-list"{% endif %}>
+              {% for li in sec.list %}<li>{% if li.icon %}<i class="{{ li.icon }}" aria-hidden="true"></i><span>{% endif %}{% if li.b %}<strong>{{ li.b }}</strong> {% endif %}{{ li.t }}{% if li.icon %}</span>{% endif %}</li>{% endfor %}
             </ul>
             {% endif %}
           {% endif %}
