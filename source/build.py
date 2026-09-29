@@ -127,7 +127,7 @@ def build_article_schema(data, route):
         schema["image"] = image
     if date:
         schema["datePublished"] = date
-        schema["dateModified"] = date
+        schema["dateModified"] = parse_byline_date(byline.get("updated")) or date
     return schema
 
 
