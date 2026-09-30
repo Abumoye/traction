@@ -651,8 +651,14 @@ footer.site-footer { background: var(--ash); padding: 80px 0 30px; margin-top: 6
   box-shadow: 0 10px 30px rgba(29,29,31,0.06);
   background: var(--white);
 }
-.embed-frame iframe { display: block; width: 100%; height: 1400px; border: 0; }
-@media (max-width: 640px) { .embed-frame iframe { height: 1700px; } }
+.embed-frame iframe { display: block; width: 100%; height: var(--embed-h, 1400px); border: 0; }
+@media (max-width: 640px) { .embed-frame iframe { height: var(--embed-h-mobile, 1700px); } }
+
+/* Full-width urgent-contact strip */
+.urgent-bar { background: var(--ink); color: var(--white); text-align: center; padding: 22px 24px; }
+.urgent-bar p { margin: 0; color: var(--white); font-size: 18px; font-weight: 600; line-height: 1.5; }
+.urgent-bar a { color: #ff8a54; font-weight: 800; white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; }
+.urgent-bar a:hover { color: var(--white); }
 .pull-quote {
   font-size: 24px; font-weight: 600; color: var(--ink); line-height: 1.35;
   border-left: 4px solid var(--orange); padding: 4px 0 4px 26px; margin: 40px 0;

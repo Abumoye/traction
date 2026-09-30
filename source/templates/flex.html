@@ -18,7 +18,11 @@
 </section>
 
 {% for sec in sections %}
-<section {% if sec.id %}id="{{ sec.id }}"{% endif %} {% if sec.resource_type %}data-resource-type="{{ sec.resource_type }}"{% endif %} {% if sec.type == 'resource-grid' %}data-resource-grid="true"{% endif %} class="section {{ 'tight' if sec.tight else '' }} {{ 'bg-ash' if sec.bg == 'ash' else ('bg-ink' if sec.bg == 'ink' else '') }}">
+{% if sec.type == 'banner' %}
+<div class="urgent-bar reveal">
+  <p>{{ sec.text }} <a href="{{ sec.href }}">{{ sec.link_text }}</a></p>
+</div>
+{% else %}<section {% if sec.id %}id="{{ sec.id }}"{% endif %} {% if sec.resource_type %}data-resource-type="{{ sec.resource_type }}"{% endif %} {% if sec.type == 'resource-grid' %}data-resource-grid="true"{% endif %} class="section {{ 'tight' if sec.tight else '' }} {{ 'bg-ash' if sec.bg == 'ash' else ('bg-ink' if sec.bg == 'ink' else '') }}">
   <div class="container" style="{{ 'max-width:' + sec.max_width if sec.max_width else '' }}">
 
     {% if sec.type == 'resource-filter' %}
@@ -337,7 +341,7 @@
     {% elif sec.type == 'embed' %}
       {% if sec.heading %}<h2 class="section-title reveal">{{ sec.heading }}</h2>{% endif %}
       {% if sec.sub %}<p class="section-sub reveal">{{ sec.sub }}</p>{% endif %}
-      <div class="embed-frame reveal" style="max-width:{{ sec.max_width_inner | default('760px') }};">
+      <div class="embed-frame reveal" style="max-width:{{ sec.max_width_inner | default('760px') }};{% if sec.height %}--embed-h:{{ sec.height }}px;--embed-h-mobile:{{ sec.height }}px;{% endif %}">
         <iframe src="{{ sec.src }}" title="{{ sec.iframe_title | default(sec.heading) }}" loading="lazy">{{ sec.loading_text | default('Loading form...') }}</iframe>
       </div>
       {% if sec.fallback_text %}
@@ -363,7 +367,7 @@
     {% endif %}
 
   </div>
-</section>
+</section>{% endif %}
 {% endfor %}
 
 {% if has_resource_form %}
