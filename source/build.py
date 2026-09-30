@@ -34,6 +34,12 @@ DIST = ROOT / "dist"
 SITE_NAME = "Traction Outsourcing Limited"
 SITE_URL = "https://tolnigeria.com"
 SITE_LOGO = "https://tolnigeria.com/images/traction-outsourcing-logo.png"
+# Public profiles that identify the organization to search engines (schema.org
+# sameAs). Only profiles linked from the site footer belong here.
+SITE_SOCIAL_PROFILES = [
+    "https://www.instagram.com/tractionoutsourcing",
+    "https://www.tiktok.com/@tractionoutsourcing",
+]
 
 # Top-level URL segments that get a named breadcrumb crumb pointing at a
 # real page. Segments not listed here (e.g. "brands", which has no /brands/
@@ -103,26 +109,49 @@ def parse_byline_date(date_str):
         return None
 
 
+def build_organization_schema():
+    """The publisher/author entity for every article. One shared @id so search
+    engines see the same organization as author and publisher, with logo and
+    social profiles attached."""
+    return {
+        "@type": "Organization",
+        "@id": SITE_URL + "/#organization",
+        "name": SITE_NAME,
+        "url": SITE_URL + "/",
+        "logo": {"@type": "ImageObject", "url": SITE_LOGO},
+        "sameAs": SITE_SOCIAL_PROFILES,
+    }
+
+
 def build_article_schema(data, route):
-    """Auto-derive Article JSON-LD for every article.html page from fields
-    already authored on the page (title, dek, byline, image) -- no manual
-    schema authoring needed per article."""
+    """Auto-derive BlogPosting JSON-LD for every article.html page from fields
+    already authored on the page (title, dek, byline, image, tag) -- no manual
+    schema authoring needed per article. The content is evergreen advisory
+    writing rather than news reporting, so BlogPosting (a schema.org subtype
+    of Article) is used instead of NewsArticle."""
     byline = data.get("byline", {})
     date = parse_byline_date(byline.get("date"))
     image = data.get("image") or data.get("meta", {}).get("image")
     if image and image.startswith("/"):
         image = SITE_URL + image
 
+    org = build_organization_schema()
+    author_name = byline.get("author") or SITE_NAME
+    author = org if author_name == SITE_NAME else {"@type": "Organization", "name": author_name}
+
     schema = {
         "@context": "https://schema.org",
-        "@type": "Article",
+        "@type": "BlogPosting",
         "headline": data.get("title") or data.get("meta", {}).get("title"),
         "description": data.get("meta", {}).get("description") or data.get("dek"),
         "url": SITE_URL + route["url"],
-        "mainEntityOfPage": SITE_URL + route["url"],
-        "publisher": {"@type": "Organization", "name": SITE_NAME, "logo": {"@type": "ImageObject", "url": SITE_LOGO}},
-        "author": {"@type": "Organization", "name": byline.get("author") or SITE_NAME},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": SITE_URL + route["url"]},
+        "inLanguage": "en",
+        "publisher": org,
+        "author": author,
     }
+    if data.get("tag"):
+        schema["articleSection"] = data["tag"]
     if image:
         schema["image"] = image
     if date:
@@ -322,7 +351,7 @@ def render_json_page(json_path: Path):
     # JSON; base.html renders each as its own <script
     # type="application/ld+json">. On top of whatever a page supplies by
     # hand, every page automatically gets: a WebSite block, a BreadcrumbList
-    # derived from its URL, an Article block if it's rendered through
+    # derived from its URL, a BlogPosting block if it's rendered through
     # article.html, and a FAQPage block if it has FAQ content -- each only
     # added when the page hasn't already supplied that @type itself, so
     # nothing is ever duplicated.
@@ -343,7 +372,7 @@ def render_json_page(json_path: Path):
         if breadcrumb:
             schema.append(breadcrumb)
 
-    if route["template"] == "article.html" and "Article" not in existing_types:
+    if route["template"] == "article.html" and not existing_types & {"Article", "BlogPosting", "NewsArticle"}:
         schema.append(build_article_schema(data, route))
 
     if "FAQPage" not in existing_types:
