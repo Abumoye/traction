@@ -290,56 +290,6 @@ def write(path: Path, html: str):
     print(f"  built {path.relative_to(DIST)}")
 
 
-# GitHub Pages serves static files only -- there is no server-side 301, so a
-# retired/duplicate URL gets this instead: a real (thin) page at the old
-# path with a self-referencing canonical pointing at the new URL, noindex so
-# Google drops the old URL from its index, and a meta-refresh + visible link
-# so any visitor or crawler that doesn't honor those still lands on the
-# current page. Add an entry here whenever a URL is merged into another one.
-REDIRECTS = {
-    # old output path (relative to dist/) -> new absolute URL path
-    "articles/article-tall-poppy-syndrome/index.html": "/articles/tall-poppy-syndrome/",
-    "founder/index.html": "/",
-
-    # Legacy flat ".html" article URLs from before the site moved to
-    # directory-based extensionless URLs. Google is still crawling these
-    # (they show up in Search Console) even though the site itself hasn't
-    # linked to a ".html" article path in a long time.
-    "articles/article-organogram.html": "/articles/article-organogram/",
-    "articles/article-why-nigerian-startups-fail.html": "/articles/article-why-nigerian-startups-fail/",
-    "articles/article-employee-handbook-nigerian-sme.html": "/articles/article-employee-handbook-nigerian-sme/",
-    "articles/article-tall-poppy-syndrome.html": "/articles/tall-poppy-syndrome/",
-    "articles/article-dangers-of-proximity-to-success.html": "/articles/article-dangers-of-proximity-to-success/",
-
-    # Old article slugs from before final naming.
-    "articles/restrictive-clause-bond-nigeria/index.html": "/articles/restrictive-clause-vs-bond-nigeria/",
-    "articles/what-is-business-traction-in-business/index.html": "/articles/what-is-traction-in-business/",
-    "articles/what-is-business-traction-in-business-meaning-metrics--how-to-build-it/index.html": "/articles/what-is-traction-in-business/",
-
-    # Retired /books/ hub, replaced by /resources/.
-    "books/index.html": "/resources/",
-}
-
-
-def build_redirect_page(old_output: str, new_url: str):
-    dest = SITE_URL + new_url
-    html = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>{SITE_NAME}</title>
-  <link rel="canonical" href="{dest}">
-  <meta name="robots" content="noindex,follow">
-  <meta http-equiv="refresh" content="0; url={dest}">
-</head>
-<body>
-  <p>This page has moved. <a href="{dest}">Continue to the current page</a>.</p>
-</body>
-</html>
-"""
-    write(DIST / old_output, html)
-
-
 def render_json_page(json_path: Path):
     data = load(json_path)
     route = data.pop("_route", None)
@@ -452,10 +402,6 @@ def main():
     if articles_dir.exists():
         for p in sorted(articles_dir.glob("*.json")):
             render_json_page(p)
-
-    # ---- Redirect stubs for retired/merged URLs ----
-    for old_output, new_url in REDIRECTS.items():
-        build_redirect_page(old_output, new_url)
 
     print(f"\nBuild complete -> {DIST}")
 
