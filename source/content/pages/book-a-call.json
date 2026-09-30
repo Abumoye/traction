@@ -12,20 +12,24 @@
   "hero": {
     "eyebrow": "Free 30-Minute Call",
     "headline": "Book a Strategy Call With Our Team",
-    "sub": "Tell us about your business, what you are working on, and where you are stuck. We will tell you honestly how we can help and what the right next step looks like.",
-    "actions": [
-      { "label": "Choose a Time on Our Calendar", "href": "https://calendar.zoho.com/zc/view/slot-booking/zz08011220ecd2ffd38a77cd00604ba77eb8c4c8a1b33d3153f966ab3d38577a911e124242", "style": "btn-primary", "blank": true },
-      { "label": "Message Us on WhatsApp", "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call.", "style": "btn-secondary", "blank": true }
-    ]
+    "sub": "Speak to our dedicated Senior Professionals about your business, what you are working on, or where you are stuck. We will tell you honestly how we can help and what the right next step looks like.",
+    "padding_bottom": "20px"
   },
   "sections": [
     {
-      "type": "cta",
-      "heading": "Prefer WhatsApp?",
-      "text": "Send us a message directly and we will find a time that works.",
-      "button": "Send us a message directly",
-      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call.",
-      "blank": true
+      "type": "embed",
+      "src": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1l0EiQKyUBRLJeUUNX9lkllgWIRVmzt3ktNUSKpEEwP5MYeAFgqLLPGaWRcL76m5QklTe1HY0V?gv=true",
+      "iframe_title": "Book a free strategy call with Traction Outsourcing Limited",
+      "max_width_inner": "900px",
+      "height": 600,
+      "loading_text": "Loading calendar...",
+      "tight": true
+    },
+    {
+      "type": "banner",
+      "text": "Need Urgent response? Call us directly 24/7 at",
+      "link_text": "0707 870 7777",
+      "href": "tel:+2347078707777"
     }
   ]
 }
