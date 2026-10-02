@@ -5,8 +5,8 @@
     "url": "/apply/real-estate-sales-manager-100/"
   },
   "meta": {
-    "title": "Real Estate Sales Manager Application | Traction Outsourcing Limited",
-    "description": "Apply to join Traction Outsourcing Limited as a Real Estate Sales Manager in Abuja. Fill out the short application form and upload your CV to get started.",
+    "title": "Real Estate Sales Manager Job, Kado, Abuja | Traction Outsourcing",
+    "description": "Real Estate Sales Manager job in Kado, Abuja at ₦450,000/month. Full-time, sales-driven role. Apply online with your CV at Traction Outsourcing Limited.",
     "image_alt": "Traction Outsourcing Limited team headshots beside the company logo and the tagline Built by Africans, for Africa."
   },
   "schema": [
@@ -15,13 +15,15 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tolnigeria.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Real Estate Sales Manager", "item": "https://tolnigeria.com/apply/real-estate-sales-manager-100/" }
+        { "@type": "ListItem", "position": 2, "name": "Careers", "item": "https://tolnigeria.com/apply/" },
+        { "@type": "ListItem", "position": 3, "name": "Real Estate Sales Manager", "item": "https://tolnigeria.com/apply/real-estate-sales-manager-100/" }
       ]
     }
   ],
   "hero": {
     "eyebrow": "We Are Hiring",
-    "headline": "Real Estate Sales Manager"
+    "headline": "Real Estate Sales Manager",
+    "sub": "We are hiring a Real Estate Sales Manager in Kado, Abuja. This is a sales-driven role with a real estate focus. Full-time · ₦450,000/month."
   },
   "sections": [
     {
