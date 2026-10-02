@@ -1,0 +1,138 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "apply/storekeeping-assistant-kuje/index.html",
+    "url": "/apply/storekeeping-assistant-kuje/"
+  },
+  "meta": {
+    "title": "Storekeeping Assistant Application | Traction Outsourcing Limited",
+    "description": "Apply to join Traction Outsourcing Limited as a Storekeeping Assistant in Kuje, Abuja. Fill out the short application form to get started.",
+    "image_alt": "Traction Outsourcing Limited team headshots beside the company logo and the tagline Built by Africans, for Africa."
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Careers",
+          "item": "https://tolnigeria.com/apply/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Storekeeping Assistant",
+          "item": "https://tolnigeria.com/apply/storekeeping-assistant-kuje/"
+        }
+      ]
+    }
+  ],
+  "hero": {
+    "eyebrow": "We Are Hiring",
+    "headline": "Storekeeping Assistant"
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "tight": true,
+      "columns": 3,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-map-marker-alt",
+          "title": "Based in Kuje, Abuja",
+          "text": ""
+        },
+        {
+          "icon": "fa-money-bill-wave",
+          "title": "Salary: ₦100,000",
+          "text": ""
+        },
+        {
+          "icon": "fa-clipboard-list",
+          "title": "Short Application Form",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "id": "apply-form",
+      "tight": true,
+      "heading": "Application Form",
+      "sub": "Please fill in every field.",
+      "notice": "DO NOT APPLY MORE THAN ONCE. DOUBLE APPLICATIONS WILL BE DISQUALIFIED",
+      "form_id": "applyForm",
+      "form_max_width": "720px",
+      "button": "Submit Application",
+      "success_message": "Thank you for your application. We will reach out to qualified candidates.",
+      "fields": [
+        {
+          "name": "firstName",
+          "placeholder": "First Name",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2
+        },
+        {
+          "name": "lastName",
+          "placeholder": "Last Name",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2
+        },
+        {
+          "name": "gender",
+          "placeholder": "Gender",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Male",
+            "Female"
+          ]
+        },
+        {
+          "name": "location",
+          "placeholder": "Where do you live in Abuja?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Abaji",
+            "Abuja Municipal (AMAC)",
+            "Bwari",
+            "Gwagwalada",
+            "Kuje",
+            "Kwali"
+          ]
+        },
+        {
+          "name": "dob",
+          "placeholder": "Date of Birth",
+          "input_type": "date",
+          "required": true
+        },
+        {
+          "name": "resumeImmediately",
+          "placeholder": "Can you resume immediately?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    }
+  ],
+  "scripts": [
+    "/js/apply-storekeeper-form.js"
+  ]
+}

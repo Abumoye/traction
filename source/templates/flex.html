@@ -308,6 +308,11 @@
               <option value="" disabled selected>{{ f.placeholder | default('Select an option') }}</option>
               {% for opt in f.options %}<option value="{{ opt }}">{{ opt }}</option>{% endfor %}
             </select>
+            {% elif f.input_type == 'date' %}
+            <div>
+              <label for="{{ f.name }}" style="display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">{{ f.placeholder }}{% if f.required | default(true) %} *{% endif %}</label>
+              <input id="{{ f.name }}" name="{{ f.name }}" type="date" {% if f.required | default(true) %}required{% endif %} style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);background:var(--white);color:var(--ink);font-size:15px;">
+            </div>
             {% elif f.input_type == 'file' %}
             <div>
               <label for="{{ f.name }}" style="display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">{{ f.placeholder }}{% if f.required | default(true) %} *{% endif %}</label>
@@ -356,6 +361,7 @@
         <div class="card job-card reveal{{ ' job-card-inactive' if not job.active else '' }}">
           <h3 class="job-card-title">{{ job.title }}</h3>
           <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> {{ job.location }}</p>
+          {% if job.salary %}<p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> {{ job.salary }}</p>{% endif %}
           {% if job.active %}
           <a href="{{ job.href }}" class="btn btn-primary job-card-btn">{{ job.cta_label | default('Apply Now') }}</a>
           {% else %}
