@@ -24,6 +24,7 @@ import json
 import re
 import shutil
 from datetime import datetime
+from xml.sax.saxutils import escape as xml_escape
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
@@ -284,6 +285,163 @@ def build_faqpage_schema(data):
     }
 
 
+# ---------------------------------------------------------------------------
+# Jobs (careers). content/jobs.json is the single source of truth for open
+# roles. Each OPEN job becomes: JobPosting structured data on its page (Google
+# for Jobs), an ItemList on /apply/, and the /jobs.json + /jobs.xml feeds that
+# AI tools and job boards can read. Set a job's status to "closed" to drop it
+# from all of them at once.
+# ---------------------------------------------------------------------------
+JOBS_FILE = CONTENT / "jobs.json"
+JOB_TYPE_LABELS = {"FULL_TIME": "Full-time", "PART_TIME": "Part-time", "CONTRACTOR": "Contract", "TEMPORARY": "Temporary", "INTERN": "Internship"}
+JOB_TYPE_XML = {"FULL_TIME": "fulltime", "PART_TIME": "parttime", "CONTRACTOR": "contract", "TEMPORARY": "temporary", "INTERN": "internship"}
+REGION_NAMES = {"FCT": "Abuja (FCT)"}
+
+
+def load_open_jobs():
+    if not JOBS_FILE.exists():
+        return []
+    return [j for j in load(JOBS_FILE).get("jobs", []) if j.get("status") == "open"]
+
+
+def job_salary_text(job):
+    s = job.get("salary")
+    if not s:
+        return ""
+    symbol = "\u20a6" if s.get("currency") == "NGN" else s.get("currency", "") + " "
+    return f"{symbol}{s['value']:,}/{s['unit'].lower()}"
+
+
+def job_description_html(job):
+    parts = [f"<p>{html.escape(job['summary'])}</p>"]
+    for heading, key in (("Responsibilities", "responsibilities"), ("Requirements", "qualifications"), ("Benefits", "benefits")):
+        items = job.get(key) or []
+        if items:
+            parts.append(f"<h3>{heading}</h3><ul>" + "".join(f"<li>{html.escape(i)}</li>" for i in items) + "</ul>")
+    return "".join(parts)
+
+
+def job_description_text(job):
+    lines = [job["summary"]]
+    for heading, key in (("Responsibilities", "responsibilities"), ("Requirements", "qualifications"), ("Benefits", "benefits")):
+        items = job.get(key) or []
+        if items:
+            lines.append(heading + ": " + " ".join(items))
+    return "\n".join(lines)
+
+
+def build_jobposting_schema(job):
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "JobPosting",
+        "title": job["title"],
+        "description": job_description_html(job),
+        "identifier": {"@type": "PropertyValue", "name": SITE_NAME, "value": job["id"]},
+        "datePosted": job["datePosted"],
+        "employmentType": job["employmentType"],
+        "hiringOrganization": {
+            "@type": "Organization",
+            "name": SITE_NAME,
+            "sameAs": SITE_URL + "/",
+            "logo": SITE_LOGO,
+        },
+        "jobLocation": {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": job["locality"],
+                "addressRegion": job["region"],
+                "addressCountry": "NG",
+            },
+        },
+        "directApply": True,
+        "url": SITE_URL + job["url"],
+    }
+    if job.get("validThrough"):
+        schema["validThrough"] = job["validThrough"]
+    if job.get("salary"):
+        s = job["salary"]
+        schema["baseSalary"] = {
+            "@type": "MonetaryAmount",
+            "currency": s["currency"],
+            "value": {"@type": "QuantitativeValue", "value": s["value"], "unitText": s["unit"]},
+        }
+    if job.get("benefits"):
+        schema["jobBenefits"] = " ".join(job["benefits"])
+    return schema
+
+
+def build_careers_collection_schema(open_jobs, meta):
+    return {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Careers at " + SITE_NAME,
+        "description": meta.get("description", ""),
+        "url": SITE_URL + "/apply/",
+        "publisher": {"@id": SITE_URL + "/#organization"},
+        "mainEntity": {
+            "@type": "ItemList",
+            "numberOfItems": len(open_jobs),
+            "itemListElement": [
+                {"@type": "ListItem", "position": i, "url": SITE_URL + j["url"], "name": j["title"] + " - " + j["locality"] + ", Abuja"}
+                for i, j in enumerate(open_jobs, 1)
+            ],
+        },
+    }
+
+
+def write_job_feeds(open_jobs):
+    """/jobs.json (for AI tools and any site that reads JSON) and /jobs.xml
+    (generic job-board XML feed). Built from jobs.json only, so they can never
+    disagree with the structured data on the pages. No build timestamp is
+    written, so rebuilding without changes produces identical files."""
+    updated = max((j["datePosted"] for j in open_jobs), default="")
+    feed = {
+        "publisher": {"name": SITE_NAME, "url": SITE_URL + "/", "logo": SITE_LOGO},
+        "careersPage": SITE_URL + "/apply/",
+        "lastUpdated": updated,
+        "jobs": [],
+    }
+    xml = ['<?xml version="1.0" encoding="UTF-8"?>', "<source>",
+           f"  <publisher>{xml_escape(SITE_NAME)}</publisher>",
+           f"  <publisherurl>{SITE_URL}/</publisherurl>",
+           f"  <lastBuildDate>{updated}</lastBuildDate>"]
+    for j in open_jobs:
+        s = j.get("salary")
+        feed["jobs"].append({
+            "id": j["id"],
+            "title": j["title"],
+            "url": SITE_URL + j["url"],
+            "applyUrl": SITE_URL + j["url"],
+            "company": SITE_NAME,
+            "location": {"city": j["locality"], "state": REGION_NAMES.get(j["region"], j["region"]), "country": "Nigeria", "countryCode": "NG"},
+            "employmentType": j["employmentType"],
+            "datePosted": j["datePosted"],
+            "validThrough": j.get("validThrough"),
+            "salary": ({"currency": s["currency"], "amount": s["value"], "period": s["unit"], "display": job_salary_text(j)} if s else None),
+            "description": job_description_text(j),
+            "responsibilities": j.get("responsibilities", []),
+            "qualifications": j.get("qualifications", []),
+            "benefits": j.get("benefits", []),
+        })
+        xml += ["  <job>",
+                f"    <title><![CDATA[{j['title']}]]></title>",
+                f"    <date><![CDATA[{j['datePosted']}]]></date>",
+                f"    <referencenumber><![CDATA[{j['id']}]]></referencenumber>",
+                f"    <url><![CDATA[{SITE_URL + j['url']}]]></url>",
+                f"    <company><![CDATA[{SITE_NAME}]]></company>",
+                f"    <city><![CDATA[{j['locality']}]]></city>",
+                f"    <state><![CDATA[{j['region']}]]></state>",
+                "    <country><![CDATA[NG]]></country>",
+                f"    <description><![CDATA[{job_description_html(j)}]]></description>"]
+        if s:
+            xml.append(f"    <salary><![CDATA[{job_salary_text(j)}]]></salary>")
+        xml += [f"    <jobtype><![CDATA[{JOB_TYPE_XML.get(j['employmentType'], 'fulltime')}]]></jobtype>", "  </job>"]
+    xml.append("</source>")
+    write(DIST / "jobs.json", json.dumps(feed, indent=2, ensure_ascii=False) + "\n")
+    write(DIST / "jobs.xml", "\n".join(xml) + "\n")
+
+
 def write(path: Path, html: str):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(html, encoding="utf-8")
@@ -332,6 +490,15 @@ def render_json_page(json_path: Path):
 
     if "RealEstateListing" not in existing_types:
         schema.extend(build_realestate_listing_schema(data, route))
+
+    # Careers: JobPosting on each open job's page, and an ItemList of all open
+    # jobs on the careers hub. Driven by content/jobs.json.
+    open_jobs = load_open_jobs()
+    job = next((j for j in open_jobs if j["url"] == route["url"]), None)
+    if job and "JobPosting" not in existing_types:
+        schema.append(build_jobposting_schema(job))
+    if route["url"] == "/apply/" and "CollectionPage" not in existing_types:
+        schema.append(build_careers_collection_schema(open_jobs, data.get("meta", {})))
 
     tpl = env.get_template(route["template"])
     html = tpl.render(path=route["url"], schema=schema, **data)
@@ -402,6 +569,9 @@ def main():
     if articles_dir.exists():
         for p in sorted(articles_dir.glob("*.json")):
             render_json_page(p)
+
+    # ---- Job feeds (jobs.json / jobs.xml) ----
+    write_job_feeds(load_open_jobs())
 
     print(f"\nBuild complete -> {DIST}")
 

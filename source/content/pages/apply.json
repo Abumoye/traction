@@ -5,8 +5,8 @@
     "url": "/apply/"
   },
   "meta": {
-    "title": "Careers | Traction Outsourcing Limited",
-    "description": "Explore open roles at Traction Outsourcing Limited in Abuja, including real estate, HR, sales, and operations positions. Apply online today.",
+    "title": "Careers & Job Openings in Abuja | Traction Outsourcing Limited",
+    "description": "Current job openings at Traction Outsourcing Limited in Abuja: Storekeeping Assistant (Kuje, ₦100,000/month) and Real Estate Sales Manager (Kado, ₦450,000/month). Apply online.",
     "image_alt": "Traction Outsourcing Limited team headshots beside the company logo and the tagline Built by Africans, for Africa."
   },
   "schema": [
@@ -89,6 +89,20 @@
           "active": false
         }
       ]
+    }
+  ],
+  "head_links": [
+    {
+      "rel": "alternate",
+      "type": "application/json",
+      "href": "/jobs.json",
+      "title": "Open jobs (JSON)"
+    },
+    {
+      "rel": "alternate",
+      "type": "application/xml",
+      "href": "/jobs.xml",
+      "title": "Open jobs (XML feed)"
     }
   ]
 }

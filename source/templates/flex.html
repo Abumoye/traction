@@ -420,4 +420,6 @@
 {% endif %}
 
 {% endblock %}
+{% block extra_head %}{% for l in head_links %}<link rel="{{ l.rel }}" type="{{ l.type }}" href="{{ l.href }}" title="{{ l.title }}">
+  {% endfor %}{% endblock %}
 {% block extra_scripts %}{% if has_form %}<script src="/js/lead-form.js"></script>{% endif %}{% if has_resource_form %}<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script src="/js/resource-download.js"></script>{% endif %}{% if has_resource_filter %}<script src="/js/resource-filter.js"></script>{% endif %}{% for s in scripts | default([]) %}<script src="{{ s }}"></script>{% endfor %}{% endblock %}

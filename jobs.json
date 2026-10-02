@@ -1,0 +1,76 @@
+{
+  "publisher": {
+    "name": "Traction Outsourcing Limited",
+    "url": "https://tolnigeria.com/",
+    "logo": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
+  },
+  "careersPage": "https://tolnigeria.com/apply/",
+  "lastUpdated": "2026-10-02",
+  "jobs": [
+    {
+      "id": "storekeeping-assistant-kuje",
+      "title": "Storekeeping Assistant",
+      "url": "https://tolnigeria.com/apply/storekeeping-assistant-kuje/",
+      "applyUrl": "https://tolnigeria.com/apply/storekeeping-assistant-kuje/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Kuje",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-10-02",
+      "validThrough": null,
+      "salary": {
+        "currency": "NGN",
+        "amount": 100000,
+        "period": "MONTH",
+        "display": "₦100,000/month"
+      },
+      "description": "We are hiring a Storekeeping Assistant for a production company in Kuje, Abuja.\nResponsibilities: Receive, check and record incoming materials and finished goods. Issue items to production staff and keep accurate stock records. Keep the store clean, organised and secure, and report any shortages.\nRequirements: Minimum of OND or HND CV Required (PDF)\nBenefits: Accommodation available. Hands-on experience in a production company. Other statutory benefits.",
+      "responsibilities": [
+        "Receive, check and record incoming materials and finished goods.",
+        "Issue items to production staff and keep accurate stock records.",
+        "Keep the store clean, organised and secure, and report any shortages."
+      ],
+      "qualifications": [
+        "Minimum of OND or HND",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Accommodation available.",
+        "Hands-on experience in a production company.",
+        "Other statutory benefits."
+      ]
+    },
+    {
+      "id": "real-estate-sales-manager-100",
+      "title": "Real Estate Sales Manager",
+      "url": "https://tolnigeria.com/apply/real-estate-sales-manager-100/",
+      "applyUrl": "https://tolnigeria.com/apply/real-estate-sales-manager-100/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Kado",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-09-28",
+      "validThrough": null,
+      "salary": {
+        "currency": "NGN",
+        "amount": 450000,
+        "period": "MONTH",
+        "display": "₦450,000/month"
+      },
+      "description": "We are hiring a Real Estate Sales Manager in Kado, Abuja. This is a sales-driven role with a real estate focus.\nRequirements: CV Required (PDF)",
+      "responsibilities": [],
+      "qualifications": [
+        "CV Required (PDF)"
+      ],
+      "benefits": []
+    }
+  ]
+}

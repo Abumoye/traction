@@ -16,6 +16,11 @@ Traction Outsourcing Limited helps Nigerian businesses fix structure, leadership
 - [Corporate Retreats](https://tolnigeria.com/services/corporate-retreats/): Planning and execution of corporate retreats.
 - [Bank Outsourcing](https://tolnigeria.com/services/bank-outsourcing/): Outsourced staffing solutions for banks and financial institutions.
 
+## Careers & Open Jobs
+- [Careers](https://tolnigeria.com/apply/): Current job openings at Traction Outsourcing Limited in Abuja. Machine-readable list: https://tolnigeria.com/jobs.json (JSON) and https://tolnigeria.com/jobs.xml (XML feed).
+- [Storekeeping Assistant, Kuje, Abuja](https://tolnigeria.com/apply/storekeeping-assistant-kuje/): Full-time, ₦100,000/month, OND or HND required, accommodation available. Apply online.
+- [Real Estate Sales Manager, Kado, Abuja](https://tolnigeria.com/apply/real-estate-sales-manager-100/): Full-time, ₦450,000/month, sales-driven real estate role. Apply online.
+
 ## Other
 - [Articles & Insights](https://tolnigeria.com/articles/): Articles on HR, leadership, business structure, and outsourcing in Nigeria.
 - [Book a Call](https://tolnigeria.com/book-a-call/): Book a free clarity call with the Traction Outsourcing team.

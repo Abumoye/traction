@@ -1,0 +1,56 @@
+{
+  "_comment": "Single source of truth for open roles. build.py turns each OPEN job into JobPosting structured data on its page, an ItemList on /apply/, and the /jobs.json + /jobs.xml feeds. To close a role set status to \"closed\" (it then disappears from all of them). Keep every fact here identical to what is visible on the job page.",
+  "jobs": [
+    {
+      "id": "storekeeping-assistant-kuje",
+      "status": "open",
+      "title": "Storekeeping Assistant",
+      "url": "/apply/storekeeping-assistant-kuje/",
+      "locality": "Kuje",
+      "region": "FCT",
+      "datePosted": "2026-10-02",
+      "employmentType": "FULL_TIME",
+      "salary": {
+        "value": 100000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Storekeeping Assistant for a production company in Kuje, Abuja.",
+      "responsibilities": [
+        "Receive, check and record incoming materials and finished goods.",
+        "Issue items to production staff and keep accurate stock records.",
+        "Keep the store clean, organised and secure, and report any shortages."
+      ],
+      "qualifications": [
+        "Minimum of OND or HND",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Accommodation available.",
+        "Hands-on experience in a production company.",
+        "Other statutory benefits."
+      ]
+    },
+    {
+      "id": "real-estate-sales-manager-100",
+      "status": "open",
+      "title": "Real Estate Sales Manager",
+      "url": "/apply/real-estate-sales-manager-100/",
+      "locality": "Kado",
+      "region": "FCT",
+      "datePosted": "2026-09-28",
+      "employmentType": "FULL_TIME",
+      "salary": {
+        "value": 450000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Real Estate Sales Manager in Kado, Abuja. This is a sales-driven role with a real estate focus.",
+      "responsibilities": [],
+      "qualifications": [
+        "CV Required (PDF)"
+      ],
+      "benefits": []
+    }
+  ]
+}
