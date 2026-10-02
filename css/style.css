@@ -525,6 +525,9 @@ section.bg-ash .logo-chip { background: var(--white); }
 .job-card-title { font-size: 20px; margin: 0 0 8px; }
 .job-card-location { display: flex; align-items: center; gap: 8px; color: var(--ink-faint); font-size: 14px; margin: 0 0 24px; }
 .job-card-location i { color: var(--orange); font-size: 13px; }
+.job-card-salary { display: flex; align-items: center; gap: 8px; color: var(--ink); font-size: 15px; font-weight: 700; margin: -12px 0 24px; }
+.job-card-salary i { color: var(--orange); font-size: 13px; }
+.job-card-inactive .job-card-salary i { color: var(--ink-faint); }
 .job-card-btn { margin-top: auto; align-self: flex-start; }
 .job-card-inactive { opacity: 0.45; }
 .job-card-inactive:hover { transform: none; box-shadow: none; border-color: var(--hairline); }

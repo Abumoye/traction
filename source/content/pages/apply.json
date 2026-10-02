@@ -14,8 +14,18 @@
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tolnigeria.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Careers", "item": "https://tolnigeria.com/apply/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Careers",
+          "item": "https://tolnigeria.com/apply/"
+        }
       ]
     }
   ],
@@ -33,12 +43,15 @@
           "title": "Real Estate Sales Manager",
           "location": "Kado, Abuja",
           "href": "/apply/real-estate-sales-manager-100/",
-          "active": true
+          "active": true,
+          "salary": "₦450,000"
         },
         {
-          "title": "HR Manager",
-          "location": "Garki, Abuja",
-          "active": false
+          "title": "Storekeeping Assistant",
+          "location": "Kuje, Abuja",
+          "salary": "₦100,000",
+          "href": "/apply/storekeeping-assistant-kuje/",
+          "active": true
         },
         {
           "title": "HR Manager",

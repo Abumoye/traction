@@ -7,6 +7,10 @@ sheet used by the other forms on the site. It powers:
 - `/apply/real-estate-sales-manager-100/` — the job application form (currently the **Real Estate Sales
   Manager** role, 7 fields: Full Name, Gender, Phone, Location in Abuja,
   Years of Experience, Sales Experience, and a CV upload).
+- `/apply/storekeeping-assistant-kuje/` — the **Storekeeping Assistant (Kuje)** application, 6 fields (First
+  Name, Last Name, Gender, Where do you live in Abuja, Date of Birth, Can you
+  resume immediately), no CV upload. Its entries are saved on a separate tab
+  named **Storekeeper Kuje** in the same Sheet (see "Storekeeper Kuje tab" below).
 
 Every submission is saved as a row in a Google Sheet, and the uploaded CV
 is saved as a PDF file in a dedicated Google Drive folder, with a link to
@@ -72,6 +76,10 @@ function doPost(e) {
     return handleApply(data);
   }
 
+  if (data.formType === 'apply-storekeeper') {
+    return handleApplyStorekeeper(data);
+  }
+
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'error', message: 'Unknown form type.' })
   ).setMimeType(ContentService.MimeType.JSON);
@@ -104,6 +112,45 @@ function handleApply(data) {
   }
 
   sheet.appendRow([new Date(), role, fullName, gender, phone, location, yearsExperience, salesExperience, cvLink]);
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ===================== STOREKEEPING ASSISTANT (KUJE) ===================== */
+
+// No CV upload on this form. Entries go to their own tab, "Storekeeper Kuje",
+// in the same spreadsheet. The tab (with its header row) is created
+// automatically the first time someone applies, so there is nothing to set
+// up by hand - but if you create a tab with exactly that name yourself, the
+// script will use it as-is.
+function handleApplyStorekeeper(data) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName('Storekeeper Kuje');
+
+  if (!sheet) {
+    sheet = ss.insertSheet('Storekeeper Kuje');
+    sheet.appendRow(['Timestamp', 'Role', 'First Name', 'Last Name', 'Gender', 'Where in Abuja (Area Council)', 'Date of Birth', 'Can Resume Immediately']);
+    sheet.getRange(1, 1, 1, 8).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+  }
+
+  var role = (data.role || '').toString().trim();
+  var firstName = (data.firstName || '').toString().trim();
+  var lastName = (data.lastName || '').toString().trim();
+  var gender = (data.gender || '').toString().trim();
+  var location = (data.location || '').toString().trim();
+  var resumeImmediately = (data.resumeImmediately || '').toString().trim();
+
+  // dob arrives as YYYY-MM-DD. Store it as a real date so it sorts and filters properly.
+  var dob = (data.dob || '').toString().trim();
+  var dobValue = dob;
+  var m = dob.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (m) dobValue = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+
+  sheet.appendRow([new Date(), role, firstName, lastName, gender, location, dobValue, resumeImmediately]);
+  if (m) sheet.getRange(sheet.getLastRow(), 7).setNumberFormat('dd mmm yyyy');
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success' })
@@ -215,3 +262,26 @@ built-in notification feature that needs no code at all: in the Sheet, go
 to **Tools → Notification rules**, and set it to email you when a user
 submits a form / makes any changes. This is entirely optional — every
 application is safely recorded in the Sheet and Drive either way.
+
+## Storekeeper Kuje tab (Storekeeping Assistant form)
+
+The Storekeeping Assistant form (`/apply/storekeeping-assistant-kuje/`, script `/js/apply-storekeeper-form.js`)
+posts to the **same Web App URL** as the Real Estate form, but with
+`formType: "apply-storekeeper"`. The script above (`handleApplyStorekeeper`)
+files those entries on a tab named **Storekeeper Kuje** in the same spreadsheet,
+leaving the first tab (Real Estate Sales Manager) untouched.
+
+Columns: `Timestamp | Role | First Name | Last Name | Gender | Where in Abuja (Area Council) | Date of Birth | Can Resume Immediately`
+
+**To switch this on you must update the Apps Script once** (the website change alone
+is not enough, because the old script does not know about this form):
+
+1. Open the Sheet, then **Extensions → Apps Script**.
+2. Replace the code with the full script in Part B above (it now includes
+   `handleApplyStorekeeper`) and save.
+3. **Deploy → Manage deployments → pencil (Edit) → Version: New version → Deploy.**
+   Editing an existing deployment keeps the same Web App URL, so nothing changes on the website.
+4. Test with the live form, then check that a **Storekeeper Kuje** tab appears with the header row and your test entry.
+
+Until step 3 is done, Storekeeper submissions reach the old script, which ignores
+unknown form types, so they are NOT saved. Do the redeploy before announcing the job.
