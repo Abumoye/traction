@@ -36,6 +36,7 @@
     }
   ],
   "hero": {
+    "back": { "href": "/apply/", "label": "Back to Careers" },
     "eyebrow": "We Are Hiring",
     "headline": "Storekeeping Assistant",
     "sub": "We are hiring a Storekeeping Assistant for a production company in Kuje, Abuja. Full-time · ₦100,000/month."
