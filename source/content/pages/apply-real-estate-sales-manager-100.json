@@ -21,6 +21,7 @@
     }
   ],
   "hero": {
+    "back": { "href": "/apply/", "label": "Back to Careers" },
     "eyebrow": "We Are Hiring",
     "headline": "Real Estate Sales Manager",
     "sub": "We are hiring a Real Estate Sales Manager in Kado, Abuja. This is a sales-driven role with a real estate focus. Full-time · ₦450,000/month."
