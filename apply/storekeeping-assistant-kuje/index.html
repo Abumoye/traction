@@ -133,7 +133,7 @@
     
       
       
-      <div class="grid grid-3">
+      <div class="grid grid-4">
         
           
           <div class="deliverable-item reveal">
@@ -144,17 +144,47 @@
         
           
           <div class="deliverable-item reveal">
-            <i class="fas fa-money-bill-wave"></i>
-            <div><strong>Salary: ₦100,000</strong><span></span></div>
+            <i class="fas fa-graduation-cap"></i>
+            <div><strong>Minimum of OND or HND</strong><span></span></div>
           </div>
           
         
           
           <div class="deliverable-item reveal">
-            <i class="fas fa-clipboard-list"></i>
-            <div><strong>Short Application Form</strong><span></span></div>
+            <i class="fas fa-file-upload"></i>
+            <div><strong>CV Required (PDF)</strong><span></span></div>
           </div>
           
+        
+          
+          <div class="deliverable-item reveal">
+            <i class="fas fa-industry"></i>
+            <div><strong>Production Company</strong><span></span></div>
+          </div>
+          
+        
+      </div>
+
+    
+
+  </div>
+</section>
+
+<section    class="section tight ">
+  <div class="container" style="">
+
+    
+      <div class="bullet-columns reveal">
+        
+        <div class="bullet-col">
+          <h3>Job Description</h3>
+          <ul><li>Receive, check and record incoming materials and finished goods.</li><li>Issue items to production staff and keep accurate stock records.</li><li>Keep the store clean, organised and secure, and report any shortages.</li></ul>
+        </div>
+        
+        <div class="bullet-col">
+          <h3>Benefits</h3>
+          <ul><li>Monthly salary of ₦100,000.</li><li>Hands-on experience in a production company.</li><li>Room to grow within Traction Outsourcing.</li></ul>
+        </div>
         
       </div>
 
@@ -168,7 +198,7 @@
 
     
       <h2 class="section-title reveal">Application Form</h2>
-      <p class="section-sub reveal">Please fill in every field.</p><p class="section-notice reveal">DO NOT APPLY MORE THAN ONCE. DOUBLE APPLICATIONS WILL BE DISQUALIFIED</p>
+      <p class="section-sub reveal">Please fill in every field. Your CV must be uploaded as a PDF file.</p><p class="section-notice reveal">DO NOT APPLY MORE THAN ONCE. DOUBLE APPLICATIONS WILL BE DISQUALIFIED</p>
       <form class="card reveal" id="applyForm" style="max-width:720px;margin:0 auto;">
         <div style="display:grid;gap:14px;">
           
@@ -178,6 +208,17 @@
           
             
             <input name="lastName" type="text" placeholder="Last Name" required   minlength="2" style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+            
+          
+            
+            <div>
+              <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="Phone Number (11 digits), e.g. 08052033145" required maxlength="11" minlength="11" pattern="[0-9]{11}" title="Enter your 11-digit phone number, numbers only (e.g. 08052033145)" data-digits-only="11" style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+              <p class="digit-counter" data-counter-for="phone" aria-live="polite">0/11</p>
+            </div>
+            
+          
+            
+            <input name="email" type="email" placeholder="Email Address" required  title="Enter a valid email address"  style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
             
           
             
@@ -206,6 +247,14 @@
               <option value="" disabled selected>Can you resume immediately?</option>
               <option value="Yes">Yes</option><option value="No">No</option>
             </select>
+            
+          
+            
+            <div>
+              <label for="cv" style="display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">Upload Your CV *</label>
+              <input id="cv" name="cv" type="file" accept=".pdf,application/pdf" required style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);background:var(--white);color:var(--ink);font-size:14px;">
+              <p style="font-size:12.5px;color:var(--ink-faint);margin:6px 0 0;">PDF only, max 5MB.</p>
+            </div>
             
           
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Application</button>
@@ -269,6 +318,6 @@
   
   <script src="/js/nav.js"></script>
   <script src="/js/reveal.js"></script>
-  <script src="/js/apply-storekeeper-form.js"></script>
+  <script src="/js/apply-fields.js"></script><script src="/js/apply-storekeeper-form.js"></script>
 </body>
 </html>

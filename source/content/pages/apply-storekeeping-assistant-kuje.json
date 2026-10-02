@@ -43,7 +43,7 @@
     {
       "type": "grid",
       "tight": true,
-      "columns": 3,
+      "columns": 4,
       "style": "icon-list",
       "entries": [
         {
@@ -52,14 +52,41 @@
           "text": ""
         },
         {
-          "icon": "fa-money-bill-wave",
-          "title": "Salary: ₦100,000",
+          "icon": "fa-graduation-cap",
+          "title": "Minimum of OND or HND",
           "text": ""
         },
         {
-          "icon": "fa-clipboard-list",
-          "title": "Short Application Form",
+          "icon": "fa-file-upload",
+          "title": "CV Required (PDF)",
           "text": ""
+        },
+        {
+          "icon": "fa-industry",
+          "title": "Production Company",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "bullet-columns",
+      "tight": true,
+      "lists": [
+        {
+          "heading": "Job Description",
+          "items": [
+            "Receive, check and record incoming materials and finished goods.",
+            "Issue items to production staff and keep accurate stock records.",
+            "Keep the store clean, organised and secure, and report any shortages."
+          ]
+        },
+        {
+          "heading": "Benefits",
+          "items": [
+            "Monthly salary of ₦100,000.",
+            "Hands-on experience in a production company.",
+            "Room to grow within Traction Outsourcing."
+          ]
         }
       ]
     },
@@ -68,7 +95,7 @@
       "id": "apply-form",
       "tight": true,
       "heading": "Application Form",
-      "sub": "Please fill in every field.",
+      "sub": "Please fill in every field. Your CV must be uploaded as a PDF file.",
       "notice": "DO NOT APPLY MORE THAN ONCE. DOUBLE APPLICATIONS WILL BE DISQUALIFIED",
       "form_id": "applyForm",
       "form_max_width": "720px",
@@ -88,6 +115,21 @@
           "input_type": "text",
           "required": true,
           "minlength": 2
+        },
+        {
+          "name": "phone",
+          "placeholder": "Phone Number (11 digits), e.g. 08052033145",
+          "input_type": "tel",
+          "digits": 11,
+          "required": true,
+          "title": "Enter your 11-digit phone number, numbers only (e.g. 08052033145)"
+        },
+        {
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true,
+          "title": "Enter a valid email address"
         },
         {
           "name": "gender",
@@ -128,11 +170,20 @@
             "Yes",
             "No"
           ]
+        },
+        {
+          "name": "cv",
+          "placeholder": "Upload Your CV",
+          "input_type": "file",
+          "accept": ".pdf,application/pdf",
+          "required": true,
+          "help": "PDF only, max 5MB."
         }
       ]
     }
   ],
   "scripts": [
+    "/js/apply-fields.js",
     "/js/apply-storekeeper-form.js"
   ]
 }

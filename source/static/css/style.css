@@ -520,6 +520,24 @@ section.bg-ash .logo-chip { background: var(--white); }
 .form-success-modal p { font-size: 17px; line-height: 1.5; color: var(--ink); margin: 0; }
 .form-success-modal .btn { display: inline-flex; }
 
+/* ---------------- Application form: digit counter + bullet columns ---------------- */
+.digit-counter { font-size: 12.5px; line-height: 1; color: var(--ink-faint); margin: 6px 4px -2px; text-align: right; }
+.digit-counter.complete { color: #1e7e34; font-weight: 600; }
+.bullet-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); max-width: 920px; margin: 0 auto; }
+.bullet-col { padding: 0 40px; }
+.bullet-col:first-child { padding-left: 0; }
+.bullet-col:last-child { padding-right: 0; }
+.bullet-col + .bullet-col { border-left: 1px solid var(--hairline); }
+.bullet-col h3 { font-size: 20px; margin: 0 0 16px; }
+.bullet-col ul { margin: 0; padding-left: 20px; list-style: disc; }
+.bullet-col li { color: var(--ink-soft); font-size: 16px; line-height: 1.55; margin-bottom: 12px; padding-left: 4px; }
+.bullet-col li::marker { color: var(--orange); }
+@media (max-width: 720px) {
+  .bullet-columns { grid-template-columns: 1fr; }
+  .bullet-col, .bullet-col:first-child, .bullet-col:last-child { padding: 0; }
+  .bullet-col + .bullet-col { border-left: none; border-top: 1px solid var(--hairline); margin-top: 28px; padding-top: 28px; }
+}
+
 /* ---------------- Careers / job cards ---------------- */
 .job-card { display: flex; flex-direction: column; }
 .job-card-title { font-size: 20px; margin: 0 0 8px; }

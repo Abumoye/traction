@@ -7,9 +7,9 @@ sheet used by the other forms on the site. It powers:
 - `/apply/real-estate-sales-manager-100/` — the job application form (currently the **Real Estate Sales
   Manager** role, 7 fields: Full Name, Gender, Phone, Location in Abuja,
   Years of Experience, Sales Experience, and a CV upload).
-- `/apply/storekeeping-assistant-kuje/` — the **Storekeeping Assistant (Kuje)** application, 6 fields (First
-  Name, Last Name, Gender, Where do you live in Abuja, Date of Birth, Can you
-  resume immediately), no CV upload. Its entries are saved on a separate tab
+- `/apply/storekeeping-assistant-kuje/` — the **Storekeeping Assistant (Kuje)** application, 9 fields (First
+  Name, Last Name, Phone, Email, Gender, Where do you live in Abuja, Date of Birth, Can you
+  resume immediately, CV upload as PDF). Its entries are saved on a separate tab
   named **Storekeeper Kuje** in the same Sheet (see "Storekeeper Kuje tab" below).
 
 Every submission is saved as a row in a Google Sheet, and the uploaded CV
@@ -120,21 +120,35 @@ function handleApply(data) {
 
 /* ===================== STOREKEEPING ASSISTANT (KUJE) ===================== */
 
-// No CV upload on this form. Entries go to their own tab, "Storekeeper Kuje",
-// in the same spreadsheet. The tab (with its header row) is created
-// automatically the first time someone applies, so there is nothing to set
-// up by hand - but if you create a tab with exactly that name yourself, the
-// script will use it as-is.
-function handleApplyStorekeeper(data) {
+// Entries go to their own tab, "Storekeeper Kuje", in the same spreadsheet,
+// and the CV (PDF only) is saved in the same Drive folder as the other CVs.
+// The tab and its header row are created / topped up automatically, so there
+// is nothing to set up by hand.
+var STOREKEEPER_HEADERS = [
+  'Timestamp', 'Role', 'First Name', 'Last Name', 'Gender',
+  'Where in Abuja (Area Council)', 'Date of Birth', 'Can Resume Immediately',
+  'Phone Number', 'Email', 'CV Link'
+];
+
+function getStorekeeperSheet() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName('Storekeeper Kuje');
+  if (!sheet) sheet = ss.insertSheet('Storekeeper Kuje');
 
-  if (!sheet) {
-    sheet = ss.insertSheet('Storekeeper Kuje');
-    sheet.appendRow(['Timestamp', 'Role', 'First Name', 'Last Name', 'Gender', 'Where in Abuja (Area Council)', 'Date of Birth', 'Can Resume Immediately']);
-    sheet.getRange(1, 1, 1, 8).setFontWeight('bold');
+  // Write or complete the header row (also upgrades a tab made by the earlier,
+  // 8-column version of this script).
+  var current = sheet.getLastColumn() > 0 ? sheet.getRange(1, 1, 1, STOREKEEPER_HEADERS.length).getValues()[0] : [];
+  if (current.join('|') !== STOREKEEPER_HEADERS.join('|')) {
+    sheet.getRange(1, 1, 1, STOREKEEPER_HEADERS.length).setValues([STOREKEEPER_HEADERS]).setFontWeight('bold');
     sheet.setFrozenRows(1);
+    // Phone column is plain text so the leading 0 (e.g. 08052033145) is kept.
+    sheet.getRange(2, 9, sheet.getMaxRows() - 1, 1).setNumberFormat('@');
   }
+  return sheet;
+}
+
+function handleApplyStorekeeper(data) {
+  var sheet = getStorekeeperSheet();
 
   var role = (data.role || '').toString().trim();
   var firstName = (data.firstName || '').toString().trim();
@@ -142,6 +156,8 @@ function handleApplyStorekeeper(data) {
   var gender = (data.gender || '').toString().trim();
   var location = (data.location || '').toString().trim();
   var resumeImmediately = (data.resumeImmediately || '').toString().trim();
+  var phone = (data.phone || '').toString().replace(/\D/g, '');
+  var email = (data.email || '').toString().trim();
 
   // dob arrives as YYYY-MM-DD. Store it as a real date so it sorts and filters properly.
   var dob = (data.dob || '').toString().trim();
@@ -149,16 +165,33 @@ function handleApplyStorekeeper(data) {
   var m = dob.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   if (m) dobValue = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
 
-  sheet.appendRow([new Date(), role, firstName, lastName, gender, location, dobValue, resumeImmediately]);
-  if (m) sheet.getRange(sheet.getLastRow(), 7).setNumberFormat('dd mmm yyyy');
+  // CV: PDF only. Anything that is not a real PDF is not saved to Drive, and
+  // the row says so (the website already blocks these; this is the backstop).
+  var cvLink = '';
+  try {
+    cvLink = saveCvToDrive(data.cvBase64, data.cvFileName, 'application/pdf', firstName + ' ' + lastName, true);
+  } catch (err) {
+    Logger.log('CV upload failed: ' + err);
+    cvLink = 'Upload failed or not a PDF - contact applicant for CV';
+  }
+
+  sheet.appendRow([new Date(), role, firstName, lastName, gender, location, dobValue, resumeImmediately, phone, email, cvLink]);
+  var row = sheet.getLastRow();
+  if (m) sheet.getRange(row, 7).setNumberFormat('dd mmm yyyy');
+  sheet.getRange(row, 9).setNumberFormat('@').setValue(phone);
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success' })
   ).setMimeType(ContentService.MimeType.JSON);
 }
 
-function saveCvToDrive(base64, fileName, mimeType, applicantName) {
+function saveCvToDrive(base64, fileName, mimeType, applicantName, pdfOnly) {
   if (!base64) return '';
+
+  if (pdfOnly) {
+    // A real PDF starts with "%PDF-" (base64 "JVBERi0"). Reject anything else.
+    if (String(base64).indexOf('JVBERi0') !== 0) throw new Error('Not a PDF file');
+  }
 
   var folder = getOrCreateApplicationsFolder();
   var safeName = (applicantName || 'Applicant').replace(/[^a-zA-Z0-9 -]/g, '').trim();
@@ -271,7 +304,9 @@ posts to the **same Web App URL** as the Real Estate form, but with
 files those entries on a tab named **Storekeeper Kuje** in the same spreadsheet,
 leaving the first tab (Real Estate Sales Manager) untouched.
 
-Columns: `Timestamp | Role | First Name | Last Name | Gender | Where in Abuja (Area Council) | Date of Birth | Can Resume Immediately`
+Columns: `Timestamp | Role | First Name | Last Name | Gender | Where in Abuja (Area Council) | Date of Birth | Can Resume Immediately | Phone Number | Email | CV Link`
+
+The form also collects an 11-digit phone number (digits only, kept as text so the leading 0 stays), an email address and a CV that must be a PDF (max 5MB). The CV is saved in the same Drive folder as the Real Estate CVs and linked in the **CV Link** column.
 
 **To switch this on you must update the Apps Script once** (the website change alone
 is not enough, because the old script does not know about this form):
@@ -285,3 +320,13 @@ is not enough, because the old script does not know about this form):
 
 Until step 3 is done, Storekeeper submissions reach the old script, which ignores
 unknown form types, so they are NOT saved. Do the redeploy before announcing the job.
+
+## Building future application forms
+
+New forms on the careers hub should follow the Storekeeper form (`/apply/storekeeping-assistant-kuje/`):
+
+- **Phone number:** use a field with `"digits": 11` (see `apply-storekeeping-assistant-kuje.json`). It accepts digits only, stops at 11, and shows a live "0/11" counter. A pasted `+234...` number is converted to the 0-format.
+- **Email:** a field with `"input_type": "email"`.
+- **CV:** a field with `"input_type": "file"` and `"accept": ".pdf,application/pdf"`, placed last. Load `/js/apply-fields.js` before the page script and call `window.applyFields.isPdf(file)` to reject anything that is not a real PDF (checks name, type and the file's first bytes).
+- **Job description / benefits:** a `"bullet-columns"` section placed just above the form section.
+- **Salary on the careers card:** add `"salary": "₦100,000/month"` to the job in `apply.json`.

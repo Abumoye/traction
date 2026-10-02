@@ -308,6 +308,12 @@
               <option value="" disabled selected>{{ f.placeholder | default('Select an option') }}</option>
               {% for opt in f.options %}<option value="{{ opt }}">{{ opt }}</option>{% endfor %}
             </select>
+            {% elif f.digits %}
+            {%- set digit_pattern = '[0-9]{' ~ f.digits ~ '}' %}
+            <div>
+              <input id="{{ f.name }}" name="{{ f.name }}" type="tel" inputmode="numeric" autocomplete="tel" placeholder="{{ f.placeholder }}" {% if f.required | default(true) %}required{% endif %} maxlength="{{ f.digits }}" minlength="{{ f.digits }}" pattern="{{ digit_pattern }}" title="{{ f.title | default('Enter exactly ' ~ f.digits ~ ' digits, numbers only') }}" data-digits-only="{{ f.digits }}" style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+              <p class="digit-counter" data-counter-for="{{ f.name }}" aria-live="polite">0/{{ f.digits }}</p>
+            </div>
             {% elif f.input_type == 'date' %}
             <div>
               <label for="{{ f.name }}" style="display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">{{ f.placeholder }}{% if f.required | default(true) %} *{% endif %}</label>
@@ -352,6 +358,16 @@
       {% if sec.fallback_text %}
       <p class="reveal" style="text-align:center;color:var(--ink-faint);font-size:14px;max-width:{{ sec.max_width_inner | default('760px') }};margin:16px auto 0;">{{ sec.fallback_text | safe }}</p>
       {% endif %}
+
+    {% elif sec.type == 'bullet-columns' %}
+      <div class="bullet-columns reveal">
+        {% for col in sec.lists %}
+        <div class="bullet-col">
+          <h3>{{ col.heading }}</h3>
+          <ul>{% for item in col['items'] %}<li>{{ item }}</li>{% endfor %}</ul>
+        </div>
+        {% endfor %}
+      </div>
 
     {% elif sec.type == 'job-cards' %}
       {% if sec.heading %}<h2 class="section-title reveal">{{ sec.heading }}</h2>{% endif %}
