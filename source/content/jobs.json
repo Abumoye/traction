@@ -51,6 +51,39 @@
         "CV Required (PDF)"
       ],
       "benefits": []
+    },
+    {
+      "id": "business-strategy-officer",
+      "status": "open",
+      "title": "Business Strategy Officer",
+      "url": "/apply/business-strategy-officer/",
+      "locality": "Abuja",
+      "streetAddress": "Wuse Zone 5",
+      "region": "FCT",
+      "datePosted": "2026-10-03",
+      "workArrangement": "Hybrid",
+      "industry": "Consulting",
+      "experienceMonths": 24,
+      "salary": {
+        "value": 100000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Business Strategy Officer for our consulting team in Wuse Zone 5, Abuja.",
+      "responsibilities": [
+        "Analyse client businesses and recommend practical strategy, structure and growth plans.",
+        "Support business development by preparing proposals and presentations and following up on opportunities.",
+        "Support HR and organisational design projects for clients and report progress to the team."
+      ],
+      "qualifications": [
+        "2 Years' Experience in Business Development, Consulting or HR",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Hybrid working arrangement.",
+        "Hands-on consulting experience with Nigerian businesses.",
+        "Other statutory benefits."
+      ]
     }
   ]
 }

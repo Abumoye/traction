@@ -315,6 +315,13 @@
               <input id="{{ f.name }}" name="{{ f.name }}" type="tel" inputmode="numeric" autocomplete="tel" placeholder="{{ f.placeholder }}" {% if f.required | default(true) %}required{% endif %} maxlength="{{ f.digits }}" minlength="{{ f.digits }}" pattern="{{ digit_pattern }}" title="{{ f.title | default('Enter exactly ' ~ f.digits ~ ' digits, numbers only') }}" data-digits-only="{{ f.digits }}" style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
               <p class="digit-counter" data-counter-for="{{ f.name }}" aria-live="polite">0/{{ f.digits }}</p>
             </div>
+            {% elif f.input_type == 'textarea' %}
+            <div>
+              <label for="{{ f.name }}" style="display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;line-height:1.5;">{{ f.placeholder }}{% if f.required | default(true) %} *{% endif %}</label>
+              <textarea id="{{ f.name }}" name="{{ f.name }}" rows="{{ f.rows | default(6) }}" {% if f.required | default(true) %}required{% endif %} {% if f.max_words %}data-max-words="{{ f.max_words }}"{% endif %} style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);font-size:15px;line-height:1.55;resize:vertical;"></textarea>
+              {% if f.max_words %}<p class="digit-counter" data-words-for="{{ f.name }}" aria-live="polite">0/{{ f.max_words }} words</p>{% endif %}
+              {% if f.help %}<p style="font-size:12.5px;color:var(--ink-faint);margin:6px 0 0;">{{ f.help }}</p>{% endif %}
+            </div>
             {% elif f.input_type == 'date' %}
             <div>
               <label for="{{ f.name }}" style="display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">{{ f.placeholder }}{% if f.required | default(true) %} *{% endif %}</label>

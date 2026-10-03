@@ -80,6 +80,10 @@ function doPost(e) {
     return handleApplyStorekeeper(data);
   }
 
+  if (data.formType === 'apply-strategy-officer') {
+    return handleApplyStrategyOfficer(data);
+  }
+
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'error', message: 'Unknown form type.' })
   ).setMimeType(ContentService.MimeType.JSON);
@@ -179,6 +183,72 @@ function handleApplyStorekeeper(data) {
   var row = sheet.getLastRow();
   if (m) sheet.getRange(row, 7).setNumberFormat('dd mmm yyyy');
   sheet.getRange(row, 9).setNumberFormat('@').setValue(phone);
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ====================== BUSINESS STRATEGY OFFICER ====================== */
+
+// Entries go to their own tab, "Business Strategy Officer", in the same
+// spreadsheet. The tab and its header row are created automatically on the
+// first submission. CV is PDF only, saved in the same Drive folder.
+var STRATEGY_HEADERS = [
+  'Timestamp', 'Role', 'Full Name', 'Email Address', 'Phone Number',
+  'Location (Area Council)', 'Years of Work Experience',
+  'Organizational Design Essay', 'Essay Word Count', 'CV Link'
+];
+
+function getStrategySheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName('Business Strategy Officer');
+  if (!sheet) sheet = ss.insertSheet('Business Strategy Officer');
+
+  var current = sheet.getLastColumn() > 0 ? sheet.getRange(1, 1, 1, STRATEGY_HEADERS.length).getValues()[0] : [];
+  if (current.join('|') !== STRATEGY_HEADERS.join('|')) {
+    sheet.getRange(1, 1, 1, STRATEGY_HEADERS.length).setValues([STRATEGY_HEADERS]).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+    // Phone column is plain text so the leading 0 is kept; essay column wraps.
+    sheet.getRange(2, 5, sheet.getMaxRows() - 1, 1).setNumberFormat('@');
+    sheet.getRange(2, 8, sheet.getMaxRows() - 1, 1).setWrap(true);
+    sheet.setColumnWidth(8, 420);
+  }
+  return sheet;
+}
+
+function handleApplyStrategyOfficer(data) {
+  var sheet = getStrategySheet();
+
+  var role = (data.role || '').toString().trim();
+  var fullName = (data.fullName || '').toString().trim();
+  var email = (data.email || '').toString().trim();
+  var phone = (data.phone || '').toString().replace(/\D/g, '');
+  var location = (data.location || '').toString().trim();
+  var years = (data.yearsExperience || '').toString().trim();
+
+  // Essay: the website stops at 150 words; this is the backstop. Anything past
+  // the 150th word is dropped.
+  var essay = (data.essay || '').toString().trim();
+  var words = essay.split(/\s+/).filter(function (w) { return w; });
+  if (words.length > 150) {
+    essay = words.slice(0, 150).join(' ');
+    words = words.slice(0, 150);
+  }
+
+  var cvLink = '';
+  try {
+    cvLink = saveCvToDrive(data.cvBase64, data.cvFileName, 'application/pdf', fullName, true);
+  } catch (err) {
+    Logger.log('CV upload failed: ' + err);
+    cvLink = 'Upload failed or not a PDF - contact applicant for CV';
+  }
+
+  sheet.appendRow([new Date(), role, fullName, email, phone, location, years, essay, words.length, cvLink]);
+  var row = sheet.getLastRow();
+  sheet.getRange(row, 5).setNumberFormat('@').setValue(phone);
+  sheet.getRange(row, 7).setNumberFormat('@').setValue(years);
+  sheet.getRange(row, 8).setWrap(true);
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success' })
@@ -321,6 +391,19 @@ is not enough, because the old script does not know about this form):
 Until step 3 is done, Storekeeper submissions reach the old script, which ignores
 unknown form types, so they are NOT saved. Do the redeploy before announcing the job.
 
+## Business Strategy Officer tab
+
+The Business Strategy Officer form (`/apply/business-strategy-officer/`, script `/js/apply-business-strategy-form.js`)
+posts to the same Web App URL with `formType: "apply-strategy-officer"`. The script above
+(`handleApplyStrategyOfficer`) files those entries on a tab named **Business Strategy Officer**,
+created automatically on the first submission.
+
+Columns: `Timestamp | Role | Full Name | Email Address | Phone Number | Location (Area Council) | Years of Work Experience | Organizational Design Essay | Essay Word Count | CV Link`
+
+The form collects full name, email, an 11-digit phone number (digits only), location (Abuja area council), years of experience (2, 3, 4 or 5+), a short "Organizational Design" essay (maximum 150 words, any letters, numbers, signs and spaces) and a PDF CV (max 5MB).
+
+**Update the Apps Script once before announcing the job:** open the Sheet, **Extensions → Apps Script**, replace the code with the full script above, save, then **Deploy → Manage deployments → pencil (Edit) → Version: New version → Deploy**. The Web App URL stays the same. Until that is done, submissions from this form are not saved.
+
 ## Building future application forms
 
 New forms on the careers hub should follow the Storekeeper form (`/apply/storekeeping-assistant-kuje/`):
@@ -328,5 +411,6 @@ New forms on the careers hub should follow the Storekeeper form (`/apply/storeke
 - **Phone number:** use a field with `"digits": 11` (see `apply-storekeeping-assistant-kuje.json`). It accepts digits only, stops at 11, and shows a live "0/11" counter. A pasted `+234...` number is converted to the 0-format.
 - **Email:** a field with `"input_type": "email"`.
 - **CV:** a field with `"input_type": "file"` and `"accept": ".pdf,application/pdf"`, placed last. Load `/js/apply-fields.js` before the page script and call `window.applyFields.isPdf(file)` to reject anything that is not a real PDF (checks name, type and the file's first bytes).
+- **Short written answer:** a field with `"input_type": "textarea"` and `"max_words": 150` gives a text box with a live "0/150 words" counter that cuts off extra words. Load `/js/apply-fields.js` first.
 - **Job description / benefits:** a `"bullet-columns"` section placed just above the form section.
 - **Salary on the careers card:** add `"salary": "₦100,000/month"` to the job in `apply.json`.

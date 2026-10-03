@@ -5,7 +5,7 @@
     "logo": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
   },
   "careersPage": "https://tolnigeria.com/apply/",
-  "lastUpdated": "2026-10-02",
+  "lastUpdated": "2026-10-03",
   "jobs": [
     {
       "id": "storekeeping-assistant-kuje",
@@ -71,6 +71,46 @@
         "CV Required (PDF)"
       ],
       "benefits": []
+    },
+    {
+      "id": "business-strategy-officer",
+      "title": "Business Strategy Officer",
+      "url": "https://tolnigeria.com/apply/business-strategy-officer/",
+      "applyUrl": "https://tolnigeria.com/apply/business-strategy-officer/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Abuja",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG",
+        "streetAddress": "Wuse Zone 5"
+      },
+      "employmentType": null,
+      "datePosted": "2026-10-03",
+      "validThrough": null,
+      "salary": {
+        "currency": "NGN",
+        "amount": 100000,
+        "period": "MONTH",
+        "display": "₦100,000/month"
+      },
+      "description": "We are hiring a Business Strategy Officer for our consulting team in Wuse Zone 5, Abuja.\nResponsibilities: Analyse client businesses and recommend practical strategy, structure and growth plans. Support business development by preparing proposals and presentations and following up on opportunities. Support HR and organisational design projects for clients and report progress to the team.\nRequirements: 2 Years' Experience in Business Development, Consulting or HR CV Required (PDF)\nBenefits: Hybrid working arrangement. Hands-on consulting experience with Nigerian businesses. Other statutory benefits.",
+      "responsibilities": [
+        "Analyse client businesses and recommend practical strategy, structure and growth plans.",
+        "Support business development by preparing proposals and presentations and following up on opportunities.",
+        "Support HR and organisational design projects for clients and report progress to the team."
+      ],
+      "qualifications": [
+        "2 Years' Experience in Business Development, Consulting or HR",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Hybrid working arrangement.",
+        "Hands-on consulting experience with Nigerian businesses.",
+        "Other statutory benefits."
+      ],
+      "workArrangement": "Hybrid",
+      "industry": "Consulting"
     }
   ]
 }
