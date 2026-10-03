@@ -313,11 +313,11 @@ def job_salary_text(job):
 
 
 def job_description_html(job):
-    parts = [f"<p>{html.escape(job['summary'])}</p>"]
+    parts = [f"<p>{html.escape(job['summary'], quote=False)}</p>"]
     for heading, key in (("Responsibilities", "responsibilities"), ("Requirements", "qualifications"), ("Benefits", "benefits")):
         items = job.get(key) or []
         if items:
-            parts.append(f"<h3>{heading}</h3><ul>" + "".join(f"<li>{html.escape(i)}</li>" for i in items) + "</ul>")
+            parts.append(f"<h3>{heading}</h3><ul>" + "".join(f"<li>{html.escape(i, quote=False)}</li>" for i in items) + "</ul>")
     return "".join(parts)
 
 
@@ -338,7 +338,7 @@ def build_jobposting_schema(job):
         "description": job_description_html(job),
         "identifier": {"@type": "PropertyValue", "name": SITE_NAME, "value": job["id"]},
         "datePosted": job["datePosted"],
-        "employmentType": job["employmentType"],
+        **({"employmentType": job["employmentType"]} if job.get("employmentType") else {}),
         "hiringOrganization": {
             "@type": "Organization",
             "name": SITE_NAME,
@@ -357,6 +357,17 @@ def build_jobposting_schema(job):
         "directApply": True,
         "url": SITE_URL + job["url"],
     }
+    # Optional fields: only written when the job actually states them.
+    if job.get("streetAddress"):
+        schema["jobLocation"]["address"] = {
+            "@type": "PostalAddress",
+            "streetAddress": job["streetAddress"],
+            **{k: v for k, v in schema["jobLocation"]["address"].items() if k != "@type"},
+        }
+    if job.get("experienceMonths"):
+        schema["experienceRequirements"] = {"@type": "OccupationalExperienceRequirements", "monthsOfExperience": job["experienceMonths"]}
+    if job.get("industry"):
+        schema["industry"] = job["industry"]
     if job.get("validThrough"):
         schema["validThrough"] = job["validThrough"]
     if job.get("salary"):
@@ -415,7 +426,7 @@ def write_job_feeds(open_jobs):
             "applyUrl": SITE_URL + j["url"],
             "company": SITE_NAME,
             "location": {"city": j["locality"], "state": REGION_NAMES.get(j["region"], j["region"]), "country": "Nigeria", "countryCode": "NG"},
-            "employmentType": j["employmentType"],
+            "employmentType": j.get("employmentType"),
             "datePosted": j["datePosted"],
             "validThrough": j.get("validThrough"),
             "salary": ({"currency": s["currency"], "amount": s["value"], "period": s["unit"], "display": job_salary_text(j)} if s else None),
@@ -424,6 +435,13 @@ def write_job_feeds(open_jobs):
             "qualifications": j.get("qualifications", []),
             "benefits": j.get("benefits", []),
         })
+        # Optional details, only present when the job states them.
+        if j.get("streetAddress"):
+            feed["jobs"][-1]["location"]["streetAddress"] = j["streetAddress"]
+        if j.get("workArrangement"):
+            feed["jobs"][-1]["workArrangement"] = j["workArrangement"]
+        if j.get("industry"):
+            feed["jobs"][-1]["industry"] = j["industry"]
         xml += ["  <job>",
                 f"    <title><![CDATA[{j['title']}]]></title>",
                 f"    <date><![CDATA[{j['datePosted']}]]></date>",
@@ -436,7 +454,9 @@ def write_job_feeds(open_jobs):
                 f"    <description><![CDATA[{job_description_html(j)}]]></description>"]
         if s:
             xml.append(f"    <salary><![CDATA[{job_salary_text(j)}]]></salary>")
-        xml += [f"    <jobtype><![CDATA[{JOB_TYPE_XML.get(j['employmentType'], 'fulltime')}]]></jobtype>", "  </job>"]
+        if j.get("employmentType"):
+            xml.append(f"    <jobtype><![CDATA[{JOB_TYPE_XML.get(j['employmentType'], 'fulltime')}]]></jobtype>")
+        xml.append("  </job>")
     xml.append("</source>")
     write(DIST / "jobs.json", json.dumps(feed, indent=2, ensure_ascii=False) + "\n")
     write(DIST / "jobs.xml", "\n".join(xml) + "\n")

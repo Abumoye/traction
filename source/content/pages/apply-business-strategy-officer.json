@@ -1,0 +1,181 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "apply/business-strategy-officer/index.html",
+    "url": "/apply/business-strategy-officer/"
+  },
+  "meta": {
+    "title": "Business Strategy Officer Job, Wuse Zone 5, Abuja | Traction Outsourcing",
+    "description": "Business Strategy Officer job in Wuse Zone 5, Abuja at ₦100,000/month. Hybrid role in consulting, 2 years' experience required. Apply online at Traction Outsourcing Limited.",
+    "image_alt": "Traction Outsourcing Limited team headshots beside the company logo and the tagline Built by Africans, for Africa."
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Careers",
+          "item": "https://tolnigeria.com/apply/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Business Strategy Officer",
+          "item": "https://tolnigeria.com/apply/business-strategy-officer/"
+        }
+      ]
+    }
+  ],
+  "hero": {
+    "back": {
+      "href": "/apply/",
+      "label": "Back to Careers"
+    },
+    "eyebrow": "We Are Hiring",
+    "headline": "Business Strategy Officer",
+    "sub": "We are hiring a Business Strategy Officer for our consulting team in Wuse Zone 5, Abuja. Hybrid · ₦100,000/month."
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "tight": true,
+      "columns": 4,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-map-marker-alt",
+          "title": "Based in Wuse Zone 5, Abuja",
+          "text": ""
+        },
+        {
+          "icon": "fa-laptop-house",
+          "title": "Hybrid Role",
+          "text": ""
+        },
+        {
+          "icon": "fa-briefcase",
+          "title": "2 Years' Experience in Business Development, Consulting or HR",
+          "text": ""
+        },
+        {
+          "icon": "fa-chart-line",
+          "title": "Consulting Industry",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "bullet-columns",
+      "tight": true,
+      "lists": [
+        {
+          "heading": "Job Description",
+          "items": [
+            "Analyse client businesses and recommend practical strategy, structure and growth plans.",
+            "Support business development by preparing proposals and presentations and following up on opportunities.",
+            "Support HR and organisational design projects for clients and report progress to the team."
+          ]
+        },
+        {
+          "heading": "Benefits",
+          "items": [
+            "Hybrid working arrangement.",
+            "Hands-on consulting experience with Nigerian businesses.",
+            "Other statutory benefits."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "id": "apply-form",
+      "tight": true,
+      "heading": "Application Form",
+      "sub": "Please fill in every field. Your CV must be uploaded as a PDF file.",
+      "notice": "DO NOT APPLY MORE THAN ONCE. DOUBLE APPLICATIONS WILL BE DISQUALIFIED",
+      "form_id": "applyForm",
+      "form_max_width": "720px",
+      "button": "Submit Application",
+      "success_message": "Thank you for your application. We will reach out to qualified candidates.",
+      "fields": [
+        {
+          "name": "fullName",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2
+        },
+        {
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true,
+          "title": "Enter a valid email address"
+        },
+        {
+          "name": "phone",
+          "placeholder": "Phone Number (11 digits), e.g. 08052033145",
+          "input_type": "tel",
+          "digits": 11,
+          "required": true,
+          "title": "Enter your 11-digit phone number, numbers only (e.g. 08052033145)"
+        },
+        {
+          "name": "location",
+          "placeholder": "Location (where do you live in Abuja?)",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Abaji",
+            "Abuja Municipal (AMAC)",
+            "Bwari",
+            "Gwagwalada",
+            "Kuje",
+            "Kwali"
+          ]
+        },
+        {
+          "name": "yearsExperience",
+          "placeholder": "Years of work experience",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5+"
+          ]
+        },
+        {
+          "name": "essay",
+          "placeholder": "Break down this concept with a short essay: \"Organizational Design\" (maximum 150 words)",
+          "input_type": "textarea",
+          "required": true,
+          "max_words": 150,
+          "rows": 7
+        },
+        {
+          "name": "cv",
+          "placeholder": "Upload Your CV",
+          "input_type": "file",
+          "accept": ".pdf,application/pdf",
+          "required": true,
+          "help": "PDF only, max 5MB."
+        }
+      ]
+    }
+  ],
+  "scripts": [
+    "/js/apply-fields.js",
+    "/js/apply-business-strategy-form.js"
+  ]
+}

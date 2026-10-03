@@ -54,6 +54,13 @@
           "active": true
         },
         {
+          "title": "Business Strategy Officer",
+          "location": "Wuse Zone 5, Abuja",
+          "salary": "₦100,000/month",
+          "href": "/apply/business-strategy-officer/",
+          "active": true
+        },
+        {
           "title": "HR Manager",
           "location": "Kuje, Abuja",
           "active": false

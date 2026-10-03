@@ -6,7 +6,11 @@
       digits (letters, spaces and signs are stripped as you type or paste),
       stops at the given length, and updates a "0/11" counter in the element
       marked data-counter-for="<input name>".
-   2. window.applyFields.isPdf(file): resolves true only for a real PDF —
+   2. Word-limited text boxes: any <textarea data-max-words="150"> accepts
+      letters, numbers, signs and spaces, but stops at the given number of
+      words (extra words are cut off as you type or paste) and updates the
+      "0/150 words" counter in the element marked data-words-for="<name>".
+   3. window.applyFields.isPdf(file): resolves true only for a real PDF —
       checks the file name, the browser-reported type AND the file's first
       bytes (%PDF-), so a renamed picture or Word file is rejected.
    ========================================================= */
@@ -37,6 +41,44 @@
         });
     }
 
+    function countWords(text) {
+        var m = String(text || '').match(/\S+/g);
+        return m ? m.length : 0;
+    }
+
+    // Cuts text off right after its max-th word, keeping everything before it.
+    function limitWords(text, max) {
+        var re = /\S+/g, m, count = 0, end = text.length;
+        while ((m = re.exec(text)) !== null) {
+            count++;
+            if (count === max) { end = m.index + m[0].length; break; }
+        }
+        return count >= max ? text.slice(0, end) : text;
+    }
+
+    function initWordLimits() {
+        document.querySelectorAll('[data-max-words]').forEach(function (box) {
+            var max = parseInt(box.getAttribute('data-max-words'), 10) || 150;
+            var counter = document.querySelector('[data-words-for="' + box.name + '"]');
+
+            function update() {
+                var words = countWords(box.value);
+                if (words > max) {
+                    box.value = limitWords(box.value, max);
+                    words = max;
+                }
+                if (counter) {
+                    counter.textContent = words + '/' + max + ' words';
+                    counter.classList.toggle('complete', words === max);
+                }
+            }
+
+            box.addEventListener('input', update);
+            if (box.form) box.form.addEventListener('reset', function () { setTimeout(update, 0); });
+            update();
+        });
+    }
+
     function isPdf(file) {
         if (!file) return Promise.resolve(false);
         var nameOk = /\.pdf$/i.test(file.name);
@@ -50,6 +92,6 @@
         }).catch(function () { return false; });
     }
 
-    window.applyFields = { isPdf: isPdf };
-    document.addEventListener('DOMContentLoaded', initDigitInputs);
+    window.applyFields = { isPdf: isPdf, countWords: countWords };
+    document.addEventListener('DOMContentLoaded', function () { initDigitInputs(); initWordLimits(); });
 })();
