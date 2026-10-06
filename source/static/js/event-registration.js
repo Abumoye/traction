@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
+        // Spam guard: hidden trap field + speed check (see /js/form-guard.js).
+        if (window.formGuard && window.formGuard.blocked(form, statusEl)) return;
+
         if (EVENT_REGISTRATION_SCRIPT_URL === "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL") {
             statusEl.textContent = "This form is not fully set up yet. Please reach us on WhatsApp instead.";
             statusEl.style.color = "#c0392b";
@@ -46,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
             email: form.email.value.trim(),
             referral: form.referral.value.trim()
         };
+        if (window.formGuard) Object.assign(data, window.formGuard.fields(form));
 
         if (!data.name || !data.phone || !data.email) {
             statusEl.textContent = "Please fill in your name, phone number, and email before submitting.";

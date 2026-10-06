@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
+        // Spam guard: hidden trap field + speed check (see /js/form-guard.js).
+        if (window.formGuard && window.formGuard.blocked(form, statusEl)) return;
+
         if (EVENT_AFFILIATE_SCRIPT_URL === "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL") {
             statusEl.textContent = "This form is not fully set up yet. Please reach us on WhatsApp instead.";
             statusEl.style.color = "#c0392b";
@@ -47,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             accountName: form.accountName.value.trim(),
             consent: form.consent.checked
         };
+        if (window.formGuard) Object.assign(data, window.formGuard.fields(form));
 
         const requiredValid = data.name && data.gender && data.age && data.email
             && data.phone && data.bankName && data.accountNumber && data.accountName && data.consent;

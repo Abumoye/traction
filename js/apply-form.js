@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
+        // Spam guard: hidden trap field + speed check (see /js/form-guard.js).
+        if (window.formGuard && window.formGuard.blocked(form, statusEl)) return;
+
         if (APPLY_FORM_SCRIPT_URL === "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL") {
             setStatus("This form is not fully set up yet. Please reach us on WhatsApp instead.", true);
             return;
@@ -70,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
             yearsExperience: form.yearsExperience.value.trim(),
             salesExperience: form.salesExperience.value.trim()
         };
+        if (window.formGuard) Object.assign(data, window.formGuard.fields(form));
 
         const requiredValid = data.fullName && data.gender && data.phone && data.location
             && data.yearsExperience && data.salesExperience && cvFile;

@@ -77,6 +77,9 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
+        // Spam guard: hidden trap field + speed check (see /js/form-guard.js).
+        if (window.formGuard && window.formGuard.blocked(form, statusEl)) return;
+
         const cvFile = form.cv.files[0];
 
         const data = {
@@ -92,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
             dob: form.dob.value.trim(), // YYYY-MM-DD
             resumeImmediately: form.resumeImmediately.value.trim()
         };
+        if (window.formGuard) Object.assign(data, window.formGuard.fields(form));
 
         if (!(data.firstName && data.lastName && data.phone && data.email && data.gender
               && data.location && data.dob && data.resumeImmediately && cvFile)) {

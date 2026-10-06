@@ -82,5 +82,5 @@
       ]
     }
   ],
-  "scripts": ["/js/event-affiliate.js"]
+  "scripts": ["/js/form-guard.js", "/js/event-affiliate.js"]
 }

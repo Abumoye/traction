@@ -132,6 +132,9 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
+        // Spam guard: hidden trap field + speed check (see /js/form-guard.js).
+        if (window.formGuard && window.formGuard.blocked(form, statusEl)) return;
+
         const name = nameInput.value.trim();
         const email = emailInput.value.trim();
         const fileUrl = fileUrlInput.value;

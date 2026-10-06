@@ -185,6 +185,7 @@
     }
   ],
   "scripts": [
+    "/js/form-guard.js",
     "/js/apply-fields.js",
     "/js/apply-storekeeper-form.js"
   ]
