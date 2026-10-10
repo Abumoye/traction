@@ -385,7 +385,7 @@
         <div class="card job-card reveal{{ ' job-card-inactive' if not job.active else '' }}">
           <h3 class="job-card-title">{{ job.title }}</h3>
           <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> {{ job.location }}</p>
-          {% if job.salary %}<p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> {{ job.salary }}</p>{% endif %}
+          {% if job.salary %}<p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> {{ job.salary }}</p>{% endif %}{% if job.closing %}<p class="job-card-salary"><i class="fa-regular fa-calendar"></i> {{ job.closing }}</p>{% endif %}
           {% if job.active %}
           <a href="{{ job.href }}" class="btn btn-primary job-card-btn">{{ job.cta_label | default('Apply Now') }}</a>
           {% else %}

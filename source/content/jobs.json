@@ -1,5 +1,5 @@
 {
-  "_comment": "Single source of truth for open roles. build.py turns each OPEN job into JobPosting structured data on its page, an ItemList on /apply/, and the /jobs.json + /jobs.xml feeds. To close a role set status to \"closed\" (it then disappears from all of them). Keep every fact here identical to what is visible on the job page.",
+  "_comment": "Single source of truth for open roles. build.py turns each OPEN job into JobPosting structured data on its page, an ItemList on /apply/, and the /jobs.json + /jobs.xml feeds. To close a role set status to \"closed\" (it then disappears from all of them). Keep every fact here identical to what is visible on the job page. Closing dates are automatic: 14 working days after datePosted (weekends and content/holidays.json skipped). Optional per job: \"workingDaysOpen\" or an exact \"validThrough\" date. \"remote\": true marks a fully remote role.",
   "jobs": [
     {
       "id": "storekeeping-assistant-kuje",
@@ -57,11 +57,9 @@
       "status": "open",
       "title": "Business Strategy Officer",
       "url": "/apply/business-strategy-officer/",
-      "locality": "Abuja",
-      "streetAddress": "Wuse Zone 5",
-      "region": "FCT",
+      "remote": true,
       "datePosted": "2026-10-03",
-      "workArrangement": "Hybrid",
+      "workArrangement": "Remote",
       "industry": "Consulting",
       "experienceMonths": 24,
       "salary": {
@@ -69,7 +67,7 @@
         "currency": "NGN",
         "unit": "MONTH"
       },
-      "summary": "We are hiring a Business Strategy Officer for our consulting team in Wuse Zone 5, Abuja.",
+      "summary": "We are hiring a Business Strategy Officer for our consulting team. This is a remote role open to applicants in Nigeria.",
       "responsibilities": [
         "Analyse client businesses and recommend practical strategy, structure and growth plans.",
         "Support business development by preparing proposals and presentations and following up on opportunities.",
@@ -80,7 +78,7 @@
         "CV Required (PDF)"
       ],
       "benefits": [
-        "Hybrid working arrangement.",
+        "Remote working arrangement.",
         "Hands-on consulting experience with Nigerian businesses.",
         "Other statutory benefits."
       ]

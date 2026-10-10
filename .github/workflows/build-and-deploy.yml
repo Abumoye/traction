@@ -12,6 +12,11 @@ on:
     paths:
       - "source/**"
   workflow_dispatch: {}
+  # Rebuild every night just after midnight (Nigeria time) so a job whose
+  # closing date has passed is taken off the site, the feeds and Google
+  # without anyone pushing a change.
+  schedule:
+    - cron: "10 23 * * *"
 
 permissions:
   contents: write
@@ -65,5 +70,30 @@ jobs:
             echo "No changes to publish."
           else
             git commit -m "Auto-build: publish site from source/ [skip ci]"
+            git push
+          fi
+
+      # Tell Google about new, changed and closed jobs (Indexing API). Does
+      # nothing until the GOOGLE_INDEXING_SA_JSON secret is added; a failure
+      # here never blocks the site from publishing. See
+      # docs/google-indexing-api-setup.md.
+      - name: Notify Google Indexing API
+        continue-on-error: true
+        env:
+          GOOGLE_INDEXING_SA_JSON: ${{ secrets.GOOGLE_INDEXING_SA_JSON }}
+        run: |
+          pip install google-auth requests
+          python3 scripts/notify_google_indexing.py --wait-live
+
+      - name: Save indexing state
+        if: always()
+        run: |
+          git config user.name "traction-site-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add source/indexing-state.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Indexing state unchanged."
+          else
+            git commit -m "Auto-build: update Google indexing state [skip ci]"
             git push
           fi

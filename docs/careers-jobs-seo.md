@@ -15,11 +15,25 @@ All open roles live in one file: `source/content/jobs.json`. Every build reads i
 4. Add the page URL to `sitemap.xml` and `llms.txt`.
 5. Build, copy `dist/apply/...`, `dist/jobs.json` and `dist/jobs.xml` to the repo root (the auto-build does this on push).
 
-## Close a job
+## Closing dates (automatic)
 
-Change its `"status"` to `"closed"` in `jobs.json`. It drops out of the structured data, the feeds and the `/apply/` list on the next build. Also remove or deactivate its card on `apply.json`, and update `sitemap.xml` and `llms.txt`. Closed jobs left online with live markup are treated by Google as stale listings.
+Every job closes by itself **14 working days after its `datePosted`** (the posting day is not counted; Saturdays, Sundays and the public holidays listed in `source/content/holidays.json` are skipped). Nothing needs to be typed in `jobs.json`:
 
-There is no closing date by default. To add one, set `"validThrough": "YYYY-MM-DD"` on the job.
+- The closing date is written into the `JobPosting` markup as `validThrough` (end of that day, Nigeria time), into both feeds (`validThrough` / `<expirationdate>`), and onto the job page ("Closing date: 22 October 2026.") and the job card on `/apply/` ("Closes 22 Oct 2026").
+- The site rebuilds every night just after midnight (Nigeria time). The first build after the closing date takes the job off: the page loses its markup and its application form and says "Applications for this role have closed", the card on `/apply/` becomes "Applications Closed", and the job disappears from the feeds.
+- Google is told through the Indexing API (see `docs/google-indexing-api-setup.md`) so it drops the listing quickly.
+
+Optional per-job settings in `jobs.json`: `"workingDaysOpen": 10` to use a different number of working days, or `"validThrough": "2026-11-05"` to set an exact closing date.
+
+Add Eid and other government-announced holidays to `holidays.json` when they are announced; the closing dates of open jobs move automatically on the next build.
+
+## Remote jobs
+
+Set `"remote": true` on a job and leave out `locality`, `region` and `streetAddress`. The markup then uses `jobLocationType: TELECOMMUTE` with Nigeria as the allowed applicant country, and the feeds say "remote". The visible page must also say the role is remote.
+
+## Close a job early
+
+Change its `"status"` to `"closed"` in `jobs.json`. On the next build it is treated exactly like an expired job (markup, form and feed entries removed). Also deactivate its card on `apply.json` if you like, and update `sitemap.xml` and `llms.txt`. Closed jobs left online with live markup are treated by Google as stale listings.
 
 ## After publishing
 
