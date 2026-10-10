@@ -21,7 +21,7 @@
       },
       "employmentType": "FULL_TIME",
       "datePosted": "2026-10-02",
-      "validThrough": null,
+      "validThrough": "2026-10-22T23:59:59+01:00",
       "salary": {
         "currency": "NGN",
         "amount": 100000,
@@ -58,7 +58,7 @@
       },
       "employmentType": "FULL_TIME",
       "datePosted": "2026-09-28",
-      "validThrough": null,
+      "validThrough": "2026-10-19T23:59:59+01:00",
       "salary": {
         "currency": "NGN",
         "amount": 450000,
@@ -79,22 +79,20 @@
       "applyUrl": "https://tolnigeria.com/apply/business-strategy-officer/",
       "company": "Traction Outsourcing Limited",
       "location": {
-        "city": "Abuja",
-        "state": "Abuja (FCT)",
+        "remote": true,
         "country": "Nigeria",
-        "countryCode": "NG",
-        "streetAddress": "Wuse Zone 5"
+        "countryCode": "NG"
       },
       "employmentType": null,
       "datePosted": "2026-10-03",
-      "validThrough": null,
+      "validThrough": "2026-10-22T23:59:59+01:00",
       "salary": {
         "currency": "NGN",
         "amount": 100000,
         "period": "MONTH",
         "display": "₦100,000/month"
       },
-      "description": "We are hiring a Business Strategy Officer for our consulting team in Wuse Zone 5, Abuja.\nResponsibilities: Analyse client businesses and recommend practical strategy, structure and growth plans. Support business development by preparing proposals and presentations and following up on opportunities. Support HR and organisational design projects for clients and report progress to the team.\nRequirements: 2 Years' Experience in Business Development, Consulting or HR CV Required (PDF)\nBenefits: Hybrid working arrangement. Hands-on consulting experience with Nigerian businesses. Other statutory benefits.",
+      "description": "We are hiring a Business Strategy Officer for our consulting team. This is a remote role open to applicants in Nigeria.\nResponsibilities: Analyse client businesses and recommend practical strategy, structure and growth plans. Support business development by preparing proposals and presentations and following up on opportunities. Support HR and organisational design projects for clients and report progress to the team.\nRequirements: 2 Years' Experience in Business Development, Consulting or HR CV Required (PDF)\nBenefits: Remote working arrangement. Hands-on consulting experience with Nigerian businesses. Other statutory benefits.",
       "responsibilities": [
         "Analyse client businesses and recommend practical strategy, structure and growth plans.",
         "Support business development by preparing proposals and presentations and following up on opportunities.",
@@ -105,11 +103,11 @@
         "CV Required (PDF)"
       ],
       "benefits": [
-        "Hybrid working arrangement.",
+        "Remote working arrangement.",
         "Hands-on consulting experience with Nigerian businesses.",
         "Other statutory benefits."
       ],
-      "workArrangement": "Hybrid",
+      "workArrangement": "Remote",
       "industry": "Consulting"
     }
   ]

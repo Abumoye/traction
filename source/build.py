@@ -21,9 +21,10 @@ Then: python3 -m http.server -d dist 8080   (preview locally)
 """
 import html
 import json
+import os
 import re
 import shutil
-from datetime import datetime
+from datetime import date, datetime, timedelta, timezone
 from xml.sax.saxutils import escape as xml_escape
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
@@ -293,15 +294,80 @@ def build_faqpage_schema(data):
 # from all of them at once.
 # ---------------------------------------------------------------------------
 JOBS_FILE = CONTENT / "jobs.json"
+HOLIDAYS_FILE = CONTENT / "holidays.json"
 JOB_TYPE_LABELS = {"FULL_TIME": "Full-time", "PART_TIME": "Part-time", "CONTRACTOR": "Contract", "TEMPORARY": "Temporary", "INTERN": "Internship"}
 JOB_TYPE_XML = {"FULL_TIME": "fulltime", "PART_TIME": "parttime", "CONTRACTOR": "contract", "TEMPORARY": "temporary", "INTERN": "internship"}
 REGION_NAMES = {"FCT": "Abuja (FCT)"}
 
+# Every job closes automatically this many working days (Monday to Friday,
+# minus the public holidays in content/holidays.json) after its datePosted.
+# A job can override this with its own "workingDaysOpen", or set an exact
+# "validThrough" date to skip the calculation.
+DEFAULT_WORKING_DAYS_OPEN = 14
+WAT = timezone(timedelta(hours=1))
 
-def load_open_jobs():
+
+def today_wat():
+    """Today's date in Nigeria. BUILD_TODAY=YYYY-MM-DD overrides it (for tests)."""
+    override = os.environ.get("BUILD_TODAY")
+    if override:
+        return date.fromisoformat(override)
+    return datetime.now(WAT).date()
+
+
+def load_holidays():
+    if not HOLIDAYS_FILE.exists():
+        return set()
+    return {date.fromisoformat(d) for d in load(HOLIDAYS_FILE).get("holidays", [])}
+
+
+def add_working_days(start, days, holidays):
+    """The date that is `days` working days after `start` (start itself is not
+    counted). Weekends and the given holidays are skipped."""
+    d, counted = start, 0
+    while counted < days:
+        d += timedelta(days=1)
+        if d.weekday() < 5 and d not in holidays:
+            counted += 1
+    return d
+
+
+def job_closing_date(job, holidays):
+    if job.get("validThrough"):
+        return date.fromisoformat(job["validThrough"][:10])
+    posted = date.fromisoformat(job["datePosted"])
+    return add_working_days(posted, job.get("workingDaysOpen", DEFAULT_WORKING_DAYS_OPEN), holidays)
+
+
+def format_long_date(d):
+    return f"{d.day} {d.strftime('%B %Y')}"
+
+
+def load_all_jobs():
+    """Every job in jobs.json with its computed closing date and a live state:
+    open (accepting applications), expired (past its closing date) or closed
+    (switched off by hand)."""
     if not JOBS_FILE.exists():
         return []
-    return [j for j in load(JOBS_FILE).get("jobs", []) if j.get("status") == "open"]
+    holidays, today, jobs = load_holidays(), today_wat(), []
+    for j in load(JOBS_FILE).get("jobs", []):
+        j = dict(j)
+        closing = job_closing_date(j, holidays)
+        j["closingDate"] = closing
+        # validThrough is end of the closing day, Nigeria time.
+        j["validThrough"] = closing.isoformat() + "T23:59:59+01:00"
+        if j.get("status") != "open":
+            j["state"] = "closed"
+        elif today > closing:
+            j["state"] = "expired"
+        else:
+            j["state"] = "open"
+        jobs.append(j)
+    return jobs
+
+
+def load_open_jobs():
+    return [j for j in load_all_jobs() if j["state"] == "open"]
 
 
 def job_salary_text(job):
@@ -345,20 +411,31 @@ def build_jobposting_schema(job):
             "sameAs": SITE_URL + "/",
             "logo": SITE_LOGO,
         },
-        "jobLocation": {
-            "@type": "Place",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": job["locality"],
-                "addressRegion": job["region"],
-                "addressCountry": "NG",
-            },
-        },
+        **(
+            {
+                # Fully remote (Google's TELECOMMUTE): no physical jobLocation,
+                # but the countries applicants may live in are required.
+                "jobLocationType": "TELECOMMUTE",
+                "applicantLocationRequirements": {"@type": "Country", "name": "Nigeria"},
+            }
+            if job.get("remote")
+            else {
+                "jobLocation": {
+                    "@type": "Place",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": job["locality"],
+                        "addressRegion": job["region"],
+                        "addressCountry": "NG",
+                    },
+                },
+            }
+        ),
         "directApply": True,
         "url": SITE_URL + job["url"],
     }
     # Optional fields: only written when the job actually states them.
-    if job.get("streetAddress"):
+    if job.get("streetAddress") and not job.get("remote"):
         schema["jobLocation"]["address"] = {
             "@type": "PostalAddress",
             "streetAddress": job["streetAddress"],
@@ -368,8 +445,7 @@ def build_jobposting_schema(job):
         schema["experienceRequirements"] = {"@type": "OccupationalExperienceRequirements", "monthsOfExperience": job["experienceMonths"]}
     if job.get("industry"):
         schema["industry"] = job["industry"]
-    if job.get("validThrough"):
-        schema["validThrough"] = job["validThrough"]
+    schema["validThrough"] = job["validThrough"]
     if job.get("salary"):
         s = job["salary"]
         schema["baseSalary"] = {
@@ -380,6 +456,39 @@ def build_jobposting_schema(job):
     if job.get("benefits"):
         schema["jobBenefits"] = " ".join(job["benefits"])
     return schema
+
+
+def apply_job_page_state(data, job):
+    """Show the closing date on an open job's page. Once the job has closed,
+    replace the application form with a notice (Google requires that a job
+    which is no longer open does not keep job markup or a live application)."""
+    hero = data.setdefault("hero", {})
+    if job["state"] == "open":
+        hero["sub"] = (hero.get("sub", "") + f" Closing date: {format_long_date(job['closingDate'])}.").strip()
+        return
+    hero["eyebrow"] = "Position Closed"
+    hero["sub"] = "Applications for this role have closed. See our other open roles on the careers page."
+    data["sections"] = [sec for sec in data.get("sections", []) if sec.get("type") != "form"]
+    # No form left on the page, so the spam-guard / apply scripts are not needed.
+    data["scripts"] = [sc for sc in data.get("scripts", []) if "apply" not in sc and "form-guard" not in sc]
+
+
+def mark_careers_cards(data, all_jobs):
+    """On the careers hub, show each open job's closing date and turn the card
+    of a closed or expired job into a disabled 'Applications Closed' card."""
+    by_url = {j["url"]: j for j in all_jobs}
+    for sec in data.get("sections", []):
+        if sec.get("type") != "job-cards":
+            continue
+        for card in sec.get("jobs", []):
+            job = by_url.get(card.get("href"))
+            if not job:
+                continue
+            if job["state"] == "open":
+                card["closing"] = "Closes " + job["closingDate"].strftime("%d %b %Y").lstrip("0")
+            else:
+                card["active"] = False
+                card["cta_label"] = "Applications Closed"
 
 
 def build_careers_collection_schema(open_jobs, meta):
@@ -394,7 +503,7 @@ def build_careers_collection_schema(open_jobs, meta):
             "@type": "ItemList",
             "numberOfItems": len(open_jobs),
             "itemListElement": [
-                {"@type": "ListItem", "position": i, "url": SITE_URL + j["url"], "name": j["title"] + " - " + j["locality"] + ", Abuja"}
+                {"@type": "ListItem", "position": i, "url": SITE_URL + j["url"], "name": j["title"] + (" - Remote" if j.get("remote") else " - " + j["locality"] + ", Abuja")}
                 for i, j in enumerate(open_jobs, 1)
             ],
         },
@@ -425,10 +534,14 @@ def write_job_feeds(open_jobs):
             "url": SITE_URL + j["url"],
             "applyUrl": SITE_URL + j["url"],
             "company": SITE_NAME,
-            "location": {"city": j["locality"], "state": REGION_NAMES.get(j["region"], j["region"]), "country": "Nigeria", "countryCode": "NG"},
+            "location": (
+                {"remote": True, "country": "Nigeria", "countryCode": "NG"}
+                if j.get("remote")
+                else {"city": j["locality"], "state": REGION_NAMES.get(j["region"], j["region"]), "country": "Nigeria", "countryCode": "NG"}
+            ),
             "employmentType": j.get("employmentType"),
             "datePosted": j["datePosted"],
-            "validThrough": j.get("validThrough"),
+            "validThrough": j["validThrough"],
             "salary": ({"currency": s["currency"], "amount": s["value"], "period": s["unit"], "display": job_salary_text(j)} if s else None),
             "description": job_description_text(j),
             "responsibilities": j.get("responsibilities", []),
@@ -436,7 +549,7 @@ def write_job_feeds(open_jobs):
             "benefits": j.get("benefits", []),
         })
         # Optional details, only present when the job states them.
-        if j.get("streetAddress"):
+        if j.get("streetAddress") and not j.get("remote"):
             feed["jobs"][-1]["location"]["streetAddress"] = j["streetAddress"]
         if j.get("workArrangement"):
             feed["jobs"][-1]["workArrangement"] = j["workArrangement"]
@@ -448,8 +561,12 @@ def write_job_feeds(open_jobs):
                 f"    <referencenumber><![CDATA[{j['id']}]]></referencenumber>",
                 f"    <url><![CDATA[{SITE_URL + j['url']}]]></url>",
                 f"    <company><![CDATA[{SITE_NAME}]]></company>",
-                f"    <city><![CDATA[{j['locality']}]]></city>",
-                f"    <state><![CDATA[{j['region']}]]></state>",
+                f"    <expirationdate><![CDATA[{j['closingDate'].isoformat()}]]></expirationdate>",
+                *(
+                    ["    <remote><![CDATA[true]]></remote>"]
+                    if j.get("remote")
+                    else [f"    <city><![CDATA[{j['locality']}]]></city>", f"    <state><![CDATA[{j['region']}]]></state>"]
+                ),
                 "    <country><![CDATA[NG]]></country>",
                 f"    <description><![CDATA[{job_description_html(j)}]]></description>"]
         if s:
@@ -512,13 +629,19 @@ def render_json_page(json_path: Path):
         schema.extend(build_realestate_listing_schema(data, route))
 
     # Careers: JobPosting on each open job's page, and an ItemList of all open
-    # jobs on the careers hub. Driven by content/jobs.json.
-    open_jobs = load_open_jobs()
-    job = next((j for j in open_jobs if j["url"] == route["url"]), None)
-    if job and "JobPosting" not in existing_types:
-        schema.append(build_jobposting_schema(job))
-    if route["url"] == "/apply/" and "CollectionPage" not in existing_types:
-        schema.append(build_careers_collection_schema(open_jobs, data.get("meta", {})))
+    # jobs on the careers hub. Driven by content/jobs.json. A job past its
+    # closing date (or switched off by hand) loses its markup and its form.
+    all_jobs = load_all_jobs()
+    open_jobs = [j for j in all_jobs if j["state"] == "open"]
+    job = next((j for j in all_jobs if j["url"] == route["url"]), None)
+    if job:
+        apply_job_page_state(data, job)
+        if job["state"] == "open" and "JobPosting" not in existing_types:
+            schema.append(build_jobposting_schema(job))
+    if route["url"] == "/apply/":
+        mark_careers_cards(data, all_jobs)
+        if "CollectionPage" not in existing_types:
+            schema.append(build_careers_collection_schema(open_jobs, data.get("meta", {})))
 
     tpl = env.get_template(route["template"])
     html = tpl.render(path=route["url"], schema=schema, **data)
