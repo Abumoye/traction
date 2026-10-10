@@ -1,0 +1,8 @@
+{
+  "_comment": "What Google was last told for each job page. Written by scripts/notify_google_indexing.py; do not edit by hand.",
+  "urls": {
+    "https://tolnigeria.com/apply/business-strategy-officer/": "9030ef0d0ce07b85",
+    "https://tolnigeria.com/apply/real-estate-sales-manager-100/": "64e026b1689d4688",
+    "https://tolnigeria.com/apply/storekeeping-assistant-kuje/": "645a4cf341d86213"
+  }
+}
