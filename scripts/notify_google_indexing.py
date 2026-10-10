@@ -11,9 +11,15 @@ Google was last told (source/indexing-state.json) and then:
 Google asks for this on job pages so a closed job leaves Google Jobs quickly
 instead of waiting for the next crawl.
 
-Setup (once): docs/google-indexing-api-setup.md. Needs the GitHub secret
-GOOGLE_INDEXING_SA_JSON (the service account key). Without it this script
-prints a note and exits cleanly, so the workflow keeps working until it is set up.
+Setup (once): docs/google-indexing-api-setup.md. It authenticates one of two ways:
+
+  * GOOGLE_ACCESS_TOKEN - a short-lived token the workflow gets from Google by
+    "Workload Identity Federation" (no key file; works when the organization
+    blocks service account keys). This is the recommended way.
+  * GOOGLE_INDEXING_SA_JSON - the contents of a service account key file.
+
+With neither set this script prints a note and exits cleanly, so the workflow
+keeps working until Google is set up.
 
 Usage:
   python3 scripts/notify_google_indexing.py [--feed jobs.json] [--wait-live] [--dry-run]
@@ -24,6 +30,7 @@ import json
 import os
 import sys
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -69,7 +76,37 @@ def wait_until_live(feed_text, timeout=600):
     return False
 
 
+class TokenSession:
+    """Posts JSON with a ready-made OAuth access token (no extra libraries)."""
+
+    def __init__(self, token):
+        self.token = token
+
+    def post(self, url, json=None, timeout=30):  # same shape as requests/AuthorizedSession
+        import json as _json
+        req = urllib.request.Request(
+            url,
+            data=_json.dumps(json).encode("utf-8"),
+            headers={"Authorization": "Bearer " + self.token, "Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return _Response(r.status, r.read().decode("utf-8", "replace"))
+        except urllib.error.HTTPError as e:
+            return _Response(e.code, e.read().decode("utf-8", "replace"))
+
+
+class _Response:
+    def __init__(self, status, text):
+        self.status_code, self.text = status, text
+        self.ok = 200 <= status < 300
+
+
 def make_session():
+    token = os.environ.get("GOOGLE_ACCESS_TOKEN")
+    if token:
+        return TokenSession(token)
     info = json.loads(os.environ["GOOGLE_INDEXING_SA_JSON"])
     from google.auth.transport.requests import AuthorizedSession
     from google.oauth2 import service_account
@@ -84,8 +121,8 @@ def main():
     ap.add_argument("--dry-run", action="store_true", help="print what would be sent, send nothing, change nothing")
     args = ap.parse_args()
 
-    if not args.dry_run and not os.environ.get("GOOGLE_INDEXING_SA_JSON"):
-        print("GOOGLE_INDEXING_SA_JSON is not set - skipping Google Indexing API (see docs/google-indexing-api-setup.md).")
+    if not args.dry_run and not (os.environ.get("GOOGLE_ACCESS_TOKEN") or os.environ.get("GOOGLE_INDEXING_SA_JSON")):
+        print("No Google credentials set - skipping Google Indexing API (see docs/google-indexing-api-setup.md).")
         return 0
 
     feed_path = Path(args.feed)

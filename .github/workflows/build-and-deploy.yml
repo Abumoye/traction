@@ -20,6 +20,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write   # lets the job prove its identity to Google (keyless, for the Indexing API)
 
 jobs:
   build-and-publish:
@@ -74,12 +75,28 @@ jobs:
           fi
 
       # Tell Google about new, changed and closed jobs (Indexing API). Does
-      # nothing until the GOOGLE_INDEXING_SA_JSON secret is added; a failure
-      # here never blocks the site from publishing. See
-      # docs/google-indexing-api-setup.md.
+      # nothing until Google is set up; a failure here never blocks the site
+      # from publishing. See docs/google-indexing-api-setup.md.
+      #
+      # Keyless sign-in (recommended): needs the two repository VARIABLES
+      # GCP_WORKLOAD_IDENTITY_PROVIDER and GCP_SERVICE_ACCOUNT.
+      # Key sign-in (alternative): the repository SECRET GOOGLE_INDEXING_SA_JSON.
+      - name: Sign in to Google (keyless)
+        id: google-auth
+        if: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER != '' && vars.GCP_SERVICE_ACCOUNT != '' }}
+        continue-on-error: true
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/indexing
+          create_credentials_file: false
+
       - name: Notify Google Indexing API
         continue-on-error: true
         env:
+          GOOGLE_ACCESS_TOKEN: ${{ steps.google-auth.outputs.access_token }}
           GOOGLE_INDEXING_SA_JSON: ${{ secrets.GOOGLE_INDEXING_SA_JSON }}
         run: |
           pip install google-auth requests
