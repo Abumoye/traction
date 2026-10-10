@@ -38,20 +38,29 @@ jobs:
       - name: Publish build output to repo root
         run: |
           set -e
-          SITE_DIRS="articles book-a-call resources brands books css downloads events founder images js partnerships privacy-policy services"
+          # Only publish folders the build actually produced, so removing a
+          # section from the site never breaks the publish step.
+          SITE_DIRS="apply articles book-a-call resources brands books css downloads events founder images js partnerships privacy-policy services"
           for d in $SITE_DIRS; do
-            rm -rf "$d"
-            cp -r "source/dist/$d" "$d"
+            if [ -d "source/dist/$d" ]; then
+              rm -rf "$d"
+              cp -r "source/dist/$d" "$d"
+            fi
           done
-          cp source/dist/index.html index.html
-          cp source/dist/search-index.json search-index.json
+          for f in index.html search-index.json jobs.json jobs.xml; do
+            if [ -f "source/dist/$f" ]; then
+              cp "source/dist/$f" "$f"
+            fi
+          done
           rm -rf source/dist
 
       - name: Commit and push if changed
         run: |
           git config user.name "traction-site-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add articles book-a-call resources brands css downloads events founder images js partnerships privacy-policy services index.html search-index.json
+          for p in apply articles book-a-call resources brands books css downloads events founder images js partnerships privacy-policy services index.html search-index.json jobs.json jobs.xml; do
+            if [ -e "$p" ]; then git add -A -- "$p"; fi
+          done
           if git diff --cached --quiet; then
             echo "No changes to publish."
           else
