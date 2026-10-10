@@ -52,5 +52,5 @@
       ]
     }
   ],
-  "scripts": ["/js/event-registration.js"]
+  "scripts": ["/js/form-guard.js", "/js/event-registration.js"]
 }

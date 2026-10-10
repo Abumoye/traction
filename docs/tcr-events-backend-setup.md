@@ -74,6 +74,12 @@ function doPost(e) {
 
   var data = JSON.parse(e.postData.contents);
 
+  var spam = checkSpam(data);
+  if (spam) {
+    logBlocked('Event form', spam, data);
+    return okResponse();
+  }
+
   if (data.formType === 'event-affiliate') {
     return handleEventAffiliate(data);
   }
@@ -155,6 +161,49 @@ function sendAffiliateWelcomeEmail(email, fullName, code) {
     // already saved above regardless of whether this send succeeds.
     Logger.log('Affiliate welcome email failed: ' + err);
   }
+}
+
+/* ============================== SPAM GUARD ============================== */
+
+// The website forms send two extra fields: a hidden trap field (website_url,
+// always empty for real people) and elapsedMs (how long the page had been open
+// when the form was sent). Spam bots fill the trap, send instantly, or post
+// straight to this script without the fields. Those entries are NOT added to
+// your sheets or emailed. They are written to a tab called "Blocked" so that,
+// if a real person is ever caught by mistake, you can still see their details.
+// Phone numbers are not restricted, so international numbers work.
+var MIN_FILL_MS = 3000;
+
+function checkSpam(data) {
+  if (data.website_url) return 'Hidden trap field filled in';
+  if (data.elapsedMs === undefined || data.elapsedMs === null || data.elapsedMs === '' || isNaN(Number(data.elapsedMs))) {
+    return 'Speed check missing (not sent from the website form)';
+  }
+  if (Number(data.elapsedMs) < MIN_FILL_MS) return 'Submitted too fast (' + data.elapsedMs + ' ms)';
+  return '';
+}
+
+function logBlocked(formName, reason, data) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName('Blocked');
+  if (!sheet) {
+    sheet = ss.insertSheet('Blocked');
+    sheet.getRange(1, 1, 1, 7).setValues([['Timestamp', 'Form', 'Reason', 'Page', 'Name', 'Email', 'Phone']]).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+  }
+  function clip(v) { return (v === undefined || v === null ? '' : String(v)).slice(0, 200); }
+  var name = data.name || data.fullName || [data.firstName, data.lastName].join(' ');
+  var row = sheet.getLastRow() + 1;
+  // Plain text, so nothing a spammer types can be treated as a formula.
+  sheet.getRange(row, 1, 1, 7).setNumberFormat('@').setValues([[
+    new Date().toISOString(), formName, reason, clip(data.sourcePage), clip(name), clip(data.email), clip(data.phone)
+  ]]);
+  // Keep the log small: only the latest 500 blocked entries are kept.
+  if (sheet.getLastRow() > 501) sheet.deleteRows(2, sheet.getLastRow() - 501);
+}
+
+function okResponse() {
+  return ContentService.createTextOutput(JSON.stringify({ status: 'success' })).setMimeType(ContentService.MimeType.JSON);
 }
 ```
 

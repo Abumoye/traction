@@ -121,5 +121,5 @@
       ]
     }
   ],
-  "scripts": ["/js/apply-form.js"]
+  "scripts": ["/js/form-guard.js", "/js/apply-form.js"]
 }
