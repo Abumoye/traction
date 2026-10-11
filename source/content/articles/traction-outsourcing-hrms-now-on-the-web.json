@@ -84,12 +84,6 @@
   "sections": [
     {
       "type": "text",
-      "paragraphs": [
-        "The new version is live at <a href=\"https://hr.tolnigeria.com/\">hr.tolnigeria.com</a>."
-      ]
-    },
-    {
-      "type": "text",
       "icon": "fas fa-id-card",
       "heading": "What an HRMS Does",
       "paragraphs": [
