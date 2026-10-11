@@ -40,6 +40,13 @@
       "type": "job-cards",
       "jobs": [
         {
+          "title": "Accountant",
+          "location": "Abuja",
+          "salary": "₦350,000/month",
+          "href": "/apply/accountant/",
+          "active": true
+        },
+        {
           "title": "Real Estate Sales Manager",
           "location": "Kado, Abuja",
           "href": "/apply/real-estate-sales-manager-100/",

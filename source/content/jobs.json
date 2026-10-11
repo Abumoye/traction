@@ -82,6 +82,41 @@
         "Hands-on consulting experience with Nigerian businesses.",
         "Other statutory benefits."
       ]
+    },
+    {
+      "id": "accountant",
+      "status": "open",
+      "title": "Accountant",
+      "url": "/apply/accountant/",
+      "locality": "Abuja",
+      "region": "FCT",
+      "datePosted": "2026-10-11",
+      "employmentType": "FULL_TIME",
+      "industry": "Accounting",
+      "experienceMonths": 48,
+      "salary": {
+        "value": 350000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring an Accountant in Abuja. This is a full-time, onsite role for an experienced accountant.",
+      "responsibilities": [
+        "Keep accurate books of account and prepare regular ledger and bank reconciliations.",
+        "Prepare and file tax and other statutory returns on time.",
+        "Prepare monthly financial reports for management."
+      ],
+      "qualifications": [
+        "B.Sc or HND in Accounting, Finance or a related field",
+        "ICAN or ACCA (certified or part-qualified)",
+        "4 Years' Experience in Accounting",
+        "Knowledge of Nigerian tax rules",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Professional development support.",
+        "Performance bonus.",
+        "Other statutory benefits."
+      ]
     }
   ]
 }
