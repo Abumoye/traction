@@ -34,5 +34,9 @@
   {
     "key": "client-reviews",
     "label": "Client Reviews & News"
+  },
+  {
+    "key": "press-releases",
+    "label": "Press Releases"
   }
 ]
