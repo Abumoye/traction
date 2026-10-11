@@ -5,7 +5,7 @@
     "logo": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
   },
   "careersPage": "https://tolnigeria.com/apply/",
-  "lastUpdated": "2026-10-03",
+  "lastUpdated": "2026-10-11",
   "jobs": [
     {
       "id": "storekeeping-assistant-kuje",
@@ -109,6 +109,47 @@
       ],
       "workArrangement": "Remote",
       "industry": "Consulting"
+    },
+    {
+      "id": "accountant",
+      "title": "Accountant",
+      "url": "https://tolnigeria.com/apply/accountant/",
+      "applyUrl": "https://tolnigeria.com/apply/accountant/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Abuja",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-10-11",
+      "validThrough": "2026-10-29T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 350000,
+        "period": "MONTH",
+        "display": "₦350,000/month"
+      },
+      "description": "We are hiring an Accountant in Abuja. This is a full-time, onsite role for an experienced accountant.\nResponsibilities: Keep accurate books of account and prepare regular ledger and bank reconciliations. Prepare and file tax and other statutory returns on time. Prepare monthly financial reports for management.\nRequirements: B.Sc or HND in Accounting, Finance or a related field ICAN or ACCA (certified or part-qualified) 4 Years' Experience in Accounting Knowledge of Nigerian tax rules CV Required (PDF)\nBenefits: Professional development support. Performance bonus. Other statutory benefits.",
+      "responsibilities": [
+        "Keep accurate books of account and prepare regular ledger and bank reconciliations.",
+        "Prepare and file tax and other statutory returns on time.",
+        "Prepare monthly financial reports for management."
+      ],
+      "qualifications": [
+        "B.Sc or HND in Accounting, Finance or a related field",
+        "ICAN or ACCA (certified or part-qualified)",
+        "4 Years' Experience in Accounting",
+        "Knowledge of Nigerian tax rules",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Professional development support.",
+        "Performance bonus.",
+        "Other statutory benefits."
+      ],
+      "industry": "Accounting"
     }
   ]
 }
