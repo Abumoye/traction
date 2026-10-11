@@ -82,3 +82,4 @@ User-agent: BraveBot
 Allow: /
 
 Sitemap: https://tolnigeria.com/sitemap.xml
+Sitemap: https://tolnigeria.com/news-sitemap.xml

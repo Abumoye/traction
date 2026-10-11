@@ -25,6 +25,7 @@ import os
 import re
 import shutil
 from datetime import date, datetime, timedelta, timezone
+from email.utils import format_datetime
 from xml.sax.saxutils import escape as xml_escape
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
@@ -126,7 +127,8 @@ def build_organization_schema():
 
 
 def build_article_schema(data, route):
-    """Auto-derive BlogPosting JSON-LD for every article.html page from fields
+    """Auto-derive BlogPosting JSON-LD (or NewsArticle when the page sets
+    schema_type: NewsArticle, see apply_news_article_schema) for every article.html page from fields
     already authored on the page (title, dek, byline, image, tag) -- no manual
     schema authoring needed per article. The content is evergreen advisory
     writing rather than news reporting, so BlogPosting (a schema.org subtype
@@ -159,7 +161,57 @@ def build_article_schema(data, route):
     if date:
         schema["datePublished"] = date
         schema["dateModified"] = parse_byline_date(byline.get("updated")) or date
+    if data.get("schema_type") == "NewsArticle":
+        apply_news_article_schema(schema, data, route)
     return schema
+
+
+def article_word_count(data):
+    """Words in the visible article text (dek + every section's paragraphs and lists)."""
+    parts = [data.get("dek", "")]
+    for sec in data.get("sections", []):
+        parts.append(sec.get("heading", ""))
+        parts.extend(sec.get("paragraphs", []))
+        for li in sec.get("list", []) or []:
+            parts.append(li.get("t", "") if isinstance(li, dict) else str(li))
+    return len(re.sub(r"<[^>]+>", " ", " ".join(parts)).split())
+
+
+def apply_news_article_schema(schema, data, route):
+    """Turns the auto-derived BlogPosting into a NewsArticle (press release /
+    company news) with what Google News and other aggregators look for: an exact
+    publish time with timezone, a dateline, an image with dimensions, keywords,
+    word count, free access and the product the release is about. Driven by the
+    page's own fields: schema_type, byline.datetime and news_schema."""
+    news = data.get("news_schema", {})
+    byline = data.get("byline", {})
+    schema["@type"] = "NewsArticle"
+    published = byline.get("datetime") or schema.get("datePublished")
+    if published:
+        schema["datePublished"] = published
+        schema["dateModified"] = byline.get("updated_datetime") or published
+    if news.get("dateline"):
+        schema["dateline"] = news["dateline"]
+    if news.get("genre"):
+        schema["genre"] = news["genre"]
+    if news.get("keywords"):
+        schema["keywords"] = ", ".join(news["keywords"])
+    if news.get("location"):
+        schema["locationCreated"] = news["location"]
+    if news.get("about"):
+        schema["about"] = news["about"]
+    if schema.get("image"):
+        size = news.get("image_size")
+        if size:
+            schema["image"] = [{"@type": "ImageObject", "url": schema["image"], "width": size[0], "height": size[1]}]
+            schema["thumbnailUrl"] = schema["image"][0]["url"]
+        else:
+            schema["image"] = [schema["image"]]
+    schema["wordCount"] = article_word_count(data)
+    schema["isAccessibleForFree"] = True
+    if published:
+        schema["copyrightYear"] = int(published[:4])
+    schema["copyrightHolder"] = {"@id": SITE_URL + "/#organization"}
 
 
 def strip_html(text: str) -> str:
@@ -579,6 +631,104 @@ def write_job_feeds(open_jobs):
     write(DIST / "jobs.xml", "\n".join(xml) + "\n")
 
 
+# ---------------------------------------------------------------------------
+# Article feeds. /feed.xml is an RSS 2.0 feed of the newest articles (blogs,
+# readers and aggregators subscribe to it). /news-sitemap.xml is a Google News
+# sitemap: it lists only articles marked schema_type "NewsArticle" (press
+# releases / company news) published in the last 2 days, which is all Google
+# News reads. The nightly rebuild keeps both current, and no build timestamp is
+# written, so rebuilding without changes produces identical files.
+# ---------------------------------------------------------------------------
+FEED_ITEMS = 20
+NEWS_WINDOW_DAYS = 2
+
+
+def collect_articles():
+    """Every article page (article.html template) with its publish date, newest first."""
+    items = []
+    for folder in ("articles", "pages"):
+        d = CONTENT / folder
+        if not d.exists():
+            continue
+        for p in sorted(d.glob("*.json")):
+            a = load(p)
+            route = a.get("_route", {})
+            if route.get("template") != "article.html":
+                continue
+            byline = a.get("byline", {})
+            day = parse_byline_date(byline.get("date"))
+            if not day:
+                continue
+            stamp = byline.get("datetime") or day + "T09:00:00+01:00"
+            items.append({
+                "url": SITE_URL + route["url"],
+                "title": a.get("title") or a.get("meta", {}).get("title", ""),
+                "description": a.get("meta", {}).get("description") or strip_html(a.get("dek", "")),
+                "tag": a.get("tag", ""),
+                "author": byline.get("author") or SITE_NAME,
+                "image": a.get("image") or a.get("meta", {}).get("image"),
+                "day": day,
+                "datetime": datetime.fromisoformat(stamp),
+                "news": a.get("schema_type") == "NewsArticle",
+            })
+    items.sort(key=lambda i: (i["datetime"], i["url"]), reverse=True)
+    return items
+
+
+def write_article_feeds():
+    items = collect_articles()
+    newest = items[0]["datetime"] if items else None
+    rss = ['<?xml version="1.0" encoding="UTF-8"?>',
+           '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">',
+           "  <channel>",
+           f"    <title>{xml_escape(SITE_NAME)}: Articles and News</title>",
+           f"    <link>{SITE_URL}/articles/</link>",
+           "    <description>Company news, press releases and expert articles on HR, outsourcing, recruitment and business structure in Nigeria from Traction Outsourcing Limited.</description>",
+           "    <language>en</language>",
+           f'    <atom:link href="{SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>',
+           "    <image>",
+           f"      <url>{SITE_LOGO}</url>",
+           f"      <title>{xml_escape(SITE_NAME)}</title>",
+           f"      <link>{SITE_URL}/</link>",
+           "    </image>"]
+    if newest:
+        rss.append(f"    <lastBuildDate>{format_datetime(newest)}</lastBuildDate>")
+    for it in items[:FEED_ITEMS]:
+        image = SITE_URL + it["image"] if it["image"] and it["image"].startswith("/") else it["image"]
+        rss += ["    <item>",
+                f"      <title>{xml_escape(it['title'])}</title>",
+                f"      <link>{it['url']}</link>",
+                f'      <guid isPermaLink="true">{it["url"]}</guid>',
+                f"      <pubDate>{format_datetime(it['datetime'])}</pubDate>",
+                f"      <dc:creator>{xml_escape(it['author'])}</dc:creator>",
+                f"      <category>{xml_escape(it['tag'])}</category>",
+                f"      <description>{xml_escape(it['description'])}</description>"]
+        if image:
+            rss.append(f'      <media:content url="{image}" medium="image"/>')
+        rss.append("    </item>")
+    rss += ["  </channel>", "</rss>"]
+    write(DIST / "feed.xml", "\n".join(rss) + "\n")
+
+    today = today_wat()
+    news = [i for i in items if i["news"] and 0 <= (today - i["datetime"].date()).days < NEWS_WINDOW_DAYS]
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">']
+    for it in news:
+        sm += ["  <url>",
+               f"    <loc>{it['url']}</loc>",
+               "    <news:news>",
+               "      <news:publication>",
+               f"        <news:name>{xml_escape(SITE_NAME)}</news:name>",
+               "        <news:language>en</news:language>",
+               "      </news:publication>",
+               f"      <news:publication_date>{it['datetime'].isoformat()}</news:publication_date>",
+               f"      <news:title>{xml_escape(it['title'])}</news:title>",
+               "    </news:news>",
+               "  </url>"]
+    sm.append("</urlset>")
+    write(DIST / "news-sitemap.xml", "\n".join(sm) + "\n")
+
+
 def write(path: Path, html: str):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(html, encoding="utf-8")
@@ -715,6 +865,9 @@ def main():
 
     # ---- Job feeds (jobs.json / jobs.xml) ----
     write_job_feeds(load_open_jobs())
+
+    # ---- Article feeds (feed.xml / news-sitemap.xml) ----
+    write_article_feeds()
 
     print(f"\nBuild complete -> {DIST}")
 

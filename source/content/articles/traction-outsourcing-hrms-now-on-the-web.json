@@ -1,0 +1,213 @@
+{
+  "_route": {
+    "template": "article.html",
+    "output": "articles/traction-outsourcing-hrms-now-on-the-web/index.html",
+    "url": "/articles/traction-outsourcing-hrms-now-on-the-web/"
+  },
+  "meta": {
+    "title": "Traction Outsourcing HRMS Is Now on the Web | Traction Outsourcing",
+    "description": "Traction Outsourcing HRMS is now a web app. Manage staff, Nigerian payroll, leave and recruitment from any device, wherever you are in the world.",
+    "image": "/images/og/og-article-traction-outsourcing-hrms-now-on-the-web.jpg",
+    "image_alt": "Traction Outsourcing HRMS web application for Nigerian business, showing HRIS, Payroll, ATS and Employee Self-Service on hr.tolnigeria.com",
+    "image_height": 630,
+    "og_type": "article"
+  },
+  "schema_type": "NewsArticle",
+  "news_schema": {
+    "dateline": "Abuja, Nigeria",
+    "genre": "Press release",
+    "keywords": [
+      "Traction Outsourcing HRMS",
+      "HRMS Nigeria",
+      "HR software Nigeria",
+      "payroll software Nigeria",
+      "web-based HRMS",
+      "applicant tracking system",
+      "employee self-service",
+      "Traction Outsourcing Limited",
+      "press release"
+    ],
+    "image_size": [
+      1200,
+      630
+    ],
+    "location": {
+      "@type": "Place",
+      "name": "Abuja, Nigeria",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Abuja",
+        "addressRegion": "FCT",
+        "addressCountry": "NG"
+      }
+    },
+    "about": {
+      "@type": "SoftwareApplication",
+      "@id": "https://tolnigeria.com/articles/traction-outsourcing-hrms-now-on-the-web/#software",
+      "name": "Traction Outsourcing HRMS",
+      "url": "https://hr.tolnigeria.com/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Human resource management software",
+      "operatingSystem": "Any device with a web browser",
+      "description": "HRIS, Payroll, ATS and Employee Self-Service web application for Nigerian business, from Traction Outsourcing Limited.",
+      "featureList": [
+        "HRIS: employee records",
+        "Payroll with Nigerian statutory deductions",
+        "ATS: applicant tracking and recruitment",
+        "Employee Self-Service",
+        "Multi-branch workforce management"
+      ],
+      "inLanguage": "en",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Nigerian businesses and employers",
+        "geographicArea": {
+          "@type": "Country",
+          "name": "Nigeria"
+        }
+      },
+      "provider": {
+        "@id": "https://tolnigeria.com/#organization"
+      }
+    }
+  },
+  "tag": "Company News and HR Technology",
+  "title": "Traction Outsourcing HRMS Is Now on the Web: Manage Your Staff From Anywhere, on Any Device",
+  "byline": {
+    "author": "Traction Outsourcing Limited",
+    "date": "October 11, 2026",
+    "datetime": "2026-10-11T02:30:00+01:00",
+    "read_time": "6 min read"
+  },
+  "image": "/images/articles/traction-outsourcing-hrms-now-on-the-web.jpg",
+  "dek": "<strong>Abuja, Nigeria.</strong> Traction Outsourcing Limited has launched the web version of Traction Outsourcing HRMS, its human resource management software built for Nigerian businesses. The software was previously available only as a desktop application. It can now be used through any internet browser on a phone, tablet, laptop or desktop computer, at any hour and from any location. Business owners can now check staff records, run payroll, approve leave and follow up on recruitment without needing to sit in front of one office computer.",
+  "sections": [
+    {
+      "type": "text",
+      "paragraphs": [
+        "The new version is live at <a href=\"https://hr.tolnigeria.com/\">hr.tolnigeria.com</a>."
+      ]
+    },
+    {
+      "type": "text",
+      "icon": "fas fa-id-card",
+      "heading": "What an HRMS Does",
+      "paragraphs": [
+        "An HRMS, short for Human Resource Management System, is software that keeps all the information and activities connected to your staff in one place. That includes each employee's personal file, their salary and deductions, their leave days, their performance reviews, the training they have attended and the candidates you are interviewing for open roles.",
+        "Without a system like this, most businesses keep staff information in a mix of paper files, Excel sheets, WhatsApp chats and the memory of one HR officer. When that officer resigns or travels, a large part of what the business knows about its own people leaves with them."
+      ]
+    },
+    {
+      "type": "text",
+      "icon": "fas fa-triangle-exclamation",
+      "heading": "Why Many Businesses Give Up on HR Software",
+      "paragraphs": [
+        "Many Nigerian business owners have tried HR software before and abandoned it within months. In our work with clients in Abuja, Lagos and other cities, the same complaints come up again and again.",
+        "The first is that much of the software on the market was designed for other countries. This means HR managers and business owners will struggle with Nigerian statutory deductions, legal limits, and other labour law requirements.",
+        "The second complaint is pricing. Many foreign tools are billed in dollars and business owners cannot accurately budget for it. So, a subscription that looked affordable in January can become a burden by June if the naira weakens.",
+        "The third is that older systems are tied to one computer in one office. Information is entered at headquarters and stays there. This means that the branch manager in Kano, the business owner on a business trip to Accra, or the HR officer working from home on a public holiday cannot access it.",
+        "Finally, many tools are built for HR specialists. They come with so many settings and menus that a small business owner or a busy admin officer never find the time to learn them."
+      ]
+    },
+    {
+      "type": "text",
+      "icon": "fas fa-cloud",
+      "heading": "What We Changed",
+      "paragraphs": [
+        "Traction Outsourcing HRMS started as a desktop application, meaning it had to be installed on a particular computer before anyone could use it. This type of application worked for businesses with a single office, but it left out many of the employers who needed it most.",
+        "The new web version removes that limit. Your records are kept in the cloud, and you can sign in from anywhere in the world, on any device."
+      ]
+    },
+    {
+      "type": "text",
+      "icon": "fas fa-earth-africa",
+      "heading": "Built for Owners in the Diaspora",
+      "paragraphs": [
+        "A large number of Nigerian businesses are owned by people who live abroad. They put their savings into a pharmacy, a school, a logistics company or a hotel back home, then depend on a manager to run it day to day. For many of them, the hardest part is knowing what is really happening with their staff. How many people resumed this month? Who is on leave? Did the salary schedule sent over last week match the actual headcount?",
+        "These questions usually end in long phone calls across time zones and a great deal of trust placed in one or two people. With Traction Outsourcing HRMS, a Nigerian business owner in the UK or anywhere else can open the system on their phone and check staff records, payroll and leave for themselves."
+      ]
+    },
+    {
+      "type": "text",
+      "icon": "fas fa-sitemap",
+      "heading": "Built for Businesses With Branches",
+      "paragraphs": [
+        "Business owners who run branches in several cities face a similar problem. A restaurant group with outlets in Abuja, Lagos and Port Harcourt, or a school with campuses in three states, often ends up with three different ways of keeping staff records. Each branch has its own spreadsheet, its own way of counting leave and its own way of reporting salaries. Head office hears about problems weeks after they start.",
+        "Traction Outsourcing HRMS brings every branch into one system. Staff in each location sit under the same company account, follow the same leave and payroll rules, and appear in the same records. The owner or head of HR can see the whole workforce in one place and catch a problem in one city before it spreads to another."
+      ]
+    },
+    {
+      "type": "text",
+      "icon": "fas fa-lightbulb",
+      "heading": "Why We Built It",
+      "paragraphs": [
+        "Traction Outsourcing Limited has spent years helping Nigerian businesses build their HR structures, from employee handbooks and payroll set-ups to recruitment. Over that time, we have watched good HR policies fail because there was no simple tool to apply them every day. Rules get bent because nobody is counting. Salaries go out wrong because the deduction sheet was last updated two years ago. Records disappear when a staff member leaves.",
+        "Traction Outsourcing HRMS is our response to these problems and more. It was shaped by the questions business owners and HR managers bring to us every week. Businesses that want support beyond the software can still rely on our team for Business and HR consulting, corporate restructuring, policy writing and workforce management.",
+        "To set up Traction Outsourcing HRMS for your business or book a demonstration, call <strong><a href=\"tel:+2347078707777\">0707 870 7777</a></strong> or email <strong><a href=\"mailto:partner@tolnigeria.com\">partner@tolnigeria.com</a></strong>. You can also visit <a href=\"https://hr.tolnigeria.com/\">hr.tolnigeria.com</a> to create your company account."
+      ]
+    },
+    {
+      "type": "contact",
+      "heading": "Book a Demonstration",
+      "text": "Speak to our team about setting up Traction Outsourcing HRMS for your business.",
+      "items": [
+        {
+          "icon": "fas fa-phone",
+          "label": "Call",
+          "value": "0707 870 7777",
+          "href": "tel:+2347078707777"
+        },
+        {
+          "icon": "fas fa-envelope",
+          "label": "Email",
+          "value": "partner@tolnigeria.com",
+          "href": "mailto:partner@tolnigeria.com"
+        },
+        {
+          "icon": "fas fa-globe",
+          "label": "Create your company account",
+          "value": "hr.tolnigeria.com",
+          "href": "https://hr.tolnigeria.com/"
+        }
+      ]
+    }
+  ],
+  "sidebar": {
+    "services": [
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      }
+    ],
+    "insights": [
+      {
+        "title": "The Hidden Cost of Managing Staff Yourself in Nigeria",
+        "href": "/articles/hidden-cost-managing-staff-nigeria/"
+      },
+      {
+        "title": "Employee Leave and Compensation in Nigeria: A Guide for Employers",
+        "href": "/articles/employee-leave-and-compensation-in-nigeria/"
+      },
+      {
+        "title": "Running a Business in Nigeria From the UK, US, or Dubai? Here Is How to Build a Team Without Being There",
+        "href": "/articles/hire-staff-nigeria-from-abroad/"
+      },
+      {
+        "title": "How to Write an Employee Handbook for a Nigerian SME",
+        "href": "/articles/article-employee-handbook-nigerian-sme/"
+      }
+    ]
+  }
+}

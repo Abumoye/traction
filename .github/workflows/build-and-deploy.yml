@@ -53,7 +53,7 @@ jobs:
               cp -r "source/dist/$d" "$d"
             fi
           done
-          for f in index.html search-index.json jobs.json jobs.xml; do
+          for f in index.html search-index.json jobs.json jobs.xml feed.xml news-sitemap.xml; do
             if [ -f "source/dist/$f" ]; then
               cp "source/dist/$f" "$f"
             fi
@@ -64,7 +64,7 @@ jobs:
         run: |
           git config user.name "traction-site-bot"
           git config user.email "actions@users.noreply.github.com"
-          for p in apply articles book-a-call resources brands books css downloads events founder images js partnerships privacy-policy services index.html search-index.json jobs.json jobs.xml; do
+          for p in apply articles book-a-call resources brands books css downloads events founder images js partnerships privacy-policy services index.html search-index.json jobs.json jobs.xml feed.xml news-sitemap.xml; do
             if [ -e "$p" ]; then git add -A -- "$p"; fi
           done
           if git diff --cached --quiet; then
