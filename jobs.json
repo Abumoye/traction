@@ -5,7 +5,7 @@
     "logo": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
   },
   "careersPage": "https://tolnigeria.com/apply/",
-  "lastUpdated": "2026-10-11",
+  "lastUpdated": "2026-10-12",
   "jobs": [
     {
       "id": "storekeeping-assistant-kuje",
@@ -150,6 +150,45 @@
         "Other statutory benefits."
       ],
       "industry": "Accounting"
+    },
+    {
+      "id": "tech-sales-closer",
+      "title": "Tech Sales Closer",
+      "url": "https://tolnigeria.com/apply/tech-sales-closer/",
+      "applyUrl": "https://tolnigeria.com/apply/tech-sales-closer/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "remote": true,
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-10-12",
+      "validThrough": "2026-10-30T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 100000,
+        "period": "MONTH",
+        "display": "₦100,000/month"
+      },
+      "description": "We are hiring a Tech Sales Closer for our sales team. This is a remote role open to applicants in Nigeria, with a base pay of ₦100,000 per month plus uncapped commission on closed deals.\nResponsibilities: Close warm leads by taking qualified prospects from first call through to a signed deal. Keep a clear pipeline: record every lead, follow up on proposals and report on deals closed. Work to a monthly sales target.\nRequirements: 2 Years' Experience in Sales Proven record of closing deals CV Required (PDF)\nBenefits: Remote working arrangement. Uncapped commission on every deal you close. Other statutory benefits.",
+      "responsibilities": [
+        "Close warm leads by taking qualified prospects from first call through to a signed deal.",
+        "Keep a clear pipeline: record every lead, follow up on proposals and report on deals closed.",
+        "Work to a monthly sales target."
+      ],
+      "qualifications": [
+        "2 Years' Experience in Sales",
+        "Proven record of closing deals",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Remote working arrangement.",
+        "Uncapped commission on every deal you close.",
+        "Other statutory benefits."
+      ],
+      "workArrangement": "Remote",
+      "industry": "Sales"
     }
   ]
 }

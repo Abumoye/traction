@@ -2,7 +2,7 @@
 <source>
   <publisher>Traction Outsourcing Limited</publisher>
   <publisherurl>https://tolnigeria.com/</publisherurl>
-  <lastBuildDate>2026-10-11</lastBuildDate>
+  <lastBuildDate>2026-10-12</lastBuildDate>
   <job>
     <title><![CDATA[Storekeeping Assistant]]></title>
     <date><![CDATA[2026-10-02]]></date>
@@ -55,6 +55,19 @@
     <country><![CDATA[NG]]></country>
     <description><![CDATA[<p>We are hiring an Accountant in Abuja. This is a full-time, onsite role for an experienced accountant.</p><h3>Responsibilities</h3><ul><li>Keep accurate books of account and prepare regular ledger and bank reconciliations.</li><li>Prepare and file tax and other statutory returns on time.</li><li>Prepare monthly financial reports for management.</li></ul><h3>Requirements</h3><ul><li>B.Sc or HND in Accounting, Finance or a related field</li><li>ICAN or ACCA (certified or part-qualified)</li><li>4 Years' Experience in Accounting</li><li>Knowledge of Nigerian tax rules</li><li>CV Required (PDF)</li></ul><h3>Benefits</h3><ul><li>Professional development support.</li><li>Performance bonus.</li><li>Other statutory benefits.</li></ul>]]></description>
     <salary><![CDATA[₦350,000/month]]></salary>
+    <jobtype><![CDATA[fulltime]]></jobtype>
+  </job>
+  <job>
+    <title><![CDATA[Tech Sales Closer]]></title>
+    <date><![CDATA[2026-10-12]]></date>
+    <referencenumber><![CDATA[tech-sales-closer]]></referencenumber>
+    <url><![CDATA[https://tolnigeria.com/apply/tech-sales-closer/]]></url>
+    <company><![CDATA[Traction Outsourcing Limited]]></company>
+    <expirationdate><![CDATA[2026-10-30]]></expirationdate>
+    <remote><![CDATA[true]]></remote>
+    <country><![CDATA[NG]]></country>
+    <description><![CDATA[<p>We are hiring a Tech Sales Closer for our sales team. This is a remote role open to applicants in Nigeria, with a base pay of ₦100,000 per month plus uncapped commission on closed deals.</p><h3>Responsibilities</h3><ul><li>Close warm leads by taking qualified prospects from first call through to a signed deal.</li><li>Keep a clear pipeline: record every lead, follow up on proposals and report on deals closed.</li><li>Work to a monthly sales target.</li></ul><h3>Requirements</h3><ul><li>2 Years' Experience in Sales</li><li>Proven record of closing deals</li><li>CV Required (PDF)</li></ul><h3>Benefits</h3><ul><li>Remote working arrangement.</li><li>Uncapped commission on every deal you close.</li><li>Other statutory benefits.</li></ul>]]></description>
+    <salary><![CDATA[₦100,000/month]]></salary>
     <jobtype><![CDATA[fulltime]]></jobtype>
   </job>
 </source>

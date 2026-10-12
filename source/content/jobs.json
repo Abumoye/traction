@@ -117,6 +117,39 @@
         "Performance bonus.",
         "Other statutory benefits."
       ]
+    },
+    {
+      "id": "tech-sales-closer",
+      "status": "open",
+      "title": "Tech Sales Closer",
+      "url": "/apply/tech-sales-closer/",
+      "remote": true,
+      "datePosted": "2026-10-12",
+      "employmentType": "FULL_TIME",
+      "workArrangement": "Remote",
+      "industry": "Sales",
+      "experienceMonths": 24,
+      "salary": {
+        "value": 100000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Tech Sales Closer for our sales team. This is a remote role open to applicants in Nigeria, with a base pay of ₦100,000 per month plus uncapped commission on closed deals.",
+      "responsibilities": [
+        "Close warm leads by taking qualified prospects from first call through to a signed deal.",
+        "Keep a clear pipeline: record every lead, follow up on proposals and report on deals closed.",
+        "Work to a monthly sales target."
+      ],
+      "qualifications": [
+        "2 Years' Experience in Sales",
+        "Proven record of closing deals",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Remote working arrangement.",
+        "Uncapped commission on every deal you close.",
+        "Other statutory benefits."
+      ]
     }
   ]
 }

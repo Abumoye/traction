@@ -40,6 +40,13 @@
       "type": "job-cards",
       "jobs": [
         {
+          "title": "Tech Sales Closer",
+          "location": "Remote, Nigeria",
+          "salary": "₦100,000/month + commission",
+          "href": "/apply/tech-sales-closer/",
+          "active": true
+        },
+        {
           "title": "Accountant",
           "location": "Abuja",
           "salary": "₦350,000/month",
