@@ -150,6 +150,40 @@
         "Uncapped commission on every deal you close.",
         "Other statutory benefits."
       ]
+    },
+    {
+      "id": "chef",
+      "status": "open",
+      "title": "Chef",
+      "url": "/apply/chef/",
+      "locality": "Wuse 2",
+      "region": "FCT",
+      "datePosted": "2026-10-13",
+      "employmentType": "FULL_TIME",
+      "industry": "Hospitality",
+      "experienceMonths": 36,
+      "salary": {
+        "value": 250000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Chef for a hotel and apartments company in Wuse 2, Abuja. This is a full-time, onsite role.",
+      "responsibilities": [
+        "Prepare and cook meals to a consistent standard of quality for hotel and apartment guests.",
+        "Plan menus and portions, and suggest new dishes.",
+        "Keep the kitchen clean and follow food safety and hygiene standards.",
+        "Monitor stock, order ingredients and keep waste low."
+      ],
+      "qualifications": [
+        "3 Years' Experience as a Chef",
+        "Hotel, apartment or restaurant kitchen background",
+        "Able to cook Nigerian and continental dishes",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Opportunity to grow with a hospitality company and receive training.",
+        "Other statutory benefits."
+      ]
     }
   ]
 }
