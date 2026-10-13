@@ -5,7 +5,7 @@
     "logo": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
   },
   "careersPage": "https://tolnigeria.com/apply/",
-  "lastUpdated": "2026-10-12",
+  "lastUpdated": "2026-10-13",
   "jobs": [
     {
       "id": "storekeeping-assistant-kuje",
@@ -189,6 +189,46 @@
       ],
       "workArrangement": "Remote",
       "industry": "Sales"
+    },
+    {
+      "id": "chef",
+      "title": "Chef",
+      "url": "https://tolnigeria.com/apply/chef/",
+      "applyUrl": "https://tolnigeria.com/apply/chef/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Wuse 2",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-10-13",
+      "validThrough": "2026-11-02T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 250000,
+        "period": "MONTH",
+        "display": "₦250,000/month"
+      },
+      "description": "We are hiring a Chef for a hotel and apartments company in Wuse 2, Abuja. This is a full-time, onsite role.\nResponsibilities: Prepare and cook meals to a consistent standard of quality for hotel and apartment guests. Plan menus and portions, and suggest new dishes. Keep the kitchen clean and follow food safety and hygiene standards. Monitor stock, order ingredients and keep waste low.\nRequirements: 3 Years' Experience as a Chef Hotel, apartment or restaurant kitchen background Able to cook Nigerian and continental dishes CV Required (PDF)\nBenefits: Opportunity to grow with a hospitality company and receive training. Other statutory benefits.",
+      "responsibilities": [
+        "Prepare and cook meals to a consistent standard of quality for hotel and apartment guests.",
+        "Plan menus and portions, and suggest new dishes.",
+        "Keep the kitchen clean and follow food safety and hygiene standards.",
+        "Monitor stock, order ingredients and keep waste low."
+      ],
+      "qualifications": [
+        "3 Years' Experience as a Chef",
+        "Hotel, apartment or restaurant kitchen background",
+        "Able to cook Nigerian and continental dishes",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Opportunity to grow with a hospitality company and receive training.",
+        "Other statutory benefits."
+      ],
+      "industry": "Hospitality"
     }
   ]
 }
