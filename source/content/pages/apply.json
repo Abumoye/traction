@@ -40,6 +40,13 @@
       "type": "job-cards",
       "jobs": [
         {
+          "title": "Chef",
+          "location": "Wuse 2, Abuja",
+          "salary": "₦250,000/month",
+          "href": "/apply/chef/",
+          "active": true
+        },
+        {
           "title": "Tech Sales Closer",
           "location": "Remote, Nigeria",
           "salary": "₦100,000/month + commission",
@@ -91,11 +98,6 @@
         },
         {
           "title": "Housekeeper",
-          "location": "Wuse 2, Abuja",
-          "active": false
-        },
-        {
-          "title": "Chef",
           "location": "Wuse 2, Abuja",
           "active": false
         },
