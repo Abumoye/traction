@@ -1,4 +1,5 @@
 {
+  "compact": true,
   "_route": {
     "template": "flex.html",
     "output": "resources/index.html",

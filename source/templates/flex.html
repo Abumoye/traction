@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<section class="hero" style="padding:{{ hero.padding_top | default('170px') }} 0 {{ hero.padding_bottom | default('60px') }};">
+<section class="hero" style="padding:{{ hero.padding_top | default('170px') }} 0 {{ hero.padding_bottom | default('30px' if compact else '60px') }};">
   <div class="container">{% if hero.back %}
     <a href="{{ hero.back.href }}" class="back-link" aria-label="{{ hero.back.label }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>{{ hero.back.label }}</span></a>{% endif %}
     {% if hero.eyebrow %}<span class="eyebrow">{{ hero.eyebrow }}</span>{% endif %}
@@ -24,7 +24,7 @@
   <p>{{ sec.text }} <a href="{{ sec.href }}">{{ sec.link_text }}</a></p>
 </div>
 {% elif sec.type == 'modal-form' %}{# rendered after the loop, as a pop-up #}
-{% else %}<section {% if sec.id %}id="{{ sec.id }}"{% endif %} {% if sec.resource_type %}data-resource-type="{{ sec.resource_type }}"{% endif %} {% if sec.type == 'resource-grid' %}data-resource-grid="true"{% endif %} class="section {{ 'tight' if sec.tight else '' }} {{ 'bg-ash' if sec.bg == 'ash' else ('bg-ink' if sec.bg == 'ink' else '') }}">
+{% else %}<section {% if sec.id %}id="{{ sec.id }}"{% endif %} {% if sec.resource_type %}data-resource-type="{{ sec.resource_type }}"{% endif %} {% if sec.type == 'resource-grid' %}data-resource-grid="true"{% endif %} class="section {{ 'compact' if compact else '' }} {{ 'tight' if sec.tight else '' }} {{ 'bg-ash' if sec.bg == 'ash' else ('bg-ink' if sec.bg == 'ink' else '') }}">
   <div class="container" style="{{ 'max-width:' + sec.max_width if sec.max_width else '' }}">
 
     {% if sec.type == 'resource-filter' %}
@@ -453,7 +453,7 @@
 {% endif %}
 
 {% if final_cta %}
-<section class="section tight">
+<section class="section tight{{ ' compact' if compact else '' }}">
   <div class="cta-band reveal">
     <h2>{{ final_cta.title }}</h2>
     <p>{{ final_cta.text }}</p>
