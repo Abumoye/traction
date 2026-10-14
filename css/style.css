@@ -366,6 +366,16 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
   background: var(--orange-soft); padding: 5px 11px; border-radius: var(--r-pill); margin-bottom: 12px;
 }
 .tag-pill-free { color: #1e8e3e; background: #e6f4ea; }
+
+/* Event cards: Venue and Date & Time buttons */
+.card-chips { display: flex; flex-direction: column; gap: 8px; margin: 4px 0 18px; }
+.card-chip {
+  display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; max-width: 100%;
+  font-size: 13.5px; line-height: 1.35; color: var(--ink); background: var(--orange-soft);
+  padding: 9px 16px; border-radius: 20px;
+}
+.card-chip i { color: var(--orange); font-size: 13px; }
+.card-chip b { font-weight: 700; }
 .resource-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
 .resource-tags .tag-pill { margin-bottom: 0; }
 
