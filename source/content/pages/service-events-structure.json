@@ -6,14 +6,14 @@
   },
   "meta": {
     "title": "The Basis of Organizational Restructuring in 2027 | Free Online Class | Traction Outsourcing",
-    "description": "Free live online class on Zoom, Friday 16 October 2026, 3:00 PM WAT. Learn the basis of organizational restructuring and prepare your business structure for 2027.",
-    "image": "/images/og/og-events-structure.jpg",
-    "image_alt": "Event flyer for The Basis of Organizational Restructuring in 2027, a free online class on Zoom on 16th October 2026 at 3:00 PM WAT, by Traction Outsourcing."
+    "description": "Free live online class on Google Meet, Friday 16 October 2026, 3:00 PM WAT. Learn the basis of organizational restructuring and prepare your business structure for 2027.",
+    "image": "/images/og/og-events-structure-v2.jpg",
+    "image_alt": "Event flyer for The Basis of Organizational Restructuring in 2027, a free online class on Google Meet on 16th October 2026 at 3:00 PM WAT, by Traction Outsourcing."
   },
   "hero": {
-    "eyebrow": "Free Online Class · Live on Zoom",
+    "eyebrow": "Free Online Class · Live on Google Meet",
     "headline": "The Basis of Organizational Restructuring in 2027.",
-    "sub": "Friday, 16 October 2026  |  3:00 PM WAT  |  Zoom",
+    "sub": "Friday, 16 October 2026  |  3:00 PM WAT  |  Google Meet",
     "back": {
       "href": "/services/events/",
       "label": "Events & Retreats"
@@ -67,7 +67,7 @@
       "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
       "eventStatus": "https://schema.org/EventScheduled",
       "isAccessibleForFree": true,
-      "image": "https://tolnigeria.com/images/og/og-events-structure.jpg",
+      "image": "https://tolnigeria.com/images/og/og-events-structure-v2.jpg",
       "location": {
         "@type": "VirtualLocation",
         "url": "https://tolnigeria.com/services/events/structure/"
@@ -98,11 +98,11 @@
       "type": "image-text",
       "eyebrow": "Online Class",
       "heading": "Class Details",
-      "image": "/images/events-structure-class-flyer.jpg",
+      "image": "/images/events-structure-class-flyer-v2.jpg",
       "paragraphs": [
         "Date: Friday, 16th October 2026",
         "Time: 3:00 PM WAT",
-        "Venue: Live on Zoom",
+        "Venue: Live on Google Meet",
         "Cost: Free. Registration is required."
       ]
     },
@@ -196,7 +196,7 @@
     {
       "type": "cta",
       "heading": "Reserve your free seat",
-      "text": "The class is free, live on Zoom on 16th October 2026 at 3:00 PM WAT. Register with your details so we can keep you updated.",
+      "text": "The class is free, live on Google Meet on 16th October 2026 at 3:00 PM WAT. Register with your details so we can keep you updated.",
       "button": "Register for Free",
       "href": "#register",
       "modal": "structureRegisterModal"
@@ -208,7 +208,7 @@
       "event_slug": "structure",
       "event_name": "The Basis of Organizational Restructuring in 2027",
       "heading": "Register for the Class",
-      "sub": "The Basis of Organizational Restructuring in 2027. Free, live on Zoom, 16th October 2026, 3:00 PM WAT.",
+      "sub": "The Basis of Organizational Restructuring in 2027. Free, live on Google Meet, 16th October 2026, 3:00 PM WAT.",
       "button": "Register for Free",
       "success_message": "Thank you, you are registered for The Basis of Organizational Restructuring in 2027 on Friday, 16th October 2026 at 3:00 PM WAT.",
       "fields": [
@@ -301,7 +301,7 @@
         },
         {
           "q": "When and where does the class hold?",
-          "a": "The class holds live on Zoom on Friday, 16 October 2026, at 3:00 PM WAT."
+          "a": "The class holds live on Google Meet on Friday, 16 October 2026, at 3:00 PM WAT."
         },
         {
           "q": "Is the class free?",

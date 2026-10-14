@@ -146,14 +146,14 @@
       "entries": [
         {
           "title": "The Basis of Organizational Restructuring in 2027",
-          "text": "A free live class on Zoom covering the fundamentals of organizational restructuring and how to prepare your business structure for the new year.",
+          "text": "A free live class on Google Meet covering the fundamentals of organizational restructuring and how to prepare your business structure for the new year.",
           "cta": "View Details and Register",
           "href": "/services/events/structure/",
           "chips": [
             {
               "icon": "fa-video",
               "label": "Venue:",
-              "value": "Live on Zoom"
+              "value": "Live on Google Meet"
             },
             {
               "icon": "fa-calendar-days",
