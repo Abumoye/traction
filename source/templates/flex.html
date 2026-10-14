@@ -72,6 +72,7 @@
             {% if e.tag %}<span class="tag-pill">{{ e.tag }}</span>{% endif %}
             <h3>{{ e.title }}</h3>
             <p>{{ e.text }}</p>
+            {% if e.chips %}<div class="card-chips">{% for c in e.chips %}<span class="card-chip">{% if c.icon %}<i class="fas {{ c.icon }}" aria-hidden="true"></i>{% endif %}<span><b>{{ c.label }}</b> {{ c.value }}</span></span>{% endfor %}</div>{% endif %}
             {% if e.cta %}<a href="{{ e.href }}" class="link-arrow">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% endif %}
           </div>
           {% elif sec.style == 'stat' %}
