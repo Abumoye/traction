@@ -64,6 +64,14 @@ a { color: inherit; text-decoration: none; }
 
 section.section { padding: 76px 0; }
 section.section.tight { padding: 52px 0; }
+
+/* Compact spacing: tighter vertical rhythm on long pages (page JSON: "compact": true) */
+section.section.compact { padding: 44px 0; }
+section.section.tight.compact { padding: 32px 0; }
+section.section.compact:not(.bg-ash):not(.bg-ink) + section.section.compact:not(.bg-ash):not(.bg-ink),
+section.section.compact.bg-ash + section.section.compact.bg-ash { padding-top: 24px; }
+section.section.compact .section-sub { margin-bottom: 28px; }
+section.section.compact h1.section-title, section.section.compact h2.section-title { margin-bottom: 12px; }
 section.bg-ash { background: var(--ash); }
 section.bg-ink { background: var(--ink); color: var(--white); }
 
