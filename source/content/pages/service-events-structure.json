@@ -1,0 +1,321 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "services/events/structure/index.html",
+    "url": "/services/events/structure/"
+  },
+  "meta": {
+    "title": "The Basis of Organizational Restructuring in 2027 | Free Online Class | Traction Outsourcing",
+    "description": "Free live online class on Zoom, Friday 16 October 2026, 3:00 PM WAT. Learn the basis of organizational restructuring and prepare your business structure for 2027.",
+    "image": "/images/og/og-events-structure.jpg",
+    "image_alt": "Event flyer for The Basis of Organizational Restructuring in 2027, a free online class on Zoom on 16th October 2026 at 3:00 PM WAT, by Traction Outsourcing."
+  },
+  "hero": {
+    "eyebrow": "Free Online Class · Live on Zoom",
+    "headline": "The Basis of Organizational Restructuring in 2027.",
+    "sub": "Friday, 16 October 2026  |  3:00 PM WAT  |  Zoom",
+    "back": {
+      "href": "/services/events/",
+      "label": "Events & Retreats"
+    },
+    "actions": [
+      {
+        "label": "Register for Free",
+        "href": "#register",
+        "style": "btn-primary",
+        "modal": "structureRegisterModal"
+      }
+    ]
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Events & Retreats",
+          "item": "https://tolnigeria.com/services/events/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Basis of Organizational Restructuring in 2027",
+          "item": "https://tolnigeria.com/services/events/structure/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Traction Outsourcing Limited",
+      "url": "https://tolnigeria.com/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "The Basis of Organizational Restructuring in 2027",
+      "description": "A free live online class on the basis of organizational restructuring, helping business leaders understand when a business needs restructuring and what a rebuilt structure looks like ahead of 2027.",
+      "startDate": "2026-10-16T15:00:00+01:00",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "isAccessibleForFree": true,
+      "image": "https://tolnigeria.com/images/og/og-events-structure.jpg",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://tolnigeria.com/services/events/structure/"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Traction Outsourcing Limited",
+        "url": "https://tolnigeria.com/",
+        "sameAs": "https://www.wikidata.org/wiki/Q140694466"
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "Free registration",
+        "price": "0",
+        "priceCurrency": "NGN",
+        "url": "https://tolnigeria.com/services/events/structure/",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-10-14"
+      }
+    }
+  ],
+  "scripts": [
+    "/js/form-guard.js",
+    "/js/event-modal-registration.js"
+  ],
+  "sections": [
+    {
+      "type": "image-text",
+      "eyebrow": "Online Class",
+      "heading": "Class Details",
+      "image": "/images/events-structure-class-flyer.jpg",
+      "paragraphs": [
+        "Date: Friday, 16th October 2026",
+        "Time: 3:00 PM WAT",
+        "Venue: Live on Zoom",
+        "Cost: Free. Registration is required."
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [],
+      "actions": [
+        {
+          "label": "Register for Free",
+          "href": "#register",
+          "style": "btn-primary",
+          "modal": "structureRegisterModal"
+        },
+        {
+          "label": "Talk to Us on WhatsApp",
+          "href": "https://wa.me/2347047082697?text=Hello%2C%20I%20am%20interested%20in%20The%20Basis%20of%20Organizational%20Restructuring%20in%202027%20class.",
+          "style": "btn-ghost",
+          "blank": true
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Why This Class",
+      "paragraphs": [
+        "Most businesses do not restructure for fun. They restructure because growth has outpaced the structure, reporting lines exist on paper but not in practice, or nobody can explain who actually decides what.",
+        "This free online class lays out the basis of organizational restructuring: how to recognise the signs, what a properly rebuilt structure is made of, and how to start preparing your business for 2027 before the new financial year is already underway."
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "What the Class Covers",
+      "columns": 3,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-magnifying-glass",
+          "title": "Signs You Need to Restructure",
+          "text": "Growth outpacing structure, unclear reporting lines, and decisions that stall."
+        },
+        {
+          "icon": "fa-scale-balanced",
+          "title": "Governance and Decision Rights",
+          "text": "Who decides what, and where authority actually sits."
+        },
+        {
+          "icon": "fa-sitemap",
+          "title": "Organograms and Reporting Lines",
+          "text": "Redrawing the structure so it matches how the business really runs."
+        },
+        {
+          "icon": "fa-id-badge",
+          "title": "Roles, JDs and KPIs",
+          "text": "Defining roles with clear accountability, not inherited job titles."
+        },
+        {
+          "icon": "fa-book",
+          "title": "Policies and Performance Systems",
+          "text": "Staff policy and performance measures that fit the new structure."
+        },
+        {
+          "icon": "fa-calendar-check",
+          "title": "Planning Ahead for 2027",
+          "text": "Where to start, and how to roll a restructuring out without disrupting the business."
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "Who Should Attend",
+      "columns": 3,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-user-tie",
+          "title": "Business Owners and CEOs",
+          "text": "Leaders whose business has grown beyond its original structure."
+        },
+        {
+          "icon": "fa-people-group",
+          "title": "HR and Operations Leaders",
+          "text": "People responsible for roles, reporting lines and policy."
+        },
+        {
+          "icon": "fa-rocket",
+          "title": "Founders and Managing Directors",
+          "text": "Teams preparing to scale, take on investment or merge entities."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Reserve your free seat",
+      "text": "The class is free, live on Zoom on 16th October 2026 at 3:00 PM WAT. Register with your details so we can keep you updated.",
+      "button": "Register for Free",
+      "href": "#register",
+      "modal": "structureRegisterModal"
+    },
+    {
+      "type": "modal-form",
+      "id": "structureRegisterModal",
+      "form_id": "structureRegisterForm",
+      "event_slug": "structure",
+      "event_name": "The Basis of Organizational Restructuring in 2027",
+      "heading": "Register for the Class",
+      "sub": "The Basis of Organizational Restructuring in 2027. Free, live on Zoom, 16th October 2026, 3:00 PM WAT.",
+      "button": "Register for Free",
+      "success_message": "Thank you, you are registered for The Basis of Organizational Restructuring in 2027 on Friday, 16th October 2026 at 3:00 PM WAT.",
+      "fields": [
+        {
+          "name": "fullName",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2,
+          "autocomplete": "name"
+        },
+        {
+          "name": "organization",
+          "placeholder": "Organization Name",
+          "input_type": "text",
+          "required": true,
+          "autocomplete": "organization"
+        },
+        {
+          "name": "phone",
+          "placeholder": "Phone Number (with country code if outside Nigeria)",
+          "input_type": "tel",
+          "required": true,
+          "pattern": "^[0-9+\\s()-]{7,}$",
+          "title": "Enter a valid phone number",
+          "autocomplete": "tel"
+        },
+        {
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true,
+          "autocomplete": "email"
+        },
+        {
+          "name": "state",
+          "placeholder": "State of Residence",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Abia",
+            "Adamawa",
+            "Akwa Ibom",
+            "Anambra",
+            "Bauchi",
+            "Bayelsa",
+            "Benue",
+            "Borno",
+            "Cross River",
+            "Delta",
+            "Ebonyi",
+            "Edo",
+            "Ekiti",
+            "Enugu",
+            "FCT (Abuja)",
+            "Gombe",
+            "Imo",
+            "Jigawa",
+            "Kaduna",
+            "Kano",
+            "Katsina",
+            "Kebbi",
+            "Kogi",
+            "Kwara",
+            "Lagos",
+            "Nasarawa",
+            "Niger",
+            "Ogun",
+            "Ondo",
+            "Osun",
+            "Oyo",
+            "Plateau",
+            "Rivers",
+            "Sokoto",
+            "Taraba",
+            "Yobe",
+            "Zamfara",
+            "Outside Nigeria"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "What is The Basis of Organizational Restructuring in 2027?",
+          "a": "It is a free online class by Traction Outsourcing Limited on the fundamentals of organizational restructuring: how to tell when a business needs it, and what a properly rebuilt structure looks like, so leaders can plan for the 2027 financial year with a structure that fits the business."
+        },
+        {
+          "q": "When and where does the class hold?",
+          "a": "The class holds live on Zoom on Friday, 16 October 2026, at 3:00 PM WAT."
+        },
+        {
+          "q": "Is the class free?",
+          "a": "Yes. The class is free to attend. You only need to register with your name, organization, phone number, email address and state of residence."
+        },
+        {
+          "q": "Who should attend?",
+          "a": "Business owners, CEOs, MDs, founders, HR leaders and operations managers who suspect their current structure no longer fits the business, or who are planning ahead for 2027."
+        },
+        {
+          "q": "What if my business needs more than a class?",
+          "a": "Traction Outsourcing Limited runs full corporate restructuring engagements, from governance and organogram redesign to roles, KPIs, policies and the implementation roadmap. See our <a href=\"/services/corporate-restructuring/\">corporate restructuring service</a> or book a free consultation."
+        }
+      ]
+    }
+  ]
+}

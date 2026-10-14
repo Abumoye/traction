@@ -10,7 +10,7 @@
     {% if hero.actions %}
     <div class="hero-actions">
       {% for a in hero.actions %}
-      <a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>
+      <a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>
       {% endfor %}
     </div>
     {% endif %}
@@ -23,6 +23,7 @@
 <div class="urgent-bar reveal">
   <p>{{ sec.text }} <a href="{{ sec.href }}">{{ sec.link_text }}</a></p>
 </div>
+{% elif sec.type == 'modal-form' %}{# rendered after the loop, as a pop-up #}
 {% else %}<section {% if sec.id %}id="{{ sec.id }}"{% endif %} {% if sec.resource_type %}data-resource-type="{{ sec.resource_type }}"{% endif %} {% if sec.type == 'resource-grid' %}data-resource-grid="true"{% endif %} class="section {{ 'tight' if sec.tight else '' }} {{ 'bg-ash' if sec.bg == 'ash' else ('bg-ink' if sec.bg == 'ink' else '') }}">
   <div class="container" style="{{ 'max-width:' + sec.max_width if sec.max_width else '' }}">
 
@@ -42,7 +43,7 @@
       {% if sec.actions %}
       <div class="hero-actions reveal" style="justify-content:center;margin-top:{{ '0' if not sec.paragraphs and not sec.sub and not sec.heading else '28px' }};">
         {% for a in sec.actions %}
-        <a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>
+        <a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>
         {% endfor %}
       </div>
       {% endif %}
@@ -279,7 +280,7 @@
       <div class="cta-band reveal">
         <h2>{{ sec.heading }}</h2>
         {% if sec.text %}<p>{{ sec.text }}</p>{% endif %}
-        <a href="{{ sec.href }}" class="btn btn-primary" {% if sec.blank %}target="_blank" rel="noopener"{% endif %}>{{ sec.button }}</a>
+        <a href="{{ sec.href }}" class="btn btn-primary" {% if sec.modal %}data-open-modal="{{ sec.modal }}"{% endif %} {% if sec.blank %}target="_blank" rel="noopener"{% endif %}>{{ sec.button }}</a>
       </div>
 
     {% elif sec.type == 'faq' %}
@@ -399,6 +400,38 @@
 
   </div>
 </section>{% endif %}
+{% endfor %}
+
+{% for sec in sections if sec.type == 'modal-form' %}
+<dialog id="{{ sec.id }}" class="resource-modal event-modal">
+  <form class="resource-modal-form" id="{{ sec.form_id }}" data-event-slug="{{ sec.event_slug }}" data-event-name="{{ sec.event_name }}">
+    <button type="button" class="resource-modal-close" data-close-modal aria-label="Close">&times;</button>
+    <h3>{{ sec.heading }}</h3>
+    {% if sec.sub %}<p class="resource-modal-sub">{{ sec.sub }}</p>{% endif %}
+    <div style="display:grid;gap:14px;">
+      {% for f in sec.fields %}
+        {% if f.input_type == 'select' %}
+        <select name="{{ f.name }}" aria-label="{{ f.placeholder }}" {% if f.required | default(true) %}required{% endif %} style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);background:var(--white);color:var(--ink);">
+          <option value="" disabled selected>{{ f.placeholder | default('Select an option') }}</option>
+          {% for opt in f.options %}<option value="{{ opt }}">{{ opt }}</option>{% endfor %}
+        </select>
+        {% else %}
+        <input name="{{ f.name }}" type="{{ f.input_type | default('text') }}" placeholder="{{ f.placeholder }}" aria-label="{{ f.placeholder }}" {% if f.autocomplete %}autocomplete="{{ f.autocomplete }}"{% endif %} {% if f.required | default(true) %}required{% endif %} {% if f.pattern %}pattern="{{ f.pattern }}"{% endif %} {% if f.title %}title="{{ f.title }}"{% endif %} {% if f.minlength %}minlength="{{ f.minlength }}"{% endif %} style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+        {% endif %}
+      {% endfor %}
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">{{ sec.button | default('Submit') }}</button>
+      <p id="{{ sec.form_id }}Status" style="text-align:center;font-size:13.5px;margin:0;"></p>
+    </div>
+  </form>
+</dialog>
+{% if sec.success_message %}
+<dialog id="{{ sec.form_id }}SuccessModal" class="form-success-modal">
+  <button type="button" class="resource-modal-close" data-close-success-modal aria-label="Close">&times;</button>
+  <div class="form-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+  <p>{{ sec.success_message }}</p>
+  <button type="button" class="btn btn-primary" data-close-success-modal style="margin:18px auto 0;">Close</button>
+</dialog>
+{% endif %}
 {% endfor %}
 
 {% if has_resource_form %}
