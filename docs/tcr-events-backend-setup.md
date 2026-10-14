@@ -4,9 +4,9 @@ This is a **brand new, standalone** Google Sheet and Apps Script Web App,
 separate from the "Traction Outsourcing Leads" sheet used by the other
 forms on the site. It powers two pages:
 
-- `/services/events/register/` — 4-field registration form (Full Name, Phone,
+- `/services/events/kigali/register/` — 4-field registration form (Full Name, Phone,
   Email, Referral Code).
-- `/services/events/affiliate/` — affiliate sign-up form, which auto-assigns a code
+- `/services/events/kigali/affiliate/` — affiliate sign-up form, which auto-assigns a code
   like `aff/tol/001/26`.
 
 No invoices are sent, and there is **no automated WhatsApp message** to

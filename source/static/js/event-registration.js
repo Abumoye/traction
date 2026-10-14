@@ -1,6 +1,6 @@
 /* =========================================================
    Traction Outsourcing Limited — T-ICR 2026 Registration Handler
-   Used on /events/register/ only.
+   Used on /services/events/kigali/register/ only.
 
    Submits to a DEDICATED Google Apps Script Web App (formType:
    "event-registration"), separate from the lead-form script, which

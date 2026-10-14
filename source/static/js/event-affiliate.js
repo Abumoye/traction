@@ -1,6 +1,6 @@
 /* =========================================================
    Traction Outsourcing Limited — T-ICR 2026 Affiliate Sign-Up Handler
-   Used on /events/affiliate/ only.
+   Used on /services/events/kigali/affiliate/ only.
 
    Submits to a DEDICATED Google Apps Script Web App (formType:
    "event-affiliate"), separate from the lead-form / registration script,

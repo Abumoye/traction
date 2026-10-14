@@ -19,7 +19,7 @@
     "updated": "September 29, 2026"
   },
   "image": "/images/articles/kigali-africa-business-hub.jpg",
-  "dek": "Kigali has been quietly building something that very few African capitals can credibly claim. The city has become a genuine destination for business, investment, and international conferences like the <a href=\"/services/events/#t-icr\">Traction Outsourcing International Corporate Retreat 2026 (T-ICR 2026)</a>.",
+  "dek": "Kigali has been quietly building something that very few African capitals can credibly claim. The city has become a genuine destination for business, investment, and international conferences like the <a href=\"/services/events/kigali/\">Traction Outsourcing International Corporate Retreat 2026 (T-ICR 2026)</a>.",
   "sections": [
     {
       "type": "text",
@@ -140,11 +140,11 @@
       "buttons": [
         {
           "text": "Register for T-ICR 2026",
-          "href": "/services/events/register/"
+          "href": "/services/events/kigali/register/"
         },
         {
           "text": "View Retreat Details",
-          "href": "/services/events/#t-icr",
+          "href": "/services/events/kigali/",
           "style": "ghost"
         }
       ]
