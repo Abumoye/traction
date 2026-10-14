@@ -98,7 +98,7 @@
           "position": 9,
           "name": "T-ICR 2026 — International Corporate Retreat Kigali",
           "description": "Join CEOs and executives in Kigali, Rwanda (Nov 22-30, 2026) for the Traction Outsourcing International Corporate Retreat.",
-          "url": "https://tolnigeria.com/services/events/#t-icr"
+          "url": "https://tolnigeria.com/services/events/kigali/"
         },
         {
           "@type": "ListItem",
@@ -266,7 +266,7 @@
         "tag": "Corporate Events",
         "title": "T-ICR 2026 Kigali Rwanda",
         "text": "Join CEOs and executives in Kigali, Rwanda, November 22-30, for our flagship international corporate retreat.",
-        "href": "/services/events/#t-icr",
+        "href": "/services/events/kigali/",
         "image": "/images/og/og-events.jpg"
       },
       {

@@ -1,8 +1,8 @@
 {
   "_route": {
     "template": "flex.html",
-    "output": "services/events/affiliate/index.html",
-    "url": "/services/events/affiliate/"
+    "output": "services/events/kigali/affiliate/index.html",
+    "url": "/services/events/kigali/affiliate/"
   },
   "meta": {
     "title": "Become a T-ICR 2026 Affiliate | Traction Outsourcing",
@@ -13,7 +13,11 @@
   "hero": {
     "eyebrow": "T-ICR 2026 Affiliate Program",
     "headline": "Become an Affiliate",
-    "sub": "Get your own unique referral code and help bring delegates to the Traction Outsourcing International Corporate Retreat 2026 in Kigali, Rwanda."
+    "sub": "Get your own unique referral code and help bring delegates to the Traction Outsourcing International Corporate Retreat 2026 in Kigali, Rwanda.",
+    "back": {
+      "href": "/services/events/kigali/",
+      "label": "T-ICR 2026 Kigali"
+    }
   },
   "sections": [
     {
@@ -89,5 +93,37 @@
   "scripts": [
     "/js/form-guard.js",
     "/js/event-affiliate.js"
+  ],
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Events & Retreats",
+          "item": "https://tolnigeria.com/services/events/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "T-ICR 2026 Kigali",
+          "item": "https://tolnigeria.com/services/events/kigali/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Become an Affiliate",
+          "item": "https://tolnigeria.com/services/events/kigali/affiliate/"
+        }
+      ]
+    }
   ]
 }
