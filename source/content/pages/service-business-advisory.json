@@ -285,6 +285,14 @@
         {
           "name": "Super Rise and Shine",
           "image": "/images/super-rise-and-shine.png"
+        },
+        {
+          "name": "SZH Group",
+          "image": "/images/szh-group.png"
+        },
+        {
+          "name": "Peniel Apartments",
+          "image": "/images/peniel-apartments.png"
         }
       ]
     },
