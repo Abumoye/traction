@@ -15,11 +15,13 @@
    saved with every entry, so one script and one Sheet tab per event
    covers every future class.
 
-   SETUP REQUIRED: deploy the Apps Script from the setup doc and paste its
-   Web App URL below. Until then the form hands the entry to WhatsApp instead.
+   The Web App URL below belongs to the "Event Registrations" Google
+   Apps Script (see /docs/event-class-registration-setup.md). If it is ever
+   replaced with the placeholder text, the form hands the entry to WhatsApp
+   instead, so nobody is lost.
    ========================================================= */
 
-const EVENT_MODAL_SCRIPT_URL = "REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_URL";
+const EVENT_MODAL_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxyA5fx4VyJ7pPeiDHufd6JW1DqNLFN5jtswix7dXaI-D4oti5gqMHydbevOuSGFeYjxA/exec";
 const EVENT_MODAL_WHATSAPP_NUMBER = "2347047082697";
 
 document.addEventListener('DOMContentLoaded', function () {
