@@ -145,18 +145,40 @@
       "style": "case-study",
       "entries": [
         {
-          "tag": "Free Online Class · 16 October 2026 · 3:00 PM WAT",
           "title": "The Basis of Organizational Restructuring in 2027",
           "text": "A free live class on Zoom covering the fundamentals of organizational restructuring and how to prepare your business structure for the new year.",
           "cta": "View Details and Register",
-          "href": "/services/events/structure/"
+          "href": "/services/events/structure/",
+          "chips": [
+            {
+              "icon": "fa-video",
+              "label": "Venue:",
+              "value": "Live on Zoom"
+            },
+            {
+              "icon": "fa-calendar-days",
+              "label": "Date & Time:",
+              "value": "Friday, 16 October 2026, 3:00 PM WAT"
+            }
+          ]
         },
         {
-          "tag": "Next Event · November 22 – 30, 2026 · Kigali, Rwanda",
           "title": "T-ICR 2026: Traction Outsourcing International Corporate Retreat",
           "text": "A week-long strategy retreat for CEOs, senior executives, and entrepreneurs, built around Kigali, Rwanda. Five speakers, two attendance tiers, and a week fully out of the office.",
           "cta": "View T-ICR 2026 Details",
-          "href": "/services/events/kigali/"
+          "href": "/services/events/kigali/",
+          "chips": [
+            {
+              "icon": "fa-location-dot",
+              "label": "Venue:",
+              "value": "Kigali, Rwanda"
+            },
+            {
+              "icon": "fa-calendar-days",
+              "label": "Date & Time:",
+              "value": "22 – 30 November 2026"
+            }
+          ]
         },
         {
           "tag": "Coming Soon",
