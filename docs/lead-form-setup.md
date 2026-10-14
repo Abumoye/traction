@@ -194,7 +194,7 @@ Everything else, the Web App URL, the email notification, stays the same.
 
 ## Retreat Registration Form — retired
 
-The old nine-field `/events/register/` form (with the receipt file upload)
+The old nine-field `/services/events/register/` form (with the receipt file upload)
 has been replaced by a new four-field T-ICR 2026 registration form, plus a
 new affiliate sign-up form. Those two use their **own separate** Google
 Sheet and Apps Script project — see `docs/tcr-events-backend-setup.md` for

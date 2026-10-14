@@ -1,20 +1,14 @@
 {
   "_route": {
     "template": "flex.html",
-    "output": "events/index.html",
-    "url": "/events/"
+    "output": "services/events/index.html",
+    "url": "/services/events/"
   },
   "meta": {
-    "title": "T-ICR 2026 Kigali Rwanda | Traction Outsourcing",
-    "description": "Join CEOs and executives in Kigali, Rwanda (Nov 22-30, 2026) for the Traction Outsourcing International Corporate Retreat. Flights, mentorship and Pan-African matchmaking.",
-    "image": "/images/og/og-events.jpg",
-    "image_alt": "Light gray event graphic with headshot photos and names of six conference speakers, plus 'T-ICR 2026' retreat details for Kigali, Rwanda, Nov 22-30."
-  },
-  "hero": {
-    "eyebrow": "Register Now",
-    "headline": "Traction Outsourcing International Corporate Retreat, Kigali 2026",
-    "image": "/images/kigali-retreat-2026.jpg",
-    "image_alt": "Kigali, Rwanda skyline — venue of the Traction Outsourcing International Corporate Retreat 2026"
+    "title": "Corporate Retreat Planning & Events Management in Nigeria | Traction Outsourcing Limited",
+    "description": "Corporate retreat planning and events management in Nigeria. Executive team building, strategy retreats, and leadership offsites across Abuja and Africa.",
+    "image": "/images/og/og-corporate-retreats.jpg",
+    "image_alt": "White text card with the Traction Outsourcing logo and tagline 'Built by Africans for Africa,' with 'Events & Corp. Retreats' in bold black type below."
   },
   "schema": [
     {
@@ -30,16 +24,98 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Events",
-          "item": "https://tolnigeria.com/events/"
+          "name": "Our Services",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Corporate Retreats & Events",
+          "item": "https://tolnigeria.com/services/events/"
         }
       ]
     },
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Traction Outsourcing Limited",
-      "url": "https://tolnigeria.com/"
+      "@type": "Service",
+      "name": "Corporate Retreat Planning & Events Management",
+      "alternateName": "Corporate Retreats & Events",
+      "serviceType": "Corporate Retreat Planning and Events Management",
+      "description": "Full-service corporate retreat planning and events management in Nigeria, covering executive team building, leadership strategy retreats, board strategy sessions, annual company retreats, and international executive retreats across Abuja and Africa.",
+      "keywords": "corporate retreat planning Nigeria, executive team building, leadership strategy retreats, board strategy sessions, international corporate retreats, annual company retreats, Abuja events management",
+      "provider": {
+        "@type": "Organization",
+        "name": "Traction Outsourcing Limited",
+        "description": "Traction Outsourcing Limited is a management consulting and HR solutions firm based in Abuja, Nigeria, serving clients across all major industries throughout Africa. Services include talent acquisition, HR process outsourcing, learning and development, startup structuring, corporate restructuring, business strategy consulting, and corporate retreats.",
+        "url": "https://tolnigeria.com/",
+        "sameAs": "https://www.wikidata.org/wiki/Q140694466",
+        "telephone": "+234-805-203-3145",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "26, Algiers Street, Wuse Zone 5",
+          "addressLocality": "Abuja",
+          "addressRegion": "FCT",
+          "postalCode": "900285",
+          "addressCountry": "NG"
+        }
+      },
+      "areaServed": "Africa",
+      "url": "https://tolnigeria.com/services/events/",
+      "image": "https://tolnigeria.com/images/og/og-corporate-retreats.jpg",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Corporate Retreat & Events Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Executive Team Building Retreats",
+              "description": "Facilitated offsites that build cohesion between senior management, aligned around shared goals and clear decision-making frameworks."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Leadership Strategy Retreats",
+              "description": "Structured sessions designed around strategic goal-setting, business direction, and the decisions that will shape the next 12 to 36 months."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Board Strategy Sessions",
+              "description": "Facilitated board-level retreats covering governance, strategic priorities, and stakeholder alignment in an environment built for deep work."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "International Executive Retreats",
+              "description": "Full retreat packages including logistics, accommodation, facilitation, and in-country coordination for international executive gatherings."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Annual Company Retreats",
+              "description": "End-of-year or mid-year company-wide gatherings combining strategy, recognition, and team bonding for organizations across Nigeria."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Workshops and Roundtables",
+              "description": "Recurring CEO roundtables, HR leadership forums, and sector-specific working sessions for executives navigating the same challenges."
+            }
+          }
+        ]
+      }
     },
     {
       "@context": "https://schema.org",
@@ -73,35 +149,35 @@
           "name": "Dr. Stephen Akintayo",
           "jobTitle": "Billionaire Investor & Business Coach",
           "description": "Africa's foremost business coach and real estate investor. Founder of the Gtext Group, Dr. Akintayo is known for empowering hundreds of thousands of entrepreneurs across Nigeria and the diaspora.",
-          "url": "https://tolnigeria.com/events/#panel"
+          "url": "https://tolnigeria.com/services/events/#panel"
         },
         {
           "@type": "Person",
           "name": "Eizu Uwaoma",
           "jobTitle": "Strategy Consultant & Business Growth Expert",
           "description": "Founder of Hexavia Group and author of multiple business titles. Eizu Uwaoma is one of Nigeria's leading business strategists and executive educators on organizational structure and growth.",
-          "url": "https://tolnigeria.com/events/#panel"
+          "url": "https://tolnigeria.com/services/events/#panel"
         },
         {
           "@type": "Person",
           "name": "Adeyinka Igbinoba",
           "jobTitle": "Leadership Coach, Lecturer, Human Capital Expert & Real Estate Developer",
           "description": "A widely respected Nigerian leadership coach, speaker, HR consultant, and Real Estate Developer recognized for her expertise in building affordable family homes in Nigeria, people management, talent development, and building high-performance workplace cultures.",
-          "url": "https://tolnigeria.com/events/#panel"
+          "url": "https://tolnigeria.com/services/events/#panel"
         },
         {
           "@type": "Person",
           "name": "Oluwatosin Olaseinde",
           "jobTitle": "Founder & CEO, Money Africa & Ladda",
           "description": "A chartered accountant, entrepreneur, and Founder and CEO of Money Africa and Ladda. Oluwatosin is a Washington Mandela Fellow, 2020 LinkedIn Top Voice in Finance and Economy, and one of the Top 50 African Business Heroes.",
-          "url": "https://tolnigeria.com/events/#panel"
+          "url": "https://tolnigeria.com/services/events/#panel"
         },
         {
           "@type": "Person",
           "name": "William Adelewa ESQ",
           "jobTitle": "Lawyer, Business Consultant & Partner",
           "description": "A Nigerian lawyer with over a decade of experience in corporate law, litigation, tech, and real estate. He is known for strategy, innovation, and his commitment to developing young African business leaders and building legacy businesses across African cities.",
-          "url": "https://tolnigeria.com/events/#panel"
+          "url": "https://tolnigeria.com/services/events/#panel"
         },
         {
           "@type": "Person",
@@ -109,7 +185,7 @@
           "jobTitle": "Founder & CEO, Traction Outsourcing Limited, Host",
           "description": "A certified HR and business consulting expert with almost a decade of experience in Nigeria, Dubai, and Rwanda, working in multiple industries including management consulting, real estate, FMCG, and Logistics. Founder of Traction Outsourcing Limited and host of the T-ICR 2026.",
           "sameAs": "https://tolnigeria.com/resources/",
-          "url": "https://tolnigeria.com/events/#panel"
+          "url": "https://tolnigeria.com/services/events/#panel"
         }
       ],
       "offers": [
@@ -118,7 +194,7 @@
           "name": "Early Bird Registration (NGN)",
           "price": "3550000",
           "priceCurrency": "NGN",
-          "url": "https://tolnigeria.com/events/register/",
+          "url": "https://tolnigeria.com/services/events/register/",
           "availability": "https://schema.org/InStock",
           "validFrom": "2026-06-01",
           "validThrough": "2026-08-31"
@@ -128,7 +204,7 @@
           "name": "Early Bird Registration (USD)",
           "price": "2600",
           "priceCurrency": "USD",
-          "url": "https://tolnigeria.com/events/register/",
+          "url": "https://tolnigeria.com/services/events/register/",
           "availability": "https://schema.org/InStock",
           "validFrom": "2026-06-01",
           "validThrough": "2026-08-31"
@@ -138,7 +214,7 @@
           "name": "Standard Registration (NGN)",
           "price": "5000000",
           "priceCurrency": "NGN",
-          "url": "https://tolnigeria.com/events/register/",
+          "url": "https://tolnigeria.com/services/events/register/",
           "availability": "https://schema.org/InStock",
           "validFrom": "2026-09-01",
           "validThrough": "2026-11-01"
@@ -148,7 +224,7 @@
           "name": "Standard Registration (USD)",
           "price": "3665",
           "priceCurrency": "USD",
-          "url": "https://tolnigeria.com/events/register/",
+          "url": "https://tolnigeria.com/services/events/register/",
           "availability": "https://schema.org/InStock",
           "validFrom": "2026-09-01",
           "validThrough": "2026-11-01"
@@ -156,11 +232,101 @@
       ]
     }
   ],
+  "hero": {
+    "eyebrow": "Events & Retreats",
+    "headline": "Corporate Retreat Planning & Events Management",
+    "sub": "Strategy sessions do not need a boardroom to work. We design, plan, and facilitate gatherings that put business leaders in a room together, then take them somewhere worth remembering.",
+    "actions": [
+      {
+        "label": "Plan Your Retreat",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20discuss%20planning%20a%20corporate%20retreat",
+        "style": "btn-primary"
+      },
+      {
+        "label": "Chat on WhatsApp",
+        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20discuss%20planning%20a%20corporate%20retreat",
+        "style": "btn-secondary",
+        "blank": true
+      }
+    ]
+  },
   "sections": [
     {
+      "type": "grid",
+      "heading": "Upcoming Events",
+      "sub": "Here is what is on the calendar right now. New events are added as they are confirmed.",
+      "columns": 3,
+      "style": "case-study",
+      "entries": [
+        {
+          "tag": "Next Event · November 22 – 30, 2026 · Kigali, Rwanda",
+          "title": "T-ICR 2026: Traction Outsourcing International Corporate Retreat",
+          "text": "A week-long strategy retreat for CEOs, senior executives, and entrepreneurs, built around Kigali, Rwanda. Five speakers, two attendance tiers, and a week fully out of the office.",
+          "cta": "See T-ICR 2026 Details",
+          "href": "#t-icr"
+        },
+        {
+          "tag": "Coming Soon",
+          "title": "Leadership Roundtable",
+          "text": "A recurring gathering for senior HR and operations leaders. Details to be announced."
+        },
+        {
+          "tag": "Coming Soon",
+          "title": "Business Advisory Workshop",
+          "text": "A working session on structuring, negotiation, and growth decisions. Details to be announced."
+        }
+      ]
+    },
+    {
       "type": "text",
-      "heading": "Traction Outsourcing International Corporate Retreat, 2026",
-      "sub": "Date: November 22nd - 30th, 2026 | Location: Kigali, Rwanda",
+      "paragraphs": [
+        "Our events exist for one reason: business leaders make better decisions when they step out of the office and sit with people solving the same problems. Some of what we host is intimate, some is international, but all of it is built as a strategy environment first, not a networking add-on."
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "What We Plan and Facilitate",
+      "sub": "From a one-day board strategy session to a week-long international executive retreat, the brief determines the design.",
+      "columns": 3,
+      "entries": [
+        {
+          "title": "Executive Team Building Retreats",
+          "text": "Facilitated offsites that build cohesion between senior management, aligned around shared goals and clear decision-making frameworks."
+        },
+        {
+          "title": "Leadership Strategy Retreats",
+          "text": "Structured sessions designed around strategic goal-setting, business direction, and the decisions that will shape the next 12 to 36 months."
+        },
+        {
+          "title": "Board Strategy Sessions",
+          "text": "Facilitated board-level retreats covering governance, strategic priorities, and stakeholder alignment in an environment built for deep work."
+        },
+        {
+          "title": "International Executive Retreats",
+          "text": "Full retreat packages including logistics, accommodation, facilitation, and in-country coordination, like the T-ICR 2026 held in Kigali, Rwanda."
+        },
+        {
+          "title": "Annual Company Retreats",
+          "text": "End-of-year or mid-year company-wide gatherings combining strategy, recognition, and team bonding for organizations across Nigeria."
+        },
+        {
+          "title": "Workshops and Roundtables",
+          "text": "Recurring CEO roundtables, HR leadership forums, and sector-specific working sessions for executives navigating the same challenges."
+        }
+      ]
+    },
+    {
+      "type": "image-text",
+      "id": "t-icr",
+      "eyebrow": "Next Event · Register Now",
+      "heading": "Traction Outsourcing International Corporate Retreat, Kigali 2026",
+      "image": "/images/kigali-retreat-2026.jpg",
+      "paragraphs": [
+        "Date: November 22nd - 30th, 2026 | Location: Kigali, Rwanda"
+      ]
+    },
+    {
+      "type": "text",
       "paragraphs": [],
       "actions": [
         {
@@ -170,12 +336,12 @@
         },
         {
           "label": "Register Now",
-          "href": "/events/register/",
+          "href": "/services/events/register/",
           "style": "btn-primary"
         },
         {
           "label": "Sell Tickets & Earn Commission",
-          "href": "/events/affiliate/",
+          "href": "/services/events/affiliate/",
           "style": "btn-ghost"
         }
       ]
@@ -310,7 +476,7 @@
       "heading": "Register for the T-ICR 2026",
       "text": "Secure your slot today. Registering as a group, or need corporate invoicing? Group discounts are available. Message our admissions desk directly on WhatsApp.",
       "button": "Register Now",
-      "href": "/events/register/"
+      "href": "/services/events/register/"
     },
     {
       "type": "cta",
@@ -370,14 +536,14 @@
       "heading": "Get Your Ticket",
       "text": "Purchase your T-ICR 2026 ticket directly. Seats close once the event sells out.",
       "button": "Register Now",
-      "href": "/events/register/"
+      "href": "/services/events/register/"
     },
     {
       "type": "cta",
       "heading": "Become a T-ICR 2026 Affiliate",
       "text": "Earn by referring delegates to the retreat. Sign up as an affiliate and get your own unique referral code.",
       "button": "Become an Affiliate",
-      "href": "/events/affiliate/"
+      "href": "/services/events/affiliate/"
     },
     {
       "type": "raw-text",
@@ -492,9 +658,81 @@
       "blank": true
     },
     {
+      "type": "cta",
+      "heading": "Tell us your team size, your goal, and your timeline.",
+      "button": "Start Planning Your Retreat",
+      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20discuss%20planning%20a%20corporate%20retreat"
+    },
+    {
+      "type": "logos",
+      "heading": "Join Our Clients",
+      "logos": [
+        {
+          "name": "Gifts n Boxes",
+          "image": "/images/Gifts-n-boxes.png"
+        },
+        {
+          "name": "Afroreach Research",
+          "image": "/images/afroreach-research.png"
+        },
+        {
+          "name": "Beacon Trust",
+          "image": "/images/beacon-trust.jpg"
+        },
+        {
+          "name": "Chairo Properties",
+          "image": "/images/chairo-properties.png"
+        },
+        {
+          "name": "Demipos Hotel",
+          "image": "/images/demipos-hotel.png"
+        },
+        {
+          "name": "Fourtwoseven Engineering",
+          "image": "/images/fourtwoseven-engineering.jpg"
+        },
+        {
+          "name": "Grown and Glow",
+          "image": "/images/grown-and-glow.png"
+        },
+        {
+          "name": "La Luna Restaurant",
+          "image": "/images/la-luna-restaurant.png"
+        },
+        {
+          "name": "Tifes Hub",
+          "image": "/images/tifes-hub.png"
+        },
+        {
+          "name": "Toolbox Ateliers",
+          "image": "/images/toolbox-ateliers.png"
+        },
+        {
+          "name": "Super Rise and Shine",
+          "image": "/images/super-rise-and-shine.png"
+        }
+      ]
+    },
+    {
       "type": "faq",
       "heading": "Common Questions",
       "entries": [
+        {
+          "q": "Does Traction Outsourcing plan corporate retreats in Nigeria?",
+          "a": "Yes. Traction Outsourcing Limited plans and manages corporate retreats for businesses across Nigeria, including team-building retreats, leadership retreats, and annual strategy offsite events. We handle venue, programming, facilitation, logistics, and accommodation depending on the scope of the engagement."
+        },
+        {
+          "q": "Can Traction Outsourcing organise a corporate retreat outside Nigeria?",
+          "a": "Yes. Our international retreat capability includes the T-ICR, the Traction Outsourcing International Corporate Retreat, which we host annually in an African destination city. We also arrange bespoke international retreats for corporate clients on request. The 2026 edition takes place in Kigali, Rwanda in November."
+        },
+        {
+          "q": "What is included in a Traction Outsourcing corporate retreat package?",
+          "a": "Packages vary by scope, but typically include venue selection and booking, programme design, facilitation and speaker coordination, accommodation arrangements, ground logistics, and post-retreat documentation. We build the package around what the client wants to achieve, not a fixed template."
+        },
+        {
+          "q": "How far in advance should we book a corporate retreat?",
+          "a": "For domestic retreats, a minimum of four to six weeks allows us to source the right venue and build the programme properly. For international retreats, three months is advisable, particularly for group travel and accommodation. The earlier you engage us, the more options we can offer."
+        },
         {
           "q": "What is the T-ICR 2026?",
           "a": "The T-ICR 2026, Traction Outsourcing International Corporate Retreat 2026, is an executive retreat and business conference taking place in Kigali, Rwanda from November 22 to 30, 2026. It brings together Nigerian and African business leaders for structured programming, speaker sessions, business matchmaking, and an immersive experience in one of Africa's most dynamic business cities."
@@ -513,5 +751,11 @@
         }
       ]
     }
-  ]
+  ],
+  "final_cta": {
+    "title": "Ready to Plan Your Retreat?",
+    "text": "Speak with our consulting team about how Events & Retreats can work for your business.",
+    "button": "Start Planning Your Retreat",
+    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+  }
 }

@@ -1,8 +1,8 @@
 {
   "_route": {
     "template": "flex.html",
-    "output": "events/register/index.html",
-    "url": "/events/register/"
+    "output": "services/events/register/index.html",
+    "url": "/services/events/register/"
   },
   "meta": {
     "title": "Register for T-ICR 2026 | Traction Outsourcing",
@@ -52,5 +52,8 @@
       ]
     }
   ],
-  "scripts": ["/js/form-guard.js", "/js/event-registration.js"]
+  "scripts": [
+    "/js/form-guard.js",
+    "/js/event-registration.js"
+  ]
 }

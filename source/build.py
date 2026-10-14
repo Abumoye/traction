@@ -53,7 +53,6 @@ BREADCRUMB_SECTIONS = {
     "articles": ("Articles", "/articles/"),
     "services": ("Our Services", "/"),
     "partnerships": ("Partnerships", "/partnerships/"),
-    "events": ("Events", "/events/"),
 }
 
 MINOR_WORDS = {"a", "an", "the", "in", "of", "for", "and", "to", "on", "at", "&"}

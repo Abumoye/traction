@@ -71,6 +71,7 @@
             {% if e.tag %}<span class="tag-pill">{{ e.tag }}</span>{% endif %}
             <h3>{{ e.title }}</h3>
             <p>{{ e.text }}</p>
+            {% if e.cta %}<a href="{{ e.href }}" class="link-arrow">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% endif %}
           </div>
           {% elif sec.style == 'stat' %}
           <div class="reveal" style="text-align:center;">

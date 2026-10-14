@@ -1,8 +1,8 @@
 {
   "_route": {
     "template": "flex.html",
-    "output": "events/affiliate/index.html",
-    "url": "/events/affiliate/"
+    "output": "services/events/affiliate/index.html",
+    "url": "/services/events/affiliate/"
   },
   "meta": {
     "title": "Become a T-ICR 2026 Affiliate | Traction Outsourcing",
@@ -35,7 +35,11 @@
           "placeholder": "Select Gender",
           "input_type": "select",
           "required": true,
-          "options": ["Male", "Female", "Prefer not to say"]
+          "options": [
+            "Male",
+            "Female",
+            "Prefer not to say"
+          ]
         },
         {
           "name": "age",
@@ -82,5 +86,8 @@
       ]
     }
   ],
-  "scripts": ["/js/form-guard.js", "/js/event-affiliate.js"]
+  "scripts": [
+    "/js/form-guard.js",
+    "/js/event-affiliate.js"
+  ]
 }
