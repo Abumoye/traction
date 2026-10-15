@@ -1,0 +1,323 @@
+{
+  "compact": true,
+  "_route": {
+    "template": "flex.html",
+    "output": "services/events/resilient/index.html",
+    "url": "/services/events/resilient/"
+  },
+  "meta": {
+    "title": "How to Build a Resilient Management Team | Free Online Class | Traction Outsourcing",
+    "description": "Free live online class on Google Meet, Friday 23 October 2026, 3:00 PM WAT, for business owners, general managers and C-suite executives. Learn how to build a resilient management team for your growing business.",
+    "image": "/images/og/og-events-resilient.jpg",
+    "image_alt": "Event flyer for How to Build a Resilient Management Team for Growing Businesses, a free online class on Google Meet on Friday 23rd October 2026 at 3:00 PM WAT, by Traction Outsourcing."
+  },
+  "hero": {
+    "eyebrow": "Free Online Class · Live on Google Meet",
+    "headline": "How to Build a Resilient Management Team.",
+    "sub": "Friday, 23 October 2026  |  3:00 PM WAT  |  Google Meet",
+    "back": {
+      "href": "/services/events/",
+      "label": "Events & Retreats"
+    },
+    "actions": [
+      {
+        "label": "Register for Free",
+        "href": "#register",
+        "style": "btn-primary",
+        "modal": "resilientRegisterModal"
+      }
+    ]
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Events & Retreats",
+          "item": "https://tolnigeria.com/services/events/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Build a Resilient Management Team",
+          "item": "https://tolnigeria.com/services/events/resilient/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Traction Outsourcing Limited",
+      "url": "https://tolnigeria.com/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "How to Build a Resilient Management Team for Growing Businesses",
+      "description": "A free live online class for business owners, general managers and C-suite executives on how to build a resilient management team that keeps a growing business running through pressure, turnover and change.",
+      "startDate": "2026-10-23T15:00:00+01:00",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "isAccessibleForFree": true,
+      "image": "https://tolnigeria.com/images/og/og-events-resilient.jpg",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://tolnigeria.com/services/events/resilient/"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Traction Outsourcing Limited",
+        "url": "https://tolnigeria.com/",
+        "sameAs": "https://www.wikidata.org/wiki/Q140694466"
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "Free registration",
+        "price": "0",
+        "priceCurrency": "NGN",
+        "url": "https://tolnigeria.com/services/events/resilient/",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-10-15"
+      }
+    }
+  ],
+  "scripts": [
+    "/js/form-guard.js",
+    "/js/event-modal-registration.js"
+  ],
+  "sections": [
+    {
+      "type": "image-text",
+      "eyebrow": "Online Class",
+      "heading": "Class Details",
+      "image": "/images/events-resilient-class-flyer.jpg",
+      "paragraphs": [
+        "Date: Friday, 23rd October 2026",
+        "Time: 3:00 PM WAT (starts promptly)",
+        "Venue: Live on Google Meet",
+        "Audience: Business Owners, General Managers and C-Suite Executives",
+        "Cost: Free. Registration is required."
+      ]
+    },
+    {
+      "type": "text",
+      "paragraphs": [],
+      "actions": [
+        {
+          "label": "Register for Free",
+          "href": "#register",
+          "style": "btn-primary",
+          "modal": "resilientRegisterModal"
+        },
+        {
+          "label": "Talk to Us on WhatsApp",
+          "href": "https://wa.me/2347047082697?text=Hello%2C%20I%20am%20interested%20in%20the%20How%20to%20Build%20a%20Resilient%20Management%20Team%20class.",
+          "style": "btn-ghost",
+          "blank": true
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Why This Class",
+      "paragraphs": [
+        "A growing business is only as strong as the team running it. When the management layer is thin, unclear on who owns what, or dependent on one or two people, every resignation, absence or bad quarter turns into a crisis.",
+        "This free online class shows business owners, general managers and C-suite executives how to build a management team that holds up under pressure: the right roles, clear accountability and a leadership bench that can keep the business moving while you grow."
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "What the Class Covers",
+      "columns": 3,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-people-group",
+          "title": "What Makes a Management Team Resilient",
+          "text": "The difference between a team that bends under pressure and one that breaks."
+        },
+        {
+          "icon": "fa-sitemap",
+          "title": "Roles and Accountability",
+          "text": "Who owns what, so decisions do not wait on the founder."
+        },
+        {
+          "icon": "fa-user-plus",
+          "title": "Hiring and Developing Managers",
+          "text": "Choosing the right people and growing them into the roles you need."
+        },
+        {
+          "icon": "fa-handshake",
+          "title": "Delegation and Trust",
+          "text": "Letting go of the right work without losing control of the business."
+        },
+        {
+          "icon": "fa-chart-line",
+          "title": "Performance and Review Rhythm",
+          "text": "Simple KPIs and meetings that keep the team aligned and accountable."
+        },
+        {
+          "icon": "fa-shield-halved",
+          "title": "Succession and Continuity",
+          "text": "Making sure the business keeps running when a key person leaves."
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "heading": "Who Should Attend",
+      "columns": 3,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-user-tie",
+          "title": "Business Owners",
+          "text": "Founders and owners who are still the bottleneck in their own business."
+        },
+        {
+          "icon": "fa-briefcase",
+          "title": "General Managers",
+          "text": "Managers responsible for running teams and delivering results day to day."
+        },
+        {
+          "icon": "fa-building",
+          "title": "C-Suite Executives",
+          "text": "CEOs, MDs and other executives building a leadership team for growth."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "heading": "Reserve your free seat",
+      "text": "The class is free, live on Google Meet on 23rd October 2026 at 3:00 PM WAT. Register with your details so we can keep you updated.",
+      "button": "Register for Free",
+      "href": "#register",
+      "modal": "resilientRegisterModal"
+    },
+    {
+      "type": "modal-form",
+      "id": "resilientRegisterModal",
+      "form_id": "resilientRegisterForm",
+      "event_slug": "resilient",
+      "event_name": "How to Build a Resilient Management Team for Growing Businesses",
+      "heading": "Register for the Class",
+      "sub": "How to Build a Resilient Management Team for Growing Businesses. Free, live on Google Meet, 23rd October 2026, 3:00 PM WAT.",
+      "button": "Register for Free",
+      "success_message": "Thank you, you are registered for How to Build a Resilient Management Team on Friday, 23rd October 2026 at 3:00 PM WAT.",
+      "fields": [
+        {
+          "name": "fullName",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2,
+          "autocomplete": "name"
+        },
+        {
+          "name": "organization",
+          "placeholder": "Organization Name",
+          "input_type": "text",
+          "required": true,
+          "autocomplete": "organization"
+        },
+        {
+          "name": "phone",
+          "placeholder": "Phone Number (with country code if outside Nigeria)",
+          "input_type": "tel",
+          "required": true,
+          "pattern": "^[0-9+\\s()-]{7,}$",
+          "title": "Enter a valid phone number",
+          "autocomplete": "tel"
+        },
+        {
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true,
+          "autocomplete": "email"
+        },
+        {
+          "name": "state",
+          "placeholder": "State of Residence",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Abia",
+            "Adamawa",
+            "Akwa Ibom",
+            "Anambra",
+            "Bauchi",
+            "Bayelsa",
+            "Benue",
+            "Borno",
+            "Cross River",
+            "Delta",
+            "Ebonyi",
+            "Edo",
+            "Ekiti",
+            "Enugu",
+            "FCT (Abuja)",
+            "Gombe",
+            "Imo",
+            "Jigawa",
+            "Kaduna",
+            "Kano",
+            "Katsina",
+            "Kebbi",
+            "Kogi",
+            "Kwara",
+            "Lagos",
+            "Nasarawa",
+            "Niger",
+            "Ogun",
+            "Ondo",
+            "Osun",
+            "Oyo",
+            "Plateau",
+            "Rivers",
+            "Sokoto",
+            "Taraba",
+            "Yobe",
+            "Zamfara",
+            "Outside Nigeria"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Common Questions",
+      "entries": [
+        {
+          "q": "What is How to Build a Resilient Management Team?",
+          "a": "It is a free online class by Traction Outsourcing Limited for business owners, general managers and C-suite executives on how to build a management team that keeps a growing business running through pressure, turnover and change."
+        },
+        {
+          "q": "When and where does the class hold?",
+          "a": "The class holds live on Google Meet on Friday, 23 October 2026, at 3:00 PM WAT. It starts promptly."
+        },
+        {
+          "q": "Is the class free?",
+          "a": "Yes. The class is free to attend. You only need to register with your name, organization, phone number, email address and state of residence."
+        },
+        {
+          "q": "Who should attend?",
+          "a": "Business owners, general managers and C-suite executives of growing businesses who want a stronger, more dependable management team."
+        },
+        {
+          "q": "What if my business needs more than a class?",
+          "a": "Traction Outsourcing Limited runs full corporate restructuring and business advisory engagements. See our <a href=\"/services/corporate-restructuring/\">corporate restructuring service</a> or <a href=\"/services/business-advisory/\">business advisory service</a>, or book a free consultation."
+        }
+      ]
+    }
+  ]
+}

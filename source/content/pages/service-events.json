@@ -164,6 +164,24 @@
           ]
         },
         {
+          "title": "How to Build a Resilient Management Team for Growing Businesses",
+          "text": "A free live class on Google Meet for business owners, general managers and C-suite executives on building a management team that holds up as the business grows.",
+          "cta": "View Details and Register",
+          "href": "/services/events/resilient/",
+          "chips": [
+            {
+              "icon": "fa-video",
+              "label": "Venue:",
+              "value": "Live on Google Meet"
+            },
+            {
+              "icon": "fa-calendar-days",
+              "label": "Date & Time:",
+              "value": "Friday, 23 October 2026, 3:00 PM WAT"
+            }
+          ]
+        },
+        {
           "title": "T-ICR 2026: Traction Outsourcing International Corporate Retreat",
           "text": "A week-long strategy retreat for CEOs, senior executives, and entrepreneurs, built around Kigali, Rwanda. Five speakers, two attendance tiers, and a week fully out of the office.",
           "cta": "View T-ICR 2026 Details",
