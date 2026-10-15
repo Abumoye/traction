@@ -291,6 +291,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://tolnigeria.com/services/events/resilient/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://tolnigeria.com/services/events/kigali/</loc>
     <lastmod>2026-10-14</lastmod>
     <priority>0.7</priority>
@@ -347,7 +352,7 @@
   </url>
   <url>
     <loc>https://tolnigeria.com/services/events/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
