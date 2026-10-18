@@ -20,7 +20,7 @@ All open roles live in one file: `source/content/jobs.json`. Every build reads i
 Every job closes by itself **14 working days after its `datePosted`** (the posting day is not counted; Saturdays, Sundays and the public holidays listed in `source/content/holidays.json` are skipped). Nothing needs to be typed in `jobs.json`:
 
 - The closing date is written into the `JobPosting` markup as `validThrough` (end of that day, Nigeria time), into both feeds (`validThrough` / `<expirationdate>`), and onto the job page ("Closing date: 22 October 2026.") and the job card on `/apply/` ("Closes 22 Oct 2026").
-- The site rebuilds every night just after midnight (Nigeria time). The first build after the closing date takes the job off: the page loses its markup and its application form and says "Applications for this role have closed", the card on `/apply/` becomes "Applications Closed", and the job disappears from the feeds.
+- The site rebuilds every night just after midnight (Nigeria time). The first build after the closing date takes the job off: the page loses its markup and its application form and says "Applications for this role have closed", the card on `/apply/` turns grey (its details stay visible) and its button reads "Closed" and can no longer be clicked, and the job disappears from the feeds.
 - Google is told through the Indexing API (see `docs/google-indexing-api-setup.md`) so it drops the listing quickly.
 
 Optional per-job settings in `jobs.json`: `"workingDaysOpen": 10` to use a different number of working days, or `"validThrough": "2026-11-05"` to set an exact closing date.

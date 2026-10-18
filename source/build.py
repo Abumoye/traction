@@ -526,7 +526,7 @@ def apply_job_page_state(data, job):
 
 def mark_careers_cards(data, all_jobs):
     """On the careers hub, show each open job's closing date and turn the card
-    of a closed or expired job into a disabled 'Applications Closed' card."""
+    of a closed or expired job into a disabled, greyed-out 'Closed' card."""
     by_url = {j["url"]: j for j in all_jobs}
     for sec in data.get("sections", []):
         if sec.get("type") != "job-cards":
@@ -539,7 +539,7 @@ def mark_careers_cards(data, all_jobs):
                 card["closing"] = "Closes " + job["closingDate"].strftime("%d %b %Y").lstrip("0")
             else:
                 card["active"] = False
-                card["cta_label"] = "Applications Closed"
+                card["cta_label"] = "Closed"
 
 
 def build_careers_collection_schema(open_jobs, meta):
