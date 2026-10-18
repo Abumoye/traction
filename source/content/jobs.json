@@ -33,7 +33,7 @@
     },
     {
       "id": "real-estate-sales-manager-100",
-      "status": "open",
+      "status": "closed",
       "title": "Real Estate Sales Manager",
       "url": "/apply/real-estate-sales-manager-100/",
       "locality": "Kado",
@@ -54,7 +54,7 @@
     },
     {
       "id": "business-strategy-officer",
-      "status": "open",
+      "status": "closed",
       "title": "Business Strategy Officer",
       "url": "/apply/business-strategy-officer/",
       "remote": true,
