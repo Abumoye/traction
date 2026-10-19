@@ -103,3 +103,18 @@ same template, then re-run `python3 build.py`. No code changes needed.
   plain inputs. Search each content JSON file's own notes (ask the assistant
   that built this, or check the conversation this was built in) for the
   specific judgment calls made per page.
+
+## Site-wide search
+
+The homepage hero has a search box, and `/search/` shows the full results
+list. Both read `/site-search-index.json`, which `build.py` generates on every
+build (`build_site_search_index`). It crawls the finished pages in `dist/`, so
+every public page, article and resource is searchable with nothing to
+maintain. Pages with `"noindex": true`, `/search/` itself and the apply pages of
+closed or expired roles are left out.
+
+- Add plain-language words for a page (e.g. "jobs" for the careers hub) in the
+  `SEARCH_KEYWORDS` dict near the top of that function's section in `build.py`.
+- Search words and their synonyms live in `static/js/site-search.js`
+  (`SYNONYMS`), and the ranking weights are in `termScore`.
+- The hero box text is in `content/pages/home.json` under `hero.search`.

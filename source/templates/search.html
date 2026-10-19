@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero" style="padding:170px 0 30px;">
+  <div class="container">
+    <span class="eyebrow">Search</span>
+    <h1 style="font-size:clamp(34px,5vw,52px);">Search tolnigeria.com</h1>
+    <p class="lede">Find services, events, articles, open roles, books and resources in one place.</p>
+  </div>
+</section>
+<section class="section tight" style="padding-top:10px;">
+  <div class="container" id="siteSearchPage" style="max-width:860px;">
+    <form class="site-search site-search-page" role="search" action="/search/" method="get" autocomplete="off">
+      <label class="sr-only" for="siteSearchInput">Search the website</label>
+      <div class="site-search-box">
+        <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+        <input id="siteSearchInput" name="q" type="search" enterkeyhint="search" placeholder="{{ placeholder | e }}" value="">
+        <button type="submit" class="site-search-go" aria-label="Search">Search</button>
+      </div>
+    </form>
+    <div class="filter-bar ss-filters" style="margin:26px 0 14px;"></div>
+    <p class="ss-page-count" aria-live="polite"></p>
+    <div class="ss-page-results"></div>
+    <noscript><p style="text-align:center;">Search needs JavaScript. You can browse our <a href="/#services">services</a>, <a href="/articles/">articles</a> or <a href="/apply/">careers</a> instead.</p></noscript>
+  </div>
+</section>
+{% endblock %}
+{% block extra_scripts %}<script src="/js/site-search.js"></script>{% endblock %}

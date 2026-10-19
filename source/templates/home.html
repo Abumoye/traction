@@ -10,6 +10,9 @@
       <a href="{{ hero.primary_cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ hero.primary_cta.label }}</a>
       <a href="{{ hero.secondary_cta.href }}" class="btn btn-ghost">{{ hero.secondary_cta.label }}</a>
     </div>
+    {% if hero.search %}
+    {% include "partials/site-search-box.html" %}
+    {% endif %}
   </div>
 </section>
 
@@ -143,3 +146,4 @@
 </section>
 
 {% endblock %}
+{% block extra_scripts %}{% if hero.search %}<script src="/js/site-search.js"></script>{% endif %}{% endblock %}
