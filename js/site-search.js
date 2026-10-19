@@ -28,37 +28,50 @@
   // Filter pills on the results page, in this order.
   var FILTERS = ['Services', 'Events', 'Articles', 'Careers', 'Resources', 'Brands', 'Partnerships', 'Pages'];
 
-  // Words visitors use that the pages do not always contain.
-  var SYNONYMS = {
-    online: ['virtual', 'webinar', 'meet', 'zoom'],
-    class: ['classes', 'training', 'webinar', 'masterclass', 'session'],
-    classes: ['class', 'training', 'webinar'],
-    job: ['career', 'careers', 'vacancy', 'vacancies', 'role', 'apply'],
-    jobs: ['career', 'careers', 'vacancy', 'vacancies', 'role', 'apply'],
-    vacancy: ['career', 'careers', 'job'],
-    work: ['career', 'careers', 'job'],
-    hire: ['recruit', 'recruitment', 'staffing', 'outsourcing'],
-    hiring: ['recruit', 'recruitment', 'staffing'],
-    staff: ['employee', 'employees', 'workforce', 'outsourcing'],
-    salary: ['payroll', 'pay'],
-    pay: ['payroll', 'salary'],
-    tax: ['paye', 'payroll'],
-    price: ['pricing', 'cost', 'fee', 'fees'],
-    cost: ['pricing', 'price', 'fee', 'fees'],
-    contact: ['call', 'phone', 'whatsapp', 'email', 'address'],
-    phone: ['contact', 'call', 'whatsapp'],
-    house: ['houses', 'property', 'properties'],
-    land: ['estate', 'lands', 'property'],
-    rent: ['rental', 'for-rent', 'property'],
-    book: ['ebook', 'e-book', 'resource'],
-    download: ['resource', 'template', 'ebook'],
-    free: ['resource', 'download'],
-    retreat: ['retreats', 'kigali', 'rwanda'],
-    rwanda: ['kigali', 'retreat'],
-    hr: ['human', 'resources'],
-    structure: ['structuring', 'restructuring', 'organogram'],
-    restructure: ['restructuring', 'organogram']
-  };
+  // Words that mean (nearly) the same thing to a visitor. Typing any word in a
+  // group also finds pages that only contain the others. Multi-word entries are
+  // split into their words. Add a new row when you spot a gap.
+  var GROUPS = [
+    'recruit recruitment recruiter recruiting hire hiring headhunt headhunting talent placement sourcing candidate candidates shortlist staffing',
+    'job jobs career careers vacancy vacancies employment opening openings internship apply',
+    'train training trainer trainings course courses workshop workshops learning coaching upskill upskilling class classes masterclass seminar certificate certification',
+    'online virtual webinar zoom meet livestream',
+    'payroll salary salaries wage wages paye payslip remuneration pension deduction deductions compensation',
+    'outsourcing outsource outsourced manpower workforce',
+    'hr human personnel',
+    'restructure restructuring organogram reorganise reorganization reorganisation turnaround downsizing merger',
+    'startup start-up register registration cac incorporate incorporation',
+    'advisory advice consulting consultant consultancy strategy strategic guidance mentor',
+    'event events retreat retreats conference summit kigali rwanda t-icr',
+    'property properties estate house houses land lands apartment apartments rent rental lease landlord tenant',
+    'contact phone whatsapp email address location office enquiry inquiry',
+    'price prices pricing cost costs fee fees charge charges rate rates quote',
+    'book ebook e-book download downloads template templates resource resources guide pdf excel',
+    'review reviews testimonial testimonials feedback',
+    'leadership leader manager managers management boss bosses executive executives supervisor',
+    'romance romantic dating love couple affair',
+    'health hmo insurance hallmark medical',
+    'bank banks banking fintech',
+    'handbook policy policies manual',
+    'fire dismiss dismissal terminate termination sack sacking disciplinary resign resignation',
+    'leave vacation holiday absence',
+    'interview interviews screening vetting',
+    'performance appraisal kpi kpis evaluation productivity',
+    'culture engagement morale retention turnover motivation',
+    'support helpdesk',
+    'cheap affordable inexpensive'
+  ];
+  var SYNONYMS = (function () {
+    var map = {};
+    GROUPS.forEach(function (g) {
+      var words = g.split(/\s+/).filter(Boolean);
+      words.forEach(function (w) {
+        var set = map[w] || (map[w] = []);
+        words.forEach(function (o) { if (o !== w && set.indexOf(o) === -1) set.push(o); });
+      });
+    });
+    return map;
+  })();
   var STOP = { the: 1, a: 1, an: 1, of: 1, and: 1, for: 1, to: 1, in: 1, on: 1, at: 1, is: 1, are: 1, my: 1, i: 1, we: 1, how: 1, do: 1, can: 1, you: 1, your: 1, with: 1, what: 1, where: 1 };
 
   var state = { index: null, promise: null };
@@ -93,20 +106,27 @@
     return edits + (la - i) + (lb - j) <= 1;
   }
 
+  function words(str) { var t = norm(str); return t ? t.split(' ') : []; }
   function prep(e) {
-    e._t = ' ' + norm(e.t) + ' ';
-    e._h = ' ' + norm(e.h) + ' ';
-    e._d = ' ' + norm(e.d) + ' ';
-    e._k = ' ' + norm(e.kw + ' ' + e.k + ' ' + e.u.replace(/[\/-]+/g, ' ')) + ' ';
-    e._b = ' ' + norm(e.b) + ' ';
-    e._tw = e._t.trim().split(' ').concat(e._h.trim().split(' ')).filter(function (w) { return w.length > 4; });
+    e._tw = words(e.t);
+    e._hw = words(e.h);
+    e._dw = words(e.d);
+    e._kw = words(e.kw + ' ' + e.k + ' ' + e.u.replace(/[\/-]+/g, ' '));
+    e._t = ' ' + e._tw.join(' ') + ' ';
+    e._d = ' ' + e._dw.join(' ') + ' ';
+    var bw = words(e.b), map = {};
+    for (var i = 0; i < bw.length; i++) map[bw[i]] = (map[bw[i]] || 0) + 1;
+    e._b = ' ' + bw.join(' ') + ' ';
+    e._bm = map;
+    e._bk = Object.keys(map);
+    e._fz = e._tw.concat(e._hw).filter(function (w) { return w.length > 4; });
     return e;
   }
 
   function load() {
     if (state.index) return Promise.resolve(state.index);
     if (!state.promise) {
-      state.promise = fetch(INDEX_URL).then(function (r) { return r.json(); }).then(function (data) {
+      state.promise = fetch(INDEX_URL).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).then(function (data) {
         state.index = data.map(prep);
         return state.index;
       }).catch(function (err) {
@@ -118,34 +138,48 @@
     return state.promise;
   }
 
-  // Does word-prefix q occur in the haystack, and how many times?
-  function count(hay, q) {
-    var n = 0, i = hay.indexOf(' ' + q);
-    while (i !== -1 && n < 8) { n++; i = hay.indexOf(' ' + q, i + 1); }
-    return n;
+  // How well does word list `ws` contain query word q? 2 = whole word (or same stem),
+  // 1 = starts with q, 0 = no. A short q may only prefix-match a short word, so "excel"
+  // does not match "excellence" but "train" still matches "training".
+  function wmatch(ws, q, noPrefix) {
+    var best = 0, sq = stem(q);
+    for (var i = 0; i < ws.length; i++) {
+      var w = ws[i];
+      if (w === q || stem(w) === sq) return 2;
+      if (!best && !noPrefix && w.indexOf(q) === 0 && (q.length >= 6 || w.length <= q.length + 4)) best = 1;
+    }
+    return best;
+  }
+  function bodyHits(e, q) {
+    var sq = stem(q), exact = (e._bm[q] || 0) + (sq !== q ? (e._bm[sq] || 0) : 0), pre = 0;
+    for (var i = 0; i < e._bk.length; i++) {
+      var w = e._bk[i];
+      if (w !== q && w !== sq && w.indexOf(q) === 0 && (q.length >= 6 || w.length <= q.length + 4)) pre += e._bm[w];
+    }
+    return { exact: exact, pre: pre };
   }
 
-  // Score one query term (plus its synonyms) against one entry. 0 = no match.
+  // Score one query term (plus related words) against one entry. 0 = no match.
   function termScore(e, term) {
-    var variants = [{ q: term, w: 1 }];
+    var variants = [{ q: term, w: 1, direct: true }];
     var st = stem(term);
-    if (st !== term && st.length > 2) variants.push({ q: st, w: 0.9 });
-    (SYNONYMS[term] || SYNONYMS[st] || []).forEach(function (s) { variants.push({ q: s, w: 0.55 }); });
+    if (st !== term && st.length > 2) variants.push({ q: st, w: 0.9, direct: true });
+    (SYNONYMS[term] || SYNONYMS[st] || []).forEach(function (x) { variants.push({ q: x, w: 0.4, direct: false }); });
 
     var best = 0;
     variants.forEach(function (v) {
-      var q = v.q, s = 0;
-      if (e._t.indexOf(' ' + q + ' ') !== -1) s += 14;
-      else if (e._t.indexOf(' ' + q) !== -1) s += 11;
-      else if (e._t.indexOf(q) !== -1) s += 4;
-      if (e._h.indexOf(' ' + q) !== -1) s += 6;
-      if (e._k.indexOf(' ' + q) !== -1) s += 7;
-      if (e._d.indexOf(' ' + q) !== -1) s += 4;
-      var c = count(e._b, q);
-      if (c) s += 1.5 + Math.min(c, 6) * 0.35;
-      if (!s && q.length >= 5) { // forgive a one-letter typo in titles and headings
-        for (var i = 0; i < e._tw.length; i++) {
-          if (lev1(q, e._tw[i])) { s += 5; break; }
+      var q = v.q, s = 0, m;
+      var np = !v.direct; // related words must match whole words, never prefixes
+      m = wmatch(e._tw, q, np); s += m === 2 ? 20 : m === 1 ? 9 : 0;
+      m = wmatch(e._hw, q, np); s += m === 2 ? 14 : m === 1 ? 6 : 0;
+      m = wmatch(e._kw, q, np); s += m === 2 ? 14 : m === 1 ? 6 : 0;
+      m = wmatch(e._dw, q, np); s += m === 2 ? 5 : m === 1 ? 2.5 : 0;
+      if (v.direct) {
+        var h = bodyHits(e, q);
+        if (h.exact) s += 1.5 + Math.min(h.exact, 6) * 0.4;
+        else if (h.pre) s += 0.8 + Math.min(h.pre, 6) * 0.2;
+        if (!s && q.length >= 5) { // forgive a one-letter typo in titles and headings
+          for (var i = 0; i < e._fz.length; i++) { if (lev1(q, e._fz[i])) { s += 6; break; } }
         }
       }
       best = Math.max(best, s * v.w);
@@ -160,20 +194,27 @@
     if (!terms.length) terms = norm(query).split(' ').filter(Boolean);
     if (!terms.length || !state.index) return { terms: [], results: [] };
 
+    var phraseStr = terms.join(' ');
     var full = [], partial = [];
     state.index.forEach(function (e) {
       var sum = 0, hits = 0;
       terms.forEach(function (t) { var s = termScore(e, t); if (s > 0) { sum += s; hits++; } });
       if (!hits) return;
-      var phrase = terms.length > 1 && (e._t.indexOf(' ' + terms.join(' ')) !== -1 || e._d.indexOf(terms.join(' ')) !== -1 || e._b.indexOf(terms.join(' ')) !== -1);
-      var total = sum + (phrase ? 8 : 0) + (TYPE_BOOST[e.k] || 0);
+      var phrase = terms.length > 1 && (e._t.indexOf(' ' + phraseStr + ' ') !== -1 || e._d.indexOf(' ' + phraseStr + ' ') !== -1 || e._b.indexOf(' ' + phraseStr + ' ') !== -1);
+      var total = sum + (phrase ? 10 : 0) + (TYPE_BOOST[e.k] || 0);
       (hits === terms.length ? full : partial).push({ e: e, s: total });
     });
     function byScore(a, b) { return b.s - a.s; }
     full.sort(byScore);
     partial.sort(byScore);
-    // Show near-misses only when there are few exact matches.
-    var results = full.length >= 4 ? full : full.concat(partial.slice(0, 8));
+    // Pages that match every word come first. Near-misses (only some words) are
+    // added only when there are few full matches, and always rank below them.
+    partial.forEach(function (r) { r.s *= 0.5; });
+    var results = full.length >= 3 ? full : full.concat(partial.slice(0, 8));
+    // Drop the long tail of weak matches (a word that only appears once in a body).
+    var top = results.length ? results[0].s : 0;
+    var floor = Math.max(3, top * 0.15);
+    results = results.filter(function (r) { return r.s >= floor; }).slice(0, 40);
     return { terms: terms, results: results, exact: full.length };
   }
 
@@ -223,6 +264,13 @@
 
   function meta(e) { return TYPE_META[e.k] || TYPE_META.Page; }
 
+  function unavailableHtml() {
+    return '<div class="ss-empty"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i>' +
+      '<p><strong>Search is not available right now.</strong></p>' +
+      '<p>Please try again in a moment, or <a href="/#services">browse our services</a>, ' +
+      '<a href="/articles/">read our articles</a> or <a href="' + WA_URL + '" target="_blank" rel="noopener">ask us on WhatsApp</a>.</p></div>';
+  }
+
   function noResultsHtml(q) {
     return '<div class="ss-empty"><i class="fas fa-circle-question" aria-hidden="true"></i>' +
       '<p><strong>No results for “' + esc(q) + '”.</strong></p>' +
@@ -260,6 +308,7 @@
     function render() {
       var q = input.value.trim();
       if (!q) { panel.innerHTML = ''; close(); return; }
+      if (!state.index) { panel.innerHTML = unavailableHtml(); items = []; open(); return; }
       var res = search(q);
       var list = res.results;
       if (!list.length) { panel.innerHTML = noResultsHtml(q); items = []; open(); return; }
@@ -341,6 +390,7 @@
       if (!q) { pills.innerHTML = ''; out.innerHTML = ''; count_.textContent = 'Type something to search the whole website.'; last = null; return; }
       filter = 'All';
       load().then(function () {
+        if (!state.index) { pills.innerHTML = ''; out.innerHTML = unavailableHtml(); count_.textContent = ''; return; }
         last = search(q);
         if (!last.results.length) { pills.innerHTML = ''; out.innerHTML = noResultsHtml(q); count_.textContent = ''; return; }
         paint();
