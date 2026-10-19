@@ -295,6 +295,20 @@
       <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call." class="btn btn-primary" target="_blank" rel="noopener">Book a Free Clarity Call</a>
       <a href="#services" class="btn btn-ghost">Explore Our Services</a>
     </div>
+    
+    <form class="site-search" role="search" action="/search/" method="get" autocomplete="off" data-mode="dropdown">
+  <label class="sr-only" for="siteSearchInput">Search the website</label>
+  <div class="site-search-box">
+    <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+    <input id="siteSearchInput" name="q" type="search" enterkeyhint="search"
+           placeholder="What are you looking for? Try &#34;Training&#34;, &#34;payroll&#34;, &#34;careers&#34;, &#34;recruitment&#34;, &#34;online class&#34;, ..."
+           data-short-placeholder="Search &#34;Training&#34;, &#34;payroll&#34;, &#34;careers&#34;..."
+           role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="siteSearchPanel">
+    <button type="submit" class="site-search-go" aria-label="Search">Search</button>
+  </div>
+  <div class="site-search-panel" id="siteSearchPanel" role="listbox" aria-label="Search results" hidden></div>
+</form>
+    
   </div>
 </section>
 
@@ -588,6 +602,6 @@
   
   <script src="/js/nav.js"></script>
   <script src="/js/reveal.js"></script>
-  
+  <script src="/js/site-search.js"></script>
 </body>
 </html>
