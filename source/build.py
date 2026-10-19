@@ -674,6 +674,53 @@ def collect_articles():
     return items
 
 
+
+def _plain(text):
+    """Strip HTML tags/entities and collapse whitespace for the search index."""
+    import html as _html, re as _re
+    text = _re.sub(r"<[^>]+>", " ", str(text or ""))
+    return _re.sub(r"\s+", " ", _html.unescape(text)).strip()
+
+
+def _article_body_text(art):
+    """Flatten an article JSON into plain text for full-text search."""
+    parts = [art.get("tag"), art.get("title")]
+    by = art.get("byline") or {}
+    parts += [by.get("author"), by.get("date"), by.get("read_time"), art.get("dek")]
+    for sec in art.get("sections", []):
+        parts += [sec.get("heading"), sec.get("eyebrow"), sec.get("text")]
+        parts += sec.get("paragraphs", []) or []
+        for it in sec.get("list", []) or []:
+            parts += [it.get("b"), it.get("t")] if isinstance(it, dict) else [it]
+        for it in sec.get("items", []) or []:
+            if isinstance(it, dict):
+                parts += [it.get("label"), it.get("value"), it.get("text")]
+    for ent in (art.get("faq") or {}).get("entries", []):
+        parts += [ent.get("q"), ent.get("a")]
+    return " ".join(x for x in (_plain(p) for p in parts) if x)
+
+
+def build_search_index():
+    """One entry per article in articles-index.json (same order)."""
+    index = load(CONTENT / "articles-index.json")
+    out = []
+    for card in index:
+        slug = card["url"].strip("/").split("/")[-1]
+        f = CONTENT / "articles" / f"{slug}.json"
+        body = _article_body_text(load(f)) if f.exists() else ""
+        out.append({
+            "url": card["url"],
+            "title": card["title"],
+            "category": card.get("category", ""),
+            "tag": card.get("tag", ""),
+            "excerpt": card.get("excerpt", ""),
+            "read_time": card.get("read_time", ""),
+            "image": card.get("image", ""),
+            "body": body,
+        })
+    return out
+
+
 def write_article_feeds():
     items = collect_articles()
     newest = items[0]["datetime"] if items else None
@@ -853,7 +900,9 @@ def main():
     write(DIST / "articles/index.html", html)
 
     # ---- Search index (served as static JSON, fetched client-side) ----
-    search_index = load(CONTENT / "search-index.json")
+    # Generated from the article JSON files + articles-index.json, so a new
+    # article is searchable the moment it is built (nothing to hand-maintain).
+    search_index = build_search_index()
     write(DIST / "search-index.json", json.dumps(search_index, ensure_ascii=False))
 
     # ---- Every individual article json ----
