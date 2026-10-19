@@ -1,0 +1,12 @@
+<form class="site-search" role="search" action="/search/" method="get" autocomplete="off" data-mode="dropdown">
+  <label class="sr-only" for="siteSearchInput">{{ hero.search.label | default("Search the website") | e }}</label>
+  <div class="site-search-box">
+    <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+    <input id="siteSearchInput" name="q" type="search" enterkeyhint="search"
+           placeholder="{{ hero.search.placeholder | e }}"
+           {% if hero.search.placeholder_short %}data-short-placeholder="{{ hero.search.placeholder_short | e }}"{% endif %}
+           role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="siteSearchPanel">
+    <button type="submit" class="site-search-go" aria-label="Search">Search</button>
+  </div>
+  <div class="site-search-panel" id="siteSearchPanel" role="listbox" aria-label="Search results" hidden></div>
+</form>

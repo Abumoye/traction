@@ -1,0 +1,13 @@
+{
+  "_route": {
+    "template": "search.html",
+    "output": "search/index.html",
+    "url": "/search/"
+  },
+  "meta": {
+    "title": "Search | Traction Outsourcing Limited",
+    "description": "Search the Traction Outsourcing website for services, events, articles, jobs and resources."
+  },
+  "noindex": true,
+  "placeholder": "What are you looking for? Try \"Training\", \"payroll\", \"careers\", \"recruitment\", \"online class\", ..."
+}

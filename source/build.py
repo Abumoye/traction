@@ -20,6 +20,7 @@ Run:  python3 build.py
 Then: python3 -m http.server -d dist 8080   (preview locally)
 """
 import html
+from html.parser import HTMLParser
 import json
 import os
 import re
@@ -682,11 +683,14 @@ def _plain(text):
     return _re.sub(r"\s+", " ", _html.unescape(text)).strip()
 
 
-def _article_body_text(art):
-    """Flatten an article JSON into plain text for full-text search."""
-    parts = [art.get("tag"), art.get("title")]
-    by = art.get("byline") or {}
-    parts += [by.get("author"), by.get("date"), by.get("read_time"), art.get("dek")]
+def _article_body_text(art, header=True):
+    """Flatten an article JSON into plain text for full-text search.
+    header=False leaves out the tag/title/byline lines (used for result snippets)."""
+    parts = []
+    if header:
+        by = art.get("byline") or {}
+        parts += [art.get("tag"), art.get("title"), by.get("author"), by.get("date"), by.get("read_time")]
+    parts += [art.get("dek")]
     for sec in art.get("sections", []):
         parts += [sec.get("heading"), sec.get("eyebrow"), sec.get("text")]
         parts += sec.get("paragraphs", []) or []
@@ -700,14 +704,14 @@ def _article_body_text(art):
     return " ".join(x for x in (_plain(p) for p in parts) if x)
 
 
-def build_search_index():
+def build_search_index(header=True):
     """One entry per article in articles-index.json (same order)."""
     index = load(CONTENT / "articles-index.json")
     out = []
     for card in index:
         slug = card["url"].strip("/").split("/")[-1]
         f = CONTENT / "articles" / f"{slug}.json"
-        body = _article_body_text(load(f)) if f.exists() else ""
+        body = _article_body_text(load(f), header) if f.exists() else ""
         out.append({
             "url": card["url"],
             "title": card["title"],
@@ -719,6 +723,181 @@ def build_search_index():
             "body": body,
         })
     return out
+
+
+# ---------------------------------------------------------------------------
+# Site-wide search index (/site-search-index.json)
+# ---------------------------------------------------------------------------
+# Built AFTER every page has been rendered: the finished HTML in dist/ is
+# crawled, so any page that is published is searchable automatically (no list
+# to maintain). Pages marked noindex (and /search/ itself) are left out, as are
+# the application pages of roles that are closed or past their closing date.
+# SEARCH_KEYWORDS adds plain-language words a visitor might type for a page
+# that the page text itself does not contain (e.g. "jobs" for the careers hub).
+SEARCH_KEYWORDS = {
+    "/": "home traction outsourcing nigeria overview",
+    "/apply/": "careers jobs job vacancies vacancy openings work with us employment hiring apply recruitment",
+    "/book-a-call/": "contact us call consultation appointment strategy call whatsapp phone email enquiry",
+    "/resources/": "download downloads ebook e-book book template free documents guide pdf excel",
+    "/articles/": "blog insights news press stories read",
+    "/partnerships/": "partner partners partnership collaborate affiliate",
+    "/services/staff-outsourcing/": "payroll hr human resources outsourcing staffing manpower employees hmo",
+    "/services/employee-training/": "training trainings workshop workshops course courses learning staff development coaching class classes",
+    "/services/events/": "events event retreat retreats class classes online class webinar webinars training seminar register registration",
+    "/services/startup-structuring/": "startup start-up company registration cac structure organogram investor",
+    "/services/corporate-restructuring/": "restructuring restructure turnaround reorganization organogram merger",
+    "/services/business-advisory/": "advisory consulting consultant strategy business growth",
+    "/brands/recruiters/": "recruitment recruiting recruiter hire hiring talent staffing placement ath",
+    "/brands/properties/": "real estate property properties land house houses rent buy sale estate",
+}
+
+SEARCH_TITLE_SUFFIX = re.compile(r"\s*[|–—-]\s*Traction Outsourcing(?: Limited)?\s*$", re.I)
+
+
+class _PageText(HTMLParser):
+    """Pull the title, description, headings and visible <main> text out of a page."""
+    SKIP = {"script", "style", "noscript", "svg", "form", "select", "option",
+            "textarea", "button", "nav", "header", "footer", "template"}
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.title = ""
+        self.desc = ""
+        self.noindex = False
+        self.h = []
+        self.h1 = ""
+        self.body = []
+        self._in_title = False
+        self._in_main = False
+        self._skip = 0
+        self._heading = None
+        self._hbuf = []
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag == "title":
+            self._in_title = True
+        elif tag == "meta":
+            n = (a.get("name") or "").lower()
+            if n == "description":
+                self.desc = a.get("content") or ""
+            elif n == "robots" and "noindex" in (a.get("content") or "").lower():
+                self.noindex = True
+        elif tag == "main":
+            self._in_main = True
+        if tag in self.SKIP:
+            self._skip += 1
+        if self._in_main and not self._skip and tag in ("h1", "h2", "h3"):
+            self._heading, self._hbuf = tag, []
+
+    def handle_endtag(self, tag):
+        if tag == "title":
+            self._in_title = False
+        elif tag == "main":
+            self._in_main = False
+        if tag in self.SKIP and self._skip:
+            self._skip -= 1
+        if self._heading == tag:
+            t = " ".join("".join(self._hbuf).split())
+            if t:
+                self.h.append(t)
+                if tag == "h1" and not self.h1:
+                    self.h1 = t
+            self._heading = None
+
+    def handle_data(self, data):
+        if self._in_title:
+            self.title += data
+        if not self._in_main or self._skip:
+            return
+        if self._heading:
+            self._hbuf.append(data)
+        t = " ".join(data.split())
+        if t:
+            self.body.append(t)
+
+
+def _search_type(url):
+    if url == "/":
+        return "Page"
+    if url.startswith("/services/events/"):
+        return "Event"
+    if url.startswith("/services/"):
+        return "Service"
+    if url == "/apply/":
+        return "Careers"
+    if url.startswith("/apply/"):
+        return "Job"
+    if url.startswith("/brands/"):
+        return "Brand"
+    if url.startswith("/partnerships"):
+        return "Partnership"
+    if url.startswith("/resources"):
+        return "Resource"
+    return "Page"
+
+
+def build_site_search_index():
+    """Every public page, article and downloadable resource as one list."""
+    inactive_jobs = {j["url"] for j in load_all_jobs() if j["state"] != "open"}
+    entries = []
+
+    # Articles: richer data (excerpt, tag, full body) than a page crawl gives.
+    for a in build_search_index(header=False):
+        entries.append({
+            "u": a["url"], "t": a["title"], "k": "Article", "d": a["excerpt"],
+            "h": a["tag"], "kw": "", "b": a["body"][:12000],
+        })
+
+    # Every other page: crawl the rendered HTML.
+    for f in sorted(DIST.rglob("index.html")):
+        url = "/" + f.parent.relative_to(DIST).as_posix() + "/"
+        if url == "/./":
+            url = "/"
+        if url == "/search/" or url in inactive_jobs:
+            continue
+        if url.startswith("/articles/") and url != "/articles/":
+            continue  # individual articles are added above
+        p = _PageText()
+        p.feed(f.read_text(encoding="utf-8"))
+        if p.noindex:
+            continue
+        title = SEARCH_TITLE_SUFFIX.sub("", " ".join(p.title.split()))
+        title = re.sub(r"\s*\|\s*Traction Outsourcing(?: Limited)?\s*$", "", title)
+        body = " ".join(p.body)
+        if url == "/articles/":
+            body = ""  # just a list of the article cards; articles are indexed on their own
+        # Result title = the first part of the SEO title (before " | "), which
+        # names the page plainly; the rest of the title and the on-page
+        # headings stay searchable through the headings field.
+        parts = [x.strip() for x in title.split(" | ")]
+        shown = parts[0] or p.h1
+        heads = list(dict.fromkeys(parts[1:] + p.h))
+        entries.append({
+            "u": url, "t": shown, "k": _search_type(url), "d": " ".join(p.desc.split()),
+            "h": " | ".join(heads), "kw": SEARCH_KEYWORDS.get(url, ""),
+            "b": body[:12000],
+        })
+
+    # Downloadable resources (books, templates): one entry each.
+    res_page = CONTENT / "pages" / "resources.json"
+    if res_page.exists():
+        for sec in load(res_page).get("sections", []):
+            if sec.get("type") != "resource-grid":
+                continue
+            items = list(sec.get("entries", []))
+            if isinstance(sec.get("featured"), dict):
+                items.append(sec["featured"])
+            for r in items:
+                if not r.get("title"):
+                    continue
+                entries.append({
+                    "u": "/resources/", "t": r["title"], "k": "Resource",
+                    "d": r.get("description", ""), "h": r.get("category", ""),
+                    "kw": "download free " + ("paid " if r.get("resource_type") == "paid" else "")
+                          + "document template ebook", "b": "",
+                })
+    return entries
 
 
 def write_article_feeds():
@@ -913,6 +1092,12 @@ def main():
 
     # ---- Job feeds (jobs.json / jobs.xml) ----
     write_job_feeds(load_open_jobs())
+
+    # ---- Site-wide search index (must run last: it reads the finished pages) ----
+    site_index = build_site_search_index()
+    write(DIST / "site-search-index.json",
+          json.dumps(site_index, ensure_ascii=False, separators=(",", ":")))
+    print(f"  built site-search-index.json ({len(site_index)} entries)")
 
     # ---- Article feeds (feed.xml / news-sitemap.xml) ----
     write_article_feeds()

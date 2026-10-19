@@ -134,7 +134,13 @@
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
         ],
         "opens": "00:00",
         "closes": "23:59"
@@ -169,6 +175,11 @@
     "secondary_cta": {
       "label": "Explore Our Services",
       "href": "#services"
+    },
+    "search": {
+      "label": "Search the website",
+      "placeholder": "What are you looking for? Try \"Training\", \"payroll\", \"careers\", \"recruitment\", \"online class\", ...",
+      "placeholder_short": "Search \"Training\", \"payroll\", \"careers\"..."
     }
   },
   "services": [
