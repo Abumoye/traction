@@ -68,9 +68,11 @@ Then open http://localhost:8080 in your browser.
   with a `"_route"` block naming its template, output path, and URL.
 - `content/articles/*.json` — one file per article, same `_route` pattern,
   rendered through `article.html`.
-- `content/articles-index.json` / `content/search-index.json` /
-  `content/categories.json` — power the `/articles/` grid and the live search
-  box (search-index.json holds full article body text for full-text search).
+- `content/articles-index.json` / `content/categories.json` — power the
+  `/articles/` grid. `search-index.json` is no longer hand-maintained: the
+  build generates it from `articles-index.json` plus each article's JSON
+  (full body text), so adding an article means adding its JSON file and one
+  entry to `articles-index.json`, and it is searchable automatically.
 - `static/` — CSS, JS, and images, copied into `dist/` as-is on build.
 - `dist/` — build output. This is what you'd deploy to GitHub Pages (same
   static-file setup the live site already uses — a CNAME file and a straight
