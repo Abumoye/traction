@@ -737,7 +737,7 @@ def build_search_index(header=True):
 SEARCH_KEYWORDS = {
     "/": "home traction outsourcing nigeria overview",
     "/apply/": "careers jobs job vacancies vacancy openings work with us employment hiring apply recruitment",
-    "/book-a-call/": "contact us call consultation appointment strategy call whatsapp phone email enquiry",
+    "/book-a-call/": "contact us contact number phone number telephone call consultation appointment strategy call whatsapp email enquiry inquiry address location office visit",
     "/resources/": "download downloads ebook e-book book template free documents guide pdf excel",
     "/articles/": "blog insights news press stories read",
     "/partnerships/": "partner partners partnership collaborate affiliate",
