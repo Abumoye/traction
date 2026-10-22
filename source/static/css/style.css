@@ -275,6 +275,28 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
 .card .resource-icon-img { width: 48px; height: 48px; margin-bottom: 20px; }
 .card .resource-icon-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .card h3 { margin-bottom: 10px; }
+
+/* Event cards: optional image on top (1200x630, same crop as article cards) and a
+   greyed-out "CLOSED" state once the event's end date has passed. */
+.card-media { padding: 0; overflow: hidden; }
+.card-media-img { aspect-ratio: 1200 / 630; background: var(--ash); overflow: hidden; }
+.card-media-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card-media .card-inner { padding: 26px 30px 32px; }
+.card.is-closed { position: relative; overflow: hidden; }
+.card.is-closed:hover { transform: none; box-shadow: none; border-color: var(--hairline); }
+.card.is-closed > .card-media-img,
+.card.is-closed > .card-inner { filter: grayscale(1); opacity: 0.5; }
+.card.is-closed .card-chip i { color: var(--ink-faint); }
+.event-closed-note { display: inline-block; font-size: 14px; font-weight: 600; color: var(--ink-faint); }
+.closed-stamp {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(-24deg);
+  font-size: clamp(38px, 4.4vw, 54px); font-weight: 800; letter-spacing: 0.08em; line-height: 1;
+  color: #c62828; border: 6px solid #c62828; border-radius: 12px; padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.55); opacity: 0.9;
+  pointer-events: none; user-select: none; white-space: nowrap;
+}
+
 .card p { font-size: 15px; margin-bottom: 20px; }
 
 /* Glass card variant, used over tinted/photo backgrounds */

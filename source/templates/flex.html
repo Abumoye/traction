@@ -68,12 +68,16 @@
             {% if e.text %}<p style="font-size:14px;">{{ e.text }}</p>{% endif %}
           </div>
           {% elif sec.style == 'case-study' %}
-          <div class="card reveal" style="grid-column: span {{ e.span | default(1) }};">
-            {% if e.tag %}<span class="tag-pill">{{ e.tag }}</span>{% endif %}
-            <h3>{{ e.title }}</h3>
-            <p>{{ e.text }}</p>
-            {% if e.chips %}<div class="card-chips">{% for c in e.chips %}<span class="card-chip">{% if c.icon %}<i class="fas {{ c.icon }}" aria-hidden="true"></i>{% endif %}<span><b>{{ c.label }}</b> {{ c.value }}</span></span>{% endfor %}</div>{% endif %}
-            {% if e.cta %}<a href="{{ e.href }}" class="link-arrow">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% endif %}
+          <div class="card reveal{{ ' card-media' if e.image else '' }}{{ ' is-closed' if e.closed else '' }}" style="grid-column: span {{ e.span | default(1) }};">
+            {% if e.image %}<div class="card-media-img"><img src="{{ e.image }}" alt="{{ e.image_alt | default(e.title) | e }}" width="1200" height="630" loading="lazy"></div>{% endif %}
+            <div class="card-inner">
+              {% if e.tag %}<span class="tag-pill">{{ e.tag }}</span>{% endif %}
+              <h3>{{ e.title }}</h3>
+              <p>{{ e.text }}</p>
+              {% if e.chips %}<div class="card-chips">{% for c in e.chips %}<span class="card-chip">{% if c.icon %}<i class="fas {{ c.icon }}" aria-hidden="true"></i>{% endif %}<span><b>{{ c.label }}</b> {{ c.value }}</span></span>{% endfor %}</div>{% endif %}
+              {% if e.closed %}<span class="event-closed-note">This event has ended</span>{% elif e.cta %}<a href="{{ e.href }}" class="link-arrow">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% endif %}
+            </div>
+            {% if e.closed %}<span class="closed-stamp">CLOSED</span>{% endif %}
           </div>
           {% elif sec.style == 'stat' %}
           <div class="reveal" style="text-align:center;">

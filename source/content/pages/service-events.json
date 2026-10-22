@@ -161,7 +161,10 @@
               "label": "Date & Time:",
               "value": "Friday, 16 October 2026, 3:00 PM WAT"
             }
-          ]
+          ],
+          "image": "/images/events/structure.jpg",
+          "image_alt": "Poster for the free live class on the basis of organizational restructuring in 2027, 16 October 2026, 3:00 PM on Google Meet.",
+          "ends": "2026-10-16"
         },
         {
           "title": "How to Build a Resilient Management Team for Growing Businesses",
@@ -179,7 +182,10 @@
               "label": "Date & Time:",
               "value": "Friday, 23 October 2026, 3:00 PM WAT"
             }
-          ]
+          ],
+          "image": "/images/events/resilient.jpg",
+          "image_alt": "Poster for the free live class on building a resilient management team for growing businesses, 23 October 2026, 3:00 PM on Google Meet.",
+          "ends": "2026-10-23"
         },
         {
           "title": "T-ICR 2026: Traction Outsourcing International Corporate Retreat",
@@ -197,7 +203,10 @@
               "label": "Date & Time:",
               "value": "22 – 30 November 2026"
             }
-          ]
+          ],
+          "image": "/images/events/kigali.jpg",
+          "image_alt": "Kigali, Rwanda, venue of the T-ICR 2026 Traction Outsourcing International Corporate Retreat.",
+          "ends": "2026-11-30"
         },
         {
           "tag": "Coming Soon",
