@@ -207,6 +207,27 @@
           "image": "/images/events/kigali.jpg",
           "image_alt": "Kigali, Rwanda, venue of the T-ICR 2026 Traction Outsourcing International Corporate Retreat.",
           "ends": "2026-11-30"
+        },
+        {
+          "title": "Corporate Retreat Planning: Applications Open for December 2026 to January 2027",
+          "text": "We plan and run your company's annual retreat from start to finish: venue, transport, branding, programme, awards, gifts and media. Choose from 12 Nigerian locations, or travel to Ghana, Cameroon or Togo.",
+          "cta": "Read Details and Apply",
+          "href": "/articles/corporate-retreats-applications-open/",
+          "chips": [
+            {
+              "icon": "fa-location-dot",
+              "label": "Venue:",
+              "value": "Nigeria, Ghana, Cameroon or Togo"
+            },
+            {
+              "icon": "fa-calendar-days",
+              "label": "Date & Time:",
+              "value": "December 2026 to January 2027"
+            }
+          ],
+          "image": "/images/events/corporate-retreats-open.jpg",
+          "image_alt": "A Nigerian corporate team relaxing together at a lakeside retreat venue at sunset",
+          "ends": "2027-01-31"
         }
       ]
     },
