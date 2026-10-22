@@ -118,3 +118,21 @@ closed or expired roles are left out.
 - Search words and their synonyms live in `static/js/site-search.js`
   (`SYNONYMS`), and the ranking weights are in `termScore`.
 - The hero box text is in `content/pages/home.json` under `hero.search`.
+
+## Event cards (images and "CLOSED")
+
+The cards in the "Upcoming Events" grid on `/services/events/` live in
+`content/pages/service-events.json` (a `grid` section with `"style": "case-study"`).
+Each card can have:
+
+- `"image"`: path to a 1200 x 630 JPG, e.g. `/images/events/<slug>.jpg`
+  (files go in `static/images/events/`), and `"image_alt"`: what the picture shows.
+  A card without an image simply shows no picture.
+- `"ends"`: the last day of the event as `YYYY-MM-DD`. From the next day (Nigeria
+  time) the card is greyed out, shows a diagonal red "CLOSED" stamp, loses its
+  register link and moves after the cards that are still open. The nightly rebuild
+  (about 00:10 WAT) does this, so nobody has to edit the page. A card with no `ends`
+  (for example "Coming Soon") never closes. Logic: `mark_event_cards` in `build.py`;
+  styles: `.card-media`, `.is-closed`, `.closed-stamp` in `static/css/style.css`.
+
+To test a closed card locally: `BUILD_TODAY=2026-12-01 python3 build.py`.

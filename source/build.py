@@ -543,6 +543,22 @@ def mark_careers_cards(data, all_jobs):
                 card["cta_label"] = "Closed"
 
 
+def mark_event_cards(data):
+    """Event cards (case-study grids) may carry an "ends" date (YYYY-MM-DD, the
+    last day of the event). Once that day has passed (Nigeria time) the card is
+    marked closed (greyed out, "CLOSED" stamp, no register link) and moved after
+    the cards that are still open. The nightly rebuild flips it at about 00:10 WAT."""
+    today = today_wat()
+    for sec in data.get("sections", []):
+        if sec.get("type") != "grid" or sec.get("style") != "case-study":
+            continue
+        entries = sec.get("entries", [])
+        for e in entries:
+            if e.get("ends") and today > date.fromisoformat(e["ends"]):
+                e["closed"] = True
+        sec["entries"] = [e for e in entries if not e.get("closed")] + [e for e in entries if e.get("closed")]
+
+
 def build_careers_collection_schema(open_jobs, meta):
     return {
         "@context": "https://schema.org",
@@ -1017,6 +1033,8 @@ def render_json_page(json_path: Path):
         mark_careers_cards(data, all_jobs)
         if "CollectionPage" not in existing_types:
             schema.append(build_careers_collection_schema(open_jobs, data.get("meta", {})))
+
+    mark_event_cards(data)
 
     tpl = env.get_template(route["template"])
     html = tpl.render(path=route["url"], schema=schema, **data)
