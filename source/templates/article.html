@@ -35,10 +35,27 @@
             callout         highlighted box: eyebrow, icon, heading, paragraphs,
                             list (icon items), buttons [{text, href, style}]
             contact         heading, text, items: icon, label, value, href
+            image           src, alt, optional caption: one full-width photo
+            image-row       images [{src, alt, caption}]: photos side by side
+            (a text section's list becomes a numbered list with "ordered": true)
             sources         heading, items: text, href
         #}
         {% for sec in sections %}
-          {% if sec.type == 'quote' %}
+          {% if sec.type == 'image' %}
+            <figure class="article-figure reveal">
+              <img src="{{ sec.src }}" alt="{{ sec.alt | e }}" width="1200" height="670" loading="lazy">
+              {% if sec.caption %}<figcaption>{{ sec.caption }}</figcaption>{% endif %}
+            </figure>
+          {% elif sec.type == 'image-row' %}
+            <div class="article-figure-row reveal">
+              {% for im in sec.images %}
+              <figure class="article-figure">
+                <img src="{{ im.src }}" alt="{{ im.alt | e }}" width="1200" height="670" loading="lazy">
+                {% if im.caption %}<figcaption>{{ im.caption }}</figcaption>{% endif %}
+              </figure>
+              {% endfor %}
+            </div>
+          {% elif sec.type == 'quote' %}
             {% if sec.cite %}
             <figure class="pull-quote pull-quote-cited">
               <blockquote>{{ sec.text }}</blockquote>
@@ -96,9 +113,10 @@
             {% if sec.heading %}{% if sec.level == 3 %}<h3>{% if sec.icon %}<i class="{{ sec.icon }}" aria-hidden="true"></i>{% endif %}{{ sec.heading }}</h3>{% else %}<h2>{% if sec.icon %}<i class="{{ sec.icon }}" aria-hidden="true"></i>{% endif %}{{ sec.heading }}</h2>{% endif %}{% endif %}
             {% if sec.paragraphs %}{% for p in sec.paragraphs %}<p>{{ p }}</p>{% endfor %}{% endif %}
             {% if sec.list %}
-            <ul{% if sec.list[0].icon %} class="icon-list"{% endif %}>
+            {% set lt = 'ol' if sec.ordered else 'ul' %}
+            <{{ lt }}{% if sec.list[0].icon %} class="icon-list"{% endif %}>
               {% for li in sec.list %}<li>{% if li.icon %}<i class="{{ li.icon }}" aria-hidden="true"></i><span>{% endif %}{% if li.b %}<strong>{{ li.b }}</strong> {% endif %}{{ li.t }}{% if li.icon %}</span>{% endif %}</li>{% endfor %}
-            </ul>
+            </{{ lt }}>
             {% endif %}
           {% endif %}
         {% endfor %}
