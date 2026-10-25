@@ -5,7 +5,7 @@
     "logo": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
   },
   "careersPage": "https://tolnigeria.com/apply/",
-  "lastUpdated": "2026-10-13",
+  "lastUpdated": "2026-10-25",
   "jobs": [
     {
       "id": "accountant",
@@ -126,6 +126,45 @@
         "Other statutory benefits."
       ],
       "industry": "Hospitality"
+    },
+    {
+      "id": "sales-assistant",
+      "title": "Sales Assistant",
+      "url": "https://tolnigeria.com/apply/sales-assistant/",
+      "applyUrl": "https://tolnigeria.com/apply/sales-assistant/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Wuse 2",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-10-25",
+      "validThrough": "2026-11-12T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 100000,
+        "period": "MONTH",
+        "display": "₦100,000/month"
+      },
+      "description": "We are hiring a Sales Assistant for a clothing store in Wuse 2, Abuja. This is a full-time, onsite role for a presentable, confident communicator who is comfortable handling fabrics and can resume immediately.\nResponsibilities: Welcome customers, understand what they are looking for and help them choose the right clothing and fabrics. Handle, fold and display fabrics and clothing with care, and keep the shop floor tidy. Keep the store presentable and report stock and customer requests to the store management.\nRequirements: 1-2 Years' Experience in Sales or Retail Good communication skills Presentable and comfortable handling fabrics Able to commute to Wuse 2, Abuja and resume immediately CV Required (PDF)\nBenefits: Other statutory benefits.",
+      "responsibilities": [
+        "Welcome customers, understand what they are looking for and help them choose the right clothing and fabrics.",
+        "Handle, fold and display fabrics and clothing with care, and keep the shop floor tidy.",
+        "Keep the store presentable and report stock and customer requests to the store management."
+      ],
+      "qualifications": [
+        "1-2 Years' Experience in Sales or Retail",
+        "Good communication skills",
+        "Presentable and comfortable handling fabrics",
+        "Able to commute to Wuse 2, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ],
+      "industry": "Retail"
     }
   ]
 }
