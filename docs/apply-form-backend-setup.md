@@ -11,6 +11,10 @@ sheet used by the other forms on the site. It powers:
   Name, Last Name, Phone, Email, Gender, Where do you live in Abuja, Date of Birth, Can you
   resume immediately, CV upload as PDF). Its entries are saved on a separate tab
   named **Storekeeper Kuje** in the same Sheet (see "Storekeeper Kuje tab" below).
+- `/apply/sales-assistant/` — the **Sales Assistant (Wuse 2)** application, 9 fields (Full Name, Gender,
+  Age as at 31 October 2026, Phone, Email, Can you resume immediately, Do you live in Abuja,
+  Do you speak Hausa, CV upload as PDF). Its entries are saved on a separate tab named
+  **Sales Assistant** in the same Sheet.
 
 Every submission is saved as a row in a Google Sheet, and the uploaded CV
 is saved as a PDF file in a dedicated Google Drive folder, with a link to
@@ -88,6 +92,10 @@ function doPost(e) {
 
   if (data.formType === 'apply-strategy-officer') {
     return handleApplyStrategyOfficer(data);
+  }
+
+  if (data.formType === 'apply-sales-assistant') {
+    return handleApplySalesAssistant(data);
   }
 
   return ContentService.createTextOutput(
@@ -255,6 +263,64 @@ function handleApplyStrategyOfficer(data) {
   sheet.getRange(row, 5).setNumberFormat('@').setValue(phone);
   sheet.getRange(row, 7).setNumberFormat('@').setValue(years);
   sheet.getRange(row, 8).setWrap(true);
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ========================= SALES ASSISTANT (WUSE 2) ========================= */
+
+// Entries go to their own tab, "Sales Assistant", in the same spreadsheet. The
+// tab and its header row are created automatically on the first submission.
+// CV is PDF only, saved in the same Drive folder as the other CVs.
+var SALES_ASSISTANT_HEADERS = [
+  'Timestamp', 'Role', 'Full Name', 'Gender', 'Age (as at 31 Oct 2026)',
+  'Phone Number', 'Email', 'Can Resume Immediately', 'Lives in Abuja',
+  'Speaks Hausa', 'CV Link'
+];
+
+function getSalesAssistantSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName('Sales Assistant');
+  if (!sheet) sheet = ss.insertSheet('Sales Assistant');
+
+  var current = sheet.getLastColumn() > 0 ? sheet.getRange(1, 1, 1, SALES_ASSISTANT_HEADERS.length).getValues()[0] : [];
+  if (current.join('|') !== SALES_ASSISTANT_HEADERS.join('|')) {
+    sheet.getRange(1, 1, 1, SALES_ASSISTANT_HEADERS.length).setValues([SALES_ASSISTANT_HEADERS]).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+    // Phone column is plain text so the leading 0 (e.g. 08052033145) is kept.
+    sheet.getRange(2, 6, sheet.getMaxRows() - 1, 1).setNumberFormat('@');
+  }
+  return sheet;
+}
+
+function handleApplySalesAssistant(data) {
+  var sheet = getSalesAssistantSheet();
+
+  var role = (data.role || '').toString().trim();
+  var fullName = (data.fullName || '').toString().trim();
+  var gender = (data.gender || '').toString().trim();
+  var age = Number((data.age || '').toString().replace(/\D/g, '')) || '';
+  var phone = (data.phone || '').toString().replace(/\D/g, '');
+  var email = (data.email || '').toString().trim();
+  var resumeImmediately = (data.resumeImmediately || '').toString().trim();
+  var livesInAbuja = (data.livesInAbuja || '').toString().trim();
+  var speaksHausa = (data.speaksHausa || '').toString().trim();
+
+  // CV: PDF only. Anything that is not a real PDF is not saved to Drive, and
+  // the row says so (the website already blocks these; this is the backstop).
+  var cvLink = '';
+  try {
+    cvLink = saveCvToDrive(data.cvBase64, data.cvFileName, 'application/pdf', fullName, true);
+  } catch (err) {
+    Logger.log('CV upload failed: ' + err);
+    cvLink = 'Upload failed or not a PDF - contact applicant for CV';
+  }
+
+  sheet.appendRow([new Date(), role, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, speaksHausa, cvLink]);
+  var row = sheet.getLastRow();
+  sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success' })

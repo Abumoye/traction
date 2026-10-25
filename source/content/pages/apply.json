@@ -40,6 +40,13 @@
       "type": "job-cards",
       "jobs": [
         {
+          "title": "Sales Assistant",
+          "location": "Wuse 2, Abuja",
+          "salary": "₦100,000/month",
+          "href": "/apply/sales-assistant/",
+          "active": true
+        },
+        {
           "title": "Chef",
           "location": "Wuse 2, Abuja",
           "salary": "₦250,000/month",

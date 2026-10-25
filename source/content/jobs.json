@@ -184,6 +184,39 @@
         "Opportunity to grow with a hospitality company and receive training.",
         "Other statutory benefits."
       ]
+    },
+    {
+      "id": "sales-assistant",
+      "status": "open",
+      "title": "Sales Assistant",
+      "url": "/apply/sales-assistant/",
+      "locality": "Wuse 2",
+      "region": "FCT",
+      "datePosted": "2026-10-25",
+      "employmentType": "FULL_TIME",
+      "industry": "Retail",
+      "experienceMonths": 12,
+      "salary": {
+        "value": 100000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Sales Assistant for a clothing store in Wuse 2, Abuja. This is a full-time, onsite role for a presentable, confident communicator who is comfortable handling fabrics and can resume immediately.",
+      "responsibilities": [
+        "Welcome customers, understand what they are looking for and help them choose the right clothing and fabrics.",
+        "Handle, fold and display fabrics and clothing with care, and keep the shop floor tidy.",
+        "Keep the store presentable and report stock and customer requests to the store management."
+      ],
+      "qualifications": [
+        "1-2 Years' Experience in Sales or Retail",
+        "Good communication skills",
+        "Presentable and comfortable handling fabrics",
+        "Able to commute to Wuse 2, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ]
     }
   ]
 }
