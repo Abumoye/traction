@@ -329,6 +329,11 @@
               {% if f.max_words %}<p class="digit-counter" data-words-for="{{ f.name }}" aria-live="polite">0/{{ f.max_words }} words</p>{% endif %}
               {% if f.help %}<p style="font-size:12.5px;color:var(--ink-faint);margin:6px 0 0;">{{ f.help }}</p>{% endif %}
             </div>
+            {% elif f.input_type == 'number' %}
+            <div>
+              <label for="{{ f.name }}" style="display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">{{ f.placeholder }}{% if f.required | default(true) %} *{% endif %}</label>
+              <input id="{{ f.name }}" name="{{ f.name }}" type="number" inputmode="numeric" step="1" {% if f.min is defined %}min="{{ f.min }}"{% endif %} {% if f.max is defined %}max="{{ f.max }}"{% endif %} {% if f.required | default(true) %}required{% endif %} {% if f.title %}title="{{ f.title | e }}"{% endif %} style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);background:var(--white);color:var(--ink);font-size:15px;">
+            </div>
             {% elif f.input_type == 'date' %}
             <div>
               <label for="{{ f.name }}" style="display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:8px;">{{ f.placeholder }}{% if f.required | default(true) %} *{% endif %}</label>
