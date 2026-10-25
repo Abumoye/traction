@@ -41,3 +41,11 @@ Change its `"status"` to `"closed"` in `jobs.json`. On the next build it is trea
 2. Search Console: submit `sitemap.xml`, run URL Inspection on `/apply/` and each job page, and watch the Enhancements > Job postings report.
 3. Submit `https://tolnigeria.com/jobs.xml` to aggregators that accept feeds (Jooble, Adzuna, Talent.com and similar).
 4. Optionally post the same role on Jobberman, Indeed, LinkedIn and MyJobMag, linking back to the apply page.
+
+## Card images on /apply/
+
+Each role card on `/apply/` (the `job-cards` section of `source/content/pages/apply.json`) can show a photo at the top. Add `"image": "/images/jobs/<job-id>.jpg"` and a short `"image_alt"` (leave it out if the photo is only decoration) to the card. Photos are **1200 x 630 pixels, JPG, under about 250 KB**, saved in `source/static/images/jobs/`. A card without `image` shows a plain icon tile (its `icon`, a Font Awesome name) in the same space, so no card is ever empty. Closed roles are greyed out automatically. The card status ("Open", "Closing soon" when 5 days or fewer remain, "Closed") and the Open / Closed counts above the cards come from the build, so nothing is typed by hand. The six "Not Yet Open" placeholder cards were removed from `apply.json` when this layout was introduced.
+
+### Share image (WhatsApp / Facebook)
+
+Each job page uses the same 1200 x 630 image as its card: `meta.image` = `/images/jobs/<job-id>.jpg`, `meta.image_height` = 630, `meta.image_alt` describing the picture. Do this for every new role (card `image` and the job page `meta.image` point at the same file). Social apps cache by URL, so after replacing a picture use a new file name or re-scrape with the Facebook Sharing Debugger.

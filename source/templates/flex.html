@@ -282,7 +282,7 @@
       </div>
 
     {% elif sec.type == 'cta' %}
-      <div class="cta-band reveal">
+      <div class="cta-band reveal{{ ' cta-band-square' if sec.square else '' }}">
         <h2>{{ sec.heading }}</h2>
         {% if sec.text %}<p>{{ sec.text }}</p>{% endif %}
         <a href="{{ sec.href }}" class="btn btn-primary" {% if sec.modal %}data-open-modal="{{ sec.modal }}"{% endif %} {% if sec.blank %}target="_blank" rel="noopener"{% endif %}>{{ sec.button }}</a>
@@ -392,20 +392,41 @@
     {% elif sec.type == 'job-cards' %}
       {% if sec.heading %}<h2 class="section-title reveal">{{ sec.heading }}</h2>{% endif %}
       {% if sec.sub %}<p class="section-sub reveal">{{ sec.sub }}</p>{% endif %}
-      <div class="grid grid-3">
-        {% for job in sec.jobs %}
-        <div class="card job-card reveal{{ ' job-card-inactive' if not job.active else '' }}">
-          <h3 class="job-card-title">{{ job.title }}</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> {{ job.location }}</p>
-          {% if job.salary %}<p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> {{ job.salary }}</p>{% endif %}{% if job.closing %}<p class="job-card-salary"><i class="fa-regular fa-calendar"></i> {{ job.closing }}</p>{% endif %}
-          {% if job.active %}
-          <a href="{{ job.href }}" class="btn btn-primary job-card-btn">{{ job.cta_label | default('Apply Now') }}</a>
-          {% else %}
-          <span class="btn btn-disabled job-card-btn" aria-disabled="true">{{ job.cta_label | default('Not Yet Open') }}</span>
-          {% endif %}
+      {% set open_n = sec.jobs | selectattr('active') | list | length %}
+      {% if sec.toolbar %}
+      <div class="careers-toolbar reveal" data-careers-toolbar>
+        <label class="careers-search"><i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+          <span class="sr-only">Filter roles by title or location</span>
+          <input type="search" id="careersSearch" placeholder="Filter by title or location..." autocomplete="off">
+        </label>
+        <div class="careers-tabs" role="group" aria-label="Filter roles">
+          <button type="button" class="active" data-filter="all" aria-pressed="true">All roles ({{ sec.jobs | length }})</button>
+          <button type="button" data-filter="open" aria-pressed="false">Open ({{ open_n }})</button>
+          <button type="button" data-filter="closed" aria-pressed="false">Closed ({{ sec.jobs | length - open_n }})</button>
         </div>
+      </div>
+      {% endif %}
+      <div class="grid grid-3" id="careersGrid">
+        {% for job in sec.jobs %}
+        <article class="card job-card job-card-v2 reveal{{ ' job-card-inactive' if not job.active else '' }}" data-state="{{ 'open' if job.active else 'closed' }}" data-search="{{ (job.title ~ ' ' ~ job.location) | lower | replace(',', ' ') | e }}">
+          <div class="job-media">
+            {% if job.image %}<img src="{{ job.image }}" alt="{{ job.image_alt | default('') | e }}" width="1200" height="630" loading="lazy">{% else %}<span class="job-media-fallback" aria-hidden="true"><i class="fa-solid {{ job.icon | default('fa-briefcase') }}"></i></span>{% endif %}
+          </div>
+          <div class="job-card-inner">
+            <span class="job-badge{{ ' job-badge-closed' if not job.active else (' job-badge-soon' if job.soon else '') }}">{{ 'Closed' if not job.active else ('Closing soon' if job.soon else 'Open') }}</span>
+            <h3 class="job-card-title">{{ job.title }}</h3>
+            <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> {{ job.location }}</p>
+            {% if job.salary %}<p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> {{ job.salary }}</p>{% endif %}{% if job.closing %}<p class="job-card-salary job-card-closing{{ ' soon' if job.soon else '' }}"><i class="fa-regular fa-calendar"></i> {{ job.closing }}</p>{% endif %}
+            {% if job.active %}
+            <a href="{{ job.href }}" class="btn btn-primary job-card-btn">{{ job.cta_label | default('Apply Now') }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            {% else %}
+            <span class="btn btn-disabled job-card-btn" aria-disabled="true">{{ job.cta_label | default('Not Yet Open') }}</span>
+            {% endif %}
+          </div>
+        </article>
         {% endfor %}
       </div>
+      <p class="careers-empty" id="careersEmpty" hidden>No roles match your filter. <button type="button" id="careersReset">Reset filter</button></p>
     {% endif %}
 
   </div>

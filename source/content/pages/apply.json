@@ -44,81 +44,73 @@
           "location": "Wuse 2, Abuja",
           "salary": "₦100,000/month",
           "href": "/apply/sales-assistant/",
-          "active": true
+          "active": true,
+          "icon": "fa-shirt",
+          "image": "/images/jobs/sales-assistant.jpg",
+          "image_alt": "Smiling woman in an orange blazer beside the Traction Outsourcing logo and an Apply Now button, for the Sales Assistant job"
         },
         {
           "title": "Chef",
           "location": "Wuse 2, Abuja",
           "salary": "₦250,000/month",
           "href": "/apply/chef/",
-          "active": true
+          "active": true,
+          "icon": "fa-utensils",
+          "image": "/images/jobs/chef.jpg",
+          "image_alt": "Smiling chef in a white jacket holding a ladle and spatula beside the Traction Outsourcing logo and an Apply Now button, for the Chef job"
         },
         {
           "title": "Tech Sales Closer",
           "location": "Remote, Nigeria",
           "salary": "₦100,000/month + commission",
           "href": "/apply/tech-sales-closer/",
-          "active": true
+          "active": true,
+          "icon": "fa-headset",
+          "image": "/images/jobs/tech-sales-closer.jpg",
+          "image_alt": "Smiling woman wearing a headset beside the Traction Outsourcing logo and an Apply Now button, for the Tech Sales Closer job"
         },
         {
           "title": "Accountant",
           "location": "Abuja",
           "salary": "₦350,000/month",
           "href": "/apply/accountant/",
-          "active": true
+          "active": true,
+          "icon": "fa-calculator",
+          "image": "/images/jobs/accountant.jpg",
+          "image_alt": "Smiling man in a navy suit and blue tie beside the Traction Outsourcing logo and an Apply Now button, for the Accountant job"
         },
         {
           "title": "Real Estate Sales Manager",
           "location": "Kado, Abuja",
           "href": "/apply/real-estate-sales-manager-100/",
           "active": true,
-          "salary": "₦450,000/month"
+          "salary": "₦450,000/month",
+          "icon": "fa-building",
+          "image": "/images/jobs/real-estate-sales-manager-100.jpg",
+          "image_alt": "Smiling woman in a blue hard hat and blazer beside the Traction Outsourcing logo and an Apply Now button, for the Real Estate Sales Manager job"
         },
         {
           "title": "Storekeeping Assistant",
           "location": "Kuje, Abuja",
           "salary": "₦100,000/month",
           "href": "/apply/storekeeping-assistant-kuje/",
-          "active": true
+          "active": true,
+          "icon": "fa-boxes-stacked",
+          "image": "/images/jobs/storekeeping-assistant-kuje.jpg",
+          "image_alt": "Smiling woman in a green jacket holding a phone beside the Traction Outsourcing logo and an Apply Now button, for the Storekeeping Assistant job"
         },
         {
           "title": "Business Strategy Officer",
           "location": "Remote, Nigeria",
           "salary": "₦100,000/month",
           "href": "/apply/business-strategy-officer/",
-          "active": true
-        },
-        {
-          "title": "HR Manager",
-          "location": "Kuje, Abuja",
-          "active": false
-        },
-        {
-          "title": "Sales Executive",
-          "location": "Asokoro, Abuja",
-          "active": false
-        },
-        {
-          "title": "General Manager",
-          "location": "Lugbe, Abuja",
-          "active": false
-        },
-        {
-          "title": "Housekeeper",
-          "location": "Wuse 2, Abuja",
-          "active": false
-        },
-        {
-          "title": "Internal Auditor",
-          "location": "Wuse 2, Abuja",
-          "active": false
-        },
-        {
-          "title": "Accounting Officer",
-          "location": "Wuse 2, Abuja",
-          "active": false
+          "active": true,
+          "icon": "fa-chess",
+          "image": "/images/jobs/business-strategy-officer.jpg",
+          "image_alt": "Smiling woman in a white blouse with arms crossed beside the Traction Outsourcing logo and an Apply Now button, for the Business Strategy Officer job"
         }
-      ]
+      ],
+      "toolbar": true
     }
   ],
   "head_links": [
@@ -134,5 +126,8 @@
       "href": "/jobs.xml",
       "title": "Open jobs (XML feed)"
     }
+  ],
+  "scripts": [
+    "/js/careers-filter.js"
   ]
 }
