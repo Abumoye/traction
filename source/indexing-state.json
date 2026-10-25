@@ -1,7 +1,7 @@
 {
   "_comment": "What Google was last told for each job page. Written by scripts/notify_google_indexing.py; do not edit by hand.",
   "urls": {
-    "https://tolnigeria.com/apply/accountant/": "b92e07d42fe34942",
+    "https://tolnigeria.com/apply/accountant/": "40bde6aad5cb165f",
     "https://tolnigeria.com/apply/chef/": "2465e25cebb22705",
     "https://tolnigeria.com/apply/sales-assistant/": "8fd69eb6a36fd0eb",
     "https://tolnigeria.com/apply/tech-sales-closer/": "a07d8b9038a541b3"
