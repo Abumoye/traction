@@ -171,126 +171,129 @@
     
       
       
-      <div class="grid grid-3">
-        
-        <div class="card job-card reveal">
-          <h3 class="job-card-title">Sales Assistant</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Wuse 2, Abuja</p>
-          <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦100,000/month</p><p class="job-card-salary"><i class="fa-regular fa-calendar"></i> Closes 12 Nov 2026</p>
-          
-          <a href="/apply/sales-assistant/" class="btn btn-primary job-card-btn">Apply Now</a>
-          
+      
+      
+      <div class="careers-toolbar reveal" data-careers-toolbar>
+        <label class="careers-search"><i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+          <span class="sr-only">Filter roles by title or location</span>
+          <input type="search" id="careersSearch" placeholder="Filter by title or location..." autocomplete="off">
+        </label>
+        <div class="careers-tabs" role="group" aria-label="Filter roles">
+          <button type="button" class="active" data-filter="all" aria-pressed="true">All roles (7)</button>
+          <button type="button" data-filter="open" aria-pressed="false">Open (4)</button>
+          <button type="button" data-filter="closed" aria-pressed="false">Closed (3)</button>
         </div>
+      </div>
+      
+      <div class="grid grid-3" id="careersGrid">
         
-        <div class="card job-card reveal">
-          <h3 class="job-card-title">Chef</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Wuse 2, Abuja</p>
-          <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦250,000/month</p><p class="job-card-salary"><i class="fa-regular fa-calendar"></i> Closes 2 Nov 2026</p>
-          
-          <a href="/apply/chef/" class="btn btn-primary job-card-btn">Apply Now</a>
-          
-        </div>
+        <article class="card job-card job-card-v2 reveal" data-state="open" data-search="sales assistant wuse 2  abuja">
+          <div class="job-media">
+            <img src="/images/jobs/sales-assistant.jpg" alt="Smiling woman in an orange blazer beside the Traction Outsourcing logo and an Apply Now button, for the Sales Assistant job" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="job-card-inner">
+            <span class="job-badge">Open</span>
+            <h3 class="job-card-title">Sales Assistant</h3>
+            <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Wuse 2, Abuja</p>
+            <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦100,000/month</p><p class="job-card-salary job-card-closing"><i class="fa-regular fa-calendar"></i> Closes 12 Nov 2026</p>
+            
+            <a href="/apply/sales-assistant/" class="btn btn-primary job-card-btn">Apply Now <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            
+          </div>
+        </article>
         
-        <div class="card job-card reveal">
-          <h3 class="job-card-title">Tech Sales Closer</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Remote, Nigeria</p>
-          <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦100,000/month + commission</p><p class="job-card-salary"><i class="fa-regular fa-calendar"></i> Closes 30 Oct 2026</p>
-          
-          <a href="/apply/tech-sales-closer/" class="btn btn-primary job-card-btn">Apply Now</a>
-          
-        </div>
+        <article class="card job-card job-card-v2 reveal" data-state="open" data-search="chef wuse 2  abuja">
+          <div class="job-media">
+            <img src="/images/jobs/chef.jpg" alt="Smiling chef in a white jacket holding a ladle and spatula beside the Traction Outsourcing logo and an Apply Now button, for the Chef job" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="job-card-inner">
+            <span class="job-badge">Open</span>
+            <h3 class="job-card-title">Chef</h3>
+            <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Wuse 2, Abuja</p>
+            <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦250,000/month</p><p class="job-card-salary job-card-closing"><i class="fa-regular fa-calendar"></i> Closes 2 Nov 2026</p>
+            
+            <a href="/apply/chef/" class="btn btn-primary job-card-btn">Apply Now <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            
+          </div>
+        </article>
         
-        <div class="card job-card reveal">
-          <h3 class="job-card-title">Accountant</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Abuja</p>
-          <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦350,000/month</p><p class="job-card-salary"><i class="fa-regular fa-calendar"></i> Closes 29 Oct 2026</p>
-          
-          <a href="/apply/accountant/" class="btn btn-primary job-card-btn">Apply Now</a>
-          
-        </div>
+        <article class="card job-card job-card-v2 reveal" data-state="open" data-search="tech sales closer remote  nigeria">
+          <div class="job-media">
+            <img src="/images/jobs/tech-sales-closer.jpg" alt="Smiling woman wearing a headset beside the Traction Outsourcing logo and an Apply Now button, for the Tech Sales Closer job" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="job-card-inner">
+            <span class="job-badge job-badge-soon">Closing soon</span>
+            <h3 class="job-card-title">Tech Sales Closer</h3>
+            <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Remote, Nigeria</p>
+            <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦100,000/month + commission</p><p class="job-card-salary job-card-closing soon"><i class="fa-regular fa-calendar"></i> Closes 30 Oct 2026</p>
+            
+            <a href="/apply/tech-sales-closer/" class="btn btn-primary job-card-btn">Apply Now <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            
+          </div>
+        </article>
         
-        <div class="card job-card reveal job-card-inactive">
-          <h3 class="job-card-title">Real Estate Sales Manager</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Kado, Abuja</p>
-          <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦450,000/month</p>
-          
-          <span class="btn btn-disabled job-card-btn" aria-disabled="true">Closed</span>
-          
-        </div>
+        <article class="card job-card job-card-v2 reveal" data-state="open" data-search="accountant abuja">
+          <div class="job-media">
+            <img src="/images/jobs/accountant.jpg" alt="Smiling man in a navy suit and blue tie beside the Traction Outsourcing logo and an Apply Now button, for the Accountant job" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="job-card-inner">
+            <span class="job-badge job-badge-soon">Closing soon</span>
+            <h3 class="job-card-title">Accountant</h3>
+            <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Abuja</p>
+            <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦350,000/month</p><p class="job-card-salary job-card-closing soon"><i class="fa-regular fa-calendar"></i> Closes 29 Oct 2026</p>
+            
+            <a href="/apply/accountant/" class="btn btn-primary job-card-btn">Apply Now <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            
+          </div>
+        </article>
         
-        <div class="card job-card reveal job-card-inactive">
-          <h3 class="job-card-title">Storekeeping Assistant</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Kuje, Abuja</p>
-          <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦100,000/month</p>
-          
-          <span class="btn btn-disabled job-card-btn" aria-disabled="true">Closed</span>
-          
-        </div>
+        <article class="card job-card job-card-v2 reveal job-card-inactive" data-state="closed" data-search="real estate sales manager kado  abuja">
+          <div class="job-media">
+            <img src="/images/jobs/real-estate-sales-manager-100.jpg" alt="Smiling woman in a blue hard hat and blazer beside the Traction Outsourcing logo and an Apply Now button, for the Real Estate Sales Manager job" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="job-card-inner">
+            <span class="job-badge job-badge-closed">Closed</span>
+            <h3 class="job-card-title">Real Estate Sales Manager</h3>
+            <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Kado, Abuja</p>
+            <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦450,000/month</p>
+            
+            <span class="btn btn-disabled job-card-btn" aria-disabled="true">Closed</span>
+            
+          </div>
+        </article>
         
-        <div class="card job-card reveal job-card-inactive">
-          <h3 class="job-card-title">Business Strategy Officer</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Remote, Nigeria</p>
-          <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦100,000/month</p>
-          
-          <span class="btn btn-disabled job-card-btn" aria-disabled="true">Closed</span>
-          
-        </div>
+        <article class="card job-card job-card-v2 reveal job-card-inactive" data-state="closed" data-search="storekeeping assistant kuje  abuja">
+          <div class="job-media">
+            <img src="/images/jobs/storekeeping-assistant-kuje.jpg" alt="Smiling woman in a green jacket holding a phone beside the Traction Outsourcing logo and an Apply Now button, for the Storekeeping Assistant job" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="job-card-inner">
+            <span class="job-badge job-badge-closed">Closed</span>
+            <h3 class="job-card-title">Storekeeping Assistant</h3>
+            <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Kuje, Abuja</p>
+            <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦100,000/month</p>
+            
+            <span class="btn btn-disabled job-card-btn" aria-disabled="true">Closed</span>
+            
+          </div>
+        </article>
         
-        <div class="card job-card reveal job-card-inactive">
-          <h3 class="job-card-title">HR Manager</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Kuje, Abuja</p>
-          
-          
-          <span class="btn btn-disabled job-card-btn" aria-disabled="true">Not Yet Open</span>
-          
-        </div>
-        
-        <div class="card job-card reveal job-card-inactive">
-          <h3 class="job-card-title">Sales Executive</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Asokoro, Abuja</p>
-          
-          
-          <span class="btn btn-disabled job-card-btn" aria-disabled="true">Not Yet Open</span>
-          
-        </div>
-        
-        <div class="card job-card reveal job-card-inactive">
-          <h3 class="job-card-title">General Manager</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Lugbe, Abuja</p>
-          
-          
-          <span class="btn btn-disabled job-card-btn" aria-disabled="true">Not Yet Open</span>
-          
-        </div>
-        
-        <div class="card job-card reveal job-card-inactive">
-          <h3 class="job-card-title">Housekeeper</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Wuse 2, Abuja</p>
-          
-          
-          <span class="btn btn-disabled job-card-btn" aria-disabled="true">Not Yet Open</span>
-          
-        </div>
-        
-        <div class="card job-card reveal job-card-inactive">
-          <h3 class="job-card-title">Internal Auditor</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Wuse 2, Abuja</p>
-          
-          
-          <span class="btn btn-disabled job-card-btn" aria-disabled="true">Not Yet Open</span>
-          
-        </div>
-        
-        <div class="card job-card reveal job-card-inactive">
-          <h3 class="job-card-title">Accounting Officer</h3>
-          <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Wuse 2, Abuja</p>
-          
-          
-          <span class="btn btn-disabled job-card-btn" aria-disabled="true">Not Yet Open</span>
-          
-        </div>
+        <article class="card job-card job-card-v2 reveal job-card-inactive" data-state="closed" data-search="business strategy officer remote  nigeria">
+          <div class="job-media">
+            <img src="/images/jobs/business-strategy-officer.jpg" alt="Smiling woman in a white blouse with arms crossed beside the Traction Outsourcing logo and an Apply Now button, for the Business Strategy Officer job" width="1200" height="630" loading="lazy">
+          </div>
+          <div class="job-card-inner">
+            <span class="job-badge job-badge-closed">Closed</span>
+            <h3 class="job-card-title">Business Strategy Officer</h3>
+            <p class="job-card-location"><i class="fa-solid fa-location-dot"></i> Remote, Nigeria</p>
+            <p class="job-card-salary"><i class="fa-solid fa-money-bill-wave"></i> ₦100,000/month</p>
+            
+            <span class="btn btn-disabled job-card-btn" aria-disabled="true">Closed</span>
+            
+          </div>
+        </article>
         
       </div>
+      <p class="careers-empty" id="careersEmpty" hidden>No roles match your filter. <button type="button" id="careersReset">Reset filter</button></p>
     
 
   </div>
@@ -343,6 +346,6 @@
   
   <script src="/js/nav.js"></script>
   <script src="/js/reveal.js"></script>
-  
+  <script src="/js/careers-filter.js"></script>
 </body>
 </html>
