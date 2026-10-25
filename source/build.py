@@ -538,6 +538,7 @@ def mark_careers_cards(data, all_jobs):
                 continue
             if job["state"] == "open":
                 card["closing"] = "Closes " + job["closingDate"].strftime("%d %b %Y").lstrip("0")
+                card["soon"] = (job["closingDate"] - today_wat()).days <= 5
             else:
                 card["active"] = False
                 card["cta_label"] = "Closed"
