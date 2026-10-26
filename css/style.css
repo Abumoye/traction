@@ -1123,3 +1123,24 @@ body.brand-recruiters {
   .course-modal-actions .btn { width: 100%; justify-content: center; }
   .course-card { padding: 24px; }
 }
+
+/* "Read More" button on article cards. It is a styled span inside the card's own link,
+   so the whole card still opens the article (no nested links). Pinned to the bottom so
+   buttons line up across a row of cards. */
+a.insight-card { display: flex; flex-direction: column; color: inherit; }
+a.insight-card .body { display: flex; flex-direction: column; flex: 1; }
+.read-more {
+  display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; margin-top: auto;
+  padding: 10px 20px; border-radius: var(--r-pill); font-size: 14px; font-weight: 600; line-height: 1;
+  background: var(--orange); color: var(--white); box-shadow: 0 8px 18px var(--orange-glow);
+  transition: background 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.insight-card .read-more, .featured-article .read-more { margin-top: 18px; }
+.insight-card .body .read-more { margin-top: auto; }
+.insight-card .body > p { margin-bottom: 18px; }
+.read-more i { font-size: 12px; transition: transform 0.3s var(--ease); }
+a:hover > .read-more, a:hover .read-more, a:focus-visible .read-more { background: var(--orange-dark); }
+a:hover .read-more i, a:focus-visible .read-more i { transform: translateX(4px); }
+.featured-article .fa-body { display: flex; flex-direction: column; align-items: flex-start; }
+.featured-article .fa-body .read-more { margin-top: 20px; }
+a.insight-card .body > .tag-pill { align-self: flex-start; }
