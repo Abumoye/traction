@@ -98,6 +98,7 @@
         '<h3>' + a.title + '</h3>' +
         '<p>' + body + '</p>' +
         '<div style="font-size:13px;color:var(--ink-faint)"><i class="fas fa-clock"></i> ' + a.read_time + '</div>' +
+        '<span class="read-more">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></span>' +
         '</div></a>'
       );
     }).join('');
