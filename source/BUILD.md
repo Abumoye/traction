@@ -136,3 +136,7 @@ Each card can have:
   styles: `.card-media`, `.is-closed`, `.closed-stamp` in `static/css/style.css`.
 
 To test a closed card locally: `BUILD_TODAY=2026-12-01 python3 build.py`.
+
+## Homepage "Latest Events & Insights"
+
+The section in `content/pages/home.json` (`insights`) is set to `"source": "latest-articles"` with `"count": 3`. `build.py` (`fill_home_insights`) fills it with the newest articles (by byline date) that are listed in `content/articles-index.json`, using each card's tag, title, excerpt, image and image_alt from that list. So a new article only needs its normal steps (article JSON + articles-index entry); it shows on the homepage after the next build and the oldest drops off. To go back to hand-picked cards, remove `source` and add an `entries` list.

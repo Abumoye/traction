@@ -272,29 +272,8 @@
       "label": "View All Articles",
       "href": "/articles/"
     },
-    "entries": [
-      {
-        "tag": "Corporate Events",
-        "title": "T-ICR 2026 Kigali Rwanda",
-        "text": "Join CEOs and executives in Kigali, Rwanda, November 22-30, for our flagship international corporate retreat.",
-        "href": "/services/events/kigali/",
-        "image": "/images/og/og-events.jpg"
-      },
-      {
-        "tag": "Business Travel",
-        "title": "Kigali: Africa's Cleanest City and Rising Business Hub",
-        "text": "Why Nigerian executives are taking Kigali seriously, and why you should too.",
-        "href": "/articles/kigali-africa-business-hub/",
-        "image": "/images/articles/kigali-africa-business-hub.jpg"
-      },
-      {
-        "tag": "HR Compliance",
-        "title": "Employee Leave and Compensation in Nigeria",
-        "text": "What HMO means, how it works in Nigerian businesses, and what employers are required to provide.",
-        "href": "/articles/employee-leave-and-compensation-in-nigeria/",
-        "image": "/images/articles/employee-leave-and-compensation-in-nigeria.jpg"
-      }
-    ]
+    "source": "latest-articles",
+    "count": 3
   },
   "testimonials": {
     "title": "What Our Clients Say",
