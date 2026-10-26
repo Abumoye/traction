@@ -544,6 +544,34 @@ def mark_careers_cards(data, all_jobs):
                 card["cta_label"] = "Closed"
 
 
+def fill_home_insights(data):
+    """Homepage "Latest Events & Insights": when the section is set to
+    "source": "latest-articles", its cards are the newest articles (by publish
+    date) that are listed in articles-index.json, so every new article appears
+    on the homepage on the next build with no manual step. "count" = how many."""
+    sec = data.get("insights")
+    if not sec or sec.get("source") != "latest-articles":
+        return
+    listed = {a["url"]: a for a in load(CONTENT / "articles-index.json")}
+    entries = []
+    for item in collect_articles():
+        url = item["url"].replace(SITE_URL, "")
+        card = listed.get(url)
+        if not card:
+            continue
+        entries.append({
+            "tag": card.get("tag", ""),
+            "title": card.get("title", item["title"]),
+            "text": card.get("excerpt", item["description"]),
+            "href": url,
+            "image": card.get("image") or item["image"],
+            "image_alt": card.get("image_alt", ""),
+        })
+        if len(entries) >= sec.get("count", 3):
+            break
+    sec["entries"] = entries
+
+
 def mark_event_cards(data):
     """Event cards (case-study grids) may carry an "ends" date (YYYY-MM-DD, the
     last day of the event). Once that day has passed (Nigeria time) the card is
@@ -1036,6 +1064,8 @@ def render_json_page(json_path: Path):
             schema.append(build_careers_collection_schema(open_jobs, data.get("meta", {})))
 
     mark_event_cards(data)
+    if route["url"] == "/":
+        fill_home_insights(data)
 
     tpl = env.get_template(route["template"])
     html = tpl.render(path=route["url"], schema=schema, **data)
