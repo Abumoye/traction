@@ -36,161 +36,392 @@
       "sub": "Certificate courses across five tracks, delivered online or in person."
     },
     {
-      "type": "grid",
+      "type": "training-track",
+      "id": "leadership-management",
       "heading": "Leadership & Management Development",
       "sub": "4 courses",
-      "columns": 3,
-      "style": "plain",
-      "entries": [
+      "icon": "fa-people-group",
+      "banner_alt": "Traction Outsourcing banner for Leadership & Management Development training",
+      "courses": [
         {
+          "id": "strategic-management-and-business-development",
           "title": "Strategic Management & Business Development",
-          "text": "2 Days · Online/Physical"
+          "duration": "2 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "A clear way to turn company goals into a strategy your team can execute",
+            "Practical tools to study your market, competitors and growth options",
+            "A business development plan you can start using straight away",
+            "Confidence to make strategic decisions and explain them to your team"
+          ]
         },
         {
+          "id": "change-management-and-corporate-restructuring",
           "title": "Change Management & Corporate Restructuring",
-          "text": "2 Days · Online/Physical"
+          "duration": "2 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "How to plan and communicate change so staff stay on board",
+            "Ways to handle resistance and keep productivity steady during a restructure",
+            "A step-by-step approach to reshaping roles, teams and reporting lines",
+            "A change plan drafted for your own organisation"
+          ]
         },
         {
+          "id": "people-management-for-nigerian-professionals",
           "title": "People Management for Nigerian Professionals",
-          "text": "3 Days · Online/Physical"
+          "duration": "3 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "Practical skills to lead, motivate and hold staff accountable",
+            "How to set expectations, give feedback and handle difficult conversations",
+            "Ways to manage performance and conflict in a Nigerian workplace",
+            "Confidence to move from doing the work to leading the people"
+          ]
         },
         {
+          "id": "team-building-and-collaboration",
           "title": "Team Building & Collaboration",
-          "text": "1 Day · Online/Physical"
+          "duration": "1 Day",
+          "mode": "Online/Physical",
+          "gets": [
+            "Activities and habits that build trust and open communication",
+            "How to spot and fix what is slowing your team down",
+            "Simple ways to improve teamwork across roles and departments"
+          ]
         }
-      ]
+      ],
+      "banner": "/images/training/leadership-management.jpg"
     },
     {
-      "type": "grid",
+      "type": "training-track",
+      "id": "business-finance",
       "heading": "Business Finance & Accounting",
       "sub": "5 courses",
-      "columns": 3,
-      "style": "plain",
-      "entries": [
+      "icon": "fa-chart-line",
+      "banner_alt": "Traction Outsourcing banner for Business Finance & Accounting training, with a man in a suit and glasses",
+      "courses": [
         {
+          "id": "financial-management-for-ceos",
           "title": "Financial Management for CEOs",
-          "text": "3 Weekends · Physical"
+          "duration": "3 Weekends",
+          "mode": "Physical",
+          "gets": [
+            "How to read and question your financial statements with confidence",
+            "Cash flow, budgeting and profitability explained in plain language",
+            "How to use your numbers to decide on pricing, spending and growth",
+            "Sharper questions to ask your accountant and finance team"
+          ]
         },
         {
+          "id": "financial-management-for-non-finance-managers",
           "title": "Financial Management for Non-Finance Managers",
-          "text": "2 Weekends · Physical"
+          "duration": "2 Weekends",
+          "mode": "Physical",
+          "gets": [
+            "Financial terms and reports made simple",
+            "How to plan, track and control your department's budget",
+            "How your day-to-day decisions affect cost, cash and profit",
+            "Confidence to take part in finance meetings"
+          ]
         },
         {
+          "id": "management-account-preparation",
           "title": "Management Account Preparation",
-          "text": "4 Weekends · Online/Physical"
+          "duration": "4 Weekends",
+          "mode": "Online/Physical",
+          "gets": [
+            "How management accounts are prepared, step by step",
+            "How to build monthly reports that management can act on",
+            "How to compare performance with budget and explain the differences",
+            "Hands-on practice with worked examples"
+          ]
         },
         {
+          "id": "excel-essentials-for-accountants",
           "title": "Excel Essentials for Accountants",
-          "text": "3 Weekends · Online/Physical"
+          "duration": "3 Weekends",
+          "mode": "Online/Physical",
+          "gets": [
+            "The Excel formulas and functions accountants use every day",
+            "How to organise, clean and summarise financial data",
+            "Faster ways to build reports, schedules and reconciliations",
+            "Habits that cut errors and save time"
+          ]
         },
         {
+          "id": "business-analysis-foundation",
           "title": "Business Analysis (Foundation)",
-          "text": "3 Days · Online/Physical"
+          "duration": "3 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "What a business analyst does and how the role fits into a company",
+            "How to gather requirements and understand the real business problem",
+            "Ways to map processes and document your findings clearly",
+            "A solid foundation to grow into a business analysis career"
+          ]
         }
-      ]
+      ],
+      "banner": "/images/training/business-finance.jpg"
     },
     {
-      "type": "grid",
+      "type": "training-track",
+      "id": "ai-computer-literacy",
       "heading": "AI & Computer Literacy",
       "sub": "6 courses",
-      "columns": 3,
-      "style": "plain",
-      "entries": [
+      "icon": "fa-robot",
+      "banner_alt": "Traction Outsourcing banner for AI & Computer Literacy training, with a woman in a blazer beside a friendly robot",
+      "courses": [
         {
+          "id": "introduction-to-ai-for-business",
           "title": "Introduction to AI for Business",
-          "text": "4 Days · Online/Physical"
+          "duration": "4 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "A plain-language understanding of what AI can and cannot do",
+            "How to use AI tools for writing, research, analysis and daily tasks",
+            "Where AI can save your business time and money",
+            "Safe and responsible ways to use AI at work"
+          ]
         },
         {
+          "id": "digital-literacy-and-workplace-technology",
           "title": "Digital Literacy & Workplace Technology",
-          "text": "2 Days · Online/Physical"
+          "duration": "2 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "Confidence using computers, email and online tools at work",
+            "How to manage files, documents and information properly",
+            "Ways to communicate and collaborate online",
+            "The basics you need to keep up in a digital workplace"
+          ]
         },
         {
+          "id": "microsoft-tools-essentials-introduction",
           "title": "Microsoft Tools Essentials Introduction",
-          "text": "4 Days · Online/Physical"
+          "duration": "4 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "Core skills in the Microsoft tools used most at work, such as Word, Excel and PowerPoint",
+            "How to produce clean documents, simple spreadsheets and clear presentations",
+            "Shortcuts and habits that speed up everyday office tasks",
+            "Confidence to use these tools on the job from day one"
+          ]
         },
         {
+          "id": "google-workspace-essentials-introduction",
           "title": "Google Workspace Essentials Introduction",
-          "text": "3 Days · Online/Physical"
+          "duration": "3 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "Core skills in Gmail, Calendar, Drive, Docs, Sheets and Meet",
+            "How to share files and work on documents with your team in real time",
+            "How to organise your inbox, meetings and files",
+            "Confidence to run your workday on Google Workspace"
+          ]
         },
         {
+          "id": "introduction-to-productivity-and-project-management-tools",
           "title": "Introduction to Productivity & Project Management Tools",
-          "text": "2 Days · Online/Physical"
+          "duration": "2 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "An overview of popular tools for planning, tasks and team coordination",
+            "How to set up a simple project and track progress",
+            "Ways to organise work, deadlines and responsibilities",
+            "How to choose the right tool for your team"
+          ]
         },
         {
+          "id": "workplace-digital-safety-and-security",
           "title": "Workplace Digital Safety & Security",
-          "text": "3 Days · Online/Physical"
+          "duration": "3 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "How to recognise phishing, scams and risky links",
+            "Safe habits for passwords, devices and company data",
+            "What to do when something goes wrong and who to tell",
+            "A simple checklist your team can follow every day"
+          ]
         }
-      ]
+      ],
+      "banner": "/images/training/ai-computer-literacy.jpg"
     },
     {
-      "type": "grid",
+      "type": "training-track",
+      "id": "workplace-management",
       "heading": "Workplace Management",
       "sub": "9 courses",
-      "columns": 3,
-      "style": "plain",
-      "entries": [
+      "icon": "fa-briefcase",
+      "banner_alt": "Traction Outsourcing banner for Workplace Management training",
+      "courses": [
         {
+          "id": "mental-health-awareness-for-managers",
           "title": "Mental Health Awareness for Managers",
-          "text": "1 Day · Online/Physical"
+          "duration": "1 Day",
+          "mode": "Online/Physical",
+          "gets": [
+            "How to recognise signs of stress and burnout in your team",
+            "How to start supportive, respectful conversations",
+            "What managers can and cannot do, and when to point someone to professional help"
+          ]
         },
         {
+          "id": "managing-pcos-work-life-balance-and-burnout-prevention",
           "title": "Managing PCOS, Work-Life Balance, and Burnout Prevention",
-          "text": "2 Days · Online/Physical"
+          "duration": "2 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "A better understanding of PCOS and how it can affect people at work",
+            "Practical ways to balance work, health and personal life",
+            "How to spot early signs of burnout and prevent it",
+            "Workplace habits and policies that support employee wellbeing"
+          ]
         },
         {
+          "id": "employee-engagement-and-retention-strategies",
           "title": "Employee Engagement and Retention Strategies",
-          "text": "3 Days · Online/Physical"
+          "duration": "3 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "What drives engagement and why good people leave",
+            "Practical ways to recognise, reward and develop your staff",
+            "How to measure engagement and act on what you find",
+            "A retention plan you can start using in your own team"
+          ]
         },
         {
+          "id": "building-supportive-workplace-cultures",
           "title": "Building Supportive Workplace Cultures",
-          "text": "2 Days · Online/Physical"
+          "duration": "2 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "What a healthy workplace culture looks like in practice",
+            "How to build trust, respect and open communication",
+            "Ways to deal with toxic behaviour before it spreads",
+            "Simple steps leaders can take to shape culture every day"
+          ]
         },
         {
+          "id": "critical-thinking-and-problem-solving-skills",
           "title": "Critical Thinking & Problem-Solving Skills",
-          "text": "2 Days · Online/Physical"
+          "duration": "2 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "A clear method for breaking down problems and finding root causes",
+            "How to weigh evidence and avoid common thinking traps",
+            "Practical techniques for making better decisions faster",
+            "Real workplace exercises to practise on"
+          ]
         },
         {
+          "id": "emotional-intelligence-and-interpersonal-skills",
           "title": "Emotional Intelligence & Interpersonal Skills",
-          "text": "1 Day · Online/Physical"
+          "duration": "1 Day",
+          "mode": "Online/Physical",
+          "gets": [
+            "How to understand and manage your own reactions at work",
+            "How to read others and respond with empathy",
+            "Better ways to communicate, disagree and resolve tension"
+          ]
         },
         {
+          "id": "human-resource-management",
           "title": "Human Resource Management",
-          "text": "6 Weekends (12 Days) · Online/Physical"
+          "duration": "6 Weekends (12 Days)",
+          "mode": "Online/Physical",
+          "gets": [
+            "The full HR cycle: recruitment, onboarding, performance, discipline and exit",
+            "Nigerian employment basics every HR practitioner should know",
+            "How to write HR policies and keep proper staff records",
+            "Practical templates and exercises you can use in your own organisation"
+          ]
         },
         {
+          "id": "excel-for-payroll-managers",
           "title": "Excel for Payroll Managers",
-          "text": "3 Weekends (6 Days) · Online/Physical"
+          "duration": "3 Weekends (6 Days)",
+          "mode": "Online/Physical",
+          "gets": [
+            "How to set up and run payroll accurately in Excel",
+            "Calculating pay, allowances, deductions, tax and pension",
+            "Formulas and checks that reduce payroll errors",
+            "Clear payslips and payroll reports that are easy to review"
+          ]
         },
         {
+          "id": "workplace-governance-and-policy-development",
           "title": "Workplace Governance & Policy Development",
-          "text": "2 Days · Online/Physical"
+          "duration": "2 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "What good governance means for a growing business",
+            "How to write clear workplace policies your team will follow",
+            "How to roll out, review and enforce policies fairly",
+            "A policy framework you can adapt for your own organisation"
+          ]
         }
-      ]
+      ],
+      "banner": "/images/training/workplace-management.jpg"
     },
     {
-      "type": "grid",
+      "type": "training-track",
+      "id": "customer-service",
       "heading": "Customer Service & Client Experience",
       "sub": "4 courses",
-      "columns": 3,
-      "style": "plain",
-      "entries": [
+      "icon": "fa-headset",
+      "banner_alt": "Traction Outsourcing banner for Customer Service & Client Experience training, with a smiling woman wearing a headset",
+      "courses": [
         {
+          "id": "customer-service-fundamentals",
           "title": "Customer Service Fundamentals",
-          "text": "3 Weeks (6 Days) · Online/Physical"
+          "duration": "3 Weeks (6 Days)",
+          "mode": "Online/Physical",
+          "gets": [
+            "The core skills of excellent customer service",
+            "How to communicate clearly, politely and professionally",
+            "How to handle common requests, complaints and delays",
+            "A service standard your whole team can follow"
+          ]
         },
         {
+          "id": "client-experience-specialist",
           "title": "Client Experience Specialist",
-          "text": "3 Weeks (6 Days) · Online/Physical"
+          "duration": "3 Weeks (6 Days)",
+          "mode": "Online/Physical",
+          "gets": [
+            "How to design a smooth journey for every client, from first contact to follow-up",
+            "How to understand what clients expect and meet it consistently",
+            "Ways to build lasting client relationships and repeat business",
+            "Tools to measure client satisfaction and act on feedback"
+          ]
         },
         {
+          "id": "cultural-intelligence-in-nigerian-customer-service",
           "title": "Cultural Intelligence in Nigerian Customer Service",
-          "text": "3 Days · Online/Physical"
+          "duration": "3 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "How culture, language and expectations shape what customers want",
+            "How to serve a diverse range of Nigerian customers respectfully",
+            "Ways to avoid misunderstandings and build trust quickly",
+            "Real examples and role-plays from Nigerian service settings"
+          ]
         },
         {
+          "id": "turning-angry-customers-into-advocates",
           "title": "Turning Angry Customers into Advocates",
-          "text": "3 Days · Online/Physical"
+          "duration": "3 Days",
+          "mode": "Online/Physical",
+          "gets": [
+            "How to stay calm and in control when a customer is upset",
+            "A simple method for listening, apologising and solving the problem",
+            "Ways to turn a complaint into loyalty and good word of mouth",
+            "Phrases and habits that cool tension fast"
+          ]
         }
-      ]
+      ],
+      "banner": "/images/training/customer-service.jpg"
     },
     {
       "type": "text",
@@ -368,8 +599,8 @@
   "final_cta": {
     "title": "Ready to Build Your Team's Capability?",
     "text": "Speak with our consulting team about how Corporate Trainings can work for your business.",
-    "button": "Request a Training Invoice",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Corporate%20Trainings%20at%20Traction%20Outsourcing%20Limited."
+    "button": "Request A Specialized Training",
+    "modal": "specialized"
   },
   "schema": [
     {
@@ -474,9 +705,15 @@
           "item": {
             "@type": "Course",
             "name": "Strategic Management & Business Development",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
             "timeRequired": "P2D",
-            "courseMode": ["online", "onsite"],
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "2 Days",
             "availableLanguage": "en",
             "hasCourseInstance": {
@@ -492,8 +729,14 @@
           "item": {
             "@type": "Course",
             "name": "Change Management & Corporate Restructuring",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "2 Days",
             "url": "https://tolnigeria.com/services/employee-training/#leadership-management"
           }
@@ -504,8 +747,14 @@
           "item": {
             "@type": "Course",
             "name": "People Management for Nigerian Professionals",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "3 Days",
             "description": "People management training for Nigerian business owners, team leads, and HR professionals. Available in Abuja and Lagos.",
             "url": "https://tolnigeria.com/services/employee-training/#leadership-management"
@@ -517,8 +766,14 @@
           "item": {
             "@type": "Course",
             "name": "Team Building & Collaboration",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "1 Day",
             "url": "https://tolnigeria.com/services/employee-training/#leadership-management"
           }
@@ -529,7 +784,10 @@
           "item": {
             "@type": "Course",
             "name": "Financial Management for CEOs",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
             "courseMode": "onsite",
             "courseWorkload": "3 Weekends",
             "description": "Financial management training designed for Nigerian CEOs and business owners. Physical classes in Abuja and Lagos.",
@@ -542,8 +800,14 @@
           "item": {
             "@type": "Course",
             "name": "Financial Management for Non-Finance Managers",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "2 Weekends",
             "url": "https://tolnigeria.com/services/employee-training/#business-finance-accounting"
           }
@@ -554,8 +818,14 @@
           "item": {
             "@type": "Course",
             "name": "Management Account Preparation",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "4 Weekends",
             "url": "https://tolnigeria.com/services/employee-training/#business-finance-accounting"
           }
@@ -566,8 +836,14 @@
           "item": {
             "@type": "Course",
             "name": "Excel Essentials for Accountants",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "3 Weekends",
             "url": "https://tolnigeria.com/services/employee-training/#business-finance-accounting"
           }
@@ -578,8 +854,14 @@
           "item": {
             "@type": "Course",
             "name": "Business Analysis (Foundation)",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "3 Days",
             "url": "https://tolnigeria.com/services/employee-training/#business-finance-accounting"
           }
@@ -590,8 +872,14 @@
           "item": {
             "@type": "Course",
             "name": "Introduction to AI for Business",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "4 Days",
             "description": "AI literacy and business application training for Nigerian professionals. Available online and in Abuja.",
             "url": "https://tolnigeria.com/services/employee-training/#ai-computer-literacy"
@@ -603,8 +891,14 @@
           "item": {
             "@type": "Course",
             "name": "Digital Literacy & Workplace Technology",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "2 Days",
             "url": "https://tolnigeria.com/services/employee-training/#ai-computer-literacy"
           }
@@ -615,8 +909,14 @@
           "item": {
             "@type": "Course",
             "name": "Microsoft Tools Essentials Introduction",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "4 Days",
             "url": "https://tolnigeria.com/services/employee-training/#ai-computer-literacy"
           }
@@ -627,8 +927,14 @@
           "item": {
             "@type": "Course",
             "name": "Google Workspace Essentials Introduction",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "3 Days",
             "url": "https://tolnigeria.com/services/employee-training/#ai-computer-literacy"
           }
@@ -639,8 +945,14 @@
           "item": {
             "@type": "Course",
             "name": "Introduction to Productivity & Project Management Tools",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "2 Days",
             "url": "https://tolnigeria.com/services/employee-training/#ai-computer-literacy"
           }
@@ -651,8 +963,14 @@
           "item": {
             "@type": "Course",
             "name": "Workplace Digital Safety & Security",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "3 Days",
             "url": "https://tolnigeria.com/services/employee-training/#ai-computer-literacy"
           }
@@ -663,8 +981,14 @@
           "item": {
             "@type": "Course",
             "name": "Mental Health Awareness for Managers",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "1 Day",
             "description": "Mental health awareness training for managers in Nigeria. Delivered in Abuja and Lagos.",
             "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
@@ -676,8 +1000,14 @@
           "item": {
             "@type": "Course",
             "name": "Managing PCOS, Work-Life Balance, and Burnout Prevention",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "2 Days",
             "description": "PCOS management, work-life balance, and burnout prevention training for Nigerian professionals. Available in Abuja, Lagos, and online across Nigeria.",
             "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
@@ -689,8 +1019,14 @@
           "item": {
             "@type": "Course",
             "name": "Employee Engagement and Retention Strategies",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "3 Days",
             "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
           }
@@ -701,8 +1037,14 @@
           "item": {
             "@type": "Course",
             "name": "Building Supportive Workplace Cultures",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "2 Days",
             "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
           }
@@ -713,8 +1055,14 @@
           "item": {
             "@type": "Course",
             "name": "Critical Thinking & Problem-Solving Skills",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "2 Days",
             "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
           }
@@ -725,8 +1073,14 @@
           "item": {
             "@type": "Course",
             "name": "Emotional Intelligence & Interpersonal Skills",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "1 Day",
             "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
           }
@@ -737,8 +1091,14 @@
           "item": {
             "@type": "Course",
             "name": "Human Resource Management",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "6 Weekends (12 Days)",
             "description": "Comprehensive human resource management course for Nigerian HR professionals and business owners. Abuja and Lagos.",
             "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
@@ -750,8 +1110,14 @@
           "item": {
             "@type": "Course",
             "name": "Excel for Payroll Managers",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "3 Weekends (6 Days)",
             "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
           }
@@ -762,8 +1128,14 @@
           "item": {
             "@type": "Course",
             "name": "Workplace Governance & Policy Development",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "2 Days",
             "url": "https://tolnigeria.com/services/employee-training/#workplace-management"
           }
@@ -774,8 +1146,14 @@
           "item": {
             "@type": "Course",
             "name": "Customer Service Fundamentals",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "3 Weeks (6 Days)",
             "description": "Customer service training for Nigerian businesses. Certificate course in Abuja and Lagos.",
             "url": "https://tolnigeria.com/services/employee-training/#customer-service"
@@ -787,8 +1165,14 @@
           "item": {
             "@type": "Course",
             "name": "Client Experience Specialist",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "3 Weeks (6 Days)",
             "url": "https://tolnigeria.com/services/employee-training/#customer-service"
           }
@@ -799,8 +1183,14 @@
           "item": {
             "@type": "Course",
             "name": "Cultural Intelligence in Nigerian Customer Service",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "3 Days",
             "url": "https://tolnigeria.com/services/employee-training/#customer-service"
           }
@@ -811,8 +1201,14 @@
           "item": {
             "@type": "Course",
             "name": "Turning Angry Customers into Advocates",
-            "provider": { "@type": "Organization", "name": "Traction Outsourcing Limited" },
-            "courseMode": ["online", "onsite"],
+            "provider": {
+              "@type": "Organization",
+              "name": "Traction Outsourcing Limited"
+            },
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
             "courseWorkload": "3 Days",
             "description": "Practical training for handling difficult customers in Nigeria. Available for teams in Abuja and Lagos.",
             "url": "https://tolnigeria.com/services/employee-training/#customer-service"
@@ -820,5 +1216,9 @@
         }
       ]
     }
+  ],
+  "scripts": [
+    "/js/form-guard.js",
+    "/js/training-courses.js"
   ]
 }

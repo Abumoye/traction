@@ -24,7 +24,12 @@
   <p>{{ sec.text }} <a href="{{ sec.href }}">{{ sec.link_text }}</a></p>
 </div>
 {% elif sec.type == 'modal-form' %}{# rendered after the loop, as a pop-up #}
-{% else %}<section {% if sec.id %}id="{{ sec.id }}"{% endif %} {% if sec.resource_type %}data-resource-type="{{ sec.resource_type }}"{% endif %} {% if sec.type == 'resource-grid' %}data-resource-grid="true"{% endif %} class="section {{ 'compact' if compact else '' }} {{ 'tight' if sec.tight else '' }} {{ 'bg-ash' if sec.bg == 'ash' else ('bg-ink' if sec.bg == 'ink' else '') }}">
+{% else %}<section {% if sec.id %}id="{{ sec.id }}"{% endif %} {% if sec.resource_type %}data-resource-type="{{ sec.resource_type }}"{% endif %} {% if sec.type == 'resource-grid' %}data-resource-grid="true"{% endif %} class="section {{ 'compact' if compact else '' }} {{ 'tight' if sec.tight else '' }} {{ 'bg-ash' if sec.bg == 'ash' else ('bg-ink' if sec.bg == 'ink' else '') }}{{ ' training-sec' if sec.type == 'training-track' else '' }}"{% if sec.type == 'training-track' %} data-track="{{ sec.heading | e }}" data-banner="{{ sec.banner | default('') }}" data-banner-alt="{{ sec.banner_alt | default(sec.heading) | e }}" data-icon="{{ sec.icon | default('fa-graduation-cap') }}"{% endif %}>
+  {%- if sec.type == 'training-track' %}
+  <div class="training-banner reveal">
+    {% if sec.banner %}<img src="{{ sec.banner }}" alt="{{ sec.banner_alt | default(sec.heading) | e }}" width="2400" height="600" loading="lazy">{% else %}<div class="training-banner-fallback" aria-hidden="true"><i class="fas {{ sec.icon | default('fa-graduation-cap') }}"></i></div>{% endif %}
+  </div>
+  {%- endif %}
   <div class="container" style="{{ 'max-width:' + sec.max_width if sec.max_width else '' }}">
 
     {% if sec.type == 'resource-filter' %}
@@ -47,6 +52,27 @@
         {% endfor %}
       </div>
       {% endif %}
+
+    {% elif sec.type == 'training-track' %}
+      <h2 class="section-title reveal">{{ sec.heading }}</h2>
+      {% if sec.sub %}<p class="section-sub reveal">{{ sec.sub }}</p>{% endif %}
+      <div class="grid grid-3 course-grid">
+        {% for c in sec.courses %}
+        <article class="card course-card reveal" data-course-id="{{ c.id }}" data-title="{{ c.title | e }}" data-duration="{{ c.duration | e }}" data-mode="{{ c.mode | e }}">
+          <div class="icon-badge"><i class="fas {{ sec.icon | default('fa-graduation-cap') }}" aria-hidden="true"></i></div>
+          <h3><button type="button" class="course-open" data-course-open>{{ c.title }}</button></h3>
+          <div class="course-meta">
+            <span class="course-chip"><i class="fa-regular fa-clock" aria-hidden="true"></i> {{ c.duration }}</span>
+            {% if c.mode %}<span class="course-chip"><i class="fas fa-location-dot" aria-hidden="true"></i> {{ c.mode }}</span>{% endif %}
+          </div>
+          <div class="course-actions">
+            <button type="button" class="course-more" data-course-open>What you will get <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-primary course-register" data-course-register>Register</button>
+          </div>
+          <ul class="course-gets" hidden>{% for g in c.gets %}<li>{{ g }}</li>{% endfor %}</ul>
+        </article>
+        {% endfor %}
+      </div>
 
     {% elif sec.type == 'grid' %}
       {% if sec.heading %}<h2 class="section-title reveal">{{ sec.heading }}</h2>{% endif %}
@@ -487,9 +513,52 @@
   <div class="cta-band reveal">
     <h2>{{ final_cta.title }}</h2>
     <p>{{ final_cta.text }}</p>
-    <a href="{{ final_cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ final_cta.button }}</a>
+    {% if final_cta.modal %}<button type="button" class="btn btn-primary" data-open-training-form="{{ final_cta.modal }}">{{ final_cta.button }}</button>{% else %}<a href="{{ final_cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ final_cta.button }}</a>{% endif %}
   </div>
 </section>
+{% endif %}
+
+{% if sections | selectattr('type', 'equalto', 'training-track') | list | length %}
+<dialog id="courseModal" class="course-modal" aria-labelledby="courseModalTitle">
+  <div class="course-modal-bar"><button type="button" class="resource-modal-close course-modal-close" data-close-dialog aria-label="Close">&times;</button></div>
+  <div class="course-modal-banner" id="courseModalBanner"></div>
+  <div class="course-modal-body">
+    <p class="course-modal-track" id="courseModalTrack"></p>
+    <h3 id="courseModalTitle"></h3>
+    <div class="course-meta" id="courseModalMeta"></div>
+    <h4 class="course-gets-title">What you will get:</h4>
+    <ul class="course-gets-list" id="courseModalGets"></ul>
+    <p class="course-modal-note"><i class="fas fa-certificate" aria-hidden="true"></i> Every course ends with a certificate.</p>
+    <div class="course-modal-actions">
+      <button type="button" class="btn btn-primary" id="courseModalRegister">Register for this course</button>
+      <button type="button" class="btn btn-ghost" data-close-dialog>Close</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="trainingFormModal" class="resource-modal training-form-modal" aria-labelledby="trainingFormTitle">
+  <form id="trainingForm" class="resource-modal-form" novalidate>
+    <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+    <h3 id="trainingFormTitle">Register for a course</h3>
+    <p class="resource-modal-sub" id="trainingFormSub"></p>
+    <div style="display:grid;gap:14px;">
+      <input name="name" type="text" placeholder="Full Name" aria-label="Full Name" autocomplete="name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="phone" type="tel" placeholder="Phone Number" aria-label="Phone Number" autocomplete="tel" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="companyName" type="text" placeholder="Company Name" aria-label="Company Name" autocomplete="organization" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="email" type="email" placeholder="Email Address" aria-label="Email Address" autocomplete="email" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <textarea name="message" id="trainingMessage" rows="4" placeholder="What training do you need? (topic, number of people, preferred dates)" aria-label="What training do you need?" hidden style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);font-size:15px;line-height:1.5;resize:vertical;"></textarea>
+      <button type="submit" class="btn btn-primary" id="trainingSubmit" style="width:100%;justify-content:center;">Submit</button>
+      <p id="trainingFormStatus" style="text-align:center;font-size:13.5px;margin:0;" aria-live="polite"></p>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="trainingSuccessModal" class="form-success-modal">
+  <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+  <div class="form-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+  <p id="trainingSuccessText">Thank you. Someone from our team will reach out shortly.</p>
+  <button type="button" class="btn btn-primary" data-close-dialog style="margin:18px auto 0;">Close</button>
+</dialog>
 {% endif %}
 
 {% endblock %}
