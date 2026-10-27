@@ -17,15 +17,14 @@
     "sub": "A strategy is only as good as the team executing it. We train employees to close the gap between what leadership decided and what actually happens on the floor.",
     "actions": [
       {
-        "label": "Enquire About A Course",
-        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20training%20courses",
+        "label": "Browse Our Courses",
+        "href": "#catalogue",
         "style": "btn-primary"
       },
       {
-        "label": "Chat on WhatsApp",
-        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20training%20courses",
-        "style": "btn-secondary",
-        "blank": true
+        "label": "Request A Specialized Training",
+        "training_popup": "specialized",
+        "style": "btn-secondary"
       }
     ]
   },
@@ -33,7 +32,8 @@
     {
       "type": "text",
       "heading": "Our Training Catalogue",
-      "sub": "Certificate courses across five tracks, delivered online or in person."
+      "sub": "Certificate courses across five tracks, delivered online or in person.",
+      "id": "catalogue"
     },
     {
       "type": "training-track",
@@ -426,7 +426,7 @@
     {
       "type": "text",
       "paragraphs": [
-        "All courses are certificate courses. Fees vary by programme, delivery mode, and group size. Message us on WhatsApp with the courses you're interested in to receive an invoice."
+        "All courses are certificate courses. Fees vary by programme, delivery mode, and group size. Register for a course, or request a specialized training, and our team will send you an invoice."
       ]
     },
     {
@@ -591,7 +591,7 @@
         },
         {
           "q": "How do I enrol my team in a Traction Outsourcing training programme?",
-          "a": "Reach out through any of our contact channels, WhatsApp, email, or the enquiry form on this page. Share the number of participants, the preferred dates, and the area you want to develop, and our team will respond with the available options and how to proceed."
+          "a": "Reach out through any of our contact channels, email, or the specialized training request form on this page. Share the number of participants, the preferred dates, and the area you want to develop, and our team will respond with the available options and how to proceed."
         }
       ]
     }

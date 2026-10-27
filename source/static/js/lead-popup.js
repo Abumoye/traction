@@ -7,7 +7,8 @@
    Submits to the SAME Google Apps Script Web App and with the SAME fields
    as the lead form (see /js/lead-form.js), so every enquiry lands on the
    Leads tab of "Traction Outsourcing Leads" and sends the usual email.
-   sourcePage is the page the visitor was on. Load /js/form-guard.js first.
+   sourcePage is the page the visitor was on, plus " | <subject>" when the
+   button names a property, plot or plan (data-popup-subject). Load /js/form-guard.js first.
    ========================================================= */
 (function () {
     var LEAD_FORM_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeu2T0WE1M-4d2erYY9IUazEKTsWPmuG9cnIYK61PQkdfY8OqvvOTubLFcFJRfdL5iVw/exec";
@@ -21,6 +22,8 @@
     var statusEl = $('leadPopupStatus');
     var submitBtn = $('leadPopupSubmit');
     var defaultBtnText = submitBtn.innerText;
+    var subjectEl = $('leadPopupSubject');
+    var subject = '';   // what the visitor is enquiring about (a property, plot or plan), if the button says
 
     function close(dlg) { if (dlg && dlg.open) dlg.close(); }
 
@@ -32,8 +35,20 @@
     });
 
     document.addEventListener('click', function (e) {
-        if (!e.target.closest('[data-open-lead-popup]')) return;
+        var opener = e.target.closest('[data-open-lead-popup]');
+        if (!opener) return;
         e.preventDefault();
+        subject = (opener.getAttribute('data-popup-subject') || '').trim();
+        if (subjectEl) {
+            subjectEl.hidden = !subject;
+            subjectEl.textContent = '';
+            if (subject) {
+                var b = document.createElement('strong');
+                b.textContent = subject;
+                subjectEl.appendChild(document.createTextNode('Enquiring about: '));
+                subjectEl.appendChild(b);
+            }
+        }
         statusEl.textContent = '';
         submitBtn.disabled = false;
         submitBtn.innerText = defaultBtnText;
@@ -47,7 +62,8 @@
         if (window.formGuard && window.formGuard.blocked(form, statusEl)) return;
 
         var data = {
-            sourcePage: window.location.pathname,
+            // The property, plot or plan is added to sourcePage so it shows in the Leads sheet and email.
+            sourcePage: window.location.pathname + (subject ? ' | ' + subject : ''),
             name: form.name.value.trim(),
             phone: form.phone.value.trim(),
             companyName: form.companyName.value.trim(),

@@ -39,10 +39,19 @@
     },
     {
       "@context": "https://schema.org",
-      "@type": ["EmploymentAgency", "LocalBusiness"],
+      "@type": [
+        "EmploymentAgency",
+        "LocalBusiness"
+      ],
       "name": "Abuja Talent Hub - ATH Recruiters",
-      "alternateName": ["Abuja Talent Hub", "ATH Recruiters", "ATH"],
-      "sameAs": ["https://maps.app.goo.gl/wRXnUb2ABAwSTNpT8"],
+      "alternateName": [
+        "Abuja Talent Hub",
+        "ATH Recruiters",
+        "ATH"
+      ],
+      "sameAs": [
+        "https://maps.app.goo.gl/wRXnUb2ABAwSTNpT8"
+      ],
       "description": "ATH Recruiters, also known as Abuja Talent Hub, is an affordable recruitment agency in Nigeria connecting small businesses and private individuals with verified, ready-to-work staff, including graduate recruitment and mass hiring.",
       "url": "https://tolnigeria.com/brands/recruiters/",
       "logo": "https://tolnigeria.com/images/ath-recruiters.png",
@@ -59,8 +68,14 @@
         "addressCountry": "NG"
       },
       "areaServed": [
-        { "@type": "City", "name": "Abuja" },
-        { "@type": "Country", "name": "Nigeria" }
+        {
+          "@type": "City",
+          "name": "Abuja"
+        },
+        {
+          "@type": "Country",
+          "name": "Nigeria"
+        }
       ],
       "audience": {
         "@type": "Audience",
@@ -73,7 +88,15 @@
         "url": "https://tolnigeria.com/",
         "sameAs": "https://www.wikidata.org/wiki/Q140694466"
       },
-      "knowsAbout": ["Mass Recruitment", "Graduate Recruitment", "Staff Training", "Manpower Outsourcing", "Domestic Staffing", "Hospitality Staffing", "Corporate Onboarding"],
+      "knowsAbout": [
+        "Mass Recruitment",
+        "Graduate Recruitment",
+        "Staff Training",
+        "Manpower Outsourcing",
+        "Domestic Staffing",
+        "Hospitality Staffing",
+        "Corporate Onboarding"
+      ],
       "makesOffer": [
         {
           "@type": "Offer",
@@ -103,10 +126,9 @@
     "headline": "Reliable Staff, Fast. Anywhere In Nigeria.",
     "actions": [
       {
-        "label": "Request Staff on WhatsApp",
-        "href": "https://wa.me/2348125078087?text=I%20need%20to%20hire%20staff%20urgently",
+        "label": "Request Staff Now",
         "style": "btn-primary",
-        "blank": true
+        "popup": true
       },
       {
         "label": "See Our Plans",
@@ -288,25 +310,25 @@
           "title": "Plan A — High-Volume Staffing",
           "text": "Tailored search and selection services designed to fill core operational roles with precision. This tier provides direct access to our verified community professionals, ensuring cultural fit and technical competence.<br><br><em>Ideal for roles with high attrition rates or rapid scaling needs in industries like Sales, Hospitality, Construction, FinTechs, Technology, Industries, FMCG, ad-hoc staffing, homes, private staff, and more.</em><br><br>✓ Unlimited candidate requests<br>✓ First time waiting period of 1 month<br>✓ Best for roles with high attrition rates<br>✓ Just 24-48 hours waiting period during subscription<br>✓ Available in all states in Nigeria",
           "cta": "Ask About Plan A",
-          "href": "https://wa.me/2348125078087?text=I%27m%20interested%20in%20Plan%20A%20-%20High-Volume%20Staffing"
+          "popup": "Plan A - High-Volume Staffing"
         },
         {
           "title": "Plan B — Specialized Talent Search",
           "text": "A highly strategic, comprehensive recruitment service dedicated to sourcing specialized talent and leadership roles across various Nigerian states and international markets.<br><br><em>Best for companies that usually need one staff member at a time, with a very low attrition rate.</em><br><br>✓ Candidate sourcing<br>✓ Candidate selection<br>✓ Pre-interview advisory<br>✓ Save time wasted on vacancy ads<br>✓ Save time wasted on sourcing through CVs<br>✓ Save time wasted on pre-interview screening<br>✓ One-off service<br>✓ Qualified candidates in 2 weeks or less<br>✓ Available in all states in Nigeria",
           "cta": "Ask About Plan B",
-          "href": "https://wa.me/2348125078087?text=I%27m%20interested%20in%20Plan%20B%20-%20Specialized%20Talent%20Search"
+          "popup": "Plan B - Specialized Talent Search"
         },
         {
           "title": "Plan C — End-to-End Executive HR Partnership",
           "text": "A fully managed, consultant-led recruitment process from initial sourcing through to corporate integration.<br><br><em>Best for organizations seeking a complete corporate onboarding experience, expert interview panels, and post-hire development.</em><br><br>✓ First-level interviewing with a Traction Outsourcing HR professional<br>✓ Second-level joint panel interviews with Traction Outsourcing HR professional and your management<br>✓ Full HR compliance support, including standardized staff offer letters, tailored job descriptions, and optional staff background check<br>✓ Includes 2 standardized trainings delivered by our management consultants (1 general staff training and 1 corporate onboarding training)<br>✓ Minimum of 5 recruited staff for this plan",
           "cta": "Ask About Plan C",
-          "href": "https://wa.me/2348125078087?text=I%27m%20interested%20in%20Plan%20C%20-%20End-to-End%20Executive%20HR%20Partnership"
+          "popup": "Plan C - End-to-End Executive HR Partnership"
         },
         {
           "title": "Home Plan — Home Recruitment",
           "text": "Specially designed for homeowners who need to recruit domestic staff once, without ongoing management. We find the right person, hand them over, and you take full control from there.<br><br><em>Best for homeowners recruiting domestic staff: nannies, cooks, cleaners, drivers, gardeners, security, and other home-based roles.</em><br><br>✓ One-off recruitment service<br>✓ Candidate sourcing from verified community<br>✓ Skills and background screening<br>✓ Hands-off after placement, you manage your own home staff<br>✓ Free one-time replacement within the first month<br>✓ Single, one-time fee. No recurring charges<br>✓ No staff management included<br>✓ Available across Nigeria",
           "cta": "Ask About the Home Plan",
-          "href": "https://wa.me/2348125078087?text=I%27m%20interested%20in%20the%20ATH%20Home%20Plan%20for%20domestic%20staff%20recruitment"
+          "popup": "ATH Home Plan for domestic staff recruitment"
         }
       ]
     },
@@ -429,5 +451,10 @@
         }
       ]
     }
-  ]
+  ],
+  "lead_popup": {
+    "title": "Request Staff",
+    "sub": "Leave your details and our ATH Recruiters team will reach out about your hiring needs.",
+    "button": "Submit Request"
+  }
 }
