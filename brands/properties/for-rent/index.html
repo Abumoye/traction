@@ -97,7 +97,7 @@
       "name": "How do I rent a house through Traction Properties?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Reach out through the WhatsApp link on this page with your budget, preferred location, and number of bedrooms. Our team will share matching listings, arrange a viewing, and guide you through the tenancy agreement and move-in process."
+        "text": "Reach out through the enquiry buttons on this page with your budget, preferred location, and number of bedrooms. Our team will share matching listings, arrange a viewing, and guide you through the tenancy agreement and move-in process."
       }
     },
     {
@@ -319,7 +319,7 @@
       
       <a href="#listings" class="btn btn-primary"  >View Available Rentals</a>
       
-      <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20am%20looking%20for%20a%20house%20for%20rent%20in%20Abuja." class="btn btn-ghost"  target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <button type="button" class="btn btn-ghost" data-open-lead-popup>Enquire Now</button>
       
     </div>
     
@@ -477,7 +477,7 @@
               
             </ul>
             
-            <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%204-bedroom%20terrace%20duplex%20%2B%20BQ%20for%20rent%20in%20Lifecamp%2C%20Abuja%20(ID%3A%20100AB)." class="btn btn-primary" target="_blank" rel="noopener">Enquire About This Home</a>
+            <a href="#request-consultation" class="btn btn-primary" data-open-lead-popup data-popup-subject="4-bedroom terrace duplex + BQ for rent in Lifecamp, Abuja (ID: 100AB)">Enquire About This Home</a>
           </div>
         </div>
         
@@ -530,7 +530,7 @@
               
             </ul>
             
-            <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%202-bedroom%20bungalow%20for%20rent%20in%20Lugbe%2C%20Abuja%20(ID%3A%20101AB)." class="btn btn-primary" target="_blank" rel="noopener">Enquire About This Home</a>
+            <a href="#request-consultation" class="btn btn-primary" data-open-lead-popup data-popup-subject="2-bedroom bungalow for rent in Lugbe, Abuja (ID: 101AB)">Enquire About This Home</a>
           </div>
         </div>
         
@@ -551,7 +551,7 @@
         
         <details class="faq-item">
           <summary>How do I rent a house through Traction Properties?</summary>
-          <div class="faq-answer">Reach out through the WhatsApp link on this page with your budget, preferred location, and number of bedrooms. Our team will share matching listings, arrange a viewing, and guide you through the tenancy agreement and move-in process.</div>
+          <div class="faq-answer">Reach out through the enquiry buttons on this page with your budget, preferred location, and number of bedrooms. Our team will share matching listings, arrange a viewing, and guide you through the tenancy agreement and move-in process.</div>
         </details>
         
         <details class="faq-item">
@@ -591,13 +591,37 @@
   <div class="cta-band reveal">
     <h2>Looking For a House to Rent?</h2>
     <p>Tell us your budget, location, and bedroom count. Or call us directly at 0805 203 3145.</p>
-    <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20am%20looking%20for%20a%20house%20for%20rent%20in%20Abuja." class="btn btn-primary" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    <button type="button" class="btn btn-primary" data-open-lead-popup>Enquire Now</button>
   </div>
 </section>
 
 
 
 
+
+<dialog id="leadPopupModal" class="resource-modal training-form-modal" aria-labelledby="leadPopupTitle">
+  <form id="leadPopupForm" class="resource-modal-form" novalidate>
+    <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+    <h3 id="leadPopupTitle">Enquire About A Rental</h3>
+    <p class="resource-modal-sub" id="leadPopupSubject" hidden></p>
+    <p class="resource-modal-sub">Leave your details and a property consultant from our team will reach out.</p>
+    <div style="display:grid;gap:14px;">
+      <input name="name" type="text" placeholder="Full Name" aria-label="Full Name" autocomplete="name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="phone" type="tel" placeholder="Phone Number" aria-label="Phone Number" autocomplete="tel" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="companyName" type="text" placeholder="Company Name" aria-label="Company Name" autocomplete="organization" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="email" type="email" placeholder="Email Address" aria-label="Email Address" autocomplete="email" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <button type="submit" class="btn btn-primary" id="leadPopupSubmit" style="width:100%;justify-content:center;">Submit Enquiry</button>
+      <p id="leadPopupStatus" style="text-align:center;font-size:13.5px;margin:0;" aria-live="polite"></p>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="leadPopupSuccess" class="form-success-modal">
+  <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+  <div class="form-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+  <p>Thank you. Someone from our team will reach out shortly.</p>
+  <button type="button" class="btn btn-primary" data-close-dialog style="margin:18px auto 0;">Close</button>
+</dialog>
 
 
 
@@ -636,6 +660,6 @@
   
   <script src="/js/nav.js"></script>
   <script src="/js/reveal.js"></script>
-  <script src="/js/property-carousel.js"></script><script src="/js/property-filter.js"></script>
+  <script src="/js/form-guard.js"></script><script src="/js/lead-popup.js"></script><script src="/js/property-carousel.js"></script><script src="/js/property-filter.js"></script>
 </body>
 </html>

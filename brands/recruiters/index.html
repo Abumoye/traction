@@ -231,7 +231,7 @@
     
     <div class="hero-actions">
       
-      <a href="https://wa.me/2348125078087?text=I%20need%20to%20hire%20staff%20urgently" class="btn btn-primary"  target="_blank" rel="noopener">Request Staff on WhatsApp</a>
+      <button type="button" class="btn btn-primary" data-open-lead-popup>Request Staff Now</button>
       
       <a href="#ath-plans" class="btn btn-ghost"  >See Our Plans</a>
       
@@ -516,7 +516,7 @@
             
             <h3>Plan A — High-Volume Staffing</h3>
             <p>Tailored search and selection services designed to fill core operational roles with precision. This tier provides direct access to our verified community professionals, ensuring cultural fit and technical competence.<br><br><em>Ideal for roles with high attrition rates or rapid scaling needs in industries like Sales, Hospitality, Construction, FinTechs, Technology, Industries, FMCG, ad-hoc staffing, homes, private staff, and more.</em><br><br>✓ Unlimited candidate requests<br>✓ First time waiting period of 1 month<br>✓ Best for roles with high attrition rates<br>✓ Just 24-48 hours waiting period during subscription<br>✓ Available in all states in Nigeria</p>
-            <a href="https://wa.me/2348125078087?text=I%27m%20interested%20in%20Plan%20A%20-%20High-Volume%20Staffing" class="link-arrow">Ask About Plan A <i class="fas fa-arrow-right"></i></a>
+            <a href="#request-consultation" class="link-arrow" data-open-lead-popup data-popup-subject="Plan A - High-Volume Staffing">Ask About Plan A <i class="fas fa-arrow-right"></i></a>
           </div>
           
         
@@ -525,7 +525,7 @@
             
             <h3>Plan B — Specialized Talent Search</h3>
             <p>A highly strategic, comprehensive recruitment service dedicated to sourcing specialized talent and leadership roles across various Nigerian states and international markets.<br><br><em>Best for companies that usually need one staff member at a time, with a very low attrition rate.</em><br><br>✓ Candidate sourcing<br>✓ Candidate selection<br>✓ Pre-interview advisory<br>✓ Save time wasted on vacancy ads<br>✓ Save time wasted on sourcing through CVs<br>✓ Save time wasted on pre-interview screening<br>✓ One-off service<br>✓ Qualified candidates in 2 weeks or less<br>✓ Available in all states in Nigeria</p>
-            <a href="https://wa.me/2348125078087?text=I%27m%20interested%20in%20Plan%20B%20-%20Specialized%20Talent%20Search" class="link-arrow">Ask About Plan B <i class="fas fa-arrow-right"></i></a>
+            <a href="#request-consultation" class="link-arrow" data-open-lead-popup data-popup-subject="Plan B - Specialized Talent Search">Ask About Plan B <i class="fas fa-arrow-right"></i></a>
           </div>
           
         
@@ -534,7 +534,7 @@
             
             <h3>Plan C — End-to-End Executive HR Partnership</h3>
             <p>A fully managed, consultant-led recruitment process from initial sourcing through to corporate integration.<br><br><em>Best for organizations seeking a complete corporate onboarding experience, expert interview panels, and post-hire development.</em><br><br>✓ First-level interviewing with a Traction Outsourcing HR professional<br>✓ Second-level joint panel interviews with Traction Outsourcing HR professional and your management<br>✓ Full HR compliance support, including standardized staff offer letters, tailored job descriptions, and optional staff background check<br>✓ Includes 2 standardized trainings delivered by our management consultants (1 general staff training and 1 corporate onboarding training)<br>✓ Minimum of 5 recruited staff for this plan</p>
-            <a href="https://wa.me/2348125078087?text=I%27m%20interested%20in%20Plan%20C%20-%20End-to-End%20Executive%20HR%20Partnership" class="link-arrow">Ask About Plan C <i class="fas fa-arrow-right"></i></a>
+            <a href="#request-consultation" class="link-arrow" data-open-lead-popup data-popup-subject="Plan C - End-to-End Executive HR Partnership">Ask About Plan C <i class="fas fa-arrow-right"></i></a>
           </div>
           
         
@@ -543,7 +543,7 @@
             
             <h3>Home Plan — Home Recruitment</h3>
             <p>Specially designed for homeowners who need to recruit domestic staff once, without ongoing management. We find the right person, hand them over, and you take full control from there.<br><br><em>Best for homeowners recruiting domestic staff: nannies, cooks, cleaners, drivers, gardeners, security, and other home-based roles.</em><br><br>✓ One-off recruitment service<br>✓ Candidate sourcing from verified community<br>✓ Skills and background screening<br>✓ Hands-off after placement, you manage your own home staff<br>✓ Free one-time replacement within the first month<br>✓ Single, one-time fee. No recurring charges<br>✓ No staff management included<br>✓ Available across Nigeria</p>
-            <a href="https://wa.me/2348125078087?text=I%27m%20interested%20in%20the%20ATH%20Home%20Plan%20for%20domestic%20staff%20recruitment" class="link-arrow">Ask About the Home Plan <i class="fas fa-arrow-right"></i></a>
+            <a href="#request-consultation" class="link-arrow" data-open-lead-popup data-popup-subject="ATH Home Plan for domestic staff recruitment">Ask About the Home Plan <i class="fas fa-arrow-right"></i></a>
           </div>
           
         
@@ -663,6 +663,30 @@
 
 
 
+<dialog id="leadPopupModal" class="resource-modal training-form-modal" aria-labelledby="leadPopupTitle">
+  <form id="leadPopupForm" class="resource-modal-form" novalidate>
+    <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+    <h3 id="leadPopupTitle">Request Staff</h3>
+    <p class="resource-modal-sub" id="leadPopupSubject" hidden></p>
+    <p class="resource-modal-sub">Leave your details and our ATH Recruiters team will reach out about your hiring needs.</p>
+    <div style="display:grid;gap:14px;">
+      <input name="name" type="text" placeholder="Full Name" aria-label="Full Name" autocomplete="name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="phone" type="tel" placeholder="Phone Number" aria-label="Phone Number" autocomplete="tel" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="companyName" type="text" placeholder="Company Name" aria-label="Company Name" autocomplete="organization" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="email" type="email" placeholder="Email Address" aria-label="Email Address" autocomplete="email" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <button type="submit" class="btn btn-primary" id="leadPopupSubmit" style="width:100%;justify-content:center;">Submit Request</button>
+      <p id="leadPopupStatus" style="text-align:center;font-size:13.5px;margin:0;" aria-live="polite"></p>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="leadPopupSuccess" class="form-success-modal">
+  <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+  <div class="form-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+  <p>Thank you. Someone from our team will reach out shortly.</p>
+  <button type="button" class="btn btn-primary" data-close-dialog style="margin:18px auto 0;">Close</button>
+</dialog>
+
 
 
   </main>
@@ -697,6 +721,6 @@
   
   <script src="/js/nav.js"></script>
   <script src="/js/reveal.js"></script>
-  <script src="/js/form-guard.js"></script><script src="/js/lead-form.js"></script>
+  <script src="/js/form-guard.js"></script><script src="/js/lead-form.js"></script><script src="/js/lead-popup.js"></script>
 </body>
 </html>

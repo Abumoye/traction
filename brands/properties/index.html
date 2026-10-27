@@ -138,7 +138,7 @@
       "name": "How do I list a property or get a property manager through Traction Properties?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Contact a property manager directly through the WhatsApp link on this page. Our team will walk you through the process, whether you are listing a property for sale or rent, or need ongoing property management."
+        "text": "Contact a property manager through the \"Contact A Property Manager\" button on this page. Our team will walk you through the process, whether you are listing a property for sale or rent, or need ongoing property management."
       }
     }
   ]
@@ -306,7 +306,7 @@
         
         <details class="faq-item">
           <summary>How do I list a property or get a property manager through Traction Properties?</summary>
-          <div class="faq-answer">Contact a property manager directly through the WhatsApp link on this page. Our team will walk you through the process, whether you are listing a property for sale or rent, or need ongoing property management.</div>
+          <div class="faq-answer">Contact a property manager through the "Contact A Property Manager" button on this page. Our team will walk you through the process, whether you are listing a property for sale or rent, or need ongoing property management.</div>
         </details>
         
       </div>
@@ -326,13 +326,37 @@
   <div class="cta-band reveal">
     <h2>Contact A Property Manager</h2>
     <p></p>
-    <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20speak%20with%20a%20property%20manager." class="btn btn-primary" target="_blank" rel="noopener">Contact A Property Manager</a>
+    <button type="button" class="btn btn-primary" data-open-lead-popup>Contact A Property Manager</button>
   </div>
 </section>
 
 
 
 
+
+<dialog id="leadPopupModal" class="resource-modal training-form-modal" aria-labelledby="leadPopupTitle">
+  <form id="leadPopupForm" class="resource-modal-form" novalidate>
+    <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+    <h3 id="leadPopupTitle">Speak With A Property Manager</h3>
+    <p class="resource-modal-sub" id="leadPopupSubject" hidden></p>
+    <p class="resource-modal-sub">Leave your details and a property manager from our team will reach out.</p>
+    <div style="display:grid;gap:14px;">
+      <input name="name" type="text" placeholder="Full Name" aria-label="Full Name" autocomplete="name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="phone" type="tel" placeholder="Phone Number" aria-label="Phone Number" autocomplete="tel" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="companyName" type="text" placeholder="Company Name" aria-label="Company Name" autocomplete="organization" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="email" type="email" placeholder="Email Address" aria-label="Email Address" autocomplete="email" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <button type="submit" class="btn btn-primary" id="leadPopupSubmit" style="width:100%;justify-content:center;">Submit</button>
+      <p id="leadPopupStatus" style="text-align:center;font-size:13.5px;margin:0;" aria-live="polite"></p>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="leadPopupSuccess" class="form-success-modal">
+  <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+  <div class="form-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+  <p>Thank you. Someone from our team will reach out shortly.</p>
+  <button type="button" class="btn btn-primary" data-close-dialog style="margin:18px auto 0;">Close</button>
+</dialog>
 
 
 
@@ -371,6 +395,6 @@
   
   <script src="/js/nav.js"></script>
   <script src="/js/reveal.js"></script>
-  
+  <script src="/js/form-guard.js"></script><script src="/js/lead-popup.js"></script>
 </body>
 </html>
