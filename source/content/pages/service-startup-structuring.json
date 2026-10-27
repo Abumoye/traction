@@ -102,8 +102,8 @@
     "actions": [
       {
         "label": "Start Structuring My Business",
-        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Startup%20Structuring%20at%20Traction%20Outsourcing%20Limited.",
-        "style": "btn-primary"
+        "style": "btn-primary",
+        "popup": true
       }
     ]
   },
@@ -295,6 +295,11 @@
     "title": "Ready to Structure Your Startup?",
     "text": "Speak with our consulting team about how Startup Structuring can work for your business.",
     "button": "Start Structuring My Business",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Startup%20Structuring%20at%20Traction%20Outsourcing%20Limited."
+    "popup": true
+  },
+  "lead_popup": {
+    "title": "Request A Free Consultation",
+    "sub": "Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)",
+    "button": "Submit & Request Consultation"
   }
 }

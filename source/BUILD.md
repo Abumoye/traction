@@ -140,3 +140,9 @@ To test a closed card locally: `BUILD_TODAY=2026-12-01 python3 build.py`.
 ## Homepage "Latest Events & Insights"
 
 The section in `content/pages/home.json` (`insights`) is set to `"source": "latest-articles"` with `"count": 3`. `build.py` (`fill_home_insights`) fills it with the newest articles (by byline date) that are listed in `content/articles-index.json`, using each card's tag, title, excerpt, image and image_alt from that list. So a new article only needs its normal steps (article JSON + articles-index entry); it shows on the homepage after the next build and the oldest drops off. To go back to hand-picked cards, remove `source` and add an `entries` list.
+
+## "Request A Free Consultation" pop-up (service pages)
+
+The service pages (Corporate Restructuring, Business Advisory, Startup Structuring, Bank Outsourcing) have no WhatsApp buttons. Their buttons open a pop-up lead form instead. It posts the same fields as the lead form (`sourcePage`, `name`, `phone`, `companyName`, `email`) to the same Google Apps Script, so enquiries land on the Leads tab and trigger the usual email. No Apps Script change is needed.
+
+To use it on another `flex.html` page: add a `"lead_popup": {"title", "sub", "button"}` block to the page JSON, then put `"popup": true` on any hero action, section action, `cta` section or `final_cta` (and remove its `href`). The template adds the dialog and loads `/js/lead-popup.js` (plus `form-guard.js` if the page does not already load it). Script: `source/static/js/lead-popup.js`.

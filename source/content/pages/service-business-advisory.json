@@ -120,14 +120,8 @@
     "actions": [
       {
         "label": "Request A Free Consultation",
-        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20business%20advisory%20services",
-        "style": "btn-primary"
-      },
-      {
-        "label": "Chat on WhatsApp",
-        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20business%20advisory%20services",
-        "style": "btn-secondary",
-        "blank": true
+        "style": "btn-primary",
+        "popup": true
       }
     ]
   },
@@ -179,8 +173,8 @@
     {
       "type": "cta",
       "heading": "Not sure which of these applies to your situation?",
-      "button": "Ask Us on WhatsApp",
-      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20talk%20through%20a%20business%20decision%20I%27m%20facing"
+      "button": "Ask Us a Question",
+      "popup": true
     },
     {
       "type": "grid",
@@ -231,8 +225,8 @@
     {
       "type": "cta",
       "heading": "Bring us the decision you're sitting on.",
-      "button": "Chat on WhatsApp",
-      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20talk%20through%20a%20business%20decision"
+      "button": "Talk To Our Team",
+      "popup": true
     },
     {
       "type": "text",
@@ -357,6 +351,11 @@
     "title": "Ready to Talk Through Your Decision?",
     "text": "Speak with our consulting team about how Business Advisory can work for your business.",
     "button": "Book a Strategy Session",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Business%20Advisory%20at%20Traction%20Outsourcing%20Limited."
+    "popup": true
+  },
+  "lead_popup": {
+    "title": "Request A Free Consultation",
+    "sub": "Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)",
+    "button": "Submit & Request Consultation"
   }
 }
