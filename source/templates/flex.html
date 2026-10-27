@@ -10,7 +10,7 @@
     {% if hero.actions %}
     <div class="hero-actions">
       {% for a in hero.actions %}
-      <a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>
+      {% if a.popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-lead-popup>{{ a.label }}</button>{% else %}<a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>{% endif %}
       {% endfor %}
     </div>
     {% endif %}
@@ -48,7 +48,7 @@
       {% if sec.actions %}
       <div class="hero-actions reveal" style="justify-content:center;margin-top:{{ '0' if not sec.paragraphs and not sec.sub and not sec.heading else '28px' }};">
         {% for a in sec.actions %}
-        <a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>
+        {% if a.popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-lead-popup>{{ a.label }}</button>{% else %}<a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>{% endif %}
         {% endfor %}
       </div>
       {% endif %}
@@ -311,7 +311,7 @@
       <div class="cta-band reveal{{ ' cta-band-square' if sec.square else '' }}">
         <h2>{{ sec.heading }}</h2>
         {% if sec.text %}<p>{{ sec.text }}</p>{% endif %}
-        <a href="{{ sec.href }}" class="btn btn-primary" {% if sec.modal %}data-open-modal="{{ sec.modal }}"{% endif %} {% if sec.blank %}target="_blank" rel="noopener"{% endif %}>{{ sec.button }}</a>
+        {% if sec.popup %}<button type="button" class="btn btn-primary" data-open-lead-popup>{{ sec.button }}</button>{% else %}<a href="{{ sec.href }}" class="btn btn-primary" {% if sec.modal %}data-open-modal="{{ sec.modal }}"{% endif %} {% if sec.blank %}target="_blank" rel="noopener"{% endif %}>{{ sec.button }}</a>{% endif %}
       </div>
 
     {% elif sec.type == 'faq' %}
@@ -513,7 +513,7 @@
   <div class="cta-band reveal">
     <h2>{{ final_cta.title }}</h2>
     <p>{{ final_cta.text }}</p>
-    {% if final_cta.modal %}<button type="button" class="btn btn-primary" data-open-training-form="{{ final_cta.modal }}">{{ final_cta.button }}</button>{% else %}<a href="{{ final_cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ final_cta.button }}</a>{% endif %}
+    {% if final_cta.popup %}<button type="button" class="btn btn-primary" data-open-lead-popup>{{ final_cta.button }}</button>{% elif final_cta.modal %}<button type="button" class="btn btn-primary" data-open-training-form="{{ final_cta.modal }}">{{ final_cta.button }}</button>{% else %}<a href="{{ final_cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ final_cta.button }}</a>{% endif %}
   </div>
 </section>
 {% endif %}
@@ -561,7 +561,32 @@
 </dialog>
 {% endif %}
 
+{% if lead_popup %}
+<dialog id="leadPopupModal" class="resource-modal training-form-modal" aria-labelledby="leadPopupTitle">
+  <form id="leadPopupForm" class="resource-modal-form" novalidate>
+    <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+    <h3 id="leadPopupTitle">{{ lead_popup.title | default('Request A Free Consultation') }}</h3>
+    <p class="resource-modal-sub">{{ lead_popup.sub | default('Leave your details and someone from our team will reach out.') }}</p>
+    <div style="display:grid;gap:14px;">
+      <input name="name" type="text" placeholder="Full Name" aria-label="Full Name" autocomplete="name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="phone" type="tel" placeholder="Phone Number" aria-label="Phone Number" autocomplete="tel" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="companyName" type="text" placeholder="Company Name" aria-label="Company Name" autocomplete="organization" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="email" type="email" placeholder="Email Address" aria-label="Email Address" autocomplete="email" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <button type="submit" class="btn btn-primary" id="leadPopupSubmit" style="width:100%;justify-content:center;">{{ lead_popup.button | default('Submit & Request Consultation') }}</button>
+      <p id="leadPopupStatus" style="text-align:center;font-size:13.5px;margin:0;" aria-live="polite"></p>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="leadPopupSuccess" class="form-success-modal">
+  <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+  <div class="form-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+  <p>Thank you. Someone from our team will reach out shortly.</p>
+  <button type="button" class="btn btn-primary" data-close-dialog style="margin:18px auto 0;">Close</button>
+</dialog>
+{% endif %}
+
 {% endblock %}
 {% block extra_head %}{% for l in head_links %}<link rel="{{ l.rel }}" type="{{ l.type }}" href="{{ l.href }}" title="{{ l.title }}">
   {% endfor %}{% endblock %}
-{% block extra_scripts %}{% if has_form %}<script src="/js/form-guard.js"></script><script src="/js/lead-form.js"></script>{% endif %}{% if has_resource_form %}<script src="/js/form-guard.js"></script><script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script src="/js/resource-download.js"></script>{% endif %}{% if has_resource_filter %}<script src="/js/resource-filter.js"></script>{% endif %}{% for s in scripts | default([]) %}<script src="{{ s }}"></script>{% endfor %}{% endblock %}
+{% block extra_scripts %}{% if has_form %}<script src="/js/form-guard.js"></script><script src="/js/lead-form.js"></script>{% endif %}{% if lead_popup %}{% if not has_form %}<script src="/js/form-guard.js"></script>{% endif %}<script src="/js/lead-popup.js"></script>{% endif %}{% if has_resource_form %}<script src="/js/form-guard.js"></script><script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script src="/js/resource-download.js"></script>{% endif %}{% if has_resource_filter %}<script src="/js/resource-filter.js"></script>{% endif %}{% for s in scripts | default([]) %}<script src="{{ s }}"></script>{% endfor %}{% endblock %}
