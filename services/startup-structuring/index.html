@@ -225,7 +225,7 @@
     
     <div class="hero-actions">
       
-      <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Startup%20Structuring%20at%20Traction%20Outsourcing%20Limited." class="btn btn-primary"  >Start Structuring My Business</a>
+      <button type="button" class="btn btn-primary" data-open-lead-popup>Start Structuring My Business</button>
       
     </div>
     
@@ -472,11 +472,36 @@
   <div class="cta-band reveal">
     <h2>Ready to Structure Your Startup?</h2>
     <p>Speak with our consulting team about how Startup Structuring can work for your business.</p>
-    <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Startup%20Structuring%20at%20Traction%20Outsourcing%20Limited." class="btn btn-primary" target="_blank" rel="noopener">Start Structuring My Business</a>
+    <button type="button" class="btn btn-primary" data-open-lead-popup>Start Structuring My Business</button>
   </div>
 </section>
 
 
+
+
+
+<dialog id="leadPopupModal" class="resource-modal training-form-modal" aria-labelledby="leadPopupTitle">
+  <form id="leadPopupForm" class="resource-modal-form" novalidate>
+    <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+    <h3 id="leadPopupTitle">Request A Free Consultation</h3>
+    <p class="resource-modal-sub">Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)</p>
+    <div style="display:grid;gap:14px;">
+      <input name="name" type="text" placeholder="Full Name" aria-label="Full Name" autocomplete="name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="phone" type="tel" placeholder="Phone Number" aria-label="Phone Number" autocomplete="tel" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="companyName" type="text" placeholder="Company Name" aria-label="Company Name" autocomplete="organization" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="email" type="email" placeholder="Email Address" aria-label="Email Address" autocomplete="email" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <button type="submit" class="btn btn-primary" id="leadPopupSubmit" style="width:100%;justify-content:center;">Submit & Request Consultation</button>
+      <p id="leadPopupStatus" style="text-align:center;font-size:13.5px;margin:0;" aria-live="polite"></p>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="leadPopupSuccess" class="form-success-modal">
+  <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+  <div class="form-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+  <p>Thank you. Someone from our team will reach out shortly.</p>
+  <button type="button" class="btn btn-primary" data-close-dialog style="margin:18px auto 0;">Close</button>
+</dialog>
 
 
 
@@ -519,6 +544,6 @@
   
   <script src="/js/nav.js"></script>
   <script src="/js/reveal.js"></script>
-  <script src="/js/form-guard.js"></script><script src="/js/lead-form.js"></script>
+  <script src="/js/form-guard.js"></script><script src="/js/lead-form.js"></script><script src="/js/lead-popup.js"></script>
 </body>
 </html>
