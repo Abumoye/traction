@@ -53,7 +53,14 @@
         "addressCountry": "NG"
       },
       "areaServed": "Abuja, Nigeria",
-      "knowsAbout": ["Tenant Management", "Tenant Verification", "Rent Collection", "Legal Representation", "Facility Management", "Renovation & Maintenance"],
+      "knowsAbout": [
+        "Tenant Management",
+        "Tenant Verification",
+        "Rent Collection",
+        "Legal Representation",
+        "Facility Management",
+        "Renovation & Maintenance"
+      ],
       "parentOrganization": {
         "@type": "Organization",
         "name": "Traction Outsourcing Limited",
@@ -158,7 +165,7 @@
         },
         {
           "q": "How do I list a property or get a property manager through Traction Properties?",
-          "a": "Contact a property manager directly through the WhatsApp link on this page. Our team will walk you through the process, whether you are listing a property for sale or rent, or need ongoing property management."
+          "a": "Contact a property manager through the \"Contact A Property Manager\" button on this page. Our team will walk you through the process, whether you are listing a property for sale or rent, or need ongoing property management."
         }
       ]
     }
@@ -166,6 +173,11 @@
   "final_cta": {
     "title": "Contact A Property Manager",
     "button": "Contact A Property Manager",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20speak%20with%20a%20property%20manager."
+    "popup": true
+  },
+  "lead_popup": {
+    "title": "Speak With A Property Manager",
+    "sub": "Leave your details and a property manager from our team will reach out.",
+    "button": "Submit"
   }
 }

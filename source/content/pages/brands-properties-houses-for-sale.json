@@ -22,9 +22,24 @@
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tolnigeria.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Traction Properties", "item": "https://tolnigeria.com/brands/properties/" },
-        { "@type": "ListItem", "position": 3, "name": "Houses For Sale in Abuja", "item": "https://tolnigeria.com/brands/properties/houses-for-sale/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Traction Properties",
+          "item": "https://tolnigeria.com/brands/properties/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Houses For Sale in Abuja",
+          "item": "https://tolnigeria.com/brands/properties/houses-for-sale/"
+        }
       ]
     },
     {
@@ -48,8 +63,16 @@
     "headline": "Houses For Sale in Abuja.",
     "sub": "Buy your next home with clear title documentation and a stress-free process from due diligence through to handover.",
     "actions": [
-      { "label": "View Available Homes", "href": "#listings", "style": "btn-primary" },
-      { "label": "Chat on WhatsApp", "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20looking%20for%20a%20house%20for%20sale%20in%20Abuja.", "style": "btn-ghost", "blank": true }
+      {
+        "label": "View Available Homes",
+        "href": "#listings",
+        "style": "btn-primary"
+      },
+      {
+        "label": "Enquire Now",
+        "style": "btn-ghost",
+        "popup": true
+      }
     ]
   },
   "sections": [
@@ -95,9 +118,11 @@
           "road_access": "",
           "description": "Land size: xx0 SQM.",
           "price": "₦ 380,000,000",
-          "images": ["/images/property-sale1.jpeg"],
+          "images": [
+            "/images/property-sale1.jpeg"
+          ],
           "cta": "Enquire About This Home",
-          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%20luxury%204-bedroom%20semi-detached%20for%20sale%20in%20Kado%2C%20Abuja."
+          "popup": "luxury 4-bedroom semi-detached for sale in Kado, Abuja"
         },
         {
           "title": "Premium 4-Bedroom Terrace Duplex",
@@ -107,9 +132,11 @@
           "road_access": "",
           "description": "Land size: xx0 SQM.",
           "price": "₦ 350,000,000",
-          "images": ["/images/property-sale2.jpeg"],
+          "images": [
+            "/images/property-sale2.jpeg"
+          ],
           "cta": "Enquire About This Home",
-          "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20interested%20in%20the%20premium%204-bedroom%20terrace%20duplex%20for%20sale%20in%20Mabushi%2C%20Abuja."
+          "popup": "premium 4-bedroom terrace duplex for sale in Mabushi, Abuja"
         }
       ]
     },
@@ -120,7 +147,7 @@
       "entries": [
         {
           "q": "How do I buy a house through Traction Properties?",
-          "a": "Reach out through the WhatsApp link on this page with your budget and preferred location. Our team will share matching listings, arrange a viewing, and guide you through documentation, payment, and handover."
+          "a": "Reach out through the enquiry buttons on this page with your budget and preferred location. Our team will share matching listings, arrange a viewing, and guide you through documentation, payment, and handover."
         },
         {
           "q": "Are the property listings on this page the full list?",
@@ -140,8 +167,15 @@
   "final_cta": {
     "title": "Looking To Buy a Property?",
     "text": "Tell us your budget and preferred location. Or call us directly at 0805 203 3145.",
-    "button": "Chat on WhatsApp",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20am%20looking%20for%20a%20house%20for%20sale%20in%20Abuja."
+    "button": "Enquire Now",
+    "popup": true
   },
-  "scripts": ["/js/property-carousel.js"]
+  "scripts": [
+    "/js/property-carousel.js"
+  ],
+  "lead_popup": {
+    "title": "Enquire About A Property",
+    "sub": "Leave your details and a property consultant from our team will reach out.",
+    "button": "Submit Enquiry"
+  }
 }

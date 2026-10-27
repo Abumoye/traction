@@ -10,7 +10,7 @@
     {% if hero.actions %}
     <div class="hero-actions">
       {% for a in hero.actions %}
-      {% if a.popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-lead-popup>{{ a.label }}</button>{% else %}<a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>{% endif %}
+      {% if a.popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-lead-popup>{{ a.label }}</button>{% elif a.training_popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-training-form="{{ a.training_popup }}">{{ a.label }}</button>{% else %}<a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>{% endif %}
       {% endfor %}
     </div>
     {% endif %}
@@ -48,7 +48,7 @@
       {% if sec.actions %}
       <div class="hero-actions reveal" style="justify-content:center;margin-top:{{ '0' if not sec.paragraphs and not sec.sub and not sec.heading else '28px' }};">
         {% for a in sec.actions %}
-        {% if a.popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-lead-popup>{{ a.label }}</button>{% else %}<a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>{% endif %}
+        {% if a.popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-lead-popup>{{ a.label }}</button>{% elif a.training_popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-training-form="{{ a.training_popup }}">{{ a.label }}</button>{% else %}<a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>{% endif %}
         {% endfor %}
       </div>
       {% endif %}
@@ -101,7 +101,7 @@
               <h3>{{ e.title }}</h3>
               <p>{{ e.text }}</p>
               {% if e.chips %}<div class="card-chips">{% for c in e.chips %}<span class="card-chip">{% if c.icon %}<i class="fas {{ c.icon }}" aria-hidden="true"></i>{% endif %}<span><b>{{ c.label }}</b> {{ c.value }}</span></span>{% endfor %}</div>{% endif %}
-              {% if e.closed %}<span class="event-closed-note">This event has ended</span>{% elif e.cta %}<a href="{{ e.href }}" class="link-arrow">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% endif %}
+              {% if e.closed %}<span class="event-closed-note">This event has ended</span>{% elif e.popup %}<a href="#request-consultation" class="link-arrow" data-open-lead-popup data-popup-subject="{{ e.popup if e.popup is string else '' }}">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% elif e.cta %}<a href="{{ e.href }}" class="link-arrow">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% endif %}
             </div>
             {% if e.closed %}<span class="closed-stamp">CLOSED</span>{% endif %}
           </div>
@@ -115,7 +115,7 @@
             {% if e.icon %}<div class="icon-badge"><i class="fas {{ e.icon }}"></i></div>{% endif %}
             <h3>{{ e.title }}</h3>
             <p>{{ e.text }}</p>
-            {% if e.cta %}<a href="{{ e.href }}" class="link-arrow">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% endif %}
+            {% if e.popup %}<a href="#request-consultation" class="link-arrow" data-open-lead-popup data-popup-subject="{{ e.popup if e.popup is string else '' }}">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% elif e.cta %}<a href="{{ e.href }}" class="link-arrow">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% endif %}
           </div>
           {% endif %}
         {% endfor %}
@@ -240,7 +240,7 @@
             {% elif e.price %}
             <p class="property-price">{{ e.price }}</p>
             {% endif %}
-            {% if e.href %}<a href="{{ e.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ e.cta | default('Enquire About This Home') }}</a>{% endif %}
+            {% if e.popup %}<a href="#request-consultation" class="btn btn-primary" data-open-lead-popup data-popup-subject="{{ e.popup if e.popup is string else '' }}">{{ e.cta | default('Enquire About This Home') }}</a>{% elif e.href %}<a href="{{ e.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ e.cta | default('Enquire About This Home') }}</a>{% endif %}
           </div>
         </div>
         {% endfor %}
@@ -566,6 +566,7 @@
   <form id="leadPopupForm" class="resource-modal-form" novalidate>
     <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
     <h3 id="leadPopupTitle">{{ lead_popup.title | default('Request A Free Consultation') }}</h3>
+    <p class="resource-modal-sub" id="leadPopupSubject" hidden></p>
     <p class="resource-modal-sub">{{ lead_popup.sub | default('Leave your details and someone from our team will reach out.') }}</p>
     <div style="display:grid;gap:14px;">
       <input name="name" type="text" placeholder="Full Name" aria-label="Full Name" autocomplete="name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
