@@ -5,8 +5,88 @@
     "logo": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
   },
   "careersPage": "https://tolnigeria.com/apply/",
-  "lastUpdated": "2026-10-25",
+  "lastUpdated": "2026-10-28",
   "jobs": [
+    {
+      "id": "pastry-chef-assistant",
+      "title": "Pastry Chef (Assistant)",
+      "url": "https://tolnigeria.com/apply/pastry-chef-assistant/",
+      "applyUrl": "https://tolnigeria.com/apply/pastry-chef-assistant/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Maitama",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-10-28",
+      "validThrough": "2026-11-17T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 200000,
+        "period": "MONTH",
+        "display": "₦200,000/month"
+      },
+      "description": "We are hiring a Pastry Chef (Assistant) for a restaurant in Maitama, Abuja. This is a full-time, onsite role.\nResponsibilities: Assist the pastry chef in preparing and baking pastries, cakes, bread and desserts to the restaurant's standard. Prepare doughs, fillings, ingredients and decorations ahead of service. Keep the pastry section clean and follow food safety and hygiene standards. Help monitor stock and report shortages.\nRequirements: At least 2 years' relevant pastry or kitchen experience Good communication skills Presentable and able to work with little to no supervision Able to commute to Maitama, Abuja and resume immediately CV Required (PDF)\nBenefits: Other statutory benefits.",
+      "responsibilities": [
+        "Assist the pastry chef in preparing and baking pastries, cakes, bread and desserts to the restaurant's standard.",
+        "Prepare doughs, fillings, ingredients and decorations ahead of service.",
+        "Keep the pastry section clean and follow food safety and hygiene standards.",
+        "Help monitor stock and report shortages."
+      ],
+      "qualifications": [
+        "At least 2 years' relevant pastry or kitchen experience",
+        "Good communication skills",
+        "Presentable and able to work with little to no supervision",
+        "Able to commute to Maitama, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ],
+      "industry": "Hospitality"
+    },
+    {
+      "id": "sous-chef",
+      "title": "Sous Chef",
+      "url": "https://tolnigeria.com/apply/sous-chef/",
+      "applyUrl": "https://tolnigeria.com/apply/sous-chef/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Maitama",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-10-28",
+      "validThrough": "2026-11-17T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 550000,
+        "period": "MONTH",
+        "display": "₦550,000/month"
+      },
+      "description": "We are hiring a Sous Chef for a restaurant in Maitama, Abuja. This is a full-time, onsite role.\nResponsibilities: Support the head chef in running the kitchen day to day and lead the cooks during service. Prepare and cook dishes to a consistent standard and check quality before food leaves the kitchen. Supervise kitchen staff and enforce food safety and hygiene standards. Help with stock control, ordering and keeping waste low.\nRequirements: At least 2 years' experience as a sous chef or in a similar kitchen role Good communication skills Presentable and able to work with little to no supervision Able to commute to Maitama, Abuja and resume immediately CV Required (PDF)\nBenefits: Other statutory benefits.",
+      "responsibilities": [
+        "Support the head chef in running the kitchen day to day and lead the cooks during service.",
+        "Prepare and cook dishes to a consistent standard and check quality before food leaves the kitchen.",
+        "Supervise kitchen staff and enforce food safety and hygiene standards.",
+        "Help with stock control, ordering and keeping waste low."
+      ],
+      "qualifications": [
+        "At least 2 years' experience as a sous chef or in a similar kitchen role",
+        "Good communication skills",
+        "Presentable and able to work with little to no supervision",
+        "Able to commute to Maitama, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ],
+      "industry": "Hospitality"
+    },
     {
       "id": "accountant",
       "title": "Accountant",
