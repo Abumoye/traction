@@ -1,0 +1,215 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "apply/sous-chef/index.html",
+    "url": "/apply/sous-chef/"
+  },
+  "meta": {
+    "title": "Sous Chef Job, Maitama, Abuja | Traction Outsourcing",
+    "description": "Sous Chef job in Maitama, Abuja at ₦550,000/month. Full-time role with a restaurant. 2+ years' experience required. Apply online at Traction Outsourcing Limited.",
+    "image": "/images/jobs/sous-chef.jpg",
+    "image_height": 630,
+    "image_alt": "Chef in a black chef's jacket and cap with arms crossed beside the Traction Outsourcing logo and an Apply Now button, for the Sous Chef job"
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Careers",
+          "item": "https://tolnigeria.com/apply/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sous Chef",
+          "item": "https://tolnigeria.com/apply/sous-chef/"
+        }
+      ]
+    }
+  ],
+  "hero": {
+    "back": {
+      "href": "/apply/",
+      "label": "Back to Careers"
+    },
+    "eyebrow": "We Are Hiring",
+    "headline": "Sous Chef",
+    "sub": "We are hiring a Sous Chef for a restaurant in Maitama, Abuja. Full-time · ₦550,000/month."
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "tight": true,
+      "columns": 4,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-map-marker-alt",
+          "title": "Maitama, Abuja, FCT",
+          "text": ""
+        },
+        {
+          "icon": "fa-briefcase",
+          "title": "Full-Time Role",
+          "text": ""
+        },
+        {
+          "icon": "fa-user-clock",
+          "title": "2+ Years' Experience",
+          "text": ""
+        },
+        {
+          "icon": "fa-utensils",
+          "title": "Restaurant",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "bullet-columns",
+      "tight": true,
+      "lists": [
+        {
+          "heading": "Job Description",
+          "items": [
+            "Support the head chef in running the kitchen day to day and lead the cooks during service.",
+            "Prepare and cook dishes to a consistent standard and check quality before food leaves the kitchen.",
+            "Supervise kitchen staff and enforce food safety and hygiene standards.",
+            "Help with stock control, ordering and keeping waste low."
+          ]
+        },
+        {
+          "heading": "Requirements",
+          "items": [
+            "At least 2 years' experience as a sous chef or in a similar kitchen role.",
+            "Good communication skills.",
+            "Presentable.",
+            "Comfortable handling the role with little to no supervision.",
+            "Able to commute to Maitama, Abuja and resume immediately."
+          ]
+        },
+        {
+          "heading": "Benefits",
+          "items": [
+            "Other statutory benefits."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "id": "apply-form",
+      "tight": true,
+      "heading": "Application Form",
+      "sub": "Please fill in every field. Your CV must be uploaded as a PDF file.",
+      "notice": "DO NOT APPLY MORE THAN ONCE. DOUBLE APPLICATIONS WILL BE DISQUALIFIED",
+      "form_id": "applyForm",
+      "form_max_width": "720px",
+      "button": "Submit Application",
+      "success_message": "Thank you for your application. We will reach out to qualified candidates.",
+      "fields": [
+        {
+          "name": "fullName",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2
+        },
+        {
+          "name": "gender",
+          "placeholder": "Gender",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Male",
+            "Female"
+          ]
+        },
+        {
+          "name": "age",
+          "placeholder": "Age (as at 31 October 2026)",
+          "input_type": "number",
+          "required": true,
+          "min": 16,
+          "max": 70,
+          "title": "Enter your age in years, as at 31 October 2026"
+        },
+        {
+          "name": "phone",
+          "placeholder": "Phone Number (11 digits), e.g. 08052033145",
+          "input_type": "tel",
+          "digits": 11,
+          "required": true,
+          "title": "Enter your 11-digit phone number, numbers only (e.g. 08052033145)"
+        },
+        {
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true,
+          "title": "Enter a valid email address"
+        },
+        {
+          "name": "resumeImmediately",
+          "placeholder": "Can you resume immediately?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "livesInAbuja",
+          "placeholder": "Do you currently live in Abuja?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "yearsExperience",
+          "placeholder": "How many years of experience do you have?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        },
+        {
+          "name": "cv",
+          "placeholder": "Upload Your CV",
+          "input_type": "file",
+          "accept": ".pdf,application/pdf",
+          "required": true,
+          "help": "PDF only, max 5MB."
+        }
+      ]
+    }
+  ],
+  "scripts": [
+    "/js/form-guard.js",
+    "/js/apply-fields.js",
+    "/js/apply-restaurant-maitama-form.js"
+  ]
+}

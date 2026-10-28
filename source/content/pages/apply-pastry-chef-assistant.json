@@ -1,0 +1,215 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "apply/pastry-chef-assistant/index.html",
+    "url": "/apply/pastry-chef-assistant/"
+  },
+  "meta": {
+    "title": "Pastry Chef (Assistant) Job, Maitama, Abuja | Traction Outsourcing",
+    "description": "Pastry Chef (Assistant) job in Maitama, Abuja at ₦200,000/month. Full-time role with a restaurant. 2+ years' experience required. Apply online at Traction Outsourcing Limited.",
+    "image": "/images/jobs/pastry-chef-assistant.jpg",
+    "image_height": 630,
+    "image_alt": "Smiling pastry chef in a white chef's hat and apron holding a bread knife and a whisk beside the Traction Outsourcing logo and an Apply Now button, for the Pastry Chef (Assistant) job"
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Careers",
+          "item": "https://tolnigeria.com/apply/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pastry Chef (Assistant)",
+          "item": "https://tolnigeria.com/apply/pastry-chef-assistant/"
+        }
+      ]
+    }
+  ],
+  "hero": {
+    "back": {
+      "href": "/apply/",
+      "label": "Back to Careers"
+    },
+    "eyebrow": "We Are Hiring",
+    "headline": "Pastry Chef (Assistant)",
+    "sub": "We are hiring a Pastry Chef (Assistant) for a restaurant in Maitama, Abuja. Full-time · ₦200,000/month."
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "tight": true,
+      "columns": 4,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-map-marker-alt",
+          "title": "Maitama, Abuja, FCT",
+          "text": ""
+        },
+        {
+          "icon": "fa-briefcase",
+          "title": "Full-Time Role",
+          "text": ""
+        },
+        {
+          "icon": "fa-user-clock",
+          "title": "2+ Years' Experience",
+          "text": ""
+        },
+        {
+          "icon": "fa-utensils",
+          "title": "Restaurant",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "bullet-columns",
+      "tight": true,
+      "lists": [
+        {
+          "heading": "Job Description",
+          "items": [
+            "Assist the pastry chef in preparing and baking pastries, cakes, bread and desserts to the restaurant's standard.",
+            "Prepare doughs, fillings, ingredients and decorations ahead of service.",
+            "Keep the pastry section clean and follow food safety and hygiene standards.",
+            "Help monitor stock and report shortages."
+          ]
+        },
+        {
+          "heading": "Requirements",
+          "items": [
+            "At least 2 years' relevant pastry or kitchen experience.",
+            "Good communication skills.",
+            "Presentable.",
+            "Comfortable handling the role with little to no supervision.",
+            "Able to commute to Maitama, Abuja and resume immediately."
+          ]
+        },
+        {
+          "heading": "Benefits",
+          "items": [
+            "Other statutory benefits."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "id": "apply-form",
+      "tight": true,
+      "heading": "Application Form",
+      "sub": "Please fill in every field. Your CV must be uploaded as a PDF file.",
+      "notice": "DO NOT APPLY MORE THAN ONCE. DOUBLE APPLICATIONS WILL BE DISQUALIFIED",
+      "form_id": "applyForm",
+      "form_max_width": "720px",
+      "button": "Submit Application",
+      "success_message": "Thank you for your application. We will reach out to qualified candidates.",
+      "fields": [
+        {
+          "name": "fullName",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2
+        },
+        {
+          "name": "gender",
+          "placeholder": "Gender",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Male",
+            "Female"
+          ]
+        },
+        {
+          "name": "age",
+          "placeholder": "Age (as at 31 October 2026)",
+          "input_type": "number",
+          "required": true,
+          "min": 16,
+          "max": 70,
+          "title": "Enter your age in years, as at 31 October 2026"
+        },
+        {
+          "name": "phone",
+          "placeholder": "Phone Number (11 digits), e.g. 08052033145",
+          "input_type": "tel",
+          "digits": 11,
+          "required": true,
+          "title": "Enter your 11-digit phone number, numbers only (e.g. 08052033145)"
+        },
+        {
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true,
+          "title": "Enter a valid email address"
+        },
+        {
+          "name": "resumeImmediately",
+          "placeholder": "Can you resume immediately?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "livesInAbuja",
+          "placeholder": "Do you currently live in Abuja?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "yearsExperience",
+          "placeholder": "How many years of experience do you have?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        },
+        {
+          "name": "cv",
+          "placeholder": "Upload Your CV",
+          "input_type": "file",
+          "accept": ".pdf,application/pdf",
+          "required": true,
+          "help": "PDF only, max 5MB."
+        }
+      ]
+    }
+  ],
+  "scripts": [
+    "/js/form-guard.js",
+    "/js/apply-fields.js",
+    "/js/apply-restaurant-maitama-form.js"
+  ]
+}
