@@ -70,6 +70,16 @@
           "image_alt": "Chef in a black chef's jacket and cap with arms crossed beside the Traction Outsourcing logo and an Apply Now button, for the Sous Chef job"
         },
         {
+          "title": "Social Media Manager",
+          "location": "Kado Estate, Abuja",
+          "salary": "₦150,000/month",
+          "href": "/apply/social-media-manager/",
+          "active": true,
+          "icon": "fa-photo-film",
+          "image": "/images/jobs/social-media-manager.jpg",
+          "image_alt": "Smiling bearded man in a beige coat and turtleneck beside the Traction Outsourcing logo and an Apply Now button, for the Social Media Manager job"
+        },
+        {
           "title": "Sales Assistant",
           "location": "Wuse 2, Abuja",
           "salary": "₦100,000/month",
