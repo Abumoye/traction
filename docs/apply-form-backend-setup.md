@@ -15,11 +15,13 @@ sheet used by the other forms on the site. It powers:
   Age as at 31 October 2026, Phone, Email, Can you resume immediately, Do you live in Abuja,
   Do you speak Hausa, CV upload as PDF). Its entries are saved on a separate tab named
   **Sales Assistant** in the same Sheet.
-- `/apply/pastry-chef-assistant/` and `/apply/sous-chef/` — the **Maitama restaurant** roles, 9 fields
+- `/apply/pastry-chef-assistant/`, `/apply/chef/` and `/apply/sous-chef/` — the **Maitama restaurant** roles, 9 fields
   (Full Name, Gender, Age as at 31 October 2026, Phone, Email, Can you resume immediately,
   Do you live in Abuja, Years of experience 2 to 10, CV upload as PDF). Both use the formType
-  `apply-restaurant-maitama`; each role is saved on its own tab (**Pastry Chef (Assistant)** and
-  **Sous Chef**) in the same Sheet. The script only accepts those two role names.
+  `apply-restaurant-maitama`; each role is saved on its own tab (**Pastry Chef (Assistant)**,
+  **Chef** and **Sous Chef**) in the same Sheet. The script only accepts those three role names.
+  (The Chef page used to be the Wuse 2 hotel role with the plain `apply` form; entries from that
+  period are on the original applications tab.)
 
 Every submission is saved as a row in a Google Sheet, and the uploaded CV
 is saved as a PDF file in a dedicated Google Drive folder, with a link to
@@ -336,14 +338,14 @@ function handleApplySalesAssistant(data) {
   ).setMimeType(ContentService.MimeType.JSON);
 }
 
-/* ===================== MAITAMA RESTAURANT ROLES (PASTRY CHEF ASSISTANT, SOUS CHEF) ===================== */
+/* ===================== MAITAMA RESTAURANT ROLES (PASTRY CHEF ASSISTANT, CHEF, SOUS CHEF) ===================== */
 
-// Both roles ask the same questions, so one handler serves both. Each role gets
-// its own tab in this spreadsheet ("Pastry Chef (Assistant)" and "Sous Chef"),
+// All three roles ask the same questions, so one handler serves them all. Each role
+// gets its own tab in this spreadsheet ("Pastry Chef (Assistant)", "Chef" and "Sous Chef"),
 // created automatically with its header row on the first application.
-// Only the two role names below are accepted, so nobody can create stray tabs.
+// Only the role names below are accepted, so nobody can create stray tabs.
 // CV is PDF only, saved in the same Drive folder as the other CVs.
-var RESTAURANT_ROLES = ['Pastry Chef (Assistant)', 'Sous Chef'];
+var RESTAURANT_ROLES = ['Pastry Chef (Assistant)', 'Chef', 'Sous Chef'];
 var RESTAURANT_HEADERS = [
   'Timestamp', 'Role', 'Full Name', 'Gender', 'Age (as at 31 Oct 2026)',
   'Phone Number', 'Email', 'Can Resume Immediately', 'Lives in Abuja',

@@ -50,6 +50,16 @@
           "image_alt": "Smiling pastry chef in a white chef's hat and apron holding a bread knife and a whisk beside the Traction Outsourcing logo and an Apply Now button, for the Pastry Chef (Assistant) job"
         },
         {
+          "title": "Chef",
+          "location": "Maitama, Abuja",
+          "salary": "₦300,000/month",
+          "href": "/apply/chef/",
+          "active": true,
+          "icon": "fa-utensils",
+          "image": "/images/jobs/chef.jpg",
+          "image_alt": "Smiling chef in a white jacket holding a ladle and spatula beside the Traction Outsourcing logo and an Apply Now button, for the Chef job"
+        },
+        {
           "title": "Sous Chef",
           "location": "Maitama, Abuja",
           "salary": "₦550,000/month",
@@ -68,16 +78,6 @@
           "icon": "fa-shirt",
           "image": "/images/jobs/sales-assistant.jpg",
           "image_alt": "Smiling woman in a brown hijab and grey top beside the Traction Outsourcing logo and an Apply Now button, for the Sales Assistant job"
-        },
-        {
-          "title": "Chef",
-          "location": "Wuse 2, Abuja",
-          "salary": "₦250,000/month",
-          "href": "/apply/chef/",
-          "active": true,
-          "icon": "fa-utensils",
-          "image": "/images/jobs/chef.jpg",
-          "image_alt": "Smiling chef in a white jacket holding a ladle and spatula beside the Traction Outsourcing logo and an Apply Now button, for the Chef job"
         },
         {
           "title": "Tech Sales Closer",

@@ -5,8 +5,8 @@
     "url": "/apply/chef/"
   },
   "meta": {
-    "title": "Chef Job, Wuse 2, Abuja | Traction Outsourcing",
-    "description": "Chef job in Wuse 2, Abuja at ₦250,000/month. Full-time role with a hotel and apartments company. 3 years' experience required. Apply online at Traction Outsourcing Limited.",
+    "title": "Chef Job, Maitama, Abuja | Traction Outsourcing",
+    "description": "Chef job in Maitama, Abuja at ₦300,000/month. Full-time role with a restaurant. 2+ years' experience required. Apply online at Traction Outsourcing Limited.",
     "image": "/images/jobs/chef.jpg",
     "image_height": 630,
     "image_alt": "Smiling chef in a white jacket holding a ladle and spatula beside the Traction Outsourcing logo and an Apply Now button, for the Chef job"
@@ -44,7 +44,7 @@
     },
     "eyebrow": "We Are Hiring",
     "headline": "Chef",
-    "sub": "We are hiring a Chef for a hotel and apartments company in Wuse 2, Abuja. Full-time · ₦250,000/month."
+    "sub": "We are hiring a Chef for a restaurant in Maitama, Abuja. Full-time · ₦300,000/month."
   },
   "sections": [
     {
@@ -55,7 +55,7 @@
       "entries": [
         {
           "icon": "fa-map-marker-alt",
-          "title": "Wuse 2, Abuja, FCT",
+          "title": "Maitama, Abuja, FCT",
           "text": ""
         },
         {
@@ -64,13 +64,13 @@
           "text": ""
         },
         {
-          "icon": "fa-utensils",
-          "title": "3 Years' Experience as a Chef",
+          "icon": "fa-user-clock",
+          "title": "2+ Years' Experience",
           "text": ""
         },
         {
-          "icon": "fa-hotel",
-          "title": "Hotel and Apartments Company",
+          "icon": "fa-utensils",
+          "title": "Restaurant",
           "text": ""
         }
       ]
@@ -82,7 +82,7 @@
         {
           "heading": "Job Description",
           "items": [
-            "Prepare and cook meals to a consistent standard of quality for hotel and apartment guests.",
+            "Prepare and cook meals to a consistent standard of quality for restaurant guests.",
             "Plan menus and portions, and suggest new dishes.",
             "Keep the kitchen clean and follow food safety and hygiene standards.",
             "Monitor stock, order ingredients and keep waste low."
@@ -91,15 +91,16 @@
         {
           "heading": "Requirements",
           "items": [
-            "3 years' experience as a chef.",
-            "Background in a hotel, apartment or restaurant kitchen.",
-            "Able to cook Nigerian and continental dishes."
+            "At least 2 years' experience as a chef.",
+            "Good communication skills.",
+            "Presentable.",
+            "Comfortable handling the role with little to no supervision.",
+            "Able to commute to Maitama, Abuja and resume immediately."
           ]
         },
         {
           "heading": "Benefits",
           "items": [
-            "Opportunity to grow with a hospitality company and receive training.",
             "Other statutory benefits."
           ]
         }
@@ -135,37 +136,64 @@
           ]
         },
         {
-          "name": "phone",
-          "placeholder": "Phone Number (with country code), e.g. +234 805 203 3145",
-          "input_type": "tel",
+          "name": "age",
+          "placeholder": "Age (as at 31 October 2026)",
+          "input_type": "number",
           "required": true,
-          "pattern": "^[0-9+\\s()-]{7,}$",
-          "title": "Enter a valid phone number"
+          "min": 16,
+          "max": 70,
+          "title": "Enter your age in years, as at 31 October 2026"
         },
         {
-          "name": "location",
-          "placeholder": "Location in Abuja (Area Council)",
+          "name": "phone",
+          "placeholder": "Phone Number (11 digits), e.g. 08052033145",
+          "input_type": "tel",
+          "digits": 11,
+          "required": true,
+          "title": "Enter your 11-digit phone number, numbers only (e.g. 08052033145)"
+        },
+        {
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true,
+          "title": "Enter a valid email address"
+        },
+        {
+          "name": "resumeImmediately",
+          "placeholder": "Can you resume immediately?",
           "input_type": "select",
           "required": true,
           "options": [
-            "Abaji",
-            "Abuja Municipal (AMAC)",
-            "Bwari",
-            "Gwagwalada",
-            "Kuje",
-            "Kwali"
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "livesInAbuja",
+          "placeholder": "Do you currently live in Abuja?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
           ]
         },
         {
           "name": "yearsExperience",
-          "placeholder": "Years of Experience as a Chef",
+          "placeholder": "How many years of experience do you have?",
           "input_type": "select",
           "required": true,
           "options": [
+            "2",
             "3",
             "4",
             "5",
-            "6+"
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
           ]
         },
         {
@@ -181,6 +209,7 @@
   ],
   "scripts": [
     "/js/form-guard.js",
-    "/js/apply-chef-form.js"
+    "/js/apply-fields.js",
+    "/js/apply-restaurant-maitama-form.js"
   ]
 }
