@@ -8,6 +8,46 @@
   "lastUpdated": "2026-10-28",
   "jobs": [
     {
+      "id": "social-media-manager",
+      "title": "Social Media Manager",
+      "url": "https://tolnigeria.com/apply/social-media-manager/",
+      "applyUrl": "https://tolnigeria.com/apply/social-media-manager/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Kado Estate",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-10-28",
+      "validThrough": "2026-11-17T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 150000,
+        "period": "MONTH",
+        "display": "₦150,000/month"
+      },
+      "description": "We are hiring a Social Media Manager for a real estate company in Kado Estate, Abuja. This is a full-time, onsite role.\nResponsibilities: Manage the company's social media pages (Instagram, TikTok, Facebook, YouTube and X) and keep them active and on brand. Create content, and shoot and edit short videos (including with CapCut), to promote the company's properties. Run and monitor paid ads where needed, and report on reach and enquiries. Reply to comments and messages and pass on enquiries to the sales team.\nRequirements: Good skills in content creation, video editing and social media management Good communication skills Presentable and able to work with little to no supervision Able to commute to Kado Estate, Abuja and resume immediately CV Required (PDF)\nBenefits: Other statutory benefits.",
+      "responsibilities": [
+        "Manage the company's social media pages (Instagram, TikTok, Facebook, YouTube and X) and keep them active and on brand.",
+        "Create content, and shoot and edit short videos (including with CapCut), to promote the company's properties.",
+        "Run and monitor paid ads where needed, and report on reach and enquiries.",
+        "Reply to comments and messages and pass on enquiries to the sales team."
+      ],
+      "qualifications": [
+        "Good skills in content creation, video editing and social media management",
+        "Good communication skills",
+        "Presentable and able to work with little to no supervision",
+        "Able to commute to Kado Estate, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ],
+      "industry": "Real Estate"
+    },
+    {
       "id": "pastry-chef-assistant",
       "title": "Pastry Chef (Assistant)",
       "url": "https://tolnigeria.com/apply/pastry-chef-assistant/",
