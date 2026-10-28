@@ -2,6 +2,39 @@
   "_comment": "Single source of truth for open roles. build.py turns each OPEN job into JobPosting structured data on its page, an ItemList on /apply/, and the /jobs.json + /jobs.xml feeds. To close a role set status to \"closed\" (it then disappears from all of them). Keep every fact here identical to what is visible on the job page. Closing dates are automatic: 14 working days after datePosted (weekends and content/holidays.json skipped). Optional per job: \"workingDaysOpen\" or an exact \"validThrough\" date. \"remote\": true marks a fully remote role.",
   "jobs": [
     {
+      "id": "social-media-manager",
+      "status": "open",
+      "title": "Social Media Manager",
+      "url": "/apply/social-media-manager/",
+      "locality": "Kado Estate",
+      "region": "FCT",
+      "datePosted": "2026-10-28",
+      "employmentType": "FULL_TIME",
+      "industry": "Real Estate",
+      "salary": {
+        "value": 150000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Social Media Manager for a real estate company in Kado Estate, Abuja. This is a full-time, onsite role.",
+      "responsibilities": [
+        "Manage the company's social media pages (Instagram, TikTok, Facebook, YouTube and X) and keep them active and on brand.",
+        "Create content, and shoot and edit short videos (including with CapCut), to promote the company's properties.",
+        "Run and monitor paid ads where needed, and report on reach and enquiries.",
+        "Reply to comments and messages and pass on enquiries to the sales team."
+      ],
+      "qualifications": [
+        "Good skills in content creation, video editing and social media management",
+        "Good communication skills",
+        "Presentable and able to work with little to no supervision",
+        "Able to commute to Kado Estate, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ]
+    },
+    {
       "id": "pastry-chef-assistant",
       "status": "open",
       "title": "Pastry Chef (Assistant)",

@@ -22,6 +22,11 @@ sheet used by the other forms on the site. It powers:
   **Chef** and **Sous Chef**) in the same Sheet. The script only accepts those three role names.
   (The Chef page used to be the Wuse 2 hotel role with the plain `apply` form; entries from that
   period are on the original applications tab.)
+- `/apply/social-media-manager/` — the **Social Media Manager (Kado Estate)** application, 9 questions (Full Name,
+  Gender, Age as at 31 October 2026, Phone, Email, Can you resume immediately, Do you live in Abuja,
+  Skills as tick boxes, CV upload as PDF). formType `apply-social-media-manager`; entries are saved on
+  their own tab named **Social Media Manager**. The ticked skills are saved together in one **Skills**
+  cell, separated by commas.
 
 Every submission is saved as a row in a Google Sheet, and the uploaded CV
 is saved as a PDF file in a dedicated Google Drive folder, with a link to
@@ -107,6 +112,10 @@ function doPost(e) {
 
   if (data.formType === 'apply-restaurant-maitama') {
     return handleApplyRestaurantMaitama(data);
+  }
+
+  if (data.formType === 'apply-social-media-manager') {
+    return handleApplySocialMediaManager(data);
   }
 
   return ContentService.createTextOutput(
@@ -396,6 +405,65 @@ function handleApplyRestaurantMaitama(data) {
   }
 
   sheet.appendRow([new Date(), role, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, yearsExperience, cvLink]);
+  var row = sheet.getLastRow();
+  sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ===================== SOCIAL MEDIA MANAGER (KADO ESTATE) ===================== */
+
+// Own tab "Social Media Manager", created automatically with its header row on the
+// first application. The skills question is tick boxes; the website sends the ticked
+// ones as one comma-separated text, saved as-is in the "Skills" column.
+// CV is PDF only, saved in the same Drive folder as the other CVs.
+var SMM_ROLE = 'Social Media Manager';
+var SMM_HEADERS = [
+  'Timestamp', 'Role', 'Full Name', 'Gender', 'Age (as at 31 Oct 2026)',
+  'Phone Number', 'Email', 'Can Resume Immediately', 'Lives in Abuja',
+  'Skills', 'CV Link'
+];
+
+function getSocialMediaManagerSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(SMM_ROLE);
+  if (!sheet) sheet = ss.insertSheet(SMM_ROLE);
+
+  var current = sheet.getLastColumn() > 0 ? sheet.getRange(1, 1, 1, SMM_HEADERS.length).getValues()[0] : [];
+  if (current.join('|') !== SMM_HEADERS.join('|')) {
+    sheet.getRange(1, 1, 1, SMM_HEADERS.length).setValues([SMM_HEADERS]).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+    // Phone column is plain text so the leading 0 (e.g. 08052033145) is kept.
+    sheet.getRange(2, 6, sheet.getMaxRows() - 1, 1).setNumberFormat('@');
+  }
+  return sheet;
+}
+
+function handleApplySocialMediaManager(data) {
+  var sheet = getSocialMediaManagerSheet();
+
+  var fullName = (data.fullName || '').toString().trim();
+  var gender = (data.gender || '').toString().trim();
+  var age = Number((data.age || '').toString().replace(/\D/g, '')) || '';
+  var phone = (data.phone || '').toString().replace(/\D/g, '');
+  var email = (data.email || '').toString().trim();
+  var resumeImmediately = (data.resumeImmediately || '').toString().trim();
+  var livesInAbuja = (data.livesInAbuja || '').toString().trim();
+  var skills = (data.skills || '').toString().trim();
+
+  // CV: PDF only. Anything that is not a real PDF is not saved to Drive, and
+  // the row says so (the website already blocks these; this is the backstop).
+  var cvLink = '';
+  try {
+    cvLink = saveCvToDrive(data.cvBase64, data.cvFileName, 'application/pdf', fullName, true);
+  } catch (err) {
+    Logger.log('CV upload failed: ' + err);
+    cvLink = 'Upload failed or not a PDF - contact applicant for CV';
+  }
+
+  sheet.appendRow([new Date(), SMM_ROLE, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, skills, cvLink]);
   var row = sheet.getLastRow();
   sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
 
