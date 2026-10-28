@@ -1,11 +1,11 @@
 /* =========================================================
    Traction Outsourcing Limited — Maitama restaurant roles Application Form
-   Used on /apply/pastry-chef-assistant/ and /apply/sous-chef/ (same questions).
+   Used on /apply/pastry-chef-assistant/, /apply/chef/ and /apply/sous-chef/ (same questions).
    Needs /js/apply-fields.js loaded first (digits-only phone + PDF check).
 
    Submits to the SAME Google Apps Script Web App as the other job
    application forms, but with formType "apply-restaurant-maitama". The script
-   files each role on its own tab ("Pastry Chef (Assistant)" or "Sous Chef")
+   files each role on its own tab ("Pastry Chef (Assistant)", "Chef" or "Sous Chef")
    in the same Google Sheet and saves the uploaded CV (PDF only) to Google
    Drive. The role is chosen from the page address below.
 
@@ -16,6 +16,7 @@
 const RESTAURANT_FORM_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx0ZVyCU3EUcVB4BSzBbV1UIZy0a0ThpmoTk0Up0CeffTmE6QmhWNQR8gLxrojcqpKL/exec";
 const ROLE_BY_PATH = {
     "/apply/pastry-chef-assistant/": "Pastry Chef (Assistant)",
+    "/apply/chef/": "Chef",
     "/apply/sous-chef/": "Sous Chef"
 };
 const RESTAURANT_ROLE_TITLE = ROLE_BY_PATH[window.location.pathname.replace(/index\.html$/, "")] || "";
