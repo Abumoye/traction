@@ -40,6 +40,26 @@
       "type": "job-cards",
       "jobs": [
         {
+          "title": "Pastry Chef (Assistant)",
+          "location": "Maitama, Abuja",
+          "salary": "₦200,000/month",
+          "href": "/apply/pastry-chef-assistant/",
+          "active": true,
+          "icon": "fa-cake-candles",
+          "image": "/images/jobs/pastry-chef-assistant.jpg",
+          "image_alt": "Smiling pastry chef in a white chef's hat and apron holding a bread knife and a whisk beside the Traction Outsourcing logo and an Apply Now button, for the Pastry Chef (Assistant) job"
+        },
+        {
+          "title": "Sous Chef",
+          "location": "Maitama, Abuja",
+          "salary": "₦550,000/month",
+          "href": "/apply/sous-chef/",
+          "active": true,
+          "icon": "fa-utensils",
+          "image": "/images/jobs/sous-chef.jpg",
+          "image_alt": "Chef in a black chef's jacket and cap with arms crossed beside the Traction Outsourcing logo and an Apply Now button, for the Sous Chef job"
+        },
+        {
           "title": "Sales Assistant",
           "location": "Wuse 2, Abuja",
           "salary": "₦100,000/month",

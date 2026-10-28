@@ -2,6 +2,74 @@
   "_comment": "Single source of truth for open roles. build.py turns each OPEN job into JobPosting structured data on its page, an ItemList on /apply/, and the /jobs.json + /jobs.xml feeds. To close a role set status to \"closed\" (it then disappears from all of them). Keep every fact here identical to what is visible on the job page. Closing dates are automatic: 14 working days after datePosted (weekends and content/holidays.json skipped). Optional per job: \"workingDaysOpen\" or an exact \"validThrough\" date. \"remote\": true marks a fully remote role.",
   "jobs": [
     {
+      "id": "pastry-chef-assistant",
+      "status": "open",
+      "title": "Pastry Chef (Assistant)",
+      "url": "/apply/pastry-chef-assistant/",
+      "locality": "Maitama",
+      "region": "FCT",
+      "datePosted": "2026-10-28",
+      "employmentType": "FULL_TIME",
+      "industry": "Hospitality",
+      "experienceMonths": 24,
+      "salary": {
+        "value": 200000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Pastry Chef (Assistant) for a restaurant in Maitama, Abuja. This is a full-time, onsite role.",
+      "responsibilities": [
+        "Assist the pastry chef in preparing and baking pastries, cakes, bread and desserts to the restaurant's standard.",
+        "Prepare doughs, fillings, ingredients and decorations ahead of service.",
+        "Keep the pastry section clean and follow food safety and hygiene standards.",
+        "Help monitor stock and report shortages."
+      ],
+      "qualifications": [
+        "At least 2 years' relevant pastry or kitchen experience",
+        "Good communication skills",
+        "Presentable and able to work with little to no supervision",
+        "Able to commute to Maitama, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ]
+    },
+    {
+      "id": "sous-chef",
+      "status": "open",
+      "title": "Sous Chef",
+      "url": "/apply/sous-chef/",
+      "locality": "Maitama",
+      "region": "FCT",
+      "datePosted": "2026-10-28",
+      "employmentType": "FULL_TIME",
+      "industry": "Hospitality",
+      "experienceMonths": 24,
+      "salary": {
+        "value": 550000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Sous Chef for a restaurant in Maitama, Abuja. This is a full-time, onsite role.",
+      "responsibilities": [
+        "Support the head chef in running the kitchen day to day and lead the cooks during service.",
+        "Prepare and cook dishes to a consistent standard and check quality before food leaves the kitchen.",
+        "Supervise kitchen staff and enforce food safety and hygiene standards.",
+        "Help with stock control, ordering and keeping waste low."
+      ],
+      "qualifications": [
+        "At least 2 years' experience as a sous chef or in a similar kitchen role",
+        "Good communication skills",
+        "Presentable and able to work with little to no supervision",
+        "Able to commute to Maitama, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ]
+    },
+    {
       "id": "storekeeping-assistant-kuje",
       "status": "open",
       "title": "Storekeeping Assistant",

@@ -15,6 +15,11 @@ sheet used by the other forms on the site. It powers:
   Age as at 31 October 2026, Phone, Email, Can you resume immediately, Do you live in Abuja,
   Do you speak Hausa, CV upload as PDF). Its entries are saved on a separate tab named
   **Sales Assistant** in the same Sheet.
+- `/apply/pastry-chef-assistant/` and `/apply/sous-chef/` — the **Maitama restaurant** roles, 9 fields
+  (Full Name, Gender, Age as at 31 October 2026, Phone, Email, Can you resume immediately,
+  Do you live in Abuja, Years of experience 2 to 10, CV upload as PDF). Both use the formType
+  `apply-restaurant-maitama`; each role is saved on its own tab (**Pastry Chef (Assistant)** and
+  **Sous Chef**) in the same Sheet. The script only accepts those two role names.
 
 Every submission is saved as a row in a Google Sheet, and the uploaded CV
 is saved as a PDF file in a dedicated Google Drive folder, with a link to
@@ -96,6 +101,10 @@ function doPost(e) {
 
   if (data.formType === 'apply-sales-assistant') {
     return handleApplySalesAssistant(data);
+  }
+
+  if (data.formType === 'apply-restaurant-maitama') {
+    return handleApplyRestaurantMaitama(data);
   }
 
   return ContentService.createTextOutput(
@@ -326,6 +335,74 @@ function handleApplySalesAssistant(data) {
     JSON.stringify({ status: 'success' })
   ).setMimeType(ContentService.MimeType.JSON);
 }
+
+/* ===================== MAITAMA RESTAURANT ROLES (PASTRY CHEF ASSISTANT, SOUS CHEF) ===================== */
+
+// Both roles ask the same questions, so one handler serves both. Each role gets
+// its own tab in this spreadsheet ("Pastry Chef (Assistant)" and "Sous Chef"),
+// created automatically with its header row on the first application.
+// Only the two role names below are accepted, so nobody can create stray tabs.
+// CV is PDF only, saved in the same Drive folder as the other CVs.
+var RESTAURANT_ROLES = ['Pastry Chef (Assistant)', 'Sous Chef'];
+var RESTAURANT_HEADERS = [
+  'Timestamp', 'Role', 'Full Name', 'Gender', 'Age (as at 31 Oct 2026)',
+  'Phone Number', 'Email', 'Can Resume Immediately', 'Lives in Abuja',
+  'Years of Experience', 'CV Link'
+];
+
+function getRestaurantSheet(role) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(role);
+  if (!sheet) sheet = ss.insertSheet(role);
+
+  var current = sheet.getLastColumn() > 0 ? sheet.getRange(1, 1, 1, RESTAURANT_HEADERS.length).getValues()[0] : [];
+  if (current.join('|') !== RESTAURANT_HEADERS.join('|')) {
+    sheet.getRange(1, 1, 1, RESTAURANT_HEADERS.length).setValues([RESTAURANT_HEADERS]).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+    // Phone column is plain text so the leading 0 (e.g. 08052033145) is kept.
+    sheet.getRange(2, 6, sheet.getMaxRows() - 1, 1).setNumberFormat('@');
+  }
+  return sheet;
+}
+
+function handleApplyRestaurantMaitama(data) {
+  var role = (data.role || '').toString().trim();
+  if (RESTAURANT_ROLES.indexOf(role) === -1) {
+    return ContentService.createTextOutput(
+      JSON.stringify({ status: 'error', message: 'Unknown role.' })
+    ).setMimeType(ContentService.MimeType.JSON);
+  }
+  var sheet = getRestaurantSheet(role);
+
+  var fullName = (data.fullName || '').toString().trim();
+  var gender = (data.gender || '').toString().trim();
+  var age = Number((data.age || '').toString().replace(/\D/g, '')) || '';
+  var phone = (data.phone || '').toString().replace(/\D/g, '');
+  var email = (data.email || '').toString().trim();
+  var resumeImmediately = (data.resumeImmediately || '').toString().trim();
+  var livesInAbuja = (data.livesInAbuja || '').toString().trim();
+  var yearsExperience = (data.yearsExperience || '').toString().trim();
+
+  // CV: PDF only. Anything that is not a real PDF is not saved to Drive, and
+  // the row says so (the website already blocks these; this is the backstop).
+  var cvLink = '';
+  try {
+    cvLink = saveCvToDrive(data.cvBase64, data.cvFileName, 'application/pdf', fullName, true);
+  } catch (err) {
+    Logger.log('CV upload failed: ' + err);
+    cvLink = 'Upload failed or not a PDF - contact applicant for CV';
+  }
+
+  sheet.appendRow([new Date(), role, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, yearsExperience, cvLink]);
+  var row = sheet.getLastRow();
+  sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ============================== SHARED HELPERS ============================== */
 
 function saveCvToDrive(base64, fileName, mimeType, applicantName, pdfOnly) {
   if (!base64) return '';
