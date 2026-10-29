@@ -109,7 +109,7 @@
     "title": "Your Next Hiring Mistake Is More Expensive Than You Think.",
     "text": "Book a free 30-minute advisory call. We will look at your current hiring process and tell you honestly where the risk sits and how to close it before the next vacancy.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+    "popup": true
   },
   "faq": {
     "entries": [

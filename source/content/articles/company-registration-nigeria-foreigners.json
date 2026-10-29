@@ -115,7 +115,7 @@
     {
       "type": "text",
       "paragraphs": [
-        "Not sure which of these steps applies to your business type, investment goal, or sector? A 30-minute call with our advisory team can give you a clear picture before you commit to any structure or move any funds. <a href=\"https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20setting%20up%20a%20company%20in%20Nigeria.\" target=\"_blank\" rel=\"noopener\">Book Free Advisory Call</a>"
+        "Not sure which of these steps applies to your business type, investment goal, or sector? A 30-minute call with our advisory team can give you a clear picture before you commit to any structure or move any funds. <a href=\"#request-consultation\" data-open-lead-popup>Book Free Advisory Call</a>"
       ]
     },
     {
@@ -151,7 +151,7 @@
     "title": "Setting Up in Nigeria? Start With a Conversation.",
     "text": "Whether you are looking to invest in a Nigerian business, register a company to operate locally, or set up a structure to employ staff and manage operations from abroad, the most valuable thing you can do first is get a clear, honest picture of what your specific situation actually requires. Our team offers a free 30-minute business advisory call for foreign investors. No forms. No commitments. Just a direct conversation about your goals and what setting up in Nigeria will realistically take.",
     "button": "Book Your Free 30-Minute Advisory Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20setting%20up%20a%20company%20in%20Nigeria%20as%20a%20foreign%20investor."
+    "popup": true
   },
   "faq": {
     "entries": [

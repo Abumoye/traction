@@ -83,7 +83,7 @@
     "title": "What Is Managing Staff Actually Costing You?",
     "text": "Book a free 30-minute advisory call. We will help you calculate the real cost of your current approach and show you what a structured outsourcing engagement would look like as an alternative.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20the%20cost%20of%20managing%20staff%20internally."
+    "popup": true
   },
   "faq": {
     "entries": [

@@ -113,7 +113,7 @@
     "title": "Not Sure Where to Start? Talk to Us First.",
     "text": "Book a free 30-minute call with our team. We will review where your business is right now, identify the structural gaps that are costing you, and tell you clearly what needs to happen next.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20call%20about%20structuring%20my%20business."
+    "popup": true
   },
   "faq": {
     "entries": [

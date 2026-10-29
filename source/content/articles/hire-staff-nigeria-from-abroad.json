@@ -68,7 +68,7 @@
     "title": "Let Us Build Your Nigerian Team For You.",
     "text": "Book a free 30-minute call with our team. Tell us what your business needs, which roles you are looking to fill, and where you are based. We will tell you exactly how we can make it work.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20call%20about%20hiring%20staff%20in%20Nigeria%20from%20abroad."
+    "popup": true
   },
   "faq": {
     "entries": [

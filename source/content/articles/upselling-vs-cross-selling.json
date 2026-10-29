@@ -101,7 +101,7 @@
     "title": "Is Your Team Upselling and Cross-Selling the Right Way?",
     "text": "Book a free 30-minute advisory call. We will review how your team sells today and show you where a structured sales policy could grow your revenue.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20our%20sales%20strategy."
+    "popup": true
   },
   "faq": {
     "entries": [

@@ -154,7 +154,7 @@
     "title": "Is Your Team Producing the Results You Need?",
     "text": "Book a free 30-minute advisory call. We will look at your current people management approach and tell you honestly where the gap between your team's potential and their output is coming from. Or explore our <a href=\"/services/business-advisory/\">Business Advisory</a> and <a href=\"/services/employee-training/\">Employee Training</a> services.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20team%20performance%20and%20people%20management."
+    "popup": true
   },
   "faq": {
     "entries": [

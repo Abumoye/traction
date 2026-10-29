@@ -77,7 +77,7 @@
       "paragraphs": [
         "A strong CEO builds a team capable of finding answers without them in the room, rather than trying to hold every answer alone. That difference decides whether a business depends on one person or lasts well beyond them.",
         "At Traction Outsourcing Limited, we work with founders and leadership teams across Nigeria to build the structures, hiring practices, and <a href=\"/services/employee-training/\">management systems</a> that let companies grow past the limits of any single individual, through <a href=\"/services/business-advisory/\">Business Advisory</a> and <a href=\"/services/corporate-restructuring/\">Corporate Restructuring</a> engagements built around how your business actually runs. Sometimes the most valuable change we help a business make starts with a conversation the founder did not expect to have about themselves.",
-        "<a href=\"https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20leadership%20and%20delegation%20in%20my%20business.\" target=\"_blank\" rel=\"noopener\"><strong>Book a FREE 30-minute advisory</strong></a> to discuss your needs with us.",
+        "<a href=\"#request-consultation\" data-open-lead-popup><strong>Book a FREE 30-minute advisory</strong></a> to discuss your needs with us.",
         "Further Reading: <a href=\"/articles/how-to-build-resilient-management-team-nigeria/\">How to Build a Resilient Management Team</a>, <a href=\"/articles/accountability-in-business-nigeria/\">Accountability in Business Nigeria</a>, <a href=\"/articles/md-vs-ceo-nigeria/\">MD vs CEO in Nigeria</a>, <a href=\"/articles/restructuring-without-losing-your-best-people/\">Restructuring Without Losing Your Best People</a>."
       ]
     },
@@ -104,7 +104,7 @@
     "title": "Is Your Leadership Style Holding the Business Back?",
     "text": "Book a free 30-minute advisory call. We will help you see where decisions are bottlenecking at the top and build the structure and management systems that let your team carry more of the business.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20leadership%20and%20delegation%20in%20my%20business."
+    "popup": true
   },
   "faq": {
     "entries": [

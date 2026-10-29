@@ -102,7 +102,7 @@
     "title": "Struggling With Accountability in Your Business?",
     "text": "Book a free 30-minute advisory call. We will help you identify whether the problem is a people issue, a structure issue, or both, and tell you clearly what needs to change.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20managing%20accountability%20in%20my%20business."
+    "popup": true
   },
   "faq": {
     "entries": [
