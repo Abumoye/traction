@@ -213,7 +213,9 @@
     var results = full.length >= 3 ? full : full.concat(partial.slice(0, 8));
     // Drop the long tail of weak matches (a word that only appears once in a body).
     var top = results.length ? results[0].s : 0;
-    var floor = Math.max(3, top * 0.15);
+    // When nothing matches strongly (top < 6, e.g. a word that appears only inside an article's text),
+    // keep those weaker matches instead of showing "no results"; strong searches still drop the long tail.
+    var floor = top < 6 ? 1.5 : Math.max(3, top * 0.15);
     results = results.filter(function (r) { return r.s >= floor; }).slice(0, 40);
     return { terms: terms, results: results, exact: full.length };
   }

@@ -203,6 +203,8 @@
   <main>
     
 
+
+
 <section class="article-hero">
   <div class="container">
     <span class="tag-pill">Business Advisory · Startup Structuring</span>
@@ -289,7 +291,7 @@
         
           
             
-            <p>Not sure which of these steps applies to your business type, investment goal, or sector? A 30-minute call with our advisory team can give you a clear picture before you commit to any structure or move any funds. <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20setting%20up%20a%20company%20in%20Nigeria." target="_blank" rel="noopener">Book Free Advisory Call</a></p>
+            <p>Not sure which of these steps applies to your business type, investment goal, or sector? A 30-minute call with our advisory team can give you a clear picture before you commit to any structure or move any funds. <a href="#request-consultation" data-open-lead-popup>Book Free Advisory Call</a></p>
             
           
         
@@ -316,7 +318,7 @@
         <div class="article-cta">
           <h3>Setting Up in Nigeria? Start With a Conversation.</h3>
           <p>Whether you are looking to invest in a Nigerian business, register a company to operate locally, or set up a structure to employ staff and manage operations from abroad, the most valuable thing you can do first is get a clear, honest picture of what your specific situation actually requires. Our team offers a free 30-minute business advisory call for foreign investors. No forms. No commitments. Just a direct conversation about your goals and what setting up in Nigeria will realistically take.</p>
-          <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20setting%20up%20a%20company%20in%20Nigeria%20as%20a%20foreign%20investor." class="btn btn-primary" target="_blank" rel="noopener">Book Your Free 30-Minute Advisory Call</a>
+          <button type="button" class="btn btn-primary" data-open-lead-popup>Book Your Free 30-Minute Advisory Call</button>
         </div>
         
 
@@ -352,7 +354,7 @@
         <div class="sidebar-block cta reveal">
           <h4>Ready to Work With Us?</h4>
           <p>Book a free 30-minute strategy call. We will review your business needs and tell you exactly how we can help.</p>
-          <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call." class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px;" target="_blank" rel="noopener">Book a Free Strategy Call</a>
+          <button type="button" class="btn btn-primary" data-open-lead-popup style="width:100%;justify-content:center;margin-top:8px;">Book a Free Strategy Call</button>
         </div>
         <div class="sidebar-block reveal">
           <h4>Our Services</h4>
@@ -367,6 +369,30 @@
   </div>
 </section>
 
+
+<dialog id="leadPopupModal" class="resource-modal training-form-modal" aria-labelledby="leadPopupTitle">
+  <form id="leadPopupForm" class="resource-modal-form" novalidate>
+    <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+    <h3 id="leadPopupTitle">Request A Free Consultation</h3>
+    <p class="resource-modal-sub" id="leadPopupSubject" hidden></p>
+    <p class="resource-modal-sub">Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)</p>
+    <div style="display:grid;gap:14px;">
+      <input name="name" type="text" placeholder="Full Name" aria-label="Full Name" autocomplete="name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="phone" type="tel" placeholder="Phone Number" aria-label="Phone Number" autocomplete="tel" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="companyName" type="text" placeholder="Company Name" aria-label="Company Name" autocomplete="organization" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <input name="email" type="email" placeholder="Email Address" aria-label="Email Address" autocomplete="email" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+      <button type="submit" class="btn btn-primary" id="leadPopupSubmit" style="width:100%;justify-content:center;">Submit & Request Consultation</button>
+      <p id="leadPopupStatus" style="text-align:center;font-size:13.5px;margin:0;" aria-live="polite"></p>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="leadPopupSuccess" class="form-success-modal">
+  <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
+  <div class="form-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+  <p>Thank you. Someone from our team will reach out shortly.</p>
+  <button type="button" class="btn btn-primary" data-close-dialog style="margin:18px auto 0;">Close</button>
+</dialog>
 
 
 
@@ -409,6 +435,6 @@
   
   <script src="/js/nav.js"></script>
   <script src="/js/reveal.js"></script>
-  
+  <script src="/js/form-guard.js"></script><script src="/js/lead-popup.js"></script>
 </body>
 </html>
