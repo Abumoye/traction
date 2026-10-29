@@ -137,11 +137,6 @@
       }
     ]
   },
-  "lead_popup": {
-    "title": "Request A Free Consultation",
-    "sub": "Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)",
-    "button": "Submit & Request Consultation"
-  },
   "sidebar": {
     "services": [
       {

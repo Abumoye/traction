@@ -86,7 +86,7 @@
     "title": "Is One Staff Bigger Than Your Structure?",
     "text": "Book a free 30-minute advisory call. We will look at how your business is structured, where reporting lines and authority may have quietly broken down, and what it will take to fix it.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+    "popup": true
   },
   "faq": {
     "entries": [

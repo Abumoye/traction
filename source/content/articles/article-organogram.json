@@ -127,7 +127,7 @@
     "title": "",
     "text": "",
     "button": "Get Help Building Your Organogram",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+    "popup": true
   },
   "faq": {
     "entries": [

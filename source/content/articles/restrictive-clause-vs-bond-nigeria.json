@@ -217,7 +217,7 @@
     "title": "Protect Your Talent Investment Properly.",
     "text": "Book a free 30-minute advisory call. We will review what you currently have in place and tell you honestly what would and would not hold up, and what a correctly structured employment framework looks like for your business. Or explore our <a href=\"/services/business-advisory/\">Business Advisory</a> and <a href=\"/services/startup-structuring/\">Startup Structuring</a> services.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20employment%20bonds%20and%20restrictive%20clauses%20for%20my%20business."
+    "popup": true
   },
   "faq": {
     "entries": [

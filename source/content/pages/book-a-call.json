@@ -18,13 +18,38 @@
   },
   "sections": [
     {
-      "type": "embed",
-      "src": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1l0EiQKyUBRLJeUUNX9lkllgWIRVmzt3ktNUSKpEEwP5MYeAFgqLLPGaWRcL76m5QklTe1HY0V?gv=true",
-      "iframe_title": "Book a free strategy call with Traction Outsourcing Limited",
-      "max_width_inner": "900px",
-      "height": 600,
-      "loading_text": "Loading calendar...",
-      "tight": true
+      "type": "form",
+      "heading": "Request A Free Consultation",
+      "sub": "Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)",
+      "form_id": "leadForm",
+      "button": "Submit",
+      "form_max_width": "560px",
+      "fields": [
+        {
+          "name": "leadName",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true
+        },
+        {
+          "name": "leadPhone",
+          "placeholder": "Phone Number",
+          "input_type": "tel",
+          "required": true
+        },
+        {
+          "name": "leadCompany",
+          "placeholder": "Company Name",
+          "input_type": "text",
+          "required": true
+        },
+        {
+          "name": "leadEmail",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true
+        }
+      ]
     },
     {
       "type": "banner",
@@ -32,5 +57,6 @@
       "link_text": "0707 870 7777",
       "href": "tel:+2347078707777"
     }
-  ]
+  ],
+  "has_form": true
 }

@@ -84,7 +84,7 @@
     "title": "Find the Doors Your Business Has Been Quietly Confusing People With.",
     "text": "Book a free 30-minute advisory call. We will walk through where your staff and clients are being left to guess, and what a clear signifier looks like for each one.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20fixing%20our%20business%20processes."
+    "popup": true
   },
   "faq": {
     "entries": [

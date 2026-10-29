@@ -61,7 +61,7 @@
     "title": "Ready to Build a Team That Delivers?",
     "text": "Book a free 30-minute advisory call. We will review your hiring needs and show you how our talent acquisition process finds people who actually fit your business.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20building%20my%20team."
+    "popup": true
   },
   "faq": {
     "entries": [

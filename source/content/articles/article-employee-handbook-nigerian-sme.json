@@ -73,7 +73,7 @@
     "title": "Do not wait for a crisis to discover you have no policy to point to.",
     "text": "Let us build an employee handbook that actually reflects how your business runs.",
     "button": "Get Your Handbook Built",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+    "popup": true
   },
   "faq": {
     "entries": [

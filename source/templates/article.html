@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block extra_head %}{% if schema_type == 'NewsArticle' %}<link rel="alternate" type="application/rss+xml" title="Traction Outsourcing Limited: Articles and News" href="/feed.xml"><meta property="article:published_time" content="{{ byline.datetime }}"><meta property="article:modified_time" content="{{ byline.updated_datetime | default(byline.datetime) }}"><meta property="article:section" content="{{ tag }}"><meta property="article:author" content="{{ byline.author }}">{% endif %}{% endblock %}
 {% block content %}
+{# Every article gets the "Request A Free Consultation" pop-up (sidebar button, and any popup link in the text). An article JSON may override the wording with its own "lead_popup" block. #}
+{% set lead_popup = lead_popup or {"title": "Request A Free Consultation", "sub": "Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)", "button": "Submit & Request Consultation"} %}
 
 <section class="article-hero">
   <div class="container">
@@ -148,7 +150,7 @@
         <div class="sidebar-block cta reveal">
           <h4>Ready to Work With Us?</h4>
           <p>Book a free 30-minute strategy call. We will review your business needs and tell you exactly how we can help.</p>
-          <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call." class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px;" target="_blank" rel="noopener">Book a Free Strategy Call</a>
+          <button type="button" class="btn btn-primary" data-open-lead-popup style="width:100%;justify-content:center;margin-top:8px;">Book a Free Strategy Call</button>
         </div>
         <div class="sidebar-block reveal">
           <h4>Our Services</h4>
@@ -166,4 +168,4 @@
 {% include "_lead_popup.html" %}
 
 {% endblock %}
-{% block extra_scripts %}{% if lead_popup %}<script src="/js/form-guard.js"></script><script src="/js/lead-popup.js"></script>{% endif %}{% endblock %}
+{% block extra_scripts %}<script src="/js/form-guard.js"></script><script src="/js/lead-popup.js"></script>{% endblock %}

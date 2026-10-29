@@ -117,7 +117,7 @@
     "title": "Is Your Structure Still Serving Your Strategy?",
     "text": "Book a free 30-minute advisory call. We will review your current structure and tell you honestly whether a redesign is what your business needs.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20organizational%20design."
+    "popup": true
   },
   "faq": {
     "entries": [

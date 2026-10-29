@@ -114,7 +114,7 @@
     "title": "Want a Stronger Management Team? Let's Talk.",
     "text": "Book a free 30-minute call with our team. We will listen to what you are seeing in your management team and tell you honestly whether training, restructuring, or advisory support is the right next step.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20call%20about%20building%20a%20resilient%20management%20team."
+    "popup": true
   },
   "faq": {
     "entries": [

@@ -139,7 +139,7 @@
     "title": "What Does Your Business Believe That the Market No Longer Agrees With?",
     "text": "Book a free 30-minute advisory call. We will bring an outside lens to your business and tell you honestly what we see.",
     "button": "Book Your Free 30-Minute Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20advisory%20call%20about%20a%20workplace%20culture%20audit."
+    "popup": true
   },
   "faq": {
     "entries": [
