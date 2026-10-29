@@ -571,31 +571,7 @@
 </dialog>
 {% endif %}
 
-{% if lead_popup %}
-<dialog id="leadPopupModal" class="resource-modal training-form-modal" aria-labelledby="leadPopupTitle">
-  <form id="leadPopupForm" class="resource-modal-form" novalidate>
-    <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
-    <h3 id="leadPopupTitle">{{ lead_popup.title | default('Request A Free Consultation') }}</h3>
-    <p class="resource-modal-sub" id="leadPopupSubject" hidden></p>
-    <p class="resource-modal-sub">{{ lead_popup.sub | default('Leave your details and someone from our team will reach out.') }}</p>
-    <div style="display:grid;gap:14px;">
-      <input name="name" type="text" placeholder="Full Name" aria-label="Full Name" autocomplete="name" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
-      <input name="phone" type="tel" placeholder="Phone Number" aria-label="Phone Number" autocomplete="tel" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
-      <input name="companyName" type="text" placeholder="Company Name" aria-label="Company Name" autocomplete="organization" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
-      <input name="email" type="email" placeholder="Email Address" aria-label="Email Address" autocomplete="email" required style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
-      <button type="submit" class="btn btn-primary" id="leadPopupSubmit" style="width:100%;justify-content:center;">{{ lead_popup.button | default('Submit & Request Consultation') }}</button>
-      <p id="leadPopupStatus" style="text-align:center;font-size:13.5px;margin:0;" aria-live="polite"></p>
-    </div>
-  </form>
-</dialog>
-
-<dialog id="leadPopupSuccess" class="form-success-modal">
-  <button type="button" class="resource-modal-close" data-close-dialog aria-label="Close">&times;</button>
-  <div class="form-success-icon"><i class="fa-solid fa-circle-check"></i></div>
-  <p>Thank you. Someone from our team will reach out shortly.</p>
-  <button type="button" class="btn btn-primary" data-close-dialog style="margin:18px auto 0;">Close</button>
-</dialog>
-{% endif %}
+{% include "_lead_popup.html" %}
 
 {% endblock %}
 {% block extra_head %}{% for l in head_links %}<link rel="{{ l.rel }}" type="{{ l.type }}" href="{{ l.href }}" title="{{ l.title }}">
