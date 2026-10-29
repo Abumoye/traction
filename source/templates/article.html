@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="article-hero-img reveal">
-    <img src="{{ image }}" alt="{{ title }}" fetchpriority="high">
+    <img src="{{ image }}" alt="{{ (image_alt | default(title)) | e }}" fetchpriority="high">
   </div>
 </section>
 
@@ -35,6 +35,8 @@
             callout         highlighted box: eyebrow, icon, heading, paragraphs,
                             list (icon items), buttons [{text, href, style}]
             contact         heading, text, items: icon, label, value, href
+                            (an item with "popup": true opens the lead pop-up instead of linking;
+                            needs a "lead_popup" block in the article JSON)
             image           src, alt, optional caption: one full-width photo
             image-row       images [{src, alt, caption}]: photos side by side
             (a text section's list becomes a numbered list with "ordered": true)
@@ -98,7 +100,7 @@
               {% if sec.text %}<p>{{ sec.text }}</p>{% endif %}
               <ul>
                 {% for c in sec['items'] %}
-                <li><a href="{{ c.href }}"{% if c.href.startswith('http') %} target="_blank" rel="noopener"{% endif %}><i class="{{ c.icon }}" aria-hidden="true"></i><span><small>{{ c.label }}</small>{{ c.value }}</span></a></li>
+                <li>{% if c.popup %}<a href="#request-consultation" data-open-lead-popup>{% else %}<a href="{{ c.href }}"{% if c.href.startswith('http') %} target="_blank" rel="noopener"{% endif %}>{% endif %}<i class="{{ c.icon }}" aria-hidden="true"></i><span><small>{{ c.label }}</small>{{ c.value }}</span></a></li>
                 {% endfor %}
               </ul>
             </div>
@@ -125,7 +127,7 @@
         <div class="article-cta">
           <h3>{{ cta.title }}</h3>
           <p>{{ cta.text }}</p>
-          <a href="{{ cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ cta.button }}</a>
+          {% if cta.popup %}<button type="button" class="btn btn-primary" data-open-lead-popup>{{ cta.button }}</button>{% else %}<a href="{{ cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ cta.button }}</a>{% endif %}
         </div>
         {% endif %}
 
@@ -161,4 +163,7 @@
   </div>
 </section>
 
+{% include "_lead_popup.html" %}
+
 {% endblock %}
+{% block extra_scripts %}{% if lead_popup %}<script src="/js/form-guard.js"></script><script src="/js/lead-popup.js"></script>{% endif %}{% endblock %}
