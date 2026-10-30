@@ -5,8 +5,47 @@
     "logo": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
   },
   "careersPage": "https://tolnigeria.com/apply/",
-  "lastUpdated": "2026-10-28",
+  "lastUpdated": "2026-10-30",
   "jobs": [
+    {
+      "id": "salon-manager",
+      "title": "Salon Manager",
+      "url": "https://tolnigeria.com/apply/salon-manager/",
+      "applyUrl": "https://tolnigeria.com/apply/salon-manager/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Asokoro",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-10-30",
+      "validThrough": "2026-11-19T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 200000,
+        "period": "MONTH",
+        "display": "₦200,000/month"
+      },
+      "description": "We are hiring a Salon Manager for a unisex salon in NAF Valley Estate, Asokoro, Abuja. This is a full-time, onsite role.\nResponsibilities: Run the salon day to day and keep it clean, organised and welcoming for customers. Supervise and schedule the barbers, stylists, nail technicians and other salon workers, and keep service standards high. Manage salon inventory: track products and supplies, reorder before stock runs out and report on stock levels. Handle customer bookings, complaints and feedback, and keep the owner updated on staff, stock and daily activity.\nRequirements: Good skills in managing inventory Good skills in managing barbers, stylists, nail technicians and other salon workers Able to commute to NAF Valley Estate, Asokoro, Abuja and resume immediately CV Required (PDF)\nBenefits: Other statutory benefits.",
+      "responsibilities": [
+        "Run the salon day to day and keep it clean, organised and welcoming for customers.",
+        "Supervise and schedule the barbers, stylists, nail technicians and other salon workers, and keep service standards high.",
+        "Manage salon inventory: track products and supplies, reorder before stock runs out and report on stock levels.",
+        "Handle customer bookings, complaints and feedback, and keep the owner updated on staff, stock and daily activity."
+      ],
+      "qualifications": [
+        "Good skills in managing inventory",
+        "Good skills in managing barbers, stylists, nail technicians and other salon workers",
+        "Able to commute to NAF Valley Estate, Asokoro, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ],
+      "industry": "Beauty & Personal Care"
+    },
     {
       "id": "social-media-manager",
       "title": "Social Media Manager",
