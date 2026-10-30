@@ -2,6 +2,38 @@
   "_comment": "Single source of truth for open roles. build.py turns each OPEN job into JobPosting structured data on its page, an ItemList on /apply/, and the /jobs.json + /jobs.xml feeds. To close a role set status to \"closed\" (it then disappears from all of them). Keep every fact here identical to what is visible on the job page. Closing dates are automatic: 14 working days after datePosted (weekends and content/holidays.json skipped). Optional per job: \"workingDaysOpen\" or an exact \"validThrough\" date. \"remote\": true marks a fully remote role.",
   "jobs": [
     {
+      "id": "salon-manager",
+      "status": "open",
+      "title": "Salon Manager",
+      "url": "/apply/salon-manager/",
+      "locality": "Asokoro",
+      "region": "FCT",
+      "datePosted": "2026-10-30",
+      "employmentType": "FULL_TIME",
+      "industry": "Beauty & Personal Care",
+      "salary": {
+        "value": 200000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Salon Manager for a unisex salon in NAF Valley Estate, Asokoro, Abuja. This is a full-time, onsite role.",
+      "responsibilities": [
+        "Run the salon day to day and keep it clean, organised and welcoming for customers.",
+        "Supervise and schedule the barbers, stylists, nail technicians and other salon workers, and keep service standards high.",
+        "Manage salon inventory: track products and supplies, reorder before stock runs out and report on stock levels.",
+        "Handle customer bookings, complaints and feedback, and keep the owner updated on staff, stock and daily activity."
+      ],
+      "qualifications": [
+        "Good skills in managing inventory",
+        "Good skills in managing barbers, stylists, nail technicians and other salon workers",
+        "Able to commute to NAF Valley Estate, Asokoro, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ]
+    },
+    {
       "id": "social-media-manager",
       "status": "open",
       "title": "Social Media Manager",

@@ -27,6 +27,10 @@ sheet used by the other forms on the site. It powers:
   Skills as tick boxes, CV upload as PDF). formType `apply-social-media-manager`; entries are saved on
   their own tab named **Social Media Manager**. The ticked skills are saved together in one **Skills**
   cell, separated by commas.
+- `/apply/salon-manager/` — the **Salon Manager (NAF Valley, Asokoro)** application, 9 questions (Full Name,
+  Gender, Age as at 31 October 2026, Phone, Email, Can you resume immediately, Where do you live in Abuja
+  as an Area Council dropdown, Have you worked in a salon before Yes/No, CV upload as PDF). formType
+  `apply-salon-manager`; entries are saved on their own tab named **Salon Manager**.
 
 Every submission is saved as a row in a Google Sheet, and the uploaded CV
 is saved as a PDF file in a dedicated Google Drive folder, with a link to
@@ -116,6 +120,10 @@ function doPost(e) {
 
   if (data.formType === 'apply-social-media-manager') {
     return handleApplySocialMediaManager(data);
+  }
+
+  if (data.formType === 'apply-salon-manager') {
+    return handleApplySalonManager(data);
   }
 
   return ContentService.createTextOutput(
@@ -464,6 +472,66 @@ function handleApplySocialMediaManager(data) {
   }
 
   sheet.appendRow([new Date(), SMM_ROLE, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, skills, cvLink]);
+  var row = sheet.getLastRow();
+  sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ===================== SALON MANAGER (NAF VALLEY, ASOKORO) ===================== */
+
+// Own tab "Salon Manager", created automatically with its header row on the first
+// application. "Where do you live in Abuja?" is an Area Council dropdown (Abaji, Abuja
+// Municipal (AMAC), Bwari, Gwagwalada, Kuje, Kwali) and "Have you worked in a salon
+// before?" is Yes/No; both are saved as sent.
+// CV is PDF only, saved in the same Drive folder as the other CVs.
+var SALON_ROLE = 'Salon Manager';
+var SALON_HEADERS = [
+  'Timestamp', 'Role', 'Full Name', 'Gender', 'Age (as at 31 Oct 2026)',
+  'Phone Number', 'Email', 'Can Resume Immediately', 'Area Council (LGA)',
+  'Worked in a Salon Before', 'CV Link'
+];
+
+function getSalonManagerSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(SALON_ROLE);
+  if (!sheet) sheet = ss.insertSheet(SALON_ROLE);
+
+  var current = sheet.getLastColumn() > 0 ? sheet.getRange(1, 1, 1, SALON_HEADERS.length).getValues()[0] : [];
+  if (current.join('|') !== SALON_HEADERS.join('|')) {
+    sheet.getRange(1, 1, 1, SALON_HEADERS.length).setValues([SALON_HEADERS]).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+    // Phone column is plain text so the leading 0 (e.g. 08052033145) is kept.
+    sheet.getRange(2, 6, sheet.getMaxRows() - 1, 1).setNumberFormat('@');
+  }
+  return sheet;
+}
+
+function handleApplySalonManager(data) {
+  var sheet = getSalonManagerSheet();
+
+  var fullName = (data.fullName || '').toString().trim();
+  var gender = (data.gender || '').toString().trim();
+  var age = Number((data.age || '').toString().replace(/\D/g, '')) || '';
+  var phone = (data.phone || '').toString().replace(/\D/g, '');
+  var email = (data.email || '').toString().trim();
+  var resumeImmediately = (data.resumeImmediately || '').toString().trim();
+  var areaCouncil = (data.areaCouncil || '').toString().trim();
+  var workedInSalon = (data.workedInSalon || '').toString().trim();
+
+  // CV: PDF only. Anything that is not a real PDF is not saved to Drive, and
+  // the row says so (the website already blocks these; this is the backstop).
+  var cvLink = '';
+  try {
+    cvLink = saveCvToDrive(data.cvBase64, data.cvFileName, 'application/pdf', fullName, true);
+  } catch (err) {
+    Logger.log('CV upload failed: ' + err);
+    cvLink = 'Upload failed or not a PDF - contact applicant for CV';
+  }
+
+  sheet.appendRow([new Date(), SALON_ROLE, fullName, gender, age, phone, email, resumeImmediately, areaCouncil, workedInSalon, cvLink]);
   var row = sheet.getLastRow();
   sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
 
