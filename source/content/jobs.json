@@ -2,6 +2,75 @@
   "_comment": "Single source of truth for open roles. build.py turns each OPEN job into JobPosting structured data on its page, an ItemList on /apply/, and the /jobs.json + /jobs.xml feeds. To close a role set status to \"closed\" (it then disappears from all of them). Keep every fact here identical to what is visible on the job page. Closing dates are automatic: 14 working days after datePosted (weekends and content/holidays.json skipped). Optional per job: \"workingDaysOpen\" or an exact \"validThrough\" date. \"remote\": true marks a fully remote role.",
   "jobs": [
     {
+      "id": "operations-manager",
+      "status": "open",
+      "title": "Operations Manager",
+      "url": "/apply/operations-manager/",
+      "locality": "Wuse 2",
+      "region": "FCT",
+      "datePosted": "2026-10-30",
+      "employmentType": "FULL_TIME",
+      "industry": "Health & Wellness",
+      "experienceMonths": 24,
+      "salary": {
+        "value": 200000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Operations Manager for a health and wellness business in Wuse 2, Abuja. This is a full-time, onsite role.",
+      "responsibilities": [
+        "Oversee the day-to-day running of the store and make sure daily tasks are done on time.",
+        "Supervise and schedule staff, and keep service and hygiene standards high.",
+        "Manage stock and supplies, and make sure products are available for customers.",
+        "Handle customer complaints and escalations, and report on sales and operations to the owner."
+      ],
+      "qualifications": [
+        "At least 2 years' experience in operations, store management or a similar role",
+        "Good leadership, organisation and communication skills",
+        "Able to work with little to no supervision",
+        "Able to commute to Wuse 2, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ]
+    },
+    {
+      "id": "customer-service",
+      "status": "open",
+      "title": "Customer Service",
+      "url": "/apply/customer-service/",
+      "locality": "Wuse 2",
+      "region": "FCT",
+      "datePosted": "2026-10-30",
+      "employmentType": "FULL_TIME",
+      "industry": "Health & Wellness",
+      "experienceMonths": 24,
+      "salary": {
+        "value": 100000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Customer Service for a health and wellness business in Wuse 2, Abuja. This is a full-time, onsite role.",
+      "responsibilities": [
+        "Welcome and assist customers who walk into the store, and recommend suitable products.",
+        "Respond to customer enquiries and messages online (WhatsApp, social media and calls).",
+        "Record orders accurately and follow up so customers are satisfied.",
+        "Handle complaints politely and pass on issues that need a manager."
+      ],
+      "qualifications": [
+        "At least 2 years' experience in customer service, sales or a similar role",
+        "Good communication skills, in person and in writing",
+        "Friendly, patient and presentable",
+        "Comfortable using a phone, WhatsApp and basic computer tools",
+        "Able to commute to Wuse 2, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ]
+    },
+    {
       "id": "salon-manager",
       "status": "open",
       "title": "Salon Manager",
