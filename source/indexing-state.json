@@ -2,6 +2,8 @@
   "_comment": "What Google was last told for each job page. Written by scripts/notify_google_indexing.py; do not edit by hand.",
   "urls": {
     "https://tolnigeria.com/apply/chef/": "e5d33b1521bf9401",
+    "https://tolnigeria.com/apply/customer-service/": "9f37a9c049f64332",
+    "https://tolnigeria.com/apply/operations-manager/": "f012e45da0bc5b74",
     "https://tolnigeria.com/apply/pastry-chef-assistant/": "fa1a4d3f8097f02f",
     "https://tolnigeria.com/apply/sales-assistant/": "8fd69eb6a36fd0eb",
     "https://tolnigeria.com/apply/salon-manager/": "8c7889a79ed03850",
