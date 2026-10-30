@@ -8,6 +8,87 @@
   "lastUpdated": "2026-10-30",
   "jobs": [
     {
+      "id": "operations-manager",
+      "title": "Operations Manager",
+      "url": "https://tolnigeria.com/apply/operations-manager/",
+      "applyUrl": "https://tolnigeria.com/apply/operations-manager/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Wuse 2",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-10-30",
+      "validThrough": "2026-11-19T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 200000,
+        "period": "MONTH",
+        "display": "₦200,000/month"
+      },
+      "description": "We are hiring a Operations Manager for a health and wellness business in Wuse 2, Abuja. This is a full-time, onsite role.\nResponsibilities: Oversee the day-to-day running of the store and make sure daily tasks are done on time. Supervise and schedule staff, and keep service and hygiene standards high. Manage stock and supplies, and make sure products are available for customers. Handle customer complaints and escalations, and report on sales and operations to the owner.\nRequirements: At least 2 years' experience in operations, store management or a similar role Good leadership, organisation and communication skills Able to work with little to no supervision Able to commute to Wuse 2, Abuja and resume immediately CV Required (PDF)\nBenefits: Other statutory benefits.",
+      "responsibilities": [
+        "Oversee the day-to-day running of the store and make sure daily tasks are done on time.",
+        "Supervise and schedule staff, and keep service and hygiene standards high.",
+        "Manage stock and supplies, and make sure products are available for customers.",
+        "Handle customer complaints and escalations, and report on sales and operations to the owner."
+      ],
+      "qualifications": [
+        "At least 2 years' experience in operations, store management or a similar role",
+        "Good leadership, organisation and communication skills",
+        "Able to work with little to no supervision",
+        "Able to commute to Wuse 2, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ],
+      "industry": "Health & Wellness"
+    },
+    {
+      "id": "customer-service",
+      "title": "Customer Service",
+      "url": "https://tolnigeria.com/apply/customer-service/",
+      "applyUrl": "https://tolnigeria.com/apply/customer-service/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Wuse 2",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-10-30",
+      "validThrough": "2026-11-19T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 100000,
+        "period": "MONTH",
+        "display": "₦100,000/month"
+      },
+      "description": "We are hiring a Customer Service for a health and wellness business in Wuse 2, Abuja. This is a full-time, onsite role.\nResponsibilities: Welcome and assist customers who walk into the store, and recommend suitable products. Respond to customer enquiries and messages online (WhatsApp, social media and calls). Record orders accurately and follow up so customers are satisfied. Handle complaints politely and pass on issues that need a manager.\nRequirements: At least 2 years' experience in customer service, sales or a similar role Good communication skills, in person and in writing Friendly, patient and presentable Comfortable using a phone, WhatsApp and basic computer tools Able to commute to Wuse 2, Abuja and resume immediately CV Required (PDF)\nBenefits: Other statutory benefits.",
+      "responsibilities": [
+        "Welcome and assist customers who walk into the store, and recommend suitable products.",
+        "Respond to customer enquiries and messages online (WhatsApp, social media and calls).",
+        "Record orders accurately and follow up so customers are satisfied.",
+        "Handle complaints politely and pass on issues that need a manager."
+      ],
+      "qualifications": [
+        "At least 2 years' experience in customer service, sales or a similar role",
+        "Good communication skills, in person and in writing",
+        "Friendly, patient and presentable",
+        "Comfortable using a phone, WhatsApp and basic computer tools",
+        "Able to commute to Wuse 2, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ],
+      "industry": "Health & Wellness"
+    },
+    {
       "id": "salon-manager",
       "title": "Salon Manager",
       "url": "https://tolnigeria.com/apply/salon-manager/",
