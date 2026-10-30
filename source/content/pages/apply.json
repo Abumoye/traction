@@ -80,6 +80,16 @@
           "image_alt": "Smiling bearded man in a beige coat and turtleneck beside the Traction Outsourcing logo and an Apply Now button, for the Social Media Manager job"
         },
         {
+          "title": "Salon Manager",
+          "location": "NAF Valley, Asokoro, Abuja",
+          "salary": "₦200,000/month",
+          "href": "/apply/salon-manager/",
+          "active": true,
+          "icon": "fa-scissors",
+          "image": "/images/jobs/salon-manager.jpg",
+          "image_alt": "Smiling woman with long black braids resting her chin on her hand beside the Traction Outsourcing logo and an Apply Now button, for the Salon Manager job"
+        },
+        {
           "title": "Sales Assistant",
           "location": "Wuse 2, Abuja",
           "salary": "₦100,000/month",
