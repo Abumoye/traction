@@ -1,0 +1,211 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "apply/customer-service/index.html",
+    "url": "/apply/customer-service/"
+  },
+  "meta": {
+    "title": "Customer Service Job, Wuse 2, Abuja | Traction Outsourcing",
+    "description": "Customer Service job in Wuse 2, Abuja at ₦100,000/month. Full-time role with a health and wellness business. 2+ years' experience required. Apply online at Traction Outsourcing Limited.",
+    "image": "/images/jobs/customer-service.jpg",
+    "image_height": 630,
+    "image_alt": "Smiling woman in a yellow turtleneck wearing a headset beside the Traction Outsourcing logo and an Apply Now button, for the Customer Service job"
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Careers",
+          "item": "https://tolnigeria.com/apply/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Customer Service",
+          "item": "https://tolnigeria.com/apply/customer-service/"
+        }
+      ]
+    }
+  ],
+  "hero": {
+    "back": {
+      "href": "/apply/",
+      "label": "Back to Careers"
+    },
+    "eyebrow": "We Are Hiring",
+    "headline": "Customer Service",
+    "sub": "We are hiring a Customer Service for a health and wellness business in Wuse 2, Abuja. Full-time · ₦100,000/month."
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "tight": true,
+      "columns": 4,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-map-marker-alt",
+          "title": "Wuse 2, Abuja, FCT",
+          "text": ""
+        },
+        {
+          "icon": "fa-briefcase",
+          "title": "Full-Time Role",
+          "text": ""
+        },
+        {
+          "icon": "fa-user-clock",
+          "title": "2+ Years' Experience",
+          "text": ""
+        },
+        {
+          "icon": "fa-headset",
+          "title": "Customer Service",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "bullet-columns",
+      "tight": true,
+      "lists": [
+        {
+          "heading": "Job Description",
+          "items": [
+            "Welcome and assist customers who walk into the store, and recommend suitable products.",
+            "Respond to customer enquiries and messages online (WhatsApp, social media and calls).",
+            "Record orders accurately and follow up so customers are satisfied.",
+            "Handle complaints politely and pass on issues that need a manager."
+          ]
+        },
+        {
+          "heading": "Requirements",
+          "items": [
+            "At least 2 years' experience in customer service, sales or a similar role.",
+            "Good communication skills, in person and in writing.",
+            "Friendly, patient and presentable.",
+            "Comfortable using a phone, WhatsApp and basic computer tools.",
+            "Able to commute to Wuse 2, Abuja and resume immediately."
+          ]
+        },
+        {
+          "heading": "Benefits",
+          "items": [
+            "Other statutory benefits."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "id": "apply-form",
+      "tight": true,
+      "heading": "Application Form",
+      "sub": "Please fill in every field. Your CV must be uploaded as a PDF file.",
+      "notice": "DO NOT APPLY MORE THAN ONCE. DOUBLE APPLICATIONS WILL BE DISQUALIFIED",
+      "form_id": "applyForm",
+      "form_max_width": "720px",
+      "button": "Submit Application",
+      "success_message": "Thank you for your application. We will reach out to qualified candidates.",
+      "fields": [
+        {
+          "name": "fullName",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2
+        },
+        {
+          "name": "gender",
+          "placeholder": "Gender",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Male",
+            "Female"
+          ]
+        },
+        {
+          "name": "age",
+          "placeholder": "Age (as at 31 October 2026)",
+          "input_type": "number",
+          "required": true,
+          "min": 16,
+          "max": 70,
+          "title": "Enter your age in years, as at 31 October 2026"
+        },
+        {
+          "name": "phone",
+          "placeholder": "Phone Number (11 digits), e.g. 08052033145",
+          "input_type": "tel",
+          "digits": 11,
+          "required": true,
+          "title": "Enter your 11-digit phone number, numbers only (e.g. 08052033145)"
+        },
+        {
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true,
+          "title": "Enter a valid email address"
+        },
+        {
+          "name": "resumeImmediately",
+          "placeholder": "Can you resume immediately?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "livesInAbuja",
+          "placeholder": "Do you currently live in Abuja?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "yearsExperience",
+          "placeholder": "How many years of experience do you have?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "Above 5"
+          ]
+        },
+        {
+          "name": "cv",
+          "placeholder": "Upload Your CV",
+          "input_type": "file",
+          "accept": ".pdf,application/pdf",
+          "required": true,
+          "help": "PDF only, max 5MB."
+        }
+      ]
+    }
+  ],
+  "scripts": [
+    "/js/form-guard.js",
+    "/js/apply-fields.js",
+    "/js/apply-wellness-form.js"
+  ]
+}

@@ -31,6 +31,11 @@ sheet used by the other forms on the site. It powers:
   Gender, Age as at 31 October 2026, Phone, Email, Can you resume immediately, Where do you live in Abuja
   as an Area Council dropdown, Have you worked in a salon before Yes/No, CV upload as PDF). formType
   `apply-salon-manager`; entries are saved on their own tab named **Salon Manager**.
+- `/apply/operations-manager/` and `/apply/customer-service/` — the two **Wuse 2 health and wellness**
+  roles, 9 questions each (Full Name, Gender, Age as at 31 October 2026, Phone, Email, Can you resume
+  immediately, Do you currently live in Abuja, Years of experience 2 to 5 or Above 5, CV upload as PDF).
+  Both use formType `apply-wellness-wuse2`; entries are saved on their own tabs named **Operations Manager**
+  and **Customer Service**.
 
 Every submission is saved as a row in a Google Sheet, and the uploaded CV
 is saved as a PDF file in a dedicated Google Drive folder, with a link to
@@ -124,6 +129,10 @@ function doPost(e) {
 
   if (data.formType === 'apply-salon-manager') {
     return handleApplySalonManager(data);
+  }
+
+  if (data.formType === 'apply-wellness-wuse2') {
+    return handleApplyWellnessWuse2(data);
   }
 
   return ContentService.createTextOutput(
@@ -534,6 +543,75 @@ function handleApplySalonManager(data) {
   sheet.appendRow([new Date(), SALON_ROLE, fullName, gender, age, phone, email, resumeImmediately, areaCouncil, workedInSalon, cvLink]);
   var row = sheet.getLastRow();
   sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ===================== WUSE 2 HEALTH & WELLNESS ROLES (OPERATIONS MANAGER, CUSTOMER SERVICE) ===================== */
+
+// Both roles ask the same questions, so one handler serves them. Each role gets its own
+// tab in this spreadsheet ("Operations Manager" and "Customer Service"), created
+// automatically with its header row on the first application. Only the two role names
+// below are accepted, so nobody can create stray tabs.
+// "Years of Experience" is saved as sent: 2, 3, 4, 5 or Above 5.
+// CV is PDF only, saved in the same Drive folder as the other CVs.
+var WELLNESS_ROLES = ['Operations Manager', 'Customer Service'];
+var WELLNESS_HEADERS = [
+  'Timestamp', 'Role', 'Full Name', 'Gender', 'Age (as at 31 Oct 2026)',
+  'Phone Number', 'Email', 'Can Resume Immediately', 'Lives in Abuja',
+  'Years of Experience', 'CV Link'
+];
+
+function getWellnessSheet(role) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(role);
+  if (!sheet) sheet = ss.insertSheet(role);
+
+  var current = sheet.getLastColumn() > 0 ? sheet.getRange(1, 1, 1, WELLNESS_HEADERS.length).getValues()[0] : [];
+  if (current.join('|') !== WELLNESS_HEADERS.join('|')) {
+    sheet.getRange(1, 1, 1, WELLNESS_HEADERS.length).setValues([WELLNESS_HEADERS]).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+    // Phone column is plain text so the leading 0 (e.g. 08052033145) is kept.
+    sheet.getRange(2, 6, sheet.getMaxRows() - 1, 1).setNumberFormat('@');
+  }
+  return sheet;
+}
+
+function handleApplyWellnessWuse2(data) {
+  var role = (data.role || '').toString().trim();
+  if (WELLNESS_ROLES.indexOf(role) === -1) {
+    return ContentService.createTextOutput(
+      JSON.stringify({ status: 'error', message: 'Unknown role.' })
+    ).setMimeType(ContentService.MimeType.JSON);
+  }
+  var sheet = getWellnessSheet(role);
+
+  var fullName = (data.fullName || '').toString().trim();
+  var gender = (data.gender || '').toString().trim();
+  var age = Number((data.age || '').toString().replace(/\D/g, '')) || '';
+  var phone = (data.phone || '').toString().replace(/\D/g, '');
+  var email = (data.email || '').toString().trim();
+  var resumeImmediately = (data.resumeImmediately || '').toString().trim();
+  var livesInAbuja = (data.livesInAbuja || '').toString().trim();
+  var yearsExperience = (data.yearsExperience || '').toString().trim();
+
+  // CV: PDF only. Anything that is not a real PDF is not saved to Drive, and
+  // the row says so (the website already blocks these; this is the backstop).
+  var cvLink = '';
+  try {
+    cvLink = saveCvToDrive(data.cvBase64, data.cvFileName, 'application/pdf', fullName, true);
+  } catch (err) {
+    Logger.log('CV upload failed: ' + err);
+    cvLink = 'Upload failed or not a PDF - contact applicant for CV';
+  }
+
+  sheet.appendRow([new Date(), role, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, yearsExperience, cvLink]);
+  var row = sheet.getLastRow();
+  sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
+  // Keep "2", "3"... as text so Sheets never turns the answer into a number or date.
+  sheet.getRange(row, 10).setNumberFormat('@').setValue(yearsExperience);
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success' })

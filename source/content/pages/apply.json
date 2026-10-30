@@ -90,6 +90,26 @@
           "image_alt": "Smiling woman with long black braids resting her chin on her hand beside the Traction Outsourcing logo and an Apply Now button, for the Salon Manager job"
         },
         {
+          "title": "Operations Manager",
+          "location": "Wuse 2, Abuja",
+          "salary": "₦200,000/month",
+          "href": "/apply/operations-manager/",
+          "active": true,
+          "icon": "fa-clipboard-check",
+          "image": "/images/jobs/operations-manager.jpg",
+          "image_alt": "Smiling bearded man in a navy blazer and black shirt seated in an office chair beside the Traction Outsourcing logo and an Apply Now button, for the Operations Manager job"
+        },
+        {
+          "title": "Customer Service",
+          "location": "Wuse 2, Abuja",
+          "salary": "₦100,000/month",
+          "href": "/apply/customer-service/",
+          "active": true,
+          "icon": "fa-headset",
+          "image": "/images/jobs/customer-service.jpg",
+          "image_alt": "Smiling woman in a yellow turtleneck wearing a headset beside the Traction Outsourcing logo and an Apply Now button, for the Customer Service job"
+        },
+        {
           "title": "Sales Assistant",
           "location": "Wuse 2, Abuja",
           "salary": "₦100,000/month",
