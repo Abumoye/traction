@@ -5,8 +5,48 @@
     "logo": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
   },
   "careersPage": "https://tolnigeria.com/apply/",
-  "lastUpdated": "2026-10-30",
+  "lastUpdated": "2026-11-02",
   "jobs": [
+    {
+      "id": "sports-product-manager",
+      "title": "Sports Product Manager",
+      "url": "https://tolnigeria.com/apply/sports-product-manager/",
+      "applyUrl": "https://tolnigeria.com/apply/sports-product-manager/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Wuye",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-11-02",
+      "validThrough": "2026-11-20T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 250000,
+        "period": "MONTH",
+        "display": "₦250,000/month"
+      },
+      "description": "We are hiring a Sports Product Manager in Wuye, Abuja. This is a hybrid role, and the salary of ₦250,000 per month is negotiable.\nResponsibilities: Plan, source and manage the range of sports products sold online. Create and update product listings with clear descriptions, photos and prices. Track stock, sales and customer feedback, and recommend what to stock next. Work with suppliers, the sales team and customer service to keep the store running smoothly.\nRequirements: Experience in e-commerce and product management A love for sports or sporting activities, with good knowledge of sports products Good communication, organisation and analytical skills Able to work a hybrid schedule in Wuye, Abuja CV Required (PDF)\nBenefits: Other statutory benefits.",
+      "responsibilities": [
+        "Plan, source and manage the range of sports products sold online.",
+        "Create and update product listings with clear descriptions, photos and prices.",
+        "Track stock, sales and customer feedback, and recommend what to stock next.",
+        "Work with suppliers, the sales team and customer service to keep the store running smoothly."
+      ],
+      "qualifications": [
+        "Experience in e-commerce and product management",
+        "A love for sports or sporting activities, with good knowledge of sports products",
+        "Good communication, organisation and analytical skills",
+        "Able to work a hybrid schedule in Wuye, Abuja",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ],
+      "industry": "Sports & E-commerce"
+    },
     {
       "id": "operations-manager",
       "title": "Operations Manager",
