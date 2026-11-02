@@ -2,6 +2,39 @@
   "_comment": "Single source of truth for open roles. build.py turns each OPEN job into JobPosting structured data on its page, an ItemList on /apply/, and the /jobs.json + /jobs.xml feeds. To close a role set status to \"closed\" (it then disappears from all of them). Keep every fact here identical to what is visible on the job page. Closing dates are automatic: 14 working days after datePosted (weekends and content/holidays.json skipped). Optional per job: \"workingDaysOpen\" or an exact \"validThrough\" date. \"remote\": true marks a fully remote role.",
   "jobs": [
     {
+      "id": "sports-product-manager",
+      "status": "open",
+      "title": "Sports Product Manager",
+      "url": "/apply/sports-product-manager/",
+      "locality": "Wuye",
+      "region": "FCT",
+      "datePosted": "2026-11-02",
+      "employmentType": "FULL_TIME",
+      "industry": "Sports & E-commerce",
+      "salary": {
+        "value": 250000,
+        "currency": "NGN",
+        "unit": "MONTH"
+      },
+      "summary": "We are hiring a Sports Product Manager in Wuye, Abuja. This is a hybrid role, and the salary of ₦250,000 per month is negotiable.",
+      "responsibilities": [
+        "Plan, source and manage the range of sports products sold online.",
+        "Create and update product listings with clear descriptions, photos and prices.",
+        "Track stock, sales and customer feedback, and recommend what to stock next.",
+        "Work with suppliers, the sales team and customer service to keep the store running smoothly."
+      ],
+      "qualifications": [
+        "Experience in e-commerce and product management",
+        "A love for sports or sporting activities, with good knowledge of sports products",
+        "Good communication, organisation and analytical skills",
+        "Able to work a hybrid schedule in Wuye, Abuja",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ]
+    },
+    {
       "id": "operations-manager",
       "status": "open",
       "title": "Operations Manager",

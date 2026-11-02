@@ -1,0 +1,217 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "apply/sports-product-manager/index.html",
+    "url": "/apply/sports-product-manager/"
+  },
+  "meta": {
+    "title": "Sports Product Manager Job, Wuye, Abuja | Traction Outsourcing",
+    "description": "Sports Product Manager job in Wuye, Abuja at ₦250,000/month (negotiable). Hybrid role. E-commerce and product management experience required. Apply online at Traction Outsourcing Limited.",
+    "image": "/images/jobs/sports-product-manager.jpg",
+    "image_height": 630,
+    "image_alt": "Woman with a shaved head in an olive sports top stretching her arm beside the Traction Outsourcing logo and an Apply Now button, for the Sports Product Manager job"
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Careers",
+          "item": "https://tolnigeria.com/apply/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sports Product Manager",
+          "item": "https://tolnigeria.com/apply/sports-product-manager/"
+        }
+      ]
+    }
+  ],
+  "hero": {
+    "back": {
+      "href": "/apply/",
+      "label": "Back to Careers"
+    },
+    "eyebrow": "We Are Hiring",
+    "headline": "Sports Product Manager",
+    "sub": "We are hiring a Sports Product Manager in Wuye, Abuja. Hybrid · ₦250,000/month (negotiable)."
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "tight": true,
+      "columns": 4,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-map-marker-alt",
+          "title": "Wuye, Abuja, FCT",
+          "text": ""
+        },
+        {
+          "icon": "fa-laptop-house",
+          "title": "Hybrid Role",
+          "text": ""
+        },
+        {
+          "icon": "fa-boxes-stacked",
+          "title": "E-commerce & Product Management",
+          "text": ""
+        },
+        {
+          "icon": "fa-person-running",
+          "title": "Sports Lover",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "bullet-columns",
+      "tight": true,
+      "lists": [
+        {
+          "heading": "Job Description",
+          "items": [
+            "Plan, source and manage the range of sports products sold online.",
+            "Create and update product listings with clear descriptions, photos and prices.",
+            "Track stock, sales and customer feedback, and recommend what to stock next.",
+            "Work with suppliers, the sales team and customer service to keep the store running smoothly."
+          ]
+        },
+        {
+          "heading": "Requirements",
+          "items": [
+            "Experience in e-commerce and product management.",
+            "A love for sports or sporting activities, with good knowledge of sports products.",
+            "Good communication, organisation and analytical skills.",
+            "Able to work a hybrid schedule in Wuye, Abuja."
+          ]
+        },
+        {
+          "heading": "Benefits",
+          "items": [
+            "Other statutory benefits."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "id": "apply-form",
+      "tight": true,
+      "heading": "Application Form",
+      "sub": "Please fill in every field. Your CV must be uploaded as a PDF file.",
+      "notice": "DO NOT APPLY MORE THAN ONCE. DOUBLE APPLICATIONS WILL BE DISQUALIFIED",
+      "form_id": "applyForm",
+      "form_max_width": "720px",
+      "button": "Submit Application",
+      "success_message": "Thank you for your application. We will reach out to qualified candidates.",
+      "fields": [
+        {
+          "name": "fullName",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2
+        },
+        {
+          "name": "gender",
+          "placeholder": "Gender",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Male",
+            "Female"
+          ]
+        },
+        {
+          "name": "age",
+          "placeholder": "Age (as at 31 October 2026)",
+          "input_type": "number",
+          "required": true,
+          "min": 16,
+          "max": 70,
+          "title": "Enter your age in years, as at 31 October 2026"
+        },
+        {
+          "name": "phone",
+          "placeholder": "Phone Number (11 digits), e.g. 08052033145",
+          "input_type": "tel",
+          "digits": 11,
+          "required": true,
+          "title": "Enter your 11-digit phone number, numbers only (e.g. 08052033145)"
+        },
+        {
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true,
+          "title": "Enter a valid email address"
+        },
+        {
+          "name": "resumeImmediately",
+          "placeholder": "Can you resume immediately?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "livesInAbuja",
+          "placeholder": "Do you currently live in Abuja?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "productExperience",
+          "placeholder": "Do you have experience in product management?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "ecommerceExperience",
+          "placeholder": "Do you have e-commerce experience?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "cv",
+          "placeholder": "Upload Your CV",
+          "input_type": "file",
+          "accept": ".pdf,application/pdf",
+          "required": true,
+          "help": "PDF only, max 5MB."
+        }
+      ]
+    }
+  ],
+  "scripts": [
+    "/js/form-guard.js",
+    "/js/apply-fields.js",
+    "/js/apply-sports-product-manager-form.js"
+  ]
+}
