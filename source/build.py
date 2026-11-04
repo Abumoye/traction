@@ -542,6 +542,17 @@ def mark_careers_cards(data, all_jobs):
             else:
                 card["active"] = False
                 card["cta_label"] = "Closed"
+        # Newest first: open roles by date posted (latest at the top), then
+        # closed/expired roles by date posted. Python's sort is stable, so roles
+        # posted on the same day keep the order they have in apply.json.
+        def rank(card):
+            job = by_url.get(card.get("href"))
+            if not job:
+                return (0, "")
+            return (0 if job["state"] == "open" else 1, job["datePosted"])
+        cards = sec.get("jobs", [])
+        cards.sort(key=lambda c: rank(c)[1], reverse=True)
+        cards.sort(key=lambda c: rank(c)[0])
 
 
 def fill_home_insights(data):

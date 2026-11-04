@@ -119,6 +119,15 @@ closed or expired roles are left out.
   (`SYNONYMS`), and the ranking weights are in `termScore`.
 - The hero box text is in `content/pages/home.json` under `hero.search`.
 
+## Careers page order
+
+The job cards on `/apply/` live in `content/pages/apply.json`. Their order in
+that file does not matter: `mark_careers_cards` in `build.py` re-orders them on
+every build, open roles first and newest `datePosted` at the top, then closed or
+expired roles (also newest first) at the end. Roles posted on the same day keep
+the order they have in `apply.json`. A new role only needs its card added and a
+`datePosted` in `content/jobs.json`.
+
 ## Event cards (images and "CLOSED")
 
 The cards in the "Upcoming Events" grid on `/services/events/` live in
