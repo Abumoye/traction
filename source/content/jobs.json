@@ -2,6 +2,35 @@
   "_comment": "Single source of truth for open roles. build.py turns each OPEN job into JobPosting structured data on its page, an ItemList on /apply/, and the /jobs.json + /jobs.xml feeds. To close a role set status to \"closed\" (it then disappears from all of them). Keep every fact here identical to what is visible on the job page. Closing dates are automatic: 14 working days after datePosted (weekends and content/holidays.json skipped). Optional per job: \"workingDaysOpen\" or an exact \"validThrough\" date. \"remote\": true marks a fully remote role.",
   "jobs": [
     {
+      "id": "paid-internship",
+      "status": "open",
+      "title": "Paid Internship Programme",
+      "url": "/apply/paid-internship/",
+      "locality": "Abuja",
+      "region": "FCT",
+      "datePosted": "2026-11-04",
+      "employmentType": "FULL_TIME",
+      "industry": "Real Estate",
+      "summary": "We are hiring corp members and graduates for a paid internship programme with our client in the real estate sector in Abuja. No experience needed. Selected candidates will be trained for 6 to 12 months.",
+      "responsibilities": [
+        "Join a paid internship programme with our client in the real estate sector in Abuja.",
+        "Be trained for 6 to 12 months, learning how the business works from the people who run it.",
+        "Support the team with day-to-day tasks as you learn.",
+        "No experience is needed: selected candidates are trained from the start."
+      ],
+      "qualifications": [
+        "A serving corp member or a graduate of a Nigerian university",
+        "No previous experience needed",
+        "Good communication skills and a willingness to learn",
+        "Able to work full time in Abuja",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Paid internship.",
+        "6 to 12 months of training."
+      ]
+    },
+    {
       "id": "sports-product-manager",
       "status": "open",
       "title": "Sports Product Manager",

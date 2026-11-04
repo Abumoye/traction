@@ -40,6 +40,11 @@ sheet used by the other forms on the site. It powers:
   (Full Name, Gender, Age as at 31 October 2026, Phone, Email, Can you resume immediately, Do you currently live
   in Abuja, Experience in product management Yes/No, E-commerce experience Yes/No, CV upload as PDF). formType
   `apply-sports-product-manager`; entries are saved on their own tab named **Sports Product Manager**.
+- `/apply/paid-internship/` — the **Paid Internship Programme (Abuja, real estate client)** application, 10 questions
+  (Full Name, Gender, Age as at 31 October 2026, Phone, Email, Can you resume immediately, Do you currently live
+  in Abuja, Year of graduation 2023 to 2026, University of graduation (dropdown of Nigerian universities plus
+  "Other", which shows a text box), CV upload as PDF). formType `apply-paid-internship`; entries are saved on
+  their own tab named **Paid Internship**.
 
 Every submission is saved as a row in a Google Sheet, and the uploaded CV
 is saved as a PDF file in a dedicated Google Drive folder, with a link to
@@ -141,6 +146,10 @@ function doPost(e) {
 
   if (data.formType === 'apply-sports-product-manager') {
     return handleApplySportsProductManager(data);
+  }
+
+  if (data.formType === 'apply-paid-internship') {
+    return handleApplyPaidInternship(data);
   }
 
   return ContentService.createTextOutput(
@@ -677,6 +686,68 @@ function handleApplySportsProductManager(data) {
   }
 
   sheet.appendRow([new Date(), SPM_ROLE, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, productExperience, ecommerceExperience, cvLink]);
+  var row = sheet.getLastRow();
+  sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ===================== PAID INTERNSHIP PROGRAMME (ABUJA) ===================== */
+
+// Own tab in this spreadsheet ("Paid Internship"), created automatically with its header row on
+// the first application. University is the dropdown choice; when the applicant picks "Other" the
+// typed name is saved as "Other: <name>". CV is PDF only, saved in the same Drive folder as the others.
+var PI_ROLE = 'Paid Internship Programme';
+var PI_TAB = 'Paid Internship';
+var PI_HEADERS = [
+  'Timestamp', 'Role', 'Full Name', 'Gender', 'Age (as at 31 Oct 2026)',
+  'Phone Number', 'Email', 'Can Resume Immediately', 'Lives in Abuja',
+  'Year of Graduation', 'University of Graduation', 'CV Link'
+];
+
+function getPaidInternshipSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(PI_TAB);
+  if (!sheet) sheet = ss.insertSheet(PI_TAB);
+
+  var current = sheet.getLastColumn() > 0 ? sheet.getRange(1, 1, 1, PI_HEADERS.length).getValues()[0] : [];
+  if (current.join('|') !== PI_HEADERS.join('|')) {
+    sheet.getRange(1, 1, 1, PI_HEADERS.length).setValues([PI_HEADERS]).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+    // Phone column is plain text so the leading 0 (e.g. 08052033145) is kept.
+    sheet.getRange(2, 6, sheet.getMaxRows() - 1, 1).setNumberFormat('@');
+  }
+  return sheet;
+}
+
+function handleApplyPaidInternship(data) {
+  var sheet = getPaidInternshipSheet();
+
+  var fullName = (data.fullName || '').toString().trim();
+  var gender = (data.gender || '').toString().trim();
+  var age = Number((data.age || '').toString().replace(/\D/g, '')) || '';
+  var phone = (data.phone || '').toString().replace(/\D/g, '');
+  var email = (data.email || '').toString().trim();
+  var resumeImmediately = (data.resumeImmediately || '').toString().trim();
+  var livesInAbuja = (data.livesInAbuja || '').toString().trim();
+  var graduationYear = (data.graduationYear || '').toString().trim();
+  var university = (data.university || '').toString().trim().substring(0, 150);
+  var universityOther = (data.universityOther || '').toString().trim().substring(0, 120);
+  if (university === 'Other') university = 'Other: ' + universityOther;
+
+  // CV: PDF only. Anything that is not a real PDF is not saved to Drive, and
+  // the row says so (the website already blocks these; this is the backstop).
+  var cvLink = '';
+  try {
+    cvLink = saveCvToDrive(data.cvBase64, data.cvFileName, 'application/pdf', fullName, true);
+  } catch (err) {
+    Logger.log('CV upload failed: ' + err);
+    cvLink = 'Upload failed or not a PDF - contact applicant for CV';
+  }
+
+  sheet.appendRow([new Date(), PI_ROLE, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, graduationYear, university, cvLink]);
   var row = sheet.getLastRow();
   sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
 
