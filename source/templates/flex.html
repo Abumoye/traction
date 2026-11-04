@@ -352,6 +352,9 @@
               <option value="" disabled selected>{{ f.placeholder | default('Select an option') }}</option>
               {% for opt in f.options %}<option value="{{ opt }}">{{ opt }}</option>{% endfor %}
             </select>
+            {%- if f.other %}
+            <input name="{{ f.other.name }}" type="text" placeholder="{{ f.other.placeholder }}" aria-label="{{ f.other.placeholder }}" maxlength="{{ f.other.maxlength | default(120) }}" minlength="2" hidden data-other-for="{{ f.name }}" data-other-value="{{ f.other.value | default('Other') }}" style="padding:14px 16px;border-radius:12px;border:1px solid var(--hairline);font-family:var(--font);">
+            {%- endif %}
             {% elif f.digits %}
             {%- set digit_pattern = '[0-9]{' ~ f.digits ~ '}' %}
             <div>

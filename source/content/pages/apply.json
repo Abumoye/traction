@@ -40,6 +40,16 @@
       "type": "job-cards",
       "jobs": [
         {
+          "title": "Paid Internship Programme",
+          "location": "Abuja",
+          "salary": "Paid internship",
+          "href": "/apply/paid-internship/",
+          "active": true,
+          "icon": "fa-graduation-cap",
+          "image": "/images/jobs/paid-internship.jpg",
+          "image_alt": "Young man in an NYSC uniform and cap beside a young woman in an NYSC uniform and cap, next to the Traction Outsourcing logo and an Apply Now button, for the Paid Internship Programme"
+        },
+        {
           "title": "Pastry Chef (Assistant)",
           "location": "Maitama, Abuja",
           "salary": "₦200,000/month",

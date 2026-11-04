@@ -10,7 +10,10 @@
       letters, numbers, signs and spaces, but stops at the given number of
       words (extra words are cut off as you type or paste) and updates the
       "0/150 words" counter in the element marked data-words-for="<name>".
-   3. window.applyFields.isPdf(file): resolves true only for a real PDF —
+   3. "Other" boxes: a <select> followed by <input data-other-for="<select name>">
+      shows that text box (and makes it required) only while the select is on
+      its "Other" option, and hides and clears it again otherwise.
+   4. window.applyFields.isPdf(file): resolves true only for a real PDF —
       checks the file name, the browser-reported type AND the file's first
       bytes (%PDF-), so a renamed picture or Word file is rejected.
    ========================================================= */
@@ -79,6 +82,25 @@
         });
     }
 
+    function initOtherInputs() {
+        document.querySelectorAll('input[data-other-for]').forEach(function (box) {
+            var select = box.form && box.form.elements[box.getAttribute('data-other-for')];
+            if (!select) return;
+            var trigger = box.getAttribute('data-other-value') || 'Other';
+
+            function update() {
+                var on = select.value === trigger;
+                box.hidden = !on;
+                box.required = on;
+                if (!on) box.value = '';
+            }
+
+            select.addEventListener('change', update);
+            box.form.addEventListener('reset', function () { setTimeout(update, 0); });
+            update();
+        });
+    }
+
     function isPdf(file) {
         if (!file) return Promise.resolve(false);
         var nameOk = /\.pdf$/i.test(file.name);
@@ -93,5 +115,5 @@
     }
 
     window.applyFields = { isPdf: isPdf, countWords: countWords };
-    document.addEventListener('DOMContentLoaded', function () { initDigitInputs(); initWordLimits(); });
+    document.addEventListener('DOMContentLoaded', function () { initDigitInputs(); initWordLimits(); initOtherInputs(); });
 })();
