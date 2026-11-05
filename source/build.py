@@ -493,6 +493,14 @@ def build_jobposting_schema(job):
             "streetAddress": job["streetAddress"],
             **{k: v for k, v in schema["jobLocation"]["address"].items() if k != "@type"},
         }
+    # Optional: a job based in more than one place lists them all in
+    # "locations" ([{"locality": ..., "region": ...}]); Google accepts a list.
+    if job.get("locations") and not job.get("remote"):
+        schema["jobLocation"] = [
+            {"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": loc["locality"],
+                                           "addressRegion": loc["region"], "addressCountry": "NG"}}
+            for loc in job["locations"]
+        ]
     if job.get("experienceMonths"):
         schema["experienceRequirements"] = {"@type": "OccupationalExperienceRequirements", "monthsOfExperience": job["experienceMonths"]}
     if job.get("industry"):
@@ -611,7 +619,7 @@ def build_careers_collection_schema(open_jobs, meta):
             "@type": "ItemList",
             "numberOfItems": len(open_jobs),
             "itemListElement": [
-                {"@type": "ListItem", "position": i, "url": SITE_URL + j["url"], "name": j["title"] + (" - Remote" if j.get("remote") else " - " + j["locality"] + ", Abuja")}
+                {"@type": "ListItem", "position": i, "url": SITE_URL + j["url"], "name": j["title"] + (" - Remote" if j.get("remote") else " - " + (j.get("locationLabel") or j["locality"] + ", Abuja"))}
                 for i, j in enumerate(open_jobs, 1)
             ],
         },
