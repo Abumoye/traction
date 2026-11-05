@@ -42,7 +42,7 @@ sheet used by the other forms on the site. It powers:
   `apply-sports-product-manager`; entries are saved on their own tab named **Sports Product Manager**.
 - `/apply/paid-internship/` — the **Paid Internship Programme (real estate client)** application, 11 questions
   (Full Name, Gender, Age as at 31 October 2026, Phone, Email, LinkedIn URL (optional), Can you resume
-  immediately, Choose your location (Lagos (Ibeju Lekki) or Abuja), Year of graduation 2023 to 2026, University
+  immediately, Choose your location (Lagos (Ibeju - Lekki), Lagos (Epe) or Abuja), Year of graduation 2023 to 2026, University
   of graduation (searchable dropdown of Nigerian universities plus "Other", which shows a text box), CV upload
   as PDF). formType `apply-paid-internship`; entries are saved on
   their own tab named **Paid Internship**.
