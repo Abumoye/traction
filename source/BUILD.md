@@ -119,6 +119,14 @@ closed or expired roles are left out.
   (`SYNONYMS`), and the ranking weights are in `termScore`.
 - The hero box text is in `content/pages/home.json` under `hero.search`.
 
+## Application form extras (selects)
+
+On a `form` section's `select` field in a page JSON: `"searchable": true` (optional `"search_placeholder"`)
+turns the dropdown into a type-to-search list, and `"other": {"name": "...", "placeholder": "..."}` adds a
+text box that appears only when the visitor picks the option named "Other" (an "Other" option must be in
+`options`). Both are handled by `static/js/apply-fields.js`; the real `<select>` stays in the page, so the
+page's own form script reads the field exactly as before. Example: `content/pages/apply-paid-internship.json`.
+
 ## Careers page order
 
 The job cards on `/apply/` live in `content/pages/apply.json`. Their order in

@@ -40,10 +40,11 @@ sheet used by the other forms on the site. It powers:
   (Full Name, Gender, Age as at 31 October 2026, Phone, Email, Can you resume immediately, Do you currently live
   in Abuja, Experience in product management Yes/No, E-commerce experience Yes/No, CV upload as PDF). formType
   `apply-sports-product-manager`; entries are saved on their own tab named **Sports Product Manager**.
-- `/apply/paid-internship/` — the **Paid Internship Programme (Abuja, real estate client)** application, 10 questions
-  (Full Name, Gender, Age as at 31 October 2026, Phone, Email, Can you resume immediately, Do you currently live
-  in Abuja, Year of graduation 2023 to 2026, University of graduation (dropdown of Nigerian universities plus
-  "Other", which shows a text box), CV upload as PDF). formType `apply-paid-internship`; entries are saved on
+- `/apply/paid-internship/` — the **Paid Internship Programme (real estate client)** application, 11 questions
+  (Full Name, Gender, Age as at 31 October 2026, Phone, Email, LinkedIn URL (optional), Can you resume
+  immediately, Choose your location (Lagos (Ibeju Lekki) or Abuja), Year of graduation 2023 to 2026, University
+  of graduation (searchable dropdown of Nigerian universities plus "Other", which shows a text box), CV upload
+  as PDF). formType `apply-paid-internship`; entries are saved on
   their own tab named **Paid Internship**.
 
 Every submission is saved as a row in a Google Sheet, and the uploaded CV
@@ -703,7 +704,7 @@ var PI_ROLE = 'Paid Internship Programme';
 var PI_TAB = 'Paid Internship';
 var PI_HEADERS = [
   'Timestamp', 'Role', 'Full Name', 'Gender', 'Age (as at 31 Oct 2026)',
-  'Phone Number', 'Email', 'Can Resume Immediately', 'Lives in Abuja',
+  'Phone Number', 'Email', 'LinkedIn URL', 'Can Resume Immediately', 'Location',
   'Year of Graduation', 'University of Graduation', 'CV Link'
 ];
 
@@ -731,7 +732,9 @@ function handleApplyPaidInternship(data) {
   var phone = (data.phone || '').toString().replace(/\D/g, '');
   var email = (data.email || '').toString().trim();
   var resumeImmediately = (data.resumeImmediately || '').toString().trim();
-  var livesInAbuja = (data.livesInAbuja || '').toString().trim();
+  var linkedinUrl = (data.linkedinUrl || '').toString().trim().substring(0, 200);
+  if (/^[=+\-@]/.test(linkedinUrl)) linkedinUrl = "'" + linkedinUrl;  // never let a cell turn into a formula
+  var location = (data.location || '').toString().trim().substring(0, 60);
   var graduationYear = (data.graduationYear || '').toString().trim();
   var university = (data.university || '').toString().trim().substring(0, 150);
   var universityOther = (data.universityOther || '').toString().trim().substring(0, 120);
@@ -747,7 +750,7 @@ function handleApplyPaidInternship(data) {
     cvLink = 'Upload failed or not a PDF - contact applicant for CV';
   }
 
-  sheet.appendRow([new Date(), PI_ROLE, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, graduationYear, university, cvLink]);
+  sheet.appendRow([new Date(), PI_ROLE, fullName, gender, age, phone, email, linkedinUrl, resumeImmediately, location, graduationYear, university, cvLink]);
   var row = sheet.getLastRow();
   sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
 
