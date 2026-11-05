@@ -160,6 +160,13 @@
           "title": "Enter a valid email address"
         },
         {
+          "name": "linkedinUrl",
+          "placeholder": "LinkedIn URL (optional)",
+          "input_type": "text",
+          "required": false,
+          "title": "Paste the link to your LinkedIn profile, for example linkedin.com/in/yourname (optional)"
+        },
+        {
           "name": "resumeImmediately",
           "placeholder": "Can you resume immediately?",
           "input_type": "select",
@@ -170,13 +177,13 @@
           ]
         },
         {
-          "name": "livesInAbuja",
-          "placeholder": "Do you currently live in Abuja?",
+          "name": "applicantLocation",
+          "placeholder": "Choose your location",
           "input_type": "select",
           "required": true,
           "options": [
-            "Yes",
-            "No"
+            "Lagos (Ibeju Lekki)",
+            "Abuja"
           ]
         },
         {
@@ -456,7 +463,9 @@
             "name": "universityOther",
             "placeholder": "Type the name of your university",
             "maxlength": 120
-          }
+          },
+          "searchable": true,
+          "search_placeholder": "University of graduation (type to search)"
         },
         {
           "name": "cv",

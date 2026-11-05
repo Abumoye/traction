@@ -89,7 +89,8 @@ document.addEventListener('DOMContentLoaded', function () {
             phone: form.phone.value.trim(),
             email: form.email.value.trim(),
             resumeImmediately: form.resumeImmediately.value.trim(),
-            livesInAbuja: form.livesInAbuja.value.trim(),
+            linkedinUrl: form.linkedinUrl.value.trim(),
+            location: form.applicantLocation.value.trim(),
             graduationYear: form.graduationYear.value.trim(),
             university: form.university.value.trim(),
             universityOther: form.universityOther ? form.universityOther.value.trim() : ""
@@ -102,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (!(data.fullName && data.gender && data.age && data.phone && data.email
-              && data.resumeImmediately && data.livesInAbuja && data.graduationYear
+              && data.resumeImmediately && data.location && data.graduationYear
               && data.university && cvFile)) {
             setStatus("Please fill in every field and attach your CV before submitting.", true);
             return;
@@ -113,6 +114,14 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         if (data.university !== "Other") data.universityOther = "";
+
+        if (data.linkedinUrl) {
+            if (!/linkedin\.com\/[^\s]+/i.test(data.linkedinUrl) || /\s/.test(data.linkedinUrl)) {
+                setStatus("Please enter a valid LinkedIn profile link (for example linkedin.com/in/yourname), or leave it empty.", true);
+                return;
+            }
+            if (!/^https?:\/\//i.test(data.linkedinUrl)) data.linkedinUrl = "https://" + data.linkedinUrl;
+        }
 
         if (!new RegExp('^[0-9]{' + PI_PHONE_DIGITS + '}$').test(data.phone)) {
             setStatus("Phone number must be exactly 11 digits, numbers only (e.g. 08052033145).", true);
