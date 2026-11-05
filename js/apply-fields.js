@@ -172,6 +172,15 @@
                     if (it.value === trigger) return false;
                     return words.every(function (w) { return it.key.indexOf(w) !== -1; });
                 });
+                // Best matches first: names that start with what was typed, then names that
+                // contain it as one phrase, then names that just contain all the words.
+                var phrase = words.join(' ');
+                if (phrase) {
+                    var rank = function (it) { return it.key.indexOf(phrase) === 0 ? 0 : (it.key.indexOf(phrase) !== -1 ? 1 : 2); };
+                    shown = shown.map(function (it, i) { return { it: it, r: rank(it), i: i }; })
+                        .sort(function (a, b) { return a.r - b.r || a.i - b.i; })
+                        .map(function (x) { return x.it; });
+                }
                 var hasOther = items.some(function (it) { return it.value === trigger; });
                 list.innerHTML = '';
                 shown.forEach(function (it, i) { add(it.value, i); });
