@@ -182,7 +182,8 @@
           "input_type": "select",
           "required": true,
           "options": [
-            "Lagos (Ibeju Lekki)",
+            "Lagos (Ibeju - Lekki)",
+            "Lagos (Epe)",
             "Abuja"
           ]
         },
