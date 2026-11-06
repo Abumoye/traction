@@ -5,7 +5,7 @@
     "logo": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
   },
   "careersPage": "https://tolnigeria.com/apply/",
-  "lastUpdated": "2026-11-04",
+  "lastUpdated": "2026-11-06",
   "jobs": [
     {
       "id": "paid-internship",
@@ -322,6 +322,48 @@
         "Other statutory benefits."
       ],
       "industry": "Hospitality"
+    },
+    {
+      "id": "accountant",
+      "title": "Accountant",
+      "url": "https://tolnigeria.com/apply/accountant/",
+      "applyUrl": "https://tolnigeria.com/apply/accountant/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Gwarimpa",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-11-06",
+      "validThrough": "2026-11-26T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 400000,
+        "maxAmount": 600000,
+        "period": "MONTH",
+        "display": "₦400,000 - ₦600,000/month"
+      },
+      "description": "We are hiring an Accountant in Gwarimpa, Abuja. This is a full-time, onsite role for an experienced accountant with 5 to 8 years' experience.\nResponsibilities: Keep accurate books of account and prepare regular ledger and bank reconciliations. Prepare and file tax and other statutory returns on time. Prepare monthly financial reports for management.\nRequirements: B.Sc or HND in Accounting, Finance or a related field ICAN or ACCA (certified or part-qualified) 5 to 8 Years' Experience in Accounting Knowledge of Nigerian tax rules CV Required (PDF)\nBenefits: Professional development support. Performance bonus. Other statutory benefits.",
+      "responsibilities": [
+        "Keep accurate books of account and prepare regular ledger and bank reconciliations.",
+        "Prepare and file tax and other statutory returns on time.",
+        "Prepare monthly financial reports for management."
+      ],
+      "qualifications": [
+        "B.Sc or HND in Accounting, Finance or a related field",
+        "ICAN or ACCA (certified or part-qualified)",
+        "5 to 8 Years' Experience in Accounting",
+        "Knowledge of Nigerian tax rules",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Professional development support.",
+        "Performance bonus.",
+        "Other statutory benefits."
+      ],
+      "industry": "Accounting"
     },
     {
       "id": "chef",
