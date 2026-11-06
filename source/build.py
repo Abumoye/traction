@@ -427,6 +427,9 @@ def job_salary_text(job):
     if not s:
         return ""
     symbol = "\u20a6" if s.get("currency") == "NGN" else s.get("currency", "") + " "
+    # A salary range: "value" is the lowest figure and the optional "max" the highest.
+    if s.get("max"):
+        return f"{symbol}{s['value']:,} - {symbol}{s['max']:,}/{s['unit'].lower()}"
     return f"{symbol}{s['value']:,}/{s['unit'].lower()}"
 
 
@@ -511,7 +514,9 @@ def build_jobposting_schema(job):
         schema["baseSalary"] = {
             "@type": "MonetaryAmount",
             "currency": s["currency"],
-            "value": {"@type": "QuantitativeValue", "value": s["value"], "unitText": s["unit"]},
+            "value": ({"@type": "QuantitativeValue", "minValue": s["value"], "maxValue": s["max"], "unitText": s["unit"]}
+                      if s.get("max") else
+                      {"@type": "QuantitativeValue", "value": s["value"], "unitText": s["unit"]}),
         }
     if job.get("benefits"):
         schema["jobBenefits"] = " ".join(job["benefits"])
@@ -658,7 +663,7 @@ def write_job_feeds(open_jobs):
             "employmentType": j.get("employmentType"),
             "datePosted": j["datePosted"],
             "validThrough": j["validThrough"],
-            "salary": ({"currency": s["currency"], "amount": s["value"], "period": s["unit"], "display": job_salary_text(j)} if s else None),
+            "salary": ({"currency": s["currency"], "amount": s["value"], **({"maxAmount": s["max"]} if s.get("max") else {}), "period": s["unit"], "display": job_salary_text(j)} if s else None),
             "description": job_description_text(j),
             "responsibilities": j.get("responsibilities", []),
             "qualifications": j.get("qualifications", []),

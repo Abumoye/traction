@@ -153,6 +153,10 @@ function doPost(e) {
     return handleApplyPaidInternship(data);
   }
 
+  if (data.formType === 'apply-accountant') {
+    return handleApplyAccountant(data);
+  }
+
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'error', message: 'Unknown form type.' })
   ).setMimeType(ContentService.MimeType.JSON);
@@ -689,6 +693,69 @@ function handleApplySportsProductManager(data) {
   sheet.appendRow([new Date(), SPM_ROLE, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, productExperience, ecommerceExperience, cvLink]);
   var row = sheet.getLastRow();
   sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ===================== ACCOUNTANT (GWARIMPA, ABUJA) ===================== */
+
+// Own tab in this spreadsheet ("Accountant"), created automatically with its header row on the
+// first application. Yes/No answers and the years of experience (5, 6, 7, 8) are saved as sent.
+// Years are stored as text so Sheets never turns them into a date. CV is PDF only, saved in the
+// same Drive folder as the other CVs. (Older Accountant applications, sent before 6 Nov 2026 with
+// the old form, stay on the original applications tab.)
+var ACC_ROLE = 'Accountant';
+var ACC_HEADERS = [
+  'Timestamp', 'Role', 'Full Name', 'Gender', 'Age (as at 31 Oct 2026)',
+  'Phone Number', 'Email', 'Can Resume Immediately', 'Lives in Abuja',
+  'ICAN Certified', 'Total Years of Experience (post NYSC)', 'CV Link'
+];
+
+function getAccountantSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(ACC_ROLE);
+  if (!sheet) sheet = ss.insertSheet(ACC_ROLE);
+
+  var current = sheet.getLastColumn() > 0 ? sheet.getRange(1, 1, 1, ACC_HEADERS.length).getValues()[0] : [];
+  if (current.join('|') !== ACC_HEADERS.join('|')) {
+    sheet.getRange(1, 1, 1, ACC_HEADERS.length).setValues([ACC_HEADERS]).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+    // Phone column is plain text so the leading 0 (e.g. 08052033145) is kept.
+    sheet.getRange(2, 6, sheet.getMaxRows() - 1, 1).setNumberFormat('@');
+  }
+  return sheet;
+}
+
+function handleApplyAccountant(data) {
+  var sheet = getAccountantSheet();
+
+  var fullName = (data.fullName || '').toString().trim();
+  var gender = (data.gender || '').toString().trim();
+  var age = Number((data.age || '').toString().replace(/\D/g, '')) || '';
+  var phone = (data.phone || '').toString().replace(/\D/g, '');
+  var email = (data.email || '').toString().trim();
+  var resumeImmediately = (data.resumeImmediately || '').toString().trim();
+  var livesInAbuja = (data.livesInAbuja || '').toString().trim();
+  var icanCertified = (data.icanCertified || '').toString().trim();
+  var yearsExperience = (data.yearsExperience || '').toString().trim();
+
+  // CV: PDF only. Anything that is not a real PDF is not saved to Drive, and
+  // the row says so (the website already blocks these; this is the backstop).
+  var cvLink = '';
+  try {
+    cvLink = saveCvToDrive(data.cvBase64, data.cvFileName, 'application/pdf', fullName, true);
+  } catch (err) {
+    Logger.log('CV upload failed: ' + err);
+    cvLink = 'Upload failed or not a PDF - contact applicant for CV';
+  }
+
+  sheet.appendRow([new Date(), ACC_ROLE, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, icanCertified, yearsExperience, cvLink]);
+  var row = sheet.getLastRow();
+  sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
+  // Keep "5", "6"... as text so Sheets never turns the answer into a number or date.
+  sheet.getRange(row, 11).setNumberFormat('@').setValue(yearsExperience);
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success' })

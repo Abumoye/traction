@@ -9,9 +9,18 @@
       "locality": "Abuja",
       "region": "FCT",
       "locations": [
-        {"locality": "Ibeju-Lekki", "region": "Lagos"},
-        {"locality": "Epe", "region": "Lagos"},
-        {"locality": "Abuja", "region": "FCT"}
+        {
+          "locality": "Ibeju-Lekki",
+          "region": "Lagos"
+        },
+        {
+          "locality": "Epe",
+          "region": "Lagos"
+        },
+        {
+          "locality": "Abuja",
+          "region": "FCT"
+        }
       ],
       "locationLabel": "Lagos (Ibeju-Lekki/Epe) and Abuja",
       "datePosted": "2026-11-04",
@@ -360,16 +369,17 @@
       "url": "/apply/accountant/",
       "locality": "Gwarimpa",
       "region": "FCT",
-      "datePosted": "2026-10-11",
+      "datePosted": "2026-11-06",
       "employmentType": "FULL_TIME",
       "industry": "Accounting",
-      "experienceMonths": 48,
+      "experienceMonths": 60,
       "salary": {
-        "value": 350000,
+        "value": 400000,
+        "max": 600000,
         "currency": "NGN",
         "unit": "MONTH"
       },
-      "summary": "We are hiring an Accountant in Gwarimpa, Abuja. This is a full-time, onsite role for an experienced accountant.",
+      "summary": "We are hiring an Accountant in Gwarimpa, Abuja. This is a full-time, onsite role for an experienced accountant with 5 to 8 years' experience.",
       "responsibilities": [
         "Keep accurate books of account and prepare regular ledger and bank reconciliations.",
         "Prepare and file tax and other statutory returns on time.",
@@ -378,7 +388,7 @@
       "qualifications": [
         "B.Sc or HND in Accounting, Finance or a related field",
         "ICAN or ACCA (certified or part-qualified)",
-        "4 Years' Experience in Accounting",
+        "5 to 8 Years' Experience in Accounting",
         "Knowledge of Nigerian tax rules",
         "CV Required (PDF)"
       ],
