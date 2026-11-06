@@ -14,6 +14,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {%- if noindex %}
   <meta name="robots" content="noindex,nofollow">
+  {%- else %}
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   {%- endif %}
   <title>{{ meta.title }}</title>
   <link rel="canonical" href="https://tolnigeria.com{{ path }}">

@@ -5,8 +5,8 @@
     "url": "/articles/nigerian-bosses-are-bad-book-review/"
   },
   "meta": {
-    "title": "Nigerian Bosses Are Bad: A Book That Gets Under Your Skin, in a Good Way",
-    "description": "What readers are saying about Nigerian Bosses Are Bad, the free e-book by Prince Elijah Abumoye on why Nigerian bosses behave the way they do, and what it would take to change it.",
+    "title": "Nigerian Bosses Are Bad: Book Review and Reader Reactions",
+    "description": "What readers say about Nigerian Bosses Are Bad, the e-book by Prince Elijah Abumoye on why Nigerian bosses behave as they do and how that could change.",
     "image": "/images/og/og-article-nigerian-bosses-are-bad-book-review.jpg",
     "image_alt": "The book cover for Nigerian Bosses Are Bad by Prince Elijah Abumoye, displayed beside a Free to Read badge."
   },
@@ -95,18 +95,48 @@
   },
   "sidebar": {
     "services": [
-      {"title": "Business Advisory", "href": "/services/business-advisory/"},
-      {"title": "Corporate Restructuring", "href": "/services/corporate-restructuring/"},
-      {"title": "Corporate Trainings", "href": "/services/employee-training/"},
-      {"title": "Staff Outsourcing & Payroll", "href": "/services/staff-outsourcing/"},
-      {"title": "Startup Structuring", "href": "/services/startup-structuring/"}
+      {
+        "title": "Business Advisory",
+        "href": "/services/business-advisory/"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "href": "/services/corporate-restructuring/"
+      },
+      {
+        "title": "Corporate Trainings",
+        "href": "/services/employee-training/"
+      },
+      {
+        "title": "Staff Outsourcing & Payroll",
+        "href": "/services/staff-outsourcing/"
+      },
+      {
+        "title": "Startup Structuring",
+        "href": "/services/startup-structuring/"
+      }
     ],
     "insights": [
-      {"title": "When the CEO Is the Weak Link", "href": "/articles/when-the-ceo-is-the-weak-link/"},
-      {"title": "Accountability in Business Nigeria", "href": "/articles/accountability-in-business-nigeria/"},
-      {"title": "How to Build a Resilient Management Team in Nigeria", "href": "/articles/how-to-build-resilient-management-team-nigeria/"},
-      {"title": "MD vs CEO in Nigeria", "href": "/articles/md-vs-ceo-nigeria/"},
-      {"title": "Excellence or Perfection: Driving Your Team to Produce Results", "href": "/articles/excellence-vs-perfection-team-results/"}
+      {
+        "title": "When the CEO Is the Weak Link",
+        "href": "/articles/when-the-ceo-is-the-weak-link/"
+      },
+      {
+        "title": "Accountability in Business Nigeria",
+        "href": "/articles/accountability-in-business-nigeria/"
+      },
+      {
+        "title": "How to Build a Resilient Management Team in Nigeria",
+        "href": "/articles/how-to-build-resilient-management-team-nigeria/"
+      },
+      {
+        "title": "MD vs CEO in Nigeria",
+        "href": "/articles/md-vs-ceo-nigeria/"
+      },
+      {
+        "title": "Excellence or Perfection: Driving Your Team to Produce Results",
+        "href": "/articles/excellence-vs-perfection-team-results/"
+      }
     ]
   }
 }
