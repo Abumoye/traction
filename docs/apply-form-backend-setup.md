@@ -702,7 +702,7 @@ function handleApplySportsProductManager(data) {
 /* ===================== ACCOUNTANT (GWARIMPA, ABUJA) ===================== */
 
 // Own tab in this spreadsheet ("Accountant"), created automatically with its header row on the
-// first application. Yes/No answers and the years of experience (5, 6, 7, 8) are saved as sent.
+// first application. Yes/No answers and the years of experience (5 to 12) are saved as sent.
 // Years are stored as text so Sheets never turns them into a date. CV is PDF only, saved in the
 // same Drive folder as the other CVs. (Older Accountant applications, sent before 6 Nov 2026 with
 // the old form, stay on the original applications tab.)
