@@ -5,7 +5,7 @@
     "url": "/articles/can-you-afford-the-patience-your-business-needs-to-grow/"
   },
   "meta": {
-    "title": "Can You Afford The Patience Your Business Needs? | Traction Outsourcing",
+    "title": "Can You Afford the Patience Your Business Needs?",
     "description": "Most African small businesses close within five years. Here is why founders who can afford to wait survive, and how to build that patience yourself.",
     "image": "/images/og/og-article-can-you-afford-the-patience-your-business-needs-to-grow.jpg",
     "image_alt": "A Nigerian business owner reviewing accounts at a shop counter in Abuja in the early evening"
@@ -109,14 +109,38 @@
         "If you did not inherit any of the five cushions above, you can still build some of them before and during the life of your business."
       ],
       "list": [
-        { "b": "Separate the money.", "t": "Open a business account and never pay personal bills from it." },
-        { "b": "Pay yourself a fixed salary,", "t": "however small, and live on it." },
-        { "b": "Build a personal runway", "t": "of six to twelve months of living costs before leaving paid work." },
-        { "b": "Keep your job or another income", "t": "for as long as you can while you test the idea." },
-        { "b": "Start small.", "t": "Rent less, hire slowly and share space where possible." },
-        { "b": "Talk to your family early", "t": "about what the business can and cannot carry." },
-        { "b": "Build credit relationships before you need them,", "t": "with suppliers, cooperatives and your bank." },
-        { "b": "Plan for years, not months.", "t": "Budget as if profit will take three years to arrive." }
+        {
+          "b": "Separate the money.",
+          "t": "Open a business account and never pay personal bills from it."
+        },
+        {
+          "b": "Pay yourself a fixed salary,",
+          "t": "however small, and live on it."
+        },
+        {
+          "b": "Build a personal runway",
+          "t": "of six to twelve months of living costs before leaving paid work."
+        },
+        {
+          "b": "Keep your job or another income",
+          "t": "for as long as you can while you test the idea."
+        },
+        {
+          "b": "Start small.",
+          "t": "Rent less, hire slowly and share space where possible."
+        },
+        {
+          "b": "Talk to your family early",
+          "t": "about what the business can and cannot carry."
+        },
+        {
+          "b": "Build credit relationships before you need them,",
+          "t": "with suppliers, cooperatives and your bank."
+        },
+        {
+          "b": "Plan for years, not months.",
+          "t": "Budget as if profit will take three years to arrive."
+        }
       ]
     },
     {
