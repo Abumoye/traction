@@ -174,3 +174,6 @@ Per-item buttons: a grid card or a property-grid card can carry `"popup": "<what
 - **`sitemap.xml`** (repo root, hand-maintained): add the page, and set `<lastmod>` to the article's `byline.updated` if it has one, otherwise `byline.date`. Update the `/articles/` lastmod to the newest article date.
 - **`llms.txt`** (repo root, hand-maintained): add a line under `## Articles` (newest first) with the article title and its meta description. This is the list AI assistants read, so every article must be in it.
 - Articles already output Article, FAQPage and BreadcrumbList structured data from the article JSON (`faq.entries`, `byline`), so keep the FAQ questions written as real questions with direct answers.
+
+## Salary ranges on job pages
+In `jobs.json` a role can have a salary range: `"salary": {"value": 400000, "max": 600000, "currency": "NGN", "unit": "MONTH"}` (`value` is the lowest figure, `max` the highest). The Google JobPosting markup then uses minValue/maxValue, the feeds show both figures, and `job_salary_text()` prints "₦400,000 - ₦600,000/month". The text on the page and card (hero sentence, card `salary`) is typed by hand in the page JSON and `apply.json`.

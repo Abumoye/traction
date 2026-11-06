@@ -6,7 +6,7 @@
   },
   "meta": {
     "title": "Accountant Job, Gwarimpa, Abuja | Traction Outsourcing",
-    "description": "Accountant job in Gwarimpa, Abuja at ₦350,000/month. Full-time, 4 years' experience required. B.Sc or HND in Accounting, ICAN or ACCA. Apply online at Traction Outsourcing Limited.",
+    "description": "Accountant job in Gwarimpa, Abuja at ₦400,000 - ₦600,000/month. Full-time, 5 to 8 years' experience. Apply online at Traction Outsourcing Limited.",
     "image": "/images/jobs/accountant.jpg",
     "image_height": 630,
     "image_alt": "Smiling man in a navy suit and blue tie beside the Traction Outsourcing logo and an Apply Now button, for the Accountant job"
@@ -44,7 +44,7 @@
     },
     "eyebrow": "We Are Hiring",
     "headline": "Accountant",
-    "sub": "We are hiring an Accountant in Gwarimpa, Abuja. Full-time · ₦350,000/month."
+    "sub": "We are hiring an Accountant in Gwarimpa, Abuja. Full-time · ₦400,000 - ₦600,000/month."
   },
   "sections": [
     {
@@ -65,7 +65,7 @@
         },
         {
           "icon": "fa-calculator",
-          "title": "4 Years' Experience in Accounting",
+          "title": "5 to 8 Years' Experience in Accounting",
           "text": ""
         },
         {
@@ -92,7 +92,7 @@
           "items": [
             "B.Sc or HND in Accounting, Finance or a related field.",
             "ICAN or ACCA (certified or part-qualified).",
-            "4 years' experience in accounting, with working knowledge of Nigerian tax rules."
+            "5 to 8 years' experience in accounting, with working knowledge of Nigerian tax rules."
           ]
         },
         {
@@ -135,37 +135,69 @@
           ]
         },
         {
-          "name": "phone",
-          "placeholder": "Phone Number (with country code), e.g. +234 805 203 3145",
-          "input_type": "tel",
+          "name": "age",
+          "placeholder": "Age (as at 31 October 2026)",
+          "input_type": "number",
           "required": true,
-          "pattern": "^[0-9+\\s()-]{7,}$",
-          "title": "Enter a valid phone number"
+          "min": 16,
+          "max": 70,
+          "title": "Enter your age in years, as at 31 October 2026"
         },
         {
-          "name": "location",
-          "placeholder": "Location in Abuja (Area Council)",
+          "name": "phone",
+          "placeholder": "Phone Number (11 digits), e.g. 08052033145",
+          "input_type": "tel",
+          "digits": 11,
+          "required": true,
+          "title": "Enter your 11-digit phone number, numbers only (e.g. 08052033145)"
+        },
+        {
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true,
+          "title": "Enter a valid email address"
+        },
+        {
+          "name": "resumeImmediately",
+          "placeholder": "Can you resume immediately?",
           "input_type": "select",
           "required": true,
           "options": [
-            "Abaji",
-            "Abuja Municipal (AMAC)",
-            "Bwari",
-            "Gwagwalada",
-            "Kuje",
-            "Kwali"
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "livesInAbuja",
+          "placeholder": "Do you currently live in Abuja?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "icanCertified",
+          "placeholder": "Are you ICAN certified?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
           ]
         },
         {
           "name": "yearsExperience",
-          "placeholder": "Years of Accounting Experience",
+          "placeholder": "Total years of experience (post NYSC)",
           "input_type": "select",
           "required": true,
           "options": [
-            "4",
             "5",
             "6",
-            "7+"
+            "7",
+            "8"
           ]
         },
         {
@@ -181,6 +213,7 @@
   ],
   "scripts": [
     "/js/form-guard.js",
+    "/js/apply-fields.js",
     "/js/apply-accountant-form.js"
   ]
 }
