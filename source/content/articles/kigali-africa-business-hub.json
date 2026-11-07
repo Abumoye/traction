@@ -136,11 +136,12 @@
           "t": "A dedicated day with the Nigerian community in Kigali"
         }
       ],
-      "note": "Only 30 seats are available. Registration closes November 1, 2026.",
+      "note": "Ticket sales for T-ICR 2026 are now closed.",
       "buttons": [
         {
           "text": "Register for T-ICR 2026",
-          "href": "/services/events/kigali/register/"
+          "disabled": true,
+          "disabled_label": "Ticket Sales Closed"
         },
         {
           "text": "View Retreat Details",

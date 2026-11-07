@@ -609,6 +609,10 @@ def mark_event_cards(data):
         for e in entries:
             if e.get("ends") and today > date.fromisoformat(e["ends"]):
                 e["closed"] = True
+                # the event is over: drop any manual "closed_note"/"closed_stamp" so the
+                # standard "This event has ended" wording takes over
+                e.pop("closed_note", None)
+                e.pop("closed_stamp", None)
         sec["entries"] = [e for e in entries if not e.get("closed")] + [e for e in entries if e.get("closed")]
 
 

@@ -5,7 +5,9 @@ separate from the "Traction Outsourcing Leads" sheet used by the other
 forms on the site. It powers two pages:
 
 - `/services/events/kigali/register/` — 4-field registration form (Full Name, Phone,
-  Email, Referral Code).
+  Email, Referral Code). **Removed from the website on 2026-11-07 (ticket sales closed);
+  the page now returns 404. The Apps Script still accepts this form type if someone
+  posts to it directly.**
 - `/services/events/kigali/affiliate/` — affiliate sign-up form, which auto-assigns a code
   like `aff/tol/001/26`.
 

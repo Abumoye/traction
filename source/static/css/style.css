@@ -594,6 +594,7 @@ section.bg-ash .logo-chip { background: var(--white); }
 .job-card-inactive .job-card-location i { color: var(--ink-faint); }
 .btn-disabled { background: var(--ash-deep); color: var(--ink-faint); cursor: not-allowed; box-shadow: none; }
 .btn-disabled:hover { background: var(--ash-deep); transform: none; }
+.btn.btn-disabled { pointer-events: none; user-select: none; }
 
 /* ---------------- CTA band ---------------- */
 .cta-band {

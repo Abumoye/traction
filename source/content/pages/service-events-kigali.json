@@ -11,7 +11,7 @@
     "image_alt": "Light gray event graphic with headshot photos and names of six conference speakers, plus 'T-ICR 2026' retreat details for Kigali, Rwanda, Nov 22-30."
   },
   "hero": {
-    "eyebrow": "Register Now",
+    "eyebrow": "Ticket Sales Closed",
     "headline": "Traction Outsourcing International Corporate Retreat, Kigali 2026",
     "image": "/images/kigali-retreat-2026.jpg",
     "image_alt": "Kigali, Rwanda skyline — venue of the Traction Outsourcing International Corporate Retreat 2026",
@@ -128,8 +128,8 @@
           "name": "Early Bird Registration (NGN)",
           "price": "3550000",
           "priceCurrency": "NGN",
-          "url": "https://tolnigeria.com/services/events/kigali/register/",
-          "availability": "https://schema.org/InStock",
+          "url": "https://tolnigeria.com/services/events/kigali/",
+          "availability": "https://schema.org/SoldOut",
           "validFrom": "2026-06-01",
           "validThrough": "2026-08-31"
         },
@@ -138,8 +138,8 @@
           "name": "Early Bird Registration (USD)",
           "price": "2600",
           "priceCurrency": "USD",
-          "url": "https://tolnigeria.com/services/events/kigali/register/",
-          "availability": "https://schema.org/InStock",
+          "url": "https://tolnigeria.com/services/events/kigali/",
+          "availability": "https://schema.org/SoldOut",
           "validFrom": "2026-06-01",
           "validThrough": "2026-08-31"
         },
@@ -148,8 +148,8 @@
           "name": "Standard Registration (NGN)",
           "price": "5000000",
           "priceCurrency": "NGN",
-          "url": "https://tolnigeria.com/services/events/kigali/register/",
-          "availability": "https://schema.org/InStock",
+          "url": "https://tolnigeria.com/services/events/kigali/",
+          "availability": "https://schema.org/SoldOut",
           "validFrom": "2026-09-01",
           "validThrough": "2026-11-01"
         },
@@ -158,8 +158,8 @@
           "name": "Standard Registration (USD)",
           "price": "3665",
           "priceCurrency": "USD",
-          "url": "https://tolnigeria.com/services/events/kigali/register/",
-          "availability": "https://schema.org/InStock",
+          "url": "https://tolnigeria.com/services/events/kigali/",
+          "availability": "https://schema.org/SoldOut",
           "validFrom": "2026-09-01",
           "validThrough": "2026-11-01"
         }
@@ -178,12 +178,14 @@
         },
         {
           "label": "Register Now",
-          "href": "/services/events/kigali/register/",
+          "disabled": true,
+          "disabled_label": "Ticket Sales Closed",
           "style": "btn-primary"
         },
         {
           "label": "Sell Tickets & Earn Commission",
-          "href": "/services/events/kigali/affiliate/",
+          "disabled": true,
+          "disabled_label": "Affiliate Sign-Up Closed",
           "style": "btn-ghost"
         }
       ]
@@ -232,7 +234,7 @@
       "heading": "Prepare Your Business for 2027",
       "paragraphs": [
         "The Traction Outsourcing International Corporate Retreat is a premier yearly gathering crafted explicitly for CEOs, senior management executives, and ambitious entrepreneurs who take building institutional business structures seriously. This executive summit combines a leadership conference, business masterclass, and cross-border networking event into one immersive 9-day programme in Kigali, Rwanda. It is designed to step completely out of routine operational environments, bringing visionary leaders into close contact with billionaire mentors while exploring Africa's fastest-growing business hub.",
-        "Over the course of this highly immersive 2026 business event, you will participate in fireside chat sessions and masterclasses built to establish structural clarity, optimize workforce management strategies, and secure cross-border insights to solidify your enterprise layout ahead of the 2027 financial year. Registration for the T-ICR 2026 is open to business leaders from Nigeria and across Africa. Tickets are available until the event sells out."
+        "Over the course of this highly immersive 2026 business event, you will participate in fireside chat sessions and masterclasses built to establish structural clarity, optimize workforce management strategies, and secure cross-border insights to solidify your enterprise layout ahead of the 2027 financial year. The T-ICR 2026 was open to business leaders from Nigeria and across Africa. Ticket sales are now closed."
       ]
     },
     {
@@ -315,18 +317,19 @@
     },
     {
       "type": "cta",
-      "heading": "Register for the T-ICR 2026",
-      "text": "Secure your slot today. Registering as a group, or need corporate invoicing? Group discounts are available. Message our admissions desk directly on WhatsApp.",
+      "heading": "Ticket Sales Are Closed",
+      "text": "Ticket sales for the T-ICR 2026 are now closed. Thank you to everyone who registered.",
       "button": "Register Now",
-      "href": "/services/events/kigali/register/"
+      "disabled": true,
+      "disabled_label": "Ticket Sales Closed"
     },
     {
       "type": "cta",
-      "heading": "Inquire via WhatsApp",
-      "text": "Registering as a group, or need corporate invoicing? Group discounts are available. Message our admissions desk directly on WhatsApp.",
+      "heading": "Group Registration Is Closed",
+      "text": "Ticket sales for the T-ICR 2026 are closed, so group registrations and corporate invoicing are no longer being taken.",
       "button": "Inquire via WhatsApp",
-      "href": "https://wa.me/2347047082697?text=Hello%2C%20I%20am%20interested%20in%20the%20Kigali%20Corporate%20Retreat.",
-      "blank": true
+      "disabled": true,
+      "disabled_label": "Ticket Sales Closed"
     },
     {
       "type": "text",
@@ -367,25 +370,27 @@
     },
     {
       "type": "cta",
-      "heading": "Inquire About the Local Tier",
-      "text": "Local tier availability is limited. Contact us directly to confirm eligibility and secure your spot.",
+      "heading": "Local Tier Sales Are Closed",
+      "text": "Ticket sales for the T-ICR 2026, including the Local Tier, are now closed.",
       "button": "Inquire About the Local Tier on WhatsApp",
-      "href": "https://wa.me/2347047082697?text=Hello%2C%20I%20am%20interested%20in%20the%20Kigali%20Corporate%20Retreat.",
-      "blank": true
+      "disabled": true,
+      "disabled_label": "Ticket Sales Closed"
     },
     {
       "type": "cta",
-      "heading": "Get Your Ticket",
-      "text": "Purchase your T-ICR 2026 ticket directly. Seats close once the event sells out.",
+      "heading": "Tickets Are No Longer Available",
+      "text": "Tickets for the T-ICR 2026 are no longer on sale.",
       "button": "Register Now",
-      "href": "/services/events/kigali/register/"
+      "disabled": true,
+      "disabled_label": "Ticket Sales Closed"
     },
     {
       "type": "cta",
-      "heading": "Become a T-ICR 2026 Affiliate",
-      "text": "Earn by referring delegates to the retreat. Sign up as an affiliate and get your own unique referral code.",
+      "heading": "Affiliate Sign-Up Is Closed",
+      "text": "Ticket sales for the T-ICR 2026 have closed, so we are no longer taking new affiliates.",
       "button": "Become an Affiliate",
-      "href": "/services/events/kigali/affiliate/"
+      "disabled": true,
+      "disabled_label": "Affiliate Sign-Up Closed"
     },
     {
       "type": "raw-text",
@@ -394,7 +399,7 @@
         "Everything you need to know before attending the T-ICR 2026.",
         "Dates",
         "Retreat Dates: November 22nd - 30th, 2026, Kigali, Rwanda.",
-        "Registration Closes: November 1st, 2026, or as soon as the event sells out, whichever comes first.",
+        "Ticket sales are now closed.",
         "Dress Code",
         "Retreat Sessions: Corporate Casual.",
         "Social Networking Night: Nigerian Casual.",
@@ -415,7 +420,7 @@
       "heading": "Fireside Chat & Executive Mentorship Sessions",
       "paragraphs": [
         "The T-ICR 2026 includes a 5-day intensive fireside chat and business leadership masterclass with five of Africa's most accomplished business minds. These are not panel discussions. They are direct, room-based conversations where you can ask questions, present challenges, and get answers grounded in real business experience at scale.",
-        "Topics covered across the fireside sessions include business structuring, workforce strategy, cross-border expansion, investment readiness, and executive leadership. The 2026 panel features Dr. Stephen Akintayo, Eizu Uwaoma, Adeyinka Igbinoba, Oluwatosin Olaseinde, William Adelewa ESQ, and Prince Elijah Abumoye as host. Register now to secure your seat at this 2026 leadership conference."
+        "Topics covered across the fireside sessions include business structuring, workforce strategy, cross-border expansion, investment readiness, and executive leadership. The 2026 panel features Dr. Stephen Akintayo, Eizu Uwaoma, Adeyinka Igbinoba, Oluwatosin Olaseinde, William Adelewa ESQ, and Prince Elijah Abumoye as host."
       ]
     },
     {
@@ -465,7 +470,7 @@
       "type": "text",
       "bg": "ink",
       "heading": "Sponsor the T-ICR 2026",
-      "sub": "Put your brand in front of a curated group of Nigerian and African business leaders, CEOs, founders, and senior executives in Kigali, Rwanda. Three sponsorship tiers available.",
+      "sub": "Put your brand in front of a curated group of Nigerian and African business leaders, CEOs, founders, and senior executives in Kigali, Rwanda. Sponsorship for this edition is now closed.",
       "paragraphs": []
     },
     {
@@ -493,11 +498,11 @@
     },
     {
       "type": "cta",
-      "heading": "Enquire About Sponsorship",
-      "text": "Or email partner@tolnigeria.com",
+      "heading": "Sponsorship Enquiries Are Closed",
+      "text": "Sponsorship for the T-ICR 2026 is no longer open.",
       "button": "Enquire About Sponsorship",
-      "href": "https://wa.me/2347047082697?text=Hello%2C%20I%20want%20a%20sponsorship%20spot%20for%20the%20Kigali%20Corporate%20Retreat.",
-      "blank": true
+      "disabled": true,
+      "disabled_label": "Sponsorship Closed"
     },
     {
       "type": "faq",
@@ -517,7 +522,7 @@
         },
         {
           "q": "How do I register for the T-ICR 2026?",
-          "a": "Registration closes November 1, 2026. To secure your place, reach out via WhatsApp on 0704 708 2697 or email partner@tolnigeria.com. Seats are allocated on a first-come basis and close once the event is full."
+          "a": "Ticket sales for the T-ICR 2026 are now closed, and registration is no longer available. For any other question about the retreat, email partner@tolnigeria.com."
         }
       ]
     }
