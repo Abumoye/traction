@@ -205,7 +205,9 @@
           ],
           "image": "/images/events/kigali.jpg",
           "image_alt": "Kigali, Rwanda, venue of the T-ICR 2026 Traction Outsourcing International Corporate Retreat.",
-          "ends": "2026-11-30"
+          "ends": "2026-11-30",
+          "closed": true,
+          "closed_note": "Ticket sales are closed"
         },
         {
           "title": "Corporate Retreat Planning: Applications Open for December 2026 to January 2027",

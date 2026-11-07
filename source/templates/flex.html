@@ -10,7 +10,7 @@
     {% if hero.actions %}
     <div class="hero-actions">
       {% for a in hero.actions %}
-      {% if a.popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-lead-popup>{{ a.label }}</button>{% elif a.training_popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-training-form="{{ a.training_popup }}">{{ a.label }}</button>{% else %}<a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>{% endif %}
+      {% if a.disabled %}<span class="btn btn-disabled" aria-disabled="true">{{ a.disabled_label | default(a.label) }}</span>{% elif a.popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-lead-popup>{{ a.label }}</button>{% elif a.training_popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-training-form="{{ a.training_popup }}">{{ a.label }}</button>{% else %}<a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>{% endif %}
       {% endfor %}
     </div>
     {% endif %}
@@ -48,7 +48,7 @@
       {% if sec.actions %}
       <div class="hero-actions reveal" style="justify-content:center;margin-top:{{ '0' if not sec.paragraphs and not sec.sub and not sec.heading else '28px' }};">
         {% for a in sec.actions %}
-        {% if a.popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-lead-popup>{{ a.label }}</button>{% elif a.training_popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-training-form="{{ a.training_popup }}">{{ a.label }}</button>{% else %}<a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>{% endif %}
+        {% if a.disabled %}<span class="btn btn-disabled" aria-disabled="true">{{ a.disabled_label | default(a.label) }}</span>{% elif a.popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-lead-popup>{{ a.label }}</button>{% elif a.training_popup %}<button type="button" class="btn {{ a.style | default('btn-primary') }}" data-open-training-form="{{ a.training_popup }}">{{ a.label }}</button>{% else %}<a href="{{ a.href }}" class="btn {{ a.style | default('btn-primary') }}" {% if a.modal %}data-open-modal="{{ a.modal }}"{% endif %} {% if a.blank %}target="_blank" rel="noopener"{% endif %}>{{ a.label }}</a>{% endif %}
         {% endfor %}
       </div>
       {% endif %}
@@ -101,9 +101,9 @@
               <h3>{{ e.title }}</h3>
               <p>{{ e.text }}</p>
               {% if e.chips %}<div class="card-chips">{% for c in e.chips %}<span class="card-chip">{% if c.icon %}<i class="fas {{ c.icon }}" aria-hidden="true"></i>{% endif %}<span><b>{{ c.label }}</b> {{ c.value }}</span></span>{% endfor %}</div>{% endif %}
-              {% if e.closed %}<span class="event-closed-note">This event has ended</span>{% elif e.popup %}<a href="#request-consultation" class="link-arrow" data-open-lead-popup data-popup-subject="{{ e.popup if e.popup is string else '' }}">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% elif e.cta %}<a href="{{ e.href }}" class="link-arrow">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% endif %}
+              {% if e.closed %}<span class="event-closed-note">{{ e.closed_note | default('This event has ended') }}</span>{% elif e.popup %}<a href="#request-consultation" class="link-arrow" data-open-lead-popup data-popup-subject="{{ e.popup if e.popup is string else '' }}">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% elif e.cta %}<a href="{{ e.href }}" class="link-arrow">{{ e.cta }} <i class="fas fa-arrow-right"></i></a>{% endif %}
             </div>
-            {% if e.closed %}<span class="closed-stamp">CLOSED</span>{% endif %}
+            {% if e.closed %}<span class="closed-stamp">{{ e.closed_stamp | default('CLOSED') }}</span>{% endif %}
           </div>
           {% elif sec.style == 'stat' %}
           <div class="reveal" style="text-align:center;">
@@ -311,7 +311,7 @@
       <div class="cta-band reveal{{ ' cta-band-square' if sec.square else '' }}">
         <h2>{{ sec.heading }}</h2>
         {% if sec.text %}<p>{{ sec.text }}</p>{% endif %}
-        {% if sec.popup %}<button type="button" class="btn btn-primary" data-open-lead-popup>{{ sec.button }}</button>{% else %}<a href="{{ sec.href }}" class="btn btn-primary" {% if sec.modal %}data-open-modal="{{ sec.modal }}"{% endif %} {% if sec.blank %}target="_blank" rel="noopener"{% endif %}>{{ sec.button }}</a>{% endif %}
+        {% if sec.disabled %}<span class="btn btn-disabled" aria-disabled="true">{{ sec.disabled_label | default(sec.button) }}</span>{% elif sec.popup %}<button type="button" class="btn btn-primary" data-open-lead-popup>{{ sec.button }}</button>{% else %}<a href="{{ sec.href }}" class="btn btn-primary" {% if sec.modal %}data-open-modal="{{ sec.modal }}"{% endif %} {% if sec.blank %}target="_blank" rel="noopener"{% endif %}>{{ sec.button }}</a>{% endif %}
       </div>
 
     {% elif sec.type == 'faq' %}
@@ -526,7 +526,7 @@
   <div class="cta-band reveal">
     <h2>{{ final_cta.title }}</h2>
     <p>{{ final_cta.text }}</p>
-    {% if final_cta.popup %}<button type="button" class="btn btn-primary" data-open-lead-popup>{{ final_cta.button }}</button>{% elif final_cta.modal %}<button type="button" class="btn btn-primary" data-open-training-form="{{ final_cta.modal }}">{{ final_cta.button }}</button>{% else %}<a href="{{ final_cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ final_cta.button }}</a>{% endif %}
+    {% if final_cta.disabled %}<span class="btn btn-disabled" aria-disabled="true">{{ final_cta.disabled_label | default(final_cta.button) }}</span>{% elif final_cta.popup %}<button type="button" class="btn btn-primary" data-open-lead-popup>{{ final_cta.button }}</button>{% elif final_cta.modal %}<button type="button" class="btn btn-primary" data-open-training-form="{{ final_cta.modal }}">{{ final_cta.button }}</button>{% else %}<a href="{{ final_cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ final_cta.button }}</a>{% endif %}
   </div>
 </section>
 {% endif %}

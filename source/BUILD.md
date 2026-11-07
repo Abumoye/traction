@@ -91,8 +91,8 @@ same template, then re-run `python3 build.py`. No code changes needed.
   site has fairly extensive Organization/LocalBusiness/FAQPage/Article schema
   that helps with search rich results — this redesign doesn't carry it over
   yet. Worth adding back into `base.html`/`article.html` before shipping.
-- **Lead forms**: `static/js/lead-form.js`, `event-registration.js`, and
-  `event-affiliate.js` all post to the same Google Apps Script Web App
+- **Lead forms**: `static/js/lead-form.js` and `event-affiliate.js` (the
+  T-ICR `event-registration.js` was deleted with its page on 2026-11-07) post to the same Google Apps Script Web App
   (routed by a `formType` field — see `docs/lead-form-setup.md`). A past
   audit flagged that `mode: 'no-cors'` in these scripts means a failed
   submission still shows a success message — not fixed here, carried over
@@ -152,7 +152,27 @@ Each card can have:
   (for example "Coming Soon") never closes. Logic: `mark_event_cards` in `build.py`;
   styles: `.card-media`, `.is-closed`, `.closed-stamp` in `static/css/style.css`.
 
+- `"closed": true` (optional): closes a card by hand, for example when ticket sales stop
+  before the event date. Add `"closed_note": "Ticket sales are closed"` to replace the
+  default "This event has ended" line. Once the `ends` date passes, the note is dropped
+  and the standard wording takes over. Remove `"closed"` to reopen the card.
+
 To test a closed card locally: `BUILD_TODAY=2026-12-01 python3 build.py`.
+
+### Disabled buttons (closing registration on a page)
+
+Any button on a flex page can be switched off without removing it: add `"disabled": true`
+(and optionally `"disabled_label": "Ticket Sales Closed"`) to a hero or text-section
+action, a `cta` section, or the `final_cta`. The button then renders as a greyed,
+non-clickable `<span class="btn btn-disabled" aria-disabled="true">` with no link.
+Remove the two keys (and restore the `href`) to reopen it. Used on
+`service-events-kigali.json` when T-ICR 2026 ticket sales closed. Article callout
+buttons (`buttons` in a `callout` section) take the same two keys.
+
+The T-ICR registration page (`/services/events/kigali/register/`, content
+`service-events-kigali-register.json`, script `event-registration.js`) was deleted
+on 2026-11-07, so it now returns the site's 404 page. To bring it back, restore
+those two files from git history and the sitemap entry.
 
 ## Homepage "Latest Events & Insights"
 

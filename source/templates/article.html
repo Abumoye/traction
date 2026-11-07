@@ -92,7 +92,7 @@
               {% if sec.note %}<p class="callout-note">{{ sec.note }}</p>{% endif %}
               {% if sec.buttons %}
               <div class="callout-actions">
-                {% for b in sec.buttons %}<a href="{{ b.href }}" class="btn {{ 'btn-ghost' if b.style == 'ghost' else 'btn-primary' }}">{{ b.text }}</a>{% endfor %}
+                {% for b in sec.buttons %}{% if b.disabled %}<span class="btn btn-disabled" aria-disabled="true">{{ b.disabled_label | default(b.text) }}</span>{% else %}<a href="{{ b.href }}" class="btn {{ 'btn-ghost' if b.style == 'ghost' else 'btn-primary' }}">{{ b.text }}</a>{% endif %}{% endfor %}
               </div>
               {% endif %}
             </div>
