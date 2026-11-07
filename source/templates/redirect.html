@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ meta.title }}</title>
+  <meta name="description" content="{{ meta.description }}">
+  {# A page that has moved: browsers and Google follow the refresh to the new address. #}
+  <link rel="canonical" href="https://tolnigeria.com{{ redirect_to }}">
+  <meta http-equiv="refresh" content="0; url={{ redirect_to }}">
+  <script>window.location.replace({{ redirect_to | tojson }});</script>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body style="font-family:system-ui,sans-serif;text-align:center;padding:60px 20px;">
+  <p>This page has moved. <a href="{{ redirect_to }}">Continue to {{ redirect_label }}</a>.</p>
+</body>
+</html>

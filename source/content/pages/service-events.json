@@ -126,14 +126,13 @@
     "actions": [
       {
         "label": "Plan Your Retreat",
-        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20discuss%20planning%20a%20corporate%20retreat",
+        "popup": true,
         "style": "btn-primary"
       },
       {
-        "label": "Chat on WhatsApp",
-        "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20discuss%20planning%20a%20corporate%20retreat",
-        "style": "btn-secondary",
-        "blank": true
+        "label": "Speak With Our Team",
+        "popup": true,
+        "style": "btn-secondary"
       }
     ]
   },
@@ -273,7 +272,7 @@
       "type": "cta",
       "heading": "Tell us your team size, your goal, and your timeline.",
       "button": "Start Planning Your Retreat",
-      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20discuss%20planning%20a%20corporate%20retreat"
+      "popup": true
     },
     {
       "type": "logos",
@@ -360,6 +359,11 @@
     "title": "Ready to Plan Your Retreat?",
     "text": "Speak with our consulting team about how Events & Retreats can work for your business.",
     "button": "Start Planning Your Retreat",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+    "popup": true
+  },
+  "lead_popup": {
+    "title": "Plan Your Retreat",
+    "sub": "Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)",
+    "button": "Submit & Request Consultation"
   }
 }

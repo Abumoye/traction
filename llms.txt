@@ -14,7 +14,6 @@ Traction Outsourcing Limited helps Nigerian businesses fix structure, leadership
 - [Startup Structuring](https://tolnigeria.com/services/startup-structuring/): Helping early-stage companies set up sound business and HR structure.
 - [Employee Training](https://tolnigeria.com/services/employee-training/): Corporate training programs for teams and leadership.
 - [Corporate Retreats](https://tolnigeria.com/services/events/): Planning and execution of corporate retreats.
-- [Bank Outsourcing](https://tolnigeria.com/services/bank-outsourcing/): Outsourced staffing solutions for banks and financial institutions.
 
 ## Careers & Open Jobs
 - [Careers](https://tolnigeria.com/apply/): Current job openings at Traction Outsourcing Limited in Abuja. Machine-readable list: https://tolnigeria.com/jobs.json (JSON) and https://tolnigeria.com/jobs.xml (XML feed).

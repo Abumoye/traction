@@ -170,7 +170,7 @@
     "sub": "From setting up investor-ready startups to managing outsourced teams and corporate retreats, Traction Outsourcing Limited builds the operational frameworks your business needs to thrive in Nigeria.",
     "primary_cta": {
       "label": "Book a Free Clarity Call",
-      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+      "popup": true
     },
     "secondary_cta": {
       "label": "Explore Our Services",
@@ -245,7 +245,7 @@
     ],
     "cta": {
       "label": "Click here to get a free 30-minute Clarity Call. We will help you determine what your business needs",
-      "href": "https://wa.me/2348052033145"
+      "popup": true
     }
   },
   "difference": {
@@ -375,6 +375,12 @@
   "cta_section": {
     "title": "Ready to Stop Firefighting and Start Scaling Your Business?",
     "text": "Let us sit down and review your current team structure, compliance health, and operational bottlenecks.",
-    "button": "Submit & Schedule a Strategy Call"
+    "button": "Submit & Schedule a Strategy Call",
+    "popup": true
+  },
+  "lead_popup": {
+    "title": "Book a Free Clarity Call",
+    "sub": "Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)",
+    "button": "Submit & Request Consultation"
   }
 }

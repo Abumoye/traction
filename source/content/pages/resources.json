@@ -97,7 +97,7 @@
     "title": "Want to Work Directly With Our Team?",
     "text": "Book a free 30-minute clarity call to discuss what your business needs.",
     "button": "Book a Free Clarity Call",
-    "href": "https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call."
+    "popup": true
   },
   "schema": [
     {
@@ -148,5 +148,10 @@
         "url": "https://tolnigeria.com/"
       }
     }
-  ]
+  ],
+  "lead_popup": {
+    "title": "Book a Free Clarity Call",
+    "sub": "Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)",
+    "button": "Submit & Request Consultation"
+  }
 }
