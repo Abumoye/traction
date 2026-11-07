@@ -66,9 +66,8 @@
     {
       "type": "cta",
       "heading": "Get In Touch",
-      "button": "Reach Support on WhatsApp",
-      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%2024-hour%20client%20support%20programme",
-      "blank": true
+      "button": "Talk to Our Support Team",
+      "popup": true
     },
     {
       "type": "faq",
@@ -110,7 +109,11 @@
         "audienceType": "Multinationals and international businesses seeking a BPO, HR, recruitment, training, or business development partner firm in Nigeria"
       },
       "about": [
-        { "@type": "Organization", "name": "Traction Outsourcing Limited", "url": "https://tolnigeria.com/" }
+        {
+          "@type": "Organization",
+          "name": "Traction Outsourcing Limited",
+          "url": "https://tolnigeria.com/"
+        }
       ],
       "publisher": {
         "@type": "Organization",
@@ -126,5 +129,10 @@
         "name": "Traction Outsourcing Limited"
       }
     }
-  ]
+  ],
+  "lead_popup": {
+    "title": "Talk to Our Support Team",
+    "sub": "Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)",
+    "button": "Submit & Request Consultation"
+  }
 }

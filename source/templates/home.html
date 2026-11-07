@@ -7,7 +7,7 @@
     <h1>{{ hero.headline }}</h1>
     <p class="lede">{{ hero.sub }}</p>
     <div class="hero-actions">
-      <a href="{{ hero.primary_cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ hero.primary_cta.label }}</a>
+      {% if hero.primary_cta.popup %}<button type="button" class="btn btn-primary" data-open-lead-popup>{{ hero.primary_cta.label }}</button>{% else %}<a href="{{ hero.primary_cta.href }}" class="btn btn-primary" target="_blank" rel="noopener">{{ hero.primary_cta.label }}</a>{% endif %}
       <a href="{{ hero.secondary_cta.href }}" class="btn btn-ghost">{{ hero.secondary_cta.label }}</a>
     </div>
     {% if hero.search %}
@@ -47,7 +47,7 @@
       {% endfor %}
     </div>
     <div style="text-align:center;margin-top:50px;">
-      <a href="{{ why_us.cta.href }}" class="btn btn-primary reveal" target="_blank" rel="noopener">Get a Free Clarity Call</a>
+      {% if why_us.cta.popup %}<button type="button" class="btn btn-primary reveal" data-open-lead-popup>Get a Free Clarity Call</button>{% else %}<a href="{{ why_us.cta.href }}" class="btn btn-primary reveal" target="_blank" rel="noopener">Get a Free Clarity Call</a>{% endif %}
     </div>
   </div>
 </section>
@@ -142,9 +142,11 @@
   <div class="cta-band reveal">
     <h2>{{ cta_section.title }}</h2>
     <p>{{ cta_section.text }}</p>
-    <a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call." class="btn btn-primary" target="_blank" rel="noopener">{{ cta_section.button }}</a>
+    {% if cta_section.popup %}<button type="button" class="btn btn-primary" data-open-lead-popup>{{ cta_section.button }}</button>{% else %}<a href="https://wa.me/2348052033145?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%2030-minute%20strategy%20call." class="btn btn-primary" target="_blank" rel="noopener">{{ cta_section.button }}</a>{% endif %}
   </div>
 </section>
 
+{% include "_lead_popup.html" %}
+
 {% endblock %}
-{% block extra_scripts %}{% if hero.search %}<script src="/js/site-search.js"></script>{% endif %}{% endblock %}
+{% block extra_scripts %}{% if hero.search %}<script src="/js/site-search.js"></script>{% endif %}{% if lead_popup %}<script src="/js/form-guard.js"></script><script src="/js/lead-popup.js"></script>{% endif %}{% endblock %}

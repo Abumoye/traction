@@ -852,6 +852,8 @@ class _PageText(HTMLParser):
                 self.desc = a.get("content") or ""
             elif n == "robots" and "noindex" in (a.get("content") or "").lower():
                 self.noindex = True
+            elif (a.get("http-equiv") or "").lower() == "refresh":
+                self.noindex = True  # a moved page that redirects: not a search result
         elif tag == "main":
             self._in_main = True
         if tag in self.SKIP:

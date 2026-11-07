@@ -66,9 +66,8 @@
     {
       "type": "cta",
       "heading": "Get In Touch",
-      "button": "Ask About This Partnership on WhatsApp",
-      "href": "https://wa.me/2348052033145?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20Hallmark%20HMO%20partnership",
-      "blank": true
+      "button": "Ask About This Partnership",
+      "popup": true
     },
     {
       "type": "faq",
@@ -107,8 +106,15 @@
       "mainEntityOfPage": "https://tolnigeria.com/partnerships/hallmark-hmo/",
       "image": "https://tolnigeria.com/images/articles/hallmark-hmo.jpg",
       "about": [
-        { "@type": "Organization", "name": "Hallmark HMO" },
-        { "@type": "Organization", "name": "Traction Outsourcing Limited", "url": "https://tolnigeria.com/" }
+        {
+          "@type": "Organization",
+          "name": "Hallmark HMO"
+        },
+        {
+          "@type": "Organization",
+          "name": "Traction Outsourcing Limited",
+          "url": "https://tolnigeria.com/"
+        }
       ],
       "publisher": {
         "@type": "Organization",
@@ -124,5 +130,10 @@
         "name": "Traction Outsourcing Limited"
       }
     }
-  ]
+  ],
+  "lead_popup": {
+    "title": "Ask About This Partnership",
+    "sub": "Leave your details and someone from our team will reach out. (Get a FREE 30-minute consultation)",
+    "button": "Submit & Request Consultation"
+  }
 }

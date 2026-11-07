@@ -160,7 +160,7 @@ The section in `content/pages/home.json` (`insights`) is set to `"source": "late
 
 ## "Request A Free Consultation" pop-up (service pages)
 
-The service pages (Corporate Restructuring, Business Advisory, Startup Structuring, Bank Outsourcing) have no WhatsApp buttons. Their buttons open a pop-up lead form instead. It posts the same fields as the lead form (`sourcePage`, `name`, `phone`, `companyName`, `email`) to the same Google Apps Script, so enquiries land on the Leads tab and trigger the usual email. No Apps Script change is needed.
+The service pages (Corporate Restructuring, Business Advisory, Startup Structuring, and the main lead buttons on the homepage, Resources, Partnerships, Events and ATH Recruiters) have no WhatsApp buttons. Their buttons open a pop-up lead form instead. It posts the same fields as the lead form (`sourcePage`, `name`, `phone`, `companyName`, `email`) to the same Google Apps Script, so enquiries land on the Leads tab and trigger the usual email. No Apps Script change is needed.
 
 To use it on another `flex.html` page: add a `"lead_popup": {"title", "sub", "button"}` block to the page JSON, then put `"popup": true` on any hero action, section action, `cta` section or `final_cta` (and remove its `href`). The template adds the dialog and loads `/js/lead-popup.js` (plus `form-guard.js` if the page does not already load it). Script: `source/static/js/lead-popup.js`.
 
