@@ -55,8 +55,6 @@
   {% if not hide_nav %}
   {% if brand == 'properties' %}
     {% include "partials/nav-properties.html" %}
-  {% elif brand == 'recruiters' %}
-    {% include "partials/nav-recruiters.html" %}
   {% else %}
     {% include "partials/nav.html" %}
   {% endif %}
@@ -66,8 +64,6 @@
   </main>
   {% if brand == 'properties' %}
     {% include "partials/footer-properties.html" %}
-  {% elif brand == 'recruiters' %}
-    {% include "partials/footer-recruiters.html" %}
   {% else %}
     {% include "partials/footer.html" %}
   {% endif %}

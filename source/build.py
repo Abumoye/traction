@@ -820,7 +820,7 @@ SEARCH_KEYWORDS = {
     "/services/startup-structuring/": "startup start-up company registration cac structure organogram investor",
     "/services/corporate-restructuring/": "restructuring restructure turnaround reorganization organogram merger",
     "/services/business-advisory/": "advisory consulting consultant strategy business growth",
-    "/brands/recruiters/": "recruitment recruiting recruiter hire hiring talent staffing placement ath",
+    "/services/recruitment/": "recruitment recruiting recruiter hire hiring talent staffing placement ath recruiters abuja talent hub",
     "/brands/properties/": "real estate property properties land house houses rent buy sale estate",
 }
 

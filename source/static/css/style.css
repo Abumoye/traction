@@ -409,7 +409,7 @@ p { margin: 0 0 16px; color: var(--ink-soft); }
 .resource-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
 .resource-tags .tag-pill { margin-bottom: 0; }
 
-/* ---------------- Community join form (ATH Recruiters) ---------------- */
+/* ---------------- Community join form (Recruitment Services) ---------------- */
 .community-form-section { margin-bottom: 24px; }
 .community-form-section:hover { transform: none; box-shadow: none; border-color: var(--hairline); }
 .community-form-heading { font-size: 21px; margin: 0 0 22px; color: var(--ink); }
@@ -786,9 +786,9 @@ footer.site-footer { background: var(--ash); padding: 80px 0 30px; margin-top: 6
 @media (max-width: 640px) { .article-callout, .contact-card { padding: 22px; } .stat-card strong { font-size: 24px; } }
 
 /* ==========================================================================
-   Sub-brand pages — ATH Recruiters & Traction Properties
+   Sub-brand pages — Traction Properties
    Distinct branding/navigation from the main Traction Outsourcing site.
-   Scoped entirely to body.brand-properties / body.brand-recruiters, so the
+   Scoped entirely to body.brand-properties, so the
    rest of the site is completely unaffected. Overriding the --orange
    custom property re-tints every button, badge, icon and hover state that
    already uses it across the shared Apple-glass design system — no need to
@@ -799,12 +799,6 @@ body.brand-properties {
   --orange-dark: #12224f;
   --orange-soft: #e8ebf6;
   --orange-glow: rgba(26, 47, 110, 0.25);
-}
-body.brand-recruiters {
-  --orange: #5b2d8e;
-  --orange-dark: #432069;
-  --orange-soft: #efe6f7;
-  --orange-glow: rgba(91, 45, 142, 0.25);
 }
 
 /* "Back to parent brand" chip in the sub-brand nav bars */
@@ -826,12 +820,9 @@ body.brand-recruiters {
 }
 
 /* Sub-brand footers: same layout as the main footer, re-tinted headings/links */
-.site-footer.brand-properties .footer-grid h4,
-.site-footer.brand-recruiters .footer-grid h4 { color: var(--orange); }
-.site-footer.brand-properties .footer-grid a:hover,
-.site-footer.brand-recruiters .footer-grid a:hover { color: var(--orange); }
-.site-footer.brand-properties .footer-bottom a,
-.site-footer.brand-recruiters .footer-bottom a { color: var(--orange); font-weight: 600; }
+.site-footer.brand-properties .footer-grid h4 { color: var(--orange); }
+.site-footer.brand-properties .footer-grid a:hover { color: var(--orange); }
+.site-footer.brand-properties .footer-bottom a { color: var(--orange); font-weight: 600; }
 
 /* =========================================================
    Hidden project pages (/project/szh/, /project/szh/hrtraining/)
