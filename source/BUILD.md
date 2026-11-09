@@ -188,6 +188,16 @@ To use it on another `flex.html` page: add a `"lead_popup": {"title", "sub", "bu
 
 Per-item buttons: a grid card or a property-grid card can carry `"popup": "<what it is about>"` instead of an `href`. The button then opens the same pop-up, shows "Enquiring about: <text>", and appends " | <text>" to `sourcePage` so the Leads sheet and the email say which property, plot or plan the enquiry was for. A hero action can use `"training_popup": "specialized"` to open the Employee Training specialized-request form. Used on: Employee Training, Traction Properties (hub, For Rent, Houses For Sale, Estate Lands) and ATH Recruiters. The site footer still has its WhatsApp link.
 
+## Service page extras (service.html: optional, for SEO and AI answers)
+
+A service page JSON (for example `service-staff-outsourcing.json`) can carry, beside the usual keys:
+
+- `"summary"`: one short, quotable paragraph shown in a highlighted box above the intro. Write it as a direct answer (what the service is, who it is for, where). AI assistants and Google snippets quote this kind of text.
+- FAQ entries may add `"link": {"href": "/x/", "label": "Read: ..."}`, shown as a link after the answer (the FAQPage structured data keeps only the plain question and answer).
+- `"related": {"title": "...", "entries": [{"title", "text", "href", "cta"}]}`: a grid of internal links to related services and articles at the end of the page.
+
+Pages that do not use these keys render exactly as before.
+
 ## SEO and AI-search checklist (every new article or page)
 - **Meta title** at most about 65 characters and **meta description** at most about 160, so Google does not cut them off. These are the `meta.title` and `meta.description` fields only; the page heading can be longer.
 - **Robots:** `base.html` puts `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1` on every page that is not marked `noindex`, so search engines may show large image previews and full snippets. `robots.txt` already allows all crawlers, including AI crawlers.

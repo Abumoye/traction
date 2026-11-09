@@ -1172,3 +1172,6 @@ a.insight-card .body > .tag-pill { align-self: flex-start; }
 .search-select-list li.is-active, .search-select-list li:hover { background: var(--ash); }
 .search-select-list li[aria-selected="true"] { font-weight: 600; }
 .search-select-list li.search-select-empty { cursor: default; color: var(--ink-faint); background: none; }
+
+/* ---------------- Answer box (short, quotable summary at the top of a service page) ---------------- */
+.answer-box { font-size: 18px; font-weight: 500; line-height: 1.6; border-left: 4px solid var(--orange); background: var(--ash, #f5f4f2); padding: 18px 22px; border-radius: 0 14px 14px 0; }
