@@ -193,6 +193,7 @@ Per-item buttons: a grid card or a property-grid card can carry `"popup": "<what
 A service page JSON (for example `service-staff-outsourcing.json`) can carry, beside the usual keys:
 
 - `"summary"`: one short, quotable paragraph shown in a highlighted box above the intro. Write it as a direct answer (what the service is, who it is for, where). AI assistants and Google snippets quote this kind of text.
+- `"intro_wide": true`: lets the intro paragraphs run the full width of the page container instead of the default narrow 820px reading column. Leave it out to keep the narrow column.
 - FAQ entries may add `"link": {"href": "/x/", "label": "Read: ..."}`, shown as a link after the answer (the FAQPage structured data keeps only the plain question and answer).
 - `"related": {"title": "...", "entries": [{"title", "text", "href", "cta"}]}`: a grid of internal links to related services and articles at the end of the page.
 

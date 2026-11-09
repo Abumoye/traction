@@ -582,7 +582,6 @@
       }
     }
   ],
-  "summary": "Staff outsourcing with Traction Outsourcing Limited means we recruit, vet, place and manage your staff, run payroll and statutory remittances (PAYE, pension, NHF, ITF and NSITF), and handle HR administration, while the staff keep working inside your business. We are an HR and management consulting firm based in Abuja, serving businesses across Nigeria in real estate, hospitality, retail, banking, mining, agriculture, technology and more.",
   "related": {
     "title": "Related Services and Reading",
     "entries": [
@@ -621,5 +620,6 @@
         "href": "/articles/why-nigerian-businesses-outsourcing-hr/"
       }
     ]
-  }
+  },
+  "intro_wide": true
 }
