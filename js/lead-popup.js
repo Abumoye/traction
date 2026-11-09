@@ -2,7 +2,7 @@
    Traction Outsourcing Limited — "Request A Free Consultation" pop-up form
    Used on the service pages whose JSON has a "lead_popup" block
    (Corporate Restructuring, Business Advisory, Startup Structuring,
-   home, events, partnerships, ATH Recruiters). Any button marked data-open-lead-popup opens it.
+   home, events, partnerships, Recruitment Services). Any button marked data-open-lead-popup opens it.
 
    Submits to the SAME Google Apps Script Web App and with the SAME fields
    as the lead form (see /js/lead-form.js), so every enquiry lands on the
