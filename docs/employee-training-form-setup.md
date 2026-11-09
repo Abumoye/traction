@@ -8,7 +8,7 @@ Page: `/services/employee-training/` (source: `source/content/pages/service-empl
 - **Register** opens a small form (Full Name, Phone, Company, Email) with the course already filled in.
 - **Request A Specialized Training** (bottom band) opens the same form with an extra "What training do you need?" box.
 
-Both go to the same Google Apps Script Web App as the lead form on the ATH Recruiters page (`LEAD_FORM_SCRIPT_URL`, also set at the top of `source/static/js/training-courses.js`; if that URL ever changes, change it in **both** `lead-form.js` and `training-courses.js`).
+Both go to the same Google Apps Script Web App as the lead form on the Recruitment Services page (`LEAD_FORM_SCRIPT_URL`, also set at the top of `source/static/js/training-courses.js`; if that URL ever changes, change it in **both** `lead-form.js` and `training-courses.js`).
 
 ## Where the entries go
 

@@ -8,7 +8,7 @@
      "What training do you need?" box.
 
    Submits to the SAME Google Apps Script Web App as the lead form on the
-   ATH Recruiters page (see /js/lead-form.js). The payload carries
+   Recruitment Services page (see /js/lead-form.js). The payload carries
    formType "employee-training"; the script files it on its own
    "Employee Training" tab. The course name is also appended to sourcePage so
    it is never lost, even on the older script that only knows the lead form.

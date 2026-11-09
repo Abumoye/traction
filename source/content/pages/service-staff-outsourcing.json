@@ -290,8 +290,8 @@
         "q": "What is the difference between staff outsourcing and recruitment?",
         "a": "Recruitment ends once a candidate is placed and the client takes over as employer. Staff outsourcing continues after placement. Traction Outsourcing remains responsible for payroll, compliance, HR administration, and ongoing management of that staff member for as long as the arrangement runs.",
         "link": {
-          "href": "/brands/recruiters/",
-          "label": "See our recruitment brand, ATH Recruiters."
+          "href": "/services/recruitment/",
+          "label": "See our recruitment services."
         }
       },
       {
@@ -452,7 +452,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Staff Recruitment and Placement",
-              "description": "Recruitment and placement of verified candidates, sourced and screened through ATH Recruiters, across all industries including mining, construction, hospitality, FMCG, agriculture, real estate, logistics, technology, banking, consulting and professional services, and government ministries."
+              "description": "Recruitment and placement of verified candidates, sourced and screened by our recruitment team, across all industries including mining, construction, hospitality, FMCG, agriculture, real estate, logistics, technology, banking, consulting and professional services, and government ministries."
             }
           },
           {
@@ -589,8 +589,8 @@
       {
         "title": "Recruitment Services",
         "text": "360 degree recruitment and staffing services with a wide range of products for every type of business.",
-        "href": "/brands/recruiters/",
-        "cta": "Visit ATH Recruiters"
+        "href": "/services/recruitment/",
+        "cta": "Explore Recruitment Services"
       },
       {
         "title": "Business Advisory",

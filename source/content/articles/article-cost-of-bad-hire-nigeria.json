@@ -99,7 +99,7 @@
     {
       "type": "text",
       "paragraphs": [
-        "This is exactly what <a href=\"/brands/recruiters/\">ATH Recruiters</a>, a brand of Traction Outsourcing Limited, is built to do. Our structured vetting process screens candidates against the role before they reach your interview, not after. We handle sourcing, screening, and verification so the shortlist you receive has already been tested against your requirements, not just their own CV.",
+        "This is exactly what <a href=\"/services/recruitment/\">Traction Outsourcing Recruitment Services</a> is built to do. Our structured vetting process screens candidates against the role before they reach your interview, not after. We handle sourcing, screening, and verification so the shortlist you receive has already been tested against your requirements, not just their own CV.",
         "For businesses that need more than recruitment, our <a href=\"/services/staff-outsourcing/\">Staff Outsourcing and HR Management</a> service covers the full employment lifecycle, from onboarding through performance management, so the hire that passes the recruitment process is also set up to succeed in the role. And if the pattern of bad hires is a symptom of a deeper organisational problem, such as vague roles, unclear reporting lines, or no performance management structure, our <a href=\"/services/business-advisory/\">Business Advisory</a> service addresses the root cause.",
         "<strong>Further Reading:</strong> <a href=\"/articles/best-recruitment-agency-nigeria/\">How to Find the Best Recruitment Agency in Nigeria</a>, <a href=\"/articles/recruit-staff-nigeria-48-hours/\">Recruit Staff in Nigeria in 48 Hours from ₦30,000</a>, <a href=\"/articles/accountability-in-business-nigeria/\">Accountability in Business Nigeria</a>, <a href=\"/articles/why-nigerian-businesses-train-staff/\">Why Nigerian Businesses Train Their Staff</a>."
       ]
@@ -130,8 +130,8 @@
   "sidebar": {
     "services": [
       {
-        "title": "ATH Recruiters",
-        "href": "/brands/recruiters/"
+        "title": "Recruitment Services",
+        "href": "/services/recruitment/"
       },
       {
         "title": "Staff Outsourcing & HR Management",
