@@ -50,7 +50,7 @@
         "Abuja Talent Hub (former name)"
       ],
       "sameAs": [
-        "https://maps.app.goo.gl/wRXnUb2ABAwSTNpT8"
+        "https://maps.app.goo.gl/QL5L5SRUmGRFSi5c7"
       ],
       "description": "Traction Outsourcing Recruitment Services is an affordable recruitment agency in Nigeria connecting small businesses and private individuals with verified, ready-to-work staff, including graduate recruitment and mass hiring.",
       "url": "https://tolnigeria.com/services/recruitment/",
@@ -143,8 +143,8 @@
       "id": "about",
       "heading": "What Is Traction Outsourcing Recruitment Services?",
       "paragraphs": [
-        "Traction Outsourcing Recruitment Services is the recruitment service of Traction Outsourcing Limited and one of the recruitment agencies in Abuja serving businesses across Nigeria. We were built to solve one specific problem: getting Nigerian businesses and homes the right person, fast, and affordably. We maintain a verified community of ready-to-work candidates, from entry-level graduates to experienced professionals, so that when you need staff, you are not starting from zero, you are choosing from people who are already screened and available.",
-        "<a href=\"https://maps.app.goo.gl/wRXnUb2ABAwSTNpT8\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-google\"></i> Find &amp; Review Us on Google</a>"
+        "Traction Outsourcing Recruitment Services serves businesses across Nigeria. We are built to solve one specific problem: getting Nigerian businesses and homes the right person, fast, and affordably. We maintain a verified community of ready-to-work candidates, from entry-level graduates to experienced professionals, so that when you need staff, you are not starting from zero, you are choosing from people who are already screened and available.",
+        "<a href=\"https://maps.app.goo.gl/QL5L5SRUmGRFSi5c7\" target=\"_blank\" rel=\"noopener\"><i class=\"fab fa-google\"></i> Find &amp; Review Us on Google</a>"
       ]
     },
     {
@@ -152,7 +152,7 @@
       "bg": "ash",
       "heading": "Who We Work With",
       "sub": "We are built for the businesses and households that need staff without the overhead of a full HR department.",
-      "columns": 2,
+      "columns": 3,
       "entries": [
         {
           "icon": "fa-store",
@@ -163,6 +163,11 @@
           "icon": "fa-house-user",
           "title": "Private Individuals & Homes",
           "text": "As a domestic staff recruitment agency in Abuja and across Nigeria, we place housekeepers, cooks, drivers, and personal staff that families and individuals can trust."
+        },
+        {
+          "icon": "fa-building",
+          "title": "Large Corporations",
+          "text": "Established companies that need high-volume or specialist hiring handled quickly, from entry-level roles to senior appointments, without stretching their internal HR team."
         }
       ]
     },
