@@ -5,14 +5,14 @@
     "url": "/services/staff-outsourcing/"
   },
   "meta": {
-    "title": "HR & Workforce Outsourcing | Recruitment, Payroll & HR Management | Traction Outsourcing Limited",
-    "description": "Traction Outsourcing Limited provides full staff outsourcing and workforce outsourcing services for businesses across Nigeria, including recruitment, payroll management, and HR for real estate, construction, mining, hospitality, FMCG, agriculture, technology, and banking.",
+    "title": "Staff Outsourcing in Nigeria | Traction Outsourcing",
+    "description": "Outsource recruitment, payroll, PAYE and pension compliance and HR administration to Traction Outsourcing, an Abuja HR firm serving businesses across Nigeria.",
     "image": "/images/og/og-staff-outsourcing.jpg",
     "image_alt": "Traction Outsourcing Limited logo with the bold text Workforce Outsourcing on a white background."
   },
   "hero": {
-    "eyebrow": "Staff Outsourcing & HR Management",
-    "headline": "HR & Workforce Outsourcing",
+    "eyebrow": "HR & Workforce Outsourcing",
+    "headline": "Staff Outsourcing & HR Management in Nigeria",
     "sub": "We manage the people side of your business, from sourcing and payroll to compliance and HR administration, so you can focus on running the business, not the paperwork.",
     "cta": {
       "label": "Request a Free Consultation",
@@ -29,8 +29,8 @@
     "entries": [
       {
         "icon": "fa-user-plus",
-        "title": "Staff Sourcing & Placement",
-        "text": "We source, screen, and place staff matched to the role through ATH Recruiters, drawing from a pre-vetted community of candidates ready to work."
+        "title": "Staff Recruitment and Placement",
+        "text": "We source, screen, and place staff matched to the role using our bespoke recruitment solutions that draw from a pre-vetted community of candidates ready to work."
       },
       {
         "icon": "fa-wallet",
@@ -202,43 +202,55 @@
   },
   "industries": {
     "title": "Industries We Support",
-    "sub": "We source and manage staff for businesses across every major sector in Nigeria. Whether you need recruitment for a mining company, an agricultural operation, a hotel, a bank, or a technology firm, our candidate community and vetting process are built to match.",
+    "sub": "We source and manage staff for businesses across every major sector in Nigeria. Whether you need recruitment for a mining company, an agricultural operation, a hotel, a bank, a consulting firm, a government ministry, or a technology firm, our candidate community and vetting process are built to match.",
     "entries": [
       {
         "title": "Real Estate & Construction",
-        "text": "Property management, site, and administrative staff"
+        "text": "Property management, sales managers, administrative staff, and others"
       },
       {
         "title": "Hospitality & Food Service",
-        "text": "Front-of-house, kitchen, and guest-facing roles"
+        "text": "Front-of-house, kitchen, guest-facing roles, and others"
       },
       {
         "title": "Retail & Consumer Goods",
-        "text": "Sales floor, stock, and customer-facing positions"
+        "text": "Sales floor, stock, customer-facing positions, and others"
       },
       {
         "title": "Automotive Services",
-        "text": "Front desk, technical support, and operational staff"
+        "text": "Front desk, technical support, operational staff, and others"
       },
       {
         "title": "Financial Services",
-        "text": "Loan officers, back-office, and client support roles"
+        "text": "Loan officers, back-office, client support roles, and others"
       },
       {
         "title": "Engineering & Technical Firms",
-        "text": "Field, project, and technical support staff"
+        "text": "Field, project, technical support staff, and others"
       },
       {
         "title": "Mining & Minerals",
-        "text": "Site operations, logistics, compliance, and administrative support staff for mining and extractive industry businesses"
+        "text": "Site operations, logistics, compliance, administrative support staff for mining and extractive industry businesses, and others"
       },
       {
         "title": "Agriculture",
-        "text": "Farm operations, agribusiness administration, supply chain coordination, and field support roles"
+        "text": "Farm operations, agribusiness administration, supply chain coordination, field support roles, and others"
       },
       {
         "title": "Technology",
-        "text": "Administrative, operations, customer success, and support staff for technology companies and digital businesses"
+        "text": "Administrative, operations, customer success, support staff for technology companies and digital businesses, and others"
+      },
+      {
+        "title": "Banks",
+        "text": "Cashiers, Relationship Officers, Marketers, and others"
+      },
+      {
+        "title": "Consulting and Professional Services",
+        "text": "Associates, Partners, Marketing Officers, and others"
+      },
+      {
+        "title": "Government Ministries",
+        "text": "Recruitment boards, Internship talent management programmes, and others"
       }
     ]
   },
@@ -251,7 +263,7 @@
       },
       {
         "title": "One Partner, Not Five Vendors",
-        "text": "Sourcing through ATH Recruiters, structuring through our business advisory team, and staff outsourcing all sit under one roof."
+        "text": "Sourcing using our bespoke recruitment methods, structuring through our business advisory team, and staff outsourcing all sit under one roof."
       },
       {
         "title": "24/7 Virtual Client Support",
@@ -268,19 +280,67 @@
     "entries": [
       {
         "q": "What is staff outsourcing?",
-        "a": "Staff outsourcing is when a business hands over the sourcing, payroll, compliance, and day-to-day management of a set of employees to a specialist firm, while those staff continue working within the client's business. It removes the administrative and legal weight of employment without removing the workforce itself."
+        "a": "Staff outsourcing is when a business hands over the sourcing, payroll, compliance, and day-to-day management of a set of employees to a specialist firm, while those staff continue working within the client's business. It removes the administrative and legal weight of employment without removing the workforce itself.",
+        "link": {
+          "href": "/articles/what-is-hr-outsourcing/",
+          "label": "Read: What Is HR Outsourcing?"
+        }
       },
       {
         "q": "What is the difference between staff outsourcing and recruitment?",
-        "a": "Recruitment ends once a candidate is placed and the client takes over as employer. Staff outsourcing continues after placement. Traction Outsourcing remains responsible for payroll, compliance, HR administration, and ongoing management of that staff member for as long as the arrangement runs."
+        "a": "Recruitment ends once a candidate is placed and the client takes over as employer. Staff outsourcing continues after placement. Traction Outsourcing remains responsible for payroll, compliance, HR administration, and ongoing management of that staff member for as long as the arrangement runs.",
+        "link": {
+          "href": "/brands/recruiters/",
+          "label": "See our recruitment brand, ATH Recruiters."
+        }
       },
       {
         "q": "Does Traction Outsourcing handle payroll and pension remittance?",
-        "a": "Yes. Payroll administration, including PAYE, pension, and NHF remittances, is a core part of the staff outsourcing service, run to Nigerian statutory requirements."
+        "a": "Yes. Payroll administration, including PAYE, pension, NHF, ITF, and NSITF remittances, is a core part of the staff outsourcing service, run to Nigerian statutory requirements."
       },
       {
         "q": "Can Traction Outsourcing manage staff outside Abuja?",
-        "a": "Yes. Traction Outsourcing manages outsourced staff for businesses across Nigeria, not only in Abuja. Payroll, compliance, and HR administration are handled remotely and consistently regardless of where the staff are based."
+        "a": "Yes. Traction Outsourcing manages outsourced staff for businesses across Nigeria, not only in Abuja, and recruits and places staff in all 36 states and the FCT. Payroll, compliance, and HR administration are handled remotely and consistently regardless of where the staff are based."
+      },
+      {
+        "q": "How does Traction Outsourcing vet staff before placement?",
+        "a": "Every outsourced staff member goes through pre-employment training, a skills-based evaluation specific to the role, and a pre-employment IQ test. Background checks covering identity, history, and references and a compulsory medical check follow for confirmed staff, and we manage the full onboarding before the person starts work.",
+        "link": {
+          "href": "/articles/what-does-staff-outsourcing-include-nigeria/",
+          "label": "Read: What Does Staff Outsourcing Actually Include?"
+        }
+      },
+      {
+        "q": "What happens if a placed staff member does not work out?",
+        "a": "Traction Outsourcing provides a replacement. The terms apply by staff cadre, so ask our team for the terms that match the role you need."
+      },
+      {
+        "q": "Which industries does Traction Outsourcing provide outsourced staff for?",
+        "a": "We support real estate and construction, hospitality and food service, retail and consumer goods, automotive services, financial services, engineering and technical firms, mining and minerals, agriculture, technology, banks, consulting and professional services, and government ministries, among others."
+      },
+      {
+        "q": "What types of roles can I outsource?",
+        "a": "Roles include front desk and customer service, administrative and back office, sales and business development, facility and property support, hospitality staff, drivers and logistics support, and finance and accounts support. We also place graduate interns, SIWES interns, NYSC corps members, and senior interns."
+      },
+      {
+        "q": "How does the staff outsourcing process work?",
+        "a": "It runs in three stages. We diagnose your staffing gaps and what the business actually needs, design the role and the staffing plan, then deploy: we place the staff, run payroll and compliance from day one, and stay responsible for management and performance for as long as the arrangement runs."
+      },
+      {
+        "q": "How is outsourced staff managed after placement?",
+        "a": "Our team stays responsible for payroll, compliance, attendance and performance oversight, and HR administration. We also hold quarterly check-ins, both physical and virtual, with outsourced staff and run bi-annual group training sessions customised for each client."
+      },
+      {
+        "q": "How much does staff outsourcing cost in Nigeria?",
+        "a": "The cost depends on the number of staff, the roles, and the services included, such as payroll, HR administration, and training. Traction Outsourcing prepares a quote after a free 30-minute consultation."
+      },
+      {
+        "q": "How do I get started with staff outsourcing?",
+        "a": "Use the Request A Free Consultation form on this page, or book a call, and someone from our team will reach out to understand your staffing needs before proposing a plan.",
+        "link": {
+          "href": "/book-a-call/",
+          "label": "Book a call."
+        }
       }
     ]
   },
@@ -353,8 +413,8 @@
         "Staff Outsourcing & Workforce Outsourcing Nigeria"
       ],
       "serviceType": "HR and Workforce Outsourcing",
-      "description": "Full-cycle staff outsourcing and HR management for businesses across Nigeria. Services include staff sourcing and placement, payroll administration and statutory compliance, employee lifecycle management, HR policy and compliance, performance and attendance oversight, and HR advisory and structural support. Every placement includes pre-employment training, skills-based evaluation, IQ testing, background checks, compulsory medical checks, and full onboarding, followed by quarterly corporate check-ins, bi-annual group training, and immediate staff replacement where needed. Available nationwide across all 36 states and the FCT for real estate, construction, mining, hospitality, FMCG, agriculture, technology, and banking businesses.",
-      "keywords": "staff outsourcing Nigeria, HR outsourcing Nigeria, outsourcing company Abuja, payroll outsourcing Nigeria, recruitment mining Nigeria, construction staff outsourcing, hospitality staff outsourcing, FMCG outsourcing Nigeria, agriculture recruitment Nigeria, banking outsourcing Nigeria, real estate staff outsourcing, logistics outsourcing Nigeria, technology staff outsourcing Nigeria, workforce outsourcing Nigeria, workforce management Nigeria",
+      "description": "Full-cycle staff outsourcing and HR management for businesses across Nigeria. Services include staff recruitment and placement, payroll administration and statutory compliance, employee lifecycle management, HR policy and compliance, performance and attendance oversight, and HR advisory and structural support. Every placement includes pre-employment training, skills-based evaluation, IQ testing, background checks, compulsory medical checks, and full onboarding, followed by quarterly corporate check-ins, bi-annual group training, and immediate staff replacement where needed. Available nationwide across all 36 states and the FCT for real estate, construction, mining, hospitality, FMCG, agriculture, technology, and banking businesses.",
+      "keywords": "staff outsourcing Nigeria, HR outsourcing Nigeria, outsourcing company Abuja, payroll outsourcing Nigeria, recruitment mining Nigeria, construction staff outsourcing, hospitality staff outsourcing, FMCG outsourcing Nigeria, agriculture recruitment Nigeria, banking outsourcing Nigeria, real estate staff outsourcing, logistics outsourcing Nigeria, technology staff outsourcing Nigeria, workforce outsourcing Nigeria, workforce management Nigeria, bank staff outsourcing Nigeria, government ministry recruitment Nigeria, consulting firm staff outsourcing, payroll PAYE pension outsourcing Abuja, SIWES and NYSC placement Nigeria",
       "provider": {
         "@type": "Organization",
         "name": "Traction Outsourcing Limited",
@@ -427,8 +487,8 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Staff Sourcing and Placement",
-              "description": "Recruitment and placement of verified candidates, sourced and screened through ATH Recruiters, across all industries including mining, construction, hospitality, FMCG, agriculture, real estate, logistics, technology, and banking."
+              "name": "Staff Recruitment and Placement",
+              "description": "Recruitment and placement of verified candidates, sourced and screened through ATH Recruiters, across all industries including mining, construction, hospitality, FMCG, agriculture, real estate, logistics, technology, banking, consulting and professional services, and government ministries."
             }
           },
           {
@@ -536,7 +596,66 @@
             }
           }
         ]
+      },
+      "@id": "https://tolnigeria.com/services/staff-outsourcing/#service"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://tolnigeria.com/services/staff-outsourcing/#webpage",
+      "url": "https://tolnigeria.com/services/staff-outsourcing/",
+      "name": "Staff Outsourcing in Nigeria | Traction Outsourcing",
+      "description": "Outsource recruitment, payroll, PAYE and pension compliance and HR administration to Traction Outsourcing, an Abuja HR firm serving businesses across Nigeria.",
+      "inLanguage": "en-NG",
+      "dateModified": "2026-11-09",
+      "mainEntity": {
+        "@id": "https://tolnigeria.com/services/staff-outsourcing/#service"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Traction Outsourcing Limited",
+        "url": "https://tolnigeria.com/"
       }
     }
-  ]
+  ],
+  "summary": "Staff outsourcing with Traction Outsourcing Limited means we recruit, vet, place and manage your staff, run payroll and statutory remittances (PAYE, pension, NHF, ITF and NSITF), and handle HR administration, while the staff keep working inside your business. We are an HR and management consulting firm based in Abuja, serving businesses across Nigeria in real estate, hospitality, retail, banking, mining, agriculture, technology and more.",
+  "related": {
+    "title": "Related Services and Reading",
+    "entries": [
+      {
+        "title": "ATH Recruiters",
+        "text": "Our recruitment and staffing brand, for hiring staff directly.",
+        "href": "/brands/recruiters/",
+        "cta": "Visit ATH Recruiters"
+      },
+      {
+        "title": "Business Advisory",
+        "text": "Structure and strategy support for growing businesses.",
+        "href": "/services/business-advisory/",
+        "cta": "See the service"
+      },
+      {
+        "title": "Corporate Restructuring",
+        "text": "Redesign your organisational structure and manage the transition.",
+        "href": "/services/corporate-restructuring/",
+        "cta": "See the service"
+      },
+      {
+        "title": "Employee Training",
+        "text": "Training courses for your team and leaders.",
+        "href": "/services/employee-training/",
+        "cta": "See the courses"
+      },
+      {
+        "title": "What Does Staff Outsourcing Actually Include?",
+        "text": "What the service really covers, from vetting to statutory deductions.",
+        "href": "/articles/what-does-staff-outsourcing-include-nigeria/"
+      },
+      {
+        "title": "Why Nigerian Businesses Are Outsourcing HR",
+        "text": "The reasons more businesses are handing HR work to specialists.",
+        "href": "/articles/why-nigerian-businesses-outsourcing-hr/"
+      }
+    ]
+  }
 }
