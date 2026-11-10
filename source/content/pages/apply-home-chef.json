@@ -1,0 +1,236 @@
+{
+  "_route": {
+    "template": "flex.html",
+    "output": "apply/home-chef/index.html",
+    "url": "/apply/home-chef/"
+  },
+  "meta": {
+    "title": "Home Chef Job, Wuye, Abuja | Traction Outsourcing",
+    "description": "Home chef job in Wuye, Abuja at ₦250,000/month with accommodation and weekly days off. Culinary school certificate required. Apply online.",
+    "image": "/images/jobs/home-chef.jpg",
+    "image_height": 630,
+    "image_alt": "Chef in a light blue shirt chopping vegetables in a bright home kitchen beside the Traction Outsourcing logo and an Apply Now button, for the Home Chef job"
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tolnigeria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Careers",
+          "item": "https://tolnigeria.com/apply/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Home Chef",
+          "item": "https://tolnigeria.com/apply/home-chef/"
+        }
+      ]
+    }
+  ],
+  "hero": {
+    "back": {
+      "href": "/apply/",
+      "label": "Back to Careers"
+    },
+    "eyebrow": "We Are Hiring",
+    "headline": "Home Chef",
+    "sub": "We are hiring a Home Chef for a household in Wuye, Abuja. Full-time · ₦250,000/month."
+  },
+  "sections": [
+    {
+      "type": "grid",
+      "tight": true,
+      "columns": 4,
+      "style": "icon-list",
+      "entries": [
+        {
+          "icon": "fa-map-marker-alt",
+          "title": "Wuye, Abuja, FCT",
+          "text": ""
+        },
+        {
+          "icon": "fa-briefcase",
+          "title": "Full-Time Role",
+          "text": ""
+        },
+        {
+          "icon": "fa-user-clock",
+          "title": "2+ Years' Experience",
+          "text": ""
+        },
+        {
+          "icon": "fa-home",
+          "title": "Private Home",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "bullet-columns",
+      "tight": true,
+      "lists": [
+        {
+          "heading": "Job Description",
+          "items": [
+            "Plan and cook daily meals for the household to a consistently high standard.",
+            "Prepare dishes to suit the household's tastes and any dietary needs.",
+            "Plan weekly menus and portions, and suggest new dishes.",
+            "Keep the kitchen clean and follow food safety and hygiene standards.",
+            "Monitor kitchen stock, buy or request groceries and keep waste low."
+          ]
+        },
+        {
+          "heading": "Requirements",
+          "items": [
+            "Certificate from a culinary school (required).",
+            "At least 2 years' experience as a chef.",
+            "Good communication skills.",
+            "Presentable.",
+            "Comfortable handling the role with little to no supervision.",
+            "Able to work in Wuye, Abuja and resume immediately."
+          ]
+        },
+        {
+          "heading": "Benefits",
+          "items": [
+            "Accommodation.",
+            "Weekly days off."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "form",
+      "id": "apply-form",
+      "tight": true,
+      "heading": "Application Form",
+      "sub": "Please fill in every field. Your CV must be uploaded as a PDF file.",
+      "notice": "DO NOT APPLY MORE THAN ONCE. DOUBLE APPLICATIONS WILL BE DISQUALIFIED",
+      "form_id": "applyForm",
+      "form_max_width": "720px",
+      "button": "Submit Application",
+      "success_message": "Thank you for your application. We will reach out to qualified candidates.",
+      "fields": [
+        {
+          "name": "fullName",
+          "placeholder": "Full Name",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2
+        },
+        {
+          "name": "gender",
+          "placeholder": "Gender",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Male",
+            "Female"
+          ]
+        },
+        {
+          "name": "age",
+          "placeholder": "Age (as at 31 October 2026)",
+          "input_type": "number",
+          "required": true,
+          "min": 16,
+          "max": 70,
+          "title": "Enter your age in years, as at 31 October 2026"
+        },
+        {
+          "name": "phone",
+          "placeholder": "Phone Number (11 digits), e.g. 08052033145",
+          "input_type": "tel",
+          "digits": 11,
+          "required": true,
+          "title": "Enter your 11-digit phone number, numbers only (e.g. 08052033145)"
+        },
+        {
+          "name": "email",
+          "placeholder": "Email Address",
+          "input_type": "email",
+          "required": true,
+          "title": "Enter a valid email address"
+        },
+        {
+          "name": "resumeImmediately",
+          "placeholder": "Can you resume immediately?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "livesInAbuja",
+          "placeholder": "Do you currently live in Abuja?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "yearsExperience",
+          "placeholder": "How many years of experience do you have?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ]
+        },
+        {
+          "name": "culinaryCertificate",
+          "placeholder": "Do you have a culinary school certificate?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "instagramHandle",
+          "placeholder": "Instagram page handle, e.g. @yourchefpage",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2,
+          "title": "Enter your Instagram page handle, for example @yourchefpage. Type NONE if you do not have one."
+        },
+        {
+          "name": "cv",
+          "placeholder": "Upload Your CV",
+          "input_type": "file",
+          "accept": ".pdf,application/pdf",
+          "required": true,
+          "help": "PDF only, max 5MB."
+        }
+      ]
+    }
+  ],
+  "scripts": [
+    "/js/form-guard.js",
+    "/js/apply-fields.js",
+    "/js/apply-home-chef-form.js"
+  ]
+}

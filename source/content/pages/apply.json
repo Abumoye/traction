@@ -70,6 +70,16 @@
           "image_alt": "Smiling chef in a white jacket holding a ladle and spatula beside the Traction Outsourcing logo and an Apply Now button, for the Chef job"
         },
         {
+          "title": "Home Chef",
+          "location": "Wuye, Abuja",
+          "salary": "₦250,000/month",
+          "href": "/apply/home-chef/",
+          "active": true,
+          "icon": "fa-utensils",
+          "image": "/images/jobs/home-chef.jpg",
+          "image_alt": "Chef in a light blue shirt chopping vegetables in a bright home kitchen beside the Traction Outsourcing logo and an Apply Now button, for the Home Chef job"
+        },
+        {
           "title": "Sous Chef",
           "location": "Maitama, Abuja",
           "salary": "₦550,000/month",

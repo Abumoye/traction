@@ -46,6 +46,11 @@ sheet used by the other forms on the site. It powers:
   of graduation (searchable dropdown of Nigerian universities plus "Other", which shows a text box), CV upload
   as PDF). formType `apply-paid-internship`; entries are saved on
   their own tab named **Paid Internship**.
+- `/apply/home-chef/` — the **Home Chef (Wuye, Abuja)** application, 11 questions (Full Name, Gender, Age as at
+  31 October 2026, Phone, Email, Can you resume immediately, Do you currently live in Abuja, Years of experience
+  2 to 10, Do you have a culinary school certificate Yes/No, Instagram page handle, CV upload as PDF). formType
+  `apply-home-chef`; entries are saved on their own tab named **Home Chef**. The Instagram handle is saved as
+  `@name` (or `None` if the candidate has no page).
 
 Every submission is saved as a row in a Google Sheet, and the uploaded CV
 is saved as a PDF file in a dedicated Google Drive folder, with a link to
@@ -155,6 +160,10 @@ function doPost(e) {
 
   if (data.formType === 'apply-accountant') {
     return handleApplyAccountant(data);
+  }
+
+  if (data.formType === 'apply-home-chef') {
+    return handleApplyHomeChef(data);
   }
 
   return ContentService.createTextOutput(
@@ -756,6 +765,72 @@ function handleApplyAccountant(data) {
   sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
   // Keep "5", "6"... as text so Sheets never turns the answer into a number or date.
   sheet.getRange(row, 11).setNumberFormat('@').setValue(yearsExperience);
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ status: 'success' })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ===================== HOME CHEF (WUYE, ABUJA) ===================== */
+
+// Own tab in this spreadsheet ("Home Chef"), created automatically with its header row on the
+// first application. Yes/No answers and the years of experience (2 to 10) are saved as sent.
+// Years are stored as text so Sheets never turns them into a date. The Instagram handle arrives
+// from the website already cleaned up as "@name" (or "None"). CV is PDF only, saved in the same
+// Drive folder as the other CVs.
+var HC_ROLE = 'Home Chef';
+var HC_HEADERS = [
+  'Timestamp', 'Role', 'Full Name', 'Gender', 'Age (as at 31 Oct 2026)',
+  'Phone Number', 'Email', 'Can Resume Immediately', 'Lives in Abuja',
+  'Years of Experience', 'Culinary School Certificate', 'Instagram Handle', 'CV Link'
+];
+
+function getHomeChefSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(HC_ROLE);
+  if (!sheet) sheet = ss.insertSheet(HC_ROLE);
+
+  var current = sheet.getLastColumn() > 0 ? sheet.getRange(1, 1, 1, HC_HEADERS.length).getValues()[0] : [];
+  if (current.join('|') !== HC_HEADERS.join('|')) {
+    sheet.getRange(1, 1, 1, HC_HEADERS.length).setValues([HC_HEADERS]).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+    // Phone column is plain text so the leading 0 (e.g. 08052033145) is kept.
+    sheet.getRange(2, 6, sheet.getMaxRows() - 1, 1).setNumberFormat('@');
+  }
+  return sheet;
+}
+
+function handleApplyHomeChef(data) {
+  var sheet = getHomeChefSheet();
+
+  var fullName = (data.fullName || '').toString().trim();
+  var gender = (data.gender || '').toString().trim();
+  var age = Number((data.age || '').toString().replace(/\D/g, '')) || '';
+  var phone = (data.phone || '').toString().replace(/\D/g, '');
+  var email = (data.email || '').toString().trim();
+  var resumeImmediately = (data.resumeImmediately || '').toString().trim();
+  var livesInAbuja = (data.livesInAbuja || '').toString().trim();
+  var yearsExperience = (data.yearsExperience || '').toString().trim();
+  var culinaryCertificate = (data.culinaryCertificate || '').toString().trim();
+  var instagramHandle = (data.instagramHandle || '').toString().trim();
+
+  // CV: PDF only. Anything that is not a real PDF is not saved to Drive, and
+  // the row says so (the website already blocks these; this is the backstop).
+  var cvLink = '';
+  try {
+    cvLink = saveCvToDrive(data.cvBase64, data.cvFileName, 'application/pdf', fullName, true);
+  } catch (err) {
+    Logger.log('CV upload failed: ' + err);
+    cvLink = 'Upload failed or not a PDF - contact applicant for CV';
+  }
+
+  sheet.appendRow([new Date(), HC_ROLE, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, yearsExperience, culinaryCertificate, instagramHandle, cvLink]);
+  var row = sheet.getLastRow();
+  sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
+  // Keep "2", "3"... as text so Sheets never turns the answer into a number or date, and
+  // keep the handle as text so "@name" is never read as a formula.
+  sheet.getRange(row, 10).setNumberFormat('@').setValue(yearsExperience);
+  sheet.getRange(row, 12).setNumberFormat('@').setValue(instagramHandle);
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success' })
