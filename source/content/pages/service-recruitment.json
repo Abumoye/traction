@@ -429,10 +429,9 @@
     {
       "type": "cta",
       "id": "jobs",
-      "heading": "Need A Job in Nigeria? Join Our Community Now.",
-      "button": "Join Our Job Community",
-      "href": "https://bit.ly/athjobs",
-      "blank": true
+      "heading": "Need A Job in Nigeria? Click to Apply Now",
+      "button": "Go to Careers Page",
+      "href": "/apply/"
     },
     {
       "type": "faq",
