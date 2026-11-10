@@ -5,8 +5,51 @@
     "logo": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
   },
   "careersPage": "https://tolnigeria.com/apply/",
-  "lastUpdated": "2026-11-06",
+  "lastUpdated": "2026-11-10",
   "jobs": [
+    {
+      "id": "home-chef",
+      "title": "Home Chef",
+      "url": "https://tolnigeria.com/apply/home-chef/",
+      "applyUrl": "https://tolnigeria.com/apply/home-chef/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Wuye",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-11-10",
+      "validThrough": "2026-11-30T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 250000,
+        "period": "MONTH",
+        "display": "₦250,000/month"
+      },
+      "description": "We are hiring a Home Chef for a household in Wuye, Abuja. This is a full-time, onsite role with accommodation and weekly days off.\nResponsibilities: Plan and cook daily meals for the household to a consistently high standard. Prepare dishes to suit the household's tastes and any dietary needs. Plan weekly menus and portions, and suggest new dishes. Keep the kitchen clean and follow food safety and hygiene standards. Monitor kitchen stock, buy or request groceries and keep waste low.\nRequirements: Certificate from a culinary school At least 2 years' experience as a chef Good communication skills Presentable and able to work with little to no supervision Able to work in Wuye, Abuja and resume immediately CV Required (PDF)\nBenefits: Accommodation. Weekly days off.",
+      "responsibilities": [
+        "Plan and cook daily meals for the household to a consistently high standard.",
+        "Prepare dishes to suit the household's tastes and any dietary needs.",
+        "Plan weekly menus and portions, and suggest new dishes.",
+        "Keep the kitchen clean and follow food safety and hygiene standards.",
+        "Monitor kitchen stock, buy or request groceries and keep waste low."
+      ],
+      "qualifications": [
+        "Certificate from a culinary school",
+        "At least 2 years' experience as a chef",
+        "Good communication skills",
+        "Presentable and able to work with little to no supervision",
+        "Able to work in Wuye, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Accommodation.",
+        "Weekly days off."
+      ],
+      "industry": "Hospitality"
+    },
     {
       "id": "paid-internship",
       "title": "Paid Internship Programme",
