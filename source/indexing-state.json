@@ -2,15 +2,11 @@
   "_comment": "What Google was last told for each job page. Written by scripts/notify_google_indexing.py; do not edit by hand.",
   "urls": {
     "https://tolnigeria.com/apply/accountant/": "9770f9f0bc0c005b",
-    "https://tolnigeria.com/apply/chef/": "e5d33b1521bf9401",
     "https://tolnigeria.com/apply/customer-service/": "9f37a9c049f64332",
     "https://tolnigeria.com/apply/home-chef/": "1d9451432dc9dc2a",
     "https://tolnigeria.com/apply/operations-manager/": "f012e45da0bc5b74",
     "https://tolnigeria.com/apply/paid-internship/": "ca487a14c0fd68eb",
-    "https://tolnigeria.com/apply/pastry-chef-assistant/": "fa1a4d3f8097f02f",
     "https://tolnigeria.com/apply/salon-manager/": "8c7889a79ed03850",
-    "https://tolnigeria.com/apply/social-media-manager/": "327a5a60ffc6e89b",
-    "https://tolnigeria.com/apply/sous-chef/": "55d392d0ecf7eaf3",
     "https://tolnigeria.com/apply/sports-product-manager/": "4bf35f4bc607aacd"
   }
 }
