@@ -1,5 +1,5 @@
 /* =========================================================
-   Traction Outsourcing Limited — Home Chef (Wuye, Abuja) Application Form
+   Traction Outsourcing Limited — Home Chef (Wuye and Wuse 2, Abuja) Application Form
    Used on /apply/home-chef/.
    Needs /js/apply-fields.js loaded first (digits-only phone + PDF check).
 
@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
             email: form.email.value.trim(),
             resumeImmediately: form.resumeImmediately.value.trim(),
             livesInAbuja: form.livesInAbuja.value.trim(),
+            workLocation: form.workLocation.value.trim(), // "Wuye" or "Wuse 2"
             yearsExperience: form.yearsExperience.value.trim(),
             culinaryCertificate: form.culinaryCertificate.value.trim(),
             instagramHandle: cleanInstagram(form.instagramHandle.value)
@@ -113,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (!(data.fullName && data.gender && data.age && data.phone && data.email
-              && data.resumeImmediately && data.livesInAbuja && data.yearsExperience
+              && data.resumeImmediately && data.livesInAbuja && data.workLocation && data.yearsExperience
               && data.culinaryCertificate && data.instagramHandle && cvFile)) {
             setStatus("Please fill in every field and attach your CV before submitting.", true);
             return;
