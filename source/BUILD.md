@@ -212,3 +212,12 @@ In `jobs.json` a role can have a salary range: `"salary": {"value": 400000, "max
 ## Recruitment Services (formerly ATH Recruiters)
 
 The ATH Recruiters / Abuja Talent Hub brand was retired on 2026-11-09. The page now lives at `/services/recruitment/` (`content/pages/service-recruitment.json`), uses the normal Traction header and footer (the purple sub-brand theme, `nav-recruiters.html` and `footer-recruiters.html` were deleted) and is listed under Our Services. The old `/brands/recruiters/` address is a small redirect page (`brands-recruiters.json`, template `redirect.html`), kept out of the sitemap and search. Wording rule: use "Traction Outsourcing Recruitment Services" for the name in text and "Recruitment Services" for page, menu and card titles. The old names appear only on purpose in the page's "same as ATH Recruiters?" FAQ, its structured-data alternate names, the best-recruitment-agency FAQ and the llms.txt line, so people and AI tools searching the old name find the new one. The job-seeker section ("Need A Job in Nigeria? Click to Apply Now") now sends people to the careers page, /apply/ (it used to link to the external bit.ly/athjobs community).
+
+## EmailJS library (self-hosted, pinned)
+
+The /resources/ download form uses the EmailJS browser library. It is **not** loaded from a CDN: the exact
+file `@emailjs/browser@4.4.1` (`dist/email.min.js`, BSD-3-Clause, licence text next to it) is saved as
+`static/js/emailjs-4.4.1.min.js` and loaded from our own domain by `flex.html`. This stops a hijacked or
+changed package on a third-party CDN from running code on the site. To upgrade: `npm pack @emailjs/browser@<version>`,
+copy `package/dist/email.min.js` and `package/LICENSE` into `static/js/` under the new version number, update
+the `<script>` line in `flex.html`, delete the old file, and test one real download request.

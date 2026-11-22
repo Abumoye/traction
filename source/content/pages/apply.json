@@ -40,6 +40,56 @@
       "type": "job-cards",
       "jobs": [
         {
+          "title": "Customer Service",
+          "location": "Wuse 2, Abuja",
+          "salary": "₦100,000/month",
+          "href": "/apply/customer-service/",
+          "active": true,
+          "icon": "fa-headset",
+          "image": "/images/jobs/customer-service.jpg",
+          "image_alt": "Smiling woman in a yellow turtleneck wearing a headset beside the Traction Outsourcing logo and an Apply Now button, for the Customer Service job"
+        },
+        {
+          "title": "Sales Assistant",
+          "location": "Wuse 2, Abuja",
+          "salary": "₦100,000/month",
+          "href": "/apply/sales-assistant/",
+          "active": true,
+          "icon": "fa-shirt",
+          "image": "/images/jobs/sales-assistant.jpg",
+          "image_alt": "Smiling woman in a brown hijab and grey top beside the Traction Outsourcing logo and an Apply Now button, for the Sales Assistant job"
+        },
+        {
+          "title": "Home Chef",
+          "location": "Wuye, Abuja",
+          "salary": "₦250,000/month",
+          "href": "/apply/home-chef/",
+          "active": true,
+          "icon": "fa-utensils",
+          "image": "/images/jobs/home-chef.jpg",
+          "image_alt": "Chef in a light blue shirt chopping vegetables in a bright home kitchen beside the Traction Outsourcing logo and an Apply Now button, for the Home Chef job"
+        },
+        {
+          "title": "Sports Product Manager",
+          "location": "Wuye, Abuja (Hybrid)",
+          "salary": "₦250,000/month (negotiable)",
+          "href": "/apply/sports-product-manager/",
+          "active": true,
+          "icon": "fa-person-running",
+          "image": "/images/jobs/sports-product-manager.jpg",
+          "image_alt": "Woman with a shaved head in an olive sports top stretching her arm beside the Traction Outsourcing logo and an Apply Now button, for the Sports Product Manager job"
+        },
+        {
+          "title": "Real Estate Sales Manager",
+          "location": "Kado, Abuja",
+          "href": "/apply/real-estate-sales-manager-100/",
+          "active": true,
+          "salary": "₦450,000/month",
+          "icon": "fa-building",
+          "image": "/images/jobs/real-estate-sales-manager-100.jpg",
+          "image_alt": "Smiling woman in a blue hard hat and blazer beside the Traction Outsourcing logo and an Apply Now button, for the Real Estate Sales Manager job"
+        },
+        {
           "title": "Paid Internship Programme",
           "location": "Lagos (Ibeju-Lekki) and Abuja",
           "salary": "Paid internship",
@@ -68,16 +118,6 @@
           "icon": "fa-utensils",
           "image": "/images/jobs/chef.jpg",
           "image_alt": "Smiling chef in a white jacket holding a ladle and spatula beside the Traction Outsourcing logo and an Apply Now button, for the Chef job"
-        },
-        {
-          "title": "Home Chef",
-          "location": "Wuye, Abuja",
-          "salary": "₦250,000/month",
-          "href": "/apply/home-chef/",
-          "active": true,
-          "icon": "fa-utensils",
-          "image": "/images/jobs/home-chef.jpg",
-          "image_alt": "Chef in a light blue shirt chopping vegetables in a bright home kitchen beside the Traction Outsourcing logo and an Apply Now button, for the Home Chef job"
         },
         {
           "title": "Sous Chef",
@@ -120,36 +160,6 @@
           "image_alt": "Smiling bearded man in a navy blazer and black shirt seated in an office chair beside the Traction Outsourcing logo and an Apply Now button, for the Operations Manager job"
         },
         {
-          "title": "Customer Service",
-          "location": "Wuse 2, Abuja",
-          "salary": "₦100,000/month",
-          "href": "/apply/customer-service/",
-          "active": true,
-          "icon": "fa-headset",
-          "image": "/images/jobs/customer-service.jpg",
-          "image_alt": "Smiling woman in a yellow turtleneck wearing a headset beside the Traction Outsourcing logo and an Apply Now button, for the Customer Service job"
-        },
-        {
-          "title": "Sports Product Manager",
-          "location": "Wuye, Abuja (Hybrid)",
-          "salary": "₦250,000/month (negotiable)",
-          "href": "/apply/sports-product-manager/",
-          "active": true,
-          "icon": "fa-person-running",
-          "image": "/images/jobs/sports-product-manager.jpg",
-          "image_alt": "Woman with a shaved head in an olive sports top stretching her arm beside the Traction Outsourcing logo and an Apply Now button, for the Sports Product Manager job"
-        },
-        {
-          "title": "Sales Assistant",
-          "location": "Wuse 2, Abuja",
-          "salary": "₦100,000/month",
-          "href": "/apply/sales-assistant/",
-          "active": true,
-          "icon": "fa-shirt",
-          "image": "/images/jobs/sales-assistant.jpg",
-          "image_alt": "Smiling woman in a brown hijab and grey top beside the Traction Outsourcing logo and an Apply Now button, for the Sales Assistant job"
-        },
-        {
           "title": "Tech Sales Closer",
           "location": "Remote, Nigeria",
           "salary": "₦100,000/month + commission",
@@ -168,16 +178,6 @@
           "icon": "fa-calculator",
           "image": "/images/jobs/accountant.jpg",
           "image_alt": "Smiling man in a navy suit and blue tie beside the Traction Outsourcing logo and an Apply Now button, for the Accountant job"
-        },
-        {
-          "title": "Real Estate Sales Manager",
-          "location": "Kado, Abuja",
-          "href": "/apply/real-estate-sales-manager-100/",
-          "active": true,
-          "salary": "₦450,000/month",
-          "icon": "fa-building",
-          "image": "/images/jobs/real-estate-sales-manager-100.jpg",
-          "image_alt": "Smiling woman in a blue hard hat and blazer beside the Traction Outsourcing logo and an Apply Now button, for the Real Estate Sales Manager job"
         },
         {
           "title": "Storekeeping Assistant",
