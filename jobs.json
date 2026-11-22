@@ -5,7 +5,7 @@
     "logo": "https://tolnigeria.com/images/traction-outsourcing-logo.png"
   },
   "careersPage": "https://tolnigeria.com/apply/",
-  "lastUpdated": "2026-11-10",
+  "lastUpdated": "2026-11-22",
   "jobs": [
     {
       "id": "home-chef",
@@ -20,7 +20,7 @@
         "countryCode": "NG"
       },
       "employmentType": "FULL_TIME",
-      "datePosted": "2026-11-10",
+      "datePosted": "2026-11-22",
       "validThrough": "2026-11-30T23:59:59+01:00",
       "salary": {
         "currency": "NGN",
@@ -87,6 +87,115 @@
       "industry": "Real Estate"
     },
     {
+      "id": "sports-product-manager",
+      "title": "Sports Product Manager",
+      "url": "https://tolnigeria.com/apply/sports-product-manager/",
+      "applyUrl": "https://tolnigeria.com/apply/sports-product-manager/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Wuye",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-11-22",
+      "validThrough": "2026-11-26T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 250000,
+        "period": "MONTH",
+        "display": "₦250,000/month"
+      },
+      "description": "We are hiring a Sports Product Manager in Wuye, Abuja. This is a hybrid role, and the salary of ₦250,000 per month is negotiable.\nResponsibilities: Plan, source and manage the range of sports products sold online. Create and update product listings with clear descriptions, photos and prices. Track stock, sales and customer feedback, and recommend what to stock next. Work with suppliers, the sales team and customer service to keep the store running smoothly.\nRequirements: Experience in e-commerce and product management A love for sports or sporting activities, with good knowledge of sports products Good communication, organisation and analytical skills Able to work a hybrid schedule in Wuye, Abuja CV Required (PDF)\nBenefits: Other statutory benefits.",
+      "responsibilities": [
+        "Plan, source and manage the range of sports products sold online.",
+        "Create and update product listings with clear descriptions, photos and prices.",
+        "Track stock, sales and customer feedback, and recommend what to stock next.",
+        "Work with suppliers, the sales team and customer service to keep the store running smoothly."
+      ],
+      "qualifications": [
+        "Experience in e-commerce and product management",
+        "A love for sports or sporting activities, with good knowledge of sports products",
+        "Good communication, organisation and analytical skills",
+        "Able to work a hybrid schedule in Wuye, Abuja",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ],
+      "industry": "Sports & E-commerce"
+    },
+    {
+      "id": "customer-service",
+      "title": "Customer Service",
+      "url": "https://tolnigeria.com/apply/customer-service/",
+      "applyUrl": "https://tolnigeria.com/apply/customer-service/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Wuse 2",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-11-22",
+      "validThrough": "2026-11-26T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 100000,
+        "period": "MONTH",
+        "display": "₦100,000/month"
+      },
+      "description": "We are hiring a Customer Service for a health and wellness business in Wuse 2, Abuja. This is a full-time, onsite role.\nResponsibilities: Welcome and assist customers who walk into the store, and recommend suitable products. Respond to customer enquiries and messages online (WhatsApp, social media and calls). Record orders accurately and follow up so customers are satisfied. Handle complaints politely and pass on issues that need a manager.\nRequirements: At least 2 years' experience in customer service, sales or a similar role Good communication skills, in person and in writing Friendly, patient and presentable Comfortable using a phone, WhatsApp and basic computer tools Able to commute to Wuse 2, Abuja and resume immediately CV Required (PDF)\nBenefits: Other statutory benefits.",
+      "responsibilities": [
+        "Welcome and assist customers who walk into the store, and recommend suitable products.",
+        "Respond to customer enquiries and messages online (WhatsApp, social media and calls).",
+        "Record orders accurately and follow up so customers are satisfied.",
+        "Handle complaints politely and pass on issues that need a manager."
+      ],
+      "qualifications": [
+        "At least 2 years' experience in customer service, sales or a similar role",
+        "Good communication skills, in person and in writing",
+        "Friendly, patient and presentable",
+        "Comfortable using a phone, WhatsApp and basic computer tools",
+        "Able to commute to Wuse 2, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ],
+      "industry": "Health & Wellness"
+    },
+    {
+      "id": "real-estate-sales-manager-100",
+      "title": "Real Estate Sales Manager",
+      "url": "https://tolnigeria.com/apply/real-estate-sales-manager-100/",
+      "applyUrl": "https://tolnigeria.com/apply/real-estate-sales-manager-100/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Kado",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-11-22",
+      "validThrough": "2026-11-26T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 450000,
+        "period": "MONTH",
+        "display": "₦450,000/month"
+      },
+      "description": "We are hiring a Real Estate Sales Manager in Kado, Abuja. This is a sales-driven role with a real estate focus.\nRequirements: CV Required (PDF)",
+      "responsibilities": [],
+      "qualifications": [
+        "CV Required (PDF)"
+      ],
+      "benefits": []
+    },
+    {
       "id": "accountant",
       "title": "Accountant",
       "url": "https://tolnigeria.com/apply/accountant/",
@@ -127,6 +236,45 @@
         "Other statutory benefits."
       ],
       "industry": "Accounting"
+    },
+    {
+      "id": "sales-assistant",
+      "title": "Sales Assistant",
+      "url": "https://tolnigeria.com/apply/sales-assistant/",
+      "applyUrl": "https://tolnigeria.com/apply/sales-assistant/",
+      "company": "Traction Outsourcing Limited",
+      "location": {
+        "city": "Wuse 2",
+        "state": "Abuja (FCT)",
+        "country": "Nigeria",
+        "countryCode": "NG"
+      },
+      "employmentType": "FULL_TIME",
+      "datePosted": "2026-11-22",
+      "validThrough": "2026-11-26T23:59:59+01:00",
+      "salary": {
+        "currency": "NGN",
+        "amount": 100000,
+        "period": "MONTH",
+        "display": "₦100,000/month"
+      },
+      "description": "We are hiring a Sales Assistant for a clothing store in Wuse 2, Abuja. This is a full-time, onsite role for a presentable, confident communicator who is comfortable handling fabrics and can resume immediately.\nResponsibilities: Welcome customers, understand what they are looking for and help them choose the right clothing and fabrics. Handle, fold and display fabrics and clothing with care, and keep the shop floor tidy. Keep the store presentable and report stock and customer requests to the store management.\nRequirements: 1-2 Years' Experience in Sales or Retail Good communication skills Presentable and comfortable handling fabrics Able to commute to Wuse 2, Abuja and resume immediately CV Required (PDF)\nBenefits: Other statutory benefits.",
+      "responsibilities": [
+        "Welcome customers, understand what they are looking for and help them choose the right clothing and fabrics.",
+        "Handle, fold and display fabrics and clothing with care, and keep the shop floor tidy.",
+        "Keep the store presentable and report stock and customer requests to the store management."
+      ],
+      "qualifications": [
+        "1-2 Years' Experience in Sales or Retail",
+        "Good communication skills",
+        "Presentable and comfortable handling fabrics",
+        "Able to commute to Wuse 2, Abuja and resume immediately",
+        "CV Required (PDF)"
+      ],
+      "benefits": [
+        "Other statutory benefits."
+      ],
+      "industry": "Retail"
     }
   ]
 }
