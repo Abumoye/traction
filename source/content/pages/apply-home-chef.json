@@ -5,8 +5,8 @@
     "url": "/apply/home-chef/"
   },
   "meta": {
-    "title": "Home Chef Job, Wuye, Abuja | Traction Outsourcing",
-    "description": "Home chef job in Wuye, Abuja at ₦250,000/month with accommodation and weekly days off. Culinary school certificate required. Apply online.",
+    "title": "Home Chef Job, Wuye and Wuse 2, Abuja | Traction Outsourcing",
+    "description": "Home chef job in Wuye and Wuse 2, Abuja at ₦250,000/month with accommodation and weekly days off. Culinary school certificate required. Apply online.",
     "image": "/images/jobs/home-chef.jpg",
     "image_height": 630,
     "image_alt": "Chef in a light blue shirt chopping vegetables in a bright home kitchen beside the Traction Outsourcing logo and an Apply Now button, for the Home Chef job"
@@ -44,7 +44,7 @@
     },
     "eyebrow": "We Are Hiring",
     "headline": "Home Chef",
-    "sub": "We are hiring a Home Chef for a household in Wuye, Abuja. Full-time · ₦250,000/month."
+    "sub": "We are hiring a Home Chef for a household in Wuye and Wuse 2, Abuja. Full-time · ₦250,000/month."
   },
   "sections": [
     {
@@ -55,7 +55,7 @@
       "entries": [
         {
           "icon": "fa-map-marker-alt",
-          "title": "Wuye, Abuja, FCT",
+          "title": "Wuye and Wuse 2, Abuja",
           "text": ""
         },
         {
@@ -97,7 +97,7 @@
             "Good communication skills.",
             "Presentable.",
             "Comfortable handling the role with little to no supervision.",
-            "Able to work in Wuye, Abuja and resume immediately."
+            "Able to work in Wuye and Wuse 2, Abuja and resume immediately."
           ]
         },
         {
@@ -180,6 +180,16 @@
           "options": [
             "Yes",
             "No"
+          ]
+        },
+        {
+          "name": "workLocation",
+          "placeholder": "Choose a location",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Wuye",
+            "Wuse 2"
           ]
         },
         {

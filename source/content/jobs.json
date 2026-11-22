@@ -8,6 +8,17 @@
       "url": "/apply/home-chef/",
       "locality": "Wuye",
       "region": "FCT",
+      "locations": [
+        {
+          "locality": "Wuye",
+          "region": "FCT"
+        },
+        {
+          "locality": "Wuse 2",
+          "region": "FCT"
+        }
+      ],
+      "locationLabel": "Wuye and Wuse 2, Abuja",
       "datePosted": "2026-11-22",
       "validThrough": "2026-11-30",
       "employmentType": "FULL_TIME",
@@ -18,7 +29,7 @@
         "currency": "NGN",
         "unit": "MONTH"
       },
-      "summary": "We are hiring a Home Chef for a household in Wuye, Abuja. This is a full-time, onsite role with accommodation and weekly days off.",
+      "summary": "We are hiring a Home Chef for a household in Wuye and Wuse 2, Abuja. This is a full-time, onsite role with accommodation and weekly days off.",
       "responsibilities": [
         "Plan and cook daily meals for the household to a consistently high standard.",
         "Prepare dishes to suit the household's tastes and any dietary needs.",
@@ -31,7 +42,7 @@
         "At least 2 years' experience as a chef",
         "Good communication skills",
         "Presentable and able to work with little to no supervision",
-        "Able to work in Wuye, Abuja and resume immediately",
+        "Able to work in Wuye and Wuse 2, Abuja and resume immediately",
         "CV Required (PDF)"
       ],
       "benefits": [

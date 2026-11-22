@@ -46,8 +46,8 @@ sheet used by the other forms on the site. It powers:
   of graduation (searchable dropdown of Nigerian universities plus "Other", which shows a text box), CV upload
   as PDF). formType `apply-paid-internship`; entries are saved on
   their own tab named **Paid Internship**.
-- `/apply/home-chef/` — the **Home Chef (Wuye, Abuja)** application, 11 questions (Full Name, Gender, Age as at
-  31 October 2026, Phone, Email, Can you resume immediately, Do you currently live in Abuja, Years of experience
+- `/apply/home-chef/` — the **Home Chef (Wuye and Wuse 2, Abuja)** application, 12 questions (Full Name, Gender, Age as at
+  31 October 2026, Phone, Email, Can you resume immediately, Do you currently live in Abuja, Choose a location (Wuye or Wuse 2), Years of experience
   2 to 10, Do you have a culinary school certificate Yes/No, Instagram page handle, CV upload as PDF). formType
   `apply-home-chef`; entries are saved on their own tab named **Home Chef**. The Instagram handle is saved as
   `@name` (or `None` if the candidate has no page).
@@ -771,7 +771,7 @@ function handleApplyAccountant(data) {
   ).setMimeType(ContentService.MimeType.JSON);
 }
 
-/* ===================== HOME CHEF (WUYE, ABUJA) ===================== */
+/* ================= HOME CHEF (WUYE AND WUSE 2, ABUJA) ================= */
 
 // Own tab in this spreadsheet ("Home Chef"), created automatically with its header row on the
 // first application. Yes/No answers and the years of experience (2 to 10) are saved as sent.
@@ -782,7 +782,8 @@ var HC_ROLE = 'Home Chef';
 var HC_HEADERS = [
   'Timestamp', 'Role', 'Full Name', 'Gender', 'Age (as at 31 Oct 2026)',
   'Phone Number', 'Email', 'Can Resume Immediately', 'Lives in Abuja',
-  'Years of Experience', 'Culinary School Certificate', 'Instagram Handle', 'CV Link'
+  'Years of Experience', 'Culinary School Certificate', 'Instagram Handle', 'CV Link',
+  'Work Location (Wuye or Wuse 2)'
 ];
 
 function getHomeChefSheet() {
@@ -813,6 +814,9 @@ function handleApplyHomeChef(data) {
   var yearsExperience = (data.yearsExperience || '').toString().trim();
   var culinaryCertificate = (data.culinaryCertificate || '').toString().trim();
   var instagramHandle = (data.instagramHandle || '').toString().trim();
+  // Only the two real locations are accepted; anything else is left blank.
+  var workLocation = (data.workLocation || '').toString().trim();
+  if (workLocation !== 'Wuye' && workLocation !== 'Wuse 2') workLocation = '';
 
   // CV: PDF only. Anything that is not a real PDF is not saved to Drive, and
   // the row says so (the website already blocks these; this is the backstop).
@@ -824,7 +828,8 @@ function handleApplyHomeChef(data) {
     cvLink = 'Upload failed or not a PDF - contact applicant for CV';
   }
 
-  sheet.appendRow([new Date(), HC_ROLE, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, yearsExperience, culinaryCertificate, instagramHandle, cvLink]);
+  // The location goes in the LAST column so rows saved before it was added stay aligned.
+  sheet.appendRow([new Date(), HC_ROLE, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, yearsExperience, culinaryCertificate, instagramHandle, cvLink, workLocation]);
   var row = sheet.getLastRow();
   sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
   // Keep "2", "3"... as text so Sheets never turns the answer into a number or date, and
