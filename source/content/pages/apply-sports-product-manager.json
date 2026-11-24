@@ -5,11 +5,11 @@
     "url": "/apply/sports-product-manager/"
   },
   "meta": {
-    "title": "Sports Product Manager Job, Wuye, Abuja | Traction Outsourcing",
-    "description": "Sports Product Manager job in Wuye, Abuja at ₦250,000/month (negotiable). Hybrid role. E-commerce and product management experience required. Apply online at Traction Outsourcing Limited.",
+    "title": "Sports Sales Manager Job, Wuye, Abuja | Traction Outsourcing",
+    "description": "Sports Sales Manager job in Wuye, Abuja at ₦250,000/month (negotiable). Full-time role. E-commerce, product management and sales experience required. Apply online at Traction Outsourcing Limited.",
     "image": "/images/jobs/sports-product-manager.jpg",
     "image_height": 630,
-    "image_alt": "Woman with a shaved head in an olive sports top stretching her arm beside the Traction Outsourcing logo and an Apply Now button, for the Sports Product Manager job"
+    "image_alt": "Woman with a shaved head in an olive sports top stretching her arm beside the Traction Outsourcing logo and an Apply Now button, for the Sports Sales Manager job"
   },
   "schema": [
     {
@@ -31,7 +31,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Sports Product Manager",
+          "name": "Sports Sales Manager",
           "item": "https://tolnigeria.com/apply/sports-product-manager/"
         }
       ]
@@ -43,8 +43,8 @@
       "label": "Back to Careers"
     },
     "eyebrow": "We Are Hiring",
-    "headline": "Sports Product Manager",
-    "sub": "We are hiring a Sports Product Manager in Wuye, Abuja. Hybrid · ₦250,000/month (negotiable)."
+    "headline": "Sports Sales Manager",
+    "sub": "We are hiring a Sports Sales Manager in Wuye, Abuja. Full-time · ₦250,000/month (negotiable)."
   },
   "sections": [
     {
@@ -59,13 +59,13 @@
           "text": ""
         },
         {
-          "icon": "fa-laptop-house",
-          "title": "Hybrid Role",
+          "icon": "fa-briefcase",
+          "title": "Full-Time Role",
           "text": ""
         },
         {
           "icon": "fa-boxes-stacked",
-          "title": "E-commerce & Product Management",
+          "title": "E-commerce, Product Management & Sales",
           "text": ""
         },
         {
@@ -91,10 +91,11 @@
         {
           "heading": "Requirements",
           "items": [
-            "Experience in e-commerce and product management.",
+            "Experience in e-commerce, product management, and sales.",
             "A love for sports or sporting activities, with good knowledge of sports products.",
             "Good communication, organisation and analytical skills.",
-            "Able to work a hybrid schedule in Wuye, Abuja."
+            "Must be able to use Microsoft Word and Excel.",
+            "Able to commute to Wuye, Abuja."
           ]
         },
         {
@@ -179,8 +180,8 @@
           ]
         },
         {
-          "name": "productExperience",
-          "placeholder": "Do you have experience in product management?",
+          "name": "salesExperience",
+          "placeholder": "Do you have sales experience?",
           "input_type": "select",
           "required": true,
           "options": [
@@ -197,6 +198,24 @@
             "Yes",
             "No"
           ]
+        },
+        {
+          "name": "excelSheets",
+          "placeholder": "Can you use Microsoft Excel and Google Sheets?",
+          "input_type": "select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "instagramHandle",
+          "placeholder": "Your Instagram handle (e.g. @joan.12)",
+          "input_type": "text",
+          "required": true,
+          "minlength": 2,
+          "title": "Enter your Instagram handle, for example @joan.12. Type NONE if you do not have one."
         },
         {
           "name": "cv",
