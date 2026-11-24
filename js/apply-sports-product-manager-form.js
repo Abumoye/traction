@@ -1,11 +1,11 @@
 /* =========================================================
-   Traction Outsourcing Limited — Sports Product Manager (Wuye, Abuja) Application Form
+   Traction Outsourcing Limited — Sports Sales Manager (Wuye, Abuja) Application Form
    Used on /apply/sports-product-manager/.
    Needs /js/apply-fields.js loaded first (digits-only phone + PDF check).
 
    Submits to the SAME Google Apps Script Web App as the other job
    application forms, but with formType "apply-sports-product-manager". The script
-   files entries on their own tab ("Sports Product Manager") in the same
+   files entries on their own tab ("Sports Sales Manager") in the same
    Google Sheet and saves the uploaded CV (PDF only) to Google Drive.
 
    See /docs/apply-form-backend-setup.md for the Apps Script code (it must
@@ -14,11 +14,22 @@
 
 const SPM_FORM_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx0ZVyCU3EUcVB4BSzBbV1UIZy0a0ThpmoTk0Up0CeffTmE6QmhWNQR8gLxrojcqpKL/exec";
 const ROLE_BY_PATH = {
-    "/apply/sports-product-manager/": "Sports Product Manager"
+    "/apply/sports-product-manager/": "Sports Sales Manager"
 };
 const SPM_ROLE_TITLE = ROLE_BY_PATH[window.location.pathname.replace(/index\.html$/, "")] || "";
 const SPM_MAX_CV_BYTES = 5 * 1024 * 1024; // 5MB
 const SPM_PHONE_DIGITS = 11;
+
+// Instagram handle: accepts "@name", "name" or an instagram.com link and saves it as "@name".
+// "none" is accepted for an applicant who has no page.
+function cleanInstagram(raw) {
+    var v = (raw || "").trim();
+    if (/^none$/i.test(v)) return "None";
+    var m = v.match(/instagram\.com\/([A-Za-z0-9._]+)/i);
+    if (m) v = m[1];
+    v = v.replace(/^@+/, "").replace(/\/+$/, "");
+    return v ? "@" + v : "";
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('applyForm');
@@ -90,8 +101,10 @@ document.addEventListener('DOMContentLoaded', function () {
             email: form.email.value.trim(),
             resumeImmediately: form.resumeImmediately.value.trim(),
             livesInAbuja: form.livesInAbuja.value.trim(),
-            productExperience: form.productExperience.value.trim(),
-            ecommerceExperience: form.ecommerceExperience.value.trim()
+            salesExperience: form.salesExperience.value.trim(),
+            ecommerceExperience: form.ecommerceExperience.value.trim(),
+            excelSheets: form.excelSheets.value.trim(),
+            instagramHandle: cleanInstagram(form.instagramHandle.value)
         };
         if (window.formGuard) Object.assign(data, window.formGuard.fields(form));
 
@@ -101,8 +114,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (!(data.fullName && data.gender && data.age && data.phone && data.email
-              && data.resumeImmediately && data.livesInAbuja && data.productExperience
-              && data.ecommerceExperience && cvFile)) {
+              && data.resumeImmediately && data.livesInAbuja && data.salesExperience
+              && data.ecommerceExperience && data.excelSheets && data.instagramHandle && cvFile)) {
             setStatus("Please fill in every field and attach your CV before submitting.", true);
             return;
         }
@@ -114,6 +127,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email)) {
             setStatus("Please enter a valid email address.", true);
+            return;
+        }
+
+        if (data.instagramHandle !== "None" && !/^@[A-Za-z0-9._]{1,30}$/.test(data.instagramHandle)) {
+            setStatus("Please enter your Instagram handle, for example @joan.12 (or type NONE if you do not have one).", true);
             return;
         }
 
