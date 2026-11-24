@@ -36,10 +36,13 @@ sheet used by the other forms on the site. It powers:
   immediately, Do you currently live in Abuja, Years of experience 2 to 5 or Above 5, CV upload as PDF).
   Both use formType `apply-wellness-wuse2`; entries are saved on their own tabs named **Operations Manager**
   and **Customer Service**.
-- `/apply/sports-product-manager/` — the **Sports Product Manager (Wuye, Abuja, hybrid)** application, 10 questions
+- `/apply/sports-product-manager/` — the **Sports Sales Manager (Wuye, Abuja, full time)** application (this role was called
+  Sports Product Manager until 24 Nov 2026; the page address and formType kept the old name), 12 questions
   (Full Name, Gender, Age as at 31 October 2026, Phone, Email, Can you resume immediately, Do you currently live
-  in Abuja, Experience in product management Yes/No, E-commerce experience Yes/No, CV upload as PDF). formType
-  `apply-sports-product-manager`; entries are saved on their own tab named **Sports Product Manager**.
+  in Abuja, Do you have sales experience Yes/No, E-commerce experience Yes/No, Can you use Microsoft Excel and
+  Google Sheets Yes/No, Instagram handle, CV upload as PDF). formType `apply-sports-product-manager`; entries are
+  saved on their own tab named **Sports Sales Manager** (applications received before 24 Nov 2026 stay on the
+  old **Sports Product Manager** tab, which has different columns).
 - `/apply/paid-internship/` — the **Paid Internship Programme (real estate client)** application, 11 questions
   (Full Name, Gender, Age as at 31 October 2026, Phone, Email, LinkedIn URL (optional), Can you resume
   immediately, Choose your location (Lagos (Ibeju - Lekki), Lagos (Epe) or Abuja), Year of graduation 2023 to 2026, University
@@ -649,16 +652,20 @@ function handleApplyWellnessWuse2(data) {
   ).setMimeType(ContentService.MimeType.JSON);
 }
 
-/* ===================== SPORTS PRODUCT MANAGER (WUYE, ABUJA) ===================== */
+/* ===================== SPORTS SALES MANAGER (WUYE, ABUJA) ===================== */
 
-// Own tab in this spreadsheet ("Sports Product Manager"), created automatically with its
-// header row on the first application. Both experience questions are Yes/No and saved as sent.
-// CV is PDF only, saved in the same Drive folder as the other CVs.
-var SPM_ROLE = 'Sports Product Manager';
+// Own tab in this spreadsheet ("Sports Sales Manager"), created automatically with its
+// header row on the first application. The experience and Excel/Sheets questions are Yes/No and
+// saved as sent; the Instagram handle arrives from the website already cleaned up as "@name" (or
+// "None"). CV is PDF only, saved in the same Drive folder as the other CVs.
+// (The role was called "Sports Product Manager" until 24 Nov 2026; those earlier applications stay
+// on the old "Sports Product Manager" tab, which has different columns. The function names and the
+// formType "apply-sports-product-manager" were kept so nothing else has to change.)
+var SPM_ROLE = 'Sports Sales Manager';
 var SPM_HEADERS = [
   'Timestamp', 'Role', 'Full Name', 'Gender', 'Age (as at 31 Oct 2026)',
   'Phone Number', 'Email', 'Can Resume Immediately', 'Lives in Abuja',
-  'Product Management Experience', 'E-commerce Experience', 'CV Link'
+  'Sales Experience', 'E-commerce Experience', 'Excel and Google Sheets', 'Instagram Handle', 'CV Link'
 ];
 
 function getSportsProductManagerSheet() {
@@ -686,8 +693,10 @@ function handleApplySportsProductManager(data) {
   var email = (data.email || '').toString().trim();
   var resumeImmediately = (data.resumeImmediately || '').toString().trim();
   var livesInAbuja = (data.livesInAbuja || '').toString().trim();
-  var productExperience = (data.productExperience || '').toString().trim();
+  var salesExperience = (data.salesExperience || '').toString().trim();
   var ecommerceExperience = (data.ecommerceExperience || '').toString().trim();
+  var excelSheets = (data.excelSheets || '').toString().trim();
+  var instagramHandle = (data.instagramHandle || '').toString().trim();
 
   // CV: PDF only. Anything that is not a real PDF is not saved to Drive, and
   // the row says so (the website already blocks these; this is the backstop).
@@ -699,9 +708,11 @@ function handleApplySportsProductManager(data) {
     cvLink = 'Upload failed or not a PDF - contact applicant for CV';
   }
 
-  sheet.appendRow([new Date(), SPM_ROLE, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, productExperience, ecommerceExperience, cvLink]);
+  sheet.appendRow([new Date(), SPM_ROLE, fullName, gender, age, phone, email, resumeImmediately, livesInAbuja, salesExperience, ecommerceExperience, excelSheets, instagramHandle, cvLink]);
   var row = sheet.getLastRow();
   sheet.getRange(row, 6).setNumberFormat('@').setValue(phone);
+  // Keep the handle as text so "@name" is never read as a formula.
+  sheet.getRange(row, 13).setNumberFormat('@').setValue(instagramHandle);
 
   return ContentService.createTextOutput(
     JSON.stringify({ status: 'success' })
