@@ -1,11 +1,6 @@
 {
   "_comment": "What Google was last told for each job page. Written by scripts/notify_google_indexing.py; do not edit by hand.",
   "urls": {
-    "https://tolnigeria.com/apply/accountant/": "9770f9f0bc0c005b",
-    "https://tolnigeria.com/apply/customer-service/": "291a3aa408816ba0",
-    "https://tolnigeria.com/apply/home-chef/": "4c9b5512360541df",
-    "https://tolnigeria.com/apply/real-estate-sales-manager-100/": "ccebb0317b1987bd",
-    "https://tolnigeria.com/apply/sales-assistant/": "0129dd41f61e720a",
-    "https://tolnigeria.com/apply/sports-product-manager/": "fa7264c7fb9e3fc4"
+    "https://tolnigeria.com/apply/home-chef/": "4c9b5512360541df"
   }
 }
